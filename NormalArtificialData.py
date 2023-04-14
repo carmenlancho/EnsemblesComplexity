@@ -26,8 +26,6 @@ idx_1 = np.where(data.classes == 1)
 idx_0 = np.where(data.classes == 0)
 plt.scatter(data.iloc[idx_0].x1, data.iloc[idx_0].x2, s=30, c='C0', marker=".", label='negative')
 plt.scatter(data.iloc[idx_1].x1, data.iloc[idx_1].x2, s=30, c='C1', marker="+", label='positive')
-plt.ylabel('y')
-plt.xlabel('x')
 plt.show()
 
 
