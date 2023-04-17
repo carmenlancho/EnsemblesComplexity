@@ -74,5 +74,5 @@ for data_file in total_name_list:
     name_data = data_file[0:-4]
     data = pd.read_csv(file)
     # data = pd.read_csv('Dataset9_6000_estandarizado.csv')
-    path_to_save = os.chdir(root_path+'/Results_Complexity_InstanceLevel')
+    path_to_save = root_path+'/Results_Complexity_InstanceLevel'
     df_measures = all_measures(data,path_to_save, name_data)
