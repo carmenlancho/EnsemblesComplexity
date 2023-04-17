@@ -739,15 +739,3 @@ class ClassificationMeasures:
 
 
 
-import os
-import pandas as pd
-import numpy as np
-
-
-root_path = os.getcwd()
-path_csv = os.chdir(root_path+'/datasets')
-data = pd.read_csv('Dataset9_6000_estandarizado.csv')
-
-
-p = ClassificationMeasures(data)
-kdn_v = p.k_disagreeing_neighbors()
