@@ -7,13 +7,13 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 root_path = os.getcwd()
-path_csv = os.chdir(root_path+'/results')
+path_csv = os.chdir(root_path+'/Results_Complexity_InstanceLevel')
 
 
 # Extraemos los nombres de todos los ficheros
 total_name_list = []
 for filename in os.listdir(path_csv):
-    if filename.endswith('.csv') and filename.startswith('metadata'):
+    if filename.endswith('.csv'):
         total_name_list.append(filename)
 
 

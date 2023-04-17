@@ -53,7 +53,7 @@ def all_measures(data,path_to_save, name_data):
 
     # To save the results
     os.chdir(path_to_save)
-    nombre_csv = 'ComplexityMeasures_InstanceLevel' + name_data + '.csv'
+    nombre_csv = 'ComplexityMeasures_InstanceLevel_' + name_data + '.csv'
     df_measures.to_csv(nombre_csv, encoding='utf_8_sig')
 
     return df_measures
