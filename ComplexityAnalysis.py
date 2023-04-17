@@ -33,7 +33,6 @@ for data_file in total_name_list:
 
 data_total
 
-
 sns.boxplot(data=data_total, x="CLD", y="dataset")
 plt.show()
 
