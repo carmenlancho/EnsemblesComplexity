@@ -67,6 +67,8 @@ for filename in os.listdir(path_csv):
     if filename.endswith('.csv'):
         total_name_list.append(filename)
 
+total_name_list = ['Dataset14.csv','Dataset15.csv','Dataset16.csv']
+
 for data_file in total_name_list:
     os.chdir(root_path + '/datasets')
     print(data_file)
