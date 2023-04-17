@@ -17,45 +17,46 @@ for filename in os.listdir(path_csv):
         total_name_list.append(filename)
 
 
-cols_name = ['dataset','feature_CL', 'feature_CLD', 'feature_DCP', 'feature_F1',
-       'feature_Harmfulness', 'feature_LSC', 'feature_LSR', 'feature_N1',
-       'feature_N2', 'feature_TD_P', 'feature_TD_U', 'feature_Usefulness',
-       'feature_kDN', 'algo_bagging', 'algo_gradient_boosting',
-       'algo_logistic_regression', 'algo_mlp', 'algo_random_forest',
-       'algo_svc_linear', 'algo_svc_rbf']
+cols_name = ['dataset','Hostility', 'kDN', 'DS', 'DCP', 'TD_U', 'TD_P', 'MV', 'CB', 'CLD',
+       'N1', 'N2', 'LSC', 'LSradius', 'H', 'U', 'F1', 'F2', 'F3', 'F4']
 data_total = pd.DataFrame(columns=cols_name)
 
 for data_file in total_name_list:
     print(data_file)
     file = data_file
 
-    file_name = data_file[9:17]
+    file_name = data_file[33:-4]
     data = pd.read_csv(file,index_col=0)
     data['dataset'] = file_name
     data_total = pd.concat([data_total, data], ignore_index=True)
 
+
 data_total
-sns.boxplot(data=data_total, x="feature_CLD", y="dataset")
+
+
+sns.boxplot(data=data_total, x="CLD", y="dataset")
 plt.show()
 
-
-sns.boxplot(data=data_total, x="feature_DCP", y="dataset")
+sns.boxplot(data=data_total, x="DCP", y="dataset")
 plt.show()
 
-sns.boxplot(data=data_total, x="feature_F1", y="dataset")
+sns.boxplot(data=data_total, x="F1", y="dataset")
 plt.show()
 
-sns.boxplot(data=data_total, x="feature_LSC", y="dataset")
+sns.boxplot(data=data_total, x="LSC", y="dataset")
 plt.show()
 
-sns.boxplot(data=data_total, x="feature_N1", y="dataset")
+sns.boxplot(data=data_total, x="N1", y="dataset")
 plt.show()
 
-sns.boxplot(data=data_total, x="feature_N2", y="dataset")
+sns.boxplot(data=data_total, x="N2", y="dataset")
 plt.show()
 
-sns.boxplot(data=data_total, x="feature_TD_U", y="dataset")
+sns.boxplot(data=data_total, x="TD_U", y="dataset")
 plt.show()
 
-sns.boxplot(data=data_total, x="feature_kDN", y="dataset")
+sns.boxplot(data=data_total, x="kDN", y="dataset")
+plt.show()
+
+sns.boxplot(data=data_total, x="Hostility", y="dataset")
 plt.show()
