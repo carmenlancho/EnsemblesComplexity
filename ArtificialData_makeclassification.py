@@ -167,3 +167,22 @@ data.to_csv('data5_makemoons.csv', index=False)
 # X,y = make_moons(n_samples=3000, shuffle=True, noise=0.33, random_state=28)
 
 
+
+from SymbolicGeneration import gen_classification_symbolic
+
+# data_aux = gen_classification_symbolic(m='((x1^2)/3-(x2^2)/15)',n_samples=500,flip_y=0.01)
+# data=pd.DataFrame(data_aux, columns=['x'+str(i) for i in range(1,3)]+['y'])
+
+data_aux = gen_classification_symbolic(m='x1-3*sin(x2/2)',n_samples=2000,flip_y=0)
+data=pd.DataFrame(data_aux, columns=['x'+str(i) for i in range(1,3)]+['y'])
+
+# Plot
+# For labels
+labels = list(data.index)
+idx_1 = np.where(data.y == 1)
+idx_0 = np.where(data.y == 0)
+plt.scatter(data.iloc[idx_0].x1, data.iloc[idx_0].x2, s=30, c='C0', marker=".", label='negative')
+plt.scatter(data.iloc[idx_1].x1, data.iloc[idx_1].x2, s=30, c='C1', marker="+", label='positive')
+plt.show()
+
+data.to_csv('Dataset17.csv', index=False)
