@@ -358,12 +358,12 @@ df = data[data["y"] == 0]
 
 
 seed0 = 1
-seed1 = 13
+seed1 = 2
 n0 = 500; n1 = 500
 mu0 = [0, -0.5]
 sigma0 = [[0.1, 0], [0, 0.1]]
-mu1 = [2, 2]
-sigma1 = [[2, 0], [0, 2]]
+mu1 = [1.3, -1]
+sigma1 = [[1, 0], [0, 1]]
 
 
 mn0 = multivariate_normal(mean=mu0, cov=sigma0)
