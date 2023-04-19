@@ -393,6 +393,106 @@ plt.show()
 data.to_csv('Dataset21.csv', index=False)
 
 
+## Dataset 22
+# symbolic + square
+
+from SymbolicGeneration import gen_classification_symbolic
+
+# data_aux = gen_classification_symbolic(m='((x1^2)/3-(x2^2)/15)',n_samples=500,flip_y=0.01)
+# data=pd.DataFrame(data_aux, columns=['x'+str(i) for i in range(1,3)]+['y'])
+
+data_aux = gen_classification_symbolic(m='x1-3*sin(x2/2)',n_samples=2000,flip_y=0)
+data=pd.DataFrame(data_aux, columns=['x'+str(i) for i in range(1,3)]+['y'])
+
+# Plot
+# For labels
+labels = list(data.index)
+idx_1 = np.where(data.y == 1)
+idx_0 = np.where(data.y == 0)
+plt.scatter(data.iloc[idx_0].x1, data.iloc[idx_0].x2, s=30, c='C0', marker=".", label='negative')
+plt.scatter(data.iloc[idx_1].x1, data.iloc[idx_1].x2, s=30, c='C1', marker="+", label='positive')
+plt.show()
+
+min_d0 = -15
+min_d1 = -7
+max_d0 = -7
+max_d1 = 3
+data2 = np.random.uniform((min_d0, min_d1), (max_d0, max_d1), (1000, 2))
+df2 = pd.DataFrame(data2,columns=['x1','x2'])
+df2['y'] = 2
+
+plt.scatter(df2.x1, df2.x2, s=30, c='C1', marker="+", label='positive')
+plt.show()
+
+data = pd.concat([data,df2])
+
+labels = list(data.index)
+idx_1 = np.where(data.y == 1)
+idx_0 = np.where(data.y == 0)
+idx_2 = np.where(data.y == 2)
+plt.scatter(data.iloc[idx_0].x1, data.iloc[idx_0].x2, s=30, c='C0', marker=".", label='0')
+plt.scatter(data.iloc[idx_1].x1, data.iloc[idx_1].x2, s=30, c='C1', marker="+", label='1')
+plt.scatter(data.iloc[idx_2].x1, data.iloc[idx_2].x2, s=10, c='k', marker="*", label='2')
+plt.show()
+
+
+## Triangle
+# https://stackoverflow.com/questions/47410054/generate-random-locations-within-a-triangular-domain
+
+data2 = np.random.triangular(-3, 0, 8, 100000)
+df2 = pd.DataFrame(data2,columns=['x1','x2'])
+df2['y'] = 2
+
+N = 1000 # number of points to create in one go
+
+rvs = np.random.random((N, 2)) # uniform on the unit square
+# Now use the fact that the unit square is tiled by the two triangles
+# 0 <= y <= x <= 1 and 0 <= x < y <= 1
+# which are mapped onto each other (except for the diagonal which has
+# probability 0) by swapping x and y.
+# We use this map to send all points of the square to the same of the
+# two triangles. Because the map preserves areas this will yield
+# uniformly distributed points.
+rvs = np.where(rvs[:, 0, None]>rvs[:, 1, None], rvs, rvs[:, ::-1])
+
+
+xmin, ymin, xmax, ymax = -0.1, 1.1, 2.0, 3.3
+rvs = np.array((ymin, xmin)) + rvs*(ymax-ymin, xmax-xmin)
+df2 = pd.DataFrame(rvs,columns=['x1','x2'])
+
+plt.scatter(df2.x1, df2.x2, s=30, c='C1', marker="+", label='positive')
+plt.show()
+
+
+import math
+import random
+
+import matplotlib.pyplot as plt
+
+def trisample(A, B, C):
+    """
+    Given three vertices A, B, C,
+    sample point uniformly in the triangle
+    """
+    r1 = random.random()
+    r2 = random.random()
+
+    s1 = math.sqrt(r1)
+
+    x = A[0] * (1.0 - s1) + B[0] * (1.0 - r2) * s1 + C[0] * r2 * s1
+    y = A[1] * (1.0 - s1) + B[1] * (1.0 - r2) * s1 + C[1] * r2 * s1
+
+    return (x, y)
+
+random.seed(312345)
+A = (1, 1)
+B = (2, 4)
+C = (5, 2)
+points = [trisample(A, B, C) for _ in range(10000)]
+
+xx, yy = zip(*points)
+plt.scatter(xx, yy, s=0.2)
+plt.show()
 
 
 
