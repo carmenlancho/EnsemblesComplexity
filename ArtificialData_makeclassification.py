@@ -394,7 +394,7 @@ data.to_csv('Dataset21.csv', index=False)
 
 
 ## Dataset 22
-# symbolic + square
+# symbolic + triangle
 
 from SymbolicGeneration import gen_classification_symbolic
 
@@ -413,61 +413,14 @@ plt.scatter(data.iloc[idx_0].x1, data.iloc[idx_0].x2, s=30, c='C0', marker=".", 
 plt.scatter(data.iloc[idx_1].x1, data.iloc[idx_1].x2, s=30, c='C1', marker="+", label='positive')
 plt.show()
 
-min_d0 = -15
-min_d1 = -7
-max_d0 = -7
-max_d1 = 3
-data2 = np.random.uniform((min_d0, min_d1), (max_d0, max_d1), (1000, 2))
-df2 = pd.DataFrame(data2,columns=['x1','x2'])
-df2['y'] = 2
-
-plt.scatter(df2.x1, df2.x2, s=30, c='C1', marker="+", label='positive')
-plt.show()
-
-data = pd.concat([data,df2])
-
-labels = list(data.index)
-idx_1 = np.where(data.y == 1)
-idx_0 = np.where(data.y == 0)
-idx_2 = np.where(data.y == 2)
-plt.scatter(data.iloc[idx_0].x1, data.iloc[idx_0].x2, s=30, c='C0', marker=".", label='0')
-plt.scatter(data.iloc[idx_1].x1, data.iloc[idx_1].x2, s=30, c='C1', marker="+", label='1')
-plt.scatter(data.iloc[idx_2].x1, data.iloc[idx_2].x2, s=10, c='k', marker="*", label='2')
-plt.show()
 
 
-## Triangle
-# https://stackoverflow.com/questions/47410054/generate-random-locations-within-a-triangular-domain
-
-data2 = np.random.triangular(-3, 0, 8, 100000)
-df2 = pd.DataFrame(data2,columns=['x1','x2'])
-df2['y'] = 2
-
-N = 1000 # number of points to create in one go
-
-rvs = np.random.random((N, 2)) # uniform on the unit square
-# Now use the fact that the unit square is tiled by the two triangles
-# 0 <= y <= x <= 1 and 0 <= x < y <= 1
-# which are mapped onto each other (except for the diagonal which has
-# probability 0) by swapping x and y.
-# We use this map to send all points of the square to the same of the
-# two triangles. Because the map preserves areas this will yield
-# uniformly distributed points.
-rvs = np.where(rvs[:, 0, None]>rvs[:, 1, None], rvs, rvs[:, ::-1])
-
-
-xmin, ymin, xmax, ymax = -0.1, 1.1, 2.0, 3.3
-rvs = np.array((ymin, xmin)) + rvs*(ymax-ymin, xmax-xmin)
-df2 = pd.DataFrame(rvs,columns=['x1','x2'])
-
-plt.scatter(df2.x1, df2.x2, s=30, c='C1', marker="+", label='positive')
-plt.show()
-
+# Triangle
 
 import math
 import random
 
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 def trisample(A, B, C):
     """
@@ -484,15 +437,165 @@ def trisample(A, B, C):
 
     return (x, y)
 
-random.seed(312345)
-A = (1, 1)
-B = (2, 4)
-C = (5, 2)
-points = [trisample(A, B, C) for _ in range(10000)]
+random.seed(1)
+A = (5, -3)
+B = (11, 14)
+C = (16, 11)
+points = [trisample(A, B, C) for _ in range(1000)]
 
 xx, yy = zip(*points)
 plt.scatter(xx, yy, s=0.2)
 plt.show()
+
+df2 = pd.DataFrame(points,columns=['x1','x2'])
+df2['y'] = 2
+
+data = pd.concat([data,df2])
+
+labels = list(data.index)
+idx_1 = np.where(data.y == 1)
+idx_0 = np.where(data.y == 0)
+idx_2 = np.where(data.y == 2)
+plt.scatter(data.iloc[idx_0].x1, data.iloc[idx_0].x2, s=30, c='C0', marker=".", label='0')
+plt.scatter(data.iloc[idx_1].x1, data.iloc[idx_1].x2, s=30, c='C1', marker="+", label='1')
+plt.scatter(data.iloc[idx_2].x1, data.iloc[idx_2].x2, s=10, c='k', marker="*", label='2')
+plt.show()
+
+data.to_csv('Dataset22.csv', index=False)
+## Triangle
+# https://stackoverflow.com/questions/47410054/generate-random-locations-within-a-triangular-domain
+
+# data2 = np.random.triangular(-3, 0, 8, 100000)
+# df2 = pd.DataFrame(data2,columns=['x1','x2'])
+# df2['y'] = 2
+#
+# N = 1000 # number of points to create in one go
+#
+# rvs = np.random.random((N, 2)) # uniform on the unit square
+# # Now use the fact that the unit square is tiled by the two triangles
+# # 0 <= y <= x <= 1 and 0 <= x < y <= 1
+# # which are mapped onto each other (except for the diagonal which has
+# # probability 0) by swapping x and y.
+# # We use this map to send all points of the square to the same of the
+# # two triangles. Because the map preserves areas this will yield
+# # uniformly distributed points.
+# rvs = np.where(rvs[:, 0, None]>rvs[:, 1, None], rvs, rvs[:, ::-1])
+#
+#
+# xmin, ymin, xmax, ymax = -0.1, 1.1, 2.0, 3.3
+# rvs = np.array((ymin, xmin)) + rvs*(ymax-ymin, xmax-xmin)
+# df2 = pd.DataFrame(rvs,columns=['x1','x2'])
+#
+# plt.scatter(df2.x1, df2.x2, s=30, c='C1', marker="+", label='positive')
+# plt.show()
+
+
+#### Dataset 23: mix of shapes
+
+X,y = make_moons(n_samples=1000, shuffle=True, noise=0.10, random_state=28)
+
+data = pd.DataFrame(X, columns=['x1','x2'])
+data['y'] = y
+
+# Plot
+# For labels
+# labels = list(data.index)
+# idx_1 = np.where(data.y == 1)
+# idx_0 = np.where(data.y == 0)
+# plt.scatter(data.iloc[idx_0].x1, data.iloc[idx_0].x2, s=30, c='C0', marker=".", label='negative')
+# plt.scatter(data.iloc[idx_1].x1, data.iloc[idx_1].x2, s=30, c='C1', marker="+", label='positive')
+# plt.show()
+
+# Nos quedamos solo con la clase 0
+df = data[data["y"] == 1]
+df = df*3
+
+
+
+seed0 = 1
+seed1 = 2
+n0 = 500; n1 = 500
+mu0 = [-1, 2]
+sigma0 = [[1, 2], [2, 5]]
+mu1 = [3, -3]
+sigma1 = [[6, 0], [0, 6]]
+
+
+mn0 = multivariate_normal(mean=mu0, cov=sigma0)
+X0 = mn0.rvs(size=n0, random_state=seed0)
+mn1 = multivariate_normal(mean=mu1, cov=sigma1)
+X1 = mn1.rvs(size=n1, random_state=seed1)
+
+
+X = np.vstack((X0, X1))
+y = np.array([0] * len(X0) + [1] * len(X1))
+
+data = pd.DataFrame(X, columns=['x1','x2'])
+data['y'] = y
+data = pd.concat([df,data])
+
+# labels = list(data.index)
+# idx_1 = np.where(data.y == 1)
+# idx_0 = np.where(data.y == 0)
+# idx_2 = np.where(data.y == 3)
+# plt.scatter(data.iloc[idx_0].x1, data.iloc[idx_0].x2, s=30, c='C0', marker=".", label='0')
+# plt.scatter(data.iloc[idx_1].x1, data.iloc[idx_1].x2, s=30, c='C1', marker="+", label='1')
+# plt.scatter(data.iloc[idx_2].x1, data.iloc[idx_2].x2, s=30, c='k', marker="*", label='2')
+# plt.show()
+
+
+
+
+## square
+min_d0 = -6
+min_d1 = -4
+max_d0 = -1
+max_d1 = -1
+data2 = np.random.uniform((min_d0, min_d1), (max_d0, max_d1), (500, 2))
+df2 = pd.DataFrame(data2,columns=['x1','x2'])
+df2['y'] = 4
+
+# plt.scatter(df2.x1, df2.x2, s=30, c='C1', marker="+", label='positive')
+# plt.show()
+
+data = pd.concat([data,df2])
+
+
+random.seed(1)
+A = (3, -1)
+B = (2, 10)
+C = (5, 6)
+points = [trisample(A, B, C) for _ in range(500)]
+
+xx, yy = zip(*points)
+plt.scatter(xx, yy, s=0.2)
+plt.show()
+
+df3 = pd.DataFrame(points,columns=['x1','x2'])
+df3['y'] = 2
+
+data = pd.concat([data,df3])
+
+
+
+
+labels = list(data.index)
+idx_1 = np.where(data.y == 1)
+idx_0 = np.where(data.y == 0)
+idx_2 = np.where(data.y == 3)
+idx_3 = np.where(data.y == 4)
+idx_4 = np.where(data.y == 2)
+plt.scatter(data.iloc[idx_0].x1, data.iloc[idx_0].x2, s=30, c='C0', marker=".", label='0')
+plt.scatter(data.iloc[idx_1].x1, data.iloc[idx_1].x2, s=30, c='C1', marker="+", label='1')
+plt.scatter(data.iloc[idx_2].x1, data.iloc[idx_2].x2, s=30, c='k', marker="*", label='2')
+plt.scatter(data.iloc[idx_3].x1, data.iloc[idx_3].x2, s=30, c='gold', marker="v", label='3')
+plt.scatter(data.iloc[idx_4].x1, data.iloc[idx_4].x2, s=30, c='green', marker="p", label='4')
+plt.show()
+
+
+# data = pd.DataFrame(X, columns=['x1','x2'])
+# data['y'] = y
+data.to_csv('Dataset23.csv', index=False)
 
 
 
