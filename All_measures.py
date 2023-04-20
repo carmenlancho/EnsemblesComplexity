@@ -23,6 +23,10 @@ def all_measures(data,path_to_save, name_data):
     k_min = 0
     host_instance, data_clusters, results, k_auto = hostility_measure(sigma, X, y, delta, k_min, seed=0)
     host_instances = np.array(host_instance[k_auto])
+    class_data_host = results.loc[k_auto]['Host_0':'Dataset_Host']
+    df_class_data_host = pd.DataFrame(class_data_host)
+    df_class_data_host.columns = [name_data]
+
 
     p = ClassificationMeasures(data)
     kdn = p.k_disagreeing_neighbors()
@@ -56,7 +60,10 @@ def all_measures(data,path_to_save, name_data):
     nombre_csv = 'ComplexityMeasures_InstanceLevel_' + name_data + '.csv'
     df_measures.to_csv(nombre_csv, encoding='utf_8_sig')
 
-    return df_measures
+    nombre_csv2 = 'ComplexityMeasures_ClassDatasetLevel_' + name_data + '.csv'
+    df_class_data_host.to_csv(nombre_csv2, encoding='utf_8_sig')
+
+    return df_measures, df_class_data_host
 
 
 
@@ -77,4 +84,4 @@ for data_file in total_name_list:
     data = pd.read_csv(file)
     # data = pd.read_csv('Dataset9_6000_estandarizado.csv')
     path_to_save = root_path+'/Results_Complexity_InstanceLevel'
-    df_measures = all_measures(data,path_to_save, name_data)
+    df_measures, df_class_data_host = all_measures(data,path_to_save, name_data)
