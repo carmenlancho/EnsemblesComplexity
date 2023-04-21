@@ -742,41 +742,75 @@ data.to_csv('Dataset27.csv', index=False)
 
 #
 # ### Dataset 28
-# X, y = make_classification(
-#     n_samples=4000, # 3000 observations
-#     n_features=2, # 2 total features
-#     n_informative=2,n_redundant=0,
-#     n_classes=4, # binary target/label
-#     n_clusters_per_class = 1,
-#     hypercube = False,
-#     shift = 0.0, # just changes the scale
-#     shuffle = True, # Shuffle the samples and the features
-#     class_sep = 1,
-#     flip_y=0.0,
-#     random_state=13 #
-# )
-#
+np.random.seed(13)
+X = np.random.uniform(low=0,high=1,size=(3000,2))
+
+data = pd.DataFrame(X, columns=['x1','x2'])
+data['y'] = 0
+
+plt.scatter(data.x1, data.x2, s=30, c='C0', marker=".")
+plt.show()
+
+data.y[(data.x1 < 0.3) & (data.x2 < 0.3)] = 1
+data.y[(data.x1 < 0.2) & (data.x2 < 0.4)] = 1
+data.y[(data.x1 < 0.1) & (data.x2 < 0.6)] = 1
+data.y[(data.x1 < 0.6) & (data.x2 < 0.15)] = 1
+data.y[(data.x1 < 0.5) & (data.x1 > 0.4) & (data.x2 < 0.35)] = 1
+data.y[(data.x1 < 0.05) & (data.x2 < 0.8)] = 1
+data.y[(data.x1 < 0.55) & (data.x2 > 0.45) & (data.x2 < 0.55)] = 1
+data.y[(data.x1 < 0.8) & (data.x2 < 0.17)] = 1
+data.y[(data.x1 < 0.7) & (data.x1 > 0.65) & (data.x2 < 0.3)] = 1
+
+# data.y[((data.x1−1)^2 + (data.x2−1)^2 < 1)] = 2
+
+for i in range(len(data)):
+    print(i)
+    print(((data.iloc[i].x1-1)**2 + (data.iloc[i].x2-1)**2 ))
+    if (((data.iloc[i].x1-0.4)**2 + (data.iloc[i].x2-1)**2 ) < 0.04):
+        data.y[i] = 2
+    if (((data.iloc[i].x1-1)**2 + (data.iloc[i].x2-0.45)**2 ) < 0.02):
+        data.y[i] = 2
+    if (((data.iloc[i].x1-1)**2 + (data.iloc[i].x2-1)**2 ) < 0.17):
+        data.y[i] = 2
+    if (((data.iloc[i].x1-0.25)**2 + (data.iloc[i].x2-1)**2 ) < 0.01):
+        data.y[i] = 2
+    if (((data.iloc[i].x1-0.06)**2 + (data.iloc[i].x2-0.95)**2 ) < 0.01):
+        data.y[i] = 2
+    if (((data.iloc[i].x1-1)**2 + (data.iloc[i].x2-0.1)**2 ) < 0.025):
+        data.y[i] = 2
+    if (((data.iloc[i].x1-1)**2 + (data.iloc[i].x2-0.25)**2 ) < 0.005):
+        data.y[i] = 2
+    if (((data.iloc[i].x1-0.75)**2 + (data.iloc[i].x2-0.65)**2 ) < 0.005):
+        data.y[i] = 2
+
+
+
+
+# ((data.x1−1)^2 + (data.x2−1)^2 < 1)
+# ((x−500)^2 + (y−500)^2 < 250000)
+
 # data = pd.DataFrame(X, columns=['x1','x2'])
 # data['y'] = y
-#
-# # Plot
-# # For labels
-# labels = list(data.index)
-# idx_1 = np.where(data.y == 1)
-# idx_0 = np.where(data.y == 0)
-# idx_2 = np.where(data.y == 2)
-# idx_3 = np.where(data.y == 3)
-#
-# plt.scatter(data.iloc[idx_0].x1, data.iloc[idx_0].x2, s=30, c='C0', marker=".")
-# plt.scatter(data.iloc[idx_1].x1, data.iloc[idx_1].x2, s=30, c='C1', marker="+")
-# plt.scatter(data.iloc[idx_2].x1, data.iloc[idx_2].x2, s=30, c='k', marker="*")
-# plt.scatter(data.iloc[idx_3].x1, data.iloc[idx_3].x2, s=20, c='green', marker="v")
-# plt.show()
-#
-#
-# data.to_csv('Dataset28.csv', index=False)
-#
 
+# Plot
+# For labels
+labels = list(data.index)
+idx_1 = np.where(data.y == 1)
+idx_0 = np.where(data.y == 0)
+idx_2 = np.where(data.y == 2)
+
+
+plt.scatter(data.iloc[idx_0].x1, data.iloc[idx_0].x2, s=30, c='C0', marker=".")
+plt.scatter(data.iloc[idx_1].x1, data.iloc[idx_1].x2, s=30, c='C1', marker="+")
+plt.scatter(data.iloc[idx_2].x1, data.iloc[idx_2].x2, s=30, c='k', marker="*")
+# plt.scatter(data.iloc[idx_3].x1, data.iloc[idx_3].x2, s=20, c='green', marker="v")
+plt.show()
+
+
+
+pd.DataFrame(data.groupby('y').count())
+data.to_csv('Dataset28.csv', index=False)
+#
 
 
 
