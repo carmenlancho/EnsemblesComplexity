@@ -599,6 +599,183 @@ data.to_csv('Dataset23.csv', index=False)
 
 
 
+### Dataset 24
+X, y = make_classification(
+    n_samples=2000, # 3000 observations
+    n_features=2, # 2 total features
+    n_informative=2,n_redundant=0,
+    n_classes=3, # binary target/label
+    n_clusters_per_class = 1,
+    hypercube = True,
+    shift = 0.0, # just changes the scale
+    shuffle = True, # Shuffle the samples and the features
+    class_sep = 1,
+    flip_y=0.0,
+    random_state=1 #
+)
+
+data = pd.DataFrame(X, columns=['x1','x2'])
+data['y'] = y
+
+# Plot
+# For labels
+labels = list(data.index)
+idx_1 = np.where(data.y == 1)
+idx_0 = np.where(data.y == 0)
+idx_2 = np.where(data.y == 2)
+plt.scatter(data.iloc[idx_0].x1, data.iloc[idx_0].x2, s=30, c='C0', marker=".")
+plt.scatter(data.iloc[idx_1].x1, data.iloc[idx_1].x2, s=30, c='C1', marker="+")
+plt.scatter(data.iloc[idx_2].x1, data.iloc[idx_2].x2, s=30, c='k', marker="*")
+plt.show()
+
+
+data.to_csv('Dataset24.csv', index=False)
+
+
+### Dataset 25
+X, y = make_classification(
+    n_samples=3000, # 3000 observations
+    n_features=2, # 2 total features
+    n_informative=2,n_redundant=0,
+    n_classes=3, # binary target/label
+    n_clusters_per_class = 1,
+    hypercube = True,
+    shift = 0.0, # just changes the scale
+    shuffle = True, # Shuffle the samples and the features
+    class_sep = 1,
+    flip_y=0.0,
+    random_state=1 #
+)
+
+data = pd.DataFrame(X, columns=['x1','x2'])
+data['y'] = y
+
+# Plot
+# For labels
+labels = list(data.index)
+idx_1 = np.where(data.y == 1)
+idx_0 = np.where(data.y == 0)
+idx_2 = np.where(data.y == 2)
+plt.scatter(data.iloc[idx_0].x1, data.iloc[idx_0].x2, s=30, c='C0', marker=".")
+plt.scatter(data.iloc[idx_1].x1, data.iloc[idx_1].x2, s=30, c='C1', marker="+")
+plt.scatter(data.iloc[idx_2].x1, data.iloc[idx_2].x2, s=30, c='k', marker="*")
+plt.show()
+
+
+data.to_csv('Dataset25.csv', index=False)
+
+
+
+### Dataset 26
+X, y = make_classification(
+    n_samples=4000, # 3000 observations
+    n_features=2, # 2 total features
+    n_informative=2,n_redundant=0,
+    n_classes=4, # binary target/label
+    n_clusters_per_class = 1,
+    hypercube = False,
+    shift = 0.0, # just changes the scale
+    shuffle = True, # Shuffle the samples and the features
+    class_sep = 2,
+    flip_y=0.0,
+    random_state=13 #
+)
+
+data = pd.DataFrame(X, columns=['x1','x2'])
+data['y'] = y
+
+# Plot
+# For labels
+labels = list(data.index)
+idx_1 = np.where(data.y == 1)
+idx_0 = np.where(data.y == 0)
+idx_2 = np.where(data.y == 2)
+idx_3 = np.where(data.y == 3)
+plt.scatter(data.iloc[idx_0].x1, data.iloc[idx_0].x2, s=30, c='C0', marker=".")
+plt.scatter(data.iloc[idx_1].x1, data.iloc[idx_1].x2, s=30, c='C1', marker="+")
+plt.scatter(data.iloc[idx_2].x1, data.iloc[idx_2].x2, s=30, c='k', marker="*")
+plt.scatter(data.iloc[idx_3].x1, data.iloc[idx_3].x2, s=20, c='green', marker="v")
+plt.show()
+
+
+data.to_csv('Dataset26.csv', index=False)
+
+
+
+
+### Dataset 27
+X, y = make_classification(
+    n_samples=4000, # 3000 observations
+    n_features=2, # 2 total features
+    n_informative=2,n_redundant=0,
+    n_classes=4, # binary target/label
+    n_clusters_per_class = 1,
+    hypercube = True,
+    shift = 0.0, # just changes the scale
+    shuffle = True, # Shuffle the samples and the features
+    class_sep = 0.7,
+    flip_y=0.0,
+    random_state=11 #
+)
+
+data = pd.DataFrame(X, columns=['x1','x2'])
+data['y'] = y
+
+# Plot
+# For labels
+labels = list(data.index)
+idx_1 = np.where(data.y == 1)
+idx_0 = np.where(data.y == 0)
+idx_2 = np.where(data.y == 2)
+idx_3 = np.where(data.y == 3)
+plt.scatter(data.iloc[idx_0].x1, data.iloc[idx_0].x2, s=30, c='C0', marker=".")
+plt.scatter(data.iloc[idx_1].x1, data.iloc[idx_1].x2, s=30, c='C1', marker="+")
+plt.scatter(data.iloc[idx_2].x1, data.iloc[idx_2].x2, s=30, c='k', marker="*")
+plt.scatter(data.iloc[idx_3].x1, data.iloc[idx_3].x2, s=20, c='green', marker="v")
+plt.show()
+
+
+data.to_csv('Dataset27.csv', index=False)
+
+
+
+
+#
+# ### Dataset 28
+# X, y = make_classification(
+#     n_samples=4000, # 3000 observations
+#     n_features=2, # 2 total features
+#     n_informative=2,n_redundant=0,
+#     n_classes=4, # binary target/label
+#     n_clusters_per_class = 1,
+#     hypercube = False,
+#     shift = 0.0, # just changes the scale
+#     shuffle = True, # Shuffle the samples and the features
+#     class_sep = 1,
+#     flip_y=0.0,
+#     random_state=13 #
+# )
+#
+# data = pd.DataFrame(X, columns=['x1','x2'])
+# data['y'] = y
+#
+# # Plot
+# # For labels
+# labels = list(data.index)
+# idx_1 = np.where(data.y == 1)
+# idx_0 = np.where(data.y == 0)
+# idx_2 = np.where(data.y == 2)
+# idx_3 = np.where(data.y == 3)
+#
+# plt.scatter(data.iloc[idx_0].x1, data.iloc[idx_0].x2, s=30, c='C0', marker=".")
+# plt.scatter(data.iloc[idx_1].x1, data.iloc[idx_1].x2, s=30, c='C1', marker="+")
+# plt.scatter(data.iloc[idx_2].x1, data.iloc[idx_2].x2, s=30, c='k', marker="*")
+# plt.scatter(data.iloc[idx_3].x1, data.iloc[idx_3].x2, s=20, c='green', marker="v")
+# plt.show()
+#
+#
+# data.to_csv('Dataset28.csv', index=False)
+#
 
 
 
