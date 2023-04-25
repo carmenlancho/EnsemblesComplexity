@@ -1,4 +1,4 @@
-#### Plot hostility of the instances
+#### Plot complexity of the instances
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -6,7 +6,7 @@ import os
 
 root_path = os.getcwd()
 
-def plot_hostility(X, y, host_final_instance):
+def plot_complexity(X, y, host_final_instance):
     # Dataset para pintar
     data_plot = pd.DataFrame(X, columns=['x1', 'x2'])
     data_plot['label'] = y
@@ -224,27 +224,8 @@ for filename in os.listdir(path_csv):
     if filename.endswith('.csv'):
         total_name_list.append(filename)
 
-total_name_list = ['ComplexityMeasures_InstanceLevel_Dataset2.csv',
-                   'ComplexityMeasures_InstanceLevel_Dataset3.csv',
-                   'ComplexityMeasures_InstanceLevel_Dataset6.csv',
-                   'ComplexityMeasures_InstanceLevel_Dataset7.csv',
-                   'ComplexityMeasures_InstanceLevel_Dataset8.csv',
-                   'ComplexityMeasures_InstanceLevel_Dataset10.csv',
-                   'ComplexityMeasures_InstanceLevel_Dataset11.csv',
-                   'ComplexityMeasures_InstanceLevel_Dataset14.csv',
-                   'ComplexityMeasures_InstanceLevel_Dataset17.csv',
-                   'ComplexityMeasures_InstanceLevel_Moon2.csv']
 
-total_name_list = ['ComplexityMeasures_InstanceLevel_Dataset18.csv',
-                   'ComplexityMeasures_InstanceLevel_Dataset19.csv',
-                   'ComplexityMeasures_InstanceLevel_Dataset21.csv',
-                   'ComplexityMeasures_InstanceLevel_Dataset22.csv']
-
-total_name_list = ['ComplexityMeasures_InstanceLevel_Dataset23.csv']
-
-total_name_list = ['ComplexityMeasures_InstanceLevel_Dataset20.csv']
-
-total_name_list = ['ComplexityMeasures_InstanceLevel_Dataset28.csv']
+total_name_list = ['ComplexityMeasures_InstanceLevel_Data12.csv']
 
 for data_file in total_name_list:
     os.chdir(root_path + '/Results_Complexity_InstanceLevel')
@@ -252,13 +233,12 @@ for data_file in total_name_list:
     file = data_file
     complete_file = data_file[33:]
     data = pd.read_csv(file)
-    host_final_instance = data['Hostility']
-    host_final_instance = data['kDN']
+    complexity_final_instance = data['CLD']
     os.chdir(root_path + '/datasets')
     data_complete = pd.read_csv(complete_file)
     X = data_complete[['x1', 'x2']].to_numpy()
     y = data_complete[['y']].to_numpy()
 
-    plot_hostility(X,y, host_final_instance)
+    plot_complexity(X,y, complexity_final_instance)
 
 
