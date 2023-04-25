@@ -1,3 +1,5 @@
+## Code from PyHard: https://gitlab.com/ita-ml/pyhard/-/blob/master/pyhard/measures.py
+
 """
 Module that implements the Hardness Measures, for both classification and regression.
 """
