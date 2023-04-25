@@ -51,7 +51,7 @@ def all_measures(data,path_to_save, name_data):
 
     dict_measures = {'Hostility': host_instances, 'kDN': kdn, 'DS': DS, 'DCP': DCP,
                      'TD_U': TD_U, 'TD_P': TD_P, 'MV': MV, 'CB': CB, 'CLD': CLD, 'N1': N1, 'N2': N2,
-                     'LSC': LSC, 'LSradius': LSradius, 'H': H, 'U': U, 'F1': F1, 'F2': F2, 'F3': F3, 'F4': F4}
+                     'LSC': LSC, 'LSradius': LSradius, 'H': H, 'U': U, 'F1': F1, 'F2': F2, 'F3': F3, 'F4': F4, 'y':y}
 
     df_measures = pd.DataFrame(dict_measures)
 
@@ -74,7 +74,7 @@ for filename in os.listdir(path_csv):
     if filename.endswith('.csv'):
         total_name_list.append(filename)
 
-total_name_list = ['Dataset28.csv']
+# total_name_list = ['Dataset28.csv']
 
 for data_file in total_name_list:
     os.chdir(root_path + '/datasets')
