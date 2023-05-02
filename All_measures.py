@@ -9,7 +9,7 @@ from measures import ClassificationMeasures
 
 
 
-root_path = os.getcwd()
+# root_path = os.getcwd()
 
 
 def all_measures(data,path_to_save, name_data):
@@ -65,23 +65,23 @@ def all_measures(data,path_to_save, name_data):
 
     return df_measures, df_class_data_host
 
-
-
-path_csv = os.chdir(root_path+'/datasets')
-# Extraemos los nombres de todos los ficheros
-total_name_list = []
-for filename in os.listdir(path_csv):
-    if filename.endswith('.csv'):
-        total_name_list.append(filename)
-
-# total_name_list = ['Dataset28.csv']
-
-for data_file in total_name_list:
-    os.chdir(root_path + '/datasets')
-    print(data_file)
-    file = data_file
-    name_data = data_file[0:-4]
-    data = pd.read_csv(file)
-    # data = pd.read_csv('Dataset9_6000_estandarizado.csv')
-    path_to_save = root_path+'/Results_Complexity_InstanceLevel'
-    df_measures, df_class_data_host = all_measures(data,path_to_save, name_data)
+#
+#
+# path_csv = os.chdir(root_path+'/datasets')
+# # Extraemos los nombres de todos los ficheros
+# total_name_list = []
+# for filename in os.listdir(path_csv):
+#     if filename.endswith('.csv'):
+#         total_name_list.append(filename)
+#
+# # total_name_list = ['Dataset28.csv']
+#
+# for data_file in total_name_list:
+#     os.chdir(root_path + '/datasets')
+#     print(data_file)
+#     file = data_file
+#     name_data = data_file[0:-4]
+#     data = pd.read_csv(file)
+#     # data = pd.read_csv('Dataset9_6000_estandarizado.csv')
+#     path_to_save = root_path+'/Results_Complexity_InstanceLevel'
+#     df_measures, df_class_data_host = all_measures(data,path_to_save, name_data)
