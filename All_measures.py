@@ -12,7 +12,7 @@ from measures import ClassificationMeasures
 # root_path = os.getcwd()
 
 
-def all_measures(data,path_to_save, name_data):
+def all_measures(data,save_csv,path_to_save, name_data):
 
     # Hostility measure
     y = data['y'].to_numpy()
@@ -55,13 +55,14 @@ def all_measures(data,path_to_save, name_data):
 
     df_measures = pd.DataFrame(dict_measures)
 
-    # To save the results
-    os.chdir(path_to_save)
-    nombre_csv = 'ComplexityMeasures_InstanceLevel_' + name_data + '.csv'
-    df_measures.to_csv(nombre_csv, encoding='utf_8_sig')
+    if (save_csv == True):
+        # To save the results
+        os.chdir(path_to_save)
+        nombre_csv = 'ComplexityMeasures_InstanceLevel_' + name_data + '.csv'
+        df_measures.to_csv(nombre_csv, encoding='utf_8_sig')
 
-    nombre_csv2 = 'ComplexityMeasures_ClassDatasetLevel_' + name_data + '.csv'
-    df_class_data_host.to_csv(nombre_csv2, encoding='utf_8_sig')
+        nombre_csv2 = 'ComplexityMeasures_ClassDatasetLevel_' + name_data + '.csv'
+        df_class_data_host.to_csv(nombre_csv2, encoding='utf_8_sig')
 
     return df_measures, df_class_data_host
 
@@ -84,4 +85,5 @@ def all_measures(data,path_to_save, name_data):
 #     data = pd.read_csv(file)
 #     # data = pd.read_csv('Dataset9_6000_estandarizado.csv')
 #     path_to_save = root_path+'/Results_Complexity_InstanceLevel'
-#     df_measures, df_class_data_host = all_measures(data,path_to_save, name_data)
+#     save_csv = True
+#     df_measures, df_class_data_host = all_measures(data,save_csv,path_to_save, name_data)
