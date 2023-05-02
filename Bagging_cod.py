@@ -26,7 +26,7 @@ for data_file in total_name_list:
     os.chdir(root_path + '/datasets')
     print(data_file)
     file = data_file
-    name_file = data_file[:-4]
+    name_data = data_file[:-4]
     data = pd.read_csv(file)
     X = data[['x1', 'x2']].to_numpy()
     y = data[['y']].to_numpy()
@@ -78,13 +78,17 @@ def get_performance_metrics(y, y_pred):
         'tp': tp,
     }
 
+# dataframe to save the results
+results = pd.DataFrame(columns=['dataset','fold','n_ensemble','weights','confusion_matrix',
+                                 'accuracy','info_complexity_dataset','info_complexity_class'])
 
 
-n_ensembles = 200 # maximum number of ensembles to consider (later we plot and stop when we want)
-CM_selected = 'Hostility' # selection of the complexity measure to guide the sampling
+n_ensembles = 50 # maximum number of ensembles to consider (later we plot and stop when we want)
+CM_selected = 'kDN' # selection of the complexity measure to guide the sampling
 
 skf = StratifiedKFold(n_splits=5, random_state=1,shuffle=True)
 for train_index, test_index in skf.split(X, y):
+    fold = 1
     # print(train_index)
     print(test_index)
     X_train, X_test = X[train_index], X[test_index]
@@ -97,8 +101,10 @@ for train_index, test_index in skf.split(X, y):
     data_train['y'] = y_train
     df_measures, _ = all_measures(data_train,False,None, None)
 
-    CM_weights = df_measures[CM_selected]
-
+    CM_weights = df_measures[CM_selected] # TRANSFORMAR EN DISTRIBUCION DE PROB
+    preds = pd.DataFrame()
+    ensemble_preds = pd.DataFrame()
+    # i = 0
     for i in range(n_ensembles):
 
         print(i)
@@ -114,19 +120,37 @@ for train_index, test_index in skf.split(X, y):
         clf.fit(bootstrap_train_sample, y_train)
         y_pred = clf.predict(X_test)
 
-        if (i==0): # first iteration
-            preds = pd.DataFrame(y_pred,columns=['pred_0'])
-            ensemble_preds = pd.DataFrame(y_pred, columns=['pred_0'])
+        if (i<30): # first iterations
+            col_name = 'pred_' + str(i)
+            preds[col_name] = y_pred  # individual predictions
+            # ensemble_preds = pd.DataFrame(y_pred, columns=['pred_0'])
         else:
-            col_name = 'pred_'+str(i+1)
+            col_name = 'pred_'+str(i)
             preds[col_name] = y_pred # individual predictions
-            ensemble_preds[col_name] = preds.mode(axis=1) # ensemble prediction with majority voting rule
+            ensemble_preds[col_name] = preds.mode(axis=1)[0] # ensemble prediction with majority voting rule
+
+            y_predicted = ensemble_preds.iloc[:, -1:] # last column
+            acc = accuracy_score(y_predicted, y_test)
+            conf_matrix = confusion_matrix(y_test, y_predicted)
+            results_dict = {'dataset':name_data,'fold':fold, 'n_ensemble':i, 'weights':CM_selected,
+                            'confusion_matrix':'conf_matrix', 'accuracy':acc,
+                            'info_complexity_dataset':'VALOR',
+                            'info_complexity_class':'VALORES'}
+            results_aux = pd.DataFrame(results_dict, index=[0])
+            results = pd.concat([results,results_aux])
+
+    fold += 1
 
     # Performance of each ensemble: accuracy and confusion matrix
-    # confusion_matrix(y_test, ensemble_preds[col_name])
-    y_predicted = ensemble_preds[col_name]
-    get_performance_metrics(y_test, y_predicted)
-    y = y_test
+    # confusion_matrix(y_test, ensemble_preds[col_name]) # PENSAR COMO GUARDAR CONFUSION MATRIX
+    # y_predicted = ensemble_preds[col_name]
+    # acc = accuracy_score(y_predicted, y_test)
+    # get_performance_metrics(y_test, y_predicted)
+    # y = y_test
+
+
+    # Sacaría csv con esta estructura
+    # dataset	fold	n_ensemble	weights	confusion_matrix	accuracy	info_complexity_dataset	info_complexity_class
 
 
 
