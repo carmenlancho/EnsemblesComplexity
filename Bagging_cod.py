@@ -166,9 +166,10 @@ for train_index, test_index in skf.split(X, y):
 
             y_predicted = ensemble_preds.iloc[:, -1:] # last column
             acc = accuracy_score(y_predicted, y_test)
-            conf_matrix = confusion_matrix(y_test, y_predicted)
+            conf_matrix = confusion_matrix(y_test, y_predicted).tolist()
+
             results_dict = {'dataset':name_data,'fold':fold, 'n_ensemble':i, 'weights':CM_selected,
-                            'confusion_matrix':'conf_matrix', 'accuracy':acc,
+                            'confusion_matrix':[conf_matrix], 'accuracy':acc,
                             'info_complexity_dataset':'VALOR',
                             'info_complexity_class':'VALORES'}
             results_aux = pd.DataFrame(results_dict, index=[0])
@@ -187,8 +188,11 @@ for train_index, test_index in skf.split(X, y):
     # Sacaría csv con esta estructura
     # dataset	fold	n_ensemble	weights	confusion_matrix	accuracy	info_complexity_dataset	info_complexity_class
 
-
-
+# # para sacar la matriz de confusión
+# results.reset_index(inplace=True)
+# aa = results['confusion_matrix'][0]
+# type(aa) # list
+# np.array(aa)
 
 
 
