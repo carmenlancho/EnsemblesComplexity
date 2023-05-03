@@ -71,11 +71,12 @@ def bootstrap_sample(X_train, y_train, weights):
 def voting_rule(preds):
 
     mode_preds = preds.mode(axis=1)  # most common pred value
+    if (mode_preds.shape[1] > 1):
+        mode_preds_aux = mode_preds.dropna()  # cases with more than one most common value (= ties)
+        mode_preds_aux = mode_preds_aux.apply(random.choice, axis=1)  # ties are broken randomly
 
-    mode_preds_aux = mode_preds.dropna() # cases with more than one most common value (= ties)
-    mode_preds_aux = mode_preds_aux.apply(random.choice, axis=1) # ties are broken randomly
+        mode_preds.iloc[mode_preds_aux.index, 0] = mode_preds_aux
 
-    mode_preds.iloc[mode_preds_aux.index, 0] = mode_preds_aux
     # Once the ties problem is solved, first column contains the final ensemble predictions
     preds_final = mode_preds[0]
 
@@ -134,7 +135,7 @@ def complexity_driven_bagging(X,y,n_ensembles, name_data,path_to_save):
             # i = 0
             for i in range(n_ensembles):
 
-                # print(i)
+                print(i)
                 # Get bootstrap sample following CM_weights
                 n_train = len(y_train)
                 np.random.seed(0)
