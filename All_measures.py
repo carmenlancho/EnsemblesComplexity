@@ -55,6 +55,11 @@ def all_measures(data,save_csv,path_to_save, name_data):
 
     df_measures = pd.DataFrame(dict_measures)
 
+    # Values per class and dataset
+    df_classes_dataset = pd.DataFrame(df_measures.groupby('y').mean())
+    df_classes_dataset.loc["dataset"] = df_measures.mean()[:-1]
+    df_classes_dataset['Hostility'] = np.array(class_data_host)
+
     if (save_csv == True):
         # To save the results
         os.chdir(path_to_save)
@@ -64,9 +69,9 @@ def all_measures(data,save_csv,path_to_save, name_data):
         nombre_csv2 = 'ComplexityMeasures_ClassDatasetLevel_' + name_data + '.csv'
         df_class_data_host.to_csv(nombre_csv2, encoding='utf_8_sig')
 
-    return df_measures, df_class_data_host
+    return df_measures, df_classes_dataset
 
-#
+
 #
 # path_csv = os.chdir(root_path+'/datasets')
 # # Extraemos los nombres de todos los ficheros
@@ -75,7 +80,7 @@ def all_measures(data,save_csv,path_to_save, name_data):
 #     if filename.endswith('.csv'):
 #         total_name_list.append(filename)
 #
-# # total_name_list = ['Dataset28.csv']
+# # total_name_list = ['Data13.csv']
 #
 # for data_file in total_name_list:
 #     os.chdir(root_path + '/datasets')
