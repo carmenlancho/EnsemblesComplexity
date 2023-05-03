@@ -148,6 +148,11 @@ for train_index, test_index in skf.split(X, y):
         X_bootstrap, y_bootstrap = bootstrap_sample(X_train, y_train, weights)
 
         # Save complexity information (class and dataset levels) POR HACER
+        data_bootstrap = pd.DataFrame(X_bootstrap, columns=['x1', 'x2'])
+        data_bootstrap['y'] = y_bootstrap
+        _, df_classes_dataset_bootstrap = all_measures(data_bootstrap, False, None, None)
+        info_complexity_dataset = df_classes_dataset_bootstrap[CM_selected]['dataset']
+        info_complexity_class = df_classes_dataset_bootstrap[CM_selected][:-1].tolist()
 
         # Train DT in bootstrap sample and test y X_test, y_test
         clf = DecisionTreeClassifier(random_state=0)
@@ -170,8 +175,8 @@ for train_index, test_index in skf.split(X, y):
 
             results_dict = {'dataset':name_data,'fold':fold, 'n_ensemble':i, 'weights':CM_selected,
                             'confusion_matrix':[conf_matrix], 'accuracy':acc,
-                            'info_complexity_dataset':'VALOR',
-                            'info_complexity_class':'VALORES'}
+                            'info_complexity_dataset':info_complexity_dataset,
+                            'info_complexity_class':[info_complexity_class]}
             results_aux = pd.DataFrame(results_dict, index=[0])
             results = pd.concat([results,results_aux])
 
