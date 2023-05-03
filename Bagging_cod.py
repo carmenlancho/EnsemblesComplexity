@@ -34,49 +34,74 @@ for data_file in total_name_list:
 
 
 
+#
+# def get_performance_metrics(y, y_pred):
+#     acc = accuracy_score(y_pred, y)
+#     # bacc = balanced_accuracy_score(y, y_pred)
+#     tn, fn, fp, tp = confusion_matrix(y_pred, y).ravel()
+#     recall = tp / (tp + fn)
+#     specificity = tn / (tn + fp)
+#     # gmean = np.sqrt(recall * specificity)
+#     # auc = roc_auc_score(y, y_pred)
+#     # mcc = matthews_corrcoef(y, y_pred)
+#     if (tp + fp == 0):
+#         ppv = 0
+#     else:
+#         ppv = tp / (tp + fp)
+#     if (tn + fn == 0):
+#         npv = 0
+#     else:
+#         npv = tn / (tn + fn)
+#     #
+#     # gps_num = 4 * ppv * recall * specificity * npv
+#     # gps_denom = (ppv * recall * npv) + (ppv * recall * specificity) + (npv * specificity * ppv) + (npv * specificity * recall)
+#     #
+#     # if (gps_denom == 0):
+#     #     gps = 0
+#     # else:
+#     #     gps = gps_num / gps_denom
+#
+#     return {
+#         'acc': acc,
+#         # 'bacc': bacc,
+#         'recall': recall,
+#         'specificity': specificity,
+#         'ppv':ppv,
+#         'npv':npv,
+#         # 'gmean': gmean,
+#         # 'auc': auc,
+#         # 'mcc': mcc,
+#         # 'gps': gps,
+#         'tn': tn,
+#         'fn': fn,
+#         'fp': fp,
+#         'tp': tp,
+#     }
 
-def get_performance_metrics(y, y_pred):
-    acc = accuracy_score(y_pred, y)
-    # bacc = balanced_accuracy_score(y, y_pred)
-    tn, fn, fp, tp = confusion_matrix(y_pred, y).ravel()
-    recall = tp / (tp + fn)
-    specificity = tn / (tn + fp)
-    # gmean = np.sqrt(recall * specificity)
-    # auc = roc_auc_score(y, y_pred)
-    # mcc = matthews_corrcoef(y, y_pred)
-    if (tp + fp == 0):
-        ppv = 0
-    else:
-        ppv = tp / (tp + fp)
-    if (tn + fn == 0):
-        npv = 0
-    else:
-        npv = tn / (tn + fn)
-    #
-    # gps_num = 4 * ppv * recall * specificity * npv
-    # gps_denom = (ppv * recall * npv) + (ppv * recall * specificity) + (npv * specificity * ppv) + (npv * specificity * recall)
-    #
-    # if (gps_denom == 0):
-    #     gps = 0
-    # else:
-    #     gps = gps_num / gps_denom
+def bootstrap_sample(X_train, y_train, weights):
+    n_train = len(y_train)
+    # Indices corresponding to a weighted sampling with replacement of the same sample
+    # size than the original data
+    bootstrap_indices = random.choices(np.arange(y_train.shape[0]), weights=weights, k=n_train)
 
-    return {
-        'acc': acc,
-        # 'bacc': bacc,
-        'recall': recall,
-        'specificity': specificity,
-        'ppv':ppv,
-        'npv':npv,
-        # 'gmean': gmean,
-        # 'auc': auc,
-        # 'mcc': mcc,
-        # 'gps': gps,
-        'tn': tn,
-        'fn': fn,
-        'fp': fp,
-        'tp': tp,
-    }
+    X_bootstrap = X_train[bootstrap_indices]
+    y_bootstrap = y_train[bootstrap_indices]
+
+    return X_bootstrap, y_bootstrap
+
+def voting_rule(preds):
+
+    mode_preds = preds.mode(axis=1)  # most common pred value
+
+    mode_preds_aux = mode_preds.dropna() # cases with more than one most common value (= ties)
+    mode_preds_aux = mode_preds_aux.apply(random.choice, axis=1) # ties are broken randomly
+
+    mode_preds.iloc[mode_preds_aux.index, 0] = mode_preds_aux
+    # Once the ties problem is solved, first column contains the final ensemble predictions
+    preds_final = mode_preds[0]
+
+    return preds_final
+
 
 # dataframe to save the results
 results = pd.DataFrame(columns=['dataset','fold','n_ensemble','weights','confusion_matrix',
@@ -84,13 +109,15 @@ results = pd.DataFrame(columns=['dataset','fold','n_ensemble','weights','confusi
 
 
 n_ensembles = 50 # maximum number of ensembles to consider (later we plot and stop when we want)
-CM_selected = 'kDN' # selection of the complexity measure to guide the sampling
+CM_selected = 'Hostility' # selection of the complexity measure to guide the sampling
 
 skf = StratifiedKFold(n_splits=5, random_state=1,shuffle=True)
+fold = 0
 for train_index, test_index in skf.split(X, y):
-    fold = 1
+    fold = fold + 1
+    print(fold)
     # print(train_index)
-    print(test_index)
+    # print(test_index)
     X_train, X_test = X[train_index], X[test_index]
     y_train, y_test = y[train_index], y[test_index]
     # print(X_test)
@@ -101,7 +128,13 @@ for train_index, test_index in skf.split(X, y):
     data_train['y'] = y_train
     df_measures, _ = all_measures(data_train,False,None, None)
 
-    CM_weights = df_measures[CM_selected] # TRANSFORMAR EN DISTRIBUCION DE PROB
+    CM_values = df_measures[CM_selected]
+    ranking = CM_values.rank(method='max', ascending=True) # more weight to difficult
+    # ranking = CM_values.rank(method='max', ascending=False)  # more weight to easy
+    weights = ranking/sum(ranking) # probability distribution
+
+
+
     preds = pd.DataFrame()
     ensemble_preds = pd.DataFrame()
     # i = 0
@@ -111,13 +144,14 @@ for train_index, test_index in skf.split(X, y):
         # Get bootstrap sample following CM_weights
         n_train = len(y_train)
         np.random.seed(0)
-        bootstrap_train_sample = random.choices(X_train, weights=CM_weights, k=n_train)
-        bootstrap_train_sample = np.array(bootstrap_train_sample) # correct format
+
+        X_bootstrap, y_bootstrap = bootstrap_sample(X_train, y_train, weights)
+
         # Save complexity information (class and dataset levels) POR HACER
 
         # Train DT in bootstrap sample and test y X_test, y_test
         clf = DecisionTreeClassifier(random_state=0)
-        clf.fit(bootstrap_train_sample, y_train)
+        clf.fit(X_bootstrap, y_bootstrap)
         y_pred = clf.predict(X_test)
 
         if (i<30): # first iterations
@@ -127,7 +161,8 @@ for train_index, test_index in skf.split(X, y):
         else:
             col_name = 'pred_'+str(i)
             preds[col_name] = y_pred # individual predictions
-            ensemble_preds[col_name] = preds.mode(axis=1)[0] # ensemble prediction with majority voting rule
+            votes = voting_rule(preds)
+            ensemble_preds[col_name] = votes # ensemble prediction with majority voting rule
 
             y_predicted = ensemble_preds.iloc[:, -1:] # last column
             acc = accuracy_score(y_predicted, y_test)
@@ -139,7 +174,7 @@ for train_index, test_index in skf.split(X, y):
             results_aux = pd.DataFrame(results_dict, index=[0])
             results = pd.concat([results,results_aux])
 
-    fold += 1
+
 
     # Performance of each ensemble: accuracy and confusion matrix
     # confusion_matrix(y_test, ensemble_preds[col_name]) # PENSAR COMO GUARDAR CONFUSION MATRIX
