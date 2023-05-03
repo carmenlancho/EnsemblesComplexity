@@ -189,7 +189,13 @@ def complexity_driven_bagging(X,y,n_ensembles, name_data,path_to_save):
                     col_name = 'pred_'+str(i)
                     preds[col_name] = y_pred # individual predictions
                     votes = voting_rule(preds)
-                    ensemble_preds[col_name] = votes # ensemble prediction with majority voting rule
+                    # print(votes)
+                    votes_dict = {'col_name':votes}
+                    votes_df = pd.DataFrame(votes_dict)
+                    votes_df.columns = [col_name]
+                    # ensemble_preds[col_name] = votes # ensemble prediction with majority voting rule
+                    ensemble_preds = pd.concat([ensemble_preds, votes_df], axis=1)
+                    # print(ensemble_preds[col_name])
 
                     y_predicted = ensemble_preds.iloc[:, -1:] # last column
                 acc = accuracy_score(y_predicted, y_test)
@@ -238,7 +244,7 @@ for filename in os.listdir(path_csv):
         total_name_list.append(filename)
 
 
-# total_name_list = ['Data12.csv']
+# total_name_list = ['Data13.csv']
 
 path_to_save = root_path+'/Bagging_results'
 n_ensembles = 200 # maximum number of ensembles to consider (later we plot and stop when we want)
