@@ -32,9 +32,22 @@ for filename in os.listdir(path_csv):
 for file in total_name_list:
     os.chdir(root_path + '/Bagging_results')
     print(file)
-    # file = data_file
-    # name_data = data_file[:-4]
     data = pd.read_csv(file)
-    X = data[['x1', 'x2']].to_numpy()
-    y = data[['y']].to_numpy()
+
+
+## Agregado
+cols_numeric = data.select_dtypes([np.number]).columns[2:]
+
+aa = data.groupby(['n_ensemble','weights'], as_index=False)[cols_numeric].mean()
+bb = data.groupby(['n_ensemble','weights'], as_index=False)[cols_numeric].std()
+
+n_ensemble_list = np.unique(data['n_ensemble']).tolist()
+weights_list = np.unique(data['weights']).tolist()
+
+for n_i in n_ensemble_list:
+    print(n_i)
+    for w in weights_list:
+        print(w)
+        condition = (data.n_ensemble == n_i) & (data.weights == w)
+        data_pack = data.loc[condition]
 
