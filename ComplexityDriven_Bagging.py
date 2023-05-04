@@ -232,7 +232,7 @@ def complexity_driven_bagging(X,y,n_ensembles, name_data,path_to_save):
 
 
     ##### Agregation of results
-    cols_numeric = results.select_dtypes([np.number]).columns[1:]
+    cols_numeric = results.select_dtypes([np.number]).columns
     df_aggre_mean = results.groupby(['n_ensemble', 'weights'], as_index=False)[cols_numeric].mean()
     df_aggre_mean.columns = ['n_ensemble', 'weights', 'accuracy_mean',
                              'Boots_Hostility_dataset_mean', 'Boots_kDN_dataset_mean', 'Boots_DCP_dataset_mean',
@@ -265,64 +265,65 @@ def complexity_driven_bagging(X,y,n_ensembles, name_data,path_to_save):
         for w in weights_list:
             print(w)
             condition = (results.n_ensemble == n_i) & (results.weights == w)
+            condition2 = (df_aggre.n_ensemble == n_i) & (df_aggre.weights == w)
             data_pack = results.loc[condition]
             conf_list = np.array(data_pack['confusion_matrix'].tolist())  # format
             conf_fold = np.sum(conf_list, axis=0).tolist()
-            df_aggre.loc[condition, 'confusion_matrix'] = str(conf_fold)
+            df_aggre.loc[condition2, 'confusion_matrix'] = str(conf_fold)
 
             Host_class_list = np.array(data_pack['Boots_Hostility_class'].tolist())
             Host_class_fold_mean = np.mean(Host_class_list, axis=0).tolist()
-            df_aggre.loc[condition, 'Boots_Hostility_class_mean'] = str(Host_class_fold_mean)
+            df_aggre.loc[condition2, 'Boots_Hostility_class_mean'] = str(Host_class_fold_mean)
             Host_class_fold_std = np.std(Host_class_list, axis=0).tolist()
-            df_aggre.loc[condition, 'Boots_Hostility_class_std'] = str(Host_class_fold_std)
+            df_aggre.loc[condition2, 'Boots_Hostility_class_std'] = str(Host_class_fold_std)
 
             kdn_class_list = np.array(data_pack['Boots_kDN_class'].tolist())
             kdn_class_fold_mean = np.mean(kdn_class_list, axis=0).tolist()
-            df_aggre.loc[condition, 'Boots_kDN_class_mean'] = str(kdn_class_fold_mean)
+            df_aggre.loc[condition2, 'Boots_kDN_class_mean'] = str(kdn_class_fold_mean)
             kdn_class_fold_std = np.std(kdn_class_list, axis=0).tolist()
-            df_aggre.loc[condition, 'Boots_kDN_class_std'] = str(kdn_class_fold_std)
+            df_aggre.loc[condition2, 'Boots_kDN_class_std'] = str(kdn_class_fold_std)
 
             dcp_class_list = np.array(data_pack['Boots_DCP_class'].tolist())
             dcp_class_fold_mean = np.mean(dcp_class_list, axis=0).tolist()
-            df_aggre.loc[condition, 'Boots_DCP_class_mean'] = str(dcp_class_fold_mean)
+            df_aggre.loc[condition2, 'Boots_DCP_class_mean'] = str(dcp_class_fold_mean)
             dcp_class_fold_std = np.std(dcp_class_list, axis=0).tolist()
-            df_aggre.loc[condition, 'Boots_DCP_class_std'] = str(dcp_class_fold_std)
+            df_aggre.loc[condition2, 'Boots_DCP_class_std'] = str(dcp_class_fold_std)
 
             tdu_class_list = np.array(data_pack['Boots_TD_U_class'].tolist())
             tdu_class_fold_mean = np.mean(tdu_class_list, axis=0).tolist()
-            df_aggre.loc[condition, 'Boots_TD_U_class_mean'] = str(tdu_class_fold_mean)
+            df_aggre.loc[condition2, 'Boots_TD_U_class_mean'] = str(tdu_class_fold_mean)
             tdu_class_fold_std = np.std(tdu_class_list, axis=0).tolist()
-            df_aggre.loc[condition, 'Boots_TD_U_class_std'] = str(tdu_class_fold_std)
+            df_aggre.loc[condition2, 'Boots_TD_U_class_std'] = str(tdu_class_fold_std)
 
             cld_class_list = np.array(data_pack['Boots_CLD_class'].tolist())
             cld_class_fold_mean = np.mean(cld_class_list, axis=0).tolist()
-            df_aggre.loc[condition, 'Boots_CLD_class_mean'] = str(cld_class_fold_mean)
+            df_aggre.loc[condition2, 'Boots_CLD_class_mean'] = str(cld_class_fold_mean)
             cld_class_fold_std = np.std(cld_class_list, axis=0).tolist()
-            df_aggre.loc[condition, 'Boots_CLD_class_std'] = str(cld_class_fold_std)
+            df_aggre.loc[condition2, 'Boots_CLD_class_std'] = str(cld_class_fold_std)
 
             n1_class_list = np.array(data_pack['Boots_N1_class'].tolist())
             n1_class_fold_mean = np.mean(n1_class_list, axis=0).tolist()
-            df_aggre.loc[condition, 'Boots_N1_class_mean'] = str(n1_class_fold_mean)
+            df_aggre.loc[condition2, 'Boots_N1_class_mean'] = str(n1_class_fold_mean)
             n1_class_fold_std = np.std(n1_class_list, axis=0).tolist()
-            df_aggre.loc[condition, 'Boots_N1_class_std'] = str(n1_class_fold_std)
+            df_aggre.loc[condition2, 'Boots_N1_class_std'] = str(n1_class_fold_std)
 
             n2_class_list = np.array(data_pack['Boots_N2_class'].tolist())
             n2_class_fold_mean = np.mean(n2_class_list, axis=0).tolist()
-            df_aggre.loc[condition, 'Boots_N2_class_mean'] = str(n2_class_fold_mean)
+            df_aggre.loc[condition2, 'Boots_N2_class_mean'] = str(n2_class_fold_mean)
             n2_class_fold_std = np.std(n2_class_list, axis=0).tolist()
-            df_aggre.loc[condition, 'Boots_N2_class_std'] = str(n2_class_fold_std)
+            df_aggre.loc[condition2, 'Boots_N2_class_std'] = str(n2_class_fold_std)
 
             lsc_class_list = np.array(data_pack['Boots_LSC_class'].tolist())
             lsc_class_fold_mean = np.mean(lsc_class_list, axis=0).tolist()
-            df_aggre.loc[condition, 'Boots_LSC_class_mean'] = str(lsc_class_fold_mean)
+            df_aggre.loc[condition2, 'Boots_LSC_class_mean'] = str(lsc_class_fold_mean)
             lsc_class_fold_std = np.std(lsc_class_list, axis=0).tolist()
-            df_aggre.loc[condition, 'Boots_LSC_class_std'] = str(lsc_class_fold_std)
+            df_aggre.loc[condition2, 'Boots_LSC_class_std'] = str(lsc_class_fold_std)
 
             f1_class_list = np.array(data_pack['Boots_F1_class'].tolist())
             f1_class_fold_mean = np.mean(f1_class_list, axis=0).tolist()
-            df_aggre.loc[condition, 'Boots_F1_class_mean'] = str(f1_class_fold_mean)
+            df_aggre.loc[condition2, 'Boots_F1_class_mean'] = str(f1_class_fold_mean)
             f1_class_fold_std = np.std(f1_class_list, axis=0).tolist()
-            df_aggre.loc[condition, 'Boots_F1_class_std'] = str(f1_class_fold_std)
+            df_aggre.loc[condition2, 'Boots_F1_class_std'] = str(f1_class_fold_std)
 
     # To save the results
     os.chdir(path_to_save)
