@@ -125,8 +125,8 @@ def complexity_driven_bagging(X,y,n_ensembles, name_data,path_to_save):
                 weights = np.repeat(1/len(y_train), len(y_train), axis=0)
             else: # Sampling using Complexity measures
                 CM_values = df_measures[CM_selected]
-                ranking = CM_values.rank(method='max', ascending=True) # more weight to difficult
-                # ranking = CM_values.rank(method='max', ascending=False)  # more weight to easy
+                # ranking = CM_values.rank(method='max', ascending=True) # more weight to difficult
+                ranking = CM_values.rank(method='max', ascending=False)  # more weight to easy
                 weights = ranking/sum(ranking) # probability distribution
 
 
@@ -227,8 +227,8 @@ def complexity_driven_bagging(X,y,n_ensembles, name_data,path_to_save):
 
     # To save the results
     os.chdir(path_to_save)
-    nombre_csv = 'Bagging_' + name_data + '_MoreWeightDifficultInstances.csv'
-    results.to_csv(nombre_csv, encoding='utf_8_sig')
+    nombre_csv = 'Bagging_' + name_data + '_MoreWeightEasyInstances.csv'
+    results.to_csv(nombre_csv, encoding='utf_8_sig',index=False)
 
 
     return results
