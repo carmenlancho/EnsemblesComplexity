@@ -125,8 +125,8 @@ def complexity_driven_bagging(X,y,n_ensembles, name_data,path_to_save):
                 weights = np.repeat(1/len(y_train), len(y_train), axis=0)
             else: # Sampling using Complexity measures
                 CM_values = df_measures[CM_selected]
-                ranking = CM_values.rank(method='max', ascending=True) # more weight to difficult
-                # ranking = CM_values.rank(method='max', ascending=False)  # more weight to easy
+                # ranking = CM_values.rank(method='max', ascending=True) # more weight to difficult
+                ranking = CM_values.rank(method='max', ascending=False)  # more weight to easy
                 weights = ranking/sum(ranking) # probability distribution
 
 
@@ -241,7 +241,7 @@ def complexity_driven_bagging(X,y,n_ensembles, name_data,path_to_save):
     df_aggre_std = results.groupby(['n_ensemble', 'weights'], as_index=False)[cols_numeric].std()
     df_aggre_std.columns = ['n_ensemble', 'weights', 'accuracy_std', 'Boots_Hostility_dataset_std',
                             'Boots_kDN_dataset_std', 'Boots_DCP_dataset_std',
-                            'Boots_TD_U_dataset_std', 'Boots_CLD_dataset_std', 'Boots_N1_dataset',
+                            'Boots_TD_U_dataset_std', 'Boots_CLD_dataset_std', 'Boots_N1_dataset_std',
                             'Boots_N2_dataset_std', 'Boots_LSC_dataset_std', 'Boots_F1_dataset_std']
 
     df_aggre = pd.concat([df_aggre_mean, df_aggre_std.iloc[:, 2:]], axis=1)
@@ -252,7 +252,7 @@ def complexity_driven_bagging(X,y,n_ensembles, name_data,path_to_save):
                   'Boots_TD_U_class_mean', 'Boots_CLD_class_mean', 'Boots_N1_class_mean',
                   'Boots_N2_class_mean', 'Boots_LSC_class_mean', 'Boots_F1_class_mean',
                   'Boots_Hostility_class_std', 'Boots_kDN_class_std', 'Boots_DCP_class_std',
-                  'Boots_TD_U_class_std', 'Boots_CLD_class_std', 'Boots_N1_class',
+                  'Boots_TD_U_class_std', 'Boots_CLD_class_std', 'Boots_N1_class_std',
                   'Boots_N2_class_std', 'Boots_LSC_class_std', 'Boots_F1_class_std']
     df_lists = pd.DataFrame(0, index=np.arange(n_df), columns=cols_names)
     df_aggre = pd.concat([df_aggre, df_lists], axis=1)
