@@ -46,8 +46,9 @@ def plot_acc_ensemble(data,name):
 
     return
 
-
-
+#######################################################################
+#################    More weight in hard instances    #################
+#######################################################################
 path_csv = os.chdir(root_path+'/Bagging_results')
 # Extraemos los nombres de todos los ficheros
 total_name_list = []
@@ -57,6 +58,27 @@ for filename in os.listdir(path_csv):
 
 
 # total_name_list = ['AggregatedResults_Bagging_Data6_MoreWeightDifficultInstances.csv']
+
+
+
+for file in total_name_list:
+    os.chdir(root_path + '/Bagging_results')
+    print(file)
+    name = file[25:32]
+    data = pd.read_csv(file)
+    plot_acc_ensemble(data, name)
+
+
+
+#######################################################################
+#################    More weight in easy instances    #################
+#######################################################################
+path_csv = os.chdir(root_path+'/Bagging_results')
+# Extraemos los nombres de todos los ficheros
+total_name_list = []
+for filename in os.listdir(path_csv):
+    if (filename.endswith('.csv') and 'Easy' in filename and 'Aggregated' in filename ):
+        total_name_list.append(filename)
 
 
 
