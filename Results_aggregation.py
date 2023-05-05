@@ -50,4 +50,20 @@ for n_i in n_ensemble_list:
         print(w)
         condition = (data.n_ensemble == n_i) & (data.weights == w)
         data_pack = data.loc[condition]
+        data_pack['confusion_matrix'].to_numpy()
+        data_pack['confusion_matrix']
+
+
+        import re
+
+        dd = data_pack['confusion_matrix'][399]
+        dd2 = [int(s) for s in re.findall(r'\b\d+\b', dd)]
+        dd2 = np.array(dd2)
+        dd2.shape = (2, 2)
+        dd2 + dd2
+
+        hh = data_pack['Boots_N2_class'][399]
+        np.fromstring(data_pack['Boots_N2_class'][399], dtype=int, sep=',')
+        np.fromstring(hh.strip('[]'), sep=',')
+
 
