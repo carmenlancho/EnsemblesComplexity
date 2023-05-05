@@ -340,11 +340,7 @@ for filename in os.listdir(path_csv):
     if filename.endswith('.csv'):
         total_name_list.append(filename)
 
-total_name_list = [ 'Data7.csv',
- 'Data3.csv',
- 'Data9.csv',
- 'Data11.csv',
- 'Data4.csv']
+
 # total_name_list = ['Data13.csv']
 
 path_to_save = root_path+'/Bagging_results'
@@ -364,7 +360,12 @@ for data_file in total_name_list:
 
 
 
-
+### Agregación de resultados en otra función: funcion aux
+### Estandarizar
+### Sacar resultados con lo de 1/n +
+### con incertidumbre
+### asegurando la representatividad de las clases
+### analizar complejidades muestras bootstrap
 
 
 
