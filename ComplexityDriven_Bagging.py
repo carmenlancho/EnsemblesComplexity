@@ -340,7 +340,11 @@ for filename in os.listdir(path_csv):
     if filename.endswith('.csv'):
         total_name_list.append(filename)
 
-
+total_name_list = [ 'Data7.csv',
+ 'Data3.csv',
+ 'Data9.csv',
+ 'Data11.csv',
+ 'Data4.csv']
 # total_name_list = ['Data13.csv']
 
 path_to_save = root_path+'/Bagging_results'
