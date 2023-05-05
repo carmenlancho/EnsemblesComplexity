@@ -1,0 +1,68 @@
+#################  SCRIPT TO ANALYZE RESULTS FROM BAGGING ####################
+
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import os
+from sklearn.model_selection import StratifiedKFold
+from All_measures import all_measures
+import random # for sampling with weights
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import confusion_matrix, accuracy_score
+
+
+root_path = os.getcwd()
+
+
+
+
+
+def plot_acc_ensemble(data,name):
+    plt.plot(data.loc[data.weights == 'CLD','n_ensemble'],
+             data.loc[data.weights == 'CLD','accuracy_mean'], c = 'blue', label = 'CLD')
+    plt.plot(data.loc[data.weights == 'DCP','n_ensemble'],
+             data.loc[data.weights == 'DCP','accuracy_mean'], c = 'green', label = 'DCP')
+    plt.plot(data.loc[data.weights == 'LSC','n_ensemble'],
+             data.loc[data.weights == 'LSC','accuracy_mean'], c = 'lime', label = 'LSC')
+    plt.plot(data.loc[data.weights == 'TD_U','n_ensemble'],
+             data.loc[data.weights == 'TD_U','accuracy_mean'], c = 'orange', label = 'TD_U')
+    plt.plot(data.loc[data.weights == 'N2','n_ensemble'],
+             data.loc[data.weights == 'N2','accuracy_mean'], c = 'purple', label = 'N2')
+    plt.plot(data.loc[data.weights == 'F1','n_ensemble'],
+             data.loc[data.weights == 'F1','accuracy_mean'], c = 'cyan', label = 'F1')
+    plt.plot(data.loc[data.weights == 'Uniform','n_ensemble'],
+             data.loc[data.weights == 'Uniform','accuracy_mean'], c = 'k', label = 'Uniform')
+    plt.plot(data.loc[data.weights == 'N1','n_ensemble'],
+             data.loc[data.weights == 'N1','accuracy_mean'], c = 'pink', label = 'N1')
+    plt.plot(data.loc[data.weights == 'kDN','n_ensemble'],
+             data.loc[data.weights == 'kDN','accuracy_mean'], c = 'gold', label = 'kDN')
+    plt.plot(data.loc[data.weights == 'Hostility','n_ensemble'],
+             data.loc[data.weights == 'Hostility','accuracy_mean'], c = 'crimson', label = 'Hostility')
+    plt.legend(loc='lower center', bbox_to_anchor=(0.55, 0.0),
+          ncol=4, fancybox=False, shadow=False)
+    plt.title(name)
+    plt.show()
+
+    return
+
+
+
+path_csv = os.chdir(root_path+'/Bagging_results')
+# Extraemos los nombres de todos los ficheros
+total_name_list = []
+for filename in os.listdir(path_csv):
+    if (filename.endswith('.csv') and 'Difficult' in filename and 'Aggregated' in filename ):
+        total_name_list.append(filename)
+
+
+# total_name_list = ['AggregatedResults_Bagging_Data6_MoreWeightDifficultInstances.csv']
+
+
+
+for file in total_name_list:
+    os.chdir(root_path + '/Bagging_results')
+    print(file)
+    name = file[25:32]
+    data = pd.read_csv(file)
+    plot_acc_ensemble(data, name)
