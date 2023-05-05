@@ -327,7 +327,7 @@ def complexity_driven_bagging(X,y,n_ensembles, name_data,path_to_save):
 
     # To save the results
     os.chdir(path_to_save)
-    nombre_csv_agg = 'AggregatedResults_Bagging_' + name_data + '_MoreWeightDifficultInstances.csv'
+    nombre_csv_agg = 'AggregatedResults_Bagging_' + name_data + '_MoreWeightEasyInstances.csv'
     df_aggre.to_csv(nombre_csv_agg, encoding='utf_8_sig',index=False)
 
     return results
