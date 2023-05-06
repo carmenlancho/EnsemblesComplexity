@@ -364,9 +364,9 @@ for data_file in total_name_list:
     X = data[['x1', 'x2']].to_numpy()
     X = preprocessing.scale(X)
     y = data[['y']].to_numpy()
-    emphasis_easy = 'easy'
+    emphasis_easy = '1n_easy'
     results = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_easy)
-    emphasis_hard = 'hard'
+    emphasis_hard = '1n_hard'
     results2 = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_hard)
 
 
