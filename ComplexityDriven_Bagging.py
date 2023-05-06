@@ -6,6 +6,7 @@ import os
 from sklearn.model_selection import StratifiedKFold
 from All_measures import all_measures
 import random # for sampling with weights
+from sklearn import preprocessing
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import confusion_matrix, accuracy_score
 
@@ -84,7 +85,7 @@ def voting_rule(preds):
 
 
 
-def complexity_driven_bagging(X,y,n_ensembles, name_data,path_to_save):
+def complexity_driven_bagging(X,y,n_ensembles, name_data,path_to_save, emphasis):
 
     # dataframe to save the results
     results = pd.DataFrame(columns=['dataset','fold','n_ensemble','weights','confusion_matrix','accuracy',
@@ -125,8 +126,10 @@ def complexity_driven_bagging(X,y,n_ensembles, name_data,path_to_save):
                 weights = np.repeat(1/len(y_train), len(y_train), axis=0)
             else: # Sampling using Complexity measures
                 CM_values = df_measures[CM_selected]
-                # ranking = CM_values.rank(method='max', ascending=True) # more weight to difficult
-                ranking = CM_values.rank(method='max', ascending=False)  # more weight to easy
+                if (emphasis == 'easy'):
+                    ranking = CM_values.rank(method='max', ascending=False)  # more weight to easy
+                elif (emphasis == 'hard'):
+                    ranking = CM_values.rank(method='max', ascending=True) # more weight to difficult
                 weights = ranking/sum(ranking) # probability distribution
 
 
@@ -227,7 +230,7 @@ def complexity_driven_bagging(X,y,n_ensembles, name_data,path_to_save):
 
     # To save the results
     os.chdir(path_to_save)
-    nombre_csv = 'Bagging_' + name_data + '_MoreWeightEasyInstances.csv'
+    nombre_csv = 'Bagging_' + name_data + '_MoreWeight_' + emphasis +'_Instances.csv'
     results.to_csv(nombre_csv, encoding='utf_8_sig',index=False)
 
 
@@ -327,7 +330,7 @@ def complexity_driven_bagging(X,y,n_ensembles, name_data,path_to_save):
 
     # To save the results
     os.chdir(path_to_save)
-    nombre_csv_agg = 'AggregatedResults_Bagging_' + name_data + '_MoreWeightEasyInstances.csv'
+    nombre_csv_agg = 'AggregatedResults_Bagging_' + name_data + '_MoreWeight_' + emphasis + '_Instances.csv'
     df_aggre.to_csv(nombre_csv_agg, encoding='utf_8_sig',index=False)
 
     return results
@@ -354,9 +357,12 @@ for data_file in total_name_list:
     name_data = data_file[:-4]
     data = pd.read_csv(file)
     X = data[['x1', 'x2']].to_numpy()
+    X = preprocessing.scale(X)
     y = data[['y']].to_numpy()
-
-    results = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save)
+    emphasis_easy = 'easy'
+    results = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_easy)
+    emphasis_hard = 'hard'
+    results2 = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_hard)
 
 
 
