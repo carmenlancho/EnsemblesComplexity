@@ -130,6 +130,11 @@ def complexity_driven_bagging(X,y,n_ensembles, name_data,path_to_save, emphasis)
                     ranking = CM_values.rank(method='max', ascending=False)  # more weight to easy
                 elif (emphasis == 'hard'):
                     ranking = CM_values.rank(method='max', ascending=True) # more weight to difficult
+                elif (emphasis == '1n_hard'):
+                    ranking = np.repeat(1/len(y_train), len(y_train), axis=0) + CM_values # more weight to difficult 1/n +
+                elif (emphasis == '1n_easy'):
+                    ranking = np.repeat(1/len(y_train), len(y_train), axis=0) + (1 - CM_values) # more weight to easy 1/n +
+
                 weights = ranking/sum(ranking) # probability distribution
 
 
@@ -367,10 +372,8 @@ for data_file in total_name_list:
 
 
 ### Agregación de resultados en otra función: funcion aux
-### Estandarizar
-### Sacar resultados con lo de 1/n +
 ### con incertidumbre
-### asegurando la representatividad de las clases
+### asegurando la representatividad de las clases ASI LO HACEN EN EL DE SPARK
 ### analizar complejidades muestras bootstrap
 
 
