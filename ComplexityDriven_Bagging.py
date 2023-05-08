@@ -62,6 +62,7 @@ def bootstrap_sample(X_train, y_train, weights):
     n_train = len(y_train)
     # Indices corresponding to a weighted sampling with replacement of the same sample
     # size than the original data
+    np.random.seed(1)
     bootstrap_indices = random.choices(np.arange(y_train.shape[0]), weights=weights, k=n_train)
 
     X_bootstrap = X_train[bootstrap_indices]
@@ -134,16 +135,61 @@ def complexity_driven_bagging(X,y,n_ensembles, name_data,path_to_save, emphasis)
                     ranking = np.repeat(1/len(y_train), len(y_train), axis=0) + CM_values # more weight to difficult 1/n +
                 elif (emphasis == '1n_easy'):
                     ranking = np.repeat(1/len(y_train), len(y_train), axis=0) + (1 - CM_values) # more weight to easy 1/n +
+                elif (emphasis == 'classes_1n_hard'):
+                    ## If we make per class specifically
+                    y_train_aux = np.concatenate(y_train, axis=0)
+                    n_classes = len(np.unique(y_train))
+                    ranking_aux = np.zeros(len(y_train_aux))
+                    ranking = np.zeros(len(y_train_aux))
+                    for c in range(n_classes):
+                        # print(c)
+                        n_class_c = np.sum(y_train_aux == c)
+                        ranking_aux[y_train_aux == c] = (1 / n_class_c) + CM_values[y_train_aux == c]
+                        ranking[y_train_aux == c] = ranking_aux[y_train_aux == c] / sum(ranking_aux[y_train_aux == c])  # probability distribution
+                elif (emphasis == 'classes_1n_easy'):
+                    ## If we make per class specifically
+                    y_train_aux = np.concatenate(y_train, axis=0)
+                    n_classes = len(np.unique(y_train))
+                    ranking_aux = np.zeros(len(y_train_aux))
+                    ranking = np.zeros(len(y_train_aux))
+                    for c in range(n_classes):
+                        # print(c)
+                        n_class_c = np.sum(y_train_aux == c)
+                        ranking_aux[y_train_aux == c] = (1 / n_class_c) + (1 - CM_values[y_train_aux == c])
+                        ranking[y_train_aux == c] = ranking_aux[y_train_aux == c] / sum(ranking_aux[y_train_aux == c])  # probability distribution
+                elif (emphasis == 'classes_hard'):
+                    ## If we make per class specifically: ranking
+                    y_train_aux = np.concatenate(y_train, axis=0)
+                    n_classes = len(np.unique(y_train))
+                    ranking_aux = np.zeros(len(y_train_aux))
+                    ranking = np.zeros(len(y_train_aux))
+                    for c in range(n_classes):
+                        # print(c)
+                        n_class_c = np.sum(y_train_aux == c)
+                        # more weight to difficult
+                        ranking_aux[y_train_aux == c] = (1 / n_class_c) + CM_values[y_train_aux == c].rank(method='max',ascending=True)
+                        ranking[y_train_aux == c] = ranking_aux[y_train_aux == c] / sum(ranking_aux[y_train_aux == c])  # probability distribution
+                elif (emphasis == 'classes_easy'):
+                    ## If we make per class specifically: ranking
+                    y_train_aux = np.concatenate(y_train, axis=0)
+                    n_classes = len(np.unique(y_train))
+                    ranking_aux = np.zeros(len(y_train_aux))
+                    ranking = np.zeros(len(y_train_aux))
+                    for c in range(n_classes):
+                        # print(c)
+                        n_class_c = np.sum(y_train_aux == c)
+                        # more weight to easy
+                        ranking_aux[y_train_aux == c] = (1 / n_class_c) + CM_values[y_train_aux == c].rank(method='max',ascending=False)
+                        ranking[y_train_aux == c] = ranking_aux[y_train_aux == c] / sum(ranking_aux[y_train_aux == c])  # probability distribution
 
                 weights = ranking/sum(ranking) # probability distribution
-
 
             preds = pd.DataFrame()
             ensemble_preds = pd.DataFrame()
             # i = 0
             for i in range(n_ensembles):
 
-                print(i)
+                # print(i)
                 # Get bootstrap sample following CM_weights
                 n_train = len(y_train)
                 np.random.seed(0)
@@ -179,8 +225,6 @@ def complexity_driven_bagging(X,y,n_ensembles, name_data,path_to_save, emphasis)
                 Boots_N1_class = df_classes_boots['N1'].tolist()
                 Boots_N2_class = df_classes_boots['N2'].tolist()
                 Boots_F1_class = df_classes_boots['F1'].tolist()
-
-
 
 
                 # Train DT in bootstrap sample and test y X_test, y_test
@@ -364,10 +408,14 @@ for data_file in total_name_list:
     X = data[['x1', 'x2']].to_numpy()
     X = preprocessing.scale(X)
     y = data[['y']].to_numpy()
-    emphasis_easy = '1n_easy'
+    emphasis_easy = 'classes_1n_easy'
     results = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_easy)
-    emphasis_hard = '1n_hard'
+    emphasis_hard = 'classes_1n_hard'
     results2 = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_hard)
+    emphasis_easy3 = 'classes_easy'
+    results3 = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_easy3)
+    emphasis_hard4 = 'classes_hard'
+    results4 = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_hard4)
 
 
 

@@ -47,18 +47,14 @@ def plot_acc_ensemble(data,name):
     return
 
 #######################################################################
-#################    More weight in hard instances    #################
+#################    More weight in hard instances WITH RANKING   #################
 #######################################################################
 path_csv = os.chdir(root_path+'/Bagging_results')
 # Extraemos los nombres de todos los ficheros
 total_name_list = []
 for filename in os.listdir(path_csv):
-    if (filename.endswith('.csv') and 'Difficult' in filename and 'Aggregated' in filename ):
+    if (filename.endswith('.csv') and 'hard' in filename and 'Aggregated' in filename and '1n' not in filename and 'classes' not in filename):
         total_name_list.append(filename)
-
-
-# total_name_list = ['AggregatedResults_Bagging_Data6_MoreWeightDifficultInstances.csv']
-
 
 
 for file in total_name_list:
@@ -71,13 +67,56 @@ for file in total_name_list:
 
 
 #######################################################################
-#################    More weight in easy instances    #################
+#################    More weight in easy instances WITH RANKING    #################
 #######################################################################
 path_csv = os.chdir(root_path+'/Bagging_results')
 # Extraemos los nombres de todos los ficheros
 total_name_list = []
 for filename in os.listdir(path_csv):
-    if (filename.endswith('.csv') and 'Easy' in filename and 'Aggregated' in filename ):
+    if (filename.endswith('.csv') and 'easy' in filename and 'Aggregated' in filename and '1n' not in filename and 'classes' not in filename):
+        total_name_list.append(filename)
+
+
+
+for file in total_name_list:
+    os.chdir(root_path + '/Bagging_results')
+    print(file)
+    name = file[25:32]
+    data = pd.read_csv(file)
+    plot_acc_ensemble(data, name)
+
+
+
+
+
+#######################################################################
+#################    More weight in hard instances WITH 1/n +   #################
+#######################################################################
+path_csv = os.chdir(root_path+'/Bagging_results')
+# Extraemos los nombres de todos los ficheros
+total_name_list = []
+for filename in os.listdir(path_csv):
+    if (filename.endswith('.csv') and 'hard' in filename and 'Aggregated' in filename and '1n' in filename and 'classes' not in filename):
+        total_name_list.append(filename)
+
+
+for file in total_name_list:
+    os.chdir(root_path + '/Bagging_results')
+    print(file)
+    name = file[25:32]
+    data = pd.read_csv(file)
+    plot_acc_ensemble(data, name)
+
+
+
+#######################################################################
+#################    More weight in easy instances WITH 1/n +     #################
+#######################################################################
+path_csv = os.chdir(root_path+'/Bagging_results')
+# Extraemos los nombres de todos los ficheros
+total_name_list = []
+for filename in os.listdir(path_csv):
+    if (filename.endswith('.csv') and 'easy' in filename and 'Aggregated' in filename and '1n' in filename  and 'classes' not in filename):
         total_name_list.append(filename)
 
 
