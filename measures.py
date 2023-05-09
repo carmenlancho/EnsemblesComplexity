@@ -227,7 +227,7 @@ class ClassificationMeasures:
 
         self.dot = None
 
-    def k_disagreeing_neighbors(self, k: int = 10, distance: str = 'gower') -> np.ndarray:
+    def k_disagreeing_neighbors(self, k: int = 5, distance: str = 'gower') -> np.ndarray:
         r"""
         k-Disagreeing Neighbors (kDN) gives the percentage of the :math:`k` nearest neighbors of :math:`\\mathbf x_i`
         which do not share its label.

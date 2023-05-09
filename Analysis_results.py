@@ -165,6 +165,7 @@ for file in total_name_list:
 
 
 
+
 #######################################################################
 #################    More weight in easy instances WITH RANKING  classes   #################
 #######################################################################
@@ -185,6 +186,20 @@ for file in total_name_list:
     plot_acc_ensemble(data, name)
 
 
+
+path_to_save = root_path+'/Analysis_results'
+for file in total_name_list:
+    os.chdir(root_path + '/Bagging_results')
+    print(file)
+    name = file[25:]
+    data = pd.read_csv(file)
+
+    data_n = data[data['n_ensemble'].isin([15,50,100,150,159])]
+    res = data_n[['n_ensemble','weights','accuracy_mean','accuracy_std']].sort_values(by = ['weights', 'n_ensemble']).T
+    # To save the results
+    os.chdir(path_to_save)
+    nombre_csv = 'ResAccuracy_Bagging' + name
+    res.to_csv(nombre_csv, encoding='utf_8_sig',index=True)
 
 
 
