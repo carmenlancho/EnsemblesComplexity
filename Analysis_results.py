@@ -85,6 +85,20 @@ for file in total_name_list:
     data = pd.read_csv(file)
     plot_acc_ensemble(data, name)
 
+path_to_save = root_path+'/Analysis_results'
+for file in total_name_list:
+    os.chdir(root_path + '/Bagging_results')
+    print(file)
+    name = file[25:]
+    data = pd.read_csv(file)
+
+    data_n = data[data['n_ensemble'].isin([15,50,100,150,159])]
+    res = data_n[['n_ensemble','weights','accuracy_mean','accuracy_std']].sort_values(by = ['weights', 'n_ensemble']).T
+    # To save the results
+    os.chdir(path_to_save)
+    nombre_csv = 'ResAccuracy_Bagging' + name
+    res.to_csv(nombre_csv, encoding='utf_8_sig',index=True)
+
 
 
 
@@ -212,6 +226,34 @@ for file in total_name_list:
     name = file[25:32]
     data = pd.read_csv(file)
     plot_acc_ensemble(data, name)
+
+
+
+
+#######################################################################
+#################    More weight in frontier    #################
+#######################################################################
+# We exclude LSC because it generally offers complexity values higher than 0.9
+path_csv = os.chdir(root_path+'/Bagging_results')
+# Extraemos los nombres de todos los ficheros
+total_name_list = []
+for filename in os.listdir(path_csv):
+    if (filename.endswith('.csv') and 'frontier' in filename and 'Aggregated' in filename):
+        total_name_list.append(filename)
+
+
+
+for file in total_name_list:
+    os.chdir(root_path + '/Bagging_results')
+    print(file)
+    name = file[25:32]
+    data = pd.read_csv(file)
+    plot_acc_ensemble(data, name)
+
+
+
+
+
 
 
 
