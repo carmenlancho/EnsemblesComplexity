@@ -99,7 +99,7 @@ def complexity_driven_bagging(X,y,n_ensembles, name_data,path_to_save, emphasis)
 
     # Complexity measures list to check
     CM_list = ['Hostility', 'kDN', 'DCP','TD_U', 'CLD', 'N1', 'N2','LSC','F1','Uniform']
-    # CM_selected = 'Hostility'
+    # CM_selected = 'F1'
 
     skf = StratifiedKFold(n_splits=5, random_state=1,shuffle=True)
     fold = 0
@@ -423,14 +423,16 @@ for data_file in total_name_list:
     X = data[['x1', 'x2']].to_numpy()
     X = preprocessing.scale(X)
     y = data[['y']].to_numpy()
-    emphasis_easy = 'classes_1n_easy'
-    results = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_easy)
-    emphasis_hard = 'classes_1n_hard'
-    results2 = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_hard)
-    emphasis_easy3 = 'classes_easy'
-    results3 = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_easy3)
-    emphasis_hard4 = 'classes_hard'
-    results4 = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_hard4)
+    # emphasis_easy = 'classes_1n_easy'
+    # results = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_easy)
+    # emphasis_hard = 'classes_1n_hard'
+    # results2 = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_hard)
+    # emphasis_easy3 = 'classes_easy'
+    # results3 = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_easy3)
+    # emphasis_hard4 = 'classes_hard'
+    # results4 = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_hard4)
+    emphasis_frontier = 'frontier'
+    results5 = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_frontier)
 
 
 
