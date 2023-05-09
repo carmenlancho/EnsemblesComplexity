@@ -181,6 +181,21 @@ def complexity_driven_bagging(X,y,n_ensembles, name_data,path_to_save, emphasis)
                         # more weight to easy
                         ranking_aux[y_train_aux == c] = (1 / n_class_c) + CM_values[y_train_aux == c].rank(method='max',ascending=False)
                         ranking[y_train_aux == c] = ranking_aux[y_train_aux == c] / sum(ranking_aux[y_train_aux == c])  # probability distribution
+                elif (emphasis == 'frontier'):
+                    n_classes = len(np.unique(y_train))
+                    max_uncertainty = 1 / n_classes
+                    min_value = min(max_uncertainty-0.05,0.35)
+                    CM_values_aux = np.zeros(len(CM_values))
+                    CM_values_aux[(CM_values<0.65) & (CM_values>min_value)] = 1 # borderline points
+                    CM_values_aux[(CM_values <= min_value)] = 2 # easy points
+                    CM_values_aux[(CM_values >= 0.65)] = 3  # difficult points
+                    # aa = pd.DataFrame(CM_values_aux).rank(method='max', ascending=False)
+                    # np.unique(aa)/(128+2015+2400)
+                    # We select the thresholds manually
+                    CM_values_aux[CM_values_aux == 1] = 0.5 / sum(CM_values_aux == 1)
+                    CM_values_aux[CM_values_aux == 2] = 0.35 / sum(CM_values_aux == 2)
+                    CM_values_aux[CM_values_aux == 3] = 0.15 / sum(CM_values_aux == 3)
+                    ranking = CM_values_aux
 
                 weights = ranking/sum(ranking) # probability distribution
 
