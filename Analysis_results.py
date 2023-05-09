@@ -127,3 +127,92 @@ for file in total_name_list:
     name = file[25:32]
     data = pd.read_csv(file)
     plot_acc_ensemble(data, name)
+
+
+
+
+#######################################################################
+#################    More weight in hard instances WITH RANKING classes   #################
+#######################################################################
+path_csv = os.chdir(root_path+'/Bagging_results')
+# Extraemos los nombres de todos los ficheros
+total_name_list = []
+for filename in os.listdir(path_csv):
+    if (filename.endswith('.csv') and 'hard' in filename and 'Aggregated' in filename and '1n' not in filename and 'classes' in filename):
+        total_name_list.append(filename)
+
+
+for file in total_name_list:
+    os.chdir(root_path + '/Bagging_results')
+    print(file)
+    name = file[25:32]
+    data = pd.read_csv(file)
+    plot_acc_ensemble(data, name)
+
+
+
+#######################################################################
+#################    More weight in easy instances WITH RANKING  classes   #################
+#######################################################################
+path_csv = os.chdir(root_path+'/Bagging_results')
+# Extraemos los nombres de todos los ficheros
+total_name_list = []
+for filename in os.listdir(path_csv):
+    if (filename.endswith('.csv') and 'easy' in filename and 'Aggregated' in filename and '1n' not in filename and 'classes' in filename):
+        total_name_list.append(filename)
+
+
+
+for file in total_name_list:
+    os.chdir(root_path + '/Bagging_results')
+    print(file)
+    name = file[25:32]
+    data = pd.read_csv(file)
+    plot_acc_ensemble(data, name)
+
+
+
+
+
+#######################################################################
+#################    More weight in hard instances WITH 1/n + classes  #################
+#######################################################################
+path_csv = os.chdir(root_path+'/Bagging_results')
+# Extraemos los nombres de todos los ficheros
+total_name_list = []
+for filename in os.listdir(path_csv):
+    if (filename.endswith('.csv') and 'hard' in filename and 'Aggregated' in filename and '1n' in filename and 'classes' in filename):
+        total_name_list.append(filename)
+
+
+for file in total_name_list:
+    os.chdir(root_path + '/Bagging_results')
+    print(file)
+    name = file[25:32]
+    data = pd.read_csv(file)
+    plot_acc_ensemble(data, name)
+
+
+
+#######################################################################
+#################    More weight in easy instances WITH 1/n + classes    #################
+#######################################################################
+path_csv = os.chdir(root_path+'/Bagging_results')
+# Extraemos los nombres de todos los ficheros
+total_name_list = []
+for filename in os.listdir(path_csv):
+    if (filename.endswith('.csv') and 'easy' in filename and 'Aggregated' in filename and '1n' in filename  and 'classes' in filename):
+        total_name_list.append(filename)
+
+
+
+for file in total_name_list:
+    os.chdir(root_path + '/Bagging_results')
+    print(file)
+    name = file[25:32]
+    data = pd.read_csv(file)
+    plot_acc_ensemble(data, name)
+
+
+
+
