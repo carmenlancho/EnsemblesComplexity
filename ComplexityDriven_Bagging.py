@@ -415,27 +415,27 @@ for filename in os.listdir(path_csv):
 path_to_save = root_path+'/Bagging_results'
 n_ensembles = 200 # maximum number of ensembles to consider (later we plot and stop when we want)
 # CM_selected = 'Hostility' # selection of the complexity measure to guide the sampling
-
-for data_file in total_name_list:
-    os.chdir(root_path + '/datasets')
-    print(data_file)
-    file = data_file
-    name_data = data_file[:-4]
-    data = pd.read_csv(file)
-    X = data[['x1', 'x2']].to_numpy()
-    X = preprocessing.scale(X)
-    y = data[['y']].to_numpy()
-    # emphasis_easy = 'classes_1n_easy'
-    # results = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_easy)
-    # emphasis_hard = 'classes_1n_hard'
-    # results2 = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_hard)
-    # emphasis_easy3 = 'classes_easy'
-    # results3 = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_easy3)
-    # emphasis_hard4 = 'classes_hard'
-    # results4 = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_hard4)
-    emphasis_frontier = 'frontier'
-    results5 = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_frontier)
-
+#
+# for data_file in total_name_list:
+#     os.chdir(root_path + '/datasets')
+#     print(data_file)
+#     file = data_file
+#     name_data = data_file[:-4]
+#     data = pd.read_csv(file)
+#     X = data[['x1', 'x2']].to_numpy()
+#     X = preprocessing.scale(X)
+#     y = data[['y']].to_numpy()
+#     # emphasis_easy = 'classes_1n_easy'
+#     # results = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_easy)
+#     # emphasis_hard = 'classes_1n_hard'
+#     # results2 = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_hard)
+#     # emphasis_easy3 = 'classes_easy'
+#     # results3 = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_easy3)
+#     # emphasis_hard4 = 'classes_hard'
+#     # results4 = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_hard4)
+#     emphasis_frontier = 'frontier'
+#     results5 = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_frontier)
+#
 
 
 
@@ -522,18 +522,6 @@ def complexity_driven_bagging_combo(X,y,n_ensembles, name_data,path_to_save, emp
                     np.random.seed(1)
                     X_bootstrap, y_bootstrap, bootstrap_indices = bootstrap_sample(X_train, y_train, weights)
 
-
-
-
-
-
-                # Save complexity information (class and dataset levels)
-                # with this code the measures are recalculated
-                # data_bootstrap = pd.DataFrame(X_bootstrap, columns=['x1', 'x2'])
-                # data_bootstrap['y'] = y_bootstrap
-                # _, df_classes_dataset_bootstrap = all_measures(data_bootstrap, False, None, None)
-                # info_complexity_dataset = df_classes_dataset_bootstrap[CM_selected]['dataset']
-                # info_complexity_class = df_classes_dataset_bootstrap[CM_selected][:-1].tolist()
 
                 # Save complexity information (class and dataset levels)
                 df_measures_bootstrap = df_measures_sel.iloc[bootstrap_indices].copy()
@@ -636,7 +624,7 @@ for filename in os.listdir(path_csv):
 # total_name_list = ['Data13.csv']
 
 path_to_save = root_path+'/Bagging_results'
-n_ensembles = 200 # maximum number of ensembles to consider (later we plot and stop when we want)
+n_ensembles = 10 # maximum number of ensembles to consider (later we plot and stop when we want)
 # CM_selected = 'Hostility' # selection of the complexity measure to guide the sampling
 
 for data_file in total_name_list:
@@ -648,16 +636,11 @@ for data_file in total_name_list:
     X = data[['x1', 'x2']].to_numpy()
     X = preprocessing.scale(X)
     y = data[['y']].to_numpy()
-    # emphasis_easy = 'classes_1n_easy'
-    # results = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_easy)
-    # emphasis_hard = 'classes_1n_hard'
-    # results2 = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_hard)
-    # emphasis_easy3 = 'classes_easy'
-    # results3 = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_easy3)
-    # emphasis_hard4 = 'classes_hard'
-    # results4 = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_hard4)
-    emphasis_frontier = 'frontier'
-    results5 = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_frontier)
+    emphasis_combo = 'combo'
+    results = complexity_driven_bagging_combo(X, y, n_ensembles, name_data, path_to_save,emphasis_combo)
+    emphasis_combo_classes = 'combo_classes'
+    results2 = complexity_driven_bagging_combo(X, y, n_ensembles, name_data, path_to_save,emphasis_combo_classes)
+
 
 
 
