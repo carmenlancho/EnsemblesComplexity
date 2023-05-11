@@ -737,7 +737,7 @@ def complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_sav
 
     # To save the results
     os.chdir(path_to_save)
-    nombre_csv = 'Bagging_' + name_data + '_MoreWeight_' + emphasis +'_Instances.csv'
+    nombre_csv = 'Bagging_' + name_data + '_MoreWeight_' + emphasis + '_split' + str(split)+ '_Instances.csv'
     results.to_csv(nombre_csv, encoding='utf_8_sig',index=False)
 
     ##### Agregation of results
