@@ -488,7 +488,7 @@ def complexity_driven_bagging_combo(X,y,n_ensembles, name_data,path_to_save, emp
                     y_train_aux = np.concatenate(y_train, axis=0)
                     n_classes = len(np.unique(y_train))
                     ranking_aux = np.zeros(len(y_train_aux))
-                    ranking = np.zeros(len(y_train_aux))
+                    ranking1 = np.zeros(len(y_train_aux))
                     ranking_aux2 = np.zeros(len(y_train_aux))
                     ranking2 = np.zeros(len(y_train_aux))
                     for c in range(n_classes):
@@ -496,7 +496,7 @@ def complexity_driven_bagging_combo(X,y,n_ensembles, name_data,path_to_save, emp
                         n_class_c = np.sum(y_train_aux == c)
                         # more weight to difficult
                         ranking_aux[y_train_aux == c] = CM_values[y_train_aux == c].rank(method='max',ascending=True)
-                        ranking[y_train_aux == c] = ranking_aux[y_train_aux == c] / sum(ranking_aux[y_train_aux == c])  # probability distribution
+                        ranking1[y_train_aux == c] = ranking_aux[y_train_aux == c] / sum(ranking_aux[y_train_aux == c])  # probability distribution
                         # more weight to easy
                         ranking_aux2[y_train_aux == c] = CM_values[y_train_aux == c].rank(method='max',ascending=False)
                         ranking2[y_train_aux == c] = ranking_aux2[y_train_aux == c] / sum(ranking_aux2[y_train_aux == c])  # probability distribution
@@ -513,14 +513,18 @@ def complexity_driven_bagging_combo(X,y,n_ensembles, name_data,path_to_save, emp
                 # Get bootstrap sample following CM_weights
                 n_train = len(y_train)
 
-                if (i % 2 == 0): # even
-                    # more weight to easy
-                    np.random.seed(1)
-                    X_bootstrap, y_bootstrap, bootstrap_indices = bootstrap_sample(X_train, y_train, weights2)
-                else: # odd
-                    # more weight to hard
+                if (CM_selected == 'Uniform'):
                     np.random.seed(1)
                     X_bootstrap, y_bootstrap, bootstrap_indices = bootstrap_sample(X_train, y_train, weights)
+                else:
+                    if (i % 2 == 0): # even
+                        # more weight to easy
+                        np.random.seed(1)
+                        X_bootstrap, y_bootstrap, bootstrap_indices = bootstrap_sample(X_train, y_train, weights2)
+                    else: # odd
+                        # more weight to hard
+                        np.random.seed(1)
+                        X_bootstrap, y_bootstrap, bootstrap_indices = bootstrap_sample(X_train, y_train, weights)
 
 
                 # Save complexity information (class and dataset levels)
@@ -624,7 +628,7 @@ for filename in os.listdir(path_csv):
 # total_name_list = ['Data13.csv']
 
 path_to_save = root_path+'/Bagging_results'
-n_ensembles = 10 # maximum number of ensembles to consider (later we plot and stop when we want)
+n_ensembles = 200 # maximum number of ensembles to consider (later we plot and stop when we want)
 # CM_selected = 'Hostility' # selection of the complexity measure to guide the sampling
 
 for data_file in total_name_list:
@@ -686,10 +690,10 @@ def complexity_driven_bagging_averaged(X,y,n_ensembles, name_data,path_to_save, 
             if (CM_selected == 'Uniform'): # classic Bagging with uniform probability sampling
                 weights = np.repeat(1/len(y_train), len(y_train), axis=0)
             else: # Sampling using averaged ranking of Complexity measures
-                if (emphasis == 'hard'):
+                if (emphasis == 'averaged_hard'):
                     # more weight to difficult
                     ranking = df_measures_sel[['Hostility', 'kDN', 'DCP','TD_U', 'CLD', 'N1', 'N2','LSC','F1']].rank(method='max', ascending=True).mean(axis=1)
-                elif (emphasis == 'easy'):
+                elif (emphasis == 'averaged_easy'):
                     # more weight to easy
                     ranking = df_measures_sel[['Hostility', 'kDN', 'DCP','TD_U', 'CLD', 'N1', 'N2','LSC','F1']].rank(method='max', ascending=False).mean(axis=1)
                 # elif (emphasis == 'combo'):
@@ -699,7 +703,7 @@ def complexity_driven_bagging_averaged(X,y,n_ensembles, name_data,path_to_save, 
                 #     # more weight to easy
                 #     ranking2 = df_measures_sel[['Hostility', 'kDN', 'DCP', 'TD_U', 'CLD', 'N1', 'N2', 'LSC', 'F1']].rank(
                 #         method='max', ascending=False).mean(axis=1)
-                elif (emphasis == 'classes_hard'):
+                elif (emphasis == 'averaged_classes_hard'):
                     ## If we make per class specifically: ranking
                     df_sel_class = df_measures_sel[['Hostility', 'kDN', 'DCP', 'TD_U', 'CLD', 'N1', 'N2', 'LSC', 'F1']]
                     y_train_aux = np.concatenate(y_train, axis=0)
@@ -713,7 +717,7 @@ def complexity_driven_bagging_averaged(X,y,n_ensembles, name_data,path_to_save, 
                         ranking_aux[y_train_aux == c] = df_sel_class[y_train_aux == c].rank(method='max', ascending=True).mean(axis=1)
                         ranking[y_train_aux == c] = ranking_aux[y_train_aux == c] / sum(
                             ranking_aux[y_train_aux == c])  # probability distribution
-                elif (emphasis == 'classes_easy'):
+                elif (emphasis == 'averaged_classes_easy'):
                     ## If we make per class specifically: ranking
                     df_sel_class = df_measures_sel[['Hostility', 'kDN', 'DCP', 'TD_U', 'CLD', 'N1', 'N2', 'LSC', 'F1']]
                     y_train_aux = np.concatenate(y_train, axis=0)
@@ -741,12 +745,6 @@ def complexity_driven_bagging_averaged(X,y,n_ensembles, name_data,path_to_save, 
                 # Get bootstrap sample following CM_weights
                 n_train = len(y_train)
 
-                # if (i % 2 == 0): # even
-                #     # more weight to easy
-                #     np.random.seed(1)
-                #     X_bootstrap, y_bootstrap, bootstrap_indices = bootstrap_sample(X_train, y_train, weights2)
-                # else: # odd
-                #     # more weight to hard
                 np.random.seed(1)
                 X_bootstrap, y_bootstrap, bootstrap_indices = bootstrap_sample(X_train, y_train, weights)
 
@@ -838,6 +836,41 @@ def complexity_driven_bagging_averaged(X,y,n_ensembles, name_data,path_to_save, 
     df_aggre.to_csv(nombre_csv_agg, encoding='utf_8_sig',index=False)
 
     return results
+
+
+
+path_csv = os.chdir(root_path+'/datasets')
+# Extraemos los nombres de todos los ficheros
+total_name_list = []
+for filename in os.listdir(path_csv):
+    if filename.endswith('.csv'):
+        total_name_list.append(filename)
+
+
+# total_name_list = ['Data13.csv']
+
+path_to_save = root_path+'/Bagging_results'
+n_ensembles = 200 # maximum number of ensembles to consider (later we plot and stop when we want)
+# CM_selected = 'Hostility' # selection of the complexity measure to guide the sampling
+
+for data_file in total_name_list:
+    os.chdir(root_path + '/datasets')
+    print(data_file)
+    file = data_file
+    name_data = data_file[:-4]
+    data = pd.read_csv(file)
+    X = data[['x1', 'x2']].to_numpy()
+    X = preprocessing.scale(X)
+    y = data[['y']].to_numpy()
+    emphasis_easy = 'averaged_easy'
+    results = complexity_driven_bagging_averaged(X, y, n_ensembles, name_data, path_to_save,emphasis_easy)
+    emphasis_hard = 'averaged_hard'
+    results2 = complexity_driven_bagging_averaged(X, y, n_ensembles, name_data, path_to_save,emphasis_hard)
+    emphasis_easy_class = 'averaged_classes_easy'
+    results3 = complexity_driven_bagging_averaged(X, y, n_ensembles, name_data, path_to_save,emphasis_easy_class)
+    emphasis_hard_class = 'averaged_classes_hard'
+    results4 = complexity_driven_bagging_averaged(X, y, n_ensembles, name_data, path_to_save,emphasis_hard_class)
+
 
 
 
