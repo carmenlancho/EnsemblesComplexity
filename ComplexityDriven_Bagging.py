@@ -75,6 +75,7 @@ def voting_rule(preds):
     mode_preds = preds.mode(axis=1)  # most common pred value
     if (mode_preds.shape[1] > 1):
         mode_preds_aux = mode_preds.dropna()  # cases with more than one most common value (= ties)
+        np.random.seed(1)
         mode_preds_aux = mode_preds_aux.apply(random.choice, axis=1)  # ties are broken randomly
 
         mode_preds.iloc[mode_preds_aux.index, 0] = mode_preds_aux
