@@ -648,15 +648,14 @@ def complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_sav
                     np.random.seed(1)
                     X_bootstrap, y_bootstrap, bootstrap_indices = bootstrap_sample(X_train, y_train, weights)
                 else:
-                    n_ensembles / (split + 1)
-                    split
-                    index_w = 6 / (split + 1)
                     if (j <= split):
-                        weights = weights_v.iloc[:,i]
+                        weights = weights_v.iloc[:,j]
                     else:
                         j = 0
-                        weights = weights_v.iloc[:, i]
+                        weights = weights_v.iloc[:, j]
+                    # print('j=', j)
                     j = j + 1
+
 
                     np.random.seed(1)
                     X_bootstrap, y_bootstrap, bootstrap_indices = bootstrap_sample(X_train, y_train, weights)
