@@ -397,8 +397,8 @@ n_ensembles = 200 # maximum number of ensembles to consider (later we plot and s
 #
 
 
-
-def complexity_driven_bagging_combo(X,y,n_ensembles, name_data,path_to_save, emphasis):
+# stump = 'yes'
+def complexity_driven_bagging_combo(X,y,n_ensembles, name_data,path_to_save, emphasis,stump):
 
     # dataframe to save the results
     results = pd.DataFrame(columns=['dataset','fold','n_ensemble','weights','confusion_matrix','accuracy',
@@ -510,7 +510,10 @@ def complexity_driven_bagging_combo(X,y,n_ensembles, name_data,path_to_save, emp
 
 
                 # Train DT in bootstrap sample and test y X_test, y_test
-                clf = DecisionTreeClassifier(random_state=0)
+                if (stump == 'no'):
+                    clf = DecisionTreeClassifier(random_state=0)
+                else: # Decision Stump
+                    clf = DecisionTreeClassifier(max_depth=1, random_state=0)
                 clf.fit(X_bootstrap, y_bootstrap)
                 y_pred = clf.predict(X_test)
 
@@ -576,7 +579,7 @@ def complexity_driven_bagging_combo(X,y,n_ensembles, name_data,path_to_save, emp
 
 
 
-def complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis, split):
+def complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis, split, stump):
 
     # dataframe to save the results
     results = pd.DataFrame(columns=['dataset','fold','n_ensemble','weights','confusion_matrix','accuracy',
@@ -685,7 +688,10 @@ def complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_sav
 
 
                 # Train DT in bootstrap sample and test y X_test, y_test
-                clf = DecisionTreeClassifier(random_state=0)
+                if (stump == 'no'):
+                    clf = DecisionTreeClassifier(random_state=0)
+                else:  # Decision Stump
+                    clf = DecisionTreeClassifier(max_depth=1, random_state=0)
                 clf.fit(X_bootstrap, y_bootstrap)
                 y_pred = clf.predict(X_test)
 
@@ -776,13 +782,18 @@ for data_file in total_name_list:
     X = data[['x1', 'x2']].to_numpy()
     X = preprocessing.scale(X)
     y = data[['y']].to_numpy()
+    stump = 'yes'
+    emphasis0 = 'combo'
+    results0 = complexity_driven_bagging_combo(X, y, n_ensembles, name_data, path_to_save, emphasis0, stump)
     split = 2
     emphasis = 'combo_split'
-    results = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis, split)
+    results = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis, split, stump)
     split4 = 4
-    results2 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis, split4)
+    results2 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis, split4, stump)
     split9 = 9
-    results3 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis, split9)
+    results3 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis, split9, stump)
+
+
 
 
 
