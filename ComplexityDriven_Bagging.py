@@ -564,7 +564,7 @@ def complexity_driven_bagging_combo(X,y,n_ensembles, name_data,path_to_save, emp
 
     # To save the results
     os.chdir(path_to_save)
-    nombre_csv = 'Bagging_' + name_data + '_MoreWeight_' + emphasis +'_Instances.csv'
+    nombre_csv = 'Bagging_' + name_data + '_MoreWeight_' + emphasis + '_stump_' + stump+'_Instances.csv'
     results.to_csv(nombre_csv, encoding='utf_8_sig',index=False)
 
     ##### Agregation of results
@@ -572,7 +572,7 @@ def complexity_driven_bagging_combo(X,y,n_ensembles, name_data,path_to_save, emp
 
     # To save the results
     os.chdir(path_to_save)
-    nombre_csv_agg = 'AggregatedResults_Bagging_' + name_data + '_MoreWeight_' + emphasis + '_Instances.csv'
+    nombre_csv_agg = 'AggregatedResults_Bagging_' + name_data + '_MoreWeight_' + emphasis + '_stump_' + stump+ '_Instances.csv'
     df_aggre.to_csv(nombre_csv_agg, encoding='utf_8_sig',index=False)
 
     return results
@@ -742,7 +742,7 @@ def complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_sav
 
     # To save the results
     os.chdir(path_to_save)
-    nombre_csv = 'Bagging_' + name_data + '_MoreWeight_' + emphasis + '_split' + str(split)+ '_Instances.csv'
+    nombre_csv = 'Bagging_' + name_data + '_MoreWeight_' + emphasis + '_split' + str(split)+ '_stump_' + stump+ '_Instances.csv'
     results.to_csv(nombre_csv, encoding='utf_8_sig',index=False)
 
     ##### Agregation of results
@@ -750,7 +750,7 @@ def complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_sav
 
     # To save the results
     os.chdir(path_to_save)
-    nombre_csv_agg = 'AggregatedResults_Bagging_' + name_data + '_MoreWeight_' + emphasis + '_split' + str(split)+ '_Instances.csv'
+    nombre_csv_agg = 'AggregatedResults_Bagging_' + name_data + '_MoreWeight_' + emphasis + '_split' + str(split) + '_stump_' + stump + '_Instances.csv'
     df_aggre.to_csv(nombre_csv_agg, encoding='utf_8_sig',index=False)
 
     return results
