@@ -411,7 +411,7 @@ def complexity_driven_bagging_combo(X,y,n_ensembles, name_data,path_to_save, emp
 
     # Complexity measures list to check
     CM_list = ['Hostility', 'kDN', 'DCP','TD_U', 'CLD', 'N1', 'N2','LSC','F1','Uniform']
-    # CM_selected = 'F1'
+    # CM_selected = 'Hostility'
 
     skf = StratifiedKFold(n_splits=5, random_state=1,shuffle=True)
     fold = 0
@@ -443,6 +443,23 @@ def complexity_driven_bagging_combo(X,y,n_ensembles, name_data,path_to_save, emp
                 if (emphasis == 'combo'):
                     ranking1 = CM_values.rank(method='max', ascending=True)  # more weight to difficult
                     ranking2 = CM_values.rank(method='max', ascending=False)  # more weight to easy
+
+                elif (emphasis == 'combo_extreme'):
+                    ranking1 = CM_values.rank(method='max', ascending=True)  # more weight to difficult
+                    quantiles = np.quantile(ranking1, q=np.arange(0.5, 0.76, 0.25))
+                    q50 = quantiles[0]
+                    q75 = quantiles[1]
+                    ranking1[(ranking1 >= q75)] = ranking1[(ranking1 >= q75)] * 4
+                    ranking1[(ranking1 >= q50) & (ranking1 < q75)] = ranking1[(ranking1 >= q50) & (ranking1 < q75)] * 2
+
+                    ranking2 = CM_values.rank(method='max', ascending=False)  # more weight to easy
+                    quantiles_easy = np.quantile(ranking2, q=np.arange(0.5, 0.76, 0.25))
+                    q50_easy = quantiles_easy[0]
+                    q75_easy = quantiles_easy[1]
+                    ranking2[(ranking2 >= q75_easy)] = ranking2[(ranking2 >= q75_easy)] * 4
+                    ranking2[(ranking2 >= q50_easy) & (ranking2 < q75_easy)] = ranking2[(ranking2 >= q50_easy) & (
+                                ranking2 < q75_easy)] * 2
+
                 elif (emphasis == 'combo_classes'):
                     ## If we make per class specifically: ranking
                     y_train_aux = np.concatenate(y_train, axis=0)
@@ -565,7 +582,7 @@ def complexity_driven_bagging_combo(X,y,n_ensembles, name_data,path_to_save, emp
 
     # To save the results
     os.chdir(path_to_save)
-    nombre_csv = 'Bagging_' + name_data + '_MoreWeight_' + emphasis + '_stump_' + stump+'_Instances.csv'
+    nombre_csv = 'Bagging_' + name_data + '_MoreWeight_' + emphasis + '_stump_' + stump+'Instances.csv'
     results.to_csv(nombre_csv, encoding='utf_8_sig',index=False)
 
     ##### Agregation of results
@@ -573,7 +590,7 @@ def complexity_driven_bagging_combo(X,y,n_ensembles, name_data,path_to_save, emp
 
     # To save the results
     os.chdir(path_to_save)
-    nombre_csv_agg = 'AggregatedResults_Bagging_' + name_data + '_MoreWeight_' + emphasis + '_stump_' + stump+ '_Instances.csv'
+    nombre_csv_agg = 'AggregatedResults_Bagging_' + name_data + '_MoreWeight_' + emphasis + '_stump_' + stump+ 'Instances.csv'
     df_aggre.to_csv(nombre_csv_agg, encoding='utf_8_sig',index=False)
 
     return results
@@ -634,6 +651,32 @@ def complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_sav
                         print(s)
                         new_w = weights_easy + s*w_frac
                         weights_v = pd.concat([weights_v,new_w],axis=1)
+                elif (emphasis == 'combo_split_extreme'):
+                    ranking_hard = CM_values.rank(method='max', ascending=True)  # more weight to difficult
+                    quantiles = np.quantile(ranking_hard, q=np.arange(0.5, 0.76, 0.25))
+                    q50 = quantiles[0]
+                    q75 = quantiles[1]
+                    ranking_hard[(ranking_hard >= q75)] = ranking_hard[(ranking_hard >= q75)] * 4
+                    ranking_hard[(ranking_hard >= q50) & (ranking_hard < q75)] = ranking_hard[(ranking_hard >= q50) & (
+                                ranking_hard < q75)] * 2
+
+                    ranking_easy = CM_values.rank(method='max', ascending=False)  # more weight to easy
+                    quantiles_easy = np.quantile(ranking_easy, q=np.arange(0.5, 0.76, 0.25))
+                    q50_easy = quantiles_easy[0]
+                    q75_easy = quantiles_easy[1]
+                    ranking_easy[(ranking_easy >= q75_easy)] = ranking_easy[(ranking_easy >= q75_easy)] * 4
+                    ranking_easy[(ranking_easy >= q50_easy) & (ranking_easy < q75_easy)] = ranking_easy[(
+                                                                                                                    ranking_easy >= q50_easy) & (
+                                                                                                                ranking_easy < q75_easy)] * 2
+
+                    weights_easy = ranking_easy / sum(ranking_easy)  # probability distribution
+                    weights_hard = ranking_hard / sum(ranking_hard)  # probability distribution
+                    w_frac = (weights_hard - weights_easy) / split
+                    weights_v = pd.DataFrame()
+                    for s in range(split + 1):
+                        print(s)
+                        new_w = weights_easy + s * w_frac
+                        weights_v = pd.concat([weights_v, new_w], axis=1)
 
 
 
@@ -744,7 +787,7 @@ def complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_sav
 
     # To save the results
     os.chdir(path_to_save)
-    nombre_csv = 'Bagging_' + name_data + '_MoreWeight_' + emphasis + '_split' + str(split)+ '_stump_' + stump+ '_Instances.csv'
+    nombre_csv = 'Bagging_' + name_data + '_MoreWeight_' + emphasis + '_split' + str(split)+ '_stump_' + stump+ 'Instances.csv'
     results.to_csv(nombre_csv, encoding='utf_8_sig',index=False)
 
     ##### Agregation of results
@@ -752,7 +795,7 @@ def complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_sav
 
     # To save the results
     os.chdir(path_to_save)
-    nombre_csv_agg = 'AggregatedResults_Bagging_' + name_data + '_MoreWeight_' + emphasis + '_split' + str(split) + '_stump_' + stump + '_Instances.csv'
+    nombre_csv_agg = 'AggregatedResults_Bagging_' + name_data + '_MoreWeight_' + emphasis + '_split' + str(split) + '_stump_' + stump + 'Instances.csv'
     df_aggre.to_csv(nombre_csv_agg, encoding='utf_8_sig',index=False)
 
     return results
@@ -770,10 +813,10 @@ for filename in os.listdir(path_csv):
 
 # yeast da problemas porque una clase es muy pequeña y no aparece en todos los folds
 
-# total_name_list = ['wdbc.csv']
+# total_name_list = ['Data13.csv']
 
 path_to_save = root_path+'/Bagging_results'
-n_ensembles = 10 # maximum number of ensembles to consider (later we plot and stop when we want)
+n_ensembles = 200 # maximum number of ensembles to consider (later we plot and stop when we want)
 # CM_selected = 'Hostility' # selection of the complexity measure to guide the sampling
 
 for data_file in total_name_list:
@@ -785,11 +828,11 @@ for data_file in total_name_list:
     X = data.iloc[:,:-1].to_numpy() # all variables except y
     X = preprocessing.scale(X)
     y = data[['y']].to_numpy()
-    stump = 'yes'
-    emphasis0 = 'combo'
+    stump = 'no'
+    emphasis0 = 'combo_extreme'
     results0 = complexity_driven_bagging_combo(X, y, n_ensembles, name_data, path_to_save, emphasis0, stump)
     split = 2
-    emphasis = 'combo_split'
+    emphasis = 'combo_split_extreme'
     results = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis, split, stump)
     split4 = 4
     results2 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis, split4, stump)
