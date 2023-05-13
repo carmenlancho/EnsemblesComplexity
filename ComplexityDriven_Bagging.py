@@ -426,8 +426,9 @@ def complexity_driven_bagging_combo(X,y,n_ensembles, name_data,path_to_save, emp
         # print(y_test)
 
         # Obtain complexity measures on train set
-        data_train = pd.DataFrame(X_train, columns=['x1','x2'])
+        data_train = pd.DataFrame(X_train)
         data_train['y'] = y_train
+        data_train.columns = data.columns
         df_measures, _ = all_measures(data_train,False,None, None)
         # Selection of complexity measures
         df_measures_sel = df_measures[['Hostility', 'kDN', 'DCP','TD_U', 'CLD', 'N1', 'N2','LSC','F1','y']]
@@ -607,8 +608,9 @@ def complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_sav
         # print(y_test)
 
         # Obtain complexity measures on train set
-        data_train = pd.DataFrame(X_train, columns=['x1','x2'])
+        data_train = pd.DataFrame(X_train)
         data_train['y'] = y_train
+        data_train.columns = data.columns
         df_measures, _ = all_measures(data_train,False,None, None)
         # Selection of complexity measures
         df_measures_sel = df_measures[['Hostility', 'kDN', 'DCP','TD_U', 'CLD', 'N1', 'N2','LSC','F1','y']]
@@ -766,11 +768,12 @@ for filename in os.listdir(path_csv):
     if filename.endswith('.csv'):
         total_name_list.append(filename)
 
+# yeast da problemas porque una clase es muy pequeña y no aparece en todos los folds
 
-# total_name_list = ['Data13.csv']
+# total_name_list = ['wdbc.csv']
 
 path_to_save = root_path+'/Bagging_results'
-n_ensembles = 200 # maximum number of ensembles to consider (later we plot and stop when we want)
+n_ensembles = 10 # maximum number of ensembles to consider (later we plot and stop when we want)
 # CM_selected = 'Hostility' # selection of the complexity measure to guide the sampling
 
 for data_file in total_name_list:
@@ -779,7 +782,7 @@ for data_file in total_name_list:
     file = data_file
     name_data = data_file[:-4]
     data = pd.read_csv(file)
-    X = data[['x1', 'x2']].to_numpy()
+    X = data.iloc[:,:-1].to_numpy() # all variables except y
     X = preprocessing.scale(X)
     y = data[['y']].to_numpy()
     stump = 'yes'
