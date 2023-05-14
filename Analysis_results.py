@@ -315,8 +315,8 @@ path_csv = os.chdir(root_path+'/Bagging_results')
 # Extraemos los nombres de todos los ficheros
 total_name_list = []
 for filename in os.listdir(path_csv):
-    if (filename.endswith('.csv') and 'Aggregated' in filename and 'combo' in filename and 'classes' not in filename and 'split' not in filename
-    and 'yes' in filename):
+    if (filename.endswith('.csv') and 'Aggregated' in filename and 'combo' in filename and 'classes' not in filename
+    and 'no' in filename and 'extreme' in filename):
         total_name_list.append(filename)
 
 
@@ -341,6 +341,66 @@ for file in total_name_list:
     os.chdir(path_to_save)
     nombre_csv = 'ResAccuracy_Bagging' + name
     res.to_csv(nombre_csv, encoding='utf_8_sig',index=True)
+
+
+data_list = ['Data1_','Data2','Data3','Data4','Data5','Data6','Data7','Data8',
+             'Data9','Data10','Data11','Data12','Data13',
+             'wdbc','pima','ionosphere']
+path_to_save = root_path+'/Analysis_results'
+data_i = 'Data1_'
+for data_i in data_list:
+    print(data_i)
+    list_match = [s for s in total_name_list if data_i in s]
+    res_total = pd.DataFrame()
+    for file in list_match:
+        print(list_match)
+        os.chdir(root_path + '/Bagging_results')
+        name = file[25:]
+        data = pd.read_csv(file)
+
+        data_n = data[data['n_ensemble'].isin([15, 50, 100, 150, 199])]
+        res = data_n[['n_ensemble', 'weights', 'accuracy_mean', 'accuracy_std']].sort_values(
+            by=['weights', 'n_ensemble'])  # .T
+        if ('split4' in name):
+            res.columns = ['n_ensemble', 'weights','accuracy_mean_split4','accuracy_std_split4']
+        elif ('split2' in name):
+            res.columns = ['n_ensemble', 'weights','accuracy_mean_split2','accuracy_std_split2']
+        elif ('split9' in name):
+            res.columns = ['n_ensemble', 'weights','accuracy_mean_split9','accuracy_std_split9']
+        elif ('split' not in name):
+            res.columns = ['n_ensemble', 'weights', 'accuracy_mean_combo', 'accuracy_std_combo']
+        res_total = pd.concat([res_total,res],axis=1)
+        # print(res_total)
+    res_total = res_total.loc[:,~res_total.columns.duplicated()] # remove duplicate columns
+    res_total = res_total.reindex(columns=['n_ensemble', 'weights',
+                                               'accuracy_mean_combo', 'accuracy_std_combo',
+                                               'accuracy_mean_split2', 'accuracy_std_split2',
+                                               'accuracy_mean_split4', 'accuracy_std_split4',
+                                               'accuracy_mean_split9', 'accuracy_std_split9'])
+
+    # To save the results
+    os.chdir(path_to_save)
+    nombre_csv = 'ResAccuracy_Bagging_' + str(data_i) + '_Combo_Splits249_NoStump_Extreme.csv'
+    res_total.to_csv(nombre_csv, encoding='utf_8_sig', index=True)
+
+
+
+
+
+
+for file in total_name_list:
+    os.chdir(root_path + '/Bagging_results')
+    print(file)
+    name = file[25:]
+    data = pd.read_csv(file)
+
+    data_n = data[data['n_ensemble'].isin([15,50,100,150,199])]
+    res = data_n[['n_ensemble','weights','accuracy_mean','accuracy_std']].sort_values(by = ['weights', 'n_ensemble'])#.T
+    # To save the results
+    os.chdir(path_to_save)
+    nombre_csv = 'ResAccuracy_Bagging' + name
+    res.to_csv(nombre_csv, encoding='utf_8_sig',index=True)
+
 
 
 

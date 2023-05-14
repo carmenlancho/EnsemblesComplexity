@@ -687,6 +687,32 @@ def complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_sav
                         print(s)
                         new_w = weights_easy + s*w_frac
                         weights_v = pd.concat([weights_v,new_w],axis=1)
+                elif (emphasis == 'combo_split_classes'):
+                    ## If we make per class specifically: ranking
+                    y_train_aux = np.concatenate(y_train, axis=0)
+                    n_classes = len(np.unique(y_train))
+                    ranking_aux = np.zeros(len(y_train_aux))
+                    ranking_hard = np.zeros(len(y_train_aux))
+                    ranking_aux2 = np.zeros(len(y_train_aux))
+                    ranking_easy = np.zeros(len(y_train_aux))
+                    for c in range(n_classes):
+                        # print(c)
+                        n_class_c = np.sum(y_train_aux == c)
+                        # more weight to difficult
+                        ranking_aux[y_train_aux == c] = CM_values[y_train_aux == c].rank(method='max',ascending=True)
+                        ranking_hard[y_train_aux == c] = ranking_aux[y_train_aux == c] / sum(ranking_aux[y_train_aux == c])  # probability distribution per class
+                        # more weight to easy
+                        ranking_aux2[y_train_aux == c] = CM_values[y_train_aux == c].rank(method='max',ascending=False)
+                        ranking_easy[y_train_aux == c] = ranking_aux2[y_train_aux == c] / sum(ranking_aux2[y_train_aux == c])  # probability distribution per class
+
+                    weights_easy = ranking_easy / sum(ranking_easy)  # probability distribution global
+                    weights_hard = ranking_hard / sum(ranking_hard)  # probability distribution global
+                    w_frac = (weights_hard - weights_easy) / split
+                    weights_v = pd.DataFrame()
+                    for s in range(split+1):
+                        print(s)
+                        new_w = weights_easy + s*w_frac
+                        weights_v = pd.concat([weights_v,new_w],axis=1)
                 elif (emphasis == 'combo_split_extreme'):
                     ranking_hard = CM_values.rank(method='max', ascending=True)  # more weight to difficult
                     quantiles = np.quantile(ranking_hard, q=np.arange(0.5, 0.76, 0.25))
@@ -713,9 +739,48 @@ def complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_sav
                         print(s)
                         new_w = weights_easy + s * w_frac
                         weights_v = pd.concat([weights_v, new_w], axis=1)
+                elif (emphasis == 'combo_split_extreme_classes'):
+                    ## If we make per class specifically: ranking
+                    y_train_aux = np.concatenate(y_train, axis=0)
+                    n_classes = len(np.unique(y_train))
+                    ranking_aux = np.zeros(len(y_train_aux))
+                    ranking_hard = np.zeros(len(y_train_aux))
+                    ranking_aux2 = np.zeros(len(y_train_aux))
+                    ranking_easy = np.zeros(len(y_train_aux))
+                    for c in range(n_classes):
+                        # print(c)
+                        n_class_c = np.sum(y_train_aux == c)
+                        # more weight to difficult
+                        ranking_aux[y_train_aux == c] = CM_values[y_train_aux == c].rank(method='max', ascending=True)
+                        quantiles = np.quantile(ranking_aux, q=np.arange(0.5, 0.76, 0.25))
+                        q50 = quantiles[0]
+                        q75 = quantiles[1]
+                        ranking_aux[(ranking_aux >= q75)] = ranking_aux[(ranking_aux >= q75)] * 4
+                        ranking_aux[(ranking_aux >= q50) & (ranking_aux < q75)] = ranking_aux[
+                                                                                      (ranking_aux >= q50) & (
+                                                                                                  ranking_aux < q75)] * 2
+                        ranking_hard[y_train_aux == c] = ranking_aux[y_train_aux == c] / sum(
+                            ranking_aux[y_train_aux == c])  # probability distribution
+                        # more weight to easy
+                        ranking_aux2[y_train_aux == c] = CM_values[y_train_aux == c].rank(method='max', ascending=False)
+                        quantiles_easy = np.quantile(ranking_aux2, q=np.arange(0.5, 0.76, 0.25))
+                        q50_easy = quantiles_easy[0]
+                        q75_easy = quantiles_easy[1]
+                        ranking_aux2[(ranking_aux2 >= q75_easy)] = ranking_aux2[(ranking_aux2 >= q75_easy)] * 4
+                        ranking_aux2[(ranking_aux2 >= q50_easy) & (ranking_aux2 < q75_easy)] = ranking_aux2[(
+                                                                                                                        ranking_aux2 >= q50_easy) & (
+                                                                                                                    ranking_aux2 < q75_easy)] * 2
+                        ranking_easy[y_train_aux == c] = ranking_aux2[y_train_aux == c] / sum(
+                            ranking_aux2[y_train_aux == c])  # probability distribution
 
-
-
+                    weights_easy = ranking_easy / sum(ranking_easy)  # probability distribution
+                    weights_hard = ranking_hard / sum(ranking_hard)  # probability distribution
+                    w_frac = (weights_hard - weights_easy) / split
+                    weights_v = pd.DataFrame()
+                    for s in range(split + 1):
+                        print(s)
+                        new_w = weights_easy + s * w_frac
+                        weights_v = pd.concat([weights_v, new_w], axis=1)
 
 
             preds = pd.DataFrame()
