@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 
+# results = results0
 def aggregation_results(results):
     ##### Agregation of results
     cols_numeric = results.select_dtypes([np.number]).columns

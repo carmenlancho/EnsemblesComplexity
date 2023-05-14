@@ -398,6 +398,7 @@ n_ensembles = 200 # maximum number of ensembles to consider (later we plot and s
 
 
 # stump = 'yes'
+# n_ensembles = 50
 def complexity_driven_bagging_combo(X,y,n_ensembles, name_data,path_to_save, emphasis,stump):
 
     # dataframe to save the results
@@ -411,7 +412,7 @@ def complexity_driven_bagging_combo(X,y,n_ensembles, name_data,path_to_save, emp
 
     # Complexity measures list to check
     CM_list = ['Hostility', 'kDN', 'DCP','TD_U', 'CLD', 'N1', 'N2','LSC','F1','Uniform']
-    # CM_selected = 'Hostility'
+    # CM_selected = 'DCP'
 
     skf = StratifiedKFold(n_splits=5, random_state=1,shuffle=True)
     fold = 0
@@ -432,6 +433,8 @@ def complexity_driven_bagging_combo(X,y,n_ensembles, name_data,path_to_save, emp
         df_measures, _ = all_measures(data_train,False,None, None)
         # Selection of complexity measures
         df_measures_sel = df_measures[['Hostility', 'kDN', 'DCP','TD_U', 'CLD', 'N1', 'N2','LSC','F1','y']]
+
+
 
         for CM_selected in CM_list:
             print(CM_selected)
@@ -483,7 +486,7 @@ def complexity_driven_bagging_combo(X,y,n_ensembles, name_data,path_to_save, emp
 
             preds = pd.DataFrame()
             ensemble_preds = pd.DataFrame()
-            # i = 0
+            # i = 34
             for i in range(n_ensembles):
 
                 # print(i)
@@ -812,8 +815,20 @@ for filename in os.listdir(path_csv):
         total_name_list.append(filename)
 
 # yeast da problemas porque una clase es muy pequeña y no aparece en todos los folds
+# haberman da problemas y es por DCP que da solo dos valores y concuerdan con la y
 
 # total_name_list = ['Data13.csv']
+
+total_name_list = [#'Data13.csv', 'Data8.csv', 'Data6.csv', 'Data12.csv',
+ 'Data1.csv',
+ 'Data2.csv',
+ 'Data10.csv',
+ 'Data5.csv',
+ 'Data7.csv',
+ 'Data3.csv',
+ 'Data9.csv',
+ 'Data11.csv',
+ 'Data4.csv', 'wdbc.csv', 'ionosphere.csv', 'pima.csv', 'haberman.csv']
 
 path_to_save = root_path+'/Bagging_results'
 n_ensembles = 200 # maximum number of ensembles to consider (later we plot and stop when we want)
