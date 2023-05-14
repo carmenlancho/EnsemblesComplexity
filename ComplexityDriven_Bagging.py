@@ -73,8 +73,9 @@ def complexity_driven_bagging(X,y,n_ensembles, name_data,path_to_save, emphasis)
         # print(y_test)
 
         # Obtain complexity measures on train set
-        data_train = pd.DataFrame(X_train, columns=['x1','x2'])
+        data_train = pd.DataFrame(X_train)
         data_train['y'] = y_train
+        data_train.columns = data.columns
         df_measures, _ = all_measures(data_train,False,None, None)
         # Selection of complexity measures
         df_measures_sel = df_measures[['Hostility', 'kDN', 'DCP','TD_U', 'CLD', 'N1', 'N2','LSC','F1','y']]
@@ -370,31 +371,33 @@ for filename in os.listdir(path_csv):
 
 
 # total_name_list = ['Data13.csv']
+total_name_list = ['ionosphere.csv','wdbc.csv', 'pima.csv', 'haberman.csv']
+
 
 path_to_save = root_path+'/Bagging_results'
 n_ensembles = 200 # maximum number of ensembles to consider (later we plot and stop when we want)
 # CM_selected = 'Hostility' # selection of the complexity measure to guide the sampling
 #
-# for data_file in total_name_list:
-#     os.chdir(root_path + '/datasets')
-#     print(data_file)
-#     file = data_file
-#     name_data = data_file[:-4]
-#     data = pd.read_csv(file)
-#     X = data[['x1', 'x2']].to_numpy()
-#     X = preprocessing.scale(X)
-#     y = data[['y']].to_numpy()
-#     # emphasis_easy = 'classes_1n_easy'
-#     # results = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_easy)
-#     # emphasis_hard = 'classes_1n_hard'
-#     # results2 = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_hard)
-#     # emphasis_easy3 = 'classes_easy'
-#     # results3 = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_easy3)
-#     # emphasis_hard4 = 'classes_hard'
-#     # results4 = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_hard4)
-#     emphasis_frontier = 'frontier'
-#     results5 = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_frontier)
-#
+for data_file in total_name_list:
+    os.chdir(root_path + '/datasets')
+    print(data_file)
+    file = data_file
+    name_data = data_file[:-4]
+    data = pd.read_csv(file)
+    X = data.iloc[:,:-1].to_numpy() # all variables except y
+    X = preprocessing.scale(X)
+    y = data[['y']].to_numpy()
+    emphasis_easy = 'easy'
+    results = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_easy)
+    emphasis_hard = 'hard'
+    results2 = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_hard)
+    # emphasis_easy3 = 'classes_easy'
+    # results3 = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_easy3)
+    # emphasis_hard4 = 'classes_hard'
+    # results4 = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_hard4)
+    # emphasis_frontier = 'frontier'
+    # results5 = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_frontier)
+
 
 
 # stump = 'yes'
@@ -480,6 +483,36 @@ def complexity_driven_bagging_combo(X,y,n_ensembles, name_data,path_to_save, emp
                         # more weight to easy
                         ranking_aux2[y_train_aux == c] = CM_values[y_train_aux == c].rank(method='max',ascending=False)
                         ranking2[y_train_aux == c] = ranking_aux2[y_train_aux == c] / sum(ranking_aux2[y_train_aux == c])  # probability distribution
+                elif (emphasis == 'combo_classes_extreme'):
+                    ## If we make per class specifically: ranking
+                    y_train_aux = np.concatenate(y_train, axis=0)
+                    n_classes = len(np.unique(y_train))
+                    ranking_aux = np.zeros(len(y_train_aux))
+                    ranking1 = np.zeros(len(y_train_aux))
+                    ranking_aux2 = np.zeros(len(y_train_aux))
+                    ranking2 = np.zeros(len(y_train_aux))
+                    for c in range(n_classes):
+                        # print(c)
+                        n_class_c = np.sum(y_train_aux == c)
+                        # more weight to difficult
+                        ranking_aux[y_train_aux == c] = CM_values[y_train_aux == c].rank(method='max',ascending=True)
+                        quantiles = np.quantile(ranking_aux, q=np.arange(0.5, 0.76, 0.25))
+                        q50 = quantiles[0]
+                        q75 = quantiles[1]
+                        ranking_aux[(ranking_aux >= q75)] = ranking_aux[(ranking_aux >= q75)] * 4
+                        ranking_aux[(ranking_aux >= q50) & (ranking_aux < q75)] = ranking_aux[
+                                                                             (ranking_aux >= q50) & (ranking_aux < q75)] * 2
+                        ranking1[y_train_aux == c] = ranking_aux[y_train_aux == c] / sum(ranking_aux[y_train_aux == c])  # probability distribution
+                        # more weight to easy
+                        ranking_aux2[y_train_aux == c] = CM_values[y_train_aux == c].rank(method='max',ascending=False)
+                        quantiles_easy = np.quantile(ranking_aux2, q=np.arange(0.5, 0.76, 0.25))
+                        q50_easy = quantiles_easy[0]
+                        q75_easy = quantiles_easy[1]
+                        ranking_aux2[(ranking_aux2 >= q75_easy)] = ranking_aux2[(ranking_aux2 >= q75_easy)] * 4
+                        ranking_aux2[(ranking_aux2 >= q50_easy) & (ranking_aux2 < q75_easy)] = ranking_aux2[(ranking_aux2 >= q50_easy) & (
+                                ranking_aux2 < q75_easy)] * 2
+                        ranking2[y_train_aux == c] = ranking_aux2[y_train_aux == c] / sum(ranking_aux2[y_train_aux == c])  # probability distribution
+
 
                 weights = ranking1/sum(ranking1) # probability distribution
                 weights2 = ranking2 / sum(ranking2)  # probability distribution
@@ -814,21 +847,23 @@ for filename in os.listdir(path_csv):
     if filename.endswith('.csv'):
         total_name_list.append(filename)
 
-# yeast da problemas porque una clase es muy pequeña y no aparece en todos los folds
+# yeast da problemas porque una clase es muy pequeña y no aparece en todos los folds (creo que tb es por DCP)
 # haberman da problemas y es por DCP que da solo dos valores y concuerdan con la y
 
 # total_name_list = ['Data13.csv']
 
-total_name_list = [#'Data13.csv', 'Data8.csv', 'Data6.csv', 'Data12.csv',
- 'Data1.csv',
- 'Data2.csv',
- 'Data10.csv',
- 'Data5.csv',
- 'Data7.csv',
- 'Data3.csv',
- 'Data9.csv',
- 'Data11.csv',
- 'Data4.csv', 'wdbc.csv', 'ionosphere.csv', 'pima.csv', 'haberman.csv']
+# total_name_list = [#'Data13.csv', 'Data8.csv', 'Data6.csv', 'Data12.csv',
+#  'Data1.csv',
+#  'Data2.csv',
+#  'Data10.csv',
+#  'Data5.csv',
+#  'Data7.csv',
+#  'Data3.csv',
+#  'Data9.csv',
+#  'Data11.csv',
+#  'Data4.csv', 'wdbc.csv', 'ionosphere.csv', 'pima.csv', 'haberman.csv']
+
+total_name_list = ['ionosphere.csv','wdbc.csv', 'pima.csv', 'haberman.csv']
 
 path_to_save = root_path+'/Bagging_results'
 n_ensembles = 200 # maximum number of ensembles to consider (later we plot and stop when we want)
@@ -844,10 +879,10 @@ for data_file in total_name_list:
     X = preprocessing.scale(X)
     y = data[['y']].to_numpy()
     stump = 'no'
-    emphasis0 = 'combo_extreme'
+    emphasis0 = 'combo'
     results0 = complexity_driven_bagging_combo(X, y, n_ensembles, name_data, path_to_save, emphasis0, stump)
     split = 2
-    emphasis = 'combo_split_extreme'
+    emphasis = 'combo_split'
     results = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis, split, stump)
     split4 = 4
     results2 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis, split4, stump)
