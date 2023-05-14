@@ -710,9 +710,10 @@ def complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_sav
                     w_frac = (weights_hard - weights_easy) / split
                     weights_v = pd.DataFrame()
                     for s in range(split+1):
-                        print(s)
+                        # print(s)
                         new_w = weights_easy + s*w_frac
-                        weights_v = pd.concat([weights_v,new_w],axis=1)
+                        new_w_df = pd.DataFrame(new_w)
+                        weights_v = pd.concat([weights_v,new_w_df],axis=1)
                 elif (emphasis == 'combo_split_extreme'):
                     ranking_hard = CM_values.rank(method='max', ascending=True)  # more weight to difficult
                     quantiles = np.quantile(ranking_hard, q=np.arange(0.5, 0.76, 0.25))
@@ -736,9 +737,10 @@ def complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_sav
                     w_frac = (weights_hard - weights_easy) / split
                     weights_v = pd.DataFrame()
                     for s in range(split + 1):
-                        print(s)
+                        # print(s)
                         new_w = weights_easy + s * w_frac
-                        weights_v = pd.concat([weights_v, new_w], axis=1)
+                        new_w_df = pd.DataFrame(new_w)
+                        weights_v = pd.concat([weights_v, new_w_df], axis=1)
                 elif (emphasis == 'combo_split_extreme_classes'):
                     ## If we make per class specifically: ranking
                     y_train_aux = np.concatenate(y_train, axis=0)
@@ -778,9 +780,10 @@ def complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_sav
                     w_frac = (weights_hard - weights_easy) / split
                     weights_v = pd.DataFrame()
                     for s in range(split + 1):
-                        print(s)
+                        # print(s)
                         new_w = weights_easy + s * w_frac
-                        weights_v = pd.concat([weights_v, new_w], axis=1)
+                        new_w_df = pd.DataFrame(new_w)
+                        weights_v = pd.concat([weights_v, new_w_df], axis=1)
 
 
             preds = pd.DataFrame()
@@ -917,18 +920,18 @@ for filename in os.listdir(path_csv):
 
 # total_name_list = ['Data13.csv']
 
-# total_name_list = [#'Data13.csv', 'Data8.csv', 'Data6.csv', 'Data12.csv',
-#  'Data1.csv',
-#  'Data2.csv',
-#  'Data10.csv',
-#  'Data5.csv',
-#  'Data7.csv',
-#  'Data3.csv',
-#  'Data9.csv',
-#  'Data11.csv',
-#  'Data4.csv', 'wdbc.csv', 'ionosphere.csv', 'pima.csv', 'haberman.csv']
+total_name_list = ['Data13.csv', 'Data8.csv', 'Data6.csv', 'Data12.csv',
+ 'Data1.csv',
+ 'Data2.csv',
+ 'Data10.csv',
+ 'Data5.csv',
+ 'Data7.csv',
+ 'Data3.csv',
+ 'Data9.csv',
+ 'Data11.csv',
+ 'Data4.csv', 'wdbc.csv', 'ionosphere.csv', 'pima.csv', 'haberman.csv']
 
-total_name_list = ['ionosphere.csv','wdbc.csv', 'pima.csv', 'haberman.csv']
+# total_name_list = ['ionosphere.csv','wdbc.csv', 'pima.csv', 'haberman.csv']
 
 path_to_save = root_path+'/Bagging_results'
 n_ensembles = 200 # maximum number of ensembles to consider (later we plot and stop when we want)
@@ -944,15 +947,22 @@ for data_file in total_name_list:
     X = preprocessing.scale(X)
     y = data[['y']].to_numpy()
     stump = 'no'
-    emphasis0 = 'combo'
+    emphasis0 = 'combo_classes_extreme'
     results0 = complexity_driven_bagging_combo(X, y, n_ensembles, name_data, path_to_save, emphasis0, stump)
+    emphasis = 'combo_split_classes'
     split = 2
-    emphasis = 'combo_split'
-    results = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis, split, stump)
+    results1 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis, split, stump)
     split4 = 4
     results2 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis, split4, stump)
     split9 = 9
     results3 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis, split9, stump)
+    emphasis2 = 'combo_split_extreme_classes'
+    split = 2
+    results4 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis2, split, stump)
+    split4 = 4
+    results5 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis2, split4, stump)
+    split9 = 9
+    results6 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis2, split9, stump)
 
 
 
