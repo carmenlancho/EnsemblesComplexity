@@ -416,6 +416,8 @@ def complexity_driven_bagging_combo(X,y,n_ensembles, name_data,path_to_save, emp
 
     # Complexity measures list to check
     CM_list = ['Hostility', 'kDN', 'DCP','TD_U', 'CLD', 'N1', 'N2','LSC','F1','Uniform']
+    # CM_list = ['Hostility', 'kDN', 'TD_U', 'N1', 'N2','LSC','F1','Uniform']
+
     # CM_selected = 'DCP'
 
     skf = StratifiedKFold(n_splits=5, random_state=1,shuffle=True)
@@ -646,7 +648,8 @@ def complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_sav
                                     'Boots_N2_class','Boots_LSC_class','Boots_F1_class'])
 
     # Complexity measures list to check
-    CM_list = ['Hostility', 'kDN', 'DCP','TD_U', 'CLD', 'N1', 'N2','LSC','F1','Uniform']
+    # CM_list = ['Hostility', 'kDN', 'TD_U', 'N1', 'N2','LSC','F1','Uniform']
+    CM_list = ['Hostility', 'kDN', 'DCP', 'TD_U', 'CLD', 'N1', 'N2', 'LSC', 'F1', 'Uniform']
     # CM_selected = 'Hostility'
 
     skf = StratifiedKFold(n_splits=5, random_state=1,shuffle=True)
@@ -931,7 +934,9 @@ for filename in os.listdir(path_csv):
 #  'Data9.csv',
 #  'Data11.csv',
 #  'Data4.csv', 'wdbc.csv', 'ionosphere.csv', 'pima.csv', 'haberman.csv']
-total_name_list = ['segment.csv','ilpd.csv', 'diabetes.csv','page-blocks.csv','winequality-red.csv', 'sonar.csv']
+total_name_list = [#'segment.csv','ilpd.csv', 'diabetes.csv',
+    'winequality-red.csv',
+    'page-blocks.csv']
 
 # total_name_list = ['ionosphere.csv','wdbc.csv', 'pima.csv', 'haberman.csv']
 
@@ -949,18 +954,18 @@ for data_file in total_name_list:
     X = preprocessing.scale(X)
     y = data[['y']].to_numpy()
     stump = 'no'
-    emphasis0 = 'combo_extreme'
+    emphasis0 = 'combo_classes_extreme'
     results0 = complexity_driven_bagging_combo(X, y, n_ensembles, name_data, path_to_save, emphasis0, stump)
-    emphasis00 = 'combo'
-    results00 = complexity_driven_bagging_combo(X, y, n_ensembles, name_data, path_to_save, emphasis00, stump)
-    emphasis = 'combo_split'
-    split = 2
-    results1 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis, split, stump)
-    split4 = 4
-    results2 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis, split4, stump)
-    split9 = 9
-    results3 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis, split9, stump)
-    emphasis2 = 'combo_split_extreme'
+    # emphasis00 = 'combo_classes'
+    # results00 = complexity_driven_bagging_combo(X, y, n_ensembles, name_data, path_to_save, emphasis00, stump)
+    # emphasis = 'combo_split_classes'
+    # split = 2
+    # results1 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis, split, stump)
+    # split4 = 4
+    # results2 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis, split4, stump)
+    # split9 = 9
+    # results3 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis, split9, stump)
+    emphasis2 = 'combo_split_extreme_classes'
     split = 2
     results4 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis2, split, stump)
     split4 = 4
