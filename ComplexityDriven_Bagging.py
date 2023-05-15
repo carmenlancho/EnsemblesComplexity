@@ -372,7 +372,7 @@ for filename in os.listdir(path_csv):
 
 # total_name_list = ['Data13.csv']
 # total_name_list = ['ionosphere.csv','wdbc.csv', 'pima.csv', 'haberman.csv']
-total_name_list = ['segment.csv','ilpd.csv', 'diabetes.csv','page-blocks.csv','winequality-red.csv', 'sonar.csv']
+# total_name_list = ['segment.csv','ilpd.csv', 'diabetes.csv','page-blocks.csv','winequality-red.csv', 'sonar.csv']
 
 
 path_to_save = root_path+'/Bagging_results'
@@ -921,16 +921,17 @@ for filename in os.listdir(path_csv):
 
 # total_name_list = ['Data13.csv']
 
-total_name_list = ['Data13.csv', 'Data8.csv', 'Data6.csv', 'Data12.csv',
- 'Data1.csv',
- 'Data2.csv',
- 'Data10.csv',
- 'Data5.csv',
- 'Data7.csv',
- 'Data3.csv',
- 'Data9.csv',
- 'Data11.csv',
- 'Data4.csv', 'wdbc.csv', 'ionosphere.csv', 'pima.csv', 'haberman.csv']
+# total_name_list = ['Data13.csv', 'Data8.csv', 'Data6.csv', 'Data12.csv',
+#  'Data1.csv',
+#  'Data2.csv',
+#  'Data10.csv',
+#  'Data5.csv',
+#  'Data7.csv',
+#  'Data3.csv',
+#  'Data9.csv',
+#  'Data11.csv',
+#  'Data4.csv', 'wdbc.csv', 'ionosphere.csv', 'pima.csv', 'haberman.csv']
+total_name_list = ['segment.csv','ilpd.csv', 'diabetes.csv','page-blocks.csv','winequality-red.csv', 'sonar.csv']
 
 # total_name_list = ['ionosphere.csv','wdbc.csv', 'pima.csv', 'haberman.csv']
 
@@ -948,16 +949,18 @@ for data_file in total_name_list:
     X = preprocessing.scale(X)
     y = data[['y']].to_numpy()
     stump = 'no'
-    emphasis0 = 'combo_classes_extreme'
+    emphasis0 = 'combo_extreme'
     results0 = complexity_driven_bagging_combo(X, y, n_ensembles, name_data, path_to_save, emphasis0, stump)
-    emphasis = 'combo_split_classes'
+    emphasis00 = 'combo'
+    results00 = complexity_driven_bagging_combo(X, y, n_ensembles, name_data, path_to_save, emphasis00, stump)
+    emphasis = 'combo_split'
     split = 2
     results1 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis, split, stump)
     split4 = 4
     results2 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis, split4, stump)
     split9 = 9
     results3 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis, split9, stump)
-    emphasis2 = 'combo_split_extreme_classes'
+    emphasis2 = 'combo_split_extreme'
     split = 2
     results4 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis2, split, stump)
     split4 = 4
