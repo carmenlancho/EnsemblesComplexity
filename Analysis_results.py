@@ -408,14 +408,14 @@ path_csv = os.chdir(root_path+'/Bagging_results')
 # Extraemos los nombres de todos los ficheros
 total_name_list = []
 for filename in os.listdir(path_csv):
-    if (filename.endswith('.csv') and 'Aggregated' in filename and 'yes' not in filename and 'classes' not in filename
+    if (filename.endswith('.csv') and 'Aggregated' in filename and 'yes' not in filename and 'classes' in filename
      and 'Data' not in filename):
         total_name_list.append(filename)
 
 
 
 # data_list = ['wdbc','pima','ionosphere']
-data_list = ['ilpd','diabetes','segment','sonar']
+data_list = ['wdbc','pima','ionosphere','ilpd','diabetes','segment','sonar']
 
 path_to_save = root_path+'/Analysis_results'
 
@@ -456,8 +456,8 @@ for data_i in data_list:
         # print(res_total)
     res_total = res_total.loc[:,~res_total.columns.duplicated()] # remove duplicate columns
     res_total = res_total.reindex(columns=['n_ensemble', 'weights',
-                                           'accuracy_mean_easy', 'accuracy_std_easy',
-                                           'accuracy_mean_hard', 'accuracy_std_hard',
+                                           # 'accuracy_mean_easy', 'accuracy_std_easy',
+                                           # 'accuracy_mean_hard', 'accuracy_std_hard',
                                                'accuracy_mean_combo', 'accuracy_std_combo',
                                            'accuracy_mean_combo_extreme', 'accuracy_std_combo_extreme',
                                                'accuracy_mean_split2', 'accuracy_std_split2',
@@ -469,7 +469,7 @@ for data_i in data_list:
 
     # To save the results
     os.chdir(path_to_save)
-    nombre_csv = 'ResAccuracy_Bagging_' + str(data_i) + 'HardEasy_Combo_Splits249_NoStump.csv'
+    nombre_csv = 'ResAccuracy_Bagging_' + str(data_i) + 'Classes_Combo_Splits249_NoStump.csv'
     res_total.to_csv(nombre_csv, encoding='utf_8_sig', index=True)
 
 
