@@ -424,7 +424,7 @@ for data_i in data_list:
     list_match = [s for s in total_name_list if data_i in s]
     res_total = pd.DataFrame()
     for file in list_match:
-        print(list_match)
+        print(file)
         os.chdir(root_path + '/Bagging_results')
         name = file[25:]
         data = pd.read_csv(file)
