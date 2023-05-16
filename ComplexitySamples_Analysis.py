@@ -60,9 +60,9 @@ for data_i in data_list:
             data.columns = [str(col) + '_hard' for col in data.columns]
         elif ('easy' in name):
             data.columns = [str(col) + '_easy' for col in data.columns]
-        elif ('combo' in name and 'extreme' not in name):
+        elif ('combo' in name and 'extreme' not in name and 'split' not in name):
             data.columns = [str(col) + '_combo' for col in data.columns]
-        elif ('combo' in name and 'extreme' in name):
+        elif ('combo' in name and 'extreme' in name and 'split' not in name):
             data.columns = [str(col) + '_combo_extreme' for col in data.columns]
         data.columns.values[0:2] = ['n_ensemble', 'weights']
         data_total = pd.concat([data_total, data], axis=1)
