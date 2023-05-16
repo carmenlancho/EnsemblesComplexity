@@ -30,7 +30,7 @@ for filename in os.listdir(path_csv):
 
 data_list = ['Data1_','Data2','Data3','Data4','Data5','Data6','Data7','Data8',
              'Data9','Data10','Data11','Data12','Data13',
-             'wdbc','pima','ionosphere']
+             'wdbc','pima','ionosphere','ilpd','diabetes','segment','sonar']
 path_to_save = root_path+'/Analysis_results'
 
 # data_i = 'Data1_'
