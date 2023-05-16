@@ -409,12 +409,14 @@ path_csv = os.chdir(root_path+'/Bagging_results')
 total_name_list = []
 for filename in os.listdir(path_csv):
     if (filename.endswith('.csv') and 'Aggregated' in filename and 'yes' not in filename and 'classes' not in filename
-     and 'extreme' not in filename and 'Data' not in filename and 'haberman' not in filename):
+     and 'Data' not in filename):
         total_name_list.append(filename)
 
 
 
-data_list = ['wdbc','pima','ionosphere']
+# data_list = ['wdbc','pima','ionosphere']
+data_list = ['ilpd','diabetes','segment','sonar']
+
 path_to_save = root_path+'/Analysis_results'
 
 for data_i in data_list:
@@ -430,18 +432,26 @@ for data_i in data_list:
         data_n = data[data['n_ensemble'].isin([15, 50, 100, 150, 199])]
         res = data_n[['n_ensemble', 'weights', 'accuracy_mean', 'accuracy_std']].sort_values(
             by=['weights', 'n_ensemble'])  # .T
-        if ('split4' in name):
+        if ('split4' in name and 'extreme' not in name):
             res.columns = ['n_ensemble', 'weights','accuracy_mean_split4','accuracy_std_split4']
-        elif ('split2' in name):
+        elif ('split2' in name and 'extreme' not in name):
             res.columns = ['n_ensemble', 'weights','accuracy_mean_split2','accuracy_std_split2']
-        elif ('split9' in name):
+        elif ('split9' in name and 'extreme' not in name):
             res.columns = ['n_ensemble', 'weights','accuracy_mean_split9','accuracy_std_split9']
+        elif ('split4' in name and 'extreme' in name):
+            res.columns = ['n_ensemble', 'weights','accuracy_mean_split4_extreme','accuracy_std_split4_extreme']
+        elif ('split2' in name and 'extreme' in name):
+            res.columns = ['n_ensemble', 'weights','accuracy_mean_split2_extreme','accuracy_std_split2_extreme']
+        elif ('split9' in name and 'extreme' in name):
+            res.columns = ['n_ensemble', 'weights','accuracy_mean_split9_extreme','accuracy_std_split9_extreme']
         elif ('hard' in name):
             res.columns = ['n_ensemble', 'weights', 'accuracy_mean_hard', 'accuracy_std_hard']
         elif ('easy' in name):
             res.columns = ['n_ensemble', 'weights', 'accuracy_mean_easy', 'accuracy_std_easy']
-        else:
+        elif ('combo' in name and 'extreme' not in name and 'split' not in name):
             res.columns = ['n_ensemble', 'weights', 'accuracy_mean_combo', 'accuracy_std_combo']
+        elif ('combo' in name and 'extreme' in name and 'split' not in name):
+            res.columns = ['n_ensemble', 'weights', 'accuracy_mean_combo_extreme', 'accuracy_std_combo_extreme']
         res_total = pd.concat([res_total,res],axis=1)
         # print(res_total)
     res_total = res_total.loc[:,~res_total.columns.duplicated()] # remove duplicate columns
@@ -449,9 +459,13 @@ for data_i in data_list:
                                            'accuracy_mean_easy', 'accuracy_std_easy',
                                            'accuracy_mean_hard', 'accuracy_std_hard',
                                                'accuracy_mean_combo', 'accuracy_std_combo',
+                                           'accuracy_mean_combo_extreme', 'accuracy_std_combo_extreme',
                                                'accuracy_mean_split2', 'accuracy_std_split2',
+                                           'accuracy_mean_split2_extreme', 'accuracy_std_split2_extreme',
                                                'accuracy_mean_split4', 'accuracy_std_split4',
-                                               'accuracy_mean_split9', 'accuracy_std_split9'])
+                                           'accuracy_mean_split4_extreme', 'accuracy_std_split4_extreme',
+                                               'accuracy_mean_split9', 'accuracy_std_split9',
+                                           'accuracy_mean_split9_extreme', 'accuracy_std_split9_extreme'])
 
     # To save the results
     os.chdir(path_to_save)
