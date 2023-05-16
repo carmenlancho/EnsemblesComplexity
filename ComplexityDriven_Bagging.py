@@ -692,6 +692,27 @@ def complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_sav
                         print(s)
                         new_w = weights_easy + s*w_frac
                         weights_v = pd.concat([weights_v,new_w],axis=1)
+                elif (emphasis == 'combo_split_classic'):
+                    # split = 1 --> easy-uniform-hard
+                    ranking_easy = CM_values.rank(method='max', ascending=False)  # more weight to easy
+                    ranking_hard = CM_values.rank(method='max', ascending=True)  # more weight to difficult
+                    weights_easy = ranking_easy / sum(ranking_easy)  # probability distribution
+                    weights_hard = ranking_hard / sum(ranking_hard)  # probability distribution
+                    weights_classic = np.repeat(1 / len(y_train), len(y_train), axis=0)
+                    w_frac1 = (weights_classic - weights_easy) / split
+                    w_frac2 = (weights_hard - weights_classic) / split
+                    weights_v = pd.DataFrame()
+                    for s in range(split + 1):
+                        # print(s)
+                        new_w1 = weights_easy + s * w_frac1
+                        new_w_df1 = pd.DataFrame(new_w1)
+                        weights_v = pd.concat([weights_v, new_w_df1], axis=1)
+                    for s in np.arange(1,split+1):
+                        # print(s)
+                        new_w2 = weights_classic + s * w_frac2
+                        new_w_df2 = pd.DataFrame(new_w2)
+                        weights_v = pd.concat([weights_v, new_w_df2], axis=1)
+
                 elif (emphasis == 'combo_split_classes'):
                     ## If we make per class specifically: ranking
                     y_train_aux = np.concatenate(y_train, axis=0)
@@ -746,6 +767,41 @@ def complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_sav
                         new_w = weights_easy + s * w_frac
                         new_w_df = pd.DataFrame(new_w)
                         weights_v = pd.concat([weights_v, new_w_df], axis=1)
+                elif (emphasis == 'combo_split_classic_extreme'):
+                    ranking_hard = CM_values.rank(method='max', ascending=True)  # more weight to difficult
+                    quantiles = np.quantile(ranking_hard, q=np.arange(0.5, 0.76, 0.25))
+                    q50 = quantiles[0]
+                    q75 = quantiles[1]
+                    ranking_hard[(ranking_hard >= q75)] = ranking_hard[(ranking_hard >= q75)] * 4
+                    ranking_hard[(ranking_hard >= q50) & (ranking_hard < q75)] = ranking_hard[(ranking_hard >= q50) & (
+                                ranking_hard < q75)] * 2
+
+                    ranking_easy = CM_values.rank(method='max', ascending=False)  # more weight to easy
+                    quantiles_easy = np.quantile(ranking_easy, q=np.arange(0.5, 0.76, 0.25))
+                    q50_easy = quantiles_easy[0]
+                    q75_easy = quantiles_easy[1]
+                    ranking_easy[(ranking_easy >= q75_easy)] = ranking_easy[(ranking_easy >= q75_easy)] * 4
+                    ranking_easy[(ranking_easy >= q50_easy) & (ranking_easy < q75_easy)] = ranking_easy[(
+                                                                                                                    ranking_easy >= q50_easy) & (
+                                                                                                                ranking_easy < q75_easy)] * 2
+
+                    weights_easy = ranking_easy / sum(ranking_easy)  # probability distribution
+                    weights_hard = ranking_hard / sum(ranking_hard)  # probability distribution
+                    weights_classic = np.repeat(1 / len(y_train), len(y_train), axis=0)
+                    w_frac1 = (weights_classic - weights_easy) / split
+                    w_frac2 = (weights_hard - weights_classic) / split
+                    weights_v = pd.DataFrame()
+                    for s in range(split + 1):
+                        # print(s)
+                        new_w1 = weights_easy + s * w_frac1
+                        new_w_df1 = pd.DataFrame(new_w1)
+                        weights_v = pd.concat([weights_v, new_w_df1], axis=1)
+                    for s in np.arange(1,split+1):
+                        print(s)
+                        new_w2 = weights_classic + s * w_frac2
+                        new_w_df2 = pd.DataFrame(new_w2)
+                        weights_v = pd.concat([weights_v, new_w_df2], axis=1)
+
                 elif (emphasis == 'combo_split_extreme_classes'):
                     ## If we make per class specifically: ranking
                     y_train_aux = np.concatenate(y_train, axis=0)
@@ -805,7 +861,8 @@ def complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_sav
                     np.random.seed(1)
                     X_bootstrap, y_bootstrap, bootstrap_indices = bootstrap_sample(X_train, y_train, weights)
                 else:
-                    if (j <= split):
+                    index_split = weights_v.shape[1] - 1
+                    if (j <= index_split):
                         weights = weights_v.iloc[:,j]
                     else:
                         j = 0
@@ -935,9 +992,10 @@ for filename in os.listdir(path_csv):
 #  'Data9.csv',
 #  'Data11.csv',
 #  'Data4.csv', 'wdbc.csv', 'ionosphere.csv', 'pima.csv', 'haberman.csv']
-total_name_list = [#'segment.csv','ilpd.csv', 'diabetes.csv',
-    'winequality-red.csv',
-    'page-blocks.csv']
+# total_name_list = [#'segment.csv','ilpd.csv', 'diabetes.csv',
+#     'winequality-red.csv',
+#     'page-blocks.csv']
+# total_name_list = ['ilpd.csv','diabetes.csv','segment.csv','sonar.csv']
 
 # total_name_list = ['ionosphere.csv','wdbc.csv', 'pima.csv', 'haberman.csv']
 
@@ -955,8 +1013,20 @@ for data_file in total_name_list:
     X = preprocessing.scale(X)
     y = data[['y']].to_numpy()
     stump = 'no'
-    emphasis0 = 'combo_classes_extreme'
-    results0 = complexity_driven_bagging_combo(X, y, n_ensembles, name_data, path_to_save, emphasis0, stump)
+    split = 1
+    emphasis0 = 'combo_split_classic' # split = 1 es easy-uniform-hard
+    results0 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis0, split, stump)
+    emphasis1 = 'combo_split_classic_extreme'
+    results1 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data, path_to_save, emphasis1, split,stump)
+    split2 = 2 # with combo_split_classic this is 5 splits
+    results2 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis0, split2, stump)
+    results3 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data, path_to_save, emphasis1, split2,stump)
+    split4 = 4 # with combo_split_classic this is 9 splits
+    results4 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis0, split4, stump)
+    results5 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data, path_to_save, emphasis1, split4,stump)
+
+    # emphasis0 = 'combo_classes_extreme'
+    # results0 = complexity_driven_bagging_combo(X, y, n_ensembles, name_data, path_to_save, emphasis0, stump)
     # emphasis00 = 'combo_classes'
     # results00 = complexity_driven_bagging_combo(X, y, n_ensembles, name_data, path_to_save, emphasis00, stump)
     # emphasis = 'combo_split_classes'
@@ -966,13 +1036,15 @@ for data_file in total_name_list:
     # results2 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis, split4, stump)
     # split9 = 9
     # results3 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis, split9, stump)
-    emphasis2 = 'combo_split_extreme_classes'
-    split = 2
-    results4 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis2, split, stump)
-    split4 = 4
-    results5 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis2, split4, stump)
-    split9 = 9
-    results6 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis2, split9, stump)
+    # emphasis2 = 'combo_split_extreme_classes'
+    # split = 2
+    # results4 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis2, split, stump)
+    # split4 = 4
+    # results5 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis2, split4, stump)
+    # split9 = 9
+    # results6 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis2, split9, stump)
+
+
 
 
 
