@@ -373,6 +373,7 @@ for filename in os.listdir(path_csv):
 # total_name_list = ['Data13.csv']
 # total_name_list = ['ionosphere.csv','wdbc.csv', 'pima.csv', 'haberman.csv']
 # total_name_list = ['segment.csv','ilpd.csv', 'diabetes.csv','page-blocks.csv','winequality-red.csv', 'sonar.csv']
+total_name_list = ['yeast.csv']
 
 
 path_to_save = root_path+'/Bagging_results'
