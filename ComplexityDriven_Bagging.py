@@ -997,7 +997,7 @@ for filename in os.listdir(path_csv):
 #     'page-blocks.csv']
 # total_name_list = ['ilpd.csv','diabetes.csv','segment.csv','sonar.csv']
 
-# total_name_list = ['ionosphere.csv','wdbc.csv', 'pima.csv', 'haberman.csv']
+# total_name_list = ['ionosphere.csv','wdbc.csv', 'pima.csv']
 
 path_to_save = root_path+'/Bagging_results'
 n_ensembles = 200 # maximum number of ensembles to consider (later we plot and stop when we want)
