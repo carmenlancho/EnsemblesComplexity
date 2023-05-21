@@ -5,6 +5,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import os
+import seaborn as sns
 from sklearn.model_selection import StratifiedKFold
 from All_measures import all_measures
 import random # for sampling with weights
@@ -90,6 +91,219 @@ def plot_acc_ensemble_and_average(data,data2,name):
     plt.show()
 
     return
+
+#######################################################################
+#################    ANALYSIS PER COMPLEXITY MEASURE   #################
+#######################################################################
+
+
+path_csv = os.chdir(root_path+'/Bagging_results')
+# Extraemos los nombres de todos los ficheros
+total_name_list = []
+for filename in os.listdir(path_csv):
+    if (filename.endswith('.csv') and 'Aggregated' in filename and 'yes' not in filename and 'classes' not in filename
+    and 'averaged' not in filename):
+        total_name_list.append(filename)
+
+
+# data_list = ['Data1_','Data2_','Data3_','Data4_','Data5_','Data6_','Data7_','Data8_',
+#              'Data9_','Data10_','Data11_','Data12_','Data13_']
+
+data_list = ['Data1_','Data2_','Data3_','Data4_','Data5_','Data6_','Data7_','Data8_',
+              'Data9_','Data10_','Data11_','Data12_','Data13_',
+                          'pima','arrhythmia_cfs','vertebral_column','diabetic_retinopathy','segment',
+             'breast-w','ilpd','diabetes',
+             'ionosphere','sonar','banknote_authentication','wdbc']
+
+path_to_save = root_path+'/Analysis_results'
+res_all = pd.DataFrame()
+for data_i in data_list:
+    print(data_i)
+    list_match = [s for s in total_name_list if data_i in s]
+    res_total = pd.DataFrame()
+    for file in list_match:
+        print(list_match)
+        os.chdir(root_path + '/Bagging_results')
+        name = file[25:]
+        data = pd.read_csv(file)
+        # data_name = file[file.find('AggregatedResults_Bagging_') + len('AggregatedResults_Bagging_'):file.rfind(
+        #     '_MoreWeight')]
+
+        data_n = data[data['n_ensemble'].isin([15, 50, 100, 150, 199])]
+        res = data_n[['n_ensemble', 'weights', 'accuracy_mean', 'accuracy_std']].sort_values(
+            by=['weights', 'n_ensemble'])  # .T
+        if ('split4' in name and 'extreme' not in name and 'classic' not in name):
+            res.columns = ['n_ensemble', 'weights', 'accuracy_mean_split4', 'accuracy_std_split4']
+        elif ('split2' in name and 'extreme' not in name and 'classic' not in name):
+            res.columns = ['n_ensemble', 'weights', 'accuracy_mean_split2', 'accuracy_std_split2']
+        elif ('split9' in name and 'extreme' not in name and 'classic' not in name):
+            res.columns = ['n_ensemble', 'weights', 'accuracy_mean_split9', 'accuracy_std_split9']
+        elif ('split4' in name and 'extreme' in name and 'classic' not in name):
+            res.columns = ['n_ensemble', 'weights', 'accuracy_mean_split4_extreme', 'accuracy_std_split4_extreme']
+        elif ('split2' in name and 'extreme' in name and 'classic' not in name):
+            res.columns = ['n_ensemble', 'weights', 'accuracy_mean_split2_extreme', 'accuracy_std_split2_extreme']
+        elif ('split9' in name and 'extreme' in name and 'classic' not in name):
+            res.columns = ['n_ensemble', 'weights', 'accuracy_mean_split9_extreme', 'accuracy_std_split9_extreme']
+        elif ('hard' in name):
+            res.columns = ['n_ensemble', 'weights', 'accuracy_mean_hard', 'accuracy_std_hard']
+        elif ('easy' in name):
+            res.columns = ['n_ensemble', 'weights', 'accuracy_mean_easy', 'accuracy_std_easy']
+        elif ('combo' in name and 'extreme' not in name and 'split' not in name):
+            res.columns = ['n_ensemble', 'weights', 'accuracy_mean_combo', 'accuracy_std_combo']
+        elif ('combo' in name and 'extreme' in name and 'split' not in name):
+            res.columns = ['n_ensemble', 'weights', 'accuracy_mean_combo_extreme', 'accuracy_std_combo_extreme']
+        elif ('split4' in name and 'extreme' not in name and 'classic' in name):
+            res.columns = ['n_ensemble', 'weights', 'accuracy_mean_split4_classic', 'accuracy_std_split4_classic']
+        elif ('split2' in name and 'extreme' not in name and 'classic' in name):
+            res.columns = ['n_ensemble', 'weights', 'accuracy_mean_split2_classic', 'accuracy_std_split2_classic']
+        elif ('split1' in name and 'extreme' not in name and 'classic' in name):
+            res.columns = ['n_ensemble', 'weights', 'accuracy_mean_split1_classic', 'accuracy_std_split1_classic']
+        elif ('split4' in name and 'extreme' in name and 'classic' in name):
+            res.columns = ['n_ensemble', 'weights', 'accuracy_mean_split4_classic_extreme', 'accuracy_std_split4_classic_extreme']
+        elif ('split2' in name and 'extreme' in name and 'classic' in name):
+            res.columns = ['n_ensemble', 'weights', 'accuracy_mean_split2_classic_extreme', 'accuracy_std_split2_classic_extreme']
+        elif ('split1' in name and 'extreme' in name and 'classic' in name):
+            res.columns = ['n_ensemble', 'weights', 'accuracy_mean_split1_classic_extreme', 'accuracy_std_split1_classic_extreme']
+        # res['dataset'] = data_i
+
+        res_total = pd.concat([res_total, res], axis=1)
+        # print(res_total)
+    res_total['dataset'] = data_i
+    res_total = res_total.loc[:, ~res_total.columns.duplicated()]  # remove duplicate columns
+    res_total = res_total.reindex(columns=['n_ensemble', 'weights','dataset',
+                                           'accuracy_mean_easy', 'accuracy_std_easy',
+                                           'accuracy_mean_hard', 'accuracy_std_hard',
+                                           'accuracy_mean_combo', 'accuracy_std_combo',
+                                           'accuracy_mean_combo_extreme', 'accuracy_std_combo_extreme',
+                                           'accuracy_mean_split2', 'accuracy_std_split2',
+                                           'accuracy_mean_split2_extreme', 'accuracy_std_split2_extreme',
+                                           'accuracy_mean_split1_classic', 'accuracy_std_split1_classic',
+                                           'accuracy_mean_split1_classic_extreme', 'accuracy_std_split1_classic_extreme',
+                                           'accuracy_mean_split4', 'accuracy_std_split4',
+                                           'accuracy_mean_split4_extreme', 'accuracy_std_split4_extreme',
+                                           'accuracy_mean_split2_classic', 'accuracy_std_split2_classic',
+                                           'accuracy_mean_split2_classic_extreme', 'accuracy_std_split2_classic_extreme',
+                                           'accuracy_mean_split9', 'accuracy_std_split9',
+                                           'accuracy_mean_split9_extreme', 'accuracy_std_split9_extreme',
+                                        'accuracy_mean_split4_classic','accuracy_std_split4_classic',
+                                        'accuracy_mean_split4_classic_extreme','accuracy_std_split4_classic_extreme'])
+
+    res_all = pd.concat([res_all, res_total])
+
+    # To save the results
+    # os.chdir(path_to_save)
+    # nombre_csv = 'ResAccuracy_Bagging_' + str(data_i) + 'Classic_RealData_NoStump.csv'
+    # res_total.to_csv(nombre_csv, encoding='utf_8_sig', index=True)
+
+res_all.reset_index(inplace=True)
+res_all.drop(['index'],inplace=True,axis=1)
+
+list_measures = ['Hostility', 'kDN', 'DCP', 'TD_U', 'CLD', 'N1', 'N2', 'LSC', 'F1']
+# Classic Bagging info
+classic_values = res_all[res_all.weights == 'Uniform']
+classic_values_mean = classic_values.groupby('dataset', as_index=False).mean()
+classic_values_mean['n_ensemble'] = 'average'
+classic_values_mean['weights'] = 'Uniform'
+classic_values = pd.concat([classic_values,classic_values_mean])
+classic_values.sort_values(by = ['dataset','n_ensemble'],inplace=True)
+
+for CM in list_measures:
+    print(CM)
+    CM_results = res_all[res_all.weights == CM]
+    total_average_CM = CM_results.groupby('dataset', as_index=False).mean()
+    total_average_CM['n_ensemble'] = 'average'
+    total_average_CM['weights'] = CM
+    CM_results = pd.concat([CM_results, total_average_CM])
+    CM_results.sort_values(by=['dataset', 'n_ensemble'], inplace=True)
+
+    CM_results_complete = pd.concat([CM_results, classic_values])
+    CM_results_complete.sort_values(by=['dataset', 'weights', 'n_ensemble'], inplace=True)
+
+    ## Automatic comparison
+    # CM_results[['accuracy_mean_easy', 'accuracy_mean_hard']]
+    # classic_values[['n_ensemble', 'dataset', 'accuracy_mean_easy']]
+    bag_value = np.array(classic_values[['accuracy_mean_easy']]) # tomamos este como ejemplo
+    filter_col = [col for col in CM_results if col.startswith('accuracy_mean')]
+    diff_with_classic = CM_results[filter_col] - bag_value
+    diff_with_classic[['n_ensemble','weights','dataset']] = CM_results[['n_ensemble','weights','dataset']]
+    diff_with_classic = diff_with_classic.reindex(columns=[ 'n_ensemble', 'weights',
+    'dataset',
+        'accuracy_mean_easy', 'accuracy_mean_hard', 'accuracy_mean_combo',
+    'accuracy_mean_combo_extreme', 'accuracy_mean_split2',
+    'accuracy_mean_split2_extreme', 'accuracy_mean_split1_classic',
+    'accuracy_mean_split1_classic_extreme', 'accuracy_mean_split4',
+    'accuracy_mean_split4_extreme', 'accuracy_mean_split2_classic',
+    'accuracy_mean_split2_classic_extreme', 'accuracy_mean_split9',
+    'accuracy_mean_split9_extreme', 'accuracy_mean_split4_classic',
+    'accuracy_mean_split4_classic_extreme'])
+
+
+
+    # To save the results
+    os.chdir(path_to_save)
+    nombre_csv = 'ResAccuracyPerMeasure_Bagging_' + str(CM) + '.csv'
+    CM_results_complete.to_csv(nombre_csv, encoding='utf_8_sig', index=True)
+    nombre_csv2 = 'ResDifAccuracyPerMeasure_Bagging_' + str(CM) + '.csv'
+    diff_with_classic.to_csv(nombre_csv2, encoding='utf_8_sig', index=True)
+
+    ## Win tie loss
+    wtl_df = diff_with_classic.copy()
+    wtl_df[filter_col] = np.where(wtl_df[filter_col] >= 0, 1, 0)
+    nombre_csv3 = 'ResWTLAccuracyPerMeasure_Bagging_' + str(CM) + '.csv'
+    wtl_df.to_csv(nombre_csv3, encoding='utf_8_sig', index=True)
+
+
+
+
+
+#
+# df_long = pd.melt(diff_with_classic, id_vars=['n_ensemble', 'weights','dataset'],
+#                       value_vars=['accuracy_mean_easy','accuracy_mean_hard',
+#                                   'accuracy_mean_combo','accuracy_mean_combo_extreme',
+#                                   'accuracy_mean_split2', 'accuracy_mean_split2_extreme',
+#                                     'accuracy_mean_split1_classic','accuracy_mean_split1_classic_extreme',
+#                                     'accuracy_mean_split4',
+#                                      'accuracy_mean_split4_extreme','accuracy_mean_split2_classic',
+#                                      'accuracy_mean_split2_classic_extreme','accuracy_mean_split9',
+#                                      'accuracy_mean_split9_extreme','accuracy_mean_split4_classic',
+#                                      'accuracy_mean_split4_classic_extreme'],
+#                       value_name='Accuracy')
+# # we do not want to plot the average
+# df_long.drop(df_long[df_long.n_ensemble =='average'].index, inplace=True)
+#
+# ax = sns.boxplot(y=df_long["Accuracy"], x=df_long["variable"],
+#                 color='white',
+#             order=['accuracy_mean_easy','accuracy_mean_hard',
+#                                   'accuracy_mean_combo','accuracy_mean_combo_extreme',
+#                                   'accuracy_mean_split2', 'accuracy_mean_split2_extreme',
+#                                     'accuracy_mean_split1_classic','accuracy_mean_split1_classic_extreme',
+#                                     'accuracy_mean_split4',
+#                                      'accuracy_mean_split4_extreme','accuracy_mean_split2_classic',
+#                                      'accuracy_mean_split2_classic_extreme','accuracy_mean_split9',
+#                                      'accuracy_mean_split9_extreme','accuracy_mean_split4_classic',
+#                                      'accuracy_mean_split4_classic_extreme']
+#             )
+# # sns.stripplot(data=df_long, x="variable", y="Accuracy", dodge=True,
+# #               order=['accuracy_mean_easy', 'accuracy_mean_hard',
+# #                      'accuracy_mean_combo', 'accuracy_mean_combo_extreme',
+# #                      'accuracy_mean_split2', 'accuracy_mean_split2_extreme',
+# #                      'accuracy_mean_split1_classic', 'accuracy_mean_split1_classic_extreme',
+# #                      'accuracy_mean_split4',
+# #                      'accuracy_mean_split4_extreme', 'accuracy_mean_split2_classic',
+# #                      'accuracy_mean_split2_classic_extreme', 'accuracy_mean_split9',
+# #                      'accuracy_mean_split9_extreme', 'accuracy_mean_split4_classic',
+# #                      'accuracy_mean_split4_classic_extreme']
+# #               )
+# ax.set_xticklabels(['Easy', 'Hard', 'Combo', 'Combo_X',
+#                          'Split2', 'Split2_X','Cl_Split1_3', 'Cl_Split1_3_X',
+#                       'Split4','Split4_X',
+#                           'Cl_Split2_5', 'Cl_Split2_5_X',
+#                         'Split9', 'Split9_X',
+#                          'Cl_Split4_9', 'Cl_Split4_9_X'],
+#                         rotation=60)
+# plt.show()
+
+
 
 #######################################################################
 #################    More weight in hard instances WITH RANKING   #################

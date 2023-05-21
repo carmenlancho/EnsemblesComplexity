@@ -373,9 +373,9 @@ for filename in os.listdir(path_csv):
 # total_name_list = ['Data13.csv']
 # total_name_list = ['ionosphere.csv','wdbc.csv', 'pima.csv', 'haberman.csv']
 # total_name_list = ['segment.csv','ilpd.csv', 'diabetes.csv','page-blocks.csv','winequality-red.csv', 'sonar.csv']
-# total_name_list = ['sonar.csv']
-total_name_list = ['arrhythmia_cfs.csv', 'vertebral_column.csv',
-                   'diabetic_retinopathy.csv','banknote_authentication.csv']
+total_name_list = ['breast-w.csv']
+# total_name_list = ['arrhythmia_cfs.csv', 'vertebral_column.csv',
+#                    'diabetic_retinopathy.csv','banknote_authentication.csv']
 
 path_to_save = root_path+'/Bagging_results'
 n_ensembles = 200 # maximum number of ensembles to consider (later we plot and stop when we want)
@@ -998,9 +998,10 @@ for filename in os.listdir(path_csv):
 #     'page-blocks.csv']
 # total_name_list = ['ilpd.csv','diabetes.csv','segment.csv','sonar.csv']
 
-total_name_list = [#'breast-w.csv',
-                   'arrhythmia_cfs.csv', 'vertebral_column.csv',
-                   'diabetic_retinopathy.csv','banknote_authentication.csv']
+# total_name_list = [#'breast-w.csv',
+#                    'arrhythmia_cfs.csv', 'vertebral_column.csv',
+#                    'diabetic_retinopathy.csv','banknote_authentication.csv']
+total_name_list = ['breast-w.csv']
 
 path_to_save = root_path+'/Bagging_results'
 n_ensembles = 200 # maximum number of ensembles to consider (later we plot and stop when we want)
