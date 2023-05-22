@@ -304,6 +304,42 @@ for CM in list_measures:
 # plt.show()
 
 
+#########################################################################################
+################## PLOT ACCURACY FOR SPLIT1 CLASSIC AND SPLIT2 CLASSIC    ###############
+#########################################################################################
+path_csv = os.chdir(root_path+'/Bagging_results')
+# Extraemos los nombres de todos los ficheros
+total_name_list = []
+for filename in os.listdir(path_csv):
+    if (filename.endswith('.csv') and 'classic' in filename
+            and 'Aggregated' in filename and 'extreme' in filename and 'averaged' not in filename
+            and 'split2' in filename):
+        total_name_list.append(filename)
+total_name_list.sort()
+
+total_name_list_uniform = []
+for filename in os.listdir(path_csv):
+    if (filename.endswith('.csv') and 'easy' in filename and 'averaged' not in filename
+            and 'Aggregated' in filename and 'classes' not in filename):
+        total_name_list_uniform.append(filename)
+total_name_list_uniform.sort()
+
+
+for file in total_name_list:
+    os.chdir(root_path + '/Bagging_results')
+    print(file)
+    # name = file[25:32]
+    # name = 'Data1_'
+    name = (file.split('AggregatedResults_Bagging_'))[1].split('MoreWeight')[0]
+    matching = [s for s in total_name_list_uniform if name in s][0]
+    data_unif = pd.read_csv(matching)
+    data = pd.read_csv(file)
+    data[data.weights =='Uniform'] = data_unif[data_unif.weights =='Uniform']
+    data_n = data[data['n_ensemble'].isin([1,10,20,30,40,50,60,70,80,90,100,
+                                           110,120,130,140,150,160,
+                                           170,180,190,199])]
+    plot_acc_ensemble(data_n, name)
+
 
 #######################################################################
 #################    More weight in hard instances WITH RANKING   #################
