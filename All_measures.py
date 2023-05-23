@@ -6,6 +6,7 @@ import pandas as pd
 import numpy as np
 from Hostility_measure_algorithm import hostility_measure
 from measures import ClassificationMeasures
+from sklearn import preprocessing
 
 
 
@@ -72,23 +73,36 @@ def all_measures(data,save_csv,path_to_save, name_data):
     return df_measures, df_classes_dataset
 
 
-#
+
 # path_csv = os.chdir(root_path+'/datasets')
 # # Extraemos los nombres de todos los ficheros
 # total_name_list = []
 # for filename in os.listdir(path_csv):
 #     if filename.endswith('.csv'):
 #         total_name_list.append(filename)
+# total_name_list.sort()
 #
 # # total_name_list = ['Data13.csv']
+#
+# complex_info = pd.DataFrame()
 #
 # for data_file in total_name_list:
 #     os.chdir(root_path + '/datasets')
 #     print(data_file)
 #     file = data_file
 #     name_data = data_file[0:-4]
-#     data = pd.read_csv(file)
+#     data_aux = pd.read_csv(file)
+#     X = data_aux.iloc[:,:-1].to_numpy() # all variables except y
+#     X = preprocessing.scale(X)
+#     y = data_aux[['y']].to_numpy()
+#     data = pd.DataFrame(X)
+#     data['y']  = y
+#     data.columns = data_aux.columns
 #     # data = pd.read_csv('Dataset9_6000_estandarizado.csv')
 #     path_to_save = root_path+'/Results_Complexity_InstanceLevel'
-#     save_csv = True
-#     df_measures, df_class_data_host = all_measures(data,save_csv,path_to_save, name_data)
+#     save_csv = False
+#     _, df_class_data_host = all_measures(data,save_csv,path_to_save, name_data)
+#     # df_class_data_host['level'] = df_class_data_host.index
+#     df_class_data_host.reset_index(inplace=True)
+#     df_class_data_host['dataset'] = name_data
+#     complex_info = pd.concat([complex_info,df_class_data_host])
