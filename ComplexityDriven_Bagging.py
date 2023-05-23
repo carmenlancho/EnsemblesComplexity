@@ -149,7 +149,7 @@ def complexity_driven_bagging(X,y,n_ensembles, name_data,path_to_save, emphasis)
                 #     CM_values_aux[(CM_values<0.65) & (CM_values>min_value)] = 1 # borderline points
                 #     CM_values_aux[(CM_values <= min_value)] = 2 # easy points
                 #     CM_values_aux[(CM_values >= 0.65)] = 3  # difficult points
-                #     # aa = pd.DataFrame(CM_values_aux).rank(method='max', ascending=False)
+                #     # aa = pd.DataFrame(CM_values_aux).rank(method='average', ascending=False)
                 #     # np.unique(aa)/(128+2015+2400)
                 #     # We select the thresholds manually
                 #     CM_values_aux[CM_values_aux == 1] = 0.5 / sum(CM_values_aux == 1)
@@ -769,7 +769,7 @@ def complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_sav
                         new_w_df = pd.DataFrame(new_w)
                         weights_v = pd.concat([weights_v, new_w_df], axis=1)
                 elif (emphasis == 'combo_split_classic_extreme'):
-                    ranking_hard = CM_values.rank(method='max', ascending=True)  # more weight to difficult
+                    ranking_hard = CM_values.rank(method='average', ascending=True)  # more weight to difficult
                     quantiles = np.quantile(ranking_hard, q=np.arange(0.5, 0.76, 0.25))
                     q50 = quantiles[0]
                     q75 = quantiles[1]
@@ -1072,7 +1072,7 @@ def complexity_driven_bagging_averaged(X,y,n_ensembles, name_data,path_to_save, 
     CM_list = ['Averaged_measures', 'Uniform']
     # CM_selected = 'F1'
 
-    skf = StratifiedKFold(n_splits=5, random_state=1,shuffle=True)
+    skf = StratifiedKFold(n_splits=10, random_state=1,shuffle=True)
     fold = 0
     for train_index, test_index in skf.split(X, y):
         fold = fold + 1
@@ -1099,17 +1099,17 @@ def complexity_driven_bagging_averaged(X,y,n_ensembles, name_data,path_to_save, 
             else: # Sampling using averaged ranking of Complexity measures
                 if (emphasis == 'averaged_hard'):
                     # more weight to difficult
-                    ranking = df_measures_sel[['Hostility', 'kDN', 'DCP','TD_U', 'CLD', 'N1', 'N2','LSC','F1']].rank(method='max', ascending=True).mean(axis=1)
+                    ranking = df_measures_sel[['Hostility', 'kDN', 'DCP','TD_U', 'CLD', 'N1', 'N2','LSC','F1']].rank(method='average', ascending=True).mean(axis=1)
                 elif (emphasis == 'averaged_easy'):
                     # more weight to easy
-                    ranking = df_measures_sel[['Hostility', 'kDN', 'DCP','TD_U', 'CLD', 'N1', 'N2','LSC','F1']].rank(method='max', ascending=False).mean(axis=1)
+                    ranking = df_measures_sel[['Hostility', 'kDN', 'DCP','TD_U', 'CLD', 'N1', 'N2','LSC','F1']].rank(method='average', ascending=False).mean(axis=1)
                 # elif (emphasis == 'combo'):
                 #     # more weight to difficult
                 #     ranking1 = df_measures_sel[['Hostility', 'kDN', 'DCP', 'TD_U', 'CLD', 'N1', 'N2', 'LSC', 'F1']].rank(
-                #         method='max', ascending=True).mean(axis=1)
+                #         method='average', ascending=True).mean(axis=1)
                 #     # more weight to easy
                 #     ranking2 = df_measures_sel[['Hostility', 'kDN', 'DCP', 'TD_U', 'CLD', 'N1', 'N2', 'LSC', 'F1']].rank(
-                #         method='max', ascending=False).mean(axis=1)
+                #         method='average', ascending=False).mean(axis=1)
                 elif (emphasis == 'averaged_classes_hard'):
                     ## If we make per class specifically: ranking
                     df_sel_class = df_measures_sel[['Hostility', 'kDN', 'DCP', 'TD_U', 'CLD', 'N1', 'N2', 'LSC', 'F1']]
@@ -1121,7 +1121,7 @@ def complexity_driven_bagging_averaged(X,y,n_ensembles, name_data,path_to_save, 
                         # print(c)
                         n_class_c = np.sum(y_train_aux == c)
                         # more weight to difficult
-                        ranking_aux[y_train_aux == c] = df_sel_class[y_train_aux == c].rank(method='max', ascending=True).mean(axis=1)
+                        ranking_aux[y_train_aux == c] = df_sel_class[y_train_aux == c].rank(method='average', ascending=True).mean(axis=1)
                         ranking[y_train_aux == c] = ranking_aux[y_train_aux == c] / sum(
                             ranking_aux[y_train_aux == c])  # probability distribution
                 elif (emphasis == 'averaged_classes_easy'):
@@ -1135,7 +1135,7 @@ def complexity_driven_bagging_averaged(X,y,n_ensembles, name_data,path_to_save, 
                         # print(c)
                         n_class_c = np.sum(y_train_aux == c)
                         # more weight to easy
-                        ranking_aux[y_train_aux == c] = df_sel_class[y_train_aux == c].rank(method='max', ascending=False).mean(axis=1)
+                        ranking_aux[y_train_aux == c] = df_sel_class[y_train_aux == c].rank(method='average', ascending=False).mean(axis=1)
                         ranking[y_train_aux == c] = ranking_aux[y_train_aux == c] / sum(
                             ranking_aux[y_train_aux == c])  # probability distribution
 
@@ -1298,7 +1298,7 @@ def complexity_driven_bagging_averaged_combo(X,y,n_ensembles, name_data,path_to_
     CM_list = ['Averaged_measures', 'Uniform']
     # CM_selected = 'F1'
 
-    skf = StratifiedKFold(n_splits=5, random_state=1,shuffle=True)
+    skf = StratifiedKFold(n_splits=10, random_state=1,shuffle=True)
     fold = 0
     for train_index, test_index in skf.split(X, y):
         fold = fold + 1
@@ -1325,9 +1325,9 @@ def complexity_driven_bagging_averaged_combo(X,y,n_ensembles, name_data,path_to_
             else: # Sampling using averaged ranking of Complexity measures
                 if (emphasis == 'averaged_combo'):
                     # more weight to difficult
-                    ranking1 = df_measures_sel[['Hostility', 'kDN', 'DCP','TD_U', 'CLD', 'N1', 'N2','LSC','F1']].rank(method='max', ascending=True).mean(axis=1)
+                    ranking1 = df_measures_sel[['Hostility', 'kDN', 'DCP','TD_U', 'CLD', 'N1', 'N2','LSC','F1']].rank(method='average', ascending=True).mean(axis=1)
                     # more weight to easy
-                    ranking2 = df_measures_sel[['Hostility', 'kDN', 'DCP','TD_U', 'CLD', 'N1', 'N2','LSC','F1']].rank(method='max', ascending=False).mean(axis=1)
+                    ranking2 = df_measures_sel[['Hostility', 'kDN', 'DCP','TD_U', 'CLD', 'N1', 'N2','LSC','F1']].rank(method='average', ascending=False).mean(axis=1)
                 elif (emphasis == 'averaged_combo_classes'):
                     ## If we make per class specifically: ranking
                     df_sel_class = df_measures_sel[['Hostility', 'kDN', 'DCP', 'TD_U', 'CLD', 'N1', 'N2', 'LSC', 'F1']]
@@ -1341,10 +1341,10 @@ def complexity_driven_bagging_averaged_combo(X,y,n_ensembles, name_data,path_to_
                         # print(c)
                         n_class_c = np.sum(y_train_aux == c)
                         # more weight to difficult
-                        ranking_aux[y_train_aux == c] = df_sel_class[y_train_aux == c].rank(method='max', ascending=True).mean(axis=1)
+                        ranking_aux[y_train_aux == c] = df_sel_class[y_train_aux == c].rank(method='average', ascending=True).mean(axis=1)
                         ranking1[y_train_aux == c] = ranking_aux[y_train_aux == c] / sum(ranking_aux[y_train_aux == c])  # probability distribution
                         # more weight to easy
-                        ranking_aux2[y_train_aux == c] = df_sel_class[y_train_aux == c].rank(method='max', ascending=False).mean(axis=1)
+                        ranking_aux2[y_train_aux == c] = df_sel_class[y_train_aux == c].rank(method='average', ascending=False).mean(axis=1)
                         ranking2[y_train_aux == c] = ranking_aux2[y_train_aux == c] / sum(ranking_aux2[y_train_aux == c])  # probability distribution
 
                 weights = ranking1/sum(ranking1) # probability distribution
