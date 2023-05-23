@@ -33,9 +33,9 @@ def aggregation_results(results):
     weights_list = np.unique(results['weights']).tolist()
 
     for n_i in n_ensemble_list:
-        print(n_i)
+        # print(n_i)
         for w in weights_list:
-            print(w)
+            # print(w)
             condition = (results.n_ensemble == n_i) & (results.weights == w)
             condition2 = (df_aggre.n_ensemble == n_i) & (df_aggre.weights == w)
             data_pack = results.loc[condition]
