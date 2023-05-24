@@ -370,12 +370,18 @@ for filename in os.listdir(path_csv):
         total_name_list.append(filename)
 
 
-# total_name_list = ['Data13.csv']
-# total_name_list = ['ionosphere.csv','wdbc.csv', 'pima.csv', 'haberman.csv']
-# total_name_list = ['segment.csv','ilpd.csv', 'diabetes.csv','page-blocks.csv','winequality-red.csv', 'sonar.csv']
-total_name_list = ['breast-w.csv']
-# total_name_list = ['arrhythmia_cfs.csv', 'vertebral_column.csv',
-#                    'diabetic_retinopathy.csv','banknote_authentication.csv']
+total_name_list = [#'teaching_assistant_MH.csv','contraceptive_NL.csv','hill_valley_without_noise_traintest.csv',
+ # 'breast-w.csv','contraceptive_LS.csv','ilpd.csv','phoneme.csv',
+ # 'mammographic.csv','contraceptive_NS.csv','bupa.csv','Yeast_CYTvsNUC.csv',
+ # 'titanic.csv','arrhythmia_cfs.csv','vertebral_column.csv','sonar.csv',
+ # 'spect_heart.csv','credit-g.csv', 'segment.csv',
+                   #'appendicitis.csv',
+                   'diabetes.csv',
+ 'diabetic_retinopathy.csv','WineQualityRed_5vs6.csv','teaching_assistant_LM.csv',
+ 'ionosphere.csv','bands.csv','wdbc.csv','teaching_assistant_LH.csv',
+ 'pima.csv','spambase.csv','banknote_authentication.csv', 'haberman.csv']
+# 'appendicitis.csv' me ha dado problemas
+
 
 path_to_save = root_path+'/Bagging_results'
 n_ensembles = 200 # maximum number of ensembles to consider (later we plot and stop when we want)
@@ -445,7 +451,7 @@ def complexity_driven_bagging_combo(X,y,n_ensembles, name_data,path_to_save, emp
 
 
         for CM_selected in CM_list:
-            print(CM_selected)
+            # print(CM_selected)
 
             if (CM_selected == 'Uniform'): # classic Bagging with uniform probability sampling
                 weights = np.repeat(1/len(y_train), len(y_train), axis=0)
@@ -675,7 +681,7 @@ def complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_sav
         df_measures_sel = df_measures[['Hostility', 'kDN', 'DCP','TD_U', 'CLD', 'N1', 'N2','LSC','F1','y']]
 
         for CM_selected in CM_list:
-            print(CM_selected)
+            # print(CM_selected)
 
             if (CM_selected == 'Uniform'): # classic Bagging with uniform probability sampling
                 weights = np.repeat(1/len(y_train), len(y_train), axis=0)
@@ -983,25 +989,17 @@ for filename in os.listdir(path_csv):
 
 # total_name_list = ['Data13.csv']
 
-# total_name_list = ['Data13.csv', 'Data8.csv', 'Data6.csv', 'Data12.csv',
-#  'Data1.csv',
-#  'Data2.csv',
-#  'Data10.csv',
-#  'Data5.csv',
-#  'Data7.csv',
-#  'Data3.csv',
-#  'Data9.csv',
-#  'Data11.csv',
-#  'Data4.csv', 'wdbc.csv', 'ionosphere.csv', 'pima.csv', 'haberman.csv']
-# total_name_list = [#'segment.csv','ilpd.csv', 'diabetes.csv',
-#     'winequality-red.csv',
-#     'page-blocks.csv']
-# total_name_list = ['ilpd.csv','diabetes.csv','segment.csv','sonar.csv']
-
-# total_name_list = [#'breast-w.csv',
-#                    'arrhythmia_cfs.csv', 'vertebral_column.csv',
-#                    'diabetic_retinopathy.csv','banknote_authentication.csv']
-total_name_list = ['breast-w.csv']
+total_name_list = ['teaching_assistant_MH.csv','contraceptive_NL.csv','hill_valley_without_noise_traintest.csv',
+ 'breast-w.csv','contraceptive_LS.csv','ilpd.csv','phoneme.csv',
+ 'mammographic.csv','contraceptive_NS.csv','bupa.csv','Yeast_CYTvsNUC.csv',
+ 'titanic.csv','arrhythmia_cfs.csv','vertebral_column.csv','sonar.csv',
+ 'spect_heart.csv','credit-g.csv', 'segment.csv',
+                   #'appendicitis.csv',
+                   'diabetes.csv',
+ 'diabetic_retinopathy.csv','WineQualityRed_5vs6.csv','teaching_assistant_LM.csv',
+ 'ionosphere.csv','bands.csv','wdbc.csv','teaching_assistant_LH.csv',
+ 'pima.csv','spambase.csv','banknote_authentication.csv', 'haberman.csv']
+# 'appendicitis.csv' me ha dado problemas
 
 path_to_save = root_path+'/Bagging_results'
 n_ensembles = 200 # maximum number of ensembles to consider (later we plot and stop when we want)
@@ -1017,17 +1015,17 @@ for data_file in total_name_list:
     X = preprocessing.scale(X)
     y = data[['y']].to_numpy()
     stump = 'no'
-    # split = 1
-    # emphasis0 = 'combo_split_classic' # split = 1 es easy-uniform-hard
-    # results0 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis0, split, stump)
-    # emphasis1 = 'combo_split_classic_extreme'
-    # results1 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data, path_to_save, emphasis1, split,stump)
-    # split2 = 2 # with combo_split_classic this is 5 splits
-    # results2 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis0, split2, stump)
-    # results3 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data, path_to_save, emphasis1, split2,stump)
-    # split4 = 4 # with combo_split_classic this is 9 splits
-    # results4 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis0, split4, stump)
-    # results5 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data, path_to_save, emphasis1, split4,stump)
+    split1 = 1
+    emphasis0_cl = 'combo_split_classic' # split = 1 es easy-uniform-hard
+    results0_cl = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis0_cl, split1, stump)
+    emphasis1 = 'combo_split_classic_extreme'
+    results1 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data, path_to_save, emphasis1, split1,stump)
+    split2 = 2 # with combo_split_classic this is 5 splits
+    results2 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis0, split2, stump)
+    results3 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data, path_to_save, emphasis1, split2,stump)
+    split4 = 4 # with combo_split_classic this is 9 splits
+    results4 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis0, split4, stump)
+    results5 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data, path_to_save, emphasis1, split4,stump)
 
     emphasis0 = 'combo_extreme'
     results0 = complexity_driven_bagging_combo(X, y, n_ensembles, name_data, path_to_save, emphasis0, stump)
