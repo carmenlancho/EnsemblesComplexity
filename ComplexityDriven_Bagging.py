@@ -696,7 +696,7 @@ def complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_sav
                     w_frac = (weights_hard - weights_easy) / split
                     weights_v = pd.DataFrame()
                     for s in range(split+1):
-                        print(s)
+                        # print(s)
                         new_w = weights_easy + s*w_frac
                         weights_v = pd.concat([weights_v,new_w],axis=1)
                 elif (emphasis == 'combo_split_classic'):
@@ -1021,10 +1021,10 @@ for data_file in total_name_list:
     emphasis1 = 'combo_split_classic_extreme'
     results1 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data, path_to_save, emphasis1, split1,stump)
     split2 = 2 # with combo_split_classic this is 5 splits
-    results2 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis0, split2, stump)
+    results2 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis0_cl, split2, stump)
     results3 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data, path_to_save, emphasis1, split2,stump)
     split4 = 4 # with combo_split_classic this is 9 splits
-    results4 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis0, split4, stump)
+    results4 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis0_cl, split4, stump)
     results5 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data, path_to_save, emphasis1, split4,stump)
 
     emphasis0 = 'combo_extreme'
