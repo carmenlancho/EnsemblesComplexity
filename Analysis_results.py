@@ -109,13 +109,15 @@ for filename in os.listdir(path_csv):
 # data_list = ['Data1_','Data2_','Data3_','Data4_','Data5_','Data6_','Data7_','Data8_',
 #              'Data9_','Data10_','Data11_','Data12_','Data13_']
 
-data_list = ['Data1_','Data2_','Data3_','Data4_','Data5_','Data6_','Data7_','Data8_',
-              'Data9_','Data10_','Data11_','Data12_','Data13_',
-                          'pima','arrhythmia_cfs','vertebral_column','diabetic_retinopathy','segment',
+data_list = ['pima','arrhythmia_cfs','vertebral_column','diabetic_retinopathy','segment',
              'breast-w','ilpd','diabetes',
-             'ionosphere','sonar','banknote_authentication','wdbc']
+             'ionosphere','sonar','banknote_authentication','wdbc',
+             'bands','bupa','contraceptive_LS','contraceptive_NL','contraceptive_NS',
+             'credit-g','hill_valley_without_noise_traintest','mammographic',
+             'phoneme','spambase','teaching_assistant_LH','teaching_assistant_LM','teaching_assistant_MH',
+             'titanic','WineQualityRed_5vs6','Yeast_CYTvsNUC']
 
-path_to_save = root_path+'/Analysis_results'
+path_to_save = root_path+'/Analysis_results_ranking_avg'
 res_all = pd.DataFrame()
 for data_i in data_list:
     print(data_i)
