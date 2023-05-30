@@ -115,7 +115,9 @@ data_list = ['pima','arrhythmia_cfs','vertebral_column','diabetic_retinopathy','
              'bands','bupa','contraceptive_LS','contraceptive_NL','contraceptive_NS',
              'credit-g','hill_valley_without_noise_traintest','mammographic',
              'phoneme','spambase','teaching_assistant_LH','teaching_assistant_LM','teaching_assistant_MH',
-             'titanic','WineQualityRed_5vs6','Yeast_CYTvsNUC']
+             'titanic','WineQualityRed_5vs6','Yeast_CYTvsNUC',
+             'Data1_', 'Data2_', 'Data3_', 'Data4_', 'Data5_', 'Data6_', 'Data7_', 'Data8_',
+            'Data9_','Data10_','Data11_','Data12_','Data13_']
 
 path_to_save = root_path+'/Analysis_results_ranking_avg'
 res_all = pd.DataFrame()
@@ -243,8 +245,33 @@ for CM in list_measures:
 
     # To save the results
     os.chdir(path_to_save)
+    CM_results_complete.reset_index(inplace=True)
+    CM_results_complete.drop('index',axis=1,inplace=True)
+    sort_dict = {'bupa':1,'hill_valley_without_noise_traintest':2,'contraceptive_NS':3,
+                 'teaching_assistant_LM':4,'contraceptive_LS':5,'diabetic_retinopathy':6,
+                 'Yeast_CYTvsNUC':7,'bands':8,'ilpd':9,'teaching_assistant_LH':10,'teaching_assistant_MH':11,
+                 'contraceptive_NL':12,'WineQualityRed_5vs6':13,'vertebral_column':14,
+                 'diabetes':15,'credit-g':16,'arrhythmia_cfs':17,'pima':18,'mammographic':19,
+                 'titanic':20,'sonar':21,'phoneme':22,'spambase':23, 'ionosphere':24,
+                 'wdbc':25, 'segment':26,'breast-w':27,  'banknote_authentication':28,
+                 'Data3_':29,'Data1_':30,'Data11_':31,'Data5_':32,'Data13_':33,
+                 'Data9_':34,'Data2_':35, 'Data10_':36,'Data8_':37, 'Data6_':38,
+                 'Data7_':39, 'Data12_':40, 'Data4_':41}
+    sort_dict2 = {'15':1,'50':2,'100':3,'150':4,'199':5,'average':6}
+    sort_dict3 = {'Uniform': 1}
+    order = np.lexsort([CM_results_complete['n_ensemble'].map(sort_dict2),
+                        CM_results_complete['weights'].map(sort_dict3),
+                        CM_results_complete['dataset'].map(sort_dict)])
+    CM_results_complete = CM_results_complete.iloc[order]
     nombre_csv = 'ResAccuracyPerMeasure_Bagging_' + str(CM) + '.csv'
     CM_results_complete.to_csv(nombre_csv, encoding='utf_8_sig', index=True)
+
+    diff_with_classic.reset_index(inplace=True)
+    diff_with_classic.drop('index',axis=1,inplace=True)
+    order2 = np.lexsort([diff_with_classic['n_ensemble'].map(sort_dict2),
+                        diff_with_classic['weights'].map(sort_dict3),
+                        diff_with_classic['dataset'].map(sort_dict)])
+    diff_with_classic = diff_with_classic.iloc[order2]
     nombre_csv2 = 'ResDifAccuracyPerMeasure_Bagging_' + str(CM) + '.csv'
     diff_with_classic.to_csv(nombre_csv2, encoding='utf_8_sig', index=True)
 
