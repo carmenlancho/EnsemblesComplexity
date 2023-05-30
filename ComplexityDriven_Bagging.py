@@ -989,17 +989,22 @@ for filename in os.listdir(path_csv):
 
 # total_name_list = ['Data13.csv']
 
-total_name_list = ['teaching_assistant_MH.csv','contraceptive_NL.csv','hill_valley_without_noise_traintest.csv',
- 'breast-w.csv','contraceptive_LS.csv','ilpd.csv','phoneme.csv',
- 'mammographic.csv','contraceptive_NS.csv','bupa.csv','Yeast_CYTvsNUC.csv',
- 'titanic.csv','arrhythmia_cfs.csv','vertebral_column.csv','sonar.csv',
- 'spect_heart.csv','credit-g.csv', 'segment.csv',
-                   #'appendicitis.csv',
-                   'diabetes.csv',
- 'diabetic_retinopathy.csv','WineQualityRed_5vs6.csv','teaching_assistant_LM.csv',
- 'ionosphere.csv','bands.csv','wdbc.csv','teaching_assistant_LH.csv',
- 'pima.csv','spambase.csv','banknote_authentication.csv', 'haberman.csv']
-# 'appendicitis.csv' me ha dado problemas
+total_name_list = [#'teaching_assistant_MH.csv','contraceptive_NL.csv','hill_valley_without_noise_traintest.csv',
+ # 'breast-w.csv','contraceptive_LS.csv','ilpd.csv','phoneme.csv',
+ # 'mammographic.csv','contraceptive_NS.csv','bupa.csv','Yeast_CYTvsNUC.csv',
+ # 'titanic.csv','arrhythmia_cfs.csv','vertebral_column.csv','sonar.csv',
+ #'spect_heart.csv',
+ #                   'credit-g.csv', 'segment.csv',
+ #                   ##'appendicitis.csv', 'haberman.csv',
+ #                   'diabetes.csv',
+ # 'diabetic_retinopathy.csv','WineQualityRed_5vs6.csv','teaching_assistant_LM.csv',
+ 'ionosphere.csv','bands.csv','wdbc.csv',
+    'spambase.csv','teaching_assistant_LH.csv','banknote_authentication.csv', 'pima.csv']
+# 'appendicitis.csv' y haberman me han dado problemas
+
+total_name_list = ['Data1.csv','Data2.csv','Data3.csv','Data4.csv','Data5.csv',
+                'Data6.csv','Data7.csv', 'Data8.csv','Data9.csv','Data10.csv',
+                'Data11.csv','Data12.csv',  'Data13.csv']
 
 path_to_save = root_path+'/Bagging_results'
 n_ensembles = 200 # maximum number of ensembles to consider (later we plot and stop when we want)
@@ -1045,6 +1050,11 @@ for data_file in total_name_list:
     results5 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis2, split4, stump)
     split9 = 9
     results6 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis2, split9, stump)
+
+    emphasis_easy = 'easy'
+    results_easy = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_easy)
+    emphasis_hard = 'hard'
+    results_hard = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_hard)
 
 
 
