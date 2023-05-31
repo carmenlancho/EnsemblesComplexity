@@ -588,6 +588,8 @@ for CM in list_measures:
     wtl_df_mean['weights'] = CM
     wtl_total = pd.concat([wtl_total, wtl_df_mean])
 
+order1 = np.lexsort([wtl_total['dataset'].map(sort_dict)])
+wtl_total = wtl_total.iloc[order1]
 nombre_csv3 = 'ResWTLAccuracy_Bagging_200.csv'
 wtl_total.to_csv(nombre_csv3, encoding='utf_8_sig', index=True)
 
@@ -597,6 +599,8 @@ nombre_csv2 = 'ResDifAccuracy_Bagging_200.csv'
 diff_classic.to_csv(nombre_csv2, encoding='utf_8_sig', index=True)
 
 # Total mean and accuracy
+order3 = np.lexsort([total_mean_acc['dataset'].map(sort_dict)])
+total_mean_acc = total_mean_acc.iloc[order3]
 nombre_csv4 = 'ResTotalSummaryMeansStd_Bagging_200.csv'
 total_mean_acc.to_csv(nombre_csv4, encoding='utf_8_sig', index=True)
 
