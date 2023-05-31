@@ -506,6 +506,8 @@ classic_values.sort_values(by = ['dataset','n_ensemble'],inplace=True)
 
 total_mean_acc = pd.DataFrame()
 total_mean_acc = pd.concat([total_mean_acc,classic_values_mean])
+diff_classic = pd.DataFrame()
+wtl_total = pd.DataFrame()
 
 for CM in list_measures:
     print(CM)
@@ -537,6 +539,22 @@ for CM in list_measures:
     'accuracy_mean_split2_classic_extreme', 'accuracy_mean_split9',
     'accuracy_mean_split9_extreme', 'accuracy_mean_split4_classic',
     'accuracy_mean_split4_classic_extreme'])
+    diff_with_classic = diff_with_classic[diff_with_classic.n_ensemble != 'average']
+    diff_with_classic_mean = diff_with_classic.groupby('dataset', as_index=False).mean(numeric_only=True)
+    diff_with_classic_std = diff_with_classic.groupby('dataset', as_index=False).std(numeric_only=True)
+    diff_with_classic_std.columns = ['dataset', 'accuracy_mean_easy_std', 'accuracy_mean_hard_std',
+       'accuracy_mean_combo_std', 'accuracy_mean_combo_extreme_std',
+       'accuracy_mean_split2_std', 'accuracy_mean_split2_extreme_std',
+       'accuracy_mean_split1_classic_std', 'accuracy_mean_split1_classic_extreme_std',
+       'accuracy_mean_split4_std', 'accuracy_mean_split4_extreme_std',
+       'accuracy_mean_split2_classic_std', 'accuracy_mean_split2_classic_extreme_std',
+       'accuracy_mean_split9_std', 'accuracy_mean_split9_extreme_std',
+       'accuracy_mean_split4_classic_std', 'accuracy_mean_split4_classic_extreme_std']
+    diff_with_classic_summary = pd.concat([diff_with_classic_mean,diff_with_classic_std], axis=1)
+    diff_with_classic_summary = diff_with_classic_summary.loc[:, ~diff_with_classic_summary.columns.duplicated()]  # remove duplicate columns
+    diff_with_classic_summary['weights'] = CM
+    diff_classic = pd.concat([diff_classic, diff_with_classic_summary])
+
 
 
 
@@ -560,23 +578,23 @@ for CM in list_measures:
                         CM_results_complete['weights'].map(sort_dict3),
                         CM_results_complete['dataset'].map(sort_dict)])
     CM_results_complete = CM_results_complete.iloc[order]
-    nombre_csv = 'ResAccuracyPerMeasure_Bagging_200_' + str(CM) + '.csv'
-    CM_results_complete.to_csv(nombre_csv, encoding='utf_8_sig', index=True)
-
-    diff_with_classic.reset_index(inplace=True)
-    diff_with_classic.drop('index',axis=1,inplace=True)
-    order2 = np.lexsort([diff_with_classic['n_ensemble'].map(sort_dict2),
-                        diff_with_classic['weights'].map(sort_dict3),
-                        diff_with_classic['dataset'].map(sort_dict)])
-    diff_with_classic = diff_with_classic.iloc[order2]
-    nombre_csv2 = 'ResDifAccuracyPerMeasure_Bagging_200_' + str(CM) + '.csv'
-    diff_with_classic.to_csv(nombre_csv2, encoding='utf_8_sig', index=True)
+    # nombre_csv = 'ResAccuracyPerMeasure_Bagging_200_' + str(CM) + '.csv'
+    # CM_results_complete.to_csv(nombre_csv, encoding='utf_8_sig', index=True)
 
     ## Win tie loss
     wtl_df = diff_with_classic.copy()
     wtl_df[filter_col] = np.where(wtl_df[filter_col] >= 0, 1, 0)
-    nombre_csv3 = 'ResWTLAccuracyPerMeasure_Bagging_200_' + str(CM) + '.csv'
-    wtl_df.to_csv(nombre_csv3, encoding='utf_8_sig', index=True)
+    wtl_df_mean = wtl_df.groupby(['dataset'], as_index=False).mean(numeric_only=True)
+    wtl_df_mean['weights'] = CM
+    wtl_total = pd.concat([wtl_total, wtl_df_mean])
+
+nombre_csv3 = 'ResWTLAccuracy_Bagging_200.csv'
+wtl_total.to_csv(nombre_csv3, encoding='utf_8_sig', index=True)
+
+order2 = np.lexsort([diff_classic['dataset'].map(sort_dict)])
+diff_classic = diff_classic.iloc[order2]
+nombre_csv2 = 'ResDifAccuracy_Bagging_200.csv'
+diff_classic.to_csv(nombre_csv2, encoding='utf_8_sig', index=True)
 
 # Total mean and accuracy
 nombre_csv4 = 'ResTotalSummaryMeansStd_Bagging_200.csv'
