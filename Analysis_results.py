@@ -341,8 +341,8 @@ path_csv = os.chdir(root_path+'/Bagging_results')
 total_name_list = []
 for filename in os.listdir(path_csv):
     if (filename.endswith('.csv') and 'classic' in filename
-            and 'Aggregated' in filename and 'extreme' in filename and 'averaged' not in filename
-            and 'split1' in filename):
+            and 'Aggregated' in filename and 'extreme' not in filename and 'averaged' not in filename
+            and 'split2' in filename):
         total_name_list.append(filename)
 total_name_list.sort()
 
@@ -353,15 +353,15 @@ for filename in os.listdir(path_csv):
         total_name_list_uniform.append(filename)
 total_name_list_uniform.sort()
 
-total_name_list = ['AggregatedResults_Bagging_Yeast_CYTvsNUC_MoreWeight_combo_split_classic_extreme_split1_stump_noInstances.csv',
- 'AggregatedResults_Bagging_bands_MoreWeight_combo_split_classic_extreme_split1_stump_noInstances.csv',
- 'AggregatedResults_Bagging_bupa_MoreWeight_combo_split_classic_extreme_split1_stump_noInstances.csv',
- 'AggregatedResults_Bagging_contraceptive_LS_MoreWeight_combo_split_classic_extreme_split1_stump_noInstances.csv',
- 'AggregatedResults_Bagging_contraceptive_NS_MoreWeight_combo_split_classic_extreme_split1_stump_noInstances.csv',
- 'AggregatedResults_Bagging_diabetic_retinopathy_MoreWeight_combo_split_classic_extreme_split1_stump_noInstances.csv',
- 'AggregatedResults_Bagging_hill_valley_without_noise_traintest_MoreWeight_combo_split_classic_extreme_split1_stump_noInstances.csv',
- 'AggregatedResults_Bagging_ilpd_MoreWeight_combo_split_classic_extreme_split1_stump_noInstances.csv',
- 'AggregatedResults_Bagging_teaching_assistant_LM_MoreWeight_combo_split_classic_extreme_split1_stump_noInstances.csv']
+total_name_list = ['AggregatedResults_Bagging_Yeast_CYTvsNUC_MoreWeight_combo_split_classic_split2_stump_noInstances.csv',
+ 'AggregatedResults_Bagging_bands_MoreWeight_combo_split_classic_split2_stump_noInstances.csv',
+ 'AggregatedResults_Bagging_bupa_MoreWeight_combo_split_classic_split2_stump_noInstances.csv',
+ 'AggregatedResults_Bagging_contraceptive_LS_MoreWeight_combo_split_classic_split2_stump_noInstances.csv',
+ 'AggregatedResults_Bagging_contraceptive_NS_MoreWeight_combo_split_classic_split2_stump_noInstances.csv',
+ 'AggregatedResults_Bagging_diabetic_retinopathy_MoreWeight_combo_split_classic_split2_stump_noInstances.csv',
+ 'AggregatedResults_Bagging_hill_valley_without_noise_traintest_MoreWeight_combo_split_classic_split2_stump_noInstances.csv',
+ 'AggregatedResults_Bagging_ilpd_MoreWeight_combo_split_classic_split2_stump_noInstances.csv',
+ 'AggregatedResults_Bagging_teaching_assistant_LM_MoreWeight_combo_split_classic_split2_stump_noInstances.csv']
 
 
 for file in total_name_list:
