@@ -380,6 +380,213 @@ for file in total_name_list:
     plot_acc_ensemble(data_n, name)
 
 
+
+
+
+
+
+#######################################################################
+#################    ANALYSIS PER COMPLEXITY MEASURE ONLY FOR CLASSIC   #################
+#######################################################################
+
+
+path_csv = os.chdir(root_path+'/Bagging_results')
+# Extraemos los nombres de todos los ficheros
+total_name_list = []
+for filename in os.listdir(path_csv):
+    if (filename.endswith('.csv') and 'Aggregated' in filename and 'yes' not in filename and 'classes' not in filename
+    and 'averaged' not in filename):
+        total_name_list.append(filename)
+
+
+# data_list = ['Data1_','Data2_','Data3_','Data4_','Data5_','Data6_','Data7_','Data8_',
+#              'Data9_','Data10_','Data11_','Data12_','Data13_']
+
+data_list = ['pima','arrhythmia_cfs','vertebral_column','diabetic_retinopathy','segment',
+             'breast-w','ilpd','diabetes',
+             'ionosphere','sonar','banknote_authentication','wdbc',
+             'bands','bupa','contraceptive_LS','contraceptive_NL','contraceptive_NS',
+             'credit-g','hill_valley_without_noise_traintest','mammographic',
+             'phoneme','spambase','teaching_assistant_LH','teaching_assistant_LM','teaching_assistant_MH',
+             'titanic','WineQualityRed_5vs6','Yeast_CYTvsNUC',
+             'Data1_', 'Data2_', 'Data3_', 'Data4_', 'Data5_', 'Data6_', 'Data7_', 'Data8_',
+            'Data9_','Data10_','Data11_','Data12_','Data13_']
+
+path_to_save = root_path+'/Analysis_results_ranking_avg'
+res_all = pd.DataFrame()
+for data_i in data_list:
+    print(data_i)
+    list_match = [s for s in total_name_list if data_i in s]
+    res_total = pd.DataFrame()
+    for file in list_match:
+        print(list_match)
+        os.chdir(root_path + '/Bagging_results')
+        name = file[25:]
+        data = pd.read_csv(file)
+        # data_name = file[file.find('AggregatedResults_Bagging_') + len('AggregatedResults_Bagging_'):file.rfind(
+        #     '_MoreWeight')]
+
+        # data_n = data[data['n_ensemble'].isin([15, 50, 100, 150, 199])]
+        res = data[['n_ensemble', 'weights', 'accuracy_mean', 'accuracy_std']].sort_values(
+            by=['weights', 'n_ensemble'])  # .T
+        if ('split4' in name and 'extreme' not in name and 'classic' not in name):
+            res.columns = ['n_ensemble', 'weights', 'accuracy_mean_split4', 'accuracy_std_split4']
+        elif ('split2' in name and 'extreme' not in name and 'classic' not in name):
+            res.columns = ['n_ensemble', 'weights', 'accuracy_mean_split2', 'accuracy_std_split2']
+        elif ('split9' in name and 'extreme' not in name and 'classic' not in name):
+            res.columns = ['n_ensemble', 'weights', 'accuracy_mean_split9', 'accuracy_std_split9']
+        elif ('split4' in name and 'extreme' in name and 'classic' not in name):
+            res.columns = ['n_ensemble', 'weights', 'accuracy_mean_split4_extreme', 'accuracy_std_split4_extreme']
+        elif ('split2' in name and 'extreme' in name and 'classic' not in name):
+            res.columns = ['n_ensemble', 'weights', 'accuracy_mean_split2_extreme', 'accuracy_std_split2_extreme']
+        elif ('split9' in name and 'extreme' in name and 'classic' not in name):
+            res.columns = ['n_ensemble', 'weights', 'accuracy_mean_split9_extreme', 'accuracy_std_split9_extreme']
+        elif ('hard' in name):
+            res.columns = ['n_ensemble', 'weights', 'accuracy_mean_hard', 'accuracy_std_hard']
+        elif ('easy' in name):
+            res.columns = ['n_ensemble', 'weights', 'accuracy_mean_easy', 'accuracy_std_easy']
+        elif ('combo' in name and 'extreme' not in name and 'split' not in name):
+            res.columns = ['n_ensemble', 'weights', 'accuracy_mean_combo', 'accuracy_std_combo']
+        elif ('combo' in name and 'extreme' in name and 'split' not in name):
+            res.columns = ['n_ensemble', 'weights', 'accuracy_mean_combo_extreme', 'accuracy_std_combo_extreme']
+        elif ('split4' in name and 'extreme' not in name and 'classic' in name):
+            res.columns = ['n_ensemble', 'weights', 'accuracy_mean_split4_classic', 'accuracy_std_split4_classic']
+        elif ('split2' in name and 'extreme' not in name and 'classic' in name):
+            res.columns = ['n_ensemble', 'weights', 'accuracy_mean_split2_classic', 'accuracy_std_split2_classic']
+        elif ('split1' in name and 'extreme' not in name and 'classic' in name):
+            res.columns = ['n_ensemble', 'weights', 'accuracy_mean_split1_classic', 'accuracy_std_split1_classic']
+        elif ('split4' in name and 'extreme' in name and 'classic' in name):
+            res.columns = ['n_ensemble', 'weights', 'accuracy_mean_split4_classic_extreme', 'accuracy_std_split4_classic_extreme']
+        elif ('split2' in name and 'extreme' in name and 'classic' in name):
+            res.columns = ['n_ensemble', 'weights', 'accuracy_mean_split2_classic_extreme', 'accuracy_std_split2_classic_extreme']
+        elif ('split1' in name and 'extreme' in name and 'classic' in name):
+            res.columns = ['n_ensemble', 'weights', 'accuracy_mean_split1_classic_extreme', 'accuracy_std_split1_classic_extreme']
+        # res['dataset'] = data_i
+
+        res_total = pd.concat([res_total, res], axis=1)
+        # print(res_total)
+    res_total['dataset'] = data_i
+    res_total = res_total.loc[:, ~res_total.columns.duplicated()]  # remove duplicate columns
+    res_total = res_total.reindex(columns=['n_ensemble', 'weights','dataset',
+                                           'accuracy_mean_easy', 'accuracy_std_easy',
+                                           'accuracy_mean_hard', 'accuracy_std_hard',
+                                           'accuracy_mean_combo', 'accuracy_std_combo',
+                                           'accuracy_mean_combo_extreme', 'accuracy_std_combo_extreme',
+                                           'accuracy_mean_split2', 'accuracy_std_split2',
+                                           'accuracy_mean_split2_extreme', 'accuracy_std_split2_extreme',
+                                           'accuracy_mean_split1_classic', 'accuracy_std_split1_classic',
+                                           'accuracy_mean_split1_classic_extreme', 'accuracy_std_split1_classic_extreme',
+                                           'accuracy_mean_split4', 'accuracy_std_split4',
+                                           'accuracy_mean_split4_extreme', 'accuracy_std_split4_extreme',
+                                           'accuracy_mean_split2_classic', 'accuracy_std_split2_classic',
+                                           'accuracy_mean_split2_classic_extreme', 'accuracy_std_split2_classic_extreme',
+                                           'accuracy_mean_split9', 'accuracy_std_split9',
+                                           'accuracy_mean_split9_extreme', 'accuracy_std_split9_extreme',
+                                        'accuracy_mean_split4_classic','accuracy_std_split4_classic',
+                                        'accuracy_mean_split4_classic_extreme','accuracy_std_split4_classic_extreme'])
+
+    res_all = pd.concat([res_all, res_total])
+
+    # To save the results
+    # os.chdir(path_to_save)
+    # nombre_csv = 'ResAccuracy_Bagging_' + str(data_i) + 'Classic_RealData_NoStump.csv'
+    # res_total.to_csv(nombre_csv, encoding='utf_8_sig', index=True)
+
+res_all.reset_index(inplace=True)
+res_all.drop(['index'],inplace=True,axis=1)
+
+list_measures = ['Hostility', 'kDN', 'DCP', 'TD_U', 'CLD', 'N1', 'N2', 'LSC', 'F1']
+# Classic Bagging info
+classic_values = res_all[res_all.weights == 'Uniform']
+classic_values_mean = classic_values.groupby('dataset', as_index=False).mean(numeric_only=True)
+classic_values_mean['n_ensemble'] = 'average'
+classic_values_mean['weights'] = 'Uniform'
+classic_values = pd.concat([classic_values,classic_values_mean])
+classic_values.sort_values(by = ['dataset','n_ensemble'],inplace=True)
+
+total_mean_acc = pd.DataFrame()
+total_mean_acc = pd.concat([total_mean_acc,classic_values_mean])
+
+for CM in list_measures:
+    print(CM)
+    CM_results = res_all[res_all.weights == CM]
+    total_average_CM = CM_results.groupby('dataset', as_index=False).mean(numeric_only=True)
+    total_average_CM['n_ensemble'] = 'average'
+    total_average_CM['weights'] = CM
+    total_mean_acc = pd.concat([total_mean_acc,total_average_CM])
+    CM_results = pd.concat([CM_results, total_average_CM])
+    CM_results.sort_values(by=['dataset', 'n_ensemble'], inplace=True)
+
+    CM_results_complete = pd.concat([CM_results, classic_values])
+    CM_results_complete.sort_values(by=['dataset', 'weights', 'n_ensemble'], inplace=True)
+
+    ## Automatic comparison
+    # CM_results[['accuracy_mean_easy', 'accuracy_mean_hard']]
+    # classic_values[['n_ensemble', 'dataset', 'accuracy_mean_easy']]
+    bag_value = np.array(classic_values[['accuracy_mean_easy']]) # tomamos este como ejemplo
+    filter_col = [col for col in CM_results if col.startswith('accuracy_mean')]
+    diff_with_classic = CM_results[filter_col] - bag_value
+    diff_with_classic[['n_ensemble','weights','dataset']] = CM_results[['n_ensemble','weights','dataset']]
+    diff_with_classic = diff_with_classic.reindex(columns=[ 'n_ensemble', 'weights',
+    'dataset',
+        'accuracy_mean_easy', 'accuracy_mean_hard', 'accuracy_mean_combo',
+    'accuracy_mean_combo_extreme', 'accuracy_mean_split2',
+    'accuracy_mean_split2_extreme', 'accuracy_mean_split1_classic',
+    'accuracy_mean_split1_classic_extreme', 'accuracy_mean_split4',
+    'accuracy_mean_split4_extreme', 'accuracy_mean_split2_classic',
+    'accuracy_mean_split2_classic_extreme', 'accuracy_mean_split9',
+    'accuracy_mean_split9_extreme', 'accuracy_mean_split4_classic',
+    'accuracy_mean_split4_classic_extreme'])
+
+
+
+    # To save the results
+    os.chdir(path_to_save)
+    CM_results_complete.reset_index(inplace=True)
+    CM_results_complete.drop('index',axis=1,inplace=True)
+    sort_dict = {'bupa':1,'hill_valley_without_noise_traintest':2,'contraceptive_NS':3,
+                 'teaching_assistant_LM':4,'contraceptive_LS':5,'diabetic_retinopathy':6,
+                 'Yeast_CYTvsNUC':7,'bands':8,'ilpd':9,'teaching_assistant_LH':10,'teaching_assistant_MH':11,
+                 'contraceptive_NL':12,'WineQualityRed_5vs6':13,'vertebral_column':14,
+                 'diabetes':15,'credit-g':16,'arrhythmia_cfs':17,'pima':18,'mammographic':19,
+                 'titanic':20,'sonar':21,'phoneme':22,'spambase':23, 'ionosphere':24,
+                 'wdbc':25, 'segment':26,'breast-w':27,  'banknote_authentication':28,
+                 'Data3_':29,'Data1_':30,'Data11_':31,'Data5_':32,'Data13_':33,
+                 'Data9_':34,'Data2_':35, 'Data10_':36,'Data8_':37, 'Data6_':38,
+                 'Data7_':39, 'Data12_':40, 'Data4_':41}
+    sort_dict2 = {'15':1,'50':2,'100':3,'150':4,'199':5,'average':6}
+    sort_dict3 = {'Uniform': 1}
+    order = np.lexsort([CM_results_complete['n_ensemble'].map(sort_dict2),
+                        CM_results_complete['weights'].map(sort_dict3),
+                        CM_results_complete['dataset'].map(sort_dict)])
+    CM_results_complete = CM_results_complete.iloc[order]
+    nombre_csv = 'ResAccuracyPerMeasure_Bagging_200_' + str(CM) + '.csv'
+    CM_results_complete.to_csv(nombre_csv, encoding='utf_8_sig', index=True)
+
+    diff_with_classic.reset_index(inplace=True)
+    diff_with_classic.drop('index',axis=1,inplace=True)
+    order2 = np.lexsort([diff_with_classic['n_ensemble'].map(sort_dict2),
+                        diff_with_classic['weights'].map(sort_dict3),
+                        diff_with_classic['dataset'].map(sort_dict)])
+    diff_with_classic = diff_with_classic.iloc[order2]
+    nombre_csv2 = 'ResDifAccuracyPerMeasure_Bagging_200_' + str(CM) + '.csv'
+    diff_with_classic.to_csv(nombre_csv2, encoding='utf_8_sig', index=True)
+
+    ## Win tie loss
+    wtl_df = diff_with_classic.copy()
+    wtl_df[filter_col] = np.where(wtl_df[filter_col] >= 0, 1, 0)
+    nombre_csv3 = 'ResWTLAccuracyPerMeasure_Bagging_200_' + str(CM) + '.csv'
+    wtl_df.to_csv(nombre_csv3, encoding='utf_8_sig', index=True)
+
+# Total mean and accuracy
+nombre_csv4 = 'ResTotalSummaryMeansStd_Bagging_200.csv'
+total_mean_acc.to_csv(nombre_csv4, encoding='utf_8_sig', index=True)
+
+
+
+
+
+
 #######################################################################
 #################    More weight in hard instances WITH RANKING   #################
 #######################################################################
