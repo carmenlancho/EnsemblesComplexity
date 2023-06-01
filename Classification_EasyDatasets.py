@@ -130,6 +130,8 @@ for data_file in total_name_list:
 
 # Save csv
 nombre_csv = 'ClassificationSingleLearner_EasyDatasets.csv'
+# nombre_csv = 'ClassificationSingleLearner_IntermediateDatasets.csv'
+# nombre_csv = 'ClassificationSingleLearner_HardDatasets.csv'
 total_results.to_csv(nombre_csv, encoding='utf_8_sig', index=True)
 
 
