@@ -102,13 +102,17 @@ for filename in os.listdir(path_csv):
 
 # total_name_list = ['phoneme.csv','spambase.csv', 'ionosphere.csv',
 #                  'wdbc.csv', 'segment.csv','breast-w.csv',  'banknote_authentication.csv' ]
-total_name_list =  [ 'bupa.csv','hill_valley_without_noise_traintest.csv','contraceptive_NS.csv',
-                 'teaching_assistant_LM.csv','contraceptive_LS.csv','diabetic_retinopathy.csv',
-                 'Yeast_CYTvsNUC.csv','bands.csv','ilpd.csv']
+# total_name_list =  [ 'bupa.csv','hill_valley_without_noise_traintest.csv','contraceptive_NS.csv',
+#                  'teaching_assistant_LM.csv','contraceptive_LS.csv','diabetic_retinopathy.csv',
+#                  'Yeast_CYTvsNUC.csv','bands.csv','ilpd.csv']
 # total_name_list =  [ 'teaching_assistant_LH.csv','teaching_assistant_MH.csv',
-    #              'contraceptive_NL.csv','WineQualityRed_5vs6.csv','vertebral_column.csv',
-    #              'diabetes.csv','credit-g.csv','arrhythmia_cfs.csv','pima.csv','mammographic.csv',
-    #              'titanic.csv','sonar.csv']
+#                  'contraceptive_NL.csv','WineQualityRed_5vs6.csv','vertebral_column.csv',
+#                  'diabetes.csv','credit-g.csv','arrhythmia_cfs.csv','pima.csv','mammographic.csv',
+#                  'titanic.csv','sonar.csv']
+
+total_name_list =  [ 'Data3.csv','Data1.csv','Data11.csv','Data5.csv','Data13.csv',
+                 'Data9.csv','Data2.csv', 'Data10.csv','Data8.csv', 'Data6.csv',
+                 'Data7.csv', 'Data12.csv', 'Data4.csv']
 
 
 path_to_save = root_path+'/Classification_SingleLearner'
@@ -132,7 +136,8 @@ for data_file in total_name_list:
  os.chdir(path_to_save)
 # nombre_csv = 'ClassificationSingleLearner_EasyDatasets.csv'
 # nombre_csv = 'ClassificationSingleLearner_IntermediateDatasets.csv'
-nombre_csv = 'ClassificationSingleLearner_HardDatasets.csv'
+# nombre_csv = 'ClassificationSingleLearner_HardDatasets.csv'
+nombre_csv = 'ClassificationSingleLearner_ArtificialDatasets.csv'
 total_results.to_csv(nombre_csv, encoding='utf_8_sig', index=True)
 
 
