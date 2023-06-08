@@ -628,13 +628,15 @@ Intermediate_datasets = ['teaching_assistant_LH','teaching_assistant_MH',
 diff_classic_total['complexity'].loc[diff_classic_total['dataset'].isin(complex_datasets)] = 'Hard'
 diff_classic_total['complexity'].loc[diff_classic_total['dataset'].isin(Intermediate_datasets)] = 'Intermediate'
 
-hue_order = ['easy','intermediate','hard']
+hue_order = ['Easy','Intermediate','Hard']
+
+plt.figure(figsize=(6.5,4.5))
 # sns.color_palette("pastel")
-ax = sns.boxplot(y=diff_classic_total["accuracy_mean_split1_classic"],
+ax = sns.boxplot(y=diff_classic_total["accuracy_mean_split1_classic_extreme"],
                  x=diff_classic_total["weights"], hue=diff_classic_total["complexity"],
                  hue_order=hue_order,palette="Blues",
             order=['Hostility',
-                   'kDN','N1','N2','CLD' , 'DCP','TD_U','LSC','F1'])
+                   'N1','N2','kDN','LSC','CLD' , 'TD_U','DCP','F1'])
             #      color='white')
 ax.axhline(0, c='red')
 # sns.stripplot(data=df_long_host, x="variable", y="Complexity", dodge=True, ax=ax,
@@ -644,10 +646,14 @@ ax.axhline(0, c='red')
 #                      'Boots_Hostility_dataset_mean_split2', 'Boots_Hostility_dataset_mean_split2_extreme',
 #                      'Boots_Hostility_dataset_mean_split4', 'Boots_Hostility_dataset_mean_split4_extreme',
 #                      'Boots_Hostility_dataset_mean_split9', 'Boots_Hostility_dataset_mean_split9_extreme'])
-ax.set_xticklabels(['Hostility',
-                   'kDN','$N1_{HD}$','$N2_{HD}$','CLD' ,'DCP','TDU', 'LSC','$F1_{HD}$'])
+ax.set_xticklabels(['Hostility','$N1_{HD}$','$N2_{HD}$',
+                   'kDN','LSC','CLD' ,'TDU','DCP', '$F1_{HD}$'])
+# ax.set_xticklabels(['Hostility','N1','N2',
+#                    'kDN','LSC','CLD' ,'TDU','DCP', 'F1'])
 ax.set(ylabel='Difference in accuracy', xlabel='')
-# ax.legend(title='Datasets',ncol=3)
+# ax.legend(title='Datasets',ncol=1)
+# sns.move_legend(ax, "lower center",
+#     bbox_to_anchor=(.5, 1), ncol=3, title='Datasets')
 ax.legend([],[], frameon=False)
 plt.tight_layout()
 plt.show()
