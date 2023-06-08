@@ -133,7 +133,8 @@ for data_i in data_list:
         # data_name = file[file.find('AggregatedResults_Bagging_') + len('AggregatedResults_Bagging_'):file.rfind(
         #     '_MoreWeight')]
 
-        data_n = data[data['n_ensemble'].isin([15, 50, 100, 150, 199])]
+        data_n = data[data['n_ensemble'].isin([9, 19, 29,39,49,59,69,79,89,99,
+                                               109,119,129,139,149,159,169,179,189, 199])]
         res = data_n[['n_ensemble', 'weights', 'accuracy_mean', 'accuracy_std']].sort_values(
             by=['weights', 'n_ensemble'])  # .T
         if ('split4' in name and 'extreme' not in name and 'classic' not in name):
@@ -263,7 +264,7 @@ for CM in list_measures:
                         CM_results_complete['weights'].map(sort_dict3),
                         CM_results_complete['dataset'].map(sort_dict)])
     CM_results_complete = CM_results_complete.iloc[order]
-    nombre_csv = 'ResAccuracyPerMeasure_Bagging_' + str(CM) + '.csv'
+    nombre_csv = 'ResAccuracyPerMeasure_Bagging_10_' + str(CM) + '.csv'
     CM_results_complete.to_csv(nombre_csv, encoding='utf_8_sig', index=True)
 
     diff_with_classic.reset_index(inplace=True)
@@ -272,13 +273,13 @@ for CM in list_measures:
                         diff_with_classic['weights'].map(sort_dict3),
                         diff_with_classic['dataset'].map(sort_dict)])
     diff_with_classic = diff_with_classic.iloc[order2]
-    nombre_csv2 = 'ResDifAccuracyPerMeasure_Bagging_' + str(CM) + '.csv'
+    nombre_csv2 = 'ResDifAccuracyPerMeasure_Bagging_10_' + str(CM) + '.csv'
     diff_with_classic.to_csv(nombre_csv2, encoding='utf_8_sig', index=True)
 
     ## Win tie loss
     wtl_df = diff_with_classic.copy()
     wtl_df[filter_col] = np.where(wtl_df[filter_col] >= 0, 1, 0)
-    nombre_csv3 = 'ResWTLAccuracyPerMeasure_Bagging_' + str(CM) + '.csv'
+    nombre_csv3 = 'ResWTLAccuracyPerMeasure_Bagging_10_' + str(CM) + '.csv'
     wtl_df.to_csv(nombre_csv3, encoding='utf_8_sig', index=True)
 
 
@@ -507,6 +508,7 @@ classic_values.sort_values(by = ['dataset','n_ensemble'],inplace=True)
 total_mean_acc = pd.DataFrame()
 total_mean_acc = pd.concat([total_mean_acc,classic_values_mean])
 diff_classic = pd.DataFrame()
+diff_classic_total = pd.DataFrame()
 wtl_total = pd.DataFrame()
 
 for CM in list_measures:
@@ -540,6 +542,7 @@ for CM in list_measures:
     'accuracy_mean_split9_extreme', 'accuracy_mean_split4_classic',
     'accuracy_mean_split4_classic_extreme'])
     diff_with_classic = diff_with_classic[diff_with_classic.n_ensemble != 'average']
+    diff_classic_total = pd.concat([diff_classic_total, diff_with_classic])
     diff_with_classic_mean = diff_with_classic.groupby('dataset', as_index=False).mean(numeric_only=True)
     diff_with_classic_std = diff_with_classic.groupby('dataset', as_index=False).std(numeric_only=True)
     diff_with_classic_std.columns = ['dataset', 'accuracy_mean_easy_std', 'accuracy_mean_hard_std',
@@ -606,7 +609,46 @@ total_mean_acc.to_csv(nombre_csv4, encoding='utf_8_sig', index=True)
 
 
 
+## Boxplot from diff_classic_total
+# Remove artificial dataset
+diff_classic_total = diff_classic_total[~diff_classic_total.dataset.str.contains("Data")]
+diff_classic_total = diff_classic_total[diff_classic_total.n_ensemble > 9]
 
+
+diff_classic_total['complexity'] = 'Easy'
+diff_classic_total
+complex_datasets = ['bupa','hill_valley_without_noise_traintest','contraceptive_NS',
+                 'teaching_assistant_LM','contraceptive_LS','diabetic_retinopathy',
+                 'Yeast_CYTvsNUC','bands','ilpd']
+Intermediate_datasets = ['teaching_assistant_LH','teaching_assistant_MH',
+                 'contraceptive_NL','WineQualityRed_5vs6','vertebral_column',
+                 'diabetes','credit-g','arrhythmia_cfs','pima','mammographic',
+                 'titanic','sonar']
+diff_classic_total['complexity'].loc[diff_classic_total['dataset'].isin(complex_datasets)] = 'Hard'
+diff_classic_total['complexity'].loc[diff_classic_total['dataset'].isin(Intermediate_datasets)] = 'Intermediate'
+
+hue_order = ['easy','intermediate','hard']
+# sns.color_palette("pastel")
+ax = sns.boxplot(y=diff_classic_total["accuracy_mean_split4_classic"],
+                 x=diff_classic_total["weights"], hue=diff_classic_total["complexity"],
+                 hue_order=hue_order,palette="Blues",
+            order=['Hostility',
+                   'kDN','N1','N2','CLD' , 'DCP','TD_U','LSC','F1'])
+            #      color='white')
+ax.axhline(0, c='red')
+# sns.stripplot(data=df_long_host, x="variable", y="Complexity", dodge=True, ax=ax,
+#               order=['Uniform',
+#                      'Boots_Hostility_dataset_mean_easy', 'Boots_Hostility_dataset_mean_hard',
+#                      'Boots_Hostility_dataset_mean_combo', 'Boots_Hostility_dataset_mean_combo_extreme',
+#                      'Boots_Hostility_dataset_mean_split2', 'Boots_Hostility_dataset_mean_split2_extreme',
+#                      'Boots_Hostility_dataset_mean_split4', 'Boots_Hostility_dataset_mean_split4_extreme',
+#                      'Boots_Hostility_dataset_mean_split9', 'Boots_Hostility_dataset_mean_split9_extreme'])
+ax.set_xticklabels(['Hostility',
+                   'kDN','N1','N2','CLD' ,'DCP','TDU', 'LSC','F1'])
+ax.set(ylabel='Difference in accuracy', xlabel='')
+ax.legend(title='Datasets',ncol=3)
+plt.tight_layout()
+plt.show()
 
 
 #######################################################################
