@@ -428,6 +428,7 @@ for data_i in data_list:
         #     '_MoreWeight')]
 
         # data_n = data[data['n_ensemble'].isin([15, 50, 100, 150, 199])]
+        data = data[data.n_ensemble > 9]
         res = data[['n_ensemble', 'weights', 'accuracy_mean', 'accuracy_std']].sort_values(
             by=['weights', 'n_ensemble'])  # .T
         if ('split4' in name and 'extreme' not in name and 'classic' not in name):
@@ -593,18 +594,18 @@ for CM in list_measures:
 
 order1 = np.lexsort([wtl_total['dataset'].map(sort_dict)])
 wtl_total = wtl_total.iloc[order1]
-nombre_csv3 = 'ResWTLAccuracy_Bagging_200.csv'
+nombre_csv3 = 'ResWTLAccuracy_Bagging_From10.csv'
 wtl_total.to_csv(nombre_csv3, encoding='utf_8_sig', index=True)
 
 order2 = np.lexsort([diff_classic['dataset'].map(sort_dict)])
 diff_classic = diff_classic.iloc[order2]
-nombre_csv2 = 'ResDifAccuracy_Bagging_200.csv'
+nombre_csv2 = 'ResDifAccuracy_Bagging_From10.csv'
 diff_classic.to_csv(nombre_csv2, encoding='utf_8_sig', index=True)
 
 # Total mean and accuracy
 order3 = np.lexsort([total_mean_acc['dataset'].map(sort_dict)])
 total_mean_acc = total_mean_acc.iloc[order3]
-nombre_csv4 = 'ResTotalSummaryMeansStd_Bagging_200.csv'
+nombre_csv4 = 'ResTotalSummaryMeansStd_Bagging_From10.csv'
 total_mean_acc.to_csv(nombre_csv4, encoding='utf_8_sig', index=True)
 
 
