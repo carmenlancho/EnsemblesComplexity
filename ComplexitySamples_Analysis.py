@@ -700,7 +700,7 @@ for data_i in data_list:
     df_long_host = df_long_host[~df_long_host.variable.str.contains("easy")]
     df_long_host = df_long_host[~df_long_host.variable.str.contains("hard")]
     df_long_host = df_long_host[~df_long_host.variable.str.contains("combo")]
-
+    plt.figure(figsize=(6.5, 4.5))
     ax = sns.boxplot(y=df_long_host["Complexity"], x=df_long_host["variable"],
                 order=['Uniform',
                        'Boots_Hostility_dataset_mean_split1_classic',
