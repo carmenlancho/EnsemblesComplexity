@@ -629,7 +629,7 @@ diff_classic_total['complexity'].loc[diff_classic_total['dataset'].isin(Intermed
 
 hue_order = ['easy','intermediate','hard']
 # sns.color_palette("pastel")
-ax = sns.boxplot(y=diff_classic_total["accuracy_mean_split4_classic"],
+ax = sns.boxplot(y=diff_classic_total["accuracy_mean_split1_classic"],
                  x=diff_classic_total["weights"], hue=diff_classic_total["complexity"],
                  hue_order=hue_order,palette="Blues",
             order=['Hostility',
@@ -644,9 +644,10 @@ ax.axhline(0, c='red')
 #                      'Boots_Hostility_dataset_mean_split4', 'Boots_Hostility_dataset_mean_split4_extreme',
 #                      'Boots_Hostility_dataset_mean_split9', 'Boots_Hostility_dataset_mean_split9_extreme'])
 ax.set_xticklabels(['Hostility',
-                   'kDN','N1','N2','CLD' ,'DCP','TDU', 'LSC','F1'])
+                   'kDN','$N1_{HD}$','$N2_{HD}$','CLD' ,'DCP','TDU', 'LSC','$F1_{HD}$'])
 ax.set(ylabel='Difference in accuracy', xlabel='')
-ax.legend(title='Datasets',ncol=3)
+# ax.legend(title='Datasets',ncol=3)
+ax.legend([],[], frameon=False)
 plt.tight_layout()
 plt.show()
 
