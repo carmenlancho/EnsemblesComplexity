@@ -1512,10 +1512,11 @@ for data_i in data_list:
                        'Boots_Hostility_class_mean_split4_classic',
                        'Boots_Hostility_class_mean_split4_classic_extreme'
                          ])
-    axes[0].set_xticklabels(['Uniform', 'Easy', 'Hard','Combo','Combo_X',
-                        'Split2','Split2_X','Split4','Split4_X','Split9','Split9_X',
-                        'Cl_Split1_3','Cl_Split1_3_X','Cl_Split2_5','Cl_Split2_5_X',
-                             'Cl_Split4_9','Cl_Split4_9_X'],
+    axes[0].set_xticklabels(['Uniform', 'Easy', 'Hard','Combo',r'Combo $\alpha$=4',
+                        'Combo s=2',r'Combo s=2 $\alpha$=4','Combo s=4',r'Combo s=4 $\alpha$=4',
+                             'Combo s=9',r'Combo s=9 $\alpha$=4',
+                        's=1',r's=1 $\alpha$=4','s=2',r's=2 $\alpha$=4',
+                             's=4',r's=4 $\alpha$=4'],
                        rotation=40)
     axes[0].legend([], [], frameon=False)
     axes[0].set(ylabel='Hostility')
@@ -1541,10 +1542,11 @@ for data_i in data_list:
                          'Boots_kDN_class_mean_split1_classic', 'Boots_kDN_class_mean_split1_classic_extreme',
                          'Boots_kDN_class_mean_split2_classic', 'Boots_kDN_class_mean_split2_classic_extreme',
                          'Boots_kDN_class_mean_split4_classic', 'Boots_kDN_class_mean_split4_classic_extreme'])
-    axes[1].set_xticklabels(['Uniform', 'Easy', 'Hard','Combo','Combo_X',
-                        'Split2','Split2_X','Split4','Split4_X','Split9','Split9_X',
-                        'Cl_Split1_3','Cl_Split1_3_X','Cl_Split2_5','Cl_Split2_5_X',
-                             'Cl_Split4_9','Cl_Split4_9_X'],
+    axes[1].set_xticklabels(['Uniform', 'Easy', 'Hard','Combo',r'Combo $\alpha$=4',
+                        'Combo s=2',r'Combo s=2 $\alpha$=4','Combo s=4',r'Combo s=4 $\alpha$=4',
+                             'Combo s=9',r'Combo s=9 $\alpha$=4',
+                        's=1',r's=1 $\alpha$=4','s=2',r's=2 $\alpha$=4',
+                             's=4',r's=4 $\alpha$=4'],
                        rotation=40)
     axes[1].legend([], [], frameon=False)
     axes[1].set(ylabel='kDN')
@@ -1570,10 +1572,11 @@ for data_i in data_list:
                          'Boots_DCP_class_mean_split1_classic', 'Boots_DCP_class_mean_split1_classic_extreme',
                          'Boots_DCP_class_mean_split2_classic', 'Boots_DCP_class_mean_split2_classic_extreme',
                          'Boots_DCP_class_mean_split4_classic', 'Boots_DCP_class_mean_split4_classic_extreme'])
-    axes[2].set_xticklabels(['Uniform', 'Easy', 'Hard','Combo','Combo_X',
-                        'Split2','Split2_X','Split4','Split4_X','Split9','Split9_X',
-                        'Cl_Split1_3','Cl_Split1_3_X','Cl_Split2_5','Cl_Split2_5_X',
-                             'Cl_Split4_9','Cl_Split4_9_X'],
+    axes[2].set_xticklabels(['Uniform', 'Easy', 'Hard','Combo',r'Combo $\alpha$=4',
+                        'Combo s=2',r'Combo s=2 $\alpha$=4','Combo s=4',r'Combo s=4 $\alpha$=4',
+                             'Combo s=9',r'Combo s=9 $\alpha$=4',
+                        's=1',r's=1 $\alpha$=4','s=2',r's=2 $\alpha$=4',
+                             's=4',r's=4 $\alpha$=4'],
                             rotation=40)
     axes[2].legend([], [], frameon=False)
     axes[2].set(ylabel='DCP')
@@ -1599,10 +1602,11 @@ for data_i in data_list:
                          'Boots_LSC_class_mean_split1_classic', 'Boots_LSC_class_mean_split1_classic_extreme',
                          'Boots_LSC_class_mean_split2_classic', 'Boots_LSC_class_mean_split2_classic_extreme',
                          'Boots_LSC_class_mean_split4_classic', 'Boots_LSC_class_mean_split4_classic_extreme'])
-    axes[3].set_xticklabels(['Uniform', 'Easy', 'Hard','Combo','Combo_X',
-                        'Split2','Split2_X','Split4','Split4_X','Split9','Split9_X',
-                        'Cl_Split1_3','Cl_Split1_3_X','Cl_Split2_5','Cl_Split2_5_X',
-                             'Cl_Split4_9','Cl_Split4_9_X'],
+    axes[3].set_xticklabels(['Uniform', 'Easy', 'Hard','Combo',r'Combo $\alpha$=4',
+                        'Combo s=2',r'Combo s=2 $\alpha$=4','Combo s=4',r'Combo s=4 $\alpha$=4',
+                             'Combo s=9',r'Combo s=9 $\alpha$=4',
+                        's=1',r's=1 $\alpha$=4','s=2',r's=2 $\alpha$=4',
+                             's=4',r's=4 $\alpha$=4'],
                             rotation=40)
     axes[3].legend([], [], frameon=False)
     axes[3].set(ylabel='LSC')
@@ -1628,10 +1632,11 @@ for data_i in data_list:
                          'Boots_N1_class_mean_split1_classic', 'Boots_N1_class_mean_split1_classic_extreme',
                          'Boots_N1_class_mean_split2_classic', 'Boots_N1_class_mean_split2_classic_extreme',
                          'Boots_N1_class_mean_split4_classic', 'Boots_N1_class_mean_split4_classic_extreme'])
-    axes[4].set_xticklabels(['Uniform', 'Easy', 'Hard','Combo','Combo_X',
-                        'Split2','Split2_X','Split4','Split4_X','Split9','Split9_X',
-                        'Cl_Split1_3','Cl_Split1_3_X','Cl_Split2_5','Cl_Split2_5_X',
-                             'Cl_Split4_9','Cl_Split4_9_X'],
+    axes[4].set_xticklabels(['Uniform', 'Easy', 'Hard','Combo',r'Combo $\alpha$=4',
+                        'Combo s=2',r'Combo s=2 $\alpha$=4','Combo s=4',r'Combo s=4 $\alpha$=4',
+                             'Combo s=9',r'Combo s=9 $\alpha$=4',
+                        's=1',r's=1 $\alpha$=4','s=2',r's=2 $\alpha$=4',
+                             's=4',r's=4 $\alpha$=4'],
                             rotation=40)
     axes[4].legend([], [], frameon=False)
     axes[4].set(ylabel='N1')
@@ -1657,10 +1662,11 @@ for data_i in data_list:
                          'Boots_N2_class_mean_split1_classic', 'Boots_N2_class_mean_split1_classic_extreme',
                          'Boots_N2_class_mean_split2_classic', 'Boots_N2_class_mean_split2_classic_extreme',
                          'Boots_N2_class_mean_split4_classic', 'Boots_N2_class_mean_split4_classic_extreme'])
-    axes[5].set_xticklabels(['Uniform', 'Easy', 'Hard','Combo','Combo_X',
-                        'Split2','Split2_X','Split4','Split4_X','Split9','Split9_X',
-                        'Cl_Split1_3','Cl_Split1_3_X','Cl_Split2_5','Cl_Split2_5_X',
-                             'Cl_Split4_9','Cl_Split4_9_X'],
+    axes[5].set_xticklabels(['Uniform', 'Easy', 'Hard','Combo',r'Combo $\alpha$=4',
+                        'Combo s=2',r'Combo s=2 $\alpha$=4','Combo s=4',r'Combo s=4 $\alpha$=4',
+                             'Combo s=9',r'Combo s=9 $\alpha$=4',
+                        's=1',r's=1 $\alpha$=4','s=2',r's=2 $\alpha$=4',
+                             's=4',r's=4 $\alpha$=4'],
                             rotation=40)
     axes[5].legend([], [], frameon=False)
     axes[5].set(ylabel='N2')
@@ -1686,10 +1692,11 @@ for data_i in data_list:
                          'Boots_F1_class_mean_split1_classic', 'Boots_F1_class_mean_split1_classic_extreme',
                          'Boots_F1_class_mean_split2_classic', 'Boots_F1_class_mean_split2_classic_extreme',
                          'Boots_F1_class_mean_split4_classic', 'Boots_F1_class_mean_split4_classic_extreme'])
-    axes[6].set_xticklabels(['Uniform', 'Easy', 'Hard','Combo','Combo_X',
-                        'Split2','Split2_X','Split4','Split4_X','Split9','Split9_X',
-                        'Cl_Split1_3','Cl_Split1_3_X','Cl_Split2_5','Cl_Split2_5_X',
-                             'Cl_Split4_9','Cl_Split4_9_X'],
+    axes[6].set_xticklabels(['Uniform', 'Easy', 'Hard','Combo',r'Combo $\alpha$=4',
+                        'Combo s=2',r'Combo s=2 $\alpha$=4','Combo s=4',r'Combo s=4 $\alpha$=4',
+                             'Combo s=9',r'Combo s=9 $\alpha$=4',
+                        's=1',r's=1 $\alpha$=4','s=2',r's=2 $\alpha$=4',
+                             's=4',r's=4 $\alpha$=4'],
                             rotation=40)
     axes[6].legend([], [], frameon=False)
     axes[6].set(ylabel='F1')
@@ -1715,10 +1722,11 @@ for data_i in data_list:
                             'Boots_TD_U_class_mean_split1_classic', 'Boots_TD_U_class_mean_split1_classic_extreme',
                             'Boots_TD_U_class_mean_split2_classic', 'Boots_TD_U_class_mean_split2_classic_extreme',
                             'Boots_TD_U_class_mean_split4_classic', 'Boots_TD_U_class_mean_split4_classic_extreme'])
-    axes[7].set_xticklabels(['Uniform', 'Easy', 'Hard','Combo','Combo_X',
-                        'Split2','Split2_X','Split4','Split4_X','Split9','Split9_X',
-                        'Cl_Split1_3','Cl_Split1_3_X','Cl_Split2_5','Cl_Split2_5_X',
-                             'Cl_Split4_9','Cl_Split4_9_X'],
+    axes[7].set_xticklabels(['Uniform', 'Easy', 'Hard','Combo',r'Combo $\alpha$=4',
+                        'Combo s=2',r'Combo s=2 $\alpha$=4','Combo s=4',r'Combo s=4 $\alpha$=4',
+                             'Combo s=9',r'Combo s=9 $\alpha$=4',
+                        's=1',r's=1 $\alpha$=4','s=2',r's=2 $\alpha$=4',
+                             's=4',r's=4 $\alpha$=4'],
                             rotation=40)
     axes[7].legend([], [], frameon=False)
     axes[7].set(ylabel='TDU')
@@ -1744,10 +1752,11 @@ for data_i in data_list:
                             'Boots_CLD_class_mean_split1_classic', 'Boots_CLD_class_mean_split1_classic_extreme',
                             'Boots_CLD_class_mean_split2_classic', 'Boots_CLD_class_mean_split2_classic_extreme',
                             'Boots_CLD_class_mean_split4_classic', 'Boots_CLD_class_mean_split4_classic_extreme'])
-    axes[8].set_xticklabels(['Uniform', 'Easy', 'Hard','Combo','Combo_X',
-                        'Split2','Split2_X','Split4','Split4_X','Split9','Split9_X',
-                        'Cl_Split1_3','Cl_Split1_3_X','Cl_Split2_5','Cl_Split2_5_X',
-                             'Cl_Split4_9','Cl_Split4_9_X'],
+    axes[8].set_xticklabels(['Uniform', 'Easy', 'Hard','Combo',r'Combo $\alpha$=4',
+                        'Combo s=2',r'Combo s=2 $\alpha$=4','Combo s=4',r'Combo s=4 $\alpha$=4',
+                             'Combo s=9',r'Combo s=9 $\alpha$=4',
+                        's=1',r's=1 $\alpha$=4','s=2',r's=2 $\alpha$=4',
+                             's=4',r's=4 $\alpha$=4'],
                             rotation=40)
     axes[8].legend([], [], frameon=False)
     axes[8].set(ylabel='CLD')
