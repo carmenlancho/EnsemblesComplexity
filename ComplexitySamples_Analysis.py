@@ -513,7 +513,7 @@ for data_i in data_list:
 # data_list = ['teaching_assistant_LM']
 path_to_save = root_path+'/Analysis_results_ranking_avg'
 
-# data_i = 'Data1_'
+# data_i = 'diabetes'
 
 for data_i in data_list:
     print(data_i)
@@ -1021,7 +1021,7 @@ data_list = ['Data1_','Data2','Data3','Data4','Data5','Data6','Data7','Data8',
             'diabetic_retinopathy', 'breast-w','arrhythmia_cfs','banknote_authentication']
 path_to_save = root_path+'/Analysis_results'
 
-# data_i = 'Data5_'
+# data_i = 'diabetes'
 
 for data_i in data_list:
     print(data_i)
@@ -1460,49 +1460,49 @@ for data_i in data_list:
     df_long_cld2 = pd.concat([df_long_cld2, data_aux_cld2], axis=0)
 
 
-    # # Boxplot
-    # df_long_host2 = df_long_host2[~df_long_host2.scheme.str.contains("easy")]
-    # df_long_host2 = df_long_host2[~df_long_host2.scheme.str.contains("hard")]
-    # df_long_host2 = df_long_host2[~df_long_host2.scheme.str.contains("combo")]
-    # plt.figure(figsize=(6.5, 4.5))
-    # ax = sns.boxplot(y=df_long_host2["Complexity_Class"], x=df_long_host2["scheme"],hue=df_long_host2["variable"],
-    #             order=['Uniform',
-    #                        # 'Boots_Hostility_class_mean_easy', 'Boots_Hostility_class_mean_hard',
-    #                        # 'Boots_Hostility_class_mean_combo', 'Boots_Hostility_class_mean_combo_extreme',
-    #                        # 'Boots_Hostility_class_mean_combosplit2', 'Boots_Hostility_class_mean_combosplit2_extreme',
-    #                        # 'Boots_Hostility_class_mean_combosplit4', 'Boots_Hostility_class_mean_combosplit4_extreme',
-    #                        # 'Boots_Hostility_class_mean_combosplit9', 'Boots_Hostility_class_mean_combosplit9_extreme',
-    #                        'Boots_Hostility_class_mean_split1_classic',
-    #                        'Boots_Hostility_class_mean_split1_classic_extreme',
-    #                        'Boots_Hostility_class_mean_split2_classic',
-    #                        'Boots_Hostility_class_mean_split2_classic_extreme',
-    #                        'Boots_Hostility_class_mean_split4_classic',
-    #                        'Boots_Hostility_class_mean_split4_classic_extreme'
-    #                        ],
-    #                  color='white')
-    # sns.stripplot(data=df_long_host2, x="scheme", y="Complexity_Class", hue="variable",
-    #               dodge=True, ax=ax,
-    #               order=['Uniform',
-    #                        #    'Boots_Hostility_class_mean_easy', 'Boots_Hostility_class_mean_hard',
-    #                        # 'Boots_Hostility_class_mean_combo', 'Boots_Hostility_class_mean_combo_extreme',
-    #                        # 'Boots_Hostility_class_mean_combosplit2', 'Boots_Hostility_class_mean_combosplit2_extreme',
-    #                        # 'Boots_Hostility_class_mean_combosplit4', 'Boots_Hostility_class_mean_combosplit4_extreme',
-    #                        # 'Boots_Hostility_class_mean_combosplit9', 'Boots_Hostility_class_mean_combosplit9_extreme',
-    #                        'Boots_Hostility_class_mean_split1_classic',
-    #                        'Boots_Hostility_class_mean_split1_classic_extreme',
-    #                        'Boots_Hostility_class_mean_split2_classic',
-    #                        'Boots_Hostility_class_mean_split2_classic_extreme',
-    #                        'Boots_Hostility_class_mean_split4_classic',
-    #                        'Boots_Hostility_class_mean_split4_classic_extreme'])
-    # ax.set_xticklabels(['Uniform',
-    #                         's=1',r's=1 $\alpha$=4','s=2',r's=2 $\alpha$=4',
-    #                              's=4',r's=4 $\alpha$=4'],
-    #                    rotation=60)
-    # ax.set(ylabel='Hostility', xlabel='')
-    # ax.legend([], [], frameon=False)
-    # plt.tight_layout()
-    # plt.show()
-    # plt.clf()
+    # Boxplot
+    df_long_host2 = df_long_host2[~df_long_host2.scheme.str.contains("easy")]
+    df_long_host2 = df_long_host2[~df_long_host2.scheme.str.contains("hard")]
+    df_long_host2 = df_long_host2[~df_long_host2.scheme.str.contains("combo")]
+    plt.figure(figsize=(6.5, 4.5))
+    ax = sns.boxplot(y=df_long_host2["Complexity_Class"], x=df_long_host2["scheme"],hue=df_long_host2["variable"],
+                order=['Uniform',
+                           # 'Boots_Hostility_class_mean_easy', 'Boots_Hostility_class_mean_hard',
+                           # 'Boots_Hostility_class_mean_combo', 'Boots_Hostility_class_mean_combo_extreme',
+                           # 'Boots_Hostility_class_mean_combosplit2', 'Boots_Hostility_class_mean_combosplit2_extreme',
+                           # 'Boots_Hostility_class_mean_combosplit4', 'Boots_Hostility_class_mean_combosplit4_extreme',
+                           # 'Boots_Hostility_class_mean_combosplit9', 'Boots_Hostility_class_mean_combosplit9_extreme',
+                           'Boots_Hostility_class_mean_split1_classic',
+                           'Boots_Hostility_class_mean_split1_classic_extreme',
+                           'Boots_Hostility_class_mean_split2_classic',
+                           'Boots_Hostility_class_mean_split2_classic_extreme',
+                           'Boots_Hostility_class_mean_split4_classic',
+                           'Boots_Hostility_class_mean_split4_classic_extreme'
+                           ],
+                     color='white')
+    sns.stripplot(data=df_long_host2, x="scheme", y="Complexity_Class", hue="variable",
+                  dodge=True, ax=ax,
+                  order=['Uniform',
+                           #    'Boots_Hostility_class_mean_easy', 'Boots_Hostility_class_mean_hard',
+                           # 'Boots_Hostility_class_mean_combo', 'Boots_Hostility_class_mean_combo_extreme',
+                           # 'Boots_Hostility_class_mean_combosplit2', 'Boots_Hostility_class_mean_combosplit2_extreme',
+                           # 'Boots_Hostility_class_mean_combosplit4', 'Boots_Hostility_class_mean_combosplit4_extreme',
+                           # 'Boots_Hostility_class_mean_combosplit9', 'Boots_Hostility_class_mean_combosplit9_extreme',
+                           'Boots_Hostility_class_mean_split1_classic',
+                           'Boots_Hostility_class_mean_split1_classic_extreme',
+                           'Boots_Hostility_class_mean_split2_classic',
+                           'Boots_Hostility_class_mean_split2_classic_extreme',
+                           'Boots_Hostility_class_mean_split4_classic',
+                           'Boots_Hostility_class_mean_split4_classic_extreme'])
+    ax.set_xticklabels(['Uniform',
+                            's=1',r's=1 $\alpha$=4','s=2',r's=2 $\alpha$=4',
+                                 's=4',r's=4 $\alpha$=4'])
+                       # rotation=60)
+    ax.set(ylabel='Hostility', xlabel='')
+    ax.legend([], [], frameon=False)
+    plt.tight_layout()
+    plt.show()
+    plt.clf()
 
     fig, axes = plt.subplots(9, 1, figsize=(8, 50))
     sns.boxplot(ax=axes[0],y=df_long_host2["Complexity_Class"], x=df_long_host2["scheme"],hue=df_long_host2["variable"],
