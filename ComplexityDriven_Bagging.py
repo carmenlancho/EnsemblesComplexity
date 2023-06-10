@@ -381,7 +381,7 @@ total_name_list = [#'teaching_assistant_MH.csv','contraceptive_NL.csv','hill_val
  'ionosphere.csv','bands.csv','wdbc.csv','teaching_assistant_LH.csv',
  'pima.csv','spambase.csv','banknote_authentication.csv', 'haberman.csv']
 # 'appendicitis.csv' me ha dado problemas
-total_name_list = ['Data9.csv']
+total_name_list = ['Data2.csv']
 
 path_to_save = root_path+'/Bagging_results'
 n_ensembles = 200 # maximum number of ensembles to consider (later we plot and stop when we want)
