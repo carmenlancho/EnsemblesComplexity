@@ -1033,17 +1033,17 @@ for data_i in data_list:
         name = file[25:]
         data = pd.read_csv(file)
         if ('split4' in name and 'extreme' not in name and 'classic' not in name):
-            data.columns = [str(col) + '_split4' for col in data.columns]
+            data.columns = [str(col) + '_combosplit4' for col in data.columns]
         elif ('split2' in name and 'extreme' not in name and 'classic' not in name):
-            data.columns = [str(col) + '_split2' for col in data.columns]
+            data.columns = [str(col) + '_combosplit2' for col in data.columns]
         elif ('split9' in name and 'extreme' not in name and 'classic' not in name):
-            data.columns = [str(col) + '_split9' for col in data.columns]
+            data.columns = [str(col) + '_combosplit9' for col in data.columns]
         elif ('split4' in name and 'extreme' in name and 'classic' not in name):
-            data.columns = [str(col) + '_split4_extreme' for col in data.columns]
+            data.columns = [str(col) + '_combosplit4_extreme' for col in data.columns]
         elif ('split2' in name and 'extreme' in name and 'classic' not in name):
-            data.columns = [str(col) + '_split2_extreme' for col in data.columns]
+            data.columns = [str(col) + '_combosplit2_extreme' for col in data.columns]
         elif ('split9' in name and 'extreme' in name and 'classic' not in name):
-            data.columns = [str(col) + '_split9_extreme' for col in data.columns]
+            data.columns = [str(col) + '_combosplit9_extreme' for col in data.columns]
         elif ('hard' in name):
             data.columns = [str(col) + '_hard' for col in data.columns]
         elif ('easy' in name):
@@ -1072,9 +1072,9 @@ for data_i in data_list:
     df_long_host = pd.melt(data_total[data_total['weights'] == 'Hostility'],id_vars=['n_ensemble','weights'],
                       value_vars=['Boots_Hostility_class_mean_easy', 'Boots_Hostility_class_mean_hard',
                                   'Boots_Hostility_class_mean_combo', 'Boots_Hostility_class_mean_combo_extreme',
-                                  'Boots_Hostility_class_mean_split2', 'Boots_Hostility_class_mean_split2_extreme',
-                                  'Boots_Hostility_class_mean_split4', 'Boots_Hostility_class_mean_split4_extreme',
-                                  'Boots_Hostility_class_mean_split9', 'Boots_Hostility_class_mean_split9_extreme',
+                                  'Boots_Hostility_class_mean_combosplit2', 'Boots_Hostility_class_mean_combosplit2_extreme',
+                                  'Boots_Hostility_class_mean_combosplit4', 'Boots_Hostility_class_mean_combosplit4_extreme',
+                                  'Boots_Hostility_class_mean_combosplit9', 'Boots_Hostility_class_mean_combosplit9_extreme',
                                   'Boots_Hostility_class_mean_split1_classic', 'Boots_Hostility_class_mean_split1_classic_extreme',
                                   'Boots_Hostility_class_mean_split2_classic', 'Boots_Hostility_class_mean_split2_classic_extreme',
                                   'Boots_Hostility_class_mean_split4_classic', 'Boots_Hostility_class_mean_split4_classic_extreme'],
@@ -1105,9 +1105,9 @@ for data_i in data_list:
     #             order=['Uniform',
     #                    'Boots_Hostility_class_mean_easy', 'Boots_Hostility_class_mean_hard',
     #                               'Boots_Hostility_class_mean_combo', 'Boots_Hostility_class_mean_combo_extreme',
-    #                               'Boots_Hostility_class_mean_split2', 'Boots_Hostility_class_mean_split2_extreme',
-    #                               'Boots_Hostility_class_mean_split4', 'Boots_Hostility_class_mean_split4_extreme',
-    #                               'Boots_Hostility_class_mean_split9', 'Boots_Hostility_class_mean_split9_extreme',
+    #                               'Boots_Hostility_class_mean_combosplit2', 'Boots_Hostility_class_mean_combosplit2_extreme',
+    #                               'Boots_Hostility_class_mean_combosplit4', 'Boots_Hostility_class_mean_combosplit4_extreme',
+    #                               'Boots_Hostility_class_mean_combosplit9', 'Boots_Hostility_class_mean_combosplit9_extreme',
     #                             'Boots_Hostility_class_mean_split1_classic', 'Boots_Hostility_class_mean_split1_classic_extreme',
     #                             'Boots_Hostility_class_mean_split2_classic', 'Boots_Hostility_class_mean_split2_classic_extreme',
     #                             'Boots_Hostility_class_mean_split4_classic', 'Boots_Hostility_class_mean_split4_classic_extreme'
@@ -1119,9 +1119,9 @@ for data_i in data_list:
     #               order=['Uniform',
     #                      'Boots_Hostility_class_mean_easy', 'Boots_Hostility_class_mean_hard',
     #                      'Boots_Hostility_class_mean_combo', 'Boots_Hostility_class_mean_combo_extreme',
-    #                      'Boots_Hostility_class_mean_split2', 'Boots_Hostility_class_mean_split2_extreme',
-    #                      'Boots_Hostility_class_mean_split4', 'Boots_Hostility_class_mean_split4_extreme',
-    #                      'Boots_Hostility_class_mean_split9', 'Boots_Hostility_class_mean_split9_extreme',
+    #                      'Boots_Hostility_class_mean_combosplit2', 'Boots_Hostility_class_mean_combosplit2_extreme',
+    #                      'Boots_Hostility_class_mean_combosplit4', 'Boots_Hostility_class_mean_combosplit4_extreme',
+    #                      'Boots_Hostility_class_mean_combosplit9', 'Boots_Hostility_class_mean_combosplit9_extreme',
     #                   'Boots_Hostility_class_mean_split1_classic', 'Boots_Hostility_class_mean_split1_classic_extreme',
     #                   'Boots_Hostility_class_mean_split2_classic', 'Boots_Hostility_class_mean_split2_classic_extreme',
     #                   'Boots_Hostility_class_mean_split4_classic', 'Boots_Hostility_class_mean_split4_classic_extreme'
@@ -1139,9 +1139,9 @@ for data_i in data_list:
     df_long_kdn = pd.melt(data_total[data_total['weights'] == 'kDN'],id_vars=['n_ensemble','weights'],
                       value_vars=['Boots_kDN_class_mean_easy', 'Boots_kDN_class_mean_hard',
                                 'Boots_kDN_class_mean_combo', 'Boots_kDN_class_mean_combo_extreme',
-                                'Boots_kDN_class_mean_split2', 'Boots_kDN_class_mean_split2_extreme',
-                                'Boots_kDN_class_mean_split4', 'Boots_kDN_class_mean_split4_extreme',
-                                'Boots_kDN_class_mean_split9', 'Boots_kDN_class_mean_split9_extreme',
+                                'Boots_kDN_class_mean_combosplit2', 'Boots_kDN_class_mean_combosplit2_extreme',
+                                'Boots_kDN_class_mean_combosplit4', 'Boots_kDN_class_mean_combosplit4_extreme',
+                                'Boots_kDN_class_mean_combosplit9', 'Boots_kDN_class_mean_combosplit9_extreme',
                                 'Boots_kDN_class_mean_split1_classic', 'Boots_kDN_class_mean_split1_classic_extreme',
                                 'Boots_kDN_class_mean_split2_classic', 'Boots_kDN_class_mean_split2_classic_extreme',
                                 'Boots_kDN_class_mean_split4_classic', 'Boots_kDN_class_mean_split4_classic_extreme'],
@@ -1160,9 +1160,9 @@ for data_i in data_list:
     df_long_dcp = pd.melt(data_total[data_total['weights'] == 'DCP'],id_vars=['n_ensemble','weights'],
                       value_vars=['Boots_DCP_class_mean_easy', 'Boots_DCP_class_mean_hard',
                                 'Boots_DCP_class_mean_combo', 'Boots_DCP_class_mean_combo_extreme',
-                                'Boots_DCP_class_mean_split2', 'Boots_DCP_class_mean_split2_extreme',
-                                'Boots_DCP_class_mean_split4', 'Boots_DCP_class_mean_split4_extreme',
-                                'Boots_DCP_class_mean_split9', 'Boots_DCP_class_mean_split9_extreme',
+                                'Boots_DCP_class_mean_combosplit2', 'Boots_DCP_class_mean_combosplit2_extreme',
+                                'Boots_DCP_class_mean_combosplit4', 'Boots_DCP_class_mean_combosplit4_extreme',
+                                'Boots_DCP_class_mean_combosplit9', 'Boots_DCP_class_mean_combosplit9_extreme',
                                 'Boots_DCP_class_mean_split1_classic', 'Boots_DCP_class_mean_split1_classic_extreme',
                                 'Boots_DCP_class_mean_split2_classic', 'Boots_DCP_class_mean_split2_classic_extreme',
                                 'Boots_DCP_class_mean_split4_classic', 'Boots_DCP_class_mean_split4_classic_extreme'],
@@ -1182,9 +1182,9 @@ for data_i in data_list:
     df_long_lsc = pd.melt(data_total[data_total['weights'] == 'LSC'],id_vars=['n_ensemble','weights'],
                       value_vars=['Boots_LSC_class_mean_easy', 'Boots_LSC_class_mean_hard',
                             'Boots_LSC_class_mean_combo', 'Boots_LSC_class_mean_combo_extreme',
-                            'Boots_LSC_class_mean_split2', 'Boots_LSC_class_mean_split2_extreme',
-                            'Boots_LSC_class_mean_split4', 'Boots_LSC_class_mean_split4_extreme',
-                            'Boots_LSC_class_mean_split9', 'Boots_LSC_class_mean_split9_extreme',
+                            'Boots_LSC_class_mean_combosplit2', 'Boots_LSC_class_mean_combosplit2_extreme',
+                            'Boots_LSC_class_mean_combosplit4', 'Boots_LSC_class_mean_combosplit4_extreme',
+                            'Boots_LSC_class_mean_combosplit9', 'Boots_LSC_class_mean_combosplit9_extreme',
                             'Boots_LSC_class_mean_split1_classic', 'Boots_LSC_class_mean_split1_classic_extreme',
                             'Boots_LSC_class_mean_split2_classic', 'Boots_LSC_class_mean_split2_classic_extreme',
                             'Boots_LSC_class_mean_split4_classic', 'Boots_LSC_class_mean_split4_classic_extreme'],
@@ -1204,9 +1204,9 @@ for data_i in data_list:
     df_long_n1 = pd.melt(data_total[data_total['weights'] == 'N1'],id_vars=['n_ensemble','weights'],
                       value_vars=['Boots_N1_class_mean_easy', 'Boots_N1_class_mean_hard',
                             'Boots_N1_class_mean_combo', 'Boots_N1_class_mean_combo_extreme',
-                            'Boots_N1_class_mean_split2', 'Boots_N1_class_mean_split2_extreme',
-                            'Boots_N1_class_mean_split4', 'Boots_N1_class_mean_split4_extreme',
-                            'Boots_N1_class_mean_split9', 'Boots_N1_class_mean_split9_extreme',
+                            'Boots_N1_class_mean_combosplit2', 'Boots_N1_class_mean_combosplit2_extreme',
+                            'Boots_N1_class_mean_combosplit4', 'Boots_N1_class_mean_combosplit4_extreme',
+                            'Boots_N1_class_mean_combosplit9', 'Boots_N1_class_mean_combosplit9_extreme',
                             'Boots_N1_class_mean_split1_classic', 'Boots_N1_class_mean_split1_classic_extreme',
                             'Boots_N1_class_mean_split2_classic', 'Boots_N1_class_mean_split2_classic_extreme',
                             'Boots_N1_class_mean_split4_classic', 'Boots_N1_class_mean_split4_classic_extreme'],
@@ -1226,9 +1226,9 @@ for data_i in data_list:
     df_long_n2 = pd.melt(data_total[data_total['weights'] == 'N2'],id_vars=['n_ensemble','weights'],
                       value_vars=['Boots_N2_class_mean_easy', 'Boots_N2_class_mean_hard',
                                 'Boots_N2_class_mean_combo', 'Boots_N2_class_mean_combo_extreme',
-                                'Boots_N2_class_mean_split2', 'Boots_N2_class_mean_split2_extreme',
-                                'Boots_N2_class_mean_split4', 'Boots_N2_class_mean_split4_extreme',
-                                'Boots_N2_class_mean_split9', 'Boots_N2_class_mean_split9_extreme',
+                                'Boots_N2_class_mean_combosplit2', 'Boots_N2_class_mean_combosplit2_extreme',
+                                'Boots_N2_class_mean_combosplit4', 'Boots_N2_class_mean_combosplit4_extreme',
+                                'Boots_N2_class_mean_combosplit9', 'Boots_N2_class_mean_combosplit9_extreme',
                                 'Boots_N2_class_mean_split1_classic', 'Boots_N2_class_mean_split1_classic_extreme',
                                 'Boots_N2_class_mean_split2_classic', 'Boots_N2_class_mean_split2_classic_extreme',
                                 'Boots_N2_class_mean_split4_classic', 'Boots_N2_class_mean_split4_classic_extreme'],
@@ -1249,9 +1249,9 @@ for data_i in data_list:
     df_long_f1 = pd.melt(data_total[data_total['weights'] == 'F1'],id_vars=['n_ensemble','weights'],
                       value_vars=['Boots_F1_class_mean_easy', 'Boots_F1_class_mean_hard',
                                 'Boots_F1_class_mean_combo', 'Boots_F1_class_mean_combo_extreme',
-                                'Boots_F1_class_mean_split2', 'Boots_F1_class_mean_split2_extreme',
-                                'Boots_F1_class_mean_split4', 'Boots_F1_class_mean_split4_extreme',
-                                'Boots_F1_class_mean_split9', 'Boots_F1_class_mean_split9_extreme',
+                                'Boots_F1_class_mean_combosplit2', 'Boots_F1_class_mean_combosplit2_extreme',
+                                'Boots_F1_class_mean_combosplit4', 'Boots_F1_class_mean_combosplit4_extreme',
+                                'Boots_F1_class_mean_combosplit9', 'Boots_F1_class_mean_combosplit9_extreme',
                                 'Boots_F1_class_mean_split1_classic', 'Boots_F1_class_mean_split1_classic_extreme',
                                 'Boots_F1_class_mean_split2_classic', 'Boots_F1_class_mean_split2_classic_extreme',
                                 'Boots_F1_class_mean_split4_classic', 'Boots_F1_class_mean_split4_classic_extreme'],
@@ -1271,9 +1271,9 @@ for data_i in data_list:
     df_long_tdu = pd.melt(data_total[data_total['weights'] == 'TD_U'],id_vars=['n_ensemble','weights'],
                       value_vars=['Boots_TD_U_class_mean_easy', 'Boots_TD_U_class_mean_hard',
                                 'Boots_TD_U_class_mean_combo', 'Boots_TD_U_class_mean_combo_extreme',
-                                'Boots_TD_U_class_mean_split2', 'Boots_TD_U_class_mean_split2_extreme',
-                                'Boots_TD_U_class_mean_split4', 'Boots_TD_U_class_mean_split4_extreme',
-                                'Boots_TD_U_class_mean_split9', 'Boots_TD_U_class_mean_split9_extreme',
+                                'Boots_TD_U_class_mean_combosplit2', 'Boots_TD_U_class_mean_combosplit2_extreme',
+                                'Boots_TD_U_class_mean_combosplit4', 'Boots_TD_U_class_mean_combosplit4_extreme',
+                                'Boots_TD_U_class_mean_combosplit9', 'Boots_TD_U_class_mean_combosplit9_extreme',
                                 'Boots_TD_U_class_mean_split1_classic', 'Boots_TD_U_class_mean_split1_classic_extreme',
                                 'Boots_TD_U_class_mean_split2_classic', 'Boots_TD_U_class_mean_split2_classic_extreme',
                                 'Boots_TD_U_class_mean_split4_classic', 'Boots_TD_U_class_mean_split4_classic_extreme'],
@@ -1294,9 +1294,9 @@ for data_i in data_list:
     df_long_cld = pd.melt(data_total[data_total['weights'] == 'CLD'],id_vars=['n_ensemble','weights'],
                       value_vars=['Boots_CLD_class_mean_easy', 'Boots_CLD_class_mean_hard',
                                 'Boots_CLD_class_mean_combo', 'Boots_CLD_class_mean_combo_extreme',
-                                'Boots_CLD_class_mean_split2', 'Boots_CLD_class_mean_split2_extreme',
-                                'Boots_CLD_class_mean_split4', 'Boots_CLD_class_mean_split4_extreme',
-                                'Boots_CLD_class_mean_split9', 'Boots_CLD_class_mean_split9_extreme',
+                                'Boots_CLD_class_mean_combosplit2', 'Boots_CLD_class_mean_combosplit2_extreme',
+                                'Boots_CLD_class_mean_combosplit4', 'Boots_CLD_class_mean_combosplit4_extreme',
+                                'Boots_CLD_class_mean_combosplit9', 'Boots_CLD_class_mean_combosplit9_extreme',
                                 'Boots_CLD_class_mean_split1_classic', 'Boots_CLD_class_mean_split1_classic_extreme',
                                 'Boots_CLD_class_mean_split2_classic', 'Boots_CLD_class_mean_split2_classic_extreme',
                                 'Boots_CLD_class_mean_split4_classic', 'Boots_CLD_class_mean_split4_classic_extreme'],
@@ -1460,35 +1460,58 @@ for data_i in data_list:
     df_long_cld2 = pd.concat([df_long_cld2, data_aux_cld2], axis=0)
 
 
-    # Boxplot
-    # ax = sns.boxplot(y=df_long_host["Complexity"], x=df_long_host["variable"],
+    # # Boxplot
+    # df_long_host2 = df_long_host2[~df_long_host2.scheme.str.contains("easy")]
+    # df_long_host2 = df_long_host2[~df_long_host2.scheme.str.contains("hard")]
+    # df_long_host2 = df_long_host2[~df_long_host2.scheme.str.contains("combo")]
+    # plt.figure(figsize=(6.5, 4.5))
+    # ax = sns.boxplot(y=df_long_host2["Complexity_Class"], x=df_long_host2["scheme"],hue=df_long_host2["variable"],
     #             order=['Uniform',
-    #                    'Boots_Hostility_dataset_mean_easy', 'Boots_Hostility_dataset_mean_hard',
-    #                               'Boots_Hostility_dataset_mean_combo', 'Boots_Hostility_dataset_mean_combo_extreme',
-    #                               'Boots_Hostility_dataset_mean_split2', 'Boots_Hostility_dataset_mean_split2_extreme',
-    #                               'Boots_Hostility_dataset_mean_split4', 'Boots_Hostility_dataset_mean_split4_extreme',
-    #                               'Boots_Hostility_dataset_mean_split9', 'Boots_Hostility_dataset_mean_split9_extreme'],
+    #                        # 'Boots_Hostility_class_mean_easy', 'Boots_Hostility_class_mean_hard',
+    #                        # 'Boots_Hostility_class_mean_combo', 'Boots_Hostility_class_mean_combo_extreme',
+    #                        # 'Boots_Hostility_class_mean_combosplit2', 'Boots_Hostility_class_mean_combosplit2_extreme',
+    #                        # 'Boots_Hostility_class_mean_combosplit4', 'Boots_Hostility_class_mean_combosplit4_extreme',
+    #                        # 'Boots_Hostility_class_mean_combosplit9', 'Boots_Hostility_class_mean_combosplit9_extreme',
+    #                        'Boots_Hostility_class_mean_split1_classic',
+    #                        'Boots_Hostility_class_mean_split1_classic_extreme',
+    #                        'Boots_Hostility_class_mean_split2_classic',
+    #                        'Boots_Hostility_class_mean_split2_classic_extreme',
+    #                        'Boots_Hostility_class_mean_split4_classic',
+    #                        'Boots_Hostility_class_mean_split4_classic_extreme'
+    #                        ],
     #                  color='white')
-    # sns.stripplot(data=df_long_host, x="variable", y="Complexity", dodge=True, ax=ax,
+    # sns.stripplot(data=df_long_host2, x="scheme", y="Complexity_Class", hue="variable",
+    #               dodge=True, ax=ax,
     #               order=['Uniform',
-    #                      'Boots_Hostility_dataset_mean_easy', 'Boots_Hostility_dataset_mean_hard',
-    #                      'Boots_Hostility_dataset_mean_combo', 'Boots_Hostility_dataset_mean_combo_extreme',
-    #                      'Boots_Hostility_dataset_mean_split2', 'Boots_Hostility_dataset_mean_split2_extreme',
-    #                      'Boots_Hostility_dataset_mean_split4', 'Boots_Hostility_dataset_mean_split4_extreme',
-    #                      'Boots_Hostility_dataset_mean_split9', 'Boots_Hostility_dataset_mean_split9_extreme'])
-    # ax.set_xticklabels(['Uniform', 'Easy', 'Hard','Combo','Combo_X',
-    #                     'Split2','Split2_X','Split4','Split4_X','Split9','Split9_X'],
-    #                    rotation=40)
+    #                        #    'Boots_Hostility_class_mean_easy', 'Boots_Hostility_class_mean_hard',
+    #                        # 'Boots_Hostility_class_mean_combo', 'Boots_Hostility_class_mean_combo_extreme',
+    #                        # 'Boots_Hostility_class_mean_combosplit2', 'Boots_Hostility_class_mean_combosplit2_extreme',
+    #                        # 'Boots_Hostility_class_mean_combosplit4', 'Boots_Hostility_class_mean_combosplit4_extreme',
+    #                        # 'Boots_Hostility_class_mean_combosplit9', 'Boots_Hostility_class_mean_combosplit9_extreme',
+    #                        'Boots_Hostility_class_mean_split1_classic',
+    #                        'Boots_Hostility_class_mean_split1_classic_extreme',
+    #                        'Boots_Hostility_class_mean_split2_classic',
+    #                        'Boots_Hostility_class_mean_split2_classic_extreme',
+    #                        'Boots_Hostility_class_mean_split4_classic',
+    #                        'Boots_Hostility_class_mean_split4_classic_extreme'])
+    # ax.set_xticklabels(['Uniform',
+    #                         's=1',r's=1 $\alpha$=4','s=2',r's=2 $\alpha$=4',
+    #                              's=4',r's=4 $\alpha$=4'],
+    #                    rotation=60)
+    # ax.set(ylabel='Hostility', xlabel='')
+    # ax.legend([], [], frameon=False)
+    # plt.tight_layout()
     # plt.show()
+    # plt.clf()
 
-    fig, axes = plt.subplots(9, 1, figsize=(9, 50))
+    fig, axes = plt.subplots(9, 1, figsize=(8, 50))
     sns.boxplot(ax=axes[0],y=df_long_host2["Complexity_Class"], x=df_long_host2["scheme"],hue=df_long_host2["variable"],
                 order=['Uniform',
                        'Boots_Hostility_class_mean_easy', 'Boots_Hostility_class_mean_hard',
                        'Boots_Hostility_class_mean_combo', 'Boots_Hostility_class_mean_combo_extreme',
-                       'Boots_Hostility_class_mean_split2', 'Boots_Hostility_class_mean_split2_extreme',
-                       'Boots_Hostility_class_mean_split4', 'Boots_Hostility_class_mean_split4_extreme',
-                       'Boots_Hostility_class_mean_split9', 'Boots_Hostility_class_mean_split9_extreme',
+                       'Boots_Hostility_class_mean_combosplit2', 'Boots_Hostility_class_mean_combosplit2_extreme',
+                       'Boots_Hostility_class_mean_combosplit4', 'Boots_Hostility_class_mean_combosplit4_extreme',
+                       'Boots_Hostility_class_mean_combosplit9', 'Boots_Hostility_class_mean_combosplit9_extreme',
                        'Boots_Hostility_class_mean_split1_classic',
                        'Boots_Hostility_class_mean_split1_classic_extreme',
                        'Boots_Hostility_class_mean_split2_classic',
@@ -1502,9 +1525,9 @@ for data_i in data_list:
                   order=['Uniform',
                           'Boots_Hostility_class_mean_easy', 'Boots_Hostility_class_mean_hard',
                        'Boots_Hostility_class_mean_combo', 'Boots_Hostility_class_mean_combo_extreme',
-                       'Boots_Hostility_class_mean_split2', 'Boots_Hostility_class_mean_split2_extreme',
-                       'Boots_Hostility_class_mean_split4', 'Boots_Hostility_class_mean_split4_extreme',
-                       'Boots_Hostility_class_mean_split9', 'Boots_Hostility_class_mean_split9_extreme',
+                       'Boots_Hostility_class_mean_combosplit2', 'Boots_Hostility_class_mean_combosplit2_extreme',
+                       'Boots_Hostility_class_mean_combosplit4', 'Boots_Hostility_class_mean_combosplit4_extreme',
+                       'Boots_Hostility_class_mean_combosplit9', 'Boots_Hostility_class_mean_combosplit9_extreme',
                        'Boots_Hostility_class_mean_split1_classic',
                        'Boots_Hostility_class_mean_split1_classic_extreme',
                        'Boots_Hostility_class_mean_split2_classic',
@@ -1517,16 +1540,16 @@ for data_i in data_list:
                              'Combo s=9',r'Combo s=9 $\alpha$=4',
                         's=1',r's=1 $\alpha$=4','s=2',r's=2 $\alpha$=4',
                              's=4',r's=4 $\alpha$=4'],
-                       rotation=40)
+                       rotation=60)
     axes[0].legend([], [], frameon=False)
     axes[0].set(ylabel='Hostility')
     sns.boxplot(ax=axes[1],y=df_long_kdn2["Complexity_Class"], x=df_long_kdn2["scheme"],hue=df_long_kdn2["variable"],
                 order=['Uniform',
                        'Boots_kDN_class_mean_easy', 'Boots_kDN_class_mean_hard',
                        'Boots_kDN_class_mean_combo', 'Boots_kDN_class_mean_combo_extreme',
-                       'Boots_kDN_class_mean_split2', 'Boots_kDN_class_mean_split2_extreme',
-                       'Boots_kDN_class_mean_split4', 'Boots_kDN_class_mean_split4_extreme',
-                       'Boots_kDN_class_mean_split9', 'Boots_kDN_class_mean_split9_extreme',
+                       'Boots_kDN_class_mean_combosplit2', 'Boots_kDN_class_mean_combosplit2_extreme',
+                       'Boots_kDN_class_mean_combosplit4', 'Boots_kDN_class_mean_combosplit4_extreme',
+                       'Boots_kDN_class_mean_combosplit9', 'Boots_kDN_class_mean_combosplit9_extreme',
                        'Boots_kDN_class_mean_split1_classic', 'Boots_kDN_class_mean_split1_classic_extreme',
                        'Boots_kDN_class_mean_split2_classic', 'Boots_kDN_class_mean_split2_classic_extreme',
                        'Boots_kDN_class_mean_split4_classic', 'Boots_kDN_class_mean_split4_classic_extreme'],
@@ -1536,9 +1559,9 @@ for data_i in data_list:
                   order=['Uniform',
                          'Boots_kDN_class_mean_easy', 'Boots_kDN_class_mean_hard',
                          'Boots_kDN_class_mean_combo', 'Boots_kDN_class_mean_combo_extreme',
-                         'Boots_kDN_class_mean_split2', 'Boots_kDN_class_mean_split2_extreme',
-                         'Boots_kDN_class_mean_split4', 'Boots_kDN_class_mean_split4_extreme',
-                         'Boots_kDN_class_mean_split9', 'Boots_kDN_class_mean_split9_extreme',
+                         'Boots_kDN_class_mean_combosplit2', 'Boots_kDN_class_mean_combosplit2_extreme',
+                         'Boots_kDN_class_mean_combosplit4', 'Boots_kDN_class_mean_combosplit4_extreme',
+                         'Boots_kDN_class_mean_combosplit9', 'Boots_kDN_class_mean_combosplit9_extreme',
                          'Boots_kDN_class_mean_split1_classic', 'Boots_kDN_class_mean_split1_classic_extreme',
                          'Boots_kDN_class_mean_split2_classic', 'Boots_kDN_class_mean_split2_classic_extreme',
                          'Boots_kDN_class_mean_split4_classic', 'Boots_kDN_class_mean_split4_classic_extreme'])
@@ -1547,16 +1570,16 @@ for data_i in data_list:
                              'Combo s=9',r'Combo s=9 $\alpha$=4',
                         's=1',r's=1 $\alpha$=4','s=2',r's=2 $\alpha$=4',
                              's=4',r's=4 $\alpha$=4'],
-                       rotation=40)
+                       rotation=60)
     axes[1].legend([], [], frameon=False)
     axes[1].set(ylabel='kDN')
     sns.boxplot(ax=axes[2], y=df_long_dcp2["Complexity_Class"], x=df_long_dcp2["scheme"],hue=df_long_dcp2["variable"],
                 order=['Uniform',
                        'Boots_DCP_class_mean_easy', 'Boots_DCP_class_mean_hard',
                        'Boots_DCP_class_mean_combo', 'Boots_DCP_class_mean_combo_extreme',
-                       'Boots_DCP_class_mean_split2', 'Boots_DCP_class_mean_split2_extreme',
-                       'Boots_DCP_class_mean_split4', 'Boots_DCP_class_mean_split4_extreme',
-                       'Boots_DCP_class_mean_split9', 'Boots_DCP_class_mean_split9_extreme',
+                       'Boots_DCP_class_mean_combosplit2', 'Boots_DCP_class_mean_combosplit2_extreme',
+                       'Boots_DCP_class_mean_combosplit4', 'Boots_DCP_class_mean_combosplit4_extreme',
+                       'Boots_DCP_class_mean_combosplit9', 'Boots_DCP_class_mean_combosplit9_extreme',
                        'Boots_DCP_class_mean_split1_classic', 'Boots_DCP_class_mean_split1_classic_extreme',
                        'Boots_DCP_class_mean_split2_classic', 'Boots_DCP_class_mean_split2_classic_extreme',
                        'Boots_DCP_class_mean_split4_classic', 'Boots_DCP_class_mean_split4_classic_extreme'],
@@ -1566,9 +1589,9 @@ for data_i in data_list:
                   order=['Uniform',
                          'Boots_DCP_class_mean_easy', 'Boots_DCP_class_mean_hard',
                          'Boots_DCP_class_mean_combo', 'Boots_DCP_class_mean_combo_extreme',
-                         'Boots_DCP_class_mean_split2', 'Boots_DCP_class_mean_split2_extreme',
-                         'Boots_DCP_class_mean_split4', 'Boots_DCP_class_mean_split4_extreme',
-                         'Boots_DCP_class_mean_split9', 'Boots_DCP_class_mean_split9_extreme',
+                         'Boots_DCP_class_mean_combosplit2', 'Boots_DCP_class_mean_combosplit2_extreme',
+                         'Boots_DCP_class_mean_combosplit4', 'Boots_DCP_class_mean_combosplit4_extreme',
+                         'Boots_DCP_class_mean_combosplit9', 'Boots_DCP_class_mean_combosplit9_extreme',
                          'Boots_DCP_class_mean_split1_classic', 'Boots_DCP_class_mean_split1_classic_extreme',
                          'Boots_DCP_class_mean_split2_classic', 'Boots_DCP_class_mean_split2_classic_extreme',
                          'Boots_DCP_class_mean_split4_classic', 'Boots_DCP_class_mean_split4_classic_extreme'])
@@ -1577,16 +1600,16 @@ for data_i in data_list:
                              'Combo s=9',r'Combo s=9 $\alpha$=4',
                         's=1',r's=1 $\alpha$=4','s=2',r's=2 $\alpha$=4',
                              's=4',r's=4 $\alpha$=4'],
-                            rotation=40)
+                            rotation=60)
     axes[2].legend([], [], frameon=False)
     axes[2].set(ylabel='DCP')
     sns.boxplot(ax=axes[3], y=df_long_lsc2["Complexity_Class"], x=df_long_lsc2["scheme"],hue=df_long_lsc2["variable"],
                 order=['Uniform',
                        'Boots_LSC_class_mean_easy', 'Boots_LSC_class_mean_hard',
                        'Boots_LSC_class_mean_combo', 'Boots_LSC_class_mean_combo_extreme',
-                       'Boots_LSC_class_mean_split2', 'Boots_LSC_class_mean_split2_extreme',
-                       'Boots_LSC_class_mean_split4', 'Boots_LSC_class_mean_split4_extreme',
-                       'Boots_LSC_class_mean_split9', 'Boots_LSC_class_mean_split9_extreme',
+                       'Boots_LSC_class_mean_combosplit2', 'Boots_LSC_class_mean_combosplit2_extreme',
+                       'Boots_LSC_class_mean_combosplit4', 'Boots_LSC_class_mean_combosplit4_extreme',
+                       'Boots_LSC_class_mean_combosplit9', 'Boots_LSC_class_mean_combosplit9_extreme',
                        'Boots_LSC_class_mean_split1_classic', 'Boots_LSC_class_mean_split1_classic_extreme',
                        'Boots_LSC_class_mean_split2_classic', 'Boots_LSC_class_mean_split2_classic_extreme',
                        'Boots_LSC_class_mean_split4_classic', 'Boots_LSC_class_mean_split4_classic_extreme'],
@@ -1596,9 +1619,9 @@ for data_i in data_list:
                   order=['Uniform',
                          'Boots_LSC_class_mean_easy', 'Boots_LSC_class_mean_hard',
                          'Boots_LSC_class_mean_combo', 'Boots_LSC_class_mean_combo_extreme',
-                         'Boots_LSC_class_mean_split2', 'Boots_LSC_class_mean_split2_extreme',
-                         'Boots_LSC_class_mean_split4', 'Boots_LSC_class_mean_split4_extreme',
-                         'Boots_LSC_class_mean_split9', 'Boots_LSC_class_mean_split9_extreme',
+                         'Boots_LSC_class_mean_combosplit2', 'Boots_LSC_class_mean_combosplit2_extreme',
+                         'Boots_LSC_class_mean_combosplit4', 'Boots_LSC_class_mean_combosplit4_extreme',
+                         'Boots_LSC_class_mean_combosplit9', 'Boots_LSC_class_mean_combosplit9_extreme',
                          'Boots_LSC_class_mean_split1_classic', 'Boots_LSC_class_mean_split1_classic_extreme',
                          'Boots_LSC_class_mean_split2_classic', 'Boots_LSC_class_mean_split2_classic_extreme',
                          'Boots_LSC_class_mean_split4_classic', 'Boots_LSC_class_mean_split4_classic_extreme'])
@@ -1607,16 +1630,16 @@ for data_i in data_list:
                              'Combo s=9',r'Combo s=9 $\alpha$=4',
                         's=1',r's=1 $\alpha$=4','s=2',r's=2 $\alpha$=4',
                              's=4',r's=4 $\alpha$=4'],
-                            rotation=40)
+                            rotation=60)
     axes[3].legend([], [], frameon=False)
     axes[3].set(ylabel='LSC')
     sns.boxplot(ax=axes[4], y=df_long_n12["Complexity_Class"], x=df_long_n12["scheme"],hue=df_long_n12["variable"],
                 order=['Uniform',
                        'Boots_N1_class_mean_easy', 'Boots_N1_class_mean_hard',
                        'Boots_N1_class_mean_combo', 'Boots_N1_class_mean_combo_extreme',
-                       'Boots_N1_class_mean_split2', 'Boots_N1_class_mean_split2_extreme',
-                       'Boots_N1_class_mean_split4', 'Boots_N1_class_mean_split4_extreme',
-                       'Boots_N1_class_mean_split9', 'Boots_N1_class_mean_split9_extreme',
+                       'Boots_N1_class_mean_combosplit2', 'Boots_N1_class_mean_combosplit2_extreme',
+                       'Boots_N1_class_mean_combosplit4', 'Boots_N1_class_mean_combosplit4_extreme',
+                       'Boots_N1_class_mean_combosplit9', 'Boots_N1_class_mean_combosplit9_extreme',
                        'Boots_N1_class_mean_split1_classic', 'Boots_N1_class_mean_split1_classic_extreme',
                        'Boots_N1_class_mean_split2_classic', 'Boots_N1_class_mean_split2_classic_extreme',
                        'Boots_N1_class_mean_split4_classic', 'Boots_N1_class_mean_split4_classic_extreme'],
@@ -1626,9 +1649,9 @@ for data_i in data_list:
                   order=['Uniform',
                          'Boots_N1_class_mean_easy', 'Boots_N1_class_mean_hard',
                          'Boots_N1_class_mean_combo', 'Boots_N1_class_mean_combo_extreme',
-                         'Boots_N1_class_mean_split2', 'Boots_N1_class_mean_split2_extreme',
-                         'Boots_N1_class_mean_split4', 'Boots_N1_class_mean_split4_extreme',
-                         'Boots_N1_class_mean_split9', 'Boots_N1_class_mean_split9_extreme',
+                         'Boots_N1_class_mean_combosplit2', 'Boots_N1_class_mean_combosplit2_extreme',
+                         'Boots_N1_class_mean_combosplit4', 'Boots_N1_class_mean_combosplit4_extreme',
+                         'Boots_N1_class_mean_combosplit9', 'Boots_N1_class_mean_combosplit9_extreme',
                          'Boots_N1_class_mean_split1_classic', 'Boots_N1_class_mean_split1_classic_extreme',
                          'Boots_N1_class_mean_split2_classic', 'Boots_N1_class_mean_split2_classic_extreme',
                          'Boots_N1_class_mean_split4_classic', 'Boots_N1_class_mean_split4_classic_extreme'])
@@ -1637,16 +1660,16 @@ for data_i in data_list:
                              'Combo s=9',r'Combo s=9 $\alpha$=4',
                         's=1',r's=1 $\alpha$=4','s=2',r's=2 $\alpha$=4',
                              's=4',r's=4 $\alpha$=4'],
-                            rotation=40)
+                            rotation=60)
     axes[4].legend([], [], frameon=False)
     axes[4].set(ylabel='N1')
     sns.boxplot(ax=axes[5], y=df_long_n22["Complexity_Class"], x=df_long_n22["scheme"],hue=df_long_n22["variable"],
                 order=['Uniform',
                        'Boots_N2_class_mean_easy', 'Boots_N2_class_mean_hard',
                        'Boots_N2_class_mean_combo', 'Boots_N2_class_mean_combo_extreme',
-                       'Boots_N2_class_mean_split2', 'Boots_N2_class_mean_split2_extreme',
-                       'Boots_N2_class_mean_split4', 'Boots_N2_class_mean_split4_extreme',
-                       'Boots_N2_class_mean_split9', 'Boots_N2_class_mean_split9_extreme',
+                       'Boots_N2_class_mean_combosplit2', 'Boots_N2_class_mean_combosplit2_extreme',
+                       'Boots_N2_class_mean_combosplit4', 'Boots_N2_class_mean_combosplit4_extreme',
+                       'Boots_N2_class_mean_combosplit9', 'Boots_N2_class_mean_combosplit9_extreme',
                        'Boots_N2_class_mean_split1_classic', 'Boots_N2_class_mean_split1_classic_extreme',
                        'Boots_N2_class_mean_split2_classic', 'Boots_N2_class_mean_split2_classic_extreme',
                        'Boots_N2_class_mean_split4_classic', 'Boots_N2_class_mean_split4_classic_extreme'],
@@ -1656,9 +1679,9 @@ for data_i in data_list:
                   order=['Uniform',
                          'Boots_N2_class_mean_easy', 'Boots_N2_class_mean_hard',
                          'Boots_N2_class_mean_combo', 'Boots_N2_class_mean_combo_extreme',
-                         'Boots_N2_class_mean_split2', 'Boots_N2_class_mean_split2_extreme',
-                         'Boots_N2_class_mean_split4', 'Boots_N2_class_mean_split4_extreme',
-                         'Boots_N2_class_mean_split9', 'Boots_N2_class_mean_split9_extreme',
+                         'Boots_N2_class_mean_combosplit2', 'Boots_N2_class_mean_combosplit2_extreme',
+                         'Boots_N2_class_mean_combosplit4', 'Boots_N2_class_mean_combosplit4_extreme',
+                         'Boots_N2_class_mean_combosplit9', 'Boots_N2_class_mean_combosplit9_extreme',
                          'Boots_N2_class_mean_split1_classic', 'Boots_N2_class_mean_split1_classic_extreme',
                          'Boots_N2_class_mean_split2_classic', 'Boots_N2_class_mean_split2_classic_extreme',
                          'Boots_N2_class_mean_split4_classic', 'Boots_N2_class_mean_split4_classic_extreme'])
@@ -1667,16 +1690,16 @@ for data_i in data_list:
                              'Combo s=9',r'Combo s=9 $\alpha$=4',
                         's=1',r's=1 $\alpha$=4','s=2',r's=2 $\alpha$=4',
                              's=4',r's=4 $\alpha$=4'],
-                            rotation=40)
+                            rotation=60)
     axes[5].legend([], [], frameon=False)
     axes[5].set(ylabel='N2')
     sns.boxplot(ax=axes[6], y=df_long_f12["Complexity_Class"], x=df_long_f12["scheme"],hue=df_long_f12["variable"],
                 order=['Uniform',
                        'Boots_F1_class_mean_easy', 'Boots_F1_class_mean_hard',
                        'Boots_F1_class_mean_combo', 'Boots_F1_class_mean_combo_extreme',
-                       'Boots_F1_class_mean_split2', 'Boots_F1_class_mean_split2_extreme',
-                       'Boots_F1_class_mean_split4', 'Boots_F1_class_mean_split4_extreme',
-                       'Boots_F1_class_mean_split9', 'Boots_F1_class_mean_split9_extreme',
+                       'Boots_F1_class_mean_combosplit2', 'Boots_F1_class_mean_combosplit2_extreme',
+                       'Boots_F1_class_mean_combosplit4', 'Boots_F1_class_mean_combosplit4_extreme',
+                       'Boots_F1_class_mean_combosplit9', 'Boots_F1_class_mean_combosplit9_extreme',
                        'Boots_F1_class_mean_split1_classic', 'Boots_F1_class_mean_split1_classic_extreme',
                        'Boots_F1_class_mean_split2_classic', 'Boots_F1_class_mean_split2_classic_extreme',
                        'Boots_F1_class_mean_split4_classic', 'Boots_F1_class_mean_split4_classic_extreme'],
@@ -1686,9 +1709,9 @@ for data_i in data_list:
                   order=['Uniform',
                          'Boots_F1_class_mean_easy', 'Boots_F1_class_mean_hard',
                          'Boots_F1_class_mean_combo', 'Boots_F1_class_mean_combo_extreme',
-                         'Boots_F1_class_mean_split2', 'Boots_F1_class_mean_split2_extreme',
-                         'Boots_F1_class_mean_split4', 'Boots_F1_class_mean_split4_extreme',
-                         'Boots_F1_class_mean_split9', 'Boots_F1_class_mean_split9_extreme',
+                         'Boots_F1_class_mean_combosplit2', 'Boots_F1_class_mean_combosplit2_extreme',
+                         'Boots_F1_class_mean_combosplit4', 'Boots_F1_class_mean_combosplit4_extreme',
+                         'Boots_F1_class_mean_combosplit9', 'Boots_F1_class_mean_combosplit9_extreme',
                          'Boots_F1_class_mean_split1_classic', 'Boots_F1_class_mean_split1_classic_extreme',
                          'Boots_F1_class_mean_split2_classic', 'Boots_F1_class_mean_split2_classic_extreme',
                          'Boots_F1_class_mean_split4_classic', 'Boots_F1_class_mean_split4_classic_extreme'])
@@ -1697,16 +1720,16 @@ for data_i in data_list:
                              'Combo s=9',r'Combo s=9 $\alpha$=4',
                         's=1',r's=1 $\alpha$=4','s=2',r's=2 $\alpha$=4',
                              's=4',r's=4 $\alpha$=4'],
-                            rotation=40)
+                            rotation=60)
     axes[6].legend([], [], frameon=False)
     axes[6].set(ylabel='F1')
     sns.boxplot(ax=axes[7], y=df_long_tdu2["Complexity_Class"], x=df_long_tdu2["scheme"],hue=df_long_tdu2["variable"],
                 order=['Uniform',
                        'Boots_TD_U_class_mean_easy', 'Boots_TD_U_class_mean_hard',
                        'Boots_TD_U_class_mean_combo', 'Boots_TD_U_class_mean_combo_extreme',
-                       'Boots_TD_U_class_mean_split2', 'Boots_TD_U_class_mean_split2_extreme',
-                       'Boots_TD_U_class_mean_split4', 'Boots_TD_U_class_mean_split4_extreme',
-                       'Boots_TD_U_class_mean_split9', 'Boots_TD_U_class_mean_split9_extreme',
+                       'Boots_TD_U_class_mean_combosplit2', 'Boots_TD_U_class_mean_combosplit2_extreme',
+                       'Boots_TD_U_class_mean_combosplit4', 'Boots_TD_U_class_mean_combosplit4_extreme',
+                       'Boots_TD_U_class_mean_combosplit9', 'Boots_TD_U_class_mean_combosplit9_extreme',
                        'Boots_TD_U_class_mean_split1_classic', 'Boots_TD_U_class_mean_split1_classic_extreme',
                        'Boots_TD_U_class_mean_split2_classic', 'Boots_TD_U_class_mean_split2_classic_extreme',
                        'Boots_TD_U_class_mean_split4_classic', 'Boots_TD_U_class_mean_split4_classic_extreme'],
@@ -1716,9 +1739,9 @@ for data_i in data_list:
                   order=['Uniform',
                          'Boots_TD_U_class_mean_easy', 'Boots_TD_U_class_mean_hard',
                             'Boots_TD_U_class_mean_combo', 'Boots_TD_U_class_mean_combo_extreme',
-                            'Boots_TD_U_class_mean_split2', 'Boots_TD_U_class_mean_split2_extreme',
-                            'Boots_TD_U_class_mean_split4', 'Boots_TD_U_class_mean_split4_extreme',
-                            'Boots_TD_U_class_mean_split9', 'Boots_TD_U_class_mean_split9_extreme',
+                            'Boots_TD_U_class_mean_combosplit2', 'Boots_TD_U_class_mean_combosplit2_extreme',
+                            'Boots_TD_U_class_mean_combosplit4', 'Boots_TD_U_class_mean_combosplit4_extreme',
+                            'Boots_TD_U_class_mean_combosplit9', 'Boots_TD_U_class_mean_combosplit9_extreme',
                             'Boots_TD_U_class_mean_split1_classic', 'Boots_TD_U_class_mean_split1_classic_extreme',
                             'Boots_TD_U_class_mean_split2_classic', 'Boots_TD_U_class_mean_split2_classic_extreme',
                             'Boots_TD_U_class_mean_split4_classic', 'Boots_TD_U_class_mean_split4_classic_extreme'])
@@ -1727,16 +1750,16 @@ for data_i in data_list:
                              'Combo s=9',r'Combo s=9 $\alpha$=4',
                         's=1',r's=1 $\alpha$=4','s=2',r's=2 $\alpha$=4',
                              's=4',r's=4 $\alpha$=4'],
-                            rotation=40)
+                            rotation=60)
     axes[7].legend([], [], frameon=False)
     axes[7].set(ylabel='TDU')
     sns.boxplot(ax=axes[8], y=df_long_cld2["Complexity_Class"], x=df_long_cld2["scheme"],hue=df_long_cld2["variable"],
                 order=['Uniform',
                         'Boots_CLD_class_mean_easy', 'Boots_CLD_class_mean_hard',
                             'Boots_CLD_class_mean_combo', 'Boots_CLD_class_mean_combo_extreme',
-                            'Boots_CLD_class_mean_split2', 'Boots_CLD_class_mean_split2_extreme',
-                            'Boots_CLD_class_mean_split4', 'Boots_CLD_class_mean_split4_extreme',
-                            'Boots_CLD_class_mean_split9', 'Boots_CLD_class_mean_split9_extreme',
+                            'Boots_CLD_class_mean_combosplit2', 'Boots_CLD_class_mean_combosplit2_extreme',
+                            'Boots_CLD_class_mean_combosplit4', 'Boots_CLD_class_mean_combosplit4_extreme',
+                            'Boots_CLD_class_mean_combosplit9', 'Boots_CLD_class_mean_combosplit9_extreme',
                             'Boots_CLD_class_mean_split1_classic', 'Boots_CLD_class_mean_split1_classic_extreme',
                             'Boots_CLD_class_mean_split2_classic', 'Boots_CLD_class_mean_split2_classic_extreme',
                             'Boots_CLD_class_mean_split4_classic', 'Boots_CLD_class_mean_split4_classic_extreme'],
@@ -1746,9 +1769,9 @@ for data_i in data_list:
                   order=['Uniform',
                          'Boots_CLD_class_mean_easy', 'Boots_CLD_class_mean_hard',
                             'Boots_CLD_class_mean_combo', 'Boots_CLD_class_mean_combo_extreme',
-                            'Boots_CLD_class_mean_split2', 'Boots_CLD_class_mean_split2_extreme',
-                            'Boots_CLD_class_mean_split4', 'Boots_CLD_class_mean_split4_extreme',
-                            'Boots_CLD_class_mean_split9', 'Boots_CLD_class_mean_split9_extreme',
+                            'Boots_CLD_class_mean_combosplit2', 'Boots_CLD_class_mean_combosplit2_extreme',
+                            'Boots_CLD_class_mean_combosplit4', 'Boots_CLD_class_mean_combosplit4_extreme',
+                            'Boots_CLD_class_mean_combosplit9', 'Boots_CLD_class_mean_combosplit9_extreme',
                             'Boots_CLD_class_mean_split1_classic', 'Boots_CLD_class_mean_split1_classic_extreme',
                             'Boots_CLD_class_mean_split2_classic', 'Boots_CLD_class_mean_split2_classic_extreme',
                             'Boots_CLD_class_mean_split4_classic', 'Boots_CLD_class_mean_split4_classic_extreme'])
@@ -1757,10 +1780,11 @@ for data_i in data_list:
                              'Combo s=9',r'Combo s=9 $\alpha$=4',
                         's=1',r's=1 $\alpha$=4','s=2',r's=2 $\alpha$=4',
                              's=4',r's=4 $\alpha$=4'],
-                            rotation=40)
+                            rotation=60)
     axes[8].legend([], [], frameon=False)
     axes[8].set(ylabel='CLD')
 
+    plt.tight_layout()
     # plt.show()
     name_plot = 'ComplexityAnalysisClass_' + str(data_i) + '.png'
     os.chdir(path_to_save)
