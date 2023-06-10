@@ -4,10 +4,10 @@ X_bootstrap, y_bootstrap,
 data = pd.DataFrame(X_bootstrap, columns=['x1','x2'])
 data['y'] = y_bootstrap
 
-# data = pd.DataFrame(X_train, columns=['x1','x2'])
-# data['y'] = y_train
-# len(y_train)
-# len(y_bootstrap)
+data = pd.DataFrame(X, columns=['x1','x2'])
+data['y'] = y
+len(y_train)
+len(y_bootstrap)
 # Plot
 # For labels
 labels = list(data.index)
@@ -133,9 +133,9 @@ total_name_list = ['AggregatedResults_Bagging_Data9_MoreWeight_easy_Instances.cs
  'AggregatedResults_Bagging_Data9_MoreWeight_hard_Instances.csv',
  'AggregatedResults_Bagging_Data9_MoreWeight_combo_split_classic_split1_stump_noInstances.csv']
 
-data_easy = pd.read_csv('AggregatedResults_Bagging_Data6_MoreWeight_easy_Instances.csv')
-data_hard = pd.read_csv('AggregatedResults_Bagging_Data6_MoreWeight_hard_Instances.csv')
-data_classic = pd.read_csv('AggregatedResults_Bagging_Data6_MoreWeight_combo_split_classic_split1_stump_noInstances.csv')
+data_easy = pd.read_csv('AggregatedResults_Bagging_Data2_MoreWeight_easy_Instances.csv')
+data_hard = pd.read_csv('AggregatedResults_Bagging_Data2_MoreWeight_hard_Instances.csv')
+data_classic = pd.read_csv('AggregatedResults_Bagging_Data2_MoreWeight_combo_split_classic_split1_stump_noInstances.csv')
 
 data_together = pd.DataFrame()
 acc_bagg = data_easy.loc[data_easy.weights == 'Uniform', ['n_ensemble','accuracy_mean']]
