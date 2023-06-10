@@ -396,6 +396,8 @@ for data_file in total_name_list:
     X = data.iloc[:,:-1].to_numpy() # all variables except y
     X = preprocessing.scale(X)
     y = data[['y']].to_numpy()
+    # print(X.shape)
+
     emphasis_easy = 'easy'
     results = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_easy)
     emphasis_hard = 'hard'
