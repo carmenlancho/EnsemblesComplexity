@@ -57,7 +57,8 @@ def complexity_driven_bagging(X,y,n_ensembles, name_data,path_to_save, emphasis)
                                     'Boots_N2_class','Boots_LSC_class','Boots_F1_class'])
 
     # Complexity measures list to check
-    CM_list = ['Hostility', 'kDN', 'DCP','TD_U', 'CLD', 'N1', 'N2','LSC','F1','Uniform']
+    # CM_list = ['L1']
+    CM_list = ['Hostility', 'kDN', 'DCP', 'TD_U', 'CLD', 'N1', 'N2', 'LSC', 'F1', 'Uniform']
     # CM_selected = 'Hostility'
 
     skf = StratifiedKFold(n_splits=10, random_state=1,shuffle=True)
@@ -375,7 +376,6 @@ total_name_list = [#'teaching_assistant_MH.csv','contraceptive_NL.csv','hill_val
  # 'mammographic.csv','contraceptive_NS.csv','bupa.csv','Yeast_CYTvsNUC.csv',
  # 'titanic.csv','arrhythmia_cfs.csv','vertebral_column.csv','sonar.csv',
  # 'spect_heart.csv','credit-g.csv', 'segment.csv',
-                   #'appendicitis.csv',
                    'diabetes.csv',
  'diabetic_retinopathy.csv','WineQualityRed_5vs6.csv','teaching_assistant_LM.csv',
  'ionosphere.csv','bands.csv','wdbc.csv','teaching_assistant_LH.csv',
@@ -426,6 +426,7 @@ def complexity_driven_bagging_combo(X,y,n_ensembles, name_data,path_to_save, emp
 
     # Complexity measures list to check
     CM_list = ['Hostility', 'kDN', 'DCP','TD_U', 'CLD', 'N1', 'N2','LSC','F1','Uniform']
+    # CM_list = ['L1']
     # CM_list = ['Hostility', 'kDN', 'TD_U', 'N1', 'N2','LSC','F1','Uniform']
 
     # CM_selected = 'DCP'
@@ -660,6 +661,7 @@ def complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_sav
     # Complexity measures list to check
     # CM_list = ['Hostility', 'kDN', 'TD_U', 'N1', 'N2','LSC','F1','Uniform']
     CM_list = ['Hostility', 'kDN', 'DCP', 'TD_U', 'CLD', 'N1', 'N2', 'LSC', 'F1', 'Uniform']
+    # CM_list = ['L1']
     # CM_selected = 'Hostility'
 
     skf = StratifiedKFold(n_splits=10, random_state=1,shuffle=True)
@@ -1000,9 +1002,11 @@ total_name_list = [#'teaching_assistant_MH.csv','contraceptive_NL.csv','hill_val
  #                   ##'appendicitis.csv', 'haberman.csv',
  #                   'diabetes.csv',
  # 'diabetic_retinopathy.csv','WineQualityRed_5vs6.csv','teaching_assistant_LM.csv',
+'teaching_assistant_LH.csv',
  'ionosphere.csv','bands.csv','wdbc.csv',
-    'spambase.csv','teaching_assistant_LH.csv','banknote_authentication.csv', 'pima.csv']
+    'spambase.csv','banknote_authentication.csv', 'pima.csv','titanic.csv']
 # 'appendicitis.csv' y haberman me han dado problemas
+total_name_list = ['titanic.csv']
 
 total_name_list = ['Data1.csv','Data2.csv','Data3.csv','Data4.csv','Data5.csv',
                 'Data6.csv','Data7.csv', 'Data8.csv','Data9.csv','Data10.csv',
