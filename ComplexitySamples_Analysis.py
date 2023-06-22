@@ -718,7 +718,7 @@ for data_i in data_list:
     #                      'Boots_Hostility_dataset_mean_split2_classic',
     #                      'Boots_Hostility_dataset_mean_split2_classic_extreme',
     #                      'Boots_Hostility_dataset_mean_split4_classic',
-    #                      'Boots_Hostility_dataset_mean_split4_classic_extreme'],color='lightgray')
+    #                      'Boots_Hostility_dataset_mean_split4_classic_extreme'],color='k')
     # ax.set_xticklabels(['Uniform',
     #                     r's=1',r's=1,$\alpha$=4','s=2',r's=2,$\alpha$=4','s=4',r's=4,$\alpha$=4'])
     # ax.set(ylabel='Hostility', xlabel='')
