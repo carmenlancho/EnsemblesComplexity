@@ -38,6 +38,7 @@ def classification_gridsearchCV_easyDatasets(X,y):
     clf = GridSearchCV(SVC(kernel='linear'), param_grid, cv=10, scoring='accuracy', return_train_score=False)
     clf = clf.fit(X, y)
     acc_best_svmlinear = clf.best_score_
+    # clf.cv_results_ # results from CV with all combinations of parameters
 
 
     # SVM RBF
@@ -100,8 +101,8 @@ for filename in os.listdir(path_csv):
         total_name_list.append(filename)
 
 
-# total_name_list = ['phoneme.csv','spambase.csv', 'ionosphere.csv',
-#                  'wdbc.csv', 'segment.csv','breast-w.csv',  'banknote_authentication.csv' ]
+total_name_list = ['phoneme.csv','spambase.csv', 'ionosphere.csv',
+                 'wdbc.csv', 'segment.csv','breast-w.csv',  'banknote_authentication.csv' ]
 # total_name_list =  [ 'bupa.csv','hill_valley_without_noise_traintest.csv','contraceptive_NS.csv',
 #                  'teaching_assistant_LM.csv','contraceptive_LS.csv','diabetic_retinopathy.csv',
 #                  'Yeast_CYTvsNUC.csv','bands.csv','ilpd.csv']
@@ -110,9 +111,9 @@ for filename in os.listdir(path_csv):
 #                  'diabetes.csv','credit-g.csv','arrhythmia_cfs.csv','pima.csv','mammographic.csv',
 #                  'titanic.csv','sonar.csv']
 
-total_name_list =  [ 'Data3.csv','Data1.csv','Data11.csv','Data5.csv','Data13.csv',
-                 'Data9.csv','Data2.csv', 'Data10.csv','Data8.csv', 'Data6.csv',
-                 'Data7.csv', 'Data12.csv', 'Data4.csv']
+# total_name_list =  [ 'Data3.csv','Data1.csv','Data11.csv','Data5.csv','Data13.csv',
+#                  'Data9.csv','Data2.csv', 'Data10.csv','Data8.csv', 'Data6.csv',
+#                  'Data7.csv', 'Data12.csv', 'Data4.csv']
 
 
 path_to_save = root_path+'/Classification_SingleLearner'
