@@ -223,7 +223,7 @@ def complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_sav
 
     # To save the results
     os.chdir(path_to_save)
-    nombre_csv = 'Bagging_' + name_data + '_MoreWeight_' + emphasis + '_split' + str(split)+ '_stump_' + stump+ 'Instances.csv'
+    nombre_csv = 'CDB_' + name_data + '_split' + str(split)+ '_alpha_' + str(alpha)+ '.csv'
     results.to_csv(nombre_csv, encoding='utf_8_sig',index=False)
 
     ##### Agregation of results
@@ -231,7 +231,7 @@ def complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_sav
 
     # To save the results
     os.chdir(path_to_save)
-    nombre_csv_agg = 'AggregatedResults_Bagging_' + name_data + '_MoreWeight_' + emphasis + '_split' + str(split) + '_stump_' + stump + 'Instances.csv'
+    nombre_csv_agg = 'AggregatedResults_CDB_' + name_data + '_split' + str(split)+ '_alpha_' + str(alpha)+ '.csv'
     df_aggre.to_csv(nombre_csv_agg, encoding='utf_8_sig',index=False)
 
     return results
@@ -266,13 +266,13 @@ total_name_list = [#'teaching_assistant_MH.csv','contraceptive_NL.csv','hill_val
  'ionosphere.csv','bands.csv','wdbc.csv',
     'spambase.csv','banknote_authentication.csv', 'pima.csv','titanic.csv']
 # 'appendicitis.csv' y haberman me han dado problemas
-total_name_list = ['titanic.csv']
+total_name_list = ['ionosphere.csv']
 
 # total_name_list = ['Data1.csv','Data2.csv','Data3.csv','Data4.csv','Data5.csv',
 #                 'Data6.csv','Data7.csv', 'Data8.csv','Data9.csv','Data10.csv',
 #                 'Data11.csv','Data12.csv',  'Data13.csv']
 
-path_to_save = root_path+'/Bagging_results'
+path_to_save = root_path+'/Results_general_algorithm'
 n_ensembles = 200 # maximum number of ensembles to consider (later we plot and stop when we want)
 # CM_selected = 'Hostility' # selection of the complexity measure to guide the sampling
 
