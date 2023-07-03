@@ -140,9 +140,12 @@ def aggregation_results_final_algorith(results):
             condition = (results.n_ensemble == n_i) & (results.weights == w)
             condition2 = (df_aggre.n_ensemble == n_i) & (df_aggre.weights == w)
             data_pack = results.loc[condition]
-            conf_list = np.array(data_pack['confusion_matrix'].tolist())  # format
-            conf_fold = np.sum(conf_list, axis=0).tolist()
-            df_aggre.loc[condition2, 'confusion_matrix'] = str(conf_fold)
+            try:
+                conf_list = np.array(data_pack['confusion_matrix'].tolist())  # format
+                conf_fold = np.sum(conf_list, axis=0).tolist()
+                df_aggre.loc[condition2, 'confusion_matrix'] = str(conf_fold)
+            except:
+                df_aggre.loc[condition2, 'confusion_matrix'] = 'Lost_class'
 
             try:
                 Host_class_list = np.array(data_pack['Boots_Hostility_class'].tolist())
