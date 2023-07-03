@@ -46,7 +46,7 @@ def voting_rule(preds):
 
 
 
-def complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis, split, stump,alpha):
+def ComplexityDrivenBagging(X,y,n_ensembles, name_data,path_to_save, split, stump,alpha):
 
     # dataframe to save the results
     results = pd.DataFrame(columns=['dataset','fold','n_ensemble','weights','confusion_matrix','accuracy',
@@ -88,21 +88,25 @@ def complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_sav
 
             ### combo split classic extreme
             ranking_hard = CM_values.rank(method='average', ascending=True)  # more weight to difficult
-            quantiles = np.quantile(ranking_hard, q=np.arange(0.5, 0.76, 0.25))
-            q50 = quantiles[0]
-            q75 = quantiles[1]
-            ranking_hard[(ranking_hard >= q75)] = ranking_hard[(ranking_hard >= q75)] * alpha
-            ranking_hard[(ranking_hard >= q50) & (ranking_hard < q75)] = ranking_hard[(ranking_hard >= q50) & (
-                    ranking_hard < q75)] * (alpha/2)
-
             ranking_easy = CM_values.rank(method='average', ascending=False)  # more weight to easy
-            quantiles_easy = np.quantile(ranking_easy, q=np.arange(0.5, 0.76, 0.25))
-            q50_easy = quantiles_easy[0]
-            q75_easy = quantiles_easy[1]
-            ranking_easy[(ranking_easy >= q75_easy)] = ranking_easy[(ranking_easy >= q75_easy)] * alpha
-            ranking_easy[(ranking_easy >= q50_easy) & (ranking_easy < q75_easy)] = ranking_easy[(
-                                                                                                        ranking_easy >= q50_easy) & (
-                                                                                                        ranking_easy < q75_easy)] * (alpha/2)
+            if (alpha >=2):
+                quantiles = np.quantile(ranking_hard, q=np.arange(0.5, 0.76, 0.25))
+                q50 = quantiles[0]
+                q75 = quantiles[1]
+                ranking_hard[(ranking_hard >= q75)] = ranking_hard[(ranking_hard >= q75)] * alpha
+                ranking_hard[(ranking_hard >= q50) & (ranking_hard < q75)] = ranking_hard[(ranking_hard >= q50) & (
+                        ranking_hard < q75)] * (alpha/2)
+
+
+                quantiles_easy = np.quantile(ranking_easy, q=np.arange(0.5, 0.76, 0.25))
+                q50_easy = quantiles_easy[0]
+                q75_easy = quantiles_easy[1]
+                ranking_easy[(ranking_easy >= q75_easy)] = ranking_easy[(ranking_easy >= q75_easy)] * alpha
+                ranking_easy[(ranking_easy >= q50_easy) & (ranking_easy < q75_easy)] = ranking_easy[(
+                                                                                                            ranking_easy >= q50_easy) & (
+                                                                                                            ranking_easy < q75_easy)] * (alpha/2)
+            # if alpha < 2, then no extreme weights are applied
+
 
             weights_easy = ranking_easy / sum(ranking_easy)  # probability distribution
             weights_hard = ranking_hard / sum(ranking_hard)  # probability distribution
@@ -273,7 +277,7 @@ total_name_list = ['ionosphere.csv']
 #                 'Data11.csv','Data12.csv',  'Data13.csv']
 
 path_to_save = root_path+'/Results_general_algorithm'
-n_ensembles = 200 # maximum number of ensembles to consider (later we plot and stop when we want)
+n_ensembles = 10 # maximum number of ensembles to consider (later we plot and stop when we want)
 # CM_selected = 'Hostility' # selection of the complexity measure to guide the sampling
 
 for data_file in total_name_list:
@@ -287,40 +291,7 @@ for data_file in total_name_list:
     y = data[['y']].to_numpy()
     stump = 'no'
     split1 = 1
-    emphasis0_cl = 'combo_split_classic' # split = 1 es easy-uniform-hard
-    results0_cl = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis0_cl, split1, stump)
-    emphasis1 = 'combo_split_classic_extreme'
-    results1 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data, path_to_save, emphasis1, split1,stump)
-    split2 = 2 # with combo_split_classic this is 5 splits
-    results2 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis0_cl, split2, stump)
-    results3 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data, path_to_save, emphasis1, split2,stump)
-    split4 = 4 # with combo_split_classic this is 9 splits
-    results4 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis0_cl, split4, stump)
-    results5 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data, path_to_save, emphasis1, split4,stump)
-
-    emphasis0 = 'combo_extreme'
-    results0 = complexity_driven_bagging_combo(X, y, n_ensembles, name_data, path_to_save, emphasis0, stump)
-    emphasis00 = 'combo'
-    results00 = complexity_driven_bagging_combo(X, y, n_ensembles, name_data, path_to_save, emphasis00, stump)
-    emphasis = 'combo_split'
-    split = 2
-    results1 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis, split, stump)
-    split4 = 4
-    results2 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis, split4, stump)
-    split9 = 9
-    results3 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis, split9, stump)
-    emphasis2 = 'combo_split_extreme'
-    split = 2
-    results4 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis2, split, stump)
-    split4 = 4
-    results5 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis2, split4, stump)
-    split9 = 9
-    results6 = complexity_driven_bagging_combo_split(X,y,n_ensembles, name_data,path_to_save, emphasis2, split9, stump)
-
-    emphasis_easy = 'easy'
-    results_easy = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_easy)
-    emphasis_hard = 'hard'
-    results_hard = complexity_driven_bagging(X, y, n_ensembles, name_data, path_to_save,emphasis_hard)
+    results0 = ComplexityDrivenBagging(X,y,n_ensembles, name_data,path_to_save, split1, stump,alpha)
 
 
 
