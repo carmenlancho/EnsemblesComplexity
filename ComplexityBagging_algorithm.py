@@ -120,7 +120,7 @@ def ComplexityDrivenBagging(X,y,n_ensembles, name_data,path_to_save, split, stum
                 new_w_df1 = pd.DataFrame(new_w1)
                 weights_v = pd.concat([weights_v, new_w_df1], axis=1)
             for s in np.arange(1, split + 1):
-                print(s)
+                # print(s)
                 new_w2 = weights_classic + s * w_frac2
                 new_w_df2 = pd.DataFrame(new_w2)
                 weights_v = pd.concat([weights_v, new_w_df2], axis=1)
@@ -227,7 +227,7 @@ def ComplexityDrivenBagging(X,y,n_ensembles, name_data,path_to_save, split, stum
 
     # To save the results
     os.chdir(path_to_save)
-    nombre_csv = 'CDB_' + name_data + '_split' + str(split)+ '_alpha_' + str(alpha)+ '.csv'
+    nombre_csv = 'CDB_' + name_data + '_split' + str(split)+ '_alpha' + str(alpha)+ '.csv'
     results.to_csv(nombre_csv, encoding='utf_8_sig',index=False)
 
     ##### Agregation of results
@@ -235,7 +235,7 @@ def ComplexityDrivenBagging(X,y,n_ensembles, name_data,path_to_save, split, stum
 
     # To save the results
     os.chdir(path_to_save)
-    nombre_csv_agg = 'AggregatedResults_CDB_' + name_data + '_split' + str(split)+ '_alpha_' + str(alpha)+ '.csv'
+    nombre_csv_agg = 'AggregatedResults_CDB_' + name_data + '_split' + str(split)+ '_alpha' + str(alpha)+ '.csv'
     df_aggre.to_csv(nombre_csv_agg, encoding='utf_8_sig',index=False)
 
     return results
@@ -277,7 +277,7 @@ total_name_list = ['ionosphere.csv']
 #                 'Data11.csv','Data12.csv',  'Data13.csv']
 
 path_to_save = root_path+'/Results_general_algorithm'
-n_ensembles = 10 # maximum number of ensembles to consider (later we plot and stop when we want)
+n_ensembles = 20 # maximum number of ensembles to consider (later we plot and stop when we want)
 # CM_selected = 'Hostility' # selection of the complexity measure to guide the sampling
 
 for data_file in total_name_list:
@@ -290,8 +290,9 @@ for data_file in total_name_list:
     X = preprocessing.scale(X)
     y = data[['y']].to_numpy()
     stump = 'no'
-    split1 = 1
-    results0 = ComplexityDrivenBagging(X,y,n_ensembles, name_data,path_to_save, split1, stump,alpha)
+    split = 1
+    alpha = 0
+    results0 = ComplexityDrivenBagging(X,y,n_ensembles, name_data,path_to_save, split, stump,alpha)
 
 
 
