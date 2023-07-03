@@ -29,7 +29,7 @@ def all_measures(data,save_csv,path_to_save, name_data):
     df_class_data_host = pd.DataFrame(class_data_host)
     df_class_data_host.columns = [name_data]
 
-    L1 = L1_HD(X, y)
+    # L1 = L1_HD(X, y)
 
 
 
@@ -57,8 +57,7 @@ def all_measures(data,save_csv,path_to_save, name_data):
 
     dict_measures = {'Hostility': host_instances, 'kDN': kdn, 'DS': DS, 'DCP': DCP,
                      'TD_U': TD_U, 'TD_P': TD_P, 'MV': MV, 'CB': CB, 'CLD': CLD, 'N1': N1, 'N2': N2,
-                     'LSC': LSC, 'LSradius': LSradius, 'H': H, 'U': U, 'F1': F1, 'F2': F2, 'F3': F3, 'F4': F4,
-                     'L1':L1,'y':y}
+                     'LSC': LSC, 'LSradius': LSradius, 'H': H, 'U': U, 'F1': F1, 'F2': F2, 'F3': F3, 'F4': F4,'y':y}
 
     df_measures = pd.DataFrame(dict_measures)
 
