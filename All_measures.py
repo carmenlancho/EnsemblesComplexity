@@ -77,8 +77,8 @@ def all_measures(data,save_csv,path_to_save, name_data):
 
     return df_measures, df_classes_dataset
 
-
-
+#
+#
 # path_csv = os.chdir(root_path+'/datasets')
 # # Extraemos los nombres de todos los ficheros
 # total_name_list = []
@@ -89,7 +89,7 @@ def all_measures(data,save_csv,path_to_save, name_data):
 #
 # # total_name_list = ['Data13.csv']
 #
-# # complex_info = pd.DataFrame()
+# complex_info = pd.DataFrame()
 #
 # for data_file in total_name_list:
 #     os.chdir(root_path + '/datasets')
@@ -104,11 +104,12 @@ def all_measures(data,save_csv,path_to_save, name_data):
 #     data['y']  = y
 #     data.columns = data_aux.columns
 #     # data = pd.read_csv('Dataset9_6000_estandarizado.csv')
-#     path_to_save = root_path+'/Results_Complexity_InstanceLevel'
-#     save_csv = True
-#     df_measures, df_classes_dataset = all_measures(data, save_csv, path_to_save, name_data)
-#     # _, df_class_data_host = all_measures(data,save_csv,path_to_save, name_data)
-#     # # df_class_data_host['level'] = df_class_data_host.index
-#     # df_class_data_host.reset_index(inplace=True)
-#     # df_class_data_host['dataset'] = name_data
-#     # complex_info = pd.concat([complex_info,df_class_data_host])
+#     # path_to_save = root_path+'/Results_Complexity_InstanceLevel'
+#     # save_csv = True
+#     save_csv = False
+#     # df_measures, df_classes_dataset = all_measures(data, save_csv, path_to_save, name_data)
+#     _, df_class_data_host = all_measures(data,save_csv,path_to_save, name_data)
+#     # df_class_data_host['level'] = df_class_data_host.index
+#     df_class_data_host.reset_index(inplace=True)
+#     df_class_data_host['dataset'] = name_data
+#     complex_info = pd.concat([complex_info,df_class_data_host])
