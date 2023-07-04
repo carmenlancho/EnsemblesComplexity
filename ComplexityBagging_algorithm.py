@@ -238,7 +238,7 @@ def ComplexityDrivenBagging(X,y,n_ensembles, name_data,path_to_save, split, stum
     nombre_csv_agg = 'AggregatedResults_CDB_' + name_data + '_split' + str(split)+ '_alpha' + str(alpha)+ '.csv'
     df_aggre.to_csv(nombre_csv_agg, encoding='utf_8_sig',index=False)
 
-    return results
+    return results, df_aggre
 
 
 
@@ -257,29 +257,34 @@ for filename in os.listdir(path_csv):
 
 # total_name_list = ['Data13.csv']
 
-total_name_list = [#'teaching_assistant_MH.csv','contraceptive_NL.csv','hill_valley_without_noise_traintest.csv',
- # 'breast-w.csv','contraceptive_LS.csv','ilpd.csv','phoneme.csv',
- # 'mammographic.csv','contraceptive_NS.csv','bupa.csv','Yeast_CYTvsNUC.csv',
- # 'titanic.csv','arrhythmia_cfs.csv','vertebral_column.csv','sonar.csv',
- #'spect_heart.csv',
- #                   'credit-g.csv', 'segment.csv',
- #                   ##'appendicitis.csv', 'haberman.csv',
- #                   'diabetes.csv',
- # 'diabetic_retinopathy.csv','WineQualityRed_5vs6.csv','teaching_assistant_LM.csv',
-'teaching_assistant_LH.csv',
- 'ionosphere.csv','bands.csv','wdbc.csv',
-    'spambase.csv','banknote_authentication.csv', 'pima.csv','titanic.csv']
+# total_name_list = [#'teaching_assistant_MH.csv','contraceptive_NL.csv','hill_valley_without_noise_traintest.csv',
+#  # 'breast-w.csv','contraceptive_LS.csv','ilpd.csv','phoneme.csv',
+#  # 'mammographic.csv','contraceptive_NS.csv','bupa.csv','Yeast_CYTvsNUC.csv',
+#  # 'titanic.csv','arrhythmia_cfs.csv','vertebral_column.csv','sonar.csv',
+#  #'spect_heart.csv',
+#  #                   'credit-g.csv', 'segment.csv',
+#  #                   ##'appendicitis.csv', 'haberman.csv',
+#  #                   'diabetes.csv',
+#  # 'diabetic_retinopathy.csv','WineQualityRed_5vs6.csv','teaching_assistant_LM.csv',
+# 'teaching_assistant_LH.csv',
+#  'ionosphere.csv','bands.csv','wdbc.csv',
+#     'spambase.csv','banknote_authentication.csv', 'pima.csv','titanic.csv']
 # 'appendicitis.csv' y haberman me han dado problemas
-total_name_list = ['ionosphere.csv']
+total_name_list = ['ionosphere.csv','WineQualityRed_5vs6.csv','mammographic.csv']
 
 # total_name_list = ['Data1.csv','Data2.csv','Data3.csv','Data4.csv','Data5.csv',
 #                 'Data6.csv','Data7.csv', 'Data8.csv','Data9.csv','Data10.csv',
 #                 'Data11.csv','Data12.csv',  'Data13.csv']
 
 path_to_save = root_path+'/Results_general_algorithm'
-n_ensembles = 20 # maximum number of ensembles to consider (later we plot and stop when we want)
+n_ensembles =10 # maximum number of ensembles to consider (later we plot and stop when we want)
 # CM_selected = 'Hostility' # selection of the complexity measure to guide the sampling
 
+results_total = pd.DataFrame()
+aggre_total = pd.DataFrame()
+
+alpha_v = [8, 16]
+split_v = [6,8,10]
 for data_file in total_name_list:
     os.chdir(root_path + '/datasets')
     print(data_file)
@@ -290,9 +295,17 @@ for data_file in total_name_list:
     X = preprocessing.scale(X)
     y = data[['y']].to_numpy()
     stump = 'no'
-    split = 1
-    alpha = 0
-    results0 = ComplexityDrivenBagging(X,y,n_ensembles, name_data,path_to_save, split, stump,alpha)
+    for alpha in alpha_v:
+        for split in split_v:
+            # split = 1
+            # alpha = 0
+            results, df_aggre = ComplexityDrivenBagging(X,y,n_ensembles, name_data,path_to_save, split, stump,alpha)
+            results['split'] = split
+            results['alpha'] = alpha
+            results_total = pd.concat([results_total,results])
+            aggre_total['split'] = split
+            aggre_total['alpha'] = alpha
+            aggre_total = pd.concat([aggre_total,df_aggre])
 
 
 
