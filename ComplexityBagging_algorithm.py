@@ -277,14 +277,12 @@ total_name_list = ['ionosphere.csv','WineQualityRed_5vs6.csv','mammographic.csv'
 #                 'Data11.csv','Data12.csv',  'Data13.csv']
 
 path_to_save = root_path+'/Results_general_algorithm'
-n_ensembles =10 # maximum number of ensembles to consider (later we plot and stop when we want)
+n_ensembles = 200 # maximum number of ensembles to consider (later we plot and stop when we want)
 # CM_selected = 'Hostility' # selection of the complexity measure to guide the sampling
 
-results_total = pd.DataFrame()
-aggre_total = pd.DataFrame()
 
-alpha_v = [8, 16]
-split_v = [6,8,10]
+alpha_v = [24,32,50]
+split_v = [20]
 for data_file in total_name_list:
     os.chdir(root_path + '/datasets')
     print(data_file)
@@ -300,12 +298,7 @@ for data_file in total_name_list:
             # split = 1
             # alpha = 0
             results, df_aggre = ComplexityDrivenBagging(X,y,n_ensembles, name_data,path_to_save, split, stump,alpha)
-            results['split'] = split
-            results['alpha'] = alpha
-            results_total = pd.concat([results_total,results])
-            aggre_total['split'] = split
-            aggre_total['alpha'] = alpha
-            aggre_total = pd.concat([aggre_total,df_aggre])
+
 
 
 
