@@ -354,6 +354,28 @@ def calculate_pred(predictions, predictions_proba):
            
 
 """ MAIN SCRIPT ============================================================="""
+list_datasets = [#'teaching_assistant_MH.csv','chronic_kidney.csv','contraceptive_NL.csv',
+# 'balance_scale_BR.csv',
+#     'seismic-bumps.csv',
+#     'voting_records.csv',
+#     'phishing.csv',
+# 'monks_prob_3.csv','breast-w.csv','credit-a.csv',
+#     'contraceptive_LS.csv','wine_c1c3.csv',
+# 'tic-tac-toe.csv',
+#     'mammographic_mass.csv',
+    'contraceptive_NS.csv','wine_c1c2.csv',
+'haberman.csv','cardiotocography_c1c3.csv','hepatitis.csv','titanic.csv',
+'internet_ad_cfs.csv','indian_liver_patients.csv','monks_prob_2.csv',
+'breast_cancer.csv','arrhythmia_cfs.csv','vertebral_column.csv','sonar.csv',
+'spect_heart.csv','horse_colic.csv','cardiotocography_c2c3.csv',
+'monks_prob_1.csv','credit-g.csv','car_evaluation.csv','climate_model.csv',
+'diabetic_retinopathy.csv','teaching_assistant_LM.csv','ionosphere.csv',
+'kr-vs-kp.csv','pima_indians_diabetes.csv','cervical_cancer_risk_factors.csv',
+'cardiotocography_c1c2.csv','teaching_assistant_LH.csv',
+'heart_disease.csv','balance_scale_LR.csv',
+'balance_scale_BL.csv','banknote_authentication.csv','wine_c2c3.csv']
+
+
 if __name__ == '__main__':
     np.set_printoptions(threshold=np.inf)  # To print the whole array instead of "..." in the middle parts
     
@@ -361,7 +383,8 @@ if __name__ == '__main__':
     datasetcount = 0
     
     """ Begin loop for each dataset """  
-    for dataset_name in os.listdir('MixedBagging/Datasets/'):    # dataset_name now contains the trailing '.csv'
+    # for dataset_name in os.listdir('MixedBagging/Datasets/'):    # dataset_name now contains the trailing '.csv'
+    for dataset_name in list_datasets:
         print(dataset_name)
         if(dataset_name.endswith('csv')):
             # Create files to write out the prints
