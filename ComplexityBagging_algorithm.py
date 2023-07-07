@@ -270,7 +270,7 @@ for filename in os.listdir(path_csv):
 #  'ionosphere.csv','bands.csv','wdbc.csv',
 #     'spambase.csv','banknote_authentication.csv', 'pima.csv','titanic.csv']
 # 'appendicitis.csv' y haberman me han dado problemas
-total_name_list = ['ionosphere.csv','WineQualityRed_5vs6.csv','mammographic.csv']
+# total_name_list = ['ionosphere.csv','WineQualityRed_5vs6.csv','mammographic.csv']
 
 # total_name_list = ['Data1.csv','Data2.csv','Data3.csv','Data4.csv','Data5.csv',
 #                 'Data6.csv','Data7.csv', 'Data8.csv','Data9.csv','Data10.csv',
@@ -281,8 +281,8 @@ n_ensembles = 200 # maximum number of ensembles to consider (later we plot and s
 # CM_selected = 'Hostility' # selection of the complexity measure to guide the sampling
 
 
-alpha_v = [24,32,50]
-split_v = [20]
+alpha_v = [2,4,6,8,10,12,14,16,18,20]
+split_v = [1,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30] # s=1 base case
 for data_file in total_name_list:
     os.chdir(root_path + '/datasets')
     print(data_file)
