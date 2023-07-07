@@ -66,6 +66,12 @@ for data_i in data_list:
             data.columns = [str(col) + '_split10_alpha8' for col in data.columns]
         elif ('split10_alpha16' in name):
             data.columns = [str(col) + '_split10_alpha16' for col in data.columns]
+        elif ('split20_alpha24' in name):
+            data.columns = [str(col) + '_split20_alpha24' for col in data.columns]
+        elif ('split20_alpha32' in name):
+            data.columns = [str(col) + '_split20_alpha32' for col in data.columns]
+        elif ('split20_alpha50' in name):
+            data.columns = [str(col) + '_split20_alpha50' for col in data.columns]
         data.columns.values[0:2] = ['n_ensemble', 'weights']
         data_total = pd.concat([data_total, data], axis=1)
     data_total = data_total.loc[:, ~data_total.columns.duplicated()]  # remove duplicate columns
@@ -74,7 +80,9 @@ for data_i in data_list:
     df_long_host = pd.melt(data_total[data_total['weights'] == 'Hostility'],id_vars=['n_ensemble','weights'],
                       value_vars=['Boots_Hostility_dataset_mean_split6_alpha8', 'Boots_Hostility_dataset_mean_split6_alpha16',
                                   'Boots_Hostility_dataset_mean_split8_alpha8', 'Boots_Hostility_dataset_mean_split8_alpha16',
-                                  'Boots_Hostility_dataset_mean_split10_alpha8', 'Boots_Hostility_dataset_mean_split10_alpha16'],
+                                  'Boots_Hostility_dataset_mean_split10_alpha8', 'Boots_Hostility_dataset_mean_split10_alpha16',
+                                  'Boots_Hostility_dataset_mean_split20_alpha24', 'Boots_Hostility_dataset_mean_split20_alpha32',
+                                    'Boots_Hostility_dataset_mean_split20_alpha50'],
                       value_name='Complexity')
 
 
@@ -91,14 +99,18 @@ for data_i in data_list:
     ax = sns.boxplot(y=df_long_host["Complexity"], x=df_long_host["variable"],
                 order=['Boots_Hostility_dataset_mean_split6_alpha8', 'Boots_Hostility_dataset_mean_split6_alpha16',
                                   'Boots_Hostility_dataset_mean_split8_alpha8', 'Boots_Hostility_dataset_mean_split8_alpha16',
-                                  'Boots_Hostility_dataset_mean_split10_alpha8', 'Boots_Hostility_dataset_mean_split10_alpha16'],
+                                  'Boots_Hostility_dataset_mean_split10_alpha8', 'Boots_Hostility_dataset_mean_split10_alpha16',
+                       'Boots_Hostility_dataset_mean_split20_alpha24', 'Boots_Hostility_dataset_mean_split20_alpha32',
+                       'Boots_Hostility_dataset_mean_split20_alpha50' ],
                      color='white')
     sns.stripplot(data=df_long_host, x="variable", y="Complexity", dodge=True, ax=ax,
                   order=['Boots_Hostility_dataset_mean_split6_alpha8', 'Boots_Hostility_dataset_mean_split6_alpha16',
                                   'Boots_Hostility_dataset_mean_split8_alpha8', 'Boots_Hostility_dataset_mean_split8_alpha16',
-                                  'Boots_Hostility_dataset_mean_split10_alpha8', 'Boots_Hostility_dataset_mean_split10_alpha16'])
+                                  'Boots_Hostility_dataset_mean_split10_alpha8', 'Boots_Hostility_dataset_mean_split10_alpha16',
+                         'Boots_Hostility_dataset_mean_split20_alpha24', 'Boots_Hostility_dataset_mean_split20_alpha32',
+                         'Boots_Hostility_dataset_mean_split20_alpha50'])
     ax.set_xticklabels(['s6_a8', 's6_a16', 's8_a8','s8_a16',
-                        's10_a8','s10_a16'],
+                        's10_a8','s10_a16','s20_a24','s20_a32','s20_a50'],
                        rotation=40)
     plt.title(data_i)
     plt.show()
