@@ -379,10 +379,12 @@ list_datasets = [#'teaching_assistant_MH.csv','chronic_kidney.csv','contraceptiv
 # 'kr-vs-kp.csv',
 #     'pima_indians_diabetes.csv','cervical_cancer_risk_factors.csv',
 # 'cardiotocography_c1c2.csv',
-    'teaching_assistant_LH.csv',
-'heart_disease.csv','balance_scale_LR.csv',
-'balance_scale_BL.csv','banknote_authentication.csv','wine_c2c3.csv']
+#     'teaching_assistant_LH.csv',
+# 'heart_disease.csv','balance_scale_LR.csv',
+# 'balance_scale_BL.csv','banknote_authentication.csv',
+    'wine_c2c3.csv']
 
+verbose = True
 
 if __name__ == '__main__':
     np.set_printoptions(threshold=np.inf)  # To print the whole array instead of "..." in the middle parts
@@ -496,13 +498,13 @@ if __name__ == '__main__':
                             trainset = np.concatenate((X_train, Y_train_reshaped, ih_tr_reshaped), axis = 1) #trainset includes both X and Y 
                             
                             mixed_bags = list()
-                            for hq, mx in itertools.product(hqs, mix_ratios):                            
+                            for hq, mx in itertools.product(hqs, mix_ratios):
                                 mixed_bags.append(create_mixed_bags(trainset, ih_tr, mix_ratio=mx, hard_quotient=hq)) # Mixed bags with different mixed ratios
-                            
+
                             grad_bags = list()
                             for h_i in hardness_intervals:   
                                 grad_bags.append(create_gradually_mixed_bags(trainset, ih_tr, low_bag_hardness=h_i[0], high_bag_hardness=h_i[1])) # GRadually mixed bags with different intervals
-                        
+
                             # Visualize bags when necessary. Code just has mixed bags, but can try others
                             if vizbags == True:
                                 visualize_bags(mixed_bags[2*numratios])   # MR = 3:3:3, HQ = 0.75
