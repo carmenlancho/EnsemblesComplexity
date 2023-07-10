@@ -5,7 +5,6 @@
 
 import numpy as np
 import copy
-import os
 import matplotlib.pyplot as plt
 from sklearn import preprocessing
 import pandas as pd
@@ -20,8 +19,10 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.linear_model import LogisticRegression
+from sklearn.naive_bayes import GaussianNB
 from collections import Counter
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_split, StratifiedKFold, cross_val_score
+
 import os
 
 
@@ -81,12 +82,25 @@ def classification_gridsearchCV_easyDatasets(X,y):
     clf = clf.fit(X, y)
     acc_best_dt = clf.best_score_
 
+
+    ## Gaussian Naive Bayes
+    nb = GaussianNB()
+    clf = nb.fit(X, y)
+    skf = StratifiedKFold(n_splits=10, random_state=1, shuffle=True)
+    acc_nb = cross_val_score(clf, X, y, cv=skf, scoring = 'accuracy')
+    acc_best_nb = acc_nb.mean()
+
+
+
     acc_results_dict = {'acc_svmlinear':acc_best_svmlinear,
                    'acc_svmrbf':acc_best_svmrbf,
                    'acc_mlp':acc_best_mlp,
                    'acc_knn':acc_best_knn,
-                   'acc_dt':acc_best_dt}
+                   'acc_dt':acc_best_dt,
+                    'acc_nb':acc_best_nb}
     acc_results = pd.DataFrame([acc_results_dict])
+
+
 
     return acc_results
 
@@ -101,8 +115,8 @@ for filename in os.listdir(path_csv):
         total_name_list.append(filename)
 
 
-total_name_list = ['phoneme.csv','spambase.csv', 'ionosphere.csv',
-                 'wdbc.csv', 'segment.csv','breast-w.csv',  'banknote_authentication.csv' ]
+# total_name_list = ['phoneme.csv','spambase.csv', 'ionosphere.csv',
+#                  'wdbc.csv', 'segment.csv','breast-w.csv',  'banknote_authentication.csv' ]
 # total_name_list =  [ 'bupa.csv','hill_valley_without_noise_traintest.csv','contraceptive_NS.csv',
 #                  'teaching_assistant_LM.csv','contraceptive_LS.csv','diabetic_retinopathy.csv',
 #                  'Yeast_CYTvsNUC.csv','bands.csv','ilpd.csv']
@@ -138,7 +152,8 @@ os.chdir(path_to_save)
 # nombre_csv = 'ClassificationSingleLearner_EasyDatasets.csv'
 # nombre_csv = 'ClassificationSingleLearner_IntermediateDatasets.csv'
 # nombre_csv = 'ClassificationSingleLearner_HardDatasets.csv'
-nombre_csv = 'ClassificationSingleLearner_ArtificialDatasets.csv'
+# nombre_csv = 'ClassificationSingleLearner_ArtificialDatasets.csv'
+nombre_csv = 'ClassificationSingleLearner_AllDatasets.csv'
 total_results.to_csv(nombre_csv, encoding='utf_8_sig', index=True)
 
 
