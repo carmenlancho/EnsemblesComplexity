@@ -222,8 +222,6 @@ n_ensembles = 200 # maximum number of ensembles to consider (later we plot and s
 # CM_selected = 'Hostility' # selection of the complexity measure to guide the sampling
 
 
-alpha_v = [2,4,6,8,10,12,14,16,18,20]
-split_v = [1,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30] # s=1 base case
 for data_file in total_name_list:
     os.chdir(root_path + '/datasets')
     print(data_file)
