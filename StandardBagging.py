@@ -170,6 +170,10 @@ def StandardBagging(X,y,n_ensembles, name_data,path_to_save, stump):
     ##### Agregation of results
     df_aggre = aggregation_results_final_algorith(results)
 
+    # ## Best number of ensembles
+    # index_max_acc = df_aggre.accuracy_mean.argmax()
+    # best_n_ensemble = df_aggre.iloc[index_max_acc, 0]
+
     # To save the results
     os.chdir(path_to_save)
     nombre_csv_agg = 'AggregatedResults_StandardBagging_' + name_data + '.csv'
