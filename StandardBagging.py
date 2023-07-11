@@ -170,10 +170,6 @@ def StandardBagging(X,y,n_ensembles, name_data,path_to_save, stump):
     ##### Agregation of results
     df_aggre = aggregation_results_final_algorith(results)
 
-    # ## Best number of ensembles
-    # index_max_acc = df_aggre.accuracy_mean.argmax()
-    # best_n_ensemble = df_aggre.iloc[index_max_acc, 0]
-
     # To save the results
     os.chdir(path_to_save)
     nombre_csv_agg = 'AggregatedResults_StandardBagging_' + name_data + '.csv'
@@ -193,29 +189,6 @@ for filename in os.listdir(path_csv):
     if filename.endswith('.csv'):
         total_name_list.append(filename)
 
-# yeast da problemas porque una clase es muy pequeña y no aparece en todos los folds (creo que tb es por DCP)
-# haberman da problemas y es por DCP que da solo dos valores y concuerdan con la y
-
-# total_name_list = ['Data13.csv']
-
-# total_name_list = [#'teaching_assistant_MH.csv','contraceptive_NL.csv','hill_valley_without_noise_traintest.csv',
-#  # 'breast-w.csv','contraceptive_LS.csv','ilpd.csv','phoneme.csv',
-#  # 'mammographic.csv','contraceptive_NS.csv','bupa.csv','Yeast_CYTvsNUC.csv',
-#  # 'titanic.csv','arrhythmia_cfs.csv','vertebral_column.csv','sonar.csv',
-#  #'spect_heart.csv',
-#  #                   'credit-g.csv', 'segment.csv',
-#  #                   ##'appendicitis.csv', 'haberman.csv',
-#  #                   'diabetes.csv',
-#  # 'diabetic_retinopathy.csv','WineQualityRed_5vs6.csv','teaching_assistant_LM.csv',
-# 'teaching_assistant_LH.csv',
-#  'ionosphere.csv','bands.csv','wdbc.csv',
-#     'spambase.csv','banknote_authentication.csv', 'pima.csv','titanic.csv']
-# 'appendicitis.csv' y haberman me han dado problemas
-# total_name_list = ['ionosphere.csv','WineQualityRed_5vs6.csv','mammographic.csv']
-
-# total_name_list = ['Data1.csv','Data2.csv','Data3.csv','Data4.csv','Data5.csv',
-#                 'Data6.csv','Data7.csv', 'Data8.csv','Data9.csv','Data10.csv',
-#                 'Data11.csv','Data12.csv',  'Data13.csv']
 
 path_to_save = root_path+'/Results_StandardBagging'
 n_ensembles = 200 # maximum number of ensembles to consider (later we plot and stop when we want)
@@ -236,5 +209,27 @@ for data_file in total_name_list:
 
 
 
+### Leemos todos los resultados y seleccionamos el mejor ensemble para cada caso
+
+
+path_csv = os.chdir(root_path+'/Results_StandardBagging')
+# Extraemos los nombres de todos los ficheros
+total_name_list = []
+for filename in os.listdir(path_csv):
+    if filename.endswith('.csv') and 'Aggregated' in filename:
+        total_name_list.append(filename)
+
+best_n_trees_df = pd.DataFrame()
+
+for file_i in total_name_list:
+    name_data = file_i[34:-4]
+    data_file = pd.read_csv(file_i)
+    index_max_acc = data_file.accuracy_mean.argmax()
+    max_acc = data_file.accuracy_mean.max()
+    best_n_ensemble = data_file.iloc[index_max_acc, 0]
+    best_n_ensemble_df = pd.DataFrame({'name_data':name_data,
+                                       'best_n_ensemble':best_n_ensemble,
+                                       'best_acc':max_acc}, index=[0])
+    best_n_trees_df = pd.concat([best_n_trees_df,best_n_ensemble_df])
 
 
