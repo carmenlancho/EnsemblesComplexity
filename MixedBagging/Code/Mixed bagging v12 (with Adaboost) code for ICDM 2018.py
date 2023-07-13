@@ -413,7 +413,7 @@ if __name__ == '__main__':
             # imp = preprocessing.Imputer(missing_values=999, strategy='most_frequent', axis=0)  # Impute missing values which are coded as'999' in all datasets
             # preprocessing.Imputer está deprecated, lo cambio por SimpleImputer
             X_unscaled = imp.fit_transform(X_mis)
-#            X = preprocessing.scale(X_unscaled)   # Scale/normalize the data
+#            X = preprocessing.scale(X_unscaled)   # Scale/normalize the data # NO COMMENT
             X = X_unscaled
                                         #'''
           #  X = X.as_matrix()
