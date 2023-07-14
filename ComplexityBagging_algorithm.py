@@ -10,6 +10,7 @@ from sklearn import preprocessing
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import confusion_matrix, accuracy_score
 from aux_functions import aggregation_results_final_algorith
+import multiprocessing as mp
 
 root_path = os.getcwd()
 
@@ -46,7 +47,12 @@ def voting_rule(preds):
 
 
 
-def ComplexityDrivenBagging(X,y,n_ensembles, n_ensembles_v, name_data,path_to_save, split, stump,alpha):
+def ComplexityDrivenBagging(data,n_ensembles, n_ensembles_v, name_data,path_to_save, split, stump,alpha):
+
+    # X, y
+    X = data.iloc[:,:-1].to_numpy() # all variables except y
+    X = preprocessing.scale(X)
+    y = data[['y']].to_numpy()
 
     # dataframe to save the results
     results = pd.DataFrame(columns=['dataset','fold','n_ensemble','weights','confusion_matrix','accuracy',
@@ -272,41 +278,105 @@ for filename in os.listdir(path_csv):
 #  'ionosphere.csv','bands.csv','wdbc.csv',
 #     'spambase.csv','banknote_authentication.csv', 'pima.csv','titanic.csv']
 # 'appendicitis.csv' y haberman me han dado problemas
-# total_name_list = ['ionosphere.csv','WineQualityRed_5vs6.csv','mammographic.csv']
+# total_name_list = ['ionosphere.csv','mammographic.csv']
 
 # total_name_list = ['Data1.csv','Data2.csv','Data3.csv','Data4.csv','Data5.csv',
 #                 'Data6.csv','Data7.csv', 'Data8.csv','Data9.csv','Data10.csv',
 #                 'Data11.csv','Data12.csv',  'Data13.csv']
 
-path_to_save = root_path+'/Results_general_algorithm'
-n_ensembles = 200 # maximum number of ensembles to consider (later we plot and stop when we want)
-n_ensembles_v = [0,9,19,29,39,49,59,69,79,89,99,
-                 109,119,129,139,149,159,169,179,189,199]
+# path_to_save = root_path+'/Results_general_algorithm'
+# n_ensembles = 200 # maximum number of ensembles to consider (later we plot and stop when we want)
+# n_ensembles_v = [0,9,19,29,39,49,59,69,79,89,99,
+#                  109,119,129,139,149,159,169,179,189,199]
+#
+# # n_ensembles = 30 # maximum number of ensembles to consider (later we plot and stop when we want)
+# # n_ensembles_v = [0,9,19,29]
+#
+#
+# alpha_v = [2,4,6,8,10,12,14,16,18,20]
+# split_v = [1,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30] # s=1 base case
+#
+# alpha_v = [2]
+# split_v = [1] # s=1 base case
+#
+#
+#
+#
+# for data_file in total_name_list:
+#     os.chdir(root_path + '/datasets')
+#     print(data_file)
+#     file = data_file
+#     name_data = data_file[:-4]
+#     data = pd.read_csv(file)
+#     stump = 'no'
+#     for alpha in alpha_v:
+#         for split in split_v:
+#             # split = 1
+#             print(split)
+#             # alpha = 0
+#             results, df_aggre = ComplexityDrivenBagging(data,n_ensembles,n_ensembles_v, name_data,path_to_save, split, stump,alpha)
 
-# n_ensembles = 30 # maximum number of ensembles to consider (later we plot and stop when we want)
-# n_ensembles_v = [0,9,19,29]
 
 
-alpha_v = [2,4,6,8,10,12,14,16,18,20]
-split_v = [1,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30] # s=1 base case
-for data_file in total_name_list:
+
+def results_ComplexityBagging(data_file):
+    n_ensembles = 200  # maximum number of ensembles to consider (later we plot and stop when we want)
+    n_ensembles_v = [0, 9, 19, 29, 39, 49, 59, 69, 79, 89, 99,
+                     109, 119, 129, 139, 149, 159, 169, 179, 189, 199]
+    alpha_v = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+    split_v = [1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30]  # s=1 base case
+    path_to_save = root_path + '/Results_general_algorithm'
+
+    # for data_file in total_name_list:
     os.chdir(root_path + '/datasets')
     print(data_file)
-    file = data_file
     name_data = data_file[:-4]
-    data = pd.read_csv(file)
-    X = data.iloc[:,:-1].to_numpy() # all variables except y
-    X = preprocessing.scale(X)
-    y = data[['y']].to_numpy()
+    data = pd.read_csv(data_file)
     stump = 'no'
     for alpha in alpha_v:
         for split in split_v:
             # split = 1
             print(split)
             # alpha = 0
-            results, df_aggre = ComplexityDrivenBagging(X,y,n_ensembles,n_ensembles_v, name_data,path_to_save, split, stump,alpha)
+            ComplexityDrivenBagging(data,n_ensembles,n_ensembles_v, name_data,path_to_save, split, stump,alpha)
+
+    return
+
+# total_name_list
 
 
 
+N= mp.cpu_count()
 
+with mp.Pool(processes = N-1) as p:
+        p.map(results_ComplexityBagging, [data_file for data_file in total_name_list])
+        # p.close()
 
+print("--- %s seconds ---" % (time.time() - start_time))
+
+# with Pool(processes=8) as p, tqdm(total=len(parallel_args)) as pbar:
+#     for _ in tqdm(enumerate(p.imap_unordered(run_experiment, parallel_args))):
+#         pbar.update()
+#
+#
+# from multiprocessing import Pool
+#
+# L1 = [1,2,3]
+# L2 = [3,4,5]
+# L3 = [5,6,7]
+#
+# def f(li):
+#     return [x * 2 for x in li]
+#
+# if __name__ == '__main__':
+#     with Pool(4) as pool:
+#         print(pool.map(f, [L1, L2, L3]))
+#
+# name1 = 'ionosphere.csv'
+# name2 = 'mammographic.csv'
+# start_time = time.time()
+# if __name__ == '__main__':
+#     with Pool(4) as pool:
+#         print(pool.map(results_ComplexityBagging, total_name_list))
+#
+# print("--- %s seconds ---" % (time.time() - start_time))
