@@ -352,7 +352,7 @@ with mp.Pool(processes = N-1) as p:
         p.map(results_ComplexityBagging, [data_file for data_file in total_name_list])
         # p.close()
 
-print("--- %s seconds ---" % (time.time() - start_time))
+
 
 # with Pool(processes=8) as p, tqdm(total=len(parallel_args)) as pbar:
 #     for _ in tqdm(enumerate(p.imap_unordered(run_experiment, parallel_args))):
