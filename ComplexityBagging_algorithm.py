@@ -46,7 +46,7 @@ def voting_rule(preds):
 
 
 
-def ComplexityDrivenBagging(X,y,n_ensembles, name_data,path_to_save, split, stump,alpha):
+def ComplexityDrivenBagging(X,y,n_ensembles, n_ensembles_v, name_data,path_to_save, split, stump,alpha):
 
     # dataframe to save the results
     results = pd.DataFrame(columns=['dataset','fold','n_ensemble','weights','confusion_matrix','accuracy',
@@ -201,29 +201,31 @@ def ComplexityDrivenBagging(X,y,n_ensembles, name_data,path_to_save, split, stum
                 acc = accuracy_score(y_predicted, y_test)
                 conf_matrix = confusion_matrix(y_test, y_predicted).tolist()
 
-                results_dict = {'dataset':name_data,'fold':fold, 'n_ensemble':i, 'weights':CM_selected,
-                                    'confusion_matrix':[conf_matrix], 'accuracy':acc,
-                                    'Boots_Hostility_dataset':Boots_Hostility_dataset,
-                                    'Boots_kDN_dataset': Boots_kDN_dataset,
-                                    'Boots_DCP_dataset': Boots_DCP_dataset,
-                                    'Boots_TD_U_dataset': Boots_TD_U_dataset,
-                                    'Boots_CLD_dataset': Boots_CLD_dataset,
-                                    'Boots_N1_dataset': Boots_N1_dataset,
-                                    'Boots_N2_dataset': Boots_N2_dataset,
-                                    'Boots_LSC_dataset': Boots_LSC_dataset,
-                                    'Boots_F1_dataset': Boots_F1_dataset,
 
-                                    'Boots_Hostility_class': [Boots_Hostility_class],
-                                    'Boots_kDN_class': [Boots_kDN_class],
-                                    'Boots_DCP_class': [Boots_DCP_class],
-                                    'Boots_TD_U_class': [Boots_TD_U_class],
-                                    'Boots_CLD_class': [Boots_CLD_class],
-                                    'Boots_N1_class': [Boots_N1_class],
-                                    'Boots_N2_class': [Boots_N2_class],
-                                    'Boots_LSC_class': [Boots_LSC_class],
-                                    'Boots_F1_class': [Boots_F1_class]}
-                results_aux = pd.DataFrame(results_dict, index=[0])
-                results = pd.concat([results,results_aux])
+                if (i in n_ensembles_v):
+                    results_dict = {'dataset':name_data,'fold':fold, 'n_ensemble':i, 'weights':CM_selected,
+                                        'confusion_matrix':[conf_matrix], 'accuracy':acc,
+                                        'Boots_Hostility_dataset':Boots_Hostility_dataset,
+                                        'Boots_kDN_dataset': Boots_kDN_dataset,
+                                        'Boots_DCP_dataset': Boots_DCP_dataset,
+                                        'Boots_TD_U_dataset': Boots_TD_U_dataset,
+                                        'Boots_CLD_dataset': Boots_CLD_dataset,
+                                        'Boots_N1_dataset': Boots_N1_dataset,
+                                        'Boots_N2_dataset': Boots_N2_dataset,
+                                        'Boots_LSC_dataset': Boots_LSC_dataset,
+                                        'Boots_F1_dataset': Boots_F1_dataset,
+
+                                        'Boots_Hostility_class': [Boots_Hostility_class],
+                                        'Boots_kDN_class': [Boots_kDN_class],
+                                        'Boots_DCP_class': [Boots_DCP_class],
+                                        'Boots_TD_U_class': [Boots_TD_U_class],
+                                        'Boots_CLD_class': [Boots_CLD_class],
+                                        'Boots_N1_class': [Boots_N1_class],
+                                        'Boots_N2_class': [Boots_N2_class],
+                                        'Boots_LSC_class': [Boots_LSC_class],
+                                        'Boots_F1_class': [Boots_F1_class]}
+                    results_aux = pd.DataFrame(results_dict, index=[0])
+                    results = pd.concat([results,results_aux])
 
     # To save the results
     os.chdir(path_to_save)
@@ -278,7 +280,11 @@ for filename in os.listdir(path_csv):
 
 path_to_save = root_path+'/Results_general_algorithm'
 n_ensembles = 200 # maximum number of ensembles to consider (later we plot and stop when we want)
-# CM_selected = 'Hostility' # selection of the complexity measure to guide the sampling
+n_ensembles_v = [0,9,19,29,39,49,59,69,79,89,99,
+                 109,119,129,139,149,159,169,179,189,199]
+
+# n_ensembles = 30 # maximum number of ensembles to consider (later we plot and stop when we want)
+# n_ensembles_v = [0,9,19,29]
 
 
 alpha_v = [2,4,6,8,10,12,14,16,18,20]
@@ -296,8 +302,9 @@ for data_file in total_name_list:
     for alpha in alpha_v:
         for split in split_v:
             # split = 1
+            print(split)
             # alpha = 0
-            results, df_aggre = ComplexityDrivenBagging(X,y,n_ensembles, name_data,path_to_save, split, stump,alpha)
+            results, df_aggre = ComplexityDrivenBagging(X,y,n_ensembles,n_ensembles_v, name_data,path_to_save, split, stump,alpha)
 
 
 
