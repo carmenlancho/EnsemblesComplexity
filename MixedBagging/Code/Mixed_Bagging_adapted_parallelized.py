@@ -1067,7 +1067,7 @@ for filename in os.listdir(path_csv):
 
 N= mp.cpu_count()
 
-with mp.Pool(processes = N-1) as p:
+with mp.Pool(processes = N-15) as p:
         p.map(AdaptedMixedBagging, [dataset_name for dataset_name in total_name_list])
         # p.close()
 
