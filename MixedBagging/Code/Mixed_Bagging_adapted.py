@@ -46,19 +46,21 @@ import matplotlib.pyplot as plt
 # Añadido por Carmen
 from sklearn.impute import SimpleImputer
 
+root_path = os.getcwd()
+
 start = time.time()
 
 """ Some global values declared so that they can be easily changed """
-# dataset_list = ['banknote_authentication', 'breast_cancer', 'breast-w', 'cervical_cancer_risk_factors', 'climate_model', 'credit-a', 'heart_disease', 'heart-statlog', 'horse_colic', 'indian_liver_patients', 'ionosphere','pima_indians_diabetes', 'seismic-bumps', 'stroke_normalized', 'voting_records']
-dataset_list = ['banknote_authentication', 'breast_cancer', 'breast-w', 'cervical_cancer_risk_factors', 'climate_model']
-# dataset_list = ['credit-a', 'heart_disease', 'heart-statlog', 'horse_colic', 'indian_liver_patients', 'ionosphere']
-# dataset_list = ['pima_indians_diabetes', 'seismic-bumps', 'stroke_normalized', 'voting_records']
-# dataset_list = ['breast_cancer', 'heart_disease']
-# dataset_list = ['breast-w','heart-statlog']
-dataset_list = ['acute_inflammations', 'acute_nephritis', 'hepatitis', 'kr-vs-kp', 'labor', 'sick']
-dataset_list = ['balance_scale_LR', 'balance_scale_BL', 'balance_scale_BR']
-dataset_list = ['teaching_assistant_LH', 'teaching_assistant_LM', 'teaching_assistant_MH']
-dataset_list = ['titanic']
+# # dataset_list = ['banknote_authentication', 'breast_cancer', 'breast-w', 'cervical_cancer_risk_factors', 'climate_model', 'credit-a', 'heart_disease', 'heart-statlog', 'horse_colic', 'indian_liver_patients', 'ionosphere','pima_indians_diabetes', 'seismic-bumps', 'stroke_normalized', 'voting_records']
+# dataset_list = ['banknote_authentication', 'breast_cancer', 'breast-w', 'cervical_cancer_risk_factors', 'climate_model']
+# # dataset_list = ['credit-a', 'heart_disease', 'heart-statlog', 'horse_colic', 'indian_liver_patients', 'ionosphere']
+# # dataset_list = ['pima_indians_diabetes', 'seismic-bumps', 'stroke_normalized', 'voting_records']
+# # dataset_list = ['breast_cancer', 'heart_disease']
+# # dataset_list = ['breast-w','heart-statlog']
+# dataset_list = ['acute_inflammations', 'acute_nephritis', 'hepatitis', 'kr-vs-kp', 'labor', 'sick']
+# dataset_list = ['balance_scale_LR', 'balance_scale_BL', 'balance_scale_BR']
+# dataset_list = ['teaching_assistant_LH', 'teaching_assistant_LM', 'teaching_assistant_MH']
+# dataset_list = ['titanic']
 
 classifier = 'DT'  # Which classifier to use. DT = Decision Tree, NB = Naive Bayes, KNN = k-nearest neighbors
 
@@ -70,8 +72,8 @@ verbose = True  # Whether to print info of each fold
 defnumbags = 20  # default number of bags
 numruns = 1  # No. of runs (with diff rand seeds) for k-fold evaluation
 numfolds = 10  # No. of folds for test set evaluation
-numcvruns = 3  # No. of runs for cross validation
-numcvfolds = 5  # No. of folds for cross-validation (for model selection)
+numcvruns = 1  # No. of runs for cross validation
+numcvfolds = 10  # No. of folds for cross-validation (for model selection)
 numsynthruns = 10  # No. of runs for synthetic dataset experiments
 clfList = [0, 1, 2, 3]  # Identify which of the classifiers to use for IH calculation. THe numbers associated with each clf can be found in ih_calc
 
@@ -419,12 +421,12 @@ list_datasets = [  # 'teaching_assistant_MH.csv','chronic_kidney.csv','contracep
     # 'heart_disease.csv','balance_scale_LR.csv',
     # 'balance_scale_BL.csv','banknote_authentication.csv',
     'wine_c2c3.csv']
+path_to_save = root_path + '/MixedBagging/Adapted_results'
 
 verbose = True
 
 # defnumbags = 20  # default number of bags
 defnumbags_v = [8,10]
-
 
 
 if __name__ == '__main__':
@@ -442,14 +444,14 @@ if __name__ == '__main__':
 
             for defnumbags in defnumbags_v:
 
-                # Create files to write out the prints
-                outfilename = "MixedBagging/outputs/DT_d1/" + dataset_name[:-4] + "_n_trees_" +str(defnumbags) + "_summary.txt"
-                outfile = open(outfilename, "w")
-
-                csvfilename = "MixedBagging/outputs/DT_d1/" + dataset_name[:-4] + "_n_trees_" +str(defnumbags) + "_details.csv"
-                csvfile = open(csvfilename, 'w')
-                csvwriter = csv.writer(csvfile, delimiter=",", lineterminator='\n')
-
+                # # Create files to write out the prints
+                # outfilename = "MixedBagging/outputs/DT_d1/" + dataset_name[:-4] + "_n_trees_" +str(defnumbags) + "_summary.txt"
+                # outfile = open(outfilename, "w")
+                #
+                # csvfilename = "MixedBagging/outputs/DT_d1/" + dataset_name[:-4] + "_n_trees_" +str(defnumbags) + "_details.csv"
+                # csvfile = open(csvfilename, 'w')
+                # csvwriter = csv.writer(csvfile, delimiter=",", lineterminator='\n')
+                os.chdir(root_path)
                 data = pd.read_csv('MixedBagging/Datasets/' + dataset_name)  # construct file name of dataset
                 X_mis = data.iloc[:, :-1]  # Columns 0 to end - 1 # cambio ix por iloc
                 y = data.iloc[:, -1]  # Last column # cambio ix por iloc
@@ -671,14 +673,14 @@ if __name__ == '__main__':
 
                         # Write these values to fie for later inspection
 
-                        csvwriter.writerows([np.round(val_acc_mx, 3)])
-                        csvwriter.writerows([np.round(val_f1_mx, 3)])
-                        csvwriter.writerows([np.round(val_auc_mx, 3)])
-                        csvwriter.writerow([])
-                        csvwriter.writerows([np.round(val_acc_gr, 3)])
-                        csvwriter.writerows([np.round(val_f1_gr, 3)])
-                        csvwriter.writerows([np.round(val_auc_gr, 3)])
-                        csvwriter.writerow([])
+                        # csvwriter.writerows([np.round(val_acc_mx, 3)])
+                        # csvwriter.writerows([np.round(val_f1_mx, 3)])
+                        # csvwriter.writerows([np.round(val_auc_mx, 3)])
+                        # csvwriter.writerow([])
+                        # csvwriter.writerows([np.round(val_acc_gr, 3)])
+                        # csvwriter.writerows([np.round(val_f1_gr, 3)])
+                        # csvwriter.writerows([np.round(val_auc_gr, 3)])
+                        # csvwriter.writerow([])
 
                         # Find indices of best combo/interval
                         idx_max_acc_mx = np.argmax(val_acc_mx)  # Index of max accuracy in mixed bags
@@ -726,14 +728,14 @@ if __name__ == '__main__':
                                                            hard_quotient=hqs[
                                                                idx_max_auc_mx // numratios])  # Mixed bags with different mixed ratios
 
-                        if verbose == True:  # Print when required
-                            outfile.write("\nFor run %d fold %d:" % (run + 1, fold + 1))
-                            outfile.write("\t%s  %s" % (
-                            mix_ratios[idx_max_acc_mx % numratios], hqs[idx_max_acc_mx // numratios]))  # integer division
-                            outfile.write(
-                                "\t%s  %s" % (mix_ratios[idx_max_f1_mx % numratios], hqs[idx_max_f1_mx // numratios]))
-                            outfile.write(
-                                "\t%s  %s" % (mix_ratios[idx_max_auc_mx % numratios], hqs[idx_max_auc_mx // numratios]))
+                        # if verbose == True:  # Print when required
+                        #     outfile.write("\nFor run %d fold %d:" % (run + 1, fold + 1))
+                        #     outfile.write("\t%s  %s" % (
+                        #     mix_ratios[idx_max_acc_mx % numratios], hqs[idx_max_acc_mx // numratios]))  # integer division
+                        #     outfile.write(
+                        #         "\t%s  %s" % (mix_ratios[idx_max_f1_mx % numratios], hqs[idx_max_f1_mx // numratios]))
+                        #     outfile.write(
+                        #         "\t%s  %s" % (mix_ratios[idx_max_auc_mx % numratios], hqs[idx_max_auc_mx // numratios]))
 
                         # Grad bags
                         grad_bags_acc = create_gradually_mixed_bags(trainvalset, ih,
@@ -746,11 +748,11 @@ if __name__ == '__main__':
                                                                     low_bag_hardness=hardness_intervals[idx_max_auc_gr][0],
                                                                     high_bag_hardness=hardness_intervals[idx_max_auc_gr][1])
 
-                        if verbose == True:
-                            #   outfile.write("\nFor run %d fold %d:" % (run + 1, fold + 1))
-                            outfile.write("\t\t%s" % hardness_intervals[idx_max_acc_gr])
-                            outfile.write("\t%s" % hardness_intervals[idx_max_f1_gr])
-                            outfile.write("\t%s" % hardness_intervals[idx_max_auc_gr])
+                        # if verbose == True:
+                        #     #   outfile.write("\nFor run %d fold %d:" % (run + 1, fold + 1))
+                        #     outfile.write("\t\t%s" % hardness_intervals[idx_max_acc_gr])
+                        #     outfile.write("\t%s" % hardness_intervals[idx_max_f1_gr])
+                        #     outfile.write("\t%s" % hardness_intervals[idx_max_auc_gr])
 
                         # Visualize bags when necessary. Code just has mixed bags, but can try others
                         if vizbags == True:
@@ -760,7 +762,9 @@ if __name__ == '__main__':
 
                         # Build classifier models for each bag
                         if classifier == 'DT':
-                            clf2 = DecisionTreeClassifier(max_depth=1, random_state=run * numfolds + fold)
+                            # clf2 = DecisionTreeClassifier(max_depth=1, random_state=run * numfolds + fold) # original
+                            clf2 = DecisionTreeClassifier(random_state=run * numfolds + fold) # unpruned DT
+
                         elif classifier == 'KNN':
                             clf2 = KNeighborsClassifier(5)  # k = sqrt(n)/2
                         else:  # NB
@@ -770,8 +774,9 @@ if __name__ == '__main__':
                         # clf = GaussianNB()
 
                         # Create and evaluate a base classifier (NO bagging, just the base learner)
-                        clf_base = DecisionTreeClassifier(max_depth=1,
-                                                          random_state=run * numfolds + fold)  # random state uniquely identifying this fold of this run
+                        # clf_base = DecisionTreeClassifier(max_depth=1,
+                        #                                   random_state=run * numfolds + fold)  # random state uniquely identifying this fold of this run ORIGINAL
+                        clf_base = DecisionTreeClassifier(random_state=run * numfolds + fold)  # random state uniquely identifying this fold of this run # unpruned DT
                         clf_base.fit(X_tr_val, Y_tr_val)
                         base_predictions = clf_base.predict(X_test)
                         #     csvwriter.writerows([base_predictions])
@@ -955,6 +960,8 @@ if __name__ == '__main__':
 
                         res_df = pd.DataFrame.from_dict(res_dicts)
                         results_df = pd.concat([results_df,res_df])
+                        # To save the results
+                        os.chdir(path_to_save)
                         nombre_results = 'Mixed_Bagging_folds_' + str(dataset_name) + '.csv'
                         results_df.to_csv(nombre_results, encoding='utf_8_sig',index=False)
 
@@ -979,6 +986,9 @@ if __name__ == '__main__':
                 df_aggre = pd.concat([df_aggre_mean, df_aggre_std.iloc[:, -1:]], axis=1)
                 df_aggre = pd.concat([df_aggre, df_aggre_conf_matrix.iloc[:, -1:]], axis=1)
 
+
+                # To save the results
+                os.chdir(path_to_save)
                 nombre_results_aggre = 'Mixed_Bagging_aggregated_' + str(dataset_name) + '.csv'
                 df_aggre.to_csv(nombre_results_aggre, encoding='utf_8_sig',index=False)
 
@@ -987,18 +997,18 @@ if __name__ == '__main__':
 
 
 
-                # Print the avg of all the metrics
-                outfile.write("\n\n\nFinal results:\n")
-                if synthdata == True:
-                    outfile.write("Inst, Features: %d, %d" % (nsamples, nfeatures))
-                    outfile.write("\tClass balance:" + str(balance))
-                    outfile.write("\tClass sep:" + str(classsep))
-                    outfile.write("\tRand state:" + str(randomstate))
-
-                else:  # Real data
-                    outfile.write("Dataset: %s" % dataset_name)
-                    outfile.write(
-                        "\nDataset with " + str(X.shape[0]) + " instances and " + str(X.shape[1]) + " predictive features")
+                # # Print the avg of all the metrics
+                # outfile.write("\n\n\nFinal results:\n")
+                # if synthdata == True:
+                #     outfile.write("Inst, Features: %d, %d" % (nsamples, nfeatures))
+                #     outfile.write("\tClass balance:" + str(balance))
+                #     outfile.write("\tClass sep:" + str(classsep))
+                #     outfile.write("\tRand state:" + str(randomstate))
+                #
+                # else:  # Real data
+                #     outfile.write("Dataset: %s" % dataset_name)
+                #     outfile.write(
+                #         "\nDataset with " + str(X.shape[0]) + " instances and " + str(X.shape[1]) + " predictive features")
 
                 #        if verbose == True:
                 #            print("Base %s" % accuracy_base)
@@ -1007,223 +1017,223 @@ if __name__ == '__main__':
                 #            print("Mix %s" % accuracy_mix)
                 #            print("Grad %s" % accuracy_grad)
 
-                # Final results for the whole dataset
-                csvwriter.writerows([])
-                csvwriter.writerows([accuracy_base])
-                csvwriter.writerows([accuracy_reg])
-                csvwriter.writerows([accuracy_wag])
-                csvwriter.writerows([accuracy_boost])
-                csvwriter.writerows([accuracy_mix])
-                csvwriter.writerows([accuracy_grad])
+                # # Final results for the whole dataset
+                # csvwriter.writerows([])
+                # csvwriter.writerows([accuracy_base])
+                # csvwriter.writerows([accuracy_reg])
+                # csvwriter.writerows([accuracy_wag])
+                # csvwriter.writerows([accuracy_boost])
+                # csvwriter.writerows([accuracy_mix])
+                # csvwriter.writerows([accuracy_grad])
+                #
+                # outfile.write("\n\t\tBase\t\tRegular\t\tWagging\t\tAdaboost\tMixed (opt)\tGrad-Mixed (opt)")
+                # outfile.write("\nAccuracy\t%.3f, %.3f\t%.3f, %.3f\t%.3f, %.3f\t%.3f, %.3f\t%.3f, %.3f\t%.3f, %.3f" %
+                #               (np.mean(accuracy_base), np.std(accuracy_base),
+                #                np.mean(accuracy_reg), np.std(accuracy_reg),
+                #                np.mean(accuracy_wag), np.std(accuracy_wag),
+                #                np.mean(accuracy_boost), np.std(accuracy_boost),
+                #                np.mean(accuracy_mix), np.std(accuracy_mix),
+                #                np.mean(accuracy_grad), np.std(accuracy_grad)))
+                # outfile.write("\nF1\t\t%.3f, %.3f\t%.3f, %.3f\t%.3f, %.3f\t%.3f, %.3f\t%.3f, %.3f\t%.3f, %.3f" %
+                #               (np.mean(f1_base), np.std(f1_base),
+                #                np.mean(f1_reg), np.std(f1_reg),
+                #                np.mean(f1_wag), np.std(f1_wag),
+                #                np.mean(f1_boost), np.std(f1_boost),
+                #                np.mean(f1_mix), np.std(f1_mix),
+                #                np.mean(f1_grad), np.std(f1_grad)))
+                # outfile.write("\nAUC\t\t%.3f, %.3f\t%.3f, %.3f\t%.3f, %.3f\t%.3f, %.3f\t%.3f, %.3f\t%.3f, %.3f" %
+                #               (np.mean(auc_base), np.std(auc_base),
+                #                np.mean(auc_reg), np.std(auc_reg),
+                #                np.mean(auc_wag), np.std(auc_wag),
+                #                np.mean(auc_boost), np.std(auc_boost),
+                #                np.mean(auc_mix), np.std(auc_mix),
+                #                np.mean(auc_grad), np.std(auc_grad)))
+                #
+                # outfile.write("\n\nTime taken: %.3f s" % (end - start))
 
-                outfile.write("\n\t\tBase\t\tRegular\t\tWagging\t\tAdaboost\tMixed (opt)\tGrad-Mixed (opt)")
-                outfile.write("\nAccuracy\t%.3f, %.3f\t%.3f, %.3f\t%.3f, %.3f\t%.3f, %.3f\t%.3f, %.3f\t%.3f, %.3f" %
-                              (np.mean(accuracy_base), np.std(accuracy_base),
-                               np.mean(accuracy_reg), np.std(accuracy_reg),
-                               np.mean(accuracy_wag), np.std(accuracy_wag),
-                               np.mean(accuracy_boost), np.std(accuracy_boost),
-                               np.mean(accuracy_mix), np.std(accuracy_mix),
-                               np.mean(accuracy_grad), np.std(accuracy_grad)))
-                outfile.write("\nF1\t\t%.3f, %.3f\t%.3f, %.3f\t%.3f, %.3f\t%.3f, %.3f\t%.3f, %.3f\t%.3f, %.3f" %
-                              (np.mean(f1_base), np.std(f1_base),
-                               np.mean(f1_reg), np.std(f1_reg),
-                               np.mean(f1_wag), np.std(f1_wag),
-                               np.mean(f1_boost), np.std(f1_boost),
-                               np.mean(f1_mix), np.std(f1_mix),
-                               np.mean(f1_grad), np.std(f1_grad)))
-                outfile.write("\nAUC\t\t%.3f, %.3f\t%.3f, %.3f\t%.3f, %.3f\t%.3f, %.3f\t%.3f, %.3f\t%.3f, %.3f" %
-                              (np.mean(auc_base), np.std(auc_base),
-                               np.mean(auc_reg), np.std(auc_reg),
-                               np.mean(auc_wag), np.std(auc_wag),
-                               np.mean(auc_boost), np.std(auc_boost),
-                               np.mean(auc_mix), np.std(auc_mix),
-                               np.mean(auc_grad), np.std(auc_grad)))
-
-                outfile.write("\n\nTime taken: %.3f s" % (end - start))
-
-                try:
-                    acc_basereg_sigtest = st.wilcoxon(accuracy_base, accuracy_reg)
-                    acc_basewag_sigtest = st.wilcoxon(accuracy_base, accuracy_wag)
-                    acc_baseboost_sigtest = st.wilcoxon(accuracy_base, accuracy_boost)
-                    acc_basemix_sigtest = st.wilcoxon(accuracy_base, accuracy_mix)
-                    acc_basegrad_sigtest = st.wilcoxon(accuracy_base, accuracy_grad)
-                    acc_regmix_sigtest = st.wilcoxon(accuracy_reg, accuracy_mix)
-                    acc_regwag_sigtest = st.wilcoxon(accuracy_reg, accuracy_wag)
-                    acc_regboost_sigtest = st.wilcoxon(accuracy_reg, accuracy_boost)
-                    acc_reggrad_sigtest = st.wilcoxon(accuracy_reg, accuracy_grad)
-                    acc_wagboost_sigtest = st.wilcoxon(accuracy_wag, accuracy_boost)
-                    acc_wagmix_sigtest = st.wilcoxon(accuracy_wag, accuracy_mix)
-                    acc_waggrad_sigtest = st.wilcoxon(accuracy_wag, accuracy_grad)
-                    acc_boostmix_sigtest = st.wilcoxon(accuracy_boost, accuracy_mix)
-                    acc_boostgrad_sigtest = st.wilcoxon(accuracy_boost, accuracy_grad)
-                    acc_mixgrad_sigtest = st.wilcoxon(accuracy_mix, accuracy_grad)
-
-                    f1_basereg_sigtest = st.wilcoxon(f1_base, f1_reg)
-                    f1_basewag_sigtest = st.wilcoxon(f1_base, f1_wag)
-                    f1_baseboost_sigtest = st.wilcoxon(f1_base, f1_boost)
-                    f1_basemix_sigtest = st.wilcoxon(f1_base, f1_mix)
-                    f1_basegrad_sigtest = st.wilcoxon(f1_base, f1_grad)
-                    f1_regmix_sigtest = st.wilcoxon(f1_reg, f1_mix)
-                    f1_regwag_sigtest = st.wilcoxon(f1_reg, f1_wag)
-                    f1_regboost_sigtest = st.wilcoxon(f1_reg, f1_boost)
-                    f1_reggrad_sigtest = st.wilcoxon(f1_reg, f1_grad)
-                    f1_wagboost_sigtest = st.wilcoxon(f1_wag, f1_boost)
-                    f1_wagmix_sigtest = st.wilcoxon(f1_wag, f1_mix)
-                    f1_waggrad_sigtest = st.wilcoxon(f1_wag, f1_grad)
-                    f1_boostmix_sigtest = st.wilcoxon(f1_boost, f1_mix)
-                    f1_boostgrad_sigtest = st.wilcoxon(f1_boost, f1_grad)
-                    f1_mixgrad_sigtest = st.wilcoxon(f1_mix, f1_grad)
-
-                    auc_basereg_sigtest = st.wilcoxon(auc_base, auc_reg)
-                    auc_basewag_sigtest = st.wilcoxon(auc_base, auc_wag)
-                    auc_baseboost_sigtest = st.wilcoxon(auc_base, auc_boost)
-                    auc_basemix_sigtest = st.wilcoxon(auc_base, auc_mix)
-                    auc_basegrad_sigtest = st.wilcoxon(auc_base, auc_grad)
-                    auc_regmix_sigtest = st.wilcoxon(auc_reg, auc_mix)
-                    auc_regwag_sigtest = st.wilcoxon(auc_reg, auc_wag)
-                    auc_regboost_sigtest = st.wilcoxon(auc_reg, auc_boost)
-                    auc_reggrad_sigtest = st.wilcoxon(auc_reg, auc_grad)
-                    auc_wagboost_sigtest = st.wilcoxon(auc_wag, auc_boost)
-                    auc_wagmix_sigtest = st.wilcoxon(auc_wag, auc_mix)
-                    auc_waggrad_sigtest = st.wilcoxon(auc_wag, auc_grad)
-                    auc_boostmix_sigtest = st.wilcoxon(auc_boost, auc_mix)
-                    auc_boostgrad_sigtest = st.wilcoxon(auc_boost, auc_grad)
-                    auc_mixgrad_sigtest = st.wilcoxon(auc_mix, auc_grad)
-
-                    outfile.write("\n\nSiginificance tests:")
-                    outfile.write("\nFor Accuracy:")
-                    outfile.write("\n\tBase\tReg_bag\tWagging\tBoost\tMix_bag\tGrad_mix")
-                    outfile.write("\nBase\t\t%.3f\t%.3f\t%.3f\t%.3f\t%.3f" % (
-                        acc_basereg_sigtest.pvalue, acc_basewag_sigtest.pvalue, acc_baseboost_sigtest.pvalue,
-                        acc_basemix_sigtest.pvalue, acc_basegrad_sigtest.pvalue))
-                    outfile.write("\nReg_bag\t\t\t%.3f\t%.3f\t%.3f\t%.3f" % (
-                        acc_regwag_sigtest.pvalue, acc_regboost_sigtest.pvalue, acc_regmix_sigtest.pvalue,
-                        acc_reggrad_sigtest.pvalue))
-                    outfile.write("\nWagging\t\t\t\t%.3f\t%.3f\t%.3f" % (
-                        acc_wagboost_sigtest.pvalue, acc_wagmix_sigtest.pvalue, acc_waggrad_sigtest.pvalue))
-                    outfile.write(
-                        "\nAdaboost\t\t\t\t%.3f\t%.3f" % (acc_boostmix_sigtest.pvalue, acc_boostmix_sigtest.pvalue))
-                    outfile.write("\nMix_bag\t\t\t\t\t\t%.3f" % (acc_mixgrad_sigtest.pvalue))
-
-                    outfile.write("\nFor F1:")
-                    outfile.write("\n\tBase\tReg_bag\tWagging\tBoost\tMix_bag\tGrad_mix")
-                    outfile.write("\nBase\t\t%.3f\t%.3f\t%.3f\t%.3f\t%.3f" % (
-                        f1_basereg_sigtest.pvalue, f1_basewag_sigtest.pvalue, f1_baseboost_sigtest.pvalue,
-                        f1_basemix_sigtest.pvalue, f1_basegrad_sigtest.pvalue))
-                    outfile.write("\nReg_bag\t\t\t%.3f\t%.3f\t%.3f\t%.3f" % (
-                        f1_regwag_sigtest.pvalue, f1_regboost_sigtest.pvalue, f1_regmix_sigtest.pvalue,
-                        f1_reggrad_sigtest.pvalue))
-                    outfile.write("\nWagging\t\t\t\t%.3f\t%.3f\t%.3f" % (
-                        f1_wagboost_sigtest.pvalue, f1_wagmix_sigtest.pvalue, f1_waggrad_sigtest.pvalue))
-                    outfile.write("\nAdaboost\t\t\t\t%.3f\t%.3f" % (f1_boostmix_sigtest.pvalue, f1_boostmix_sigtest.pvalue))
-                    outfile.write("\nMix_bag\t\t\t\t\t\t%.3f" % (f1_mixgrad_sigtest.pvalue))
-
-                    outfile.write("\nFor AUC:")
-                    outfile.write("\n\tBase\tReg_bag\tWagging\tBoost\tMix_bag\tGrad_mix")
-                    outfile.write("\nBase\t\t%.3f\t%.3f\t%.3f\t%.3f\t%.3f" % (
-                        auc_basereg_sigtest.pvalue, auc_basewag_sigtest.pvalue, auc_baseboost_sigtest.pvalue,
-                        auc_basemix_sigtest.pvalue, auc_basegrad_sigtest.pvalue))
-                    outfile.write("\nReg_bag\t\t\t%.3f\t%.3f\t%.3f\t%.3f" % (
-                        auc_regwag_sigtest.pvalue, auc_regboost_sigtest.pvalue, auc_regmix_sigtest.pvalue,
-                        auc_reggrad_sigtest.pvalue))
-                    outfile.write("\nWagging\t\t\t\t%.3f\t%.3f\t%.3f" % (
-                        auc_wagboost_sigtest.pvalue, auc_wagmix_sigtest.pvalue, auc_waggrad_sigtest.pvalue))
-                    outfile.write(
-                        "\nAdaboost\t\t\t\t%.3f\t%.3f" % (auc_boostmix_sigtest.pvalue, auc_boostmix_sigtest.pvalue))
-                    outfile.write("\nMix_bag\t\t\t\t\t\t%.3f" % (auc_mixgrad_sigtest.pvalue))
-
-                except:
-                    acc_basereg_sigtest = float("nan")
-                    acc_basewag_sigtest = float("nan")
-                    acc_baseboost_sigtest = float("nan")
-                    acc_basemix_sigtest = float("nan")
-                    acc_basegrad_sigtest = float("nan")
-                    acc_regmix_sigtest = float("nan")
-                    acc_regwag_sigtest = float("nan")
-                    acc_regboost_sigtest = float("nan")
-                    acc_reggrad_sigtest = float("nan")
-                    acc_wagboost_sigtest = float("nan")
-                    acc_wagmix_sigtest = float("nan")
-                    acc_waggrad_sigtest = float("nan")
-                    acc_boostmix_sigtest = float("nan")
-                    acc_boostgrad_sigtest = float("nan")
-                    acc_mixgrad_sigtest = float("nan")
-
-                    f1_basereg_sigtest = float("nan")
-                    f1_basewag_sigtest = float("nan")
-                    f1_baseboost_sigtest = float("nan")
-                    f1_basemix_sigtest = float("nan")
-                    f1_basegrad_sigtest = float("nan")
-                    f1_regmix_sigtest = float("nan")
-                    f1_regwag_sigtest = float("nan")
-                    f1_regboost_sigtest = float("nan")
-                    f1_reggrad_sigtest = float("nan")
-                    f1_wagboost_sigtest = float("nan")
-                    f1_wagmix_sigtest = float("nan")
-                    f1_waggrad_sigtest = float("nan")
-                    f1_boostmix_sigtest = float("nan")
-                    f1_boostgrad_sigtest = float("nan")
-                    f1_mixgrad_sigtest = float("nan")
-
-                    auc_basereg_sigtest = float("nan")
-                    auc_basewag_sigtest = float("nan")
-                    auc_baseboost_sigtest = float("nan")
-                    auc_basemix_sigtest = float("nan")
-                    auc_basegrad_sigtest = float("nan")
-                    auc_regmix_sigtest = float("nan")
-                    auc_regwag_sigtest = float("nan")
-                    auc_regboost_sigtest = float("nan")
-                    auc_reggrad_sigtest = float("nan")
-                    auc_wagboost_sigtest = float("nan")
-                    auc_wagmix_sigtest = float("nan")
-                    auc_waggrad_sigtest = float("nan")
-                    auc_boostmix_sigtest = float("nan")
-                    auc_boostgrad_sigtest = float("nan")
-                    auc_mixgrad_sigtest = float("nan")
-
-                    outfile.write("\n\nSiginificance tests:")
-                    outfile.write("\nFor Accuracy:")
-                    outfile.write("\n\tBase\tReg_bag\tWagging\tBoost\tMix_bag\tGrad_mix")
-                    outfile.write("\nBase\t\t%.3f\t%.3f\t%.3f\t%.3f\t%.3f" % (
-                    acc_basereg_sigtest, acc_basewag_sigtest, acc_baseboost_sigtest, acc_basemix_sigtest,
-                    acc_basegrad_sigtest))
-                    outfile.write("\nReg_bag\t\t\t%.3f\t%.3f\t%.3f\t%.3f" % (
-                    acc_regwag_sigtest, acc_regboost_sigtest, acc_regmix_sigtest, acc_reggrad_sigtest))
-                    outfile.write("\nWagging\t\t\t\t%.3f\t%.3f\t%.3f" % (
-                    acc_wagboost_sigtest, acc_wagmix_sigtest, acc_waggrad_sigtest))
-                    outfile.write("\nAdaboost\t\t\t\t%.3f\t%.3f" % (acc_boostmix_sigtest, acc_boostmix_sigtest))
-                    outfile.write("\nMix_bag\t\t\t\t\t\t%.3f" % (acc_mixgrad_sigtest))
-
-                    outfile.write("\nFor F1:")
-                    outfile.write("\n\tBase\tReg_bag\tWagging\tBoost\tMix_bag\tGrad_mix")
-                    outfile.write("\nBase\t\t%.3f\t%.3f\t%.3f\t%.3f\t%.3f" % (
-                    f1_basereg_sigtest, f1_basewag_sigtest, f1_baseboost_sigtest, f1_basemix_sigtest, f1_basegrad_sigtest))
-                    outfile.write("\nReg_bag\t\t\t%.3f\t%.3f\t%.3f\t%.3f" % (
-                    f1_regwag_sigtest, f1_regboost_sigtest, f1_regmix_sigtest, f1_reggrad_sigtest))
-                    outfile.write(
-                        "\nWagging\t\t\t\t%.3f\t%.3f\t%.3f" % (f1_wagboost_sigtest, f1_wagmix_sigtest, f1_waggrad_sigtest))
-                    outfile.write("\nAdaboost\t\t\t\t%.3f\t%.3f" % (f1_boostmix_sigtest, f1_boostmix_sigtest))
-                    outfile.write("\nMix_bag\t\t\t\t\t\t%.3f" % (f1_mixgrad_sigtest))
-
-                    outfile.write("\nFor AUC:")
-                    outfile.write("\n\tBase\tReg_bag\tWagging\tBoost\tMix_bag\tGrad_mix")
-                    outfile.write("\nBase\t\t%.3f\t%.3f\t%.3f\t%.3f\t%.3f" % (
-                    auc_basereg_sigtest, auc_basewag_sigtest, auc_baseboost_sigtest, auc_basemix_sigtest,
-                    auc_basegrad_sigtest))
-                    outfile.write("\nReg_bag\t\t\t%.3f\t%.3f\t%.3f\t%.3f" % (
-                    auc_regwag_sigtest, auc_regboost_sigtest, auc_regmix_sigtest, auc_reggrad_sigtest))
-                    outfile.write("\nWagging\t\t\t\t%.3f\t%.3f\t%.3f" % (
-                    auc_wagboost_sigtest, auc_wagmix_sigtest, auc_waggrad_sigtest))
-                    outfile.write("\nAdaboost\t\t\t\t%.3f\t%.3f" % (auc_boostmix_sigtest, auc_boostmix_sigtest))
-                    outfile.write("\nMix_bag\t\t\t\t\t\t%.3f" % (auc_mixgrad_sigtest))
+                # try:
+                #     acc_basereg_sigtest = st.wilcoxon(accuracy_base, accuracy_reg)
+                #     acc_basewag_sigtest = st.wilcoxon(accuracy_base, accuracy_wag)
+                #     acc_baseboost_sigtest = st.wilcoxon(accuracy_base, accuracy_boost)
+                #     acc_basemix_sigtest = st.wilcoxon(accuracy_base, accuracy_mix)
+                #     acc_basegrad_sigtest = st.wilcoxon(accuracy_base, accuracy_grad)
+                #     acc_regmix_sigtest = st.wilcoxon(accuracy_reg, accuracy_mix)
+                #     acc_regwag_sigtest = st.wilcoxon(accuracy_reg, accuracy_wag)
+                #     acc_regboost_sigtest = st.wilcoxon(accuracy_reg, accuracy_boost)
+                #     acc_reggrad_sigtest = st.wilcoxon(accuracy_reg, accuracy_grad)
+                #     acc_wagboost_sigtest = st.wilcoxon(accuracy_wag, accuracy_boost)
+                #     acc_wagmix_sigtest = st.wilcoxon(accuracy_wag, accuracy_mix)
+                #     acc_waggrad_sigtest = st.wilcoxon(accuracy_wag, accuracy_grad)
+                #     acc_boostmix_sigtest = st.wilcoxon(accuracy_boost, accuracy_mix)
+                #     acc_boostgrad_sigtest = st.wilcoxon(accuracy_boost, accuracy_grad)
+                #     acc_mixgrad_sigtest = st.wilcoxon(accuracy_mix, accuracy_grad)
+                #
+                #     f1_basereg_sigtest = st.wilcoxon(f1_base, f1_reg)
+                #     f1_basewag_sigtest = st.wilcoxon(f1_base, f1_wag)
+                #     f1_baseboost_sigtest = st.wilcoxon(f1_base, f1_boost)
+                #     f1_basemix_sigtest = st.wilcoxon(f1_base, f1_mix)
+                #     f1_basegrad_sigtest = st.wilcoxon(f1_base, f1_grad)
+                #     f1_regmix_sigtest = st.wilcoxon(f1_reg, f1_mix)
+                #     f1_regwag_sigtest = st.wilcoxon(f1_reg, f1_wag)
+                #     f1_regboost_sigtest = st.wilcoxon(f1_reg, f1_boost)
+                #     f1_reggrad_sigtest = st.wilcoxon(f1_reg, f1_grad)
+                #     f1_wagboost_sigtest = st.wilcoxon(f1_wag, f1_boost)
+                #     f1_wagmix_sigtest = st.wilcoxon(f1_wag, f1_mix)
+                #     f1_waggrad_sigtest = st.wilcoxon(f1_wag, f1_grad)
+                #     f1_boostmix_sigtest = st.wilcoxon(f1_boost, f1_mix)
+                #     f1_boostgrad_sigtest = st.wilcoxon(f1_boost, f1_grad)
+                #     f1_mixgrad_sigtest = st.wilcoxon(f1_mix, f1_grad)
+                #
+                #     auc_basereg_sigtest = st.wilcoxon(auc_base, auc_reg)
+                #     auc_basewag_sigtest = st.wilcoxon(auc_base, auc_wag)
+                #     auc_baseboost_sigtest = st.wilcoxon(auc_base, auc_boost)
+                #     auc_basemix_sigtest = st.wilcoxon(auc_base, auc_mix)
+                #     auc_basegrad_sigtest = st.wilcoxon(auc_base, auc_grad)
+                #     auc_regmix_sigtest = st.wilcoxon(auc_reg, auc_mix)
+                #     auc_regwag_sigtest = st.wilcoxon(auc_reg, auc_wag)
+                #     auc_regboost_sigtest = st.wilcoxon(auc_reg, auc_boost)
+                #     auc_reggrad_sigtest = st.wilcoxon(auc_reg, auc_grad)
+                #     auc_wagboost_sigtest = st.wilcoxon(auc_wag, auc_boost)
+                #     auc_wagmix_sigtest = st.wilcoxon(auc_wag, auc_mix)
+                #     auc_waggrad_sigtest = st.wilcoxon(auc_wag, auc_grad)
+                #     auc_boostmix_sigtest = st.wilcoxon(auc_boost, auc_mix)
+                #     auc_boostgrad_sigtest = st.wilcoxon(auc_boost, auc_grad)
+                #     auc_mixgrad_sigtest = st.wilcoxon(auc_mix, auc_grad)
+                #
+                #     outfile.write("\n\nSiginificance tests:")
+                #     outfile.write("\nFor Accuracy:")
+                #     outfile.write("\n\tBase\tReg_bag\tWagging\tBoost\tMix_bag\tGrad_mix")
+                #     outfile.write("\nBase\t\t%.3f\t%.3f\t%.3f\t%.3f\t%.3f" % (
+                #         acc_basereg_sigtest.pvalue, acc_basewag_sigtest.pvalue, acc_baseboost_sigtest.pvalue,
+                #         acc_basemix_sigtest.pvalue, acc_basegrad_sigtest.pvalue))
+                #     outfile.write("\nReg_bag\t\t\t%.3f\t%.3f\t%.3f\t%.3f" % (
+                #         acc_regwag_sigtest.pvalue, acc_regboost_sigtest.pvalue, acc_regmix_sigtest.pvalue,
+                #         acc_reggrad_sigtest.pvalue))
+                #     outfile.write("\nWagging\t\t\t\t%.3f\t%.3f\t%.3f" % (
+                #         acc_wagboost_sigtest.pvalue, acc_wagmix_sigtest.pvalue, acc_waggrad_sigtest.pvalue))
+                #     outfile.write(
+                #         "\nAdaboost\t\t\t\t%.3f\t%.3f" % (acc_boostmix_sigtest.pvalue, acc_boostmix_sigtest.pvalue))
+                #     outfile.write("\nMix_bag\t\t\t\t\t\t%.3f" % (acc_mixgrad_sigtest.pvalue))
+                #
+                #     outfile.write("\nFor F1:")
+                #     outfile.write("\n\tBase\tReg_bag\tWagging\tBoost\tMix_bag\tGrad_mix")
+                #     outfile.write("\nBase\t\t%.3f\t%.3f\t%.3f\t%.3f\t%.3f" % (
+                #         f1_basereg_sigtest.pvalue, f1_basewag_sigtest.pvalue, f1_baseboost_sigtest.pvalue,
+                #         f1_basemix_sigtest.pvalue, f1_basegrad_sigtest.pvalue))
+                #     outfile.write("\nReg_bag\t\t\t%.3f\t%.3f\t%.3f\t%.3f" % (
+                #         f1_regwag_sigtest.pvalue, f1_regboost_sigtest.pvalue, f1_regmix_sigtest.pvalue,
+                #         f1_reggrad_sigtest.pvalue))
+                #     outfile.write("\nWagging\t\t\t\t%.3f\t%.3f\t%.3f" % (
+                #         f1_wagboost_sigtest.pvalue, f1_wagmix_sigtest.pvalue, f1_waggrad_sigtest.pvalue))
+                #     outfile.write("\nAdaboost\t\t\t\t%.3f\t%.3f" % (f1_boostmix_sigtest.pvalue, f1_boostmix_sigtest.pvalue))
+                #     outfile.write("\nMix_bag\t\t\t\t\t\t%.3f" % (f1_mixgrad_sigtest.pvalue))
+                #
+                #     outfile.write("\nFor AUC:")
+                #     outfile.write("\n\tBase\tReg_bag\tWagging\tBoost\tMix_bag\tGrad_mix")
+                #     outfile.write("\nBase\t\t%.3f\t%.3f\t%.3f\t%.3f\t%.3f" % (
+                #         auc_basereg_sigtest.pvalue, auc_basewag_sigtest.pvalue, auc_baseboost_sigtest.pvalue,
+                #         auc_basemix_sigtest.pvalue, auc_basegrad_sigtest.pvalue))
+                #     outfile.write("\nReg_bag\t\t\t%.3f\t%.3f\t%.3f\t%.3f" % (
+                #         auc_regwag_sigtest.pvalue, auc_regboost_sigtest.pvalue, auc_regmix_sigtest.pvalue,
+                #         auc_reggrad_sigtest.pvalue))
+                #     outfile.write("\nWagging\t\t\t\t%.3f\t%.3f\t%.3f" % (
+                #         auc_wagboost_sigtest.pvalue, auc_wagmix_sigtest.pvalue, auc_waggrad_sigtest.pvalue))
+                #     outfile.write(
+                #         "\nAdaboost\t\t\t\t%.3f\t%.3f" % (auc_boostmix_sigtest.pvalue, auc_boostmix_sigtest.pvalue))
+                #     outfile.write("\nMix_bag\t\t\t\t\t\t%.3f" % (auc_mixgrad_sigtest.pvalue))
+                #
+                # except:
+                #     acc_basereg_sigtest = float("nan")
+                #     acc_basewag_sigtest = float("nan")
+                #     acc_baseboost_sigtest = float("nan")
+                #     acc_basemix_sigtest = float("nan")
+                #     acc_basegrad_sigtest = float("nan")
+                #     acc_regmix_sigtest = float("nan")
+                #     acc_regwag_sigtest = float("nan")
+                #     acc_regboost_sigtest = float("nan")
+                #     acc_reggrad_sigtest = float("nan")
+                #     acc_wagboost_sigtest = float("nan")
+                #     acc_wagmix_sigtest = float("nan")
+                #     acc_waggrad_sigtest = float("nan")
+                #     acc_boostmix_sigtest = float("nan")
+                #     acc_boostgrad_sigtest = float("nan")
+                #     acc_mixgrad_sigtest = float("nan")
+                #
+                #     f1_basereg_sigtest = float("nan")
+                #     f1_basewag_sigtest = float("nan")
+                #     f1_baseboost_sigtest = float("nan")
+                #     f1_basemix_sigtest = float("nan")
+                #     f1_basegrad_sigtest = float("nan")
+                #     f1_regmix_sigtest = float("nan")
+                #     f1_regwag_sigtest = float("nan")
+                #     f1_regboost_sigtest = float("nan")
+                #     f1_reggrad_sigtest = float("nan")
+                #     f1_wagboost_sigtest = float("nan")
+                #     f1_wagmix_sigtest = float("nan")
+                #     f1_waggrad_sigtest = float("nan")
+                #     f1_boostmix_sigtest = float("nan")
+                #     f1_boostgrad_sigtest = float("nan")
+                #     f1_mixgrad_sigtest = float("nan")
+                #
+                #     auc_basereg_sigtest = float("nan")
+                #     auc_basewag_sigtest = float("nan")
+                #     auc_baseboost_sigtest = float("nan")
+                #     auc_basemix_sigtest = float("nan")
+                #     auc_basegrad_sigtest = float("nan")
+                #     auc_regmix_sigtest = float("nan")
+                #     auc_regwag_sigtest = float("nan")
+                #     auc_regboost_sigtest = float("nan")
+                #     auc_reggrad_sigtest = float("nan")
+                #     auc_wagboost_sigtest = float("nan")
+                #     auc_wagmix_sigtest = float("nan")
+                #     auc_waggrad_sigtest = float("nan")
+                #     auc_boostmix_sigtest = float("nan")
+                #     auc_boostgrad_sigtest = float("nan")
+                #     auc_mixgrad_sigtest = float("nan")
+                #
+                #     outfile.write("\n\nSiginificance tests:")
+                #     outfile.write("\nFor Accuracy:")
+                #     outfile.write("\n\tBase\tReg_bag\tWagging\tBoost\tMix_bag\tGrad_mix")
+                #     outfile.write("\nBase\t\t%.3f\t%.3f\t%.3f\t%.3f\t%.3f" % (
+                #     acc_basereg_sigtest, acc_basewag_sigtest, acc_baseboost_sigtest, acc_basemix_sigtest,
+                #     acc_basegrad_sigtest))
+                #     outfile.write("\nReg_bag\t\t\t%.3f\t%.3f\t%.3f\t%.3f" % (
+                #     acc_regwag_sigtest, acc_regboost_sigtest, acc_regmix_sigtest, acc_reggrad_sigtest))
+                #     outfile.write("\nWagging\t\t\t\t%.3f\t%.3f\t%.3f" % (
+                #     acc_wagboost_sigtest, acc_wagmix_sigtest, acc_waggrad_sigtest))
+                #     outfile.write("\nAdaboost\t\t\t\t%.3f\t%.3f" % (acc_boostmix_sigtest, acc_boostmix_sigtest))
+                #     outfile.write("\nMix_bag\t\t\t\t\t\t%.3f" % (acc_mixgrad_sigtest))
+                #
+                #     outfile.write("\nFor F1:")
+                #     outfile.write("\n\tBase\tReg_bag\tWagging\tBoost\tMix_bag\tGrad_mix")
+                #     outfile.write("\nBase\t\t%.3f\t%.3f\t%.3f\t%.3f\t%.3f" % (
+                #     f1_basereg_sigtest, f1_basewag_sigtest, f1_baseboost_sigtest, f1_basemix_sigtest, f1_basegrad_sigtest))
+                #     outfile.write("\nReg_bag\t\t\t%.3f\t%.3f\t%.3f\t%.3f" % (
+                #     f1_regwag_sigtest, f1_regboost_sigtest, f1_regmix_sigtest, f1_reggrad_sigtest))
+                #     outfile.write(
+                #         "\nWagging\t\t\t\t%.3f\t%.3f\t%.3f" % (f1_wagboost_sigtest, f1_wagmix_sigtest, f1_waggrad_sigtest))
+                #     outfile.write("\nAdaboost\t\t\t\t%.3f\t%.3f" % (f1_boostmix_sigtest, f1_boostmix_sigtest))
+                #     outfile.write("\nMix_bag\t\t\t\t\t\t%.3f" % (f1_mixgrad_sigtest))
+                #
+                #     outfile.write("\nFor AUC:")
+                #     outfile.write("\n\tBase\tReg_bag\tWagging\tBoost\tMix_bag\tGrad_mix")
+                #     outfile.write("\nBase\t\t%.3f\t%.3f\t%.3f\t%.3f\t%.3f" % (
+                #     auc_basereg_sigtest, auc_basewag_sigtest, auc_baseboost_sigtest, auc_basemix_sigtest,
+                #     auc_basegrad_sigtest))
+                #     outfile.write("\nReg_bag\t\t\t%.3f\t%.3f\t%.3f\t%.3f" % (
+                #     auc_regwag_sigtest, auc_regboost_sigtest, auc_regmix_sigtest, auc_reggrad_sigtest))
+                #     outfile.write("\nWagging\t\t\t\t%.3f\t%.3f\t%.3f" % (
+                #     auc_wagboost_sigtest, auc_wagmix_sigtest, auc_waggrad_sigtest))
+                #     outfile.write("\nAdaboost\t\t\t\t%.3f\t%.3f" % (auc_boostmix_sigtest, auc_boostmix_sigtest))
+                #     outfile.write("\nMix_bag\t\t\t\t\t\t%.3f" % (auc_mixgrad_sigtest))
 
                 # Finishing tasks at end of dataset
                 # winsound.Beep(300, 500)
 
                 datasetcount = datasetcount + 1
 
-                outfile.close()
-                csvfile.close()
+                # outfile.close()
+                # csvfile.close()
     """ End of loop for dataset """
 
     # winsound.Beep(300, 2500)      # Ending notification sound
