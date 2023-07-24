@@ -452,7 +452,7 @@ if __name__ == '__main__':
                 # csvfile = open(csvfilename, 'w')
                 # csvwriter = csv.writer(csvfile, delimiter=",", lineterminator='\n')
                 os.chdir(root_path)
-                data = pd.read_csv('MixedBagging/Datasets/' + dataset_name)  # construct file name of dataset
+                data = pd.read_csv('/MixedBagging/Datasets/' + dataset_name)  # construct file name of dataset
                 X_mis = data.iloc[:, :-1]  # Columns 0 to end - 1 # cambio ix por iloc
                 y = data.iloc[:, -1]  # Last column # cambio ix por iloc
 
