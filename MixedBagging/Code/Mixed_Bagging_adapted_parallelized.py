@@ -1034,7 +1034,7 @@ for filename in os.listdir(path_csv):
 
 
 
-total_name_list = [  # 'teaching_assistant_MH.csv','chronic_kidney.csv','contraceptive_NL.csv',
+# total_name_list = [  # 'teaching_assistant_MH.csv','chronic_kidney.csv','contraceptive_NL.csv',
     # 'balance_scale_BR.csv',
     #     'seismic-bumps.csv',
     #     'voting_records.csv',
