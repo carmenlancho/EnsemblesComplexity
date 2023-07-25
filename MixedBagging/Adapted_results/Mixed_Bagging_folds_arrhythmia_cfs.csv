@@ -1,0 +1,451 @@
+﻿dataset,CV_fold,n_trees,model,parameters,perf_measure,perf_value,Conf_Matrix
+arrhythmia_cfs.csv,0,1,base,None,acc,0.8043478260869565,"[array([[18,  7],
+       [ 2, 19]])]"
+arrhythmia_cfs.csv,0,1,base,None,f1,0.8038852913968547,"[array([[18,  7],
+       [ 2, 19]])]"
+arrhythmia_cfs.csv,0,1,base,None,auc,0.8123809523809523,"[array([[18,  7],
+       [ 2, 19]])]"
+arrhythmia_cfs.csv,0,1,wagging,None,acc,0.7608695652173914,"[array([[21,  4],
+       [ 7, 14]])]"
+arrhythmia_cfs.csv,0,1,wagging,None,f1,0.7584400832965229,"[array([[21,  4],
+       [ 7, 14]])]"
+arrhythmia_cfs.csv,0,1,wagging,None,auc,0.7533333333333333,"[array([[21,  4],
+       [ 7, 14]])]"
+arrhythmia_cfs.csv,0,1,AdaBoost,None,acc,0.717391304347826,"[array([[19,  6],
+       [ 7, 14]])]"
+arrhythmia_cfs.csv,0,1,AdaBoost,None,f1,0.7167155303266588,"[array([[19,  6],
+       [ 7, 14]])]"
+arrhythmia_cfs.csv,0,1,AdaBoost,None,auc,0.7133333333333333,"[array([[19,  6],
+       [ 7, 14]])]"
+arrhythmia_cfs.csv,0,1,Grouped_Mixed_Bagging,"[[0.1, 0.8, 0.1], 1.0]",acc,0.7608695652173914,"[array([[20,  5],
+       [ 6, 15]])]"
+arrhythmia_cfs.csv,0,1,Grouped_Mixed_Bagging,"[[0.1, 0.8, 0.1], 1.0]",f1,0.7376254180602007,"[array([[20,  5],
+       [ 7, 14]])]"
+arrhythmia_cfs.csv,0,1,Grouped_Mixed_Bagging,"[[0.1, 0.8, 0.1], 1.0]",auc,0.7133333333333333,"[array([[19,  6],
+       [ 7, 14]])]"
+arrhythmia_cfs.csv,0,1,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",acc,0.717391304347826,"[array([[20,  5],
+       [ 8, 13]])]"
+arrhythmia_cfs.csv,0,1,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",f1,0.77921857784558,"[array([[22,  3],
+       [ 7, 14]])]"
+arrhythmia_cfs.csv,0,1,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",auc,0.7495238095238096,"[array([[22,  3],
+       [ 8, 13]])]"
+arrhythmia_cfs.csv,1,1,base,None,acc,0.717391304347826,"[array([[18,  7],
+       [ 6, 15]])]"
+arrhythmia_cfs.csv,1,1,base,None,f1,0.7177936897711562,"[array([[18,  7],
+       [ 6, 15]])]"
+arrhythmia_cfs.csv,1,1,base,None,auc,0.7171428571428572,"[array([[18,  7],
+       [ 6, 15]])]"
+arrhythmia_cfs.csv,1,1,wagging,None,acc,0.8260869565217391,"[array([[21,  4],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,1,1,wagging,None,f1,0.8260869565217391,"[array([[21,  4],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,1,1,wagging,None,auc,0.8247619047619048,"[array([[21,  4],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,1,1,AdaBoost,None,acc,0.7391304347826086,"[array([[17,  8],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,1,1,AdaBoost,None,f1,0.7391304347826089,"[array([[17,  8],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,1,1,AdaBoost,None,auc,0.7447619047619047,"[array([[17,  8],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,1,1,Grouped_Mixed_Bagging,"[[0.0, 1.0, 0.0], 3.0]",acc,0.8043478260869565,"[array([[20,  5],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,1,1,Grouped_Mixed_Bagging,"[[0.0, 1.0, 0.0], 3.0]",f1,0.8480427560306225,"[array([[21,  4],
+       [ 3, 18]])]"
+arrhythmia_cfs.csv,1,1,Grouped_Mixed_Bagging,"[[0.0, 1.0, 0.0], 3.0]",auc,0.8247619047619048,"[array([[21,  4],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,1,1,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.782608695652174,"[array([[21,  4],
+       [ 6, 15]])]"
+arrhythmia_cfs.csv,1,1,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.8474622086374317,"[array([[22,  3],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,1,1,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",auc,0.8209523809523809,"[array([[22,  3],
+       [ 5, 16]])]"
+arrhythmia_cfs.csv,2,1,base,None,acc,0.6444444444444445,"[array([[19,  5],
+       [11, 10]])]"
+arrhythmia_cfs.csv,2,1,base,None,f1,0.634567901234568,"[array([[19,  5],
+       [11, 10]])]"
+arrhythmia_cfs.csv,2,1,base,None,auc,0.6339285714285715,"[array([[19,  5],
+       [11, 10]])]"
+arrhythmia_cfs.csv,2,1,wagging,None,acc,0.8222222222222222,"[array([[20,  4],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,2,1,wagging,None,f1,0.8222222222222222,"[array([[20,  4],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,2,1,wagging,None,auc,0.8214285714285714,"[array([[20,  4],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,2,1,AdaBoost,None,acc,0.6666666666666666,"[array([[19,  5],
+       [10, 11]])]"
+arrhythmia_cfs.csv,2,1,AdaBoost,None,f1,0.6598674145843957,"[array([[19,  5],
+       [10, 11]])]"
+arrhythmia_cfs.csv,2,1,AdaBoost,None,auc,0.6577380952380952,"[array([[19,  5],
+       [10, 11]])]"
+arrhythmia_cfs.csv,2,1,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",acc,0.8444444444444444,"[array([[21,  3],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,2,1,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",f1,0.8667984189723319,"[array([[20,  4],
+       [ 2, 19]])]"
+arrhythmia_cfs.csv,2,1,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",auc,0.8273809523809523,"[array([[18,  6],
+       [ 2, 19]])]"
+arrhythmia_cfs.csv,2,1,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",acc,0.7777777777777778,"[array([[18,  6],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,2,1,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",f1,0.7981900452488688,"[array([[21,  3],
+       [ 6, 15]])]"
+arrhythmia_cfs.csv,2,1,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",auc,0.8422619047619048,"[array([[21,  3],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,3,1,base,None,acc,0.8888888888888888,"[array([[21,  3],
+       [ 2, 19]])]"
+arrhythmia_cfs.csv,3,1,base,None,f1,0.8889988454560449,"[array([[21,  3],
+       [ 2, 19]])]"
+arrhythmia_cfs.csv,3,1,base,None,auc,0.8898809523809523,"[array([[21,  3],
+       [ 2, 19]])]"
+arrhythmia_cfs.csv,3,1,wagging,None,acc,0.8666666666666667,"[array([[20,  4],
+       [ 2, 19]])]"
+arrhythmia_cfs.csv,3,1,wagging,None,f1,0.8667984189723319,"[array([[20,  4],
+       [ 2, 19]])]"
+arrhythmia_cfs.csv,3,1,wagging,None,auc,0.869047619047619,"[array([[20,  4],
+       [ 2, 19]])]"
+arrhythmia_cfs.csv,3,1,AdaBoost,None,acc,0.8444444444444444,"[array([[20,  4],
+       [ 3, 18]])]"
+arrhythmia_cfs.csv,3,1,AdaBoost,None,f1,0.8445983836384628,"[array([[20,  4],
+       [ 3, 18]])]"
+arrhythmia_cfs.csv,3,1,AdaBoost,None,auc,0.8452380952380952,"[array([[20,  4],
+       [ 3, 18]])]"
+arrhythmia_cfs.csv,3,1,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",acc,0.8444444444444444,"[array([[20,  4],
+       [ 3, 18]])]"
+arrhythmia_cfs.csv,3,1,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",f1,0.9111989459815545,"[array([[21,  3],
+       [ 1, 20]])]"
+arrhythmia_cfs.csv,3,1,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",auc,0.8452380952380952,"[array([[20,  4],
+       [ 3, 18]])]"
+arrhythmia_cfs.csv,3,1,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",acc,0.8222222222222222,"[array([[21,  3],
+       [ 5, 16]])]"
+arrhythmia_cfs.csv,3,1,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",f1,0.8441347270615565,"[array([[21,  3],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,3,1,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",auc,0.863095238095238,"[array([[22,  2],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,4,1,base,None,acc,0.7555555555555555,"[array([[19,  5],
+       [ 6, 15]])]"
+arrhythmia_cfs.csv,4,1,base,None,f1,0.755068856811017,"[array([[19,  5],
+       [ 6, 15]])]"
+arrhythmia_cfs.csv,4,1,base,None,auc,0.7529761904761905,"[array([[19,  5],
+       [ 6, 15]])]"
+arrhythmia_cfs.csv,4,1,wagging,None,acc,0.8222222222222222,"[array([[18,  6],
+       [ 2, 19]])]"
+arrhythmia_cfs.csv,4,1,wagging,None,f1,0.821870882740448,"[array([[18,  6],
+       [ 2, 19]])]"
+arrhythmia_cfs.csv,4,1,wagging,None,auc,0.8273809523809523,"[array([[18,  6],
+       [ 2, 19]])]"
+arrhythmia_cfs.csv,4,1,AdaBoost,None,acc,0.7555555555555555,"[array([[19,  5],
+       [ 6, 15]])]"
+arrhythmia_cfs.csv,4,1,AdaBoost,None,f1,0.755068856811017,"[array([[19,  5],
+       [ 6, 15]])]"
+arrhythmia_cfs.csv,4,1,AdaBoost,None,auc,0.7529761904761905,"[array([[19,  5],
+       [ 6, 15]])]"
+arrhythmia_cfs.csv,4,1,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",acc,0.7777777777777778,"[array([[17,  7],
+       [ 3, 18]])]"
+arrhythmia_cfs.csv,4,1,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",f1,0.732806324110672,"[array([[16,  8],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,4,1,Grouped_Mixed_Bagging,"[[0.0, 1.0, 0.0], 3.0]",auc,0.7619047619047621,"[array([[16,  8],
+       [ 3, 18]])]"
+arrhythmia_cfs.csv,4,1,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",acc,0.8,"[array([[20,  4],
+       [ 5, 16]])]"
+arrhythmia_cfs.csv,4,1,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",f1,0.7779973649538866,"[array([[18,  6],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,4,1,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",auc,0.7827380952380952,"[array([[17,  7],
+       [ 3, 18]])]"
+arrhythmia_cfs.csv,5,1,base,None,acc,0.7333333333333333,"[array([[16,  8],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,5,1,base,None,f1,0.732806324110672,"[array([[16,  8],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,5,1,base,None,auc,0.7380952380952381,"[array([[16,  8],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,5,1,wagging,None,acc,0.8222222222222222,"[array([[20,  4],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,5,1,wagging,None,f1,0.8222222222222222,"[array([[20,  4],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,5,1,wagging,None,auc,0.8214285714285714,"[array([[20,  4],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,5,1,AdaBoost,None,acc,0.6888888888888889,"[array([[18,  6],
+       [ 8, 13]])]"
+arrhythmia_cfs.csv,5,1,AdaBoost,None,f1,0.6873333333333334,"[array([[18,  6],
+       [ 8, 13]])]"
+arrhythmia_cfs.csv,5,1,AdaBoost,None,auc,0.6845238095238095,"[array([[18,  6],
+       [ 8, 13]])]"
+arrhythmia_cfs.csv,5,1,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",acc,0.8222222222222222,"[array([[20,  4],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,5,1,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",f1,0.8001979218208807,"[array([[19,  5],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,5,1,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",auc,0.8273809523809523,"[array([[18,  6],
+       [ 2, 19]])]"
+arrhythmia_cfs.csv,5,1,Incremental_Mixed_Bagging,"[[-1.0, 1.0]]",acc,0.8444444444444444,"[array([[20,  4],
+       [ 3, 18]])]"
+arrhythmia_cfs.csv,5,1,Incremental_Mixed_Bagging,"[[-1.0, 1.0]]",f1,0.8222222222222222,"[array([[20,  4],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,5,1,Incremental_Mixed_Bagging,"[[-1.0, 1.0]]",auc,0.8452380952380952,"[array([[20,  4],
+       [ 3, 18]])]"
+arrhythmia_cfs.csv,6,1,base,None,acc,0.8444444444444444,"[array([[23,  1],
+       [ 6, 15]])]"
+arrhythmia_cfs.csv,6,1,base,None,f1,0.8412714601393847,"[array([[23,  1],
+       [ 6, 15]])]"
+arrhythmia_cfs.csv,6,1,base,None,auc,0.8363095238095238,"[array([[23,  1],
+       [ 6, 15]])]"
+arrhythmia_cfs.csv,6,1,wagging,None,acc,0.8,"[array([[21,  3],
+       [ 6, 15]])]"
+arrhythmia_cfs.csv,6,1,wagging,None,f1,0.7981900452488688,"[array([[21,  3],
+       [ 6, 15]])]"
+arrhythmia_cfs.csv,6,1,wagging,None,auc,0.7946428571428571,"[array([[21,  3],
+       [ 6, 15]])]"
+arrhythmia_cfs.csv,6,1,AdaBoost,None,acc,0.8,"[array([[22,  2],
+       [ 7, 14]])]"
+arrhythmia_cfs.csv,6,1,AdaBoost,None,f1,0.7959204487506374,"[array([[22,  2],
+       [ 7, 14]])]"
+arrhythmia_cfs.csv,6,1,AdaBoost,None,auc,0.7916666666666666,"[array([[22,  2],
+       [ 7, 14]])]"
+arrhythmia_cfs.csv,6,1,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",acc,0.8666666666666667,"[array([[22,  2],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,6,1,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",f1,0.8441347270615565,"[array([[21,  3],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,6,1,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",auc,0.8809523809523809,"[array([[24,  0],
+       [ 5, 16]])]"
+arrhythmia_cfs.csv,6,1,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",acc,0.8666666666666667,"[array([[23,  1],
+       [ 5, 16]])]"
+arrhythmia_cfs.csv,6,1,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",f1,0.7959204487506374,"[array([[22,  2],
+       [ 7, 14]])]"
+arrhythmia_cfs.csv,6,1,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",auc,0.8184523809523809,"[array([[21,  3],
+       [ 5, 16]])]"
+arrhythmia_cfs.csv,7,1,base,None,acc,0.6222222222222222,"[array([[17,  8],
+       [ 9, 11]])]"
+arrhythmia_cfs.csv,7,1,base,None,f1,0.621082621082621,"[array([[17,  8],
+       [ 9, 11]])]"
+arrhythmia_cfs.csv,7,1,base,None,auc,0.6149999999999999,"[array([[17,  8],
+       [ 9, 11]])]"
+arrhythmia_cfs.csv,7,1,wagging,None,acc,0.8888888888888888,"[array([[23,  2],
+       [ 3, 17]])]"
+arrhythmia_cfs.csv,7,1,wagging,None,f1,0.8885537120831241,"[array([[23,  2],
+       [ 3, 17]])]"
+arrhythmia_cfs.csv,7,1,wagging,None,auc,0.8850000000000001,"[array([[23,  2],
+       [ 3, 17]])]"
+arrhythmia_cfs.csv,7,1,AdaBoost,None,acc,0.6666666666666666,"[array([[16,  9],
+       [ 6, 14]])]"
+arrhythmia_cfs.csv,7,1,AdaBoost,None,f1,0.6676562757710703,"[array([[16,  9],
+       [ 6, 14]])]"
+arrhythmia_cfs.csv,7,1,AdaBoost,None,auc,0.67,"[array([[16,  9],
+       [ 6, 14]])]"
+arrhythmia_cfs.csv,7,1,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",acc,0.8444444444444444,"[array([[22,  3],
+       [ 4, 16]])]"
+arrhythmia_cfs.csv,7,1,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",f1,0.8885537120831241,"[array([[23,  2],
+       [ 3, 17]])]"
+arrhythmia_cfs.csv,7,1,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",auc,0.845,"[array([[21,  4],
+       [ 3, 17]])]"
+arrhythmia_cfs.csv,7,1,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",acc,0.8444444444444444,"[array([[21,  4],
+       [ 3, 17]])]"
+arrhythmia_cfs.csv,7,1,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",f1,0.8666666666666667,"[array([[22,  3],
+       [ 3, 17]])]"
+arrhythmia_cfs.csv,7,1,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",auc,0.8400000000000001,"[array([[22,  3],
+       [ 4, 16]])]"
+arrhythmia_cfs.csv,8,1,base,None,acc,0.7333333333333333,"[array([[21,  4],
+       [ 8, 12]])]"
+arrhythmia_cfs.csv,8,1,base,None,f1,0.728395061728395,"[array([[21,  4],
+       [ 8, 12]])]"
+arrhythmia_cfs.csv,8,1,base,None,auc,0.7200000000000001,"[array([[21,  4],
+       [ 8, 12]])]"
+arrhythmia_cfs.csv,8,1,wagging,None,acc,0.8,"[array([[24,  1],
+       [ 8, 12]])]"
+arrhythmia_cfs.csv,8,1,wagging,None,f1,0.7910685805422648,"[array([[24,  1],
+       [ 8, 12]])]"
+arrhythmia_cfs.csv,8,1,wagging,None,auc,0.78,"[array([[24,  1],
+       [ 8, 12]])]"
+arrhythmia_cfs.csv,8,1,AdaBoost,None,acc,0.7777777777777778,"[array([[22,  3],
+       [ 7, 13]])]"
+arrhythmia_cfs.csv,8,1,AdaBoost,None,f1,0.7736625514403292,"[array([[22,  3],
+       [ 7, 13]])]"
+arrhythmia_cfs.csv,8,1,AdaBoost,None,auc,0.765,"[array([[22,  3],
+       [ 7, 13]])]"
+arrhythmia_cfs.csv,8,1,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 2.0]",acc,0.8666666666666667,"[array([[24,  1],
+       [ 5, 15]])]"
+arrhythmia_cfs.csv,8,1,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 2.0]",f1,0.8641975308641976,"[array([[24,  1],
+       [ 5, 15]])]"
+arrhythmia_cfs.csv,8,1,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 2.0]",auc,0.88,"[array([[24,  1],
+       [ 4, 16]])]"
+arrhythmia_cfs.csv,8,1,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9111111111111111,"[array([[24,  1],
+       [ 3, 17]])]"
+arrhythmia_cfs.csv,8,1,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.8404040404040405,"[array([[24,  1],
+       [ 6, 14]])]"
+arrhythmia_cfs.csv,8,1,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.8850000000000001,"[array([[23,  2],
+       [ 3, 17]])]"
+arrhythmia_cfs.csv,9,1,base,None,acc,0.8222222222222222,"[array([[19,  6],
+       [ 2, 18]])]"
+arrhythmia_cfs.csv,9,1,base,None,f1,0.8225735617039965,"[array([[19,  6],
+       [ 2, 18]])]"
+arrhythmia_cfs.csv,9,1,base,None,auc,0.83,"[array([[19,  6],
+       [ 2, 18]])]"
+arrhythmia_cfs.csv,9,1,wagging,None,acc,0.8666666666666667,"[array([[21,  4],
+       [ 2, 18]])]"
+arrhythmia_cfs.csv,9,1,wagging,None,f1,0.867063492063492,"[array([[21,  4],
+       [ 2, 18]])]"
+arrhythmia_cfs.csv,9,1,wagging,None,auc,0.8699999999999999,"[array([[21,  4],
+       [ 2, 18]])]"
+arrhythmia_cfs.csv,9,1,AdaBoost,None,acc,0.8,"[array([[18,  7],
+       [ 2, 18]])]"
+arrhythmia_cfs.csv,9,1,AdaBoost,None,f1,0.8,"[array([[18,  7],
+       [ 2, 18]])]"
+arrhythmia_cfs.csv,9,1,AdaBoost,None,auc,0.8099999999999999,"[array([[18,  7],
+       [ 2, 18]])]"
+arrhythmia_cfs.csv,9,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",acc,0.8666666666666667,"[array([[22,  3],
+       [ 3, 17]])]"
+arrhythmia_cfs.csv,9,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",f1,0.8885537120831241,"[array([[23,  2],
+       [ 3, 17]])]"
+arrhythmia_cfs.csv,9,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",auc,0.91,"[array([[23,  2],
+       [ 2, 18]])]"
+arrhythmia_cfs.csv,9,1,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",acc,0.9111111111111111,"[array([[23,  2],
+       [ 2, 18]])]"
+arrhythmia_cfs.csv,9,1,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",f1,0.8885537120831241,"[array([[23,  2],
+       [ 3, 17]])]"
+arrhythmia_cfs.csv,9,1,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",auc,0.9299999999999999,"[array([[24,  1],
+       [ 2, 18]])]"
+arrhythmia_cfs.csv,0,10,base,None,acc,0.8043478260869565,"[array([[18,  7],
+       [ 2, 19]])]"
+arrhythmia_cfs.csv,0,10,base,None,f1,0.8038852913968547,"[array([[18,  7],
+       [ 2, 19]])]"
+arrhythmia_cfs.csv,0,10,base,None,auc,0.8123809523809523,"[array([[18,  7],
+       [ 2, 19]])]"
+arrhythmia_cfs.csv,0,10,wagging,None,acc,0.7608695652173914,"[array([[21,  4],
+       [ 7, 14]])]"
+arrhythmia_cfs.csv,0,10,wagging,None,f1,0.7584400832965229,"[array([[21,  4],
+       [ 7, 14]])]"
+arrhythmia_cfs.csv,0,10,wagging,None,auc,0.7533333333333333,"[array([[21,  4],
+       [ 7, 14]])]"
+arrhythmia_cfs.csv,0,10,AdaBoost,None,acc,0.717391304347826,"[array([[19,  6],
+       [ 7, 14]])]"
+arrhythmia_cfs.csv,0,10,AdaBoost,None,f1,0.7167155303266588,"[array([[19,  6],
+       [ 7, 14]])]"
+arrhythmia_cfs.csv,0,10,AdaBoost,None,auc,0.7133333333333333,"[array([[19,  6],
+       [ 7, 14]])]"
+arrhythmia_cfs.csv,0,10,Grouped_Mixed_Bagging,"[[0.1, 0.8, 0.1], 1.0]",acc,0.7608695652173914,"[array([[20,  5],
+       [ 6, 15]])]"
+arrhythmia_cfs.csv,0,10,Grouped_Mixed_Bagging,"[[0.1, 0.8, 0.1], 1.0]",f1,0.7376254180602007,"[array([[20,  5],
+       [ 7, 14]])]"
+arrhythmia_cfs.csv,0,10,Grouped_Mixed_Bagging,"[[0.1, 0.8, 0.1], 1.0]",auc,0.7133333333333333,"[array([[19,  6],
+       [ 7, 14]])]"
+arrhythmia_cfs.csv,0,10,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",acc,0.717391304347826,"[array([[20,  5],
+       [ 8, 13]])]"
+arrhythmia_cfs.csv,0,10,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",f1,0.77921857784558,"[array([[22,  3],
+       [ 7, 14]])]"
+arrhythmia_cfs.csv,0,10,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",auc,0.7495238095238096,"[array([[22,  3],
+       [ 8, 13]])]"
+arrhythmia_cfs.csv,1,10,base,None,acc,0.717391304347826,"[array([[18,  7],
+       [ 6, 15]])]"
+arrhythmia_cfs.csv,1,10,base,None,f1,0.7177936897711562,"[array([[18,  7],
+       [ 6, 15]])]"
+arrhythmia_cfs.csv,1,10,base,None,auc,0.7171428571428572,"[array([[18,  7],
+       [ 6, 15]])]"
+arrhythmia_cfs.csv,1,10,wagging,None,acc,0.8260869565217391,"[array([[21,  4],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,1,10,wagging,None,f1,0.8260869565217391,"[array([[21,  4],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,1,10,wagging,None,auc,0.8247619047619048,"[array([[21,  4],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,1,10,AdaBoost,None,acc,0.7391304347826086,"[array([[17,  8],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,1,10,AdaBoost,None,f1,0.7391304347826089,"[array([[17,  8],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,1,10,AdaBoost,None,auc,0.7447619047619047,"[array([[17,  8],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,1,10,Grouped_Mixed_Bagging,"[[0.0, 1.0, 0.0], 3.0]",acc,0.8043478260869565,"[array([[20,  5],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,1,10,Grouped_Mixed_Bagging,"[[0.0, 1.0, 0.0], 3.0]",f1,0.8480427560306225,"[array([[21,  4],
+       [ 3, 18]])]"
+arrhythmia_cfs.csv,1,10,Grouped_Mixed_Bagging,"[[0.0, 1.0, 0.0], 3.0]",auc,0.8247619047619048,"[array([[21,  4],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,1,10,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.782608695652174,"[array([[21,  4],
+       [ 6, 15]])]"
+arrhythmia_cfs.csv,1,10,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.8474622086374317,"[array([[22,  3],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,1,10,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",auc,0.8209523809523809,"[array([[22,  3],
+       [ 5, 16]])]"
+arrhythmia_cfs.csv,2,10,base,None,acc,0.6444444444444445,"[array([[19,  5],
+       [11, 10]])]"
+arrhythmia_cfs.csv,2,10,base,None,f1,0.634567901234568,"[array([[19,  5],
+       [11, 10]])]"
+arrhythmia_cfs.csv,2,10,base,None,auc,0.6339285714285715,"[array([[19,  5],
+       [11, 10]])]"
+arrhythmia_cfs.csv,2,10,wagging,None,acc,0.8222222222222222,"[array([[20,  4],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,2,10,wagging,None,f1,0.8222222222222222,"[array([[20,  4],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,2,10,wagging,None,auc,0.8214285714285714,"[array([[20,  4],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,2,10,AdaBoost,None,acc,0.6666666666666666,"[array([[19,  5],
+       [10, 11]])]"
+arrhythmia_cfs.csv,2,10,AdaBoost,None,f1,0.6598674145843957,"[array([[19,  5],
+       [10, 11]])]"
+arrhythmia_cfs.csv,2,10,AdaBoost,None,auc,0.6577380952380952,"[array([[19,  5],
+       [10, 11]])]"
+arrhythmia_cfs.csv,2,10,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",acc,0.8444444444444444,"[array([[21,  3],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,2,10,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",f1,0.8667984189723319,"[array([[20,  4],
+       [ 2, 19]])]"
+arrhythmia_cfs.csv,2,10,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",auc,0.8273809523809523,"[array([[18,  6],
+       [ 2, 19]])]"
+arrhythmia_cfs.csv,2,10,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",acc,0.7777777777777778,"[array([[18,  6],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,2,10,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",f1,0.7981900452488688,"[array([[21,  3],
+       [ 6, 15]])]"
+arrhythmia_cfs.csv,2,10,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",auc,0.8422619047619048,"[array([[21,  3],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,3,10,base,None,acc,0.8888888888888888,"[array([[21,  3],
+       [ 2, 19]])]"
+arrhythmia_cfs.csv,3,10,base,None,f1,0.8889988454560449,"[array([[21,  3],
+       [ 2, 19]])]"
+arrhythmia_cfs.csv,3,10,base,None,auc,0.8898809523809523,"[array([[21,  3],
+       [ 2, 19]])]"
+arrhythmia_cfs.csv,3,10,wagging,None,acc,0.8666666666666667,"[array([[20,  4],
+       [ 2, 19]])]"
+arrhythmia_cfs.csv,3,10,wagging,None,f1,0.8667984189723319,"[array([[20,  4],
+       [ 2, 19]])]"
+arrhythmia_cfs.csv,3,10,wagging,None,auc,0.869047619047619,"[array([[20,  4],
+       [ 2, 19]])]"
+arrhythmia_cfs.csv,3,10,AdaBoost,None,acc,0.8444444444444444,"[array([[20,  4],
+       [ 3, 18]])]"
+arrhythmia_cfs.csv,3,10,AdaBoost,None,f1,0.8445983836384628,"[array([[20,  4],
+       [ 3, 18]])]"
+arrhythmia_cfs.csv,3,10,AdaBoost,None,auc,0.8452380952380952,"[array([[20,  4],
+       [ 3, 18]])]"
+arrhythmia_cfs.csv,3,10,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",acc,0.8444444444444444,"[array([[20,  4],
+       [ 3, 18]])]"
+arrhythmia_cfs.csv,3,10,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",f1,0.9111989459815545,"[array([[21,  3],
+       [ 1, 20]])]"
+arrhythmia_cfs.csv,3,10,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",auc,0.8452380952380952,"[array([[20,  4],
+       [ 3, 18]])]"
+arrhythmia_cfs.csv,3,10,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",acc,0.8222222222222222,"[array([[21,  3],
+       [ 5, 16]])]"
+arrhythmia_cfs.csv,3,10,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",f1,0.8441347270615565,"[array([[21,  3],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,3,10,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",auc,0.863095238095238,"[array([[22,  2],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,4,10,base,None,acc,0.7555555555555555,"[array([[19,  5],
+       [ 6, 15]])]"
+arrhythmia_cfs.csv,4,10,base,None,f1,0.755068856811017,"[array([[19,  5],
+       [ 6, 15]])]"
+arrhythmia_cfs.csv,4,10,base,None,auc,0.7529761904761905,"[array([[19,  5],
+       [ 6, 15]])]"
+arrhythmia_cfs.csv,4,10,wagging,None,acc,0.8222222222222222,"[array([[18,  6],
+       [ 2, 19]])]"
+arrhythmia_cfs.csv,4,10,wagging,None,f1,0.821870882740448,"[array([[18,  6],
+       [ 2, 19]])]"
+arrhythmia_cfs.csv,4,10,wagging,None,auc,0.8273809523809523,"[array([[18,  6],
+       [ 2, 19]])]"
+arrhythmia_cfs.csv,4,10,AdaBoost,None,acc,0.7555555555555555,"[array([[19,  5],
+       [ 6, 15]])]"
+arrhythmia_cfs.csv,4,10,AdaBoost,None,f1,0.755068856811017,"[array([[19,  5],
+       [ 6, 15]])]"
+arrhythmia_cfs.csv,4,10,AdaBoost,None,auc,0.7529761904761905,"[array([[19,  5],
+       [ 6, 15]])]"
+arrhythmia_cfs.csv,4,10,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",acc,0.7777777777777778,"[array([[17,  7],
+       [ 3, 18]])]"
+arrhythmia_cfs.csv,4,10,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",f1,0.732806324110672,"[array([[16,  8],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,4,10,Grouped_Mixed_Bagging,"[[0.0, 1.0, 0.0], 3.0]",auc,0.7619047619047621,"[array([[16,  8],
+       [ 3, 18]])]"
+arrhythmia_cfs.csv,4,10,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",acc,0.8,"[array([[20,  4],
+       [ 5, 16]])]"
+arrhythmia_cfs.csv,4,10,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",f1,0.7779973649538866,"[array([[18,  6],
+       [ 4, 17]])]"
+arrhythmia_cfs.csv,4,10,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",auc,0.7827380952380952,"[array([[17,  7],
+       [ 3, 18]])]"

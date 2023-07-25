@@ -1,0 +1,2791 @@
+﻿dataset,CV_fold,n_trees,model,parameters,perf_measure,perf_value,Conf_Matrix
+horse_colic.csv,0,1,base,None,acc,0.7567567567567568,"[array([[ 8,  6],
+       [ 3, 20]])]"
+horse_colic.csv,0,1,base,None,f1,0.7496083838940982,"[array([[ 8,  6],
+       [ 3, 20]])]"
+horse_colic.csv,0,1,base,None,auc,0.7204968944099378,"[array([[ 8,  6],
+       [ 3, 20]])]"
+horse_colic.csv,0,1,wagging,None,acc,0.8108108108108109,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,1,wagging,None,f1,0.7995207483698532,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,1,wagging,None,auc,0.7639751552795031,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,1,AdaBoost,None,acc,0.8108108108108109,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,1,AdaBoost,None,f1,0.7995207483698532,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,1,AdaBoost,None,auc,0.7639751552795031,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,1,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",acc,0.8108108108108109,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,0,1,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",f1,0.8608935466078325,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,0,1,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",auc,0.7639751552795031,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,1,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",acc,0.8378378378378378,"[array([[ 9,  5],
+       [ 1, 22]])]"
+horse_colic.csv,0,1,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.8899861399861401,"[array([[11,  3],
+       [ 1, 22]])]"
+horse_colic.csv,0,1,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.7779503105590062,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,1,1,base,None,acc,0.7567567567567568,"[array([[10,  4],
+       [ 5, 18]])]"
+horse_colic.csv,1,1,base,None,f1,0.7582479030754893,"[array([[10,  4],
+       [ 5, 18]])]"
+horse_colic.csv,1,1,base,None,auc,0.7484472049689441,"[array([[10,  4],
+       [ 5, 18]])]"
+horse_colic.csv,1,1,wagging,None,acc,0.8108108108108109,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,1,wagging,None,f1,0.8093199582561286,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,1,wagging,None,auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,1,AdaBoost,None,acc,0.7837837837837838,"[array([[10,  4],
+       [ 4, 19]])]"
+horse_colic.csv,1,1,AdaBoost,None,f1,0.7837837837837838,"[array([[10,  4],
+       [ 4, 19]])]"
+horse_colic.csv,1,1,AdaBoost,None,auc,0.7701863354037267,"[array([[10,  4],
+       [ 4, 19]])]"
+horse_colic.csv,1,1,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",acc,0.8378378378378378,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,1,1,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",f1,0.8349792099792099,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,1,1,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,1,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.8648648648648649,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,1,1,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.8052509652509653,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,1,1,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",auc,0.813664596273292,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,2,1,base,None,acc,0.8108108108108109,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,2,1,base,None,f1,0.8119705912809361,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,2,1,base,None,auc,0.8059006211180125,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,2,1,wagging,None,acc,0.8378378378378378,"[array([[12,  2],
+       [ 4, 19]])]"
+horse_colic.csv,2,1,wagging,None,f1,0.8395577395577395,"[array([[12,  2],
+       [ 4, 19]])]"
+horse_colic.csv,2,1,wagging,None,auc,0.8416149068322982,"[array([[12,  2],
+       [ 4, 19]])]"
+horse_colic.csv,2,1,AdaBoost,None,acc,0.8648648648648649,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,2,1,AdaBoost,None,f1,0.8637999701829489,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,2,1,AdaBoost,None,auc,0.8493788819875776,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,2,1,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",acc,0.8648648648648649,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,2,1,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",f1,0.8899861399861401,"[array([[11,  3],
+       [ 1, 22]])]"
+horse_colic.csv,2,1,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.8276397515527949,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,2,1,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,0.8648648648648649,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,2,1,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,0.8656932794863831,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,2,1,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,0.8493788819875776,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,3,1,base,None,acc,0.8108108108108109,"[array([[12,  2],
+       [ 5, 18]])]"
+horse_colic.csv,3,1,base,None,f1,0.8133655035380467,"[array([[12,  2],
+       [ 5, 18]])]"
+horse_colic.csv,3,1,base,None,auc,0.8198757763975155,"[array([[12,  2],
+       [ 5, 18]])]"
+horse_colic.csv,3,1,wagging,None,acc,0.8378378378378378,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,3,1,wagging,None,f1,0.8378378378378378,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,3,1,wagging,None,auc,0.8276397515527949,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,3,1,AdaBoost,None,acc,0.8108108108108109,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,3,1,AdaBoost,None,f1,0.8093199582561286,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,3,1,AdaBoost,None,auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,3,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",acc,0.7567567567567568,"[array([[11,  3],
+       [ 6, 17]])]"
+horse_colic.csv,3,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",f1,0.8119705912809361,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,3,1,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.8059006211180125,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,3,1,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.8108108108108109,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,3,1,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.8656932794863831,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,3,1,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.8059006211180125,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,4,1,base,None,acc,0.8108108108108109,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,4,1,base,None,f1,0.8093199582561286,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,4,1,base,None,auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,4,1,wagging,None,acc,0.8648648648648649,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,4,1,wagging,None,f1,0.8608935466078325,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,4,1,wagging,None,auc,0.8354037267080746,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,4,1,AdaBoost,None,acc,0.8378378378378378,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,1,AdaBoost,None,f1,0.8349792099792099,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,1,AdaBoost,None,auc,0.813664596273292,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,1,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",acc,0.8648648648648649,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,4,1,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",f1,0.8872072072072072,"[array([[10,  4],
+       [ 0, 23]])]"
+horse_colic.csv,4,1,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",auc,0.8711180124223603,"[array([[11,  3],
+       [ 1, 22]])]"
+horse_colic.csv,4,1,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.918918918918919,"[array([[11,  3],
+       [ 0, 23]])]"
+horse_colic.csv,4,1,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.8349792099792099,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,1,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",auc,0.813664596273292,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,5,1,base,None,acc,0.6756756756756757,"[array([[ 6,  8],
+       [ 4, 19]])]"
+horse_colic.csv,5,1,base,None,f1,0.6616216216216216,"[array([[ 6,  8],
+       [ 4, 19]])]"
+horse_colic.csv,5,1,base,None,auc,0.6273291925465839,"[array([[ 6,  8],
+       [ 4, 19]])]"
+horse_colic.csv,5,1,wagging,None,acc,0.8108108108108109,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,5,1,wagging,None,f1,0.8052509652509653,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,5,1,wagging,None,auc,0.7779503105590062,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,5,1,AdaBoost,None,acc,0.7027027027027027,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,1,AdaBoost,None,f1,0.6939658025372311,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,1,AdaBoost,None,auc,0.6630434782608696,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,1,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",acc,0.7027027027027027,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,1,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",f1,0.72496534996535,"[array([[ 8,  6],
+       [ 4, 19]])]"
+horse_colic.csv,5,1,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",auc,0.7127329192546583,"[array([[ 9,  5],
+       [ 5, 18]])]"
+horse_colic.csv,5,1,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.7567567567567568,"[array([[ 9,  5],
+       [ 4, 19]])]"
+horse_colic.csv,5,1,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.7003599344024877,"[array([[ 8,  6],
+       [ 5, 18]])]"
+horse_colic.csv,5,1,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.7065217391304348,"[array([[ 7,  7],
+       [ 2, 21]])]"
+horse_colic.csv,6,1,base,None,acc,0.8648648648648649,"[array([[12,  1],
+       [ 4, 20]])]"
+horse_colic.csv,6,1,base,None,f1,0.8673501087294192,"[array([[12,  1],
+       [ 4, 20]])]"
+horse_colic.csv,6,1,base,None,auc,0.8782051282051283,"[array([[12,  1],
+       [ 4, 20]])]"
+horse_colic.csv,6,1,wagging,None,acc,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,1,wagging,None,f1,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,1,wagging,None,auc,0.9407051282051283,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,1,AdaBoost,None,acc,0.8918918918918919,"[array([[12,  1],
+       [ 3, 21]])]"
+horse_colic.csv,6,1,AdaBoost,None,f1,0.8934027194896761,"[array([[12,  1],
+       [ 3, 21]])]"
+horse_colic.csv,6,1,AdaBoost,None,auc,0.8990384615384616,"[array([[12,  1],
+       [ 3, 21]])]"
+horse_colic.csv,6,1,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",acc,0.972972972972973,"[array([[13,  0],
+       [ 1, 23]])]"
+horse_colic.csv,6,1,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",f1,0.9195578557280684,"[array([[12,  1],
+       [ 2, 22]])]"
+horse_colic.csv,6,1,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",auc,0.9791666666666667,"[array([[13,  0],
+       [ 1, 23]])]"
+horse_colic.csv,6,1,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,1,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,1,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.9407051282051283,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,7,1,base,None,acc,0.6756756756756757,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,1,base,None,f1,0.6802081584690282,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,1,base,None,auc,0.6618589743589745,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,1,wagging,None,acc,0.5945945945945946,"[array([[ 7,  6],
+       [ 9, 15]])]"
+horse_colic.csv,7,1,wagging,None,f1,0.6020503261882572,"[array([[ 7,  6],
+       [ 9, 15]])]"
+horse_colic.csv,7,1,wagging,None,auc,0.5817307692307693,"[array([[ 7,  6],
+       [ 9, 15]])]"
+horse_colic.csv,7,1,AdaBoost,None,acc,0.7027027027027027,"[array([[ 8,  5],
+       [ 6, 18]])]"
+horse_colic.csv,7,1,AdaBoost,None,f1,0.7050454710029179,"[array([[ 8,  5],
+       [ 6, 18]])]"
+horse_colic.csv,7,1,AdaBoost,None,auc,0.6826923076923078,"[array([[ 8,  5],
+       [ 6, 18]])]"
+horse_colic.csv,7,1,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",acc,0.7027027027027027,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,7,1,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",f1,0.6997904026475454,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,7,1,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",auc,0.6858974358974359,"[array([[ 7,  6],
+       [ 4, 20]])]"
+horse_colic.csv,7,1,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.6756756756756757,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,1,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.6997904026475454,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,7,1,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",auc,0.6650641025641025,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,8,1,base,None,acc,0.8333333333333334,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,1,base,None,f1,0.8354978354978354,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,1,base,None,auc,0.8361204013377926,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,1,wagging,None,acc,0.8611111111111112,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,1,wagging,None,f1,0.8621399176954733,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,1,wagging,None,auc,0.8578595317725751,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,1,AdaBoost,None,acc,0.7222222222222222,"[array([[10,  3],
+       [ 7, 16]])]"
+horse_colic.csv,8,1,AdaBoost,None,f1,0.7275132275132276,"[array([[10,  3],
+       [ 7, 16]])]"
+horse_colic.csv,8,1,AdaBoost,None,auc,0.7324414715719063,"[array([[10,  3],
+       [ 7, 16]])]"
+horse_colic.csv,8,1,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",acc,0.8888888888888888,"[array([[11,  2],
+       [ 2, 21]])]"
+horse_colic.csv,8,1,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 3.0]",f1,0.8354978354978354,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,1,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 3.0]",auc,0.8795986622073578,"[array([[11,  2],
+       [ 2, 21]])]"
+horse_colic.csv,8,1,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",acc,0.8611111111111112,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,1,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",f1,0.8354978354978354,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,1,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",auc,0.9180602006688964,"[array([[12,  1],
+       [ 2, 21]])]"
+horse_colic.csv,9,1,base,None,acc,0.8333333333333334,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,1,base,None,f1,0.8248484848484849,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,1,base,None,auc,0.7859531772575251,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,1,wagging,None,acc,0.8611111111111112,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,1,wagging,None,f1,0.8563048407768904,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,1,wagging,None,auc,0.8244147157190636,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,1,AdaBoost,None,acc,0.8333333333333334,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,1,AdaBoost,None,f1,0.8248484848484849,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,1,AdaBoost,None,auc,0.7859531772575251,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",acc,0.9166666666666666,"[array([[10,  3],
+       [ 0, 23]])]"
+horse_colic.csv,9,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",f1,0.8832323232323233,"[array([[ 9,  4],
+       [ 0, 23]])]"
+horse_colic.csv,9,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",auc,0.8244147157190636,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,1,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",acc,0.8333333333333334,"[array([[ 9,  4],
+       [ 2, 21]])]"
+horse_colic.csv,9,1,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",f1,0.8563048407768904,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,1,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",auc,0.8244147157190636,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,0,10,base,None,acc,0.7567567567567568,"[array([[ 8,  6],
+       [ 3, 20]])]"
+horse_colic.csv,0,10,base,None,f1,0.7496083838940982,"[array([[ 8,  6],
+       [ 3, 20]])]"
+horse_colic.csv,0,10,base,None,auc,0.7204968944099378,"[array([[ 8,  6],
+       [ 3, 20]])]"
+horse_colic.csv,0,10,wagging,None,acc,0.8108108108108109,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,10,wagging,None,f1,0.7995207483698532,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,10,wagging,None,auc,0.7639751552795031,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,10,AdaBoost,None,acc,0.8108108108108109,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,10,AdaBoost,None,f1,0.7995207483698532,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,10,AdaBoost,None,auc,0.7639751552795031,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,10,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",acc,0.8108108108108109,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,0,10,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",f1,0.8608935466078325,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,0,10,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",auc,0.7639751552795031,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,10,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",acc,0.8378378378378378,"[array([[ 9,  5],
+       [ 1, 22]])]"
+horse_colic.csv,0,10,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.8899861399861401,"[array([[11,  3],
+       [ 1, 22]])]"
+horse_colic.csv,0,10,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.7779503105590062,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,1,10,base,None,acc,0.7567567567567568,"[array([[10,  4],
+       [ 5, 18]])]"
+horse_colic.csv,1,10,base,None,f1,0.7582479030754893,"[array([[10,  4],
+       [ 5, 18]])]"
+horse_colic.csv,1,10,base,None,auc,0.7484472049689441,"[array([[10,  4],
+       [ 5, 18]])]"
+horse_colic.csv,1,10,wagging,None,acc,0.8108108108108109,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,10,wagging,None,f1,0.8093199582561286,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,10,wagging,None,auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,10,AdaBoost,None,acc,0.7837837837837838,"[array([[10,  4],
+       [ 4, 19]])]"
+horse_colic.csv,1,10,AdaBoost,None,f1,0.7837837837837838,"[array([[10,  4],
+       [ 4, 19]])]"
+horse_colic.csv,1,10,AdaBoost,None,auc,0.7701863354037267,"[array([[10,  4],
+       [ 4, 19]])]"
+horse_colic.csv,1,10,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",acc,0.8378378378378378,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,1,10,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",f1,0.8349792099792099,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,1,10,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,10,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.8648648648648649,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,1,10,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.8052509652509653,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,1,10,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",auc,0.813664596273292,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,2,10,base,None,acc,0.8108108108108109,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,2,10,base,None,f1,0.8119705912809361,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,2,10,base,None,auc,0.8059006211180125,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,2,10,wagging,None,acc,0.8378378378378378,"[array([[12,  2],
+       [ 4, 19]])]"
+horse_colic.csv,2,10,wagging,None,f1,0.8395577395577395,"[array([[12,  2],
+       [ 4, 19]])]"
+horse_colic.csv,2,10,wagging,None,auc,0.8416149068322982,"[array([[12,  2],
+       [ 4, 19]])]"
+horse_colic.csv,2,10,AdaBoost,None,acc,0.8648648648648649,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,2,10,AdaBoost,None,f1,0.8637999701829489,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,2,10,AdaBoost,None,auc,0.8493788819875776,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,2,10,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",acc,0.8648648648648649,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,2,10,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",f1,0.8899861399861401,"[array([[11,  3],
+       [ 1, 22]])]"
+horse_colic.csv,2,10,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.8276397515527949,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,2,10,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,0.8648648648648649,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,2,10,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,0.8656932794863831,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,2,10,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,0.8493788819875776,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,3,10,base,None,acc,0.8108108108108109,"[array([[12,  2],
+       [ 5, 18]])]"
+horse_colic.csv,3,10,base,None,f1,0.8133655035380467,"[array([[12,  2],
+       [ 5, 18]])]"
+horse_colic.csv,3,10,base,None,auc,0.8198757763975155,"[array([[12,  2],
+       [ 5, 18]])]"
+horse_colic.csv,3,10,wagging,None,acc,0.8378378378378378,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,3,10,wagging,None,f1,0.8378378378378378,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,3,10,wagging,None,auc,0.8276397515527949,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,3,10,AdaBoost,None,acc,0.8108108108108109,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,3,10,AdaBoost,None,f1,0.8093199582561286,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,3,10,AdaBoost,None,auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,3,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",acc,0.7567567567567568,"[array([[11,  3],
+       [ 6, 17]])]"
+horse_colic.csv,3,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",f1,0.8119705912809361,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,3,10,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.8059006211180125,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,3,10,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.8108108108108109,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,3,10,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.8656932794863831,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,3,10,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.8059006211180125,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,4,10,base,None,acc,0.8108108108108109,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,4,10,base,None,f1,0.8093199582561286,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,4,10,base,None,auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,4,10,wagging,None,acc,0.8648648648648649,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,4,10,wagging,None,f1,0.8608935466078325,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,4,10,wagging,None,auc,0.8354037267080746,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,4,10,AdaBoost,None,acc,0.8378378378378378,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,10,AdaBoost,None,f1,0.8349792099792099,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,10,AdaBoost,None,auc,0.813664596273292,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,10,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",acc,0.8648648648648649,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,4,10,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",f1,0.8872072072072072,"[array([[10,  4],
+       [ 0, 23]])]"
+horse_colic.csv,4,10,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",auc,0.8711180124223603,"[array([[11,  3],
+       [ 1, 22]])]"
+horse_colic.csv,4,10,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.918918918918919,"[array([[11,  3],
+       [ 0, 23]])]"
+horse_colic.csv,4,10,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.8349792099792099,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,10,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",auc,0.813664596273292,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,5,10,base,None,acc,0.6756756756756757,"[array([[ 6,  8],
+       [ 4, 19]])]"
+horse_colic.csv,5,10,base,None,f1,0.6616216216216216,"[array([[ 6,  8],
+       [ 4, 19]])]"
+horse_colic.csv,5,10,base,None,auc,0.6273291925465839,"[array([[ 6,  8],
+       [ 4, 19]])]"
+horse_colic.csv,5,10,wagging,None,acc,0.8108108108108109,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,5,10,wagging,None,f1,0.8052509652509653,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,5,10,wagging,None,auc,0.7779503105590062,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,5,10,AdaBoost,None,acc,0.7027027027027027,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,10,AdaBoost,None,f1,0.6939658025372311,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,10,AdaBoost,None,auc,0.6630434782608696,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,10,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",acc,0.7027027027027027,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,10,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",f1,0.72496534996535,"[array([[ 8,  6],
+       [ 4, 19]])]"
+horse_colic.csv,5,10,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",auc,0.7127329192546583,"[array([[ 9,  5],
+       [ 5, 18]])]"
+horse_colic.csv,5,10,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.7567567567567568,"[array([[ 9,  5],
+       [ 4, 19]])]"
+horse_colic.csv,5,10,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.7003599344024877,"[array([[ 8,  6],
+       [ 5, 18]])]"
+horse_colic.csv,5,10,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.7065217391304348,"[array([[ 7,  7],
+       [ 2, 21]])]"
+horse_colic.csv,6,10,base,None,acc,0.8648648648648649,"[array([[12,  1],
+       [ 4, 20]])]"
+horse_colic.csv,6,10,base,None,f1,0.8673501087294192,"[array([[12,  1],
+       [ 4, 20]])]"
+horse_colic.csv,6,10,base,None,auc,0.8782051282051283,"[array([[12,  1],
+       [ 4, 20]])]"
+horse_colic.csv,6,10,wagging,None,acc,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,10,wagging,None,f1,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,10,wagging,None,auc,0.9407051282051283,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,10,AdaBoost,None,acc,0.8918918918918919,"[array([[12,  1],
+       [ 3, 21]])]"
+horse_colic.csv,6,10,AdaBoost,None,f1,0.8934027194896761,"[array([[12,  1],
+       [ 3, 21]])]"
+horse_colic.csv,6,10,AdaBoost,None,auc,0.8990384615384616,"[array([[12,  1],
+       [ 3, 21]])]"
+horse_colic.csv,6,10,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",acc,0.972972972972973,"[array([[13,  0],
+       [ 1, 23]])]"
+horse_colic.csv,6,10,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",f1,0.9195578557280684,"[array([[12,  1],
+       [ 2, 22]])]"
+horse_colic.csv,6,10,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",auc,0.9791666666666667,"[array([[13,  0],
+       [ 1, 23]])]"
+horse_colic.csv,6,10,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,10,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,10,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.9407051282051283,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,7,10,base,None,acc,0.6756756756756757,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,10,base,None,f1,0.6802081584690282,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,10,base,None,auc,0.6618589743589745,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,10,wagging,None,acc,0.5945945945945946,"[array([[ 7,  6],
+       [ 9, 15]])]"
+horse_colic.csv,7,10,wagging,None,f1,0.6020503261882572,"[array([[ 7,  6],
+       [ 9, 15]])]"
+horse_colic.csv,7,10,wagging,None,auc,0.5817307692307693,"[array([[ 7,  6],
+       [ 9, 15]])]"
+horse_colic.csv,7,10,AdaBoost,None,acc,0.7027027027027027,"[array([[ 8,  5],
+       [ 6, 18]])]"
+horse_colic.csv,7,10,AdaBoost,None,f1,0.7050454710029179,"[array([[ 8,  5],
+       [ 6, 18]])]"
+horse_colic.csv,7,10,AdaBoost,None,auc,0.6826923076923078,"[array([[ 8,  5],
+       [ 6, 18]])]"
+horse_colic.csv,7,10,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",acc,0.7027027027027027,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,7,10,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",f1,0.6997904026475454,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,7,10,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",auc,0.6858974358974359,"[array([[ 7,  6],
+       [ 4, 20]])]"
+horse_colic.csv,7,10,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.6756756756756757,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,10,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.6997904026475454,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,7,10,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",auc,0.6650641025641025,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,8,10,base,None,acc,0.8333333333333334,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,10,base,None,f1,0.8354978354978354,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,10,base,None,auc,0.8361204013377926,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,10,wagging,None,acc,0.8611111111111112,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,10,wagging,None,f1,0.8621399176954733,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,10,wagging,None,auc,0.8578595317725751,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,10,AdaBoost,None,acc,0.7222222222222222,"[array([[10,  3],
+       [ 7, 16]])]"
+horse_colic.csv,8,10,AdaBoost,None,f1,0.7275132275132276,"[array([[10,  3],
+       [ 7, 16]])]"
+horse_colic.csv,8,10,AdaBoost,None,auc,0.7324414715719063,"[array([[10,  3],
+       [ 7, 16]])]"
+horse_colic.csv,8,10,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",acc,0.8888888888888888,"[array([[11,  2],
+       [ 2, 21]])]"
+horse_colic.csv,8,10,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 3.0]",f1,0.8354978354978354,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,10,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 3.0]",auc,0.8795986622073578,"[array([[11,  2],
+       [ 2, 21]])]"
+horse_colic.csv,8,10,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",acc,0.8611111111111112,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,10,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",f1,0.8354978354978354,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,10,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",auc,0.9180602006688964,"[array([[12,  1],
+       [ 2, 21]])]"
+horse_colic.csv,9,10,base,None,acc,0.8333333333333334,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,10,base,None,f1,0.8248484848484849,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,10,base,None,auc,0.7859531772575251,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,10,wagging,None,acc,0.8611111111111112,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,10,wagging,None,f1,0.8563048407768904,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,10,wagging,None,auc,0.8244147157190636,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,10,AdaBoost,None,acc,0.8333333333333334,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,10,AdaBoost,None,f1,0.8248484848484849,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,10,AdaBoost,None,auc,0.7859531772575251,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",acc,0.9166666666666666,"[array([[10,  3],
+       [ 0, 23]])]"
+horse_colic.csv,9,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",f1,0.8832323232323233,"[array([[ 9,  4],
+       [ 0, 23]])]"
+horse_colic.csv,9,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",auc,0.8244147157190636,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,10,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",acc,0.8333333333333334,"[array([[ 9,  4],
+       [ 2, 21]])]"
+horse_colic.csv,9,10,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",f1,0.8563048407768904,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,10,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",auc,0.8244147157190636,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,0,20,base,None,acc,0.7567567567567568,"[array([[ 8,  6],
+       [ 3, 20]])]"
+horse_colic.csv,0,20,base,None,f1,0.7496083838940982,"[array([[ 8,  6],
+       [ 3, 20]])]"
+horse_colic.csv,0,20,base,None,auc,0.7204968944099378,"[array([[ 8,  6],
+       [ 3, 20]])]"
+horse_colic.csv,0,20,wagging,None,acc,0.8108108108108109,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,20,wagging,None,f1,0.7995207483698532,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,20,wagging,None,auc,0.7639751552795031,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,20,AdaBoost,None,acc,0.8108108108108109,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,20,AdaBoost,None,f1,0.7995207483698532,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,20,AdaBoost,None,auc,0.7639751552795031,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,20,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",acc,0.8108108108108109,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,0,20,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",f1,0.8608935466078325,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,0,20,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",auc,0.7639751552795031,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,20,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",acc,0.8378378378378378,"[array([[ 9,  5],
+       [ 1, 22]])]"
+horse_colic.csv,0,20,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.8899861399861401,"[array([[11,  3],
+       [ 1, 22]])]"
+horse_colic.csv,0,20,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.7779503105590062,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,1,20,base,None,acc,0.7567567567567568,"[array([[10,  4],
+       [ 5, 18]])]"
+horse_colic.csv,1,20,base,None,f1,0.7582479030754893,"[array([[10,  4],
+       [ 5, 18]])]"
+horse_colic.csv,1,20,base,None,auc,0.7484472049689441,"[array([[10,  4],
+       [ 5, 18]])]"
+horse_colic.csv,1,20,wagging,None,acc,0.8108108108108109,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,20,wagging,None,f1,0.8093199582561286,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,20,wagging,None,auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,20,AdaBoost,None,acc,0.7837837837837838,"[array([[10,  4],
+       [ 4, 19]])]"
+horse_colic.csv,1,20,AdaBoost,None,f1,0.7837837837837838,"[array([[10,  4],
+       [ 4, 19]])]"
+horse_colic.csv,1,20,AdaBoost,None,auc,0.7701863354037267,"[array([[10,  4],
+       [ 4, 19]])]"
+horse_colic.csv,1,20,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",acc,0.8378378378378378,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,1,20,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",f1,0.8349792099792099,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,1,20,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,20,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.8648648648648649,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,1,20,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.8052509652509653,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,1,20,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",auc,0.813664596273292,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,2,20,base,None,acc,0.8108108108108109,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,2,20,base,None,f1,0.8119705912809361,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,2,20,base,None,auc,0.8059006211180125,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,2,20,wagging,None,acc,0.8378378378378378,"[array([[12,  2],
+       [ 4, 19]])]"
+horse_colic.csv,2,20,wagging,None,f1,0.8395577395577395,"[array([[12,  2],
+       [ 4, 19]])]"
+horse_colic.csv,2,20,wagging,None,auc,0.8416149068322982,"[array([[12,  2],
+       [ 4, 19]])]"
+horse_colic.csv,2,20,AdaBoost,None,acc,0.8648648648648649,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,2,20,AdaBoost,None,f1,0.8637999701829489,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,2,20,AdaBoost,None,auc,0.8493788819875776,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,2,20,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",acc,0.8648648648648649,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,2,20,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",f1,0.8899861399861401,"[array([[11,  3],
+       [ 1, 22]])]"
+horse_colic.csv,2,20,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.8276397515527949,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,2,20,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,0.8648648648648649,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,2,20,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,0.8656932794863831,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,2,20,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,0.8493788819875776,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,3,20,base,None,acc,0.8108108108108109,"[array([[12,  2],
+       [ 5, 18]])]"
+horse_colic.csv,3,20,base,None,f1,0.8133655035380467,"[array([[12,  2],
+       [ 5, 18]])]"
+horse_colic.csv,3,20,base,None,auc,0.8198757763975155,"[array([[12,  2],
+       [ 5, 18]])]"
+horse_colic.csv,3,20,wagging,None,acc,0.8378378378378378,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,3,20,wagging,None,f1,0.8378378378378378,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,3,20,wagging,None,auc,0.8276397515527949,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,3,20,AdaBoost,None,acc,0.8108108108108109,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,3,20,AdaBoost,None,f1,0.8093199582561286,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,3,20,AdaBoost,None,auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,3,20,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",acc,0.7567567567567568,"[array([[11,  3],
+       [ 6, 17]])]"
+horse_colic.csv,3,20,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",f1,0.8119705912809361,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,3,20,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.8059006211180125,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,3,20,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.8108108108108109,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,3,20,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.8656932794863831,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,3,20,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.8059006211180125,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,4,20,base,None,acc,0.8108108108108109,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,4,20,base,None,f1,0.8093199582561286,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,4,20,base,None,auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,4,20,wagging,None,acc,0.8648648648648649,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,4,20,wagging,None,f1,0.8608935466078325,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,4,20,wagging,None,auc,0.8354037267080746,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,4,20,AdaBoost,None,acc,0.8378378378378378,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,20,AdaBoost,None,f1,0.8349792099792099,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,20,AdaBoost,None,auc,0.813664596273292,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,20,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",acc,0.8648648648648649,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,4,20,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",f1,0.8872072072072072,"[array([[10,  4],
+       [ 0, 23]])]"
+horse_colic.csv,4,20,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",auc,0.8711180124223603,"[array([[11,  3],
+       [ 1, 22]])]"
+horse_colic.csv,4,20,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.918918918918919,"[array([[11,  3],
+       [ 0, 23]])]"
+horse_colic.csv,4,20,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.8349792099792099,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,20,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",auc,0.813664596273292,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,5,20,base,None,acc,0.6756756756756757,"[array([[ 6,  8],
+       [ 4, 19]])]"
+horse_colic.csv,5,20,base,None,f1,0.6616216216216216,"[array([[ 6,  8],
+       [ 4, 19]])]"
+horse_colic.csv,5,20,base,None,auc,0.6273291925465839,"[array([[ 6,  8],
+       [ 4, 19]])]"
+horse_colic.csv,5,20,wagging,None,acc,0.8108108108108109,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,5,20,wagging,None,f1,0.8052509652509653,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,5,20,wagging,None,auc,0.7779503105590062,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,5,20,AdaBoost,None,acc,0.7027027027027027,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,20,AdaBoost,None,f1,0.6939658025372311,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,20,AdaBoost,None,auc,0.6630434782608696,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,20,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",acc,0.7027027027027027,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,20,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",f1,0.72496534996535,"[array([[ 8,  6],
+       [ 4, 19]])]"
+horse_colic.csv,5,20,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",auc,0.7127329192546583,"[array([[ 9,  5],
+       [ 5, 18]])]"
+horse_colic.csv,5,20,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.7567567567567568,"[array([[ 9,  5],
+       [ 4, 19]])]"
+horse_colic.csv,5,20,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.7003599344024877,"[array([[ 8,  6],
+       [ 5, 18]])]"
+horse_colic.csv,5,20,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.7065217391304348,"[array([[ 7,  7],
+       [ 2, 21]])]"
+horse_colic.csv,6,20,base,None,acc,0.8648648648648649,"[array([[12,  1],
+       [ 4, 20]])]"
+horse_colic.csv,6,20,base,None,f1,0.8673501087294192,"[array([[12,  1],
+       [ 4, 20]])]"
+horse_colic.csv,6,20,base,None,auc,0.8782051282051283,"[array([[12,  1],
+       [ 4, 20]])]"
+horse_colic.csv,6,20,wagging,None,acc,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,20,wagging,None,f1,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,20,wagging,None,auc,0.9407051282051283,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,20,AdaBoost,None,acc,0.8918918918918919,"[array([[12,  1],
+       [ 3, 21]])]"
+horse_colic.csv,6,20,AdaBoost,None,f1,0.8934027194896761,"[array([[12,  1],
+       [ 3, 21]])]"
+horse_colic.csv,6,20,AdaBoost,None,auc,0.8990384615384616,"[array([[12,  1],
+       [ 3, 21]])]"
+horse_colic.csv,6,20,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",acc,0.972972972972973,"[array([[13,  0],
+       [ 1, 23]])]"
+horse_colic.csv,6,20,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",f1,0.9195578557280684,"[array([[12,  1],
+       [ 2, 22]])]"
+horse_colic.csv,6,20,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",auc,0.9791666666666667,"[array([[13,  0],
+       [ 1, 23]])]"
+horse_colic.csv,6,20,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,20,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,20,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.9407051282051283,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,7,20,base,None,acc,0.6756756756756757,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,20,base,None,f1,0.6802081584690282,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,20,base,None,auc,0.6618589743589745,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,20,wagging,None,acc,0.5945945945945946,"[array([[ 7,  6],
+       [ 9, 15]])]"
+horse_colic.csv,7,20,wagging,None,f1,0.6020503261882572,"[array([[ 7,  6],
+       [ 9, 15]])]"
+horse_colic.csv,7,20,wagging,None,auc,0.5817307692307693,"[array([[ 7,  6],
+       [ 9, 15]])]"
+horse_colic.csv,7,20,AdaBoost,None,acc,0.7027027027027027,"[array([[ 8,  5],
+       [ 6, 18]])]"
+horse_colic.csv,7,20,AdaBoost,None,f1,0.7050454710029179,"[array([[ 8,  5],
+       [ 6, 18]])]"
+horse_colic.csv,7,20,AdaBoost,None,auc,0.6826923076923078,"[array([[ 8,  5],
+       [ 6, 18]])]"
+horse_colic.csv,7,20,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",acc,0.7027027027027027,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,7,20,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",f1,0.6997904026475454,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,7,20,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",auc,0.6858974358974359,"[array([[ 7,  6],
+       [ 4, 20]])]"
+horse_colic.csv,7,20,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.6756756756756757,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,20,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.6997904026475454,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,7,20,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",auc,0.6650641025641025,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,8,20,base,None,acc,0.8333333333333334,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,20,base,None,f1,0.8354978354978354,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,20,base,None,auc,0.8361204013377926,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,20,wagging,None,acc,0.8611111111111112,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,20,wagging,None,f1,0.8621399176954733,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,20,wagging,None,auc,0.8578595317725751,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,20,AdaBoost,None,acc,0.7222222222222222,"[array([[10,  3],
+       [ 7, 16]])]"
+horse_colic.csv,8,20,AdaBoost,None,f1,0.7275132275132276,"[array([[10,  3],
+       [ 7, 16]])]"
+horse_colic.csv,8,20,AdaBoost,None,auc,0.7324414715719063,"[array([[10,  3],
+       [ 7, 16]])]"
+horse_colic.csv,8,20,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",acc,0.8888888888888888,"[array([[11,  2],
+       [ 2, 21]])]"
+horse_colic.csv,8,20,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 3.0]",f1,0.8354978354978354,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,20,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 3.0]",auc,0.8795986622073578,"[array([[11,  2],
+       [ 2, 21]])]"
+horse_colic.csv,8,20,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",acc,0.8611111111111112,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,20,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",f1,0.8354978354978354,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,20,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",auc,0.9180602006688964,"[array([[12,  1],
+       [ 2, 21]])]"
+horse_colic.csv,9,20,base,None,acc,0.8333333333333334,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,20,base,None,f1,0.8248484848484849,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,20,base,None,auc,0.7859531772575251,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,20,wagging,None,acc,0.8611111111111112,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,20,wagging,None,f1,0.8563048407768904,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,20,wagging,None,auc,0.8244147157190636,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,20,AdaBoost,None,acc,0.8333333333333334,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,20,AdaBoost,None,f1,0.8248484848484849,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,20,AdaBoost,None,auc,0.7859531772575251,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,20,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",acc,0.9166666666666666,"[array([[10,  3],
+       [ 0, 23]])]"
+horse_colic.csv,9,20,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",f1,0.8832323232323233,"[array([[ 9,  4],
+       [ 0, 23]])]"
+horse_colic.csv,9,20,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",auc,0.8244147157190636,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,20,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",acc,0.8333333333333334,"[array([[ 9,  4],
+       [ 2, 21]])]"
+horse_colic.csv,9,20,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",f1,0.8563048407768904,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,20,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",auc,0.8244147157190636,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,0,30,base,None,acc,0.7567567567567568,"[array([[ 8,  6],
+       [ 3, 20]])]"
+horse_colic.csv,0,30,base,None,f1,0.7496083838940982,"[array([[ 8,  6],
+       [ 3, 20]])]"
+horse_colic.csv,0,30,base,None,auc,0.7204968944099378,"[array([[ 8,  6],
+       [ 3, 20]])]"
+horse_colic.csv,0,30,wagging,None,acc,0.8108108108108109,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,30,wagging,None,f1,0.7995207483698532,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,30,wagging,None,auc,0.7639751552795031,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,30,AdaBoost,None,acc,0.8108108108108109,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,30,AdaBoost,None,f1,0.7995207483698532,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,30,AdaBoost,None,auc,0.7639751552795031,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,30,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",acc,0.8108108108108109,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,0,30,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",f1,0.8608935466078325,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,0,30,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",auc,0.7639751552795031,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,30,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",acc,0.8378378378378378,"[array([[ 9,  5],
+       [ 1, 22]])]"
+horse_colic.csv,0,30,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.8899861399861401,"[array([[11,  3],
+       [ 1, 22]])]"
+horse_colic.csv,0,30,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.7779503105590062,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,1,30,base,None,acc,0.7567567567567568,"[array([[10,  4],
+       [ 5, 18]])]"
+horse_colic.csv,1,30,base,None,f1,0.7582479030754893,"[array([[10,  4],
+       [ 5, 18]])]"
+horse_colic.csv,1,30,base,None,auc,0.7484472049689441,"[array([[10,  4],
+       [ 5, 18]])]"
+horse_colic.csv,1,30,wagging,None,acc,0.8108108108108109,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,30,wagging,None,f1,0.8093199582561286,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,30,wagging,None,auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,30,AdaBoost,None,acc,0.7837837837837838,"[array([[10,  4],
+       [ 4, 19]])]"
+horse_colic.csv,1,30,AdaBoost,None,f1,0.7837837837837838,"[array([[10,  4],
+       [ 4, 19]])]"
+horse_colic.csv,1,30,AdaBoost,None,auc,0.7701863354037267,"[array([[10,  4],
+       [ 4, 19]])]"
+horse_colic.csv,1,30,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",acc,0.8378378378378378,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,1,30,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",f1,0.8349792099792099,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,1,30,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,30,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.8648648648648649,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,1,30,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.8052509652509653,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,1,30,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",auc,0.813664596273292,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,2,30,base,None,acc,0.8108108108108109,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,2,30,base,None,f1,0.8119705912809361,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,2,30,base,None,auc,0.8059006211180125,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,2,30,wagging,None,acc,0.8378378378378378,"[array([[12,  2],
+       [ 4, 19]])]"
+horse_colic.csv,2,30,wagging,None,f1,0.8395577395577395,"[array([[12,  2],
+       [ 4, 19]])]"
+horse_colic.csv,2,30,wagging,None,auc,0.8416149068322982,"[array([[12,  2],
+       [ 4, 19]])]"
+horse_colic.csv,2,30,AdaBoost,None,acc,0.8648648648648649,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,2,30,AdaBoost,None,f1,0.8637999701829489,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,2,30,AdaBoost,None,auc,0.8493788819875776,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,2,30,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",acc,0.8648648648648649,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,2,30,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",f1,0.8899861399861401,"[array([[11,  3],
+       [ 1, 22]])]"
+horse_colic.csv,2,30,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.8276397515527949,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,2,30,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,0.8648648648648649,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,2,30,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,0.8656932794863831,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,2,30,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,0.8493788819875776,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,3,30,base,None,acc,0.8108108108108109,"[array([[12,  2],
+       [ 5, 18]])]"
+horse_colic.csv,3,30,base,None,f1,0.8133655035380467,"[array([[12,  2],
+       [ 5, 18]])]"
+horse_colic.csv,3,30,base,None,auc,0.8198757763975155,"[array([[12,  2],
+       [ 5, 18]])]"
+horse_colic.csv,3,30,wagging,None,acc,0.8378378378378378,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,3,30,wagging,None,f1,0.8378378378378378,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,3,30,wagging,None,auc,0.8276397515527949,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,3,30,AdaBoost,None,acc,0.8108108108108109,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,3,30,AdaBoost,None,f1,0.8093199582561286,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,3,30,AdaBoost,None,auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,3,30,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",acc,0.7567567567567568,"[array([[11,  3],
+       [ 6, 17]])]"
+horse_colic.csv,3,30,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",f1,0.8119705912809361,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,3,30,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.8059006211180125,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,3,30,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.8108108108108109,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,3,30,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.8656932794863831,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,3,30,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.8059006211180125,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,4,30,base,None,acc,0.8108108108108109,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,4,30,base,None,f1,0.8093199582561286,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,4,30,base,None,auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,4,30,wagging,None,acc,0.8648648648648649,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,4,30,wagging,None,f1,0.8608935466078325,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,4,30,wagging,None,auc,0.8354037267080746,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,4,30,AdaBoost,None,acc,0.8378378378378378,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,30,AdaBoost,None,f1,0.8349792099792099,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,30,AdaBoost,None,auc,0.813664596273292,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,30,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",acc,0.8648648648648649,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,4,30,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",f1,0.8872072072072072,"[array([[10,  4],
+       [ 0, 23]])]"
+horse_colic.csv,4,30,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",auc,0.8711180124223603,"[array([[11,  3],
+       [ 1, 22]])]"
+horse_colic.csv,4,30,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.918918918918919,"[array([[11,  3],
+       [ 0, 23]])]"
+horse_colic.csv,4,30,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.8349792099792099,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,30,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",auc,0.813664596273292,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,5,30,base,None,acc,0.6756756756756757,"[array([[ 6,  8],
+       [ 4, 19]])]"
+horse_colic.csv,5,30,base,None,f1,0.6616216216216216,"[array([[ 6,  8],
+       [ 4, 19]])]"
+horse_colic.csv,5,30,base,None,auc,0.6273291925465839,"[array([[ 6,  8],
+       [ 4, 19]])]"
+horse_colic.csv,5,30,wagging,None,acc,0.8108108108108109,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,5,30,wagging,None,f1,0.8052509652509653,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,5,30,wagging,None,auc,0.7779503105590062,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,5,30,AdaBoost,None,acc,0.7027027027027027,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,30,AdaBoost,None,f1,0.6939658025372311,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,30,AdaBoost,None,auc,0.6630434782608696,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,30,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",acc,0.7027027027027027,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,30,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",f1,0.72496534996535,"[array([[ 8,  6],
+       [ 4, 19]])]"
+horse_colic.csv,5,30,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",auc,0.7127329192546583,"[array([[ 9,  5],
+       [ 5, 18]])]"
+horse_colic.csv,5,30,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.7567567567567568,"[array([[ 9,  5],
+       [ 4, 19]])]"
+horse_colic.csv,5,30,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.7003599344024877,"[array([[ 8,  6],
+       [ 5, 18]])]"
+horse_colic.csv,5,30,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.7065217391304348,"[array([[ 7,  7],
+       [ 2, 21]])]"
+horse_colic.csv,6,30,base,None,acc,0.8648648648648649,"[array([[12,  1],
+       [ 4, 20]])]"
+horse_colic.csv,6,30,base,None,f1,0.8673501087294192,"[array([[12,  1],
+       [ 4, 20]])]"
+horse_colic.csv,6,30,base,None,auc,0.8782051282051283,"[array([[12,  1],
+       [ 4, 20]])]"
+horse_colic.csv,6,30,wagging,None,acc,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,30,wagging,None,f1,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,30,wagging,None,auc,0.9407051282051283,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,30,AdaBoost,None,acc,0.8918918918918919,"[array([[12,  1],
+       [ 3, 21]])]"
+horse_colic.csv,6,30,AdaBoost,None,f1,0.8934027194896761,"[array([[12,  1],
+       [ 3, 21]])]"
+horse_colic.csv,6,30,AdaBoost,None,auc,0.8990384615384616,"[array([[12,  1],
+       [ 3, 21]])]"
+horse_colic.csv,6,30,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",acc,0.972972972972973,"[array([[13,  0],
+       [ 1, 23]])]"
+horse_colic.csv,6,30,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",f1,0.9195578557280684,"[array([[12,  1],
+       [ 2, 22]])]"
+horse_colic.csv,6,30,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",auc,0.9791666666666667,"[array([[13,  0],
+       [ 1, 23]])]"
+horse_colic.csv,6,30,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,30,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,30,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.9407051282051283,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,7,30,base,None,acc,0.6756756756756757,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,30,base,None,f1,0.6802081584690282,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,30,base,None,auc,0.6618589743589745,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,30,wagging,None,acc,0.5945945945945946,"[array([[ 7,  6],
+       [ 9, 15]])]"
+horse_colic.csv,7,30,wagging,None,f1,0.6020503261882572,"[array([[ 7,  6],
+       [ 9, 15]])]"
+horse_colic.csv,7,30,wagging,None,auc,0.5817307692307693,"[array([[ 7,  6],
+       [ 9, 15]])]"
+horse_colic.csv,7,30,AdaBoost,None,acc,0.7027027027027027,"[array([[ 8,  5],
+       [ 6, 18]])]"
+horse_colic.csv,7,30,AdaBoost,None,f1,0.7050454710029179,"[array([[ 8,  5],
+       [ 6, 18]])]"
+horse_colic.csv,7,30,AdaBoost,None,auc,0.6826923076923078,"[array([[ 8,  5],
+       [ 6, 18]])]"
+horse_colic.csv,7,30,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",acc,0.7027027027027027,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,7,30,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",f1,0.6997904026475454,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,7,30,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",auc,0.6858974358974359,"[array([[ 7,  6],
+       [ 4, 20]])]"
+horse_colic.csv,7,30,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.6756756756756757,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,30,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.6997904026475454,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,7,30,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",auc,0.6650641025641025,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,8,30,base,None,acc,0.8333333333333334,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,30,base,None,f1,0.8354978354978354,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,30,base,None,auc,0.8361204013377926,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,30,wagging,None,acc,0.8611111111111112,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,30,wagging,None,f1,0.8621399176954733,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,30,wagging,None,auc,0.8578595317725751,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,30,AdaBoost,None,acc,0.7222222222222222,"[array([[10,  3],
+       [ 7, 16]])]"
+horse_colic.csv,8,30,AdaBoost,None,f1,0.7275132275132276,"[array([[10,  3],
+       [ 7, 16]])]"
+horse_colic.csv,8,30,AdaBoost,None,auc,0.7324414715719063,"[array([[10,  3],
+       [ 7, 16]])]"
+horse_colic.csv,8,30,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",acc,0.8888888888888888,"[array([[11,  2],
+       [ 2, 21]])]"
+horse_colic.csv,8,30,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 3.0]",f1,0.8354978354978354,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,30,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 3.0]",auc,0.8795986622073578,"[array([[11,  2],
+       [ 2, 21]])]"
+horse_colic.csv,8,30,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",acc,0.8611111111111112,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,30,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",f1,0.8354978354978354,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,30,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",auc,0.9180602006688964,"[array([[12,  1],
+       [ 2, 21]])]"
+horse_colic.csv,9,30,base,None,acc,0.8333333333333334,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,30,base,None,f1,0.8248484848484849,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,30,base,None,auc,0.7859531772575251,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,30,wagging,None,acc,0.8611111111111112,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,30,wagging,None,f1,0.8563048407768904,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,30,wagging,None,auc,0.8244147157190636,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,30,AdaBoost,None,acc,0.8333333333333334,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,30,AdaBoost,None,f1,0.8248484848484849,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,30,AdaBoost,None,auc,0.7859531772575251,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,30,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",acc,0.9166666666666666,"[array([[10,  3],
+       [ 0, 23]])]"
+horse_colic.csv,9,30,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",f1,0.8832323232323233,"[array([[ 9,  4],
+       [ 0, 23]])]"
+horse_colic.csv,9,30,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",auc,0.8244147157190636,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,30,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",acc,0.8333333333333334,"[array([[ 9,  4],
+       [ 2, 21]])]"
+horse_colic.csv,9,30,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",f1,0.8563048407768904,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,30,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",auc,0.8244147157190636,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,0,40,base,None,acc,0.7567567567567568,"[array([[ 8,  6],
+       [ 3, 20]])]"
+horse_colic.csv,0,40,base,None,f1,0.7496083838940982,"[array([[ 8,  6],
+       [ 3, 20]])]"
+horse_colic.csv,0,40,base,None,auc,0.7204968944099378,"[array([[ 8,  6],
+       [ 3, 20]])]"
+horse_colic.csv,0,40,wagging,None,acc,0.8108108108108109,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,40,wagging,None,f1,0.7995207483698532,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,40,wagging,None,auc,0.7639751552795031,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,40,AdaBoost,None,acc,0.8108108108108109,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,40,AdaBoost,None,f1,0.7995207483698532,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,40,AdaBoost,None,auc,0.7639751552795031,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,40,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",acc,0.8108108108108109,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,0,40,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",f1,0.8608935466078325,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,0,40,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",auc,0.7639751552795031,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,40,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",acc,0.8378378378378378,"[array([[ 9,  5],
+       [ 1, 22]])]"
+horse_colic.csv,0,40,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.8899861399861401,"[array([[11,  3],
+       [ 1, 22]])]"
+horse_colic.csv,0,40,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.7779503105590062,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,1,40,base,None,acc,0.7567567567567568,"[array([[10,  4],
+       [ 5, 18]])]"
+horse_colic.csv,1,40,base,None,f1,0.7582479030754893,"[array([[10,  4],
+       [ 5, 18]])]"
+horse_colic.csv,1,40,base,None,auc,0.7484472049689441,"[array([[10,  4],
+       [ 5, 18]])]"
+horse_colic.csv,1,40,wagging,None,acc,0.8108108108108109,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,40,wagging,None,f1,0.8093199582561286,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,40,wagging,None,auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,40,AdaBoost,None,acc,0.7837837837837838,"[array([[10,  4],
+       [ 4, 19]])]"
+horse_colic.csv,1,40,AdaBoost,None,f1,0.7837837837837838,"[array([[10,  4],
+       [ 4, 19]])]"
+horse_colic.csv,1,40,AdaBoost,None,auc,0.7701863354037267,"[array([[10,  4],
+       [ 4, 19]])]"
+horse_colic.csv,1,40,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",acc,0.8378378378378378,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,1,40,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",f1,0.8349792099792099,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,1,40,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,40,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.8648648648648649,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,1,40,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.8052509652509653,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,1,40,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",auc,0.813664596273292,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,2,40,base,None,acc,0.8108108108108109,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,2,40,base,None,f1,0.8119705912809361,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,2,40,base,None,auc,0.8059006211180125,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,2,40,wagging,None,acc,0.8378378378378378,"[array([[12,  2],
+       [ 4, 19]])]"
+horse_colic.csv,2,40,wagging,None,f1,0.8395577395577395,"[array([[12,  2],
+       [ 4, 19]])]"
+horse_colic.csv,2,40,wagging,None,auc,0.8416149068322982,"[array([[12,  2],
+       [ 4, 19]])]"
+horse_colic.csv,2,40,AdaBoost,None,acc,0.8648648648648649,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,2,40,AdaBoost,None,f1,0.8637999701829489,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,2,40,AdaBoost,None,auc,0.8493788819875776,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,2,40,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",acc,0.8648648648648649,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,2,40,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",f1,0.8899861399861401,"[array([[11,  3],
+       [ 1, 22]])]"
+horse_colic.csv,2,40,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.8276397515527949,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,2,40,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,0.8648648648648649,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,2,40,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,0.8656932794863831,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,2,40,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,0.8493788819875776,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,3,40,base,None,acc,0.8108108108108109,"[array([[12,  2],
+       [ 5, 18]])]"
+horse_colic.csv,3,40,base,None,f1,0.8133655035380467,"[array([[12,  2],
+       [ 5, 18]])]"
+horse_colic.csv,3,40,base,None,auc,0.8198757763975155,"[array([[12,  2],
+       [ 5, 18]])]"
+horse_colic.csv,3,40,wagging,None,acc,0.8378378378378378,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,3,40,wagging,None,f1,0.8378378378378378,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,3,40,wagging,None,auc,0.8276397515527949,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,3,40,AdaBoost,None,acc,0.8108108108108109,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,3,40,AdaBoost,None,f1,0.8093199582561286,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,3,40,AdaBoost,None,auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,3,40,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",acc,0.7567567567567568,"[array([[11,  3],
+       [ 6, 17]])]"
+horse_colic.csv,3,40,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",f1,0.8119705912809361,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,3,40,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.8059006211180125,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,3,40,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.8108108108108109,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,3,40,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.8656932794863831,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,3,40,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.8059006211180125,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,4,40,base,None,acc,0.8108108108108109,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,4,40,base,None,f1,0.8093199582561286,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,4,40,base,None,auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,4,40,wagging,None,acc,0.8648648648648649,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,4,40,wagging,None,f1,0.8608935466078325,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,4,40,wagging,None,auc,0.8354037267080746,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,4,40,AdaBoost,None,acc,0.8378378378378378,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,40,AdaBoost,None,f1,0.8349792099792099,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,40,AdaBoost,None,auc,0.813664596273292,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,40,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",acc,0.8648648648648649,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,4,40,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",f1,0.8872072072072072,"[array([[10,  4],
+       [ 0, 23]])]"
+horse_colic.csv,4,40,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",auc,0.8711180124223603,"[array([[11,  3],
+       [ 1, 22]])]"
+horse_colic.csv,4,40,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.918918918918919,"[array([[11,  3],
+       [ 0, 23]])]"
+horse_colic.csv,4,40,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.8349792099792099,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,40,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",auc,0.813664596273292,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,5,40,base,None,acc,0.6756756756756757,"[array([[ 6,  8],
+       [ 4, 19]])]"
+horse_colic.csv,5,40,base,None,f1,0.6616216216216216,"[array([[ 6,  8],
+       [ 4, 19]])]"
+horse_colic.csv,5,40,base,None,auc,0.6273291925465839,"[array([[ 6,  8],
+       [ 4, 19]])]"
+horse_colic.csv,5,40,wagging,None,acc,0.8108108108108109,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,5,40,wagging,None,f1,0.8052509652509653,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,5,40,wagging,None,auc,0.7779503105590062,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,5,40,AdaBoost,None,acc,0.7027027027027027,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,40,AdaBoost,None,f1,0.6939658025372311,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,40,AdaBoost,None,auc,0.6630434782608696,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,40,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",acc,0.7027027027027027,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,40,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",f1,0.72496534996535,"[array([[ 8,  6],
+       [ 4, 19]])]"
+horse_colic.csv,5,40,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",auc,0.7127329192546583,"[array([[ 9,  5],
+       [ 5, 18]])]"
+horse_colic.csv,5,40,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.7567567567567568,"[array([[ 9,  5],
+       [ 4, 19]])]"
+horse_colic.csv,5,40,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.7003599344024877,"[array([[ 8,  6],
+       [ 5, 18]])]"
+horse_colic.csv,5,40,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.7065217391304348,"[array([[ 7,  7],
+       [ 2, 21]])]"
+horse_colic.csv,6,40,base,None,acc,0.8648648648648649,"[array([[12,  1],
+       [ 4, 20]])]"
+horse_colic.csv,6,40,base,None,f1,0.8673501087294192,"[array([[12,  1],
+       [ 4, 20]])]"
+horse_colic.csv,6,40,base,None,auc,0.8782051282051283,"[array([[12,  1],
+       [ 4, 20]])]"
+horse_colic.csv,6,40,wagging,None,acc,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,40,wagging,None,f1,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,40,wagging,None,auc,0.9407051282051283,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,40,AdaBoost,None,acc,0.8918918918918919,"[array([[12,  1],
+       [ 3, 21]])]"
+horse_colic.csv,6,40,AdaBoost,None,f1,0.8934027194896761,"[array([[12,  1],
+       [ 3, 21]])]"
+horse_colic.csv,6,40,AdaBoost,None,auc,0.8990384615384616,"[array([[12,  1],
+       [ 3, 21]])]"
+horse_colic.csv,6,40,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",acc,0.972972972972973,"[array([[13,  0],
+       [ 1, 23]])]"
+horse_colic.csv,6,40,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",f1,0.9195578557280684,"[array([[12,  1],
+       [ 2, 22]])]"
+horse_colic.csv,6,40,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",auc,0.9791666666666667,"[array([[13,  0],
+       [ 1, 23]])]"
+horse_colic.csv,6,40,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,40,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,40,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.9407051282051283,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,7,40,base,None,acc,0.6756756756756757,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,40,base,None,f1,0.6802081584690282,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,40,base,None,auc,0.6618589743589745,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,40,wagging,None,acc,0.5945945945945946,"[array([[ 7,  6],
+       [ 9, 15]])]"
+horse_colic.csv,7,40,wagging,None,f1,0.6020503261882572,"[array([[ 7,  6],
+       [ 9, 15]])]"
+horse_colic.csv,7,40,wagging,None,auc,0.5817307692307693,"[array([[ 7,  6],
+       [ 9, 15]])]"
+horse_colic.csv,7,40,AdaBoost,None,acc,0.7027027027027027,"[array([[ 8,  5],
+       [ 6, 18]])]"
+horse_colic.csv,7,40,AdaBoost,None,f1,0.7050454710029179,"[array([[ 8,  5],
+       [ 6, 18]])]"
+horse_colic.csv,7,40,AdaBoost,None,auc,0.6826923076923078,"[array([[ 8,  5],
+       [ 6, 18]])]"
+horse_colic.csv,7,40,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",acc,0.7027027027027027,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,7,40,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",f1,0.6997904026475454,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,7,40,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",auc,0.6858974358974359,"[array([[ 7,  6],
+       [ 4, 20]])]"
+horse_colic.csv,7,40,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.6756756756756757,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,40,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.6997904026475454,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,7,40,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",auc,0.6650641025641025,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,8,40,base,None,acc,0.8333333333333334,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,40,base,None,f1,0.8354978354978354,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,40,base,None,auc,0.8361204013377926,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,40,wagging,None,acc,0.8611111111111112,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,40,wagging,None,f1,0.8621399176954733,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,40,wagging,None,auc,0.8578595317725751,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,40,AdaBoost,None,acc,0.7222222222222222,"[array([[10,  3],
+       [ 7, 16]])]"
+horse_colic.csv,8,40,AdaBoost,None,f1,0.7275132275132276,"[array([[10,  3],
+       [ 7, 16]])]"
+horse_colic.csv,8,40,AdaBoost,None,auc,0.7324414715719063,"[array([[10,  3],
+       [ 7, 16]])]"
+horse_colic.csv,8,40,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",acc,0.8888888888888888,"[array([[11,  2],
+       [ 2, 21]])]"
+horse_colic.csv,8,40,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 3.0]",f1,0.8354978354978354,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,40,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 3.0]",auc,0.8795986622073578,"[array([[11,  2],
+       [ 2, 21]])]"
+horse_colic.csv,8,40,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",acc,0.8611111111111112,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,40,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",f1,0.8354978354978354,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,40,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",auc,0.9180602006688964,"[array([[12,  1],
+       [ 2, 21]])]"
+horse_colic.csv,9,40,base,None,acc,0.8333333333333334,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,40,base,None,f1,0.8248484848484849,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,40,base,None,auc,0.7859531772575251,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,40,wagging,None,acc,0.8611111111111112,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,40,wagging,None,f1,0.8563048407768904,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,40,wagging,None,auc,0.8244147157190636,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,40,AdaBoost,None,acc,0.8333333333333334,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,40,AdaBoost,None,f1,0.8248484848484849,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,40,AdaBoost,None,auc,0.7859531772575251,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,40,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",acc,0.9166666666666666,"[array([[10,  3],
+       [ 0, 23]])]"
+horse_colic.csv,9,40,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",f1,0.8832323232323233,"[array([[ 9,  4],
+       [ 0, 23]])]"
+horse_colic.csv,9,40,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",auc,0.8244147157190636,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,40,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",acc,0.8333333333333334,"[array([[ 9,  4],
+       [ 2, 21]])]"
+horse_colic.csv,9,40,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",f1,0.8563048407768904,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,40,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",auc,0.8244147157190636,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,0,50,base,None,acc,0.7567567567567568,"[array([[ 8,  6],
+       [ 3, 20]])]"
+horse_colic.csv,0,50,base,None,f1,0.7496083838940982,"[array([[ 8,  6],
+       [ 3, 20]])]"
+horse_colic.csv,0,50,base,None,auc,0.7204968944099378,"[array([[ 8,  6],
+       [ 3, 20]])]"
+horse_colic.csv,0,50,wagging,None,acc,0.8108108108108109,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,50,wagging,None,f1,0.7995207483698532,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,50,wagging,None,auc,0.7639751552795031,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,50,AdaBoost,None,acc,0.8108108108108109,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,50,AdaBoost,None,f1,0.7995207483698532,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,50,AdaBoost,None,auc,0.7639751552795031,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,50,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",acc,0.8108108108108109,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,0,50,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",f1,0.8608935466078325,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,0,50,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",auc,0.7639751552795031,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,50,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",acc,0.8378378378378378,"[array([[ 9,  5],
+       [ 1, 22]])]"
+horse_colic.csv,0,50,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.8899861399861401,"[array([[11,  3],
+       [ 1, 22]])]"
+horse_colic.csv,0,50,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.7779503105590062,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,1,50,base,None,acc,0.7567567567567568,"[array([[10,  4],
+       [ 5, 18]])]"
+horse_colic.csv,1,50,base,None,f1,0.7582479030754893,"[array([[10,  4],
+       [ 5, 18]])]"
+horse_colic.csv,1,50,base,None,auc,0.7484472049689441,"[array([[10,  4],
+       [ 5, 18]])]"
+horse_colic.csv,1,50,wagging,None,acc,0.8108108108108109,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,50,wagging,None,f1,0.8093199582561286,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,50,wagging,None,auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,50,AdaBoost,None,acc,0.7837837837837838,"[array([[10,  4],
+       [ 4, 19]])]"
+horse_colic.csv,1,50,AdaBoost,None,f1,0.7837837837837838,"[array([[10,  4],
+       [ 4, 19]])]"
+horse_colic.csv,1,50,AdaBoost,None,auc,0.7701863354037267,"[array([[10,  4],
+       [ 4, 19]])]"
+horse_colic.csv,1,50,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",acc,0.8378378378378378,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,1,50,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",f1,0.8349792099792099,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,1,50,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,50,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.8648648648648649,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,1,50,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.8052509652509653,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,1,50,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",auc,0.813664596273292,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,2,50,base,None,acc,0.8108108108108109,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,2,50,base,None,f1,0.8119705912809361,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,2,50,base,None,auc,0.8059006211180125,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,2,50,wagging,None,acc,0.8378378378378378,"[array([[12,  2],
+       [ 4, 19]])]"
+horse_colic.csv,2,50,wagging,None,f1,0.8395577395577395,"[array([[12,  2],
+       [ 4, 19]])]"
+horse_colic.csv,2,50,wagging,None,auc,0.8416149068322982,"[array([[12,  2],
+       [ 4, 19]])]"
+horse_colic.csv,2,50,AdaBoost,None,acc,0.8648648648648649,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,2,50,AdaBoost,None,f1,0.8637999701829489,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,2,50,AdaBoost,None,auc,0.8493788819875776,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,2,50,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",acc,0.8648648648648649,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,2,50,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",f1,0.8899861399861401,"[array([[11,  3],
+       [ 1, 22]])]"
+horse_colic.csv,2,50,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.8276397515527949,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,2,50,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,0.8648648648648649,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,2,50,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,0.8656932794863831,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,2,50,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,0.8493788819875776,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,3,50,base,None,acc,0.8108108108108109,"[array([[12,  2],
+       [ 5, 18]])]"
+horse_colic.csv,3,50,base,None,f1,0.8133655035380467,"[array([[12,  2],
+       [ 5, 18]])]"
+horse_colic.csv,3,50,base,None,auc,0.8198757763975155,"[array([[12,  2],
+       [ 5, 18]])]"
+horse_colic.csv,3,50,wagging,None,acc,0.8378378378378378,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,3,50,wagging,None,f1,0.8378378378378378,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,3,50,wagging,None,auc,0.8276397515527949,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,3,50,AdaBoost,None,acc,0.8108108108108109,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,3,50,AdaBoost,None,f1,0.8093199582561286,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,3,50,AdaBoost,None,auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,3,50,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",acc,0.7567567567567568,"[array([[11,  3],
+       [ 6, 17]])]"
+horse_colic.csv,3,50,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",f1,0.8119705912809361,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,3,50,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.8059006211180125,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,3,50,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.8108108108108109,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,3,50,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.8656932794863831,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,3,50,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.8059006211180125,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,4,50,base,None,acc,0.8108108108108109,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,4,50,base,None,f1,0.8093199582561286,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,4,50,base,None,auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,4,50,wagging,None,acc,0.8648648648648649,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,4,50,wagging,None,f1,0.8608935466078325,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,4,50,wagging,None,auc,0.8354037267080746,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,4,50,AdaBoost,None,acc,0.8378378378378378,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,50,AdaBoost,None,f1,0.8349792099792099,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,50,AdaBoost,None,auc,0.813664596273292,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,50,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",acc,0.8648648648648649,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,4,50,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",f1,0.8872072072072072,"[array([[10,  4],
+       [ 0, 23]])]"
+horse_colic.csv,4,50,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",auc,0.8711180124223603,"[array([[11,  3],
+       [ 1, 22]])]"
+horse_colic.csv,4,50,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.918918918918919,"[array([[11,  3],
+       [ 0, 23]])]"
+horse_colic.csv,4,50,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.8349792099792099,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,50,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",auc,0.813664596273292,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,5,50,base,None,acc,0.6756756756756757,"[array([[ 6,  8],
+       [ 4, 19]])]"
+horse_colic.csv,5,50,base,None,f1,0.6616216216216216,"[array([[ 6,  8],
+       [ 4, 19]])]"
+horse_colic.csv,5,50,base,None,auc,0.6273291925465839,"[array([[ 6,  8],
+       [ 4, 19]])]"
+horse_colic.csv,5,50,wagging,None,acc,0.8108108108108109,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,5,50,wagging,None,f1,0.8052509652509653,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,5,50,wagging,None,auc,0.7779503105590062,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,5,50,AdaBoost,None,acc,0.7027027027027027,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,50,AdaBoost,None,f1,0.6939658025372311,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,50,AdaBoost,None,auc,0.6630434782608696,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,50,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",acc,0.7027027027027027,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,50,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",f1,0.72496534996535,"[array([[ 8,  6],
+       [ 4, 19]])]"
+horse_colic.csv,5,50,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",auc,0.7127329192546583,"[array([[ 9,  5],
+       [ 5, 18]])]"
+horse_colic.csv,5,50,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.7567567567567568,"[array([[ 9,  5],
+       [ 4, 19]])]"
+horse_colic.csv,5,50,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.7003599344024877,"[array([[ 8,  6],
+       [ 5, 18]])]"
+horse_colic.csv,5,50,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.7065217391304348,"[array([[ 7,  7],
+       [ 2, 21]])]"
+horse_colic.csv,6,50,base,None,acc,0.8648648648648649,"[array([[12,  1],
+       [ 4, 20]])]"
+horse_colic.csv,6,50,base,None,f1,0.8673501087294192,"[array([[12,  1],
+       [ 4, 20]])]"
+horse_colic.csv,6,50,base,None,auc,0.8782051282051283,"[array([[12,  1],
+       [ 4, 20]])]"
+horse_colic.csv,6,50,wagging,None,acc,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,50,wagging,None,f1,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,50,wagging,None,auc,0.9407051282051283,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,50,AdaBoost,None,acc,0.8918918918918919,"[array([[12,  1],
+       [ 3, 21]])]"
+horse_colic.csv,6,50,AdaBoost,None,f1,0.8934027194896761,"[array([[12,  1],
+       [ 3, 21]])]"
+horse_colic.csv,6,50,AdaBoost,None,auc,0.8990384615384616,"[array([[12,  1],
+       [ 3, 21]])]"
+horse_colic.csv,6,50,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",acc,0.972972972972973,"[array([[13,  0],
+       [ 1, 23]])]"
+horse_colic.csv,6,50,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",f1,0.9195578557280684,"[array([[12,  1],
+       [ 2, 22]])]"
+horse_colic.csv,6,50,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",auc,0.9791666666666667,"[array([[13,  0],
+       [ 1, 23]])]"
+horse_colic.csv,6,50,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,50,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,50,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.9407051282051283,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,7,50,base,None,acc,0.6756756756756757,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,50,base,None,f1,0.6802081584690282,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,50,base,None,auc,0.6618589743589745,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,50,wagging,None,acc,0.5945945945945946,"[array([[ 7,  6],
+       [ 9, 15]])]"
+horse_colic.csv,7,50,wagging,None,f1,0.6020503261882572,"[array([[ 7,  6],
+       [ 9, 15]])]"
+horse_colic.csv,7,50,wagging,None,auc,0.5817307692307693,"[array([[ 7,  6],
+       [ 9, 15]])]"
+horse_colic.csv,7,50,AdaBoost,None,acc,0.7027027027027027,"[array([[ 8,  5],
+       [ 6, 18]])]"
+horse_colic.csv,7,50,AdaBoost,None,f1,0.7050454710029179,"[array([[ 8,  5],
+       [ 6, 18]])]"
+horse_colic.csv,7,50,AdaBoost,None,auc,0.6826923076923078,"[array([[ 8,  5],
+       [ 6, 18]])]"
+horse_colic.csv,7,50,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",acc,0.7027027027027027,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,7,50,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",f1,0.6997904026475454,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,7,50,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",auc,0.6858974358974359,"[array([[ 7,  6],
+       [ 4, 20]])]"
+horse_colic.csv,7,50,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.6756756756756757,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,50,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.6997904026475454,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,7,50,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",auc,0.6650641025641025,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,8,50,base,None,acc,0.8333333333333334,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,50,base,None,f1,0.8354978354978354,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,50,base,None,auc,0.8361204013377926,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,50,wagging,None,acc,0.8611111111111112,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,50,wagging,None,f1,0.8621399176954733,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,50,wagging,None,auc,0.8578595317725751,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,50,AdaBoost,None,acc,0.7222222222222222,"[array([[10,  3],
+       [ 7, 16]])]"
+horse_colic.csv,8,50,AdaBoost,None,f1,0.7275132275132276,"[array([[10,  3],
+       [ 7, 16]])]"
+horse_colic.csv,8,50,AdaBoost,None,auc,0.7324414715719063,"[array([[10,  3],
+       [ 7, 16]])]"
+horse_colic.csv,8,50,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",acc,0.8888888888888888,"[array([[11,  2],
+       [ 2, 21]])]"
+horse_colic.csv,8,50,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 3.0]",f1,0.8354978354978354,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,50,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 3.0]",auc,0.8795986622073578,"[array([[11,  2],
+       [ 2, 21]])]"
+horse_colic.csv,8,50,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",acc,0.8611111111111112,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,50,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",f1,0.8354978354978354,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,50,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",auc,0.9180602006688964,"[array([[12,  1],
+       [ 2, 21]])]"
+horse_colic.csv,9,50,base,None,acc,0.8333333333333334,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,50,base,None,f1,0.8248484848484849,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,50,base,None,auc,0.7859531772575251,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,50,wagging,None,acc,0.8611111111111112,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,50,wagging,None,f1,0.8563048407768904,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,50,wagging,None,auc,0.8244147157190636,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,50,AdaBoost,None,acc,0.8333333333333334,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,50,AdaBoost,None,f1,0.8248484848484849,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,50,AdaBoost,None,auc,0.7859531772575251,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,50,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",acc,0.9166666666666666,"[array([[10,  3],
+       [ 0, 23]])]"
+horse_colic.csv,9,50,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",f1,0.8832323232323233,"[array([[ 9,  4],
+       [ 0, 23]])]"
+horse_colic.csv,9,50,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",auc,0.8244147157190636,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,50,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",acc,0.8333333333333334,"[array([[ 9,  4],
+       [ 2, 21]])]"
+horse_colic.csv,9,50,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",f1,0.8563048407768904,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,50,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",auc,0.8244147157190636,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,0,60,base,None,acc,0.7567567567567568,"[array([[ 8,  6],
+       [ 3, 20]])]"
+horse_colic.csv,0,60,base,None,f1,0.7496083838940982,"[array([[ 8,  6],
+       [ 3, 20]])]"
+horse_colic.csv,0,60,base,None,auc,0.7204968944099378,"[array([[ 8,  6],
+       [ 3, 20]])]"
+horse_colic.csv,0,60,wagging,None,acc,0.8108108108108109,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,60,wagging,None,f1,0.7995207483698532,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,60,wagging,None,auc,0.7639751552795031,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,60,AdaBoost,None,acc,0.8108108108108109,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,60,AdaBoost,None,f1,0.7995207483698532,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,60,AdaBoost,None,auc,0.7639751552795031,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,60,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",acc,0.8108108108108109,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,0,60,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",f1,0.8608935466078325,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,0,60,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",auc,0.7639751552795031,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,60,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",acc,0.8378378378378378,"[array([[ 9,  5],
+       [ 1, 22]])]"
+horse_colic.csv,0,60,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.8899861399861401,"[array([[11,  3],
+       [ 1, 22]])]"
+horse_colic.csv,0,60,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.7779503105590062,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,1,60,base,None,acc,0.7567567567567568,"[array([[10,  4],
+       [ 5, 18]])]"
+horse_colic.csv,1,60,base,None,f1,0.7582479030754893,"[array([[10,  4],
+       [ 5, 18]])]"
+horse_colic.csv,1,60,base,None,auc,0.7484472049689441,"[array([[10,  4],
+       [ 5, 18]])]"
+horse_colic.csv,1,60,wagging,None,acc,0.8108108108108109,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,60,wagging,None,f1,0.8093199582561286,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,60,wagging,None,auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,60,AdaBoost,None,acc,0.7837837837837838,"[array([[10,  4],
+       [ 4, 19]])]"
+horse_colic.csv,1,60,AdaBoost,None,f1,0.7837837837837838,"[array([[10,  4],
+       [ 4, 19]])]"
+horse_colic.csv,1,60,AdaBoost,None,auc,0.7701863354037267,"[array([[10,  4],
+       [ 4, 19]])]"
+horse_colic.csv,1,60,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",acc,0.8378378378378378,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,1,60,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",f1,0.8349792099792099,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,1,60,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,60,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.8648648648648649,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,1,60,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.8052509652509653,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,1,60,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",auc,0.813664596273292,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,2,60,base,None,acc,0.8108108108108109,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,2,60,base,None,f1,0.8119705912809361,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,2,60,base,None,auc,0.8059006211180125,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,2,60,wagging,None,acc,0.8378378378378378,"[array([[12,  2],
+       [ 4, 19]])]"
+horse_colic.csv,2,60,wagging,None,f1,0.8395577395577395,"[array([[12,  2],
+       [ 4, 19]])]"
+horse_colic.csv,2,60,wagging,None,auc,0.8416149068322982,"[array([[12,  2],
+       [ 4, 19]])]"
+horse_colic.csv,2,60,AdaBoost,None,acc,0.8648648648648649,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,2,60,AdaBoost,None,f1,0.8637999701829489,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,2,60,AdaBoost,None,auc,0.8493788819875776,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,2,60,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",acc,0.8648648648648649,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,2,60,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",f1,0.8899861399861401,"[array([[11,  3],
+       [ 1, 22]])]"
+horse_colic.csv,2,60,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.8276397515527949,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,2,60,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,0.8648648648648649,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,2,60,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,0.8656932794863831,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,2,60,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,0.8493788819875776,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,3,60,base,None,acc,0.8108108108108109,"[array([[12,  2],
+       [ 5, 18]])]"
+horse_colic.csv,3,60,base,None,f1,0.8133655035380467,"[array([[12,  2],
+       [ 5, 18]])]"
+horse_colic.csv,3,60,base,None,auc,0.8198757763975155,"[array([[12,  2],
+       [ 5, 18]])]"
+horse_colic.csv,3,60,wagging,None,acc,0.8378378378378378,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,3,60,wagging,None,f1,0.8378378378378378,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,3,60,wagging,None,auc,0.8276397515527949,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,3,60,AdaBoost,None,acc,0.8108108108108109,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,3,60,AdaBoost,None,f1,0.8093199582561286,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,3,60,AdaBoost,None,auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,3,60,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",acc,0.7567567567567568,"[array([[11,  3],
+       [ 6, 17]])]"
+horse_colic.csv,3,60,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",f1,0.8119705912809361,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,3,60,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.8059006211180125,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,3,60,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.8108108108108109,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,3,60,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.8656932794863831,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,3,60,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.8059006211180125,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,4,60,base,None,acc,0.8108108108108109,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,4,60,base,None,f1,0.8093199582561286,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,4,60,base,None,auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,4,60,wagging,None,acc,0.8648648648648649,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,4,60,wagging,None,f1,0.8608935466078325,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,4,60,wagging,None,auc,0.8354037267080746,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,4,60,AdaBoost,None,acc,0.8378378378378378,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,60,AdaBoost,None,f1,0.8349792099792099,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,60,AdaBoost,None,auc,0.813664596273292,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,60,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",acc,0.8648648648648649,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,4,60,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",f1,0.8872072072072072,"[array([[10,  4],
+       [ 0, 23]])]"
+horse_colic.csv,4,60,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",auc,0.8711180124223603,"[array([[11,  3],
+       [ 1, 22]])]"
+horse_colic.csv,4,60,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.918918918918919,"[array([[11,  3],
+       [ 0, 23]])]"
+horse_colic.csv,4,60,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.8349792099792099,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,60,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",auc,0.813664596273292,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,5,60,base,None,acc,0.6756756756756757,"[array([[ 6,  8],
+       [ 4, 19]])]"
+horse_colic.csv,5,60,base,None,f1,0.6616216216216216,"[array([[ 6,  8],
+       [ 4, 19]])]"
+horse_colic.csv,5,60,base,None,auc,0.6273291925465839,"[array([[ 6,  8],
+       [ 4, 19]])]"
+horse_colic.csv,5,60,wagging,None,acc,0.8108108108108109,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,5,60,wagging,None,f1,0.8052509652509653,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,5,60,wagging,None,auc,0.7779503105590062,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,5,60,AdaBoost,None,acc,0.7027027027027027,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,60,AdaBoost,None,f1,0.6939658025372311,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,60,AdaBoost,None,auc,0.6630434782608696,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,60,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",acc,0.7027027027027027,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,60,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",f1,0.72496534996535,"[array([[ 8,  6],
+       [ 4, 19]])]"
+horse_colic.csv,5,60,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",auc,0.7127329192546583,"[array([[ 9,  5],
+       [ 5, 18]])]"
+horse_colic.csv,5,60,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.7567567567567568,"[array([[ 9,  5],
+       [ 4, 19]])]"
+horse_colic.csv,5,60,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.7003599344024877,"[array([[ 8,  6],
+       [ 5, 18]])]"
+horse_colic.csv,5,60,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.7065217391304348,"[array([[ 7,  7],
+       [ 2, 21]])]"
+horse_colic.csv,6,60,base,None,acc,0.8648648648648649,"[array([[12,  1],
+       [ 4, 20]])]"
+horse_colic.csv,6,60,base,None,f1,0.8673501087294192,"[array([[12,  1],
+       [ 4, 20]])]"
+horse_colic.csv,6,60,base,None,auc,0.8782051282051283,"[array([[12,  1],
+       [ 4, 20]])]"
+horse_colic.csv,6,60,wagging,None,acc,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,60,wagging,None,f1,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,60,wagging,None,auc,0.9407051282051283,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,60,AdaBoost,None,acc,0.8918918918918919,"[array([[12,  1],
+       [ 3, 21]])]"
+horse_colic.csv,6,60,AdaBoost,None,f1,0.8934027194896761,"[array([[12,  1],
+       [ 3, 21]])]"
+horse_colic.csv,6,60,AdaBoost,None,auc,0.8990384615384616,"[array([[12,  1],
+       [ 3, 21]])]"
+horse_colic.csv,6,60,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",acc,0.972972972972973,"[array([[13,  0],
+       [ 1, 23]])]"
+horse_colic.csv,6,60,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",f1,0.9195578557280684,"[array([[12,  1],
+       [ 2, 22]])]"
+horse_colic.csv,6,60,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",auc,0.9791666666666667,"[array([[13,  0],
+       [ 1, 23]])]"
+horse_colic.csv,6,60,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,60,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,60,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.9407051282051283,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,7,60,base,None,acc,0.6756756756756757,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,60,base,None,f1,0.6802081584690282,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,60,base,None,auc,0.6618589743589745,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,60,wagging,None,acc,0.5945945945945946,"[array([[ 7,  6],
+       [ 9, 15]])]"
+horse_colic.csv,7,60,wagging,None,f1,0.6020503261882572,"[array([[ 7,  6],
+       [ 9, 15]])]"
+horse_colic.csv,7,60,wagging,None,auc,0.5817307692307693,"[array([[ 7,  6],
+       [ 9, 15]])]"
+horse_colic.csv,7,60,AdaBoost,None,acc,0.7027027027027027,"[array([[ 8,  5],
+       [ 6, 18]])]"
+horse_colic.csv,7,60,AdaBoost,None,f1,0.7050454710029179,"[array([[ 8,  5],
+       [ 6, 18]])]"
+horse_colic.csv,7,60,AdaBoost,None,auc,0.6826923076923078,"[array([[ 8,  5],
+       [ 6, 18]])]"
+horse_colic.csv,7,60,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",acc,0.7027027027027027,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,7,60,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",f1,0.6997904026475454,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,7,60,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",auc,0.6858974358974359,"[array([[ 7,  6],
+       [ 4, 20]])]"
+horse_colic.csv,7,60,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.6756756756756757,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,60,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.6997904026475454,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,7,60,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",auc,0.6650641025641025,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,8,60,base,None,acc,0.8333333333333334,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,60,base,None,f1,0.8354978354978354,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,60,base,None,auc,0.8361204013377926,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,60,wagging,None,acc,0.8611111111111112,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,60,wagging,None,f1,0.8621399176954733,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,60,wagging,None,auc,0.8578595317725751,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,60,AdaBoost,None,acc,0.7222222222222222,"[array([[10,  3],
+       [ 7, 16]])]"
+horse_colic.csv,8,60,AdaBoost,None,f1,0.7275132275132276,"[array([[10,  3],
+       [ 7, 16]])]"
+horse_colic.csv,8,60,AdaBoost,None,auc,0.7324414715719063,"[array([[10,  3],
+       [ 7, 16]])]"
+horse_colic.csv,8,60,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",acc,0.8888888888888888,"[array([[11,  2],
+       [ 2, 21]])]"
+horse_colic.csv,8,60,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 3.0]",f1,0.8354978354978354,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,60,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 3.0]",auc,0.8795986622073578,"[array([[11,  2],
+       [ 2, 21]])]"
+horse_colic.csv,8,60,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",acc,0.8611111111111112,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,60,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",f1,0.8354978354978354,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,60,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",auc,0.9180602006688964,"[array([[12,  1],
+       [ 2, 21]])]"
+horse_colic.csv,9,60,base,None,acc,0.8333333333333334,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,60,base,None,f1,0.8248484848484849,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,60,base,None,auc,0.7859531772575251,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,60,wagging,None,acc,0.8611111111111112,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,60,wagging,None,f1,0.8563048407768904,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,60,wagging,None,auc,0.8244147157190636,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,60,AdaBoost,None,acc,0.8333333333333334,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,60,AdaBoost,None,f1,0.8248484848484849,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,60,AdaBoost,None,auc,0.7859531772575251,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,60,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",acc,0.9166666666666666,"[array([[10,  3],
+       [ 0, 23]])]"
+horse_colic.csv,9,60,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",f1,0.8832323232323233,"[array([[ 9,  4],
+       [ 0, 23]])]"
+horse_colic.csv,9,60,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",auc,0.8244147157190636,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,60,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",acc,0.8333333333333334,"[array([[ 9,  4],
+       [ 2, 21]])]"
+horse_colic.csv,9,60,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",f1,0.8563048407768904,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,60,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",auc,0.8244147157190636,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,0,70,base,None,acc,0.7567567567567568,"[array([[ 8,  6],
+       [ 3, 20]])]"
+horse_colic.csv,0,70,base,None,f1,0.7496083838940982,"[array([[ 8,  6],
+       [ 3, 20]])]"
+horse_colic.csv,0,70,base,None,auc,0.7204968944099378,"[array([[ 8,  6],
+       [ 3, 20]])]"
+horse_colic.csv,0,70,wagging,None,acc,0.8108108108108109,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,70,wagging,None,f1,0.7995207483698532,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,70,wagging,None,auc,0.7639751552795031,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,70,AdaBoost,None,acc,0.8108108108108109,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,70,AdaBoost,None,f1,0.7995207483698532,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,70,AdaBoost,None,auc,0.7639751552795031,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,70,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",acc,0.8108108108108109,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,0,70,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",f1,0.8608935466078325,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,0,70,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",auc,0.7639751552795031,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,70,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",acc,0.8378378378378378,"[array([[ 9,  5],
+       [ 1, 22]])]"
+horse_colic.csv,0,70,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.8899861399861401,"[array([[11,  3],
+       [ 1, 22]])]"
+horse_colic.csv,0,70,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.7779503105590062,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,1,70,base,None,acc,0.7567567567567568,"[array([[10,  4],
+       [ 5, 18]])]"
+horse_colic.csv,1,70,base,None,f1,0.7582479030754893,"[array([[10,  4],
+       [ 5, 18]])]"
+horse_colic.csv,1,70,base,None,auc,0.7484472049689441,"[array([[10,  4],
+       [ 5, 18]])]"
+horse_colic.csv,1,70,wagging,None,acc,0.8108108108108109,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,70,wagging,None,f1,0.8093199582561286,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,70,wagging,None,auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,70,AdaBoost,None,acc,0.7837837837837838,"[array([[10,  4],
+       [ 4, 19]])]"
+horse_colic.csv,1,70,AdaBoost,None,f1,0.7837837837837838,"[array([[10,  4],
+       [ 4, 19]])]"
+horse_colic.csv,1,70,AdaBoost,None,auc,0.7701863354037267,"[array([[10,  4],
+       [ 4, 19]])]"
+horse_colic.csv,1,70,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",acc,0.8378378378378378,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,1,70,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",f1,0.8349792099792099,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,1,70,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,70,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.8648648648648649,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,1,70,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.8052509652509653,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,1,70,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",auc,0.813664596273292,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,2,70,base,None,acc,0.8108108108108109,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,2,70,base,None,f1,0.8119705912809361,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,2,70,base,None,auc,0.8059006211180125,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,2,70,wagging,None,acc,0.8378378378378378,"[array([[12,  2],
+       [ 4, 19]])]"
+horse_colic.csv,2,70,wagging,None,f1,0.8395577395577395,"[array([[12,  2],
+       [ 4, 19]])]"
+horse_colic.csv,2,70,wagging,None,auc,0.8416149068322982,"[array([[12,  2],
+       [ 4, 19]])]"
+horse_colic.csv,2,70,AdaBoost,None,acc,0.8648648648648649,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,2,70,AdaBoost,None,f1,0.8637999701829489,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,2,70,AdaBoost,None,auc,0.8493788819875776,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,2,70,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",acc,0.8648648648648649,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,2,70,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",f1,0.8899861399861401,"[array([[11,  3],
+       [ 1, 22]])]"
+horse_colic.csv,2,70,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.8276397515527949,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,2,70,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,0.8648648648648649,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,2,70,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,0.8656932794863831,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,2,70,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,0.8493788819875776,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,3,70,base,None,acc,0.8108108108108109,"[array([[12,  2],
+       [ 5, 18]])]"
+horse_colic.csv,3,70,base,None,f1,0.8133655035380467,"[array([[12,  2],
+       [ 5, 18]])]"
+horse_colic.csv,3,70,base,None,auc,0.8198757763975155,"[array([[12,  2],
+       [ 5, 18]])]"
+horse_colic.csv,3,70,wagging,None,acc,0.8378378378378378,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,3,70,wagging,None,f1,0.8378378378378378,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,3,70,wagging,None,auc,0.8276397515527949,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,3,70,AdaBoost,None,acc,0.8108108108108109,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,3,70,AdaBoost,None,f1,0.8093199582561286,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,3,70,AdaBoost,None,auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,3,70,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",acc,0.7567567567567568,"[array([[11,  3],
+       [ 6, 17]])]"
+horse_colic.csv,3,70,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",f1,0.8119705912809361,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,3,70,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.8059006211180125,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,3,70,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.8108108108108109,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,3,70,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.8656932794863831,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,3,70,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.8059006211180125,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,4,70,base,None,acc,0.8108108108108109,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,4,70,base,None,f1,0.8093199582561286,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,4,70,base,None,auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,4,70,wagging,None,acc,0.8648648648648649,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,4,70,wagging,None,f1,0.8608935466078325,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,4,70,wagging,None,auc,0.8354037267080746,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,4,70,AdaBoost,None,acc,0.8378378378378378,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,70,AdaBoost,None,f1,0.8349792099792099,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,70,AdaBoost,None,auc,0.813664596273292,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,70,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",acc,0.8648648648648649,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,4,70,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",f1,0.8872072072072072,"[array([[10,  4],
+       [ 0, 23]])]"
+horse_colic.csv,4,70,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",auc,0.8711180124223603,"[array([[11,  3],
+       [ 1, 22]])]"
+horse_colic.csv,4,70,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.918918918918919,"[array([[11,  3],
+       [ 0, 23]])]"
+horse_colic.csv,4,70,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.8349792099792099,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,70,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",auc,0.813664596273292,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,5,70,base,None,acc,0.6756756756756757,"[array([[ 6,  8],
+       [ 4, 19]])]"
+horse_colic.csv,5,70,base,None,f1,0.6616216216216216,"[array([[ 6,  8],
+       [ 4, 19]])]"
+horse_colic.csv,5,70,base,None,auc,0.6273291925465839,"[array([[ 6,  8],
+       [ 4, 19]])]"
+horse_colic.csv,5,70,wagging,None,acc,0.8108108108108109,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,5,70,wagging,None,f1,0.8052509652509653,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,5,70,wagging,None,auc,0.7779503105590062,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,5,70,AdaBoost,None,acc,0.7027027027027027,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,70,AdaBoost,None,f1,0.6939658025372311,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,70,AdaBoost,None,auc,0.6630434782608696,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,70,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",acc,0.7027027027027027,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,70,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",f1,0.72496534996535,"[array([[ 8,  6],
+       [ 4, 19]])]"
+horse_colic.csv,5,70,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",auc,0.7127329192546583,"[array([[ 9,  5],
+       [ 5, 18]])]"
+horse_colic.csv,5,70,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.7567567567567568,"[array([[ 9,  5],
+       [ 4, 19]])]"
+horse_colic.csv,5,70,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.7003599344024877,"[array([[ 8,  6],
+       [ 5, 18]])]"
+horse_colic.csv,5,70,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.7065217391304348,"[array([[ 7,  7],
+       [ 2, 21]])]"
+horse_colic.csv,6,70,base,None,acc,0.8648648648648649,"[array([[12,  1],
+       [ 4, 20]])]"
+horse_colic.csv,6,70,base,None,f1,0.8673501087294192,"[array([[12,  1],
+       [ 4, 20]])]"
+horse_colic.csv,6,70,base,None,auc,0.8782051282051283,"[array([[12,  1],
+       [ 4, 20]])]"
+horse_colic.csv,6,70,wagging,None,acc,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,70,wagging,None,f1,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,70,wagging,None,auc,0.9407051282051283,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,70,AdaBoost,None,acc,0.8918918918918919,"[array([[12,  1],
+       [ 3, 21]])]"
+horse_colic.csv,6,70,AdaBoost,None,f1,0.8934027194896761,"[array([[12,  1],
+       [ 3, 21]])]"
+horse_colic.csv,6,70,AdaBoost,None,auc,0.8990384615384616,"[array([[12,  1],
+       [ 3, 21]])]"
+horse_colic.csv,6,70,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",acc,0.972972972972973,"[array([[13,  0],
+       [ 1, 23]])]"
+horse_colic.csv,6,70,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",f1,0.9195578557280684,"[array([[12,  1],
+       [ 2, 22]])]"
+horse_colic.csv,6,70,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",auc,0.9791666666666667,"[array([[13,  0],
+       [ 1, 23]])]"
+horse_colic.csv,6,70,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,70,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,70,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.9407051282051283,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,7,70,base,None,acc,0.6756756756756757,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,70,base,None,f1,0.6802081584690282,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,70,base,None,auc,0.6618589743589745,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,70,wagging,None,acc,0.5945945945945946,"[array([[ 7,  6],
+       [ 9, 15]])]"
+horse_colic.csv,7,70,wagging,None,f1,0.6020503261882572,"[array([[ 7,  6],
+       [ 9, 15]])]"
+horse_colic.csv,7,70,wagging,None,auc,0.5817307692307693,"[array([[ 7,  6],
+       [ 9, 15]])]"
+horse_colic.csv,7,70,AdaBoost,None,acc,0.7027027027027027,"[array([[ 8,  5],
+       [ 6, 18]])]"
+horse_colic.csv,7,70,AdaBoost,None,f1,0.7050454710029179,"[array([[ 8,  5],
+       [ 6, 18]])]"
+horse_colic.csv,7,70,AdaBoost,None,auc,0.6826923076923078,"[array([[ 8,  5],
+       [ 6, 18]])]"
+horse_colic.csv,7,70,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",acc,0.7027027027027027,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,7,70,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",f1,0.6997904026475454,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,7,70,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",auc,0.6858974358974359,"[array([[ 7,  6],
+       [ 4, 20]])]"
+horse_colic.csv,7,70,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.6756756756756757,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,70,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.6997904026475454,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,7,70,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",auc,0.6650641025641025,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,8,70,base,None,acc,0.8333333333333334,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,70,base,None,f1,0.8354978354978354,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,70,base,None,auc,0.8361204013377926,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,70,wagging,None,acc,0.8611111111111112,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,70,wagging,None,f1,0.8621399176954733,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,70,wagging,None,auc,0.8578595317725751,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,70,AdaBoost,None,acc,0.7222222222222222,"[array([[10,  3],
+       [ 7, 16]])]"
+horse_colic.csv,8,70,AdaBoost,None,f1,0.7275132275132276,"[array([[10,  3],
+       [ 7, 16]])]"
+horse_colic.csv,8,70,AdaBoost,None,auc,0.7324414715719063,"[array([[10,  3],
+       [ 7, 16]])]"
+horse_colic.csv,8,70,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",acc,0.8888888888888888,"[array([[11,  2],
+       [ 2, 21]])]"
+horse_colic.csv,8,70,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 3.0]",f1,0.8354978354978354,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,70,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 3.0]",auc,0.8795986622073578,"[array([[11,  2],
+       [ 2, 21]])]"
+horse_colic.csv,8,70,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",acc,0.8611111111111112,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,70,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",f1,0.8354978354978354,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,70,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",auc,0.9180602006688964,"[array([[12,  1],
+       [ 2, 21]])]"
+horse_colic.csv,9,70,base,None,acc,0.8333333333333334,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,70,base,None,f1,0.8248484848484849,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,70,base,None,auc,0.7859531772575251,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,70,wagging,None,acc,0.8611111111111112,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,70,wagging,None,f1,0.8563048407768904,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,70,wagging,None,auc,0.8244147157190636,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,70,AdaBoost,None,acc,0.8333333333333334,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,70,AdaBoost,None,f1,0.8248484848484849,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,70,AdaBoost,None,auc,0.7859531772575251,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,70,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",acc,0.9166666666666666,"[array([[10,  3],
+       [ 0, 23]])]"
+horse_colic.csv,9,70,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",f1,0.8832323232323233,"[array([[ 9,  4],
+       [ 0, 23]])]"
+horse_colic.csv,9,70,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",auc,0.8244147157190636,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,70,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",acc,0.8333333333333334,"[array([[ 9,  4],
+       [ 2, 21]])]"
+horse_colic.csv,9,70,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",f1,0.8563048407768904,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,70,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",auc,0.8244147157190636,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,0,80,base,None,acc,0.7567567567567568,"[array([[ 8,  6],
+       [ 3, 20]])]"
+horse_colic.csv,0,80,base,None,f1,0.7496083838940982,"[array([[ 8,  6],
+       [ 3, 20]])]"
+horse_colic.csv,0,80,base,None,auc,0.7204968944099378,"[array([[ 8,  6],
+       [ 3, 20]])]"
+horse_colic.csv,0,80,wagging,None,acc,0.8108108108108109,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,80,wagging,None,f1,0.7995207483698532,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,80,wagging,None,auc,0.7639751552795031,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,80,AdaBoost,None,acc,0.8108108108108109,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,80,AdaBoost,None,f1,0.7995207483698532,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,80,AdaBoost,None,auc,0.7639751552795031,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,80,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",acc,0.8108108108108109,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,0,80,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",f1,0.8608935466078325,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,0,80,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",auc,0.7639751552795031,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,80,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",acc,0.8378378378378378,"[array([[ 9,  5],
+       [ 1, 22]])]"
+horse_colic.csv,0,80,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.8899861399861401,"[array([[11,  3],
+       [ 1, 22]])]"
+horse_colic.csv,0,80,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.7779503105590062,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,1,80,base,None,acc,0.7567567567567568,"[array([[10,  4],
+       [ 5, 18]])]"
+horse_colic.csv,1,80,base,None,f1,0.7582479030754893,"[array([[10,  4],
+       [ 5, 18]])]"
+horse_colic.csv,1,80,base,None,auc,0.7484472049689441,"[array([[10,  4],
+       [ 5, 18]])]"
+horse_colic.csv,1,80,wagging,None,acc,0.8108108108108109,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,80,wagging,None,f1,0.8093199582561286,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,80,wagging,None,auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,80,AdaBoost,None,acc,0.7837837837837838,"[array([[10,  4],
+       [ 4, 19]])]"
+horse_colic.csv,1,80,AdaBoost,None,f1,0.7837837837837838,"[array([[10,  4],
+       [ 4, 19]])]"
+horse_colic.csv,1,80,AdaBoost,None,auc,0.7701863354037267,"[array([[10,  4],
+       [ 4, 19]])]"
+horse_colic.csv,1,80,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",acc,0.8378378378378378,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,1,80,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",f1,0.8349792099792099,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,1,80,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,80,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.8648648648648649,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,1,80,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.8052509652509653,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,1,80,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",auc,0.813664596273292,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,2,80,base,None,acc,0.8108108108108109,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,2,80,base,None,f1,0.8119705912809361,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,2,80,base,None,auc,0.8059006211180125,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,2,80,wagging,None,acc,0.8378378378378378,"[array([[12,  2],
+       [ 4, 19]])]"
+horse_colic.csv,2,80,wagging,None,f1,0.8395577395577395,"[array([[12,  2],
+       [ 4, 19]])]"
+horse_colic.csv,2,80,wagging,None,auc,0.8416149068322982,"[array([[12,  2],
+       [ 4, 19]])]"
+horse_colic.csv,2,80,AdaBoost,None,acc,0.8648648648648649,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,2,80,AdaBoost,None,f1,0.8637999701829489,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,2,80,AdaBoost,None,auc,0.8493788819875776,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,2,80,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",acc,0.8648648648648649,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,2,80,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",f1,0.8899861399861401,"[array([[11,  3],
+       [ 1, 22]])]"
+horse_colic.csv,2,80,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.8276397515527949,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,2,80,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,0.8648648648648649,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,2,80,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,0.8656932794863831,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,2,80,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,0.8493788819875776,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,3,80,base,None,acc,0.8108108108108109,"[array([[12,  2],
+       [ 5, 18]])]"
+horse_colic.csv,3,80,base,None,f1,0.8133655035380467,"[array([[12,  2],
+       [ 5, 18]])]"
+horse_colic.csv,3,80,base,None,auc,0.8198757763975155,"[array([[12,  2],
+       [ 5, 18]])]"
+horse_colic.csv,3,80,wagging,None,acc,0.8378378378378378,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,3,80,wagging,None,f1,0.8378378378378378,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,3,80,wagging,None,auc,0.8276397515527949,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,3,80,AdaBoost,None,acc,0.8108108108108109,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,3,80,AdaBoost,None,f1,0.8093199582561286,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,3,80,AdaBoost,None,auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,3,80,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",acc,0.7567567567567568,"[array([[11,  3],
+       [ 6, 17]])]"
+horse_colic.csv,3,80,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",f1,0.8119705912809361,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,3,80,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.8059006211180125,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,3,80,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.8108108108108109,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,3,80,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.8656932794863831,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,3,80,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.8059006211180125,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,4,80,base,None,acc,0.8108108108108109,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,4,80,base,None,f1,0.8093199582561286,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,4,80,base,None,auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,4,80,wagging,None,acc,0.8648648648648649,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,4,80,wagging,None,f1,0.8608935466078325,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,4,80,wagging,None,auc,0.8354037267080746,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,4,80,AdaBoost,None,acc,0.8378378378378378,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,80,AdaBoost,None,f1,0.8349792099792099,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,80,AdaBoost,None,auc,0.813664596273292,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,80,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",acc,0.8648648648648649,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,4,80,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",f1,0.8872072072072072,"[array([[10,  4],
+       [ 0, 23]])]"
+horse_colic.csv,4,80,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",auc,0.8711180124223603,"[array([[11,  3],
+       [ 1, 22]])]"
+horse_colic.csv,4,80,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.918918918918919,"[array([[11,  3],
+       [ 0, 23]])]"
+horse_colic.csv,4,80,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.8349792099792099,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,4,80,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",auc,0.813664596273292,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,5,80,base,None,acc,0.6756756756756757,"[array([[ 6,  8],
+       [ 4, 19]])]"
+horse_colic.csv,5,80,base,None,f1,0.6616216216216216,"[array([[ 6,  8],
+       [ 4, 19]])]"
+horse_colic.csv,5,80,base,None,auc,0.6273291925465839,"[array([[ 6,  8],
+       [ 4, 19]])]"
+horse_colic.csv,5,80,wagging,None,acc,0.8108108108108109,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,5,80,wagging,None,f1,0.8052509652509653,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,5,80,wagging,None,auc,0.7779503105590062,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,5,80,AdaBoost,None,acc,0.7027027027027027,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,80,AdaBoost,None,f1,0.6939658025372311,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,80,AdaBoost,None,auc,0.6630434782608696,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,80,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",acc,0.7027027027027027,"[array([[ 7,  7],
+       [ 4, 19]])]"
+horse_colic.csv,5,80,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",f1,0.72496534996535,"[array([[ 8,  6],
+       [ 4, 19]])]"
+horse_colic.csv,5,80,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",auc,0.7127329192546583,"[array([[ 9,  5],
+       [ 5, 18]])]"
+horse_colic.csv,5,80,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.7567567567567568,"[array([[ 9,  5],
+       [ 4, 19]])]"
+horse_colic.csv,5,80,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.7003599344024877,"[array([[ 8,  6],
+       [ 5, 18]])]"
+horse_colic.csv,5,80,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.7065217391304348,"[array([[ 7,  7],
+       [ 2, 21]])]"
+horse_colic.csv,6,80,base,None,acc,0.8648648648648649,"[array([[12,  1],
+       [ 4, 20]])]"
+horse_colic.csv,6,80,base,None,f1,0.8673501087294192,"[array([[12,  1],
+       [ 4, 20]])]"
+horse_colic.csv,6,80,base,None,auc,0.8782051282051283,"[array([[12,  1],
+       [ 4, 20]])]"
+horse_colic.csv,6,80,wagging,None,acc,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,80,wagging,None,f1,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,80,wagging,None,auc,0.9407051282051283,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,80,AdaBoost,None,acc,0.8918918918918919,"[array([[12,  1],
+       [ 3, 21]])]"
+horse_colic.csv,6,80,AdaBoost,None,f1,0.8934027194896761,"[array([[12,  1],
+       [ 3, 21]])]"
+horse_colic.csv,6,80,AdaBoost,None,auc,0.8990384615384616,"[array([[12,  1],
+       [ 3, 21]])]"
+horse_colic.csv,6,80,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",acc,0.972972972972973,"[array([[13,  0],
+       [ 1, 23]])]"
+horse_colic.csv,6,80,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",f1,0.9195578557280684,"[array([[12,  1],
+       [ 2, 22]])]"
+horse_colic.csv,6,80,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",auc,0.9791666666666667,"[array([[13,  0],
+       [ 1, 23]])]"
+horse_colic.csv,6,80,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,80,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9459459459459459,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,6,80,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.9407051282051283,"[array([[12,  1],
+       [ 1, 23]])]"
+horse_colic.csv,7,80,base,None,acc,0.6756756756756757,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,80,base,None,f1,0.6802081584690282,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,80,base,None,auc,0.6618589743589745,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,80,wagging,None,acc,0.5945945945945946,"[array([[ 7,  6],
+       [ 9, 15]])]"
+horse_colic.csv,7,80,wagging,None,f1,0.6020503261882572,"[array([[ 7,  6],
+       [ 9, 15]])]"
+horse_colic.csv,7,80,wagging,None,auc,0.5817307692307693,"[array([[ 7,  6],
+       [ 9, 15]])]"
+horse_colic.csv,7,80,AdaBoost,None,acc,0.7027027027027027,"[array([[ 8,  5],
+       [ 6, 18]])]"
+horse_colic.csv,7,80,AdaBoost,None,f1,0.7050454710029179,"[array([[ 8,  5],
+       [ 6, 18]])]"
+horse_colic.csv,7,80,AdaBoost,None,auc,0.6826923076923078,"[array([[ 8,  5],
+       [ 6, 18]])]"
+horse_colic.csv,7,80,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",acc,0.7027027027027027,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,7,80,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",f1,0.6997904026475454,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,7,80,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",auc,0.6858974358974359,"[array([[ 7,  6],
+       [ 4, 20]])]"
+horse_colic.csv,7,80,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.6756756756756757,"[array([[ 8,  5],
+       [ 7, 17]])]"
+horse_colic.csv,7,80,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.6997904026475454,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,7,80,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",auc,0.6650641025641025,"[array([[ 7,  6],
+       [ 5, 19]])]"
+horse_colic.csv,8,80,base,None,acc,0.8333333333333334,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,80,base,None,f1,0.8354978354978354,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,80,base,None,auc,0.8361204013377926,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,80,wagging,None,acc,0.8611111111111112,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,80,wagging,None,f1,0.8621399176954733,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,80,wagging,None,auc,0.8578595317725751,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,80,AdaBoost,None,acc,0.7222222222222222,"[array([[10,  3],
+       [ 7, 16]])]"
+horse_colic.csv,8,80,AdaBoost,None,f1,0.7275132275132276,"[array([[10,  3],
+       [ 7, 16]])]"
+horse_colic.csv,8,80,AdaBoost,None,auc,0.7324414715719063,"[array([[10,  3],
+       [ 7, 16]])]"
+horse_colic.csv,8,80,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",acc,0.8888888888888888,"[array([[11,  2],
+       [ 2, 21]])]"
+horse_colic.csv,8,80,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 3.0]",f1,0.8354978354978354,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,80,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 3.0]",auc,0.8795986622073578,"[array([[11,  2],
+       [ 2, 21]])]"
+horse_colic.csv,8,80,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",acc,0.8611111111111112,"[array([[11,  2],
+       [ 3, 20]])]"
+horse_colic.csv,8,80,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",f1,0.8354978354978354,"[array([[11,  2],
+       [ 4, 19]])]"
+horse_colic.csv,8,80,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",auc,0.9180602006688964,"[array([[12,  1],
+       [ 2, 21]])]"
+horse_colic.csv,9,80,base,None,acc,0.8333333333333334,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,80,base,None,f1,0.8248484848484849,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,80,base,None,auc,0.7859531772575251,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,80,wagging,None,acc,0.8611111111111112,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,80,wagging,None,f1,0.8563048407768904,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,80,wagging,None,auc,0.8244147157190636,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,80,AdaBoost,None,acc,0.8333333333333334,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,80,AdaBoost,None,f1,0.8248484848484849,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,80,AdaBoost,None,auc,0.7859531772575251,"[array([[ 8,  5],
+       [ 1, 22]])]"
+horse_colic.csv,9,80,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",acc,0.9166666666666666,"[array([[10,  3],
+       [ 0, 23]])]"
+horse_colic.csv,9,80,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",f1,0.8832323232323233,"[array([[ 9,  4],
+       [ 0, 23]])]"
+horse_colic.csv,9,80,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",auc,0.8244147157190636,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,80,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",acc,0.8333333333333334,"[array([[ 9,  4],
+       [ 2, 21]])]"
+horse_colic.csv,9,80,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",f1,0.8563048407768904,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,9,80,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",auc,0.8244147157190636,"[array([[ 9,  4],
+       [ 1, 22]])]"
+horse_colic.csv,0,90,base,None,acc,0.7567567567567568,"[array([[ 8,  6],
+       [ 3, 20]])]"
+horse_colic.csv,0,90,base,None,f1,0.7496083838940982,"[array([[ 8,  6],
+       [ 3, 20]])]"
+horse_colic.csv,0,90,base,None,auc,0.7204968944099378,"[array([[ 8,  6],
+       [ 3, 20]])]"
+horse_colic.csv,0,90,wagging,None,acc,0.8108108108108109,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,90,wagging,None,f1,0.7995207483698532,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,90,wagging,None,auc,0.7639751552795031,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,90,AdaBoost,None,acc,0.8108108108108109,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,90,AdaBoost,None,f1,0.7995207483698532,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,90,AdaBoost,None,auc,0.7639751552795031,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,90,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",acc,0.8108108108108109,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,0,90,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",f1,0.8608935466078325,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,0,90,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",auc,0.7639751552795031,"[array([[ 8,  6],
+       [ 1, 22]])]"
+horse_colic.csv,0,90,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",acc,0.8378378378378378,"[array([[ 9,  5],
+       [ 1, 22]])]"
+horse_colic.csv,0,90,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.8899861399861401,"[array([[11,  3],
+       [ 1, 22]])]"
+horse_colic.csv,0,90,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.7779503105590062,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,1,90,base,None,acc,0.7567567567567568,"[array([[10,  4],
+       [ 5, 18]])]"
+horse_colic.csv,1,90,base,None,f1,0.7582479030754893,"[array([[10,  4],
+       [ 5, 18]])]"
+horse_colic.csv,1,90,base,None,auc,0.7484472049689441,"[array([[10,  4],
+       [ 5, 18]])]"
+horse_colic.csv,1,90,wagging,None,acc,0.8108108108108109,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,90,wagging,None,f1,0.8093199582561286,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,90,wagging,None,auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,90,AdaBoost,None,acc,0.7837837837837838,"[array([[10,  4],
+       [ 4, 19]])]"
+horse_colic.csv,1,90,AdaBoost,None,f1,0.7837837837837838,"[array([[10,  4],
+       [ 4, 19]])]"
+horse_colic.csv,1,90,AdaBoost,None,auc,0.7701863354037267,"[array([[10,  4],
+       [ 4, 19]])]"
+horse_colic.csv,1,90,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",acc,0.8378378378378378,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,1,90,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",f1,0.8349792099792099,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,1,90,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",auc,0.7919254658385093,"[array([[10,  4],
+       [ 3, 20]])]"
+horse_colic.csv,1,90,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.8648648648648649,"[array([[10,  4],
+       [ 1, 22]])]"
+horse_colic.csv,1,90,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.8052509652509653,"[array([[ 9,  5],
+       [ 2, 21]])]"
+horse_colic.csv,1,90,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",auc,0.813664596273292,"[array([[10,  4],
+       [ 2, 21]])]"
+horse_colic.csv,2,90,base,None,acc,0.8108108108108109,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,2,90,base,None,f1,0.8119705912809361,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,2,90,base,None,auc,0.8059006211180125,"[array([[11,  3],
+       [ 4, 19]])]"
+horse_colic.csv,2,90,wagging,None,acc,0.8378378378378378,"[array([[12,  2],
+       [ 4, 19]])]"
+horse_colic.csv,2,90,wagging,None,f1,0.8395577395577395,"[array([[12,  2],
+       [ 4, 19]])]"
+horse_colic.csv,2,90,wagging,None,auc,0.8416149068322982,"[array([[12,  2],
+       [ 4, 19]])]"
+horse_colic.csv,2,90,AdaBoost,None,acc,0.8648648648648649,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,2,90,AdaBoost,None,f1,0.8637999701829489,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,2,90,AdaBoost,None,auc,0.8493788819875776,"[array([[11,  3],
+       [ 2, 21]])]"
+horse_colic.csv,2,90,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",acc,0.8648648648648649,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,2,90,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",f1,0.8899861399861401,"[array([[11,  3],
+       [ 1, 22]])]"
+horse_colic.csv,2,90,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.8276397515527949,"[array([[11,  3],
+       [ 3, 20]])]"
+horse_colic.csv,2,90,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,0.8648648648648649,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,2,90,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,0.8656932794863831,"[array([[12,  2],
+       [ 3, 20]])]"
+horse_colic.csv,2,90,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,0.8493788819875776,"[array([[11,  3],
+       [ 2, 21]])]"

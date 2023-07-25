@@ -1,0 +1,121 @@
+﻿dataset,CV_fold,n_trees,model,parameters,perf_measure,perf_value,Conf_Matrix
+climate_model.csv,0,1,base,None,acc,0.9074074074074074,"[array([[ 3,  2],
+       [ 3, 46]])]"
+climate_model.csv,0,1,base,None,f1,0.9111388802110453,"[array([[ 3,  2],
+       [ 3, 46]])]"
+climate_model.csv,0,1,base,None,auc,0.7693877551020408,"[array([[ 3,  2],
+       [ 3, 46]])]"
+climate_model.csv,0,1,wagging,None,acc,0.9629629629629629,"[array([[ 3,  2],
+       [ 0, 49]])]"
+climate_model.csv,0,1,wagging,None,f1,0.9587037037037036,"[array([[ 3,  2],
+       [ 0, 49]])]"
+climate_model.csv,0,1,wagging,None,auc,0.8,"[array([[ 3,  2],
+       [ 0, 49]])]"
+climate_model.csv,0,1,AdaBoost,None,acc,0.9259259259259259,"[array([[ 3,  2],
+       [ 2, 47]])]"
+climate_model.csv,0,1,AdaBoost,None,f1,0.9259259259259259,"[array([[ 3,  2],
+       [ 2, 47]])]"
+climate_model.csv,0,1,AdaBoost,None,auc,0.7795918367346938,"[array([[ 3,  2],
+       [ 2, 47]])]"
+climate_model.csv,0,1,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",acc,0.9259259259259259,"[array([[ 2,  3],
+       [ 1, 48]])]"
+climate_model.csv,0,1,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 1.0]",f1,0.941638608305275,"[array([[ 3,  2],
+       [ 1, 48]])]"
+climate_model.csv,0,1,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 1.0]",auc,0.789795918367347,"[array([[ 3,  2],
+       [ 1, 48]])]"
+climate_model.csv,0,1,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",acc,0.9074074074074074,"[array([[ 3,  2],
+       [ 3, 46]])]"
+climate_model.csv,0,1,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",f1,0.9111388802110453,"[array([[ 3,  2],
+       [ 3, 46]])]"
+climate_model.csv,0,1,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.789795918367347,"[array([[ 3,  2],
+       [ 1, 48]])]"
+climate_model.csv,1,1,base,None,acc,0.9259259259259259,"[array([[ 2,  3],
+       [ 1, 48]])]"
+climate_model.csv,1,1,base,None,f1,0.9174074074074073,"[array([[ 2,  3],
+       [ 1, 48]])]"
+climate_model.csv,1,1,base,None,auc,0.689795918367347,"[array([[ 2,  3],
+       [ 1, 48]])]"
+climate_model.csv,1,1,wagging,None,acc,0.9074074074074074,"[array([[ 1,  4],
+       [ 1, 48]])]"
+climate_model.csv,1,1,wagging,None,f1,0.8889412750798891,"[array([[ 1,  4],
+       [ 1, 48]])]"
+climate_model.csv,1,1,wagging,None,auc,0.5897959183673469,"[array([[ 1,  4],
+       [ 1, 48]])]"
+climate_model.csv,1,1,AdaBoost,None,acc,0.9074074074074074,"[array([[ 2,  3],
+       [ 2, 47]])]"
+climate_model.csv,1,1,AdaBoost,None,f1,0.902731013842125,"[array([[ 2,  3],
+       [ 2, 47]])]"
+climate_model.csv,1,1,AdaBoost,None,auc,0.6795918367346938,"[array([[ 2,  3],
+       [ 2, 47]])]"
+climate_model.csv,1,1,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",acc,0.9259259259259259,"[array([[ 1,  4],
+       [ 0, 49]])]"
+climate_model.csv,1,1,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",f1,0.9174074074074073,"[array([[ 2,  3],
+       [ 1, 48]])]"
+climate_model.csv,1,1,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",auc,0.4897959183673469,"[array([[ 0,  5],
+       [ 1, 48]])]"
+climate_model.csv,1,1,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.8888888888888888,"[array([[ 0,  5],
+       [ 1, 48]])]"
+climate_model.csv,1,1,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.9174074074074073,"[array([[ 2,  3],
+       [ 1, 48]])]"
+climate_model.csv,1,1,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.5,"[array([[ 0,  5],
+       [ 0, 49]])]"
+climate_model.csv,2,1,base,None,acc,0.9444444444444444,"[array([[ 3,  2],
+       [ 1, 48]])]"
+climate_model.csv,2,1,base,None,f1,0.941638608305275,"[array([[ 3,  2],
+       [ 1, 48]])]"
+climate_model.csv,2,1,base,None,auc,0.789795918367347,"[array([[ 3,  2],
+       [ 1, 48]])]"
+climate_model.csv,2,1,wagging,None,acc,0.8888888888888888,"[array([[ 1,  4],
+       [ 2, 47]])]"
+climate_model.csv,2,1,wagging,None,f1,0.8761111111111112,"[array([[ 1,  4],
+       [ 2, 47]])]"
+climate_model.csv,2,1,wagging,None,auc,0.5795918367346938,"[array([[ 1,  4],
+       [ 2, 47]])]"
+climate_model.csv,2,1,AdaBoost,None,acc,0.9259259259259259,"[array([[ 2,  3],
+       [ 1, 48]])]"
+climate_model.csv,2,1,AdaBoost,None,f1,0.9174074074074073,"[array([[ 2,  3],
+       [ 1, 48]])]"
+climate_model.csv,2,1,AdaBoost,None,auc,0.689795918367347,"[array([[ 2,  3],
+       [ 1, 48]])]"
+climate_model.csv,2,1,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9444444444444444,"[array([[ 3,  2],
+       [ 1, 48]])]"
+climate_model.csv,2,1,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.941638608305275,"[array([[ 3,  2],
+       [ 1, 48]])]"
+climate_model.csv,2,1,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.689795918367347,"[array([[ 2,  3],
+       [ 1, 48]])]"
+climate_model.csv,2,1,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",acc,0.9259259259259259,"[array([[ 2,  3],
+       [ 1, 48]])]"
+climate_model.csv,2,1,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",f1,0.9259259259259259,"[array([[ 3,  2],
+       [ 2, 47]])]"
+climate_model.csv,2,1,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.7693877551020408,"[array([[ 3,  2],
+       [ 3, 46]])]"
+climate_model.csv,3,1,base,None,acc,0.8888888888888888,"[array([[ 1,  4],
+       [ 2, 47]])]"
+climate_model.csv,3,1,base,None,f1,0.8761111111111112,"[array([[ 1,  4],
+       [ 2, 47]])]"
+climate_model.csv,3,1,base,None,auc,0.5795918367346938,"[array([[ 1,  4],
+       [ 2, 47]])]"
+climate_model.csv,3,1,wagging,None,acc,0.9444444444444444,"[array([[ 3,  2],
+       [ 1, 48]])]"
+climate_model.csv,3,1,wagging,None,f1,0.941638608305275,"[array([[ 3,  2],
+       [ 1, 48]])]"
+climate_model.csv,3,1,wagging,None,auc,0.789795918367347,"[array([[ 3,  2],
+       [ 1, 48]])]"
+climate_model.csv,3,1,AdaBoost,None,acc,0.9074074074074074,"[array([[ 1,  4],
+       [ 1, 48]])]"
+climate_model.csv,3,1,AdaBoost,None,f1,0.8889412750798891,"[array([[ 1,  4],
+       [ 1, 48]])]"
+climate_model.csv,3,1,AdaBoost,None,auc,0.5897959183673469,"[array([[ 1,  4],
+       [ 1, 48]])]"
+climate_model.csv,3,1,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9259259259259259,"[array([[ 1,  4],
+       [ 0, 49]])]"
+climate_model.csv,3,1,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.9333647650479333,"[array([[ 2,  3],
+       [ 0, 49]])]"
+climate_model.csv,3,1,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.5897959183673469,"[array([[ 1,  4],
+       [ 1, 48]])]"
+climate_model.csv,3,1,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",acc,0.9259259259259259,"[array([[ 1,  4],
+       [ 0, 49]])]"
+climate_model.csv,3,1,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",f1,0.9174074074074073,"[array([[ 2,  3],
+       [ 1, 48]])]"
+climate_model.csv,3,1,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.5897959183673469,"[array([[ 1,  4],
+       [ 1, 48]])]"

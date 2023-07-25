@@ -1,0 +1,361 @@
+﻿dataset,CV_fold,n_trees,model,parameters,perf_measure,perf_value,Conf_Matrix
+kr-vs-kp.csv,0,1,base,None,acc,0.990625,"[array([[151,   2],
+       [  1, 166]])]"
+kr-vs-kp.csv,0,1,base,None,f1,0.9906236236848545,"[array([[151,   2],
+       [  1, 166]])]"
+kr-vs-kp.csv,0,1,base,None,auc,0.9904700403115339,"[array([[151,   2],
+       [  1, 166]])]"
+kr-vs-kp.csv,0,1,wagging,None,acc,0.990625,"[array([[151,   2],
+       [  1, 166]])]"
+kr-vs-kp.csv,0,1,wagging,None,f1,0.9906236236848545,"[array([[151,   2],
+       [  1, 166]])]"
+kr-vs-kp.csv,0,1,wagging,None,auc,0.9904700403115339,"[array([[151,   2],
+       [  1, 166]])]"
+kr-vs-kp.csv,0,1,AdaBoost,None,acc,0.990625,"[array([[151,   2],
+       [  1, 166]])]"
+kr-vs-kp.csv,0,1,AdaBoost,None,f1,0.9906236236848545,"[array([[151,   2],
+       [  1, 166]])]"
+kr-vs-kp.csv,0,1,AdaBoost,None,auc,0.9904700403115339,"[array([[151,   2],
+       [  1, 166]])]"
+kr-vs-kp.csv,0,1,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 1.0]",acc,0.990625,"[array([[151,   2],
+       [  1, 166]])]"
+kr-vs-kp.csv,0,1,Grouped_Mixed_Bagging,"[[0.1, 0.8, 0.1], 3.0]",f1,0.9906236236848545,"[array([[151,   2],
+       [  1, 166]])]"
+kr-vs-kp.csv,0,1,Grouped_Mixed_Bagging,"[[0.1, 0.8, 0.1], 3.0]",auc,0.9904700403115339,"[array([[151,   2],
+       [  1, 166]])]"
+kr-vs-kp.csv,0,1,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,0.9875,"[array([[151,   2],
+       [  2, 165]])]"
+kr-vs-kp.csv,0,1,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",f1,0.9906236236848545,"[array([[151,   2],
+       [  1, 166]])]"
+kr-vs-kp.csv,0,1,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",auc,0.9904700403115339,"[array([[151,   2],
+       [  1, 166]])]"
+kr-vs-kp.csv,1,1,base,None,acc,0.990625,"[array([[152,   1],
+       [  2, 165]])]"
+kr-vs-kp.csv,1,1,base,None,f1,0.9906261921530651,"[array([[152,   1],
+       [  2, 165]])]"
+kr-vs-kp.csv,1,1,base,None,auc,0.9907440021916951,"[array([[152,   1],
+       [  2, 165]])]"
+kr-vs-kp.csv,1,1,wagging,None,acc,0.990625,"[array([[152,   1],
+       [  2, 165]])]"
+kr-vs-kp.csv,1,1,wagging,None,f1,0.9906261921530651,"[array([[152,   1],
+       [  2, 165]])]"
+kr-vs-kp.csv,1,1,wagging,None,auc,0.9907440021916951,"[array([[152,   1],
+       [  2, 165]])]"
+kr-vs-kp.csv,1,1,AdaBoost,None,acc,0.990625,"[array([[152,   1],
+       [  2, 165]])]"
+kr-vs-kp.csv,1,1,AdaBoost,None,f1,0.9906261921530651,"[array([[152,   1],
+       [  2, 165]])]"
+kr-vs-kp.csv,1,1,AdaBoost,None,auc,0.9907440021916951,"[array([[152,   1],
+       [  2, 165]])]"
+kr-vs-kp.csv,1,1,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 3.0]",acc,0.990625,"[array([[152,   1],
+       [  2, 165]])]"
+kr-vs-kp.csv,1,1,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 3.0]",f1,0.9906261921530651,"[array([[152,   1],
+       [  2, 165]])]"
+kr-vs-kp.csv,1,1,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 3.0]",auc,0.987476028335486,"[array([[151,   2],
+       [  2, 165]])]"
+kr-vs-kp.csv,1,1,Incremental_Mixed_Bagging,"[[-1.0, 1.0]]",acc,0.990625,"[array([[152,   1],
+       [  2, 165]])]"
+kr-vs-kp.csv,1,1,Incremental_Mixed_Bagging,"[[-1.0, 1.0]]",f1,0.9906261921530651,"[array([[152,   1],
+       [  2, 165]])]"
+kr-vs-kp.csv,1,1,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9907440021916951,"[array([[152,   1],
+       [  2, 165]])]"
+kr-vs-kp.csv,2,1,base,None,acc,0.996875,"[array([[152,   1],
+       [  0, 167]])]"
+kr-vs-kp.csv,2,1,base,None,f1,0.9968745412282848,"[array([[152,   1],
+       [  0, 167]])]"
+kr-vs-kp.csv,2,1,base,None,auc,0.9967320261437909,"[array([[152,   1],
+       [  0, 167]])]"
+kr-vs-kp.csv,2,1,wagging,None,acc,0.996875,"[array([[152,   1],
+       [  0, 167]])]"
+kr-vs-kp.csv,2,1,wagging,None,f1,0.9968745412282848,"[array([[152,   1],
+       [  0, 167]])]"
+kr-vs-kp.csv,2,1,wagging,None,auc,0.9967320261437909,"[array([[152,   1],
+       [  0, 167]])]"
+kr-vs-kp.csv,2,1,AdaBoost,None,acc,0.996875,"[array([[152,   1],
+       [  0, 167]])]"
+kr-vs-kp.csv,2,1,AdaBoost,None,f1,0.9968745412282848,"[array([[152,   1],
+       [  0, 167]])]"
+kr-vs-kp.csv,2,1,AdaBoost,None,auc,0.9967320261437909,"[array([[152,   1],
+       [  0, 167]])]"
+kr-vs-kp.csv,2,1,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",acc,0.996875,"[array([[152,   1],
+       [  0, 167]])]"
+kr-vs-kp.csv,2,1,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",f1,0.9937480419799499,"[array([[151,   2],
+       [  0, 167]])]"
+kr-vs-kp.csv,2,1,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",auc,1.0,"[array([[153,   0],
+       [  0, 167]])]"
+kr-vs-kp.csv,2,1,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",acc,0.996875,"[array([[152,   1],
+       [  0, 167]])]"
+kr-vs-kp.csv,2,1,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",f1,0.9937480419799499,"[array([[151,   2],
+       [  0, 167]])]"
+kr-vs-kp.csv,2,1,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",auc,0.9967320261437909,"[array([[152,   1],
+       [  0, 167]])]"
+kr-vs-kp.csv,3,1,base,None,acc,0.9875,"[array([[151,   2],
+       [  2, 165]])]"
+kr-vs-kp.csv,3,1,base,None,f1,0.9875,"[array([[151,   2],
+       [  2, 165]])]"
+kr-vs-kp.csv,3,1,base,None,auc,0.987476028335486,"[array([[151,   2],
+       [  2, 165]])]"
+kr-vs-kp.csv,3,1,wagging,None,acc,0.99375,"[array([[151,   2],
+       [  0, 167]])]"
+kr-vs-kp.csv,3,1,wagging,None,f1,0.9937480419799499,"[array([[151,   2],
+       [  0, 167]])]"
+kr-vs-kp.csv,3,1,wagging,None,auc,0.9934640522875817,"[array([[151,   2],
+       [  0, 167]])]"
+kr-vs-kp.csv,3,1,AdaBoost,None,acc,0.9875,"[array([[151,   2],
+       [  2, 165]])]"
+kr-vs-kp.csv,3,1,AdaBoost,None,f1,0.9875,"[array([[151,   2],
+       [  2, 165]])]"
+kr-vs-kp.csv,3,1,AdaBoost,None,auc,0.987476028335486,"[array([[151,   2],
+       [  2, 165]])]"
+kr-vs-kp.csv,3,1,Grouped_Mixed_Bagging,"[[0.0, 1.0, 0.0], 3.0]",acc,0.984375,"[array([[151,   2],
+       [  3, 164]])]"
+kr-vs-kp.csv,3,1,Grouped_Mixed_Bagging,"[[0.0, 1.0, 0.0], 3.0]",f1,0.9843769869217752,"[array([[151,   2],
+       [  3, 164]])]"
+kr-vs-kp.csv,3,1,Grouped_Mixed_Bagging,"[[0.0, 1.0, 0.0], 3.0]",auc,0.987476028335486,"[array([[151,   2],
+       [  2, 165]])]"
+kr-vs-kp.csv,3,1,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",acc,0.9875,"[array([[151,   2],
+       [  2, 165]])]"
+kr-vs-kp.csv,3,1,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",f1,0.9875,"[array([[151,   2],
+       [  2, 165]])]"
+kr-vs-kp.csv,3,1,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",auc,0.987476028335486,"[array([[151,   2],
+       [  2, 165]])]"
+kr-vs-kp.csv,4,1,base,None,acc,0.99375,"[array([[153,   0],
+       [  2, 165]])]"
+kr-vs-kp.csv,4,1,base,None,f1,0.9937514669065873,"[array([[153,   0],
+       [  2, 165]])]"
+kr-vs-kp.csv,4,1,base,None,auc,0.9940119760479043,"[array([[153,   0],
+       [  2, 165]])]"
+kr-vs-kp.csv,4,1,wagging,None,acc,0.99375,"[array([[153,   0],
+       [  2, 165]])]"
+kr-vs-kp.csv,4,1,wagging,None,f1,0.9937514669065873,"[array([[153,   0],
+       [  2, 165]])]"
+kr-vs-kp.csv,4,1,wagging,None,auc,0.9940119760479043,"[array([[153,   0],
+       [  2, 165]])]"
+kr-vs-kp.csv,4,1,AdaBoost,None,acc,0.99375,"[array([[153,   0],
+       [  2, 165]])]"
+kr-vs-kp.csv,4,1,AdaBoost,None,f1,0.9937514669065873,"[array([[153,   0],
+       [  2, 165]])]"
+kr-vs-kp.csv,4,1,AdaBoost,None,auc,0.9940119760479043,"[array([[153,   0],
+       [  2, 165]])]"
+kr-vs-kp.csv,4,1,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",acc,0.99375,"[array([[153,   0],
+       [  2, 165]])]"
+kr-vs-kp.csv,4,1,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",f1,0.9937514669065873,"[array([[153,   0],
+       [  2, 165]])]"
+kr-vs-kp.csv,4,1,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",auc,0.9940119760479043,"[array([[153,   0],
+       [  2, 165]])]"
+kr-vs-kp.csv,4,1,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",acc,0.99375,"[array([[153,   0],
+       [  2, 165]])]"
+kr-vs-kp.csv,4,1,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",f1,0.9937514669065873,"[array([[153,   0],
+       [  2, 165]])]"
+kr-vs-kp.csv,4,1,Incremental_Mixed_Bagging,"[[-2.0, 2.0]]",auc,0.9940119760479043,"[array([[153,   0],
+       [  2, 165]])]"
+kr-vs-kp.csv,5,1,base,None,acc,0.99375,"[array([[151,   2],
+       [  0, 167]])]"
+kr-vs-kp.csv,5,1,base,None,f1,0.9937480419799499,"[array([[151,   2],
+       [  0, 167]])]"
+kr-vs-kp.csv,5,1,base,None,auc,0.9934640522875817,"[array([[151,   2],
+       [  0, 167]])]"
+kr-vs-kp.csv,5,1,wagging,None,acc,1.0,"[array([[153,   0],
+       [  0, 167]])]"
+kr-vs-kp.csv,5,1,wagging,None,f1,1.0,"[array([[153,   0],
+       [  0, 167]])]"
+kr-vs-kp.csv,5,1,wagging,None,auc,1.0,"[array([[153,   0],
+       [  0, 167]])]"
+kr-vs-kp.csv,5,1,AdaBoost,None,acc,0.99375,"[array([[151,   2],
+       [  0, 167]])]"
+kr-vs-kp.csv,5,1,AdaBoost,None,f1,0.9937480419799499,"[array([[151,   2],
+       [  0, 167]])]"
+kr-vs-kp.csv,5,1,AdaBoost,None,auc,0.9934640522875817,"[array([[151,   2],
+       [  0, 167]])]"
+kr-vs-kp.csv,5,1,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 3.0]",acc,1.0,"[array([[153,   0],
+       [  0, 167]])]"
+kr-vs-kp.csv,5,1,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 3.0]",f1,1.0,"[array([[153,   0],
+       [  0, 167]])]"
+kr-vs-kp.csv,5,1,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 3.0]",auc,1.0,"[array([[153,   0],
+       [  0, 167]])]"
+kr-vs-kp.csv,5,1,Incremental_Mixed_Bagging,"[[-2.0, 2.0]]",acc,1.0,"[array([[153,   0],
+       [  0, 167]])]"
+kr-vs-kp.csv,5,1,Incremental_Mixed_Bagging,"[[-2.0, 2.0]]",f1,1.0,"[array([[153,   0],
+       [  0, 167]])]"
+kr-vs-kp.csv,5,1,Incremental_Mixed_Bagging,"[[-2.0, 2.0]]",auc,1.0,"[array([[153,   0],
+       [  0, 167]])]"
+kr-vs-kp.csv,6,1,base,None,acc,1.0,"[array([[152,   0],
+       [  0, 167]])]"
+kr-vs-kp.csv,6,1,base,None,f1,1.0,"[array([[152,   0],
+       [  0, 167]])]"
+kr-vs-kp.csv,6,1,base,None,auc,1.0,"[array([[152,   0],
+       [  0, 167]])]"
+kr-vs-kp.csv,6,1,wagging,None,acc,1.0,"[array([[152,   0],
+       [  0, 167]])]"
+kr-vs-kp.csv,6,1,wagging,None,f1,1.0,"[array([[152,   0],
+       [  0, 167]])]"
+kr-vs-kp.csv,6,1,wagging,None,auc,1.0,"[array([[152,   0],
+       [  0, 167]])]"
+kr-vs-kp.csv,6,1,AdaBoost,None,acc,1.0,"[array([[152,   0],
+       [  0, 167]])]"
+kr-vs-kp.csv,6,1,AdaBoost,None,f1,1.0,"[array([[152,   0],
+       [  0, 167]])]"
+kr-vs-kp.csv,6,1,AdaBoost,None,auc,1.0,"[array([[152,   0],
+       [  0, 167]])]"
+kr-vs-kp.csv,6,1,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",acc,0.9968652037617555,"[array([[152,   0],
+       [  1, 166]])]"
+kr-vs-kp.csv,6,1,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",f1,0.9968647096310249,"[array([[151,   1],
+       [  0, 167]])]"
+kr-vs-kp.csv,6,1,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",auc,0.9970059880239521,"[array([[152,   0],
+       [  1, 166]])]"
+kr-vs-kp.csv,6,1,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",acc,0.9968652037617555,"[array([[152,   0],
+       [  1, 166]])]"
+kr-vs-kp.csv,6,1,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",f1,1.0,"[array([[152,   0],
+       [  0, 167]])]"
+kr-vs-kp.csv,6,1,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",auc,1.0,"[array([[152,   0],
+       [  0, 167]])]"
+kr-vs-kp.csv,7,1,base,None,acc,0.9968652037617555,"[array([[151,   1],
+       [  0, 167]])]"
+kr-vs-kp.csv,7,1,base,None,f1,0.9968647096310249,"[array([[151,   1],
+       [  0, 167]])]"
+kr-vs-kp.csv,7,1,base,None,auc,0.9967105263157895,"[array([[151,   1],
+       [  0, 167]])]"
+kr-vs-kp.csv,7,1,wagging,None,acc,1.0,"[array([[152,   0],
+       [  0, 167]])]"
+kr-vs-kp.csv,7,1,wagging,None,f1,1.0,"[array([[152,   0],
+       [  0, 167]])]"
+kr-vs-kp.csv,7,1,wagging,None,auc,1.0,"[array([[152,   0],
+       [  0, 167]])]"
+kr-vs-kp.csv,7,1,AdaBoost,None,acc,0.9968652037617555,"[array([[151,   1],
+       [  0, 167]])]"
+kr-vs-kp.csv,7,1,AdaBoost,None,f1,0.9968647096310249,"[array([[151,   1],
+       [  0, 167]])]"
+kr-vs-kp.csv,7,1,AdaBoost,None,auc,0.9967105263157895,"[array([[151,   1],
+       [  0, 167]])]"
+kr-vs-kp.csv,7,1,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",acc,1.0,"[array([[152,   0],
+       [  0, 167]])]"
+kr-vs-kp.csv,7,1,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",f1,0.9968647096310249,"[array([[151,   1],
+       [  0, 167]])]"
+kr-vs-kp.csv,7,1,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",auc,1.0,"[array([[152,   0],
+       [  0, 167]])]"
+kr-vs-kp.csv,7,1,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,1.0,"[array([[152,   0],
+       [  0, 167]])]"
+kr-vs-kp.csv,7,1,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,1.0,"[array([[152,   0],
+       [  0, 167]])]"
+kr-vs-kp.csv,7,1,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,1.0,"[array([[152,   0],
+       [  0, 167]])]"
+kr-vs-kp.csv,8,1,base,None,acc,0.9968652037617555,"[array([[151,   1],
+       [  0, 167]])]"
+kr-vs-kp.csv,8,1,base,None,f1,0.9968647096310249,"[array([[151,   1],
+       [  0, 167]])]"
+kr-vs-kp.csv,8,1,base,None,auc,0.9967105263157895,"[array([[151,   1],
+       [  0, 167]])]"
+kr-vs-kp.csv,8,1,wagging,None,acc,0.9968652037617555,"[array([[151,   1],
+       [  0, 167]])]"
+kr-vs-kp.csv,8,1,wagging,None,f1,0.9968647096310249,"[array([[151,   1],
+       [  0, 167]])]"
+kr-vs-kp.csv,8,1,wagging,None,auc,0.9967105263157895,"[array([[151,   1],
+       [  0, 167]])]"
+kr-vs-kp.csv,8,1,AdaBoost,None,acc,0.9968652037617555,"[array([[151,   1],
+       [  0, 167]])]"
+kr-vs-kp.csv,8,1,AdaBoost,None,f1,0.9968647096310249,"[array([[151,   1],
+       [  0, 167]])]"
+kr-vs-kp.csv,8,1,AdaBoost,None,auc,0.9967105263157895,"[array([[151,   1],
+       [  0, 167]])]"
+kr-vs-kp.csv,8,1,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",acc,0.9968652037617555,"[array([[151,   1],
+       [  0, 167]])]"
+kr-vs-kp.csv,8,1,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",f1,0.9968647096310249,"[array([[151,   1],
+       [  0, 167]])]"
+kr-vs-kp.csv,8,1,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",auc,0.9937165143397416,"[array([[151,   1],
+       [  1, 166]])]"
+kr-vs-kp.csv,8,1,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",acc,0.9968652037617555,"[array([[151,   1],
+       [  0, 167]])]"
+kr-vs-kp.csv,8,1,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",f1,0.9968647096310249,"[array([[151,   1],
+       [  0, 167]])]"
+kr-vs-kp.csv,8,1,Incremental_Mixed_Bagging,"[[0.0, 0.0]]",auc,0.9967105263157895,"[array([[151,   1],
+       [  0, 167]])]"
+kr-vs-kp.csv,9,1,base,None,acc,1.0,"[array([[153,   0],
+       [  0, 166]])]"
+kr-vs-kp.csv,9,1,base,None,f1,1.0,"[array([[153,   0],
+       [  0, 166]])]"
+kr-vs-kp.csv,9,1,base,None,auc,1.0,"[array([[153,   0],
+       [  0, 166]])]"
+kr-vs-kp.csv,9,1,wagging,None,acc,1.0,"[array([[153,   0],
+       [  0, 166]])]"
+kr-vs-kp.csv,9,1,wagging,None,f1,1.0,"[array([[153,   0],
+       [  0, 166]])]"
+kr-vs-kp.csv,9,1,wagging,None,auc,1.0,"[array([[153,   0],
+       [  0, 166]])]"
+kr-vs-kp.csv,9,1,AdaBoost,None,acc,0.9968652037617555,"[array([[152,   1],
+       [  0, 166]])]"
+kr-vs-kp.csv,9,1,AdaBoost,None,f1,0.9968647716527876,"[array([[152,   1],
+       [  0, 166]])]"
+kr-vs-kp.csv,9,1,AdaBoost,None,auc,0.9967320261437909,"[array([[152,   1],
+       [  0, 166]])]"
+kr-vs-kp.csv,9,1,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",acc,1.0,"[array([[153,   0],
+       [  0, 166]])]"
+kr-vs-kp.csv,9,1,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",f1,0.9968647716527876,"[array([[152,   1],
+       [  0, 166]])]"
+kr-vs-kp.csv,9,1,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",auc,1.0,"[array([[153,   0],
+       [  0, 166]])]"
+kr-vs-kp.csv,9,1,Incremental_Mixed_Bagging,"[[-1.0, 1.0]]",acc,1.0,"[array([[153,   0],
+       [  0, 166]])]"
+kr-vs-kp.csv,9,1,Incremental_Mixed_Bagging,"[[-1.0, 1.0]]",f1,1.0,"[array([[153,   0],
+       [  0, 166]])]"
+kr-vs-kp.csv,9,1,Incremental_Mixed_Bagging,"[[-1.0, 1.0]]",auc,1.0,"[array([[153,   0],
+       [  0, 166]])]"
+kr-vs-kp.csv,0,10,base,None,acc,0.990625,"[array([[151,   2],
+       [  1, 166]])]"
+kr-vs-kp.csv,0,10,base,None,f1,0.9906236236848545,"[array([[151,   2],
+       [  1, 166]])]"
+kr-vs-kp.csv,0,10,base,None,auc,0.9904700403115339,"[array([[151,   2],
+       [  1, 166]])]"
+kr-vs-kp.csv,0,10,wagging,None,acc,0.990625,"[array([[151,   2],
+       [  1, 166]])]"
+kr-vs-kp.csv,0,10,wagging,None,f1,0.9906236236848545,"[array([[151,   2],
+       [  1, 166]])]"
+kr-vs-kp.csv,0,10,wagging,None,auc,0.9904700403115339,"[array([[151,   2],
+       [  1, 166]])]"
+kr-vs-kp.csv,0,10,AdaBoost,None,acc,0.990625,"[array([[151,   2],
+       [  1, 166]])]"
+kr-vs-kp.csv,0,10,AdaBoost,None,f1,0.9906236236848545,"[array([[151,   2],
+       [  1, 166]])]"
+kr-vs-kp.csv,0,10,AdaBoost,None,auc,0.9904700403115339,"[array([[151,   2],
+       [  1, 166]])]"
+kr-vs-kp.csv,0,10,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 1.0]",acc,0.990625,"[array([[151,   2],
+       [  1, 166]])]"
+kr-vs-kp.csv,0,10,Grouped_Mixed_Bagging,"[[0.1, 0.8, 0.1], 3.0]",f1,0.9906236236848545,"[array([[151,   2],
+       [  1, 166]])]"
+kr-vs-kp.csv,0,10,Grouped_Mixed_Bagging,"[[0.1, 0.8, 0.1], 3.0]",auc,0.9904700403115339,"[array([[151,   2],
+       [  1, 166]])]"
+kr-vs-kp.csv,0,10,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,0.9875,"[array([[151,   2],
+       [  2, 165]])]"
+kr-vs-kp.csv,0,10,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",f1,0.9906236236848545,"[array([[151,   2],
+       [  1, 166]])]"
+kr-vs-kp.csv,0,10,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",auc,0.9904700403115339,"[array([[151,   2],
+       [  1, 166]])]"
+kr-vs-kp.csv,1,10,base,None,acc,0.990625,"[array([[152,   1],
+       [  2, 165]])]"
+kr-vs-kp.csv,1,10,base,None,f1,0.9906261921530651,"[array([[152,   1],
+       [  2, 165]])]"
+kr-vs-kp.csv,1,10,base,None,auc,0.9907440021916951,"[array([[152,   1],
+       [  2, 165]])]"
+kr-vs-kp.csv,1,10,wagging,None,acc,0.990625,"[array([[152,   1],
+       [  2, 165]])]"
+kr-vs-kp.csv,1,10,wagging,None,f1,0.9906261921530651,"[array([[152,   1],
+       [  2, 165]])]"
+kr-vs-kp.csv,1,10,wagging,None,auc,0.9907440021916951,"[array([[152,   1],
+       [  2, 165]])]"
+kr-vs-kp.csv,1,10,AdaBoost,None,acc,0.990625,"[array([[152,   1],
+       [  2, 165]])]"
+kr-vs-kp.csv,1,10,AdaBoost,None,f1,0.9906261921530651,"[array([[152,   1],
+       [  2, 165]])]"
+kr-vs-kp.csv,1,10,AdaBoost,None,auc,0.9907440021916951,"[array([[152,   1],
+       [  2, 165]])]"
+kr-vs-kp.csv,1,10,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 3.0]",acc,0.990625,"[array([[152,   1],
+       [  2, 165]])]"
+kr-vs-kp.csv,1,10,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 3.0]",f1,0.9906261921530651,"[array([[152,   1],
+       [  2, 165]])]"
+kr-vs-kp.csv,1,10,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 3.0]",auc,0.987476028335486,"[array([[151,   2],
+       [  2, 165]])]"
+kr-vs-kp.csv,1,10,Incremental_Mixed_Bagging,"[[-1.0, 1.0]]",acc,0.990625,"[array([[152,   1],
+       [  2, 165]])]"
+kr-vs-kp.csv,1,10,Incremental_Mixed_Bagging,"[[-1.0, 1.0]]",f1,0.9906261921530651,"[array([[152,   1],
+       [  2, 165]])]"
+kr-vs-kp.csv,1,10,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9907440021916951,"[array([[152,   1],
+       [  2, 165]])]"

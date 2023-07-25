@@ -1,0 +1,931 @@
+﻿dataset,CV_fold,n_trees,model,parameters,perf_measure,perf_value,Conf_Matrix
+phishing.csv,0,1,base,None,acc,0.9105691056910569,"[array([[126,  10],
+       [ 12,  98]])]"
+phishing.csv,0,1,base,None,f1,0.9104852623561392,"[array([[126,  10],
+       [ 12,  98]])]"
+phishing.csv,0,1,base,None,auc,0.9086898395721925,"[array([[126,  10],
+       [ 12,  98]])]"
+phishing.csv,0,1,wagging,None,acc,0.9308943089430894,"[array([[128,   8],
+       [  9, 101]])]"
+phishing.csv,0,1,wagging,None,f1,0.9308631005924691,"[array([[128,   8],
+       [  9, 101]])]"
+phishing.csv,0,1,wagging,None,auc,0.9296791443850267,"[array([[128,   8],
+       [  9, 101]])]"
+phishing.csv,0,1,AdaBoost,None,acc,0.9512195121951219,"[array([[129,   7],
+       [  5, 105]])]"
+phishing.csv,0,1,AdaBoost,None,f1,0.9512585756488194,"[array([[129,   7],
+       [  5, 105]])]"
+phishing.csv,0,1,AdaBoost,None,auc,0.9515374331550802,"[array([[129,   7],
+       [  5, 105]])]"
+phishing.csv,0,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",acc,0.9227642276422764,"[array([[126,  10],
+       [  9, 101]])]"
+phishing.csv,0,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",f1,0.9309231553854,"[array([[127,   9],
+       [  8, 102]])]"
+phishing.csv,0,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",auc,0.930548128342246,"[array([[127,   9],
+       [  8, 102]])]"
+phishing.csv,0,1,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",acc,0.943089430894309,"[array([[128,   8],
+       [  6, 104]])]"
+phishing.csv,0,1,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",f1,0.939094527391504,"[array([[127,   9],
+       [  6, 104]])]"
+phishing.csv,0,1,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,0.9350935828877006,"[array([[127,   9],
+       [  7, 103]])]"
+phishing.csv,1,1,base,None,acc,0.8780487804878049,"[array([[123,  13],
+       [ 17,  93]])]"
+phishing.csv,1,1,base,None,f1,0.8778033070185775,"[array([[123,  13],
+       [ 17,  93]])]"
+phishing.csv,1,1,base,None,auc,0.874933155080214,"[array([[123,  13],
+       [ 17,  93]])]"
+phishing.csv,1,1,wagging,None,acc,0.8983739837398373,"[array([[123,  13],
+       [ 12,  98]])]"
+phishing.csv,1,1,wagging,None,f1,0.8984164049785295,"[array([[123,  13],
+       [ 12,  98]])]"
+phishing.csv,1,1,wagging,None,auc,0.8976604278074867,"[array([[123,  13],
+       [ 12,  98]])]"
+phishing.csv,1,1,AdaBoost,None,acc,0.9105691056910569,"[array([[126,  10],
+       [ 12,  98]])]"
+phishing.csv,1,1,AdaBoost,None,f1,0.9104852623561392,"[array([[126,  10],
+       [ 12,  98]])]"
+phishing.csv,1,1,AdaBoost,None,auc,0.9086898395721925,"[array([[126,  10],
+       [ 12,  98]])]"
+phishing.csv,1,1,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",acc,0.9105691056910569,"[array([[124,  12],
+       [ 10, 100]])]"
+phishing.csv,1,1,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",f1,0.8943935805724423,"[array([[122,  14],
+       [ 12,  98]])]"
+phishing.csv,1,1,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",auc,0.9039438502673797,"[array([[121,  15],
+       [  9, 101]])]"
+phishing.csv,1,1,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",acc,0.9146341463414634,"[array([[124,  12],
+       [  9, 101]])]"
+phishing.csv,1,1,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",f1,0.9107476223474723,"[array([[122,  14],
+       [  8, 102]])]"
+phishing.csv,1,1,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",auc,0.8985294117647058,"[array([[122,  14],
+       [ 11,  99]])]"
+phishing.csv,2,1,base,None,acc,0.9186991869918699,"[array([[127,   9],
+       [ 11,  99]])]"
+phishing.csv,2,1,base,None,f1,0.9186229657783085,"[array([[127,   9],
+       [ 11,  99]])]"
+phishing.csv,2,1,base,None,auc,0.9169117647058823,"[array([[127,   9],
+       [ 11,  99]])]"
+phishing.csv,2,1,wagging,None,acc,0.9390243902439024,"[array([[128,   8],
+       [  7, 103]])]"
+phishing.csv,2,1,wagging,None,f1,0.9390498429871177,"[array([[128,   8],
+       [  7, 103]])]"
+phishing.csv,2,1,wagging,None,auc,0.9387700534759359,"[array([[128,   8],
+       [  7, 103]])]"
+phishing.csv,2,1,AdaBoost,None,acc,0.8943089430894309,"[array([[121,  15],
+       [ 11,  99]])]"
+phishing.csv,2,1,AdaBoost,None,f1,0.8944638740097423,"[array([[121,  15],
+       [ 11,  99]])]"
+phishing.csv,2,1,AdaBoost,None,auc,0.8948529411764705,"[array([[121,  15],
+       [ 11,  99]])]"
+phishing.csv,2,1,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",acc,0.9390243902439024,"[array([[128,   8],
+       [  7, 103]])]"
+phishing.csv,2,1,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",f1,0.935011434198426,"[array([[127,   9],
+       [  7, 103]])]"
+phishing.csv,2,1,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",auc,0.9342245989304813,"[array([[128,   8],
+       [  8, 102]])]"
+phishing.csv,2,1,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",acc,0.926829268292683,"[array([[127,   9],
+       [  9, 101]])]"
+phishing.csv,2,1,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",f1,0.9266819842111463,"[array([[129,   7],
+       [ 11,  99]])]"
+phishing.csv,2,1,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",auc,0.9342245989304813,"[array([[128,   8],
+       [  8, 102]])]"
+phishing.csv,3,1,base,None,acc,0.9105691056910569,"[array([[129,   7],
+       [ 15,  95]])]"
+phishing.csv,3,1,base,None,f1,0.9101593145311507,"[array([[129,   7],
+       [ 15,  95]])]"
+phishing.csv,3,1,base,None,auc,0.9060828877005348,"[array([[129,   7],
+       [ 15,  95]])]"
+phishing.csv,3,1,wagging,None,acc,0.9308943089430894,"[array([[131,   5],
+       [ 12,  98]])]"
+phishing.csv,3,1,wagging,None,f1,0.9306256866900035,"[array([[131,   5],
+       [ 12,  98]])]"
+phishing.csv,3,1,wagging,None,auc,0.9270721925133689,"[array([[131,   5],
+       [ 12,  98]])]"
+phishing.csv,3,1,AdaBoost,None,acc,0.9308943089430894,"[array([[129,   7],
+       [ 10, 100]])]"
+phishing.csv,3,1,AdaBoost,None,f1,0.9307935599674387,"[array([[129,   7],
+       [ 10, 100]])]"
+phishing.csv,3,1,AdaBoost,None,auc,0.9288101604278075,"[array([[129,   7],
+       [ 10, 100]])]"
+phishing.csv,3,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",acc,0.943089430894309,"[array([[132,   4],
+       [ 10, 100]])]"
+phishing.csv,3,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",f1,0.9387873706088266,"[array([[132,   4],
+       [ 11,  99]])]"
+phishing.csv,3,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",auc,0.9361631016042782,"[array([[131,   5],
+       [ 10, 100]])]"
+phishing.csv,3,1,Incremental_Mixed_Bagging,"[[-3.0, 1.0]]",acc,0.9512195121951219,"[array([[132,   4],
+       [  8, 102]])]"
+phishing.csv,3,1,Incremental_Mixed_Bagging,"[[-3.0, 1.0]]",f1,0.9511213228074309,"[array([[132,   4],
+       [  8, 102]])]"
+phishing.csv,3,1,Incremental_Mixed_Bagging,"[[-3.0, 1.0]]",auc,0.9497994652406418,"[array([[131,   5],
+       [  7, 103]])]"
+phishing.csv,4,1,base,None,acc,0.9308943089430894,"[array([[124,  13],
+       [  4, 105]])]"
+phishing.csv,4,1,base,None,f1,0.9310907526829402,"[array([[124,  13],
+       [  4, 105]])]"
+phishing.csv,4,1,base,None,auc,0.9342061206723364,"[array([[124,  13],
+       [  4, 105]])]"
+phishing.csv,4,1,wagging,None,acc,0.959349593495935,"[array([[129,   8],
+       [  2, 107]])]"
+phishing.csv,4,1,wagging,None,f1,0.9594389767191916,"[array([[129,   8],
+       [  2, 107]])]"
+phishing.csv,4,1,wagging,None,auc,0.9616286077814238,"[array([[129,   8],
+       [  2, 107]])]"
+phishing.csv,4,1,AdaBoost,None,acc,0.9390243902439024,"[array([[125,  12],
+       [  3, 106]])]"
+phishing.csv,4,1,AdaBoost,None,f1,0.9391977229555356,"[array([[125,  12],
+       [  3, 106]])]"
+phishing.csv,4,1,AdaBoost,None,auc,0.9424429116721356,"[array([[125,  12],
+       [  3, 106]])]"
+phishing.csv,4,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",acc,0.9512195121951219,"[array([[128,   9],
+       [  3, 106]])]"
+phishing.csv,4,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",f1,0.9553939689209626,"[array([[128,   9],
+       [  2, 107]])]"
+phishing.csv,4,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",auc,0.9533918167816245,"[array([[128,   9],
+       [  3, 106]])]"
+phishing.csv,4,1,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9552845528455285,"[array([[129,   8],
+       [  3, 106]])]"
+phishing.csv,4,1,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9594146992520974,"[array([[130,   7],
+       [  3, 106]])]"
+phishing.csv,4,1,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.9497421817451281,"[array([[127,  10],
+       [  3, 106]])]"
+phishing.csv,5,1,base,None,acc,0.8943089430894309,"[array([[125,  12],
+       [ 14,  95]])]"
+phishing.csv,5,1,base,None,f1,0.8942025712527657,"[array([[125,  12],
+       [ 14,  95]])]"
+phishing.csv,5,1,base,None,auc,0.8919841960758051,"[array([[125,  12],
+       [ 14,  95]])]"
+phishing.csv,5,1,wagging,None,acc,0.9105691056910569,"[array([[130,   7],
+       [ 15,  94]])]"
+phishing.csv,5,1,wagging,None,f1,0.9101341834087034,"[array([[130,   7],
+       [ 15,  94]])]"
+phishing.csv,5,1,wagging,None,auc,0.9056452152949843,"[array([[130,   7],
+       [ 15,  94]])]"
+phishing.csv,5,1,AdaBoost,None,acc,0.9308943089430894,"[array([[130,   7],
+       [ 10,  99]])]"
+phishing.csv,5,1,AdaBoost,None,f1,0.9307863947584148,"[array([[130,   7],
+       [ 10,  99]])]"
+phishing.csv,5,1,AdaBoost,None,auc,0.928580995111498,"[array([[130,   7],
+       [ 10,  99]])]"
+phishing.csv,5,1,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",acc,0.9227642276422764,"[array([[129,   8],
+       [ 11,  98]])]"
+phishing.csv,5,1,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",f1,0.9267556262519147,"[array([[129,   8],
+       [ 10,  99]])]"
+phishing.csv,5,1,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",auc,0.9432799839282127,"[array([[129,   8],
+       [  6, 103]])]"
+phishing.csv,5,1,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",acc,0.9349593495934959,"[array([[131,   6],
+       [ 10,  99]])]"
+phishing.csv,5,1,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",f1,0.942966984971403,"[array([[132,   5],
+       [  9, 100]])]"
+phishing.csv,5,1,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",auc,0.9295185160383044,"[array([[129,   8],
+       [  9, 100]])]"
+phishing.csv,6,1,base,None,acc,0.9387755102040817,"[array([[127,   9],
+       [  6, 103]])]"
+phishing.csv,6,1,base,None,f1,0.9388496605390799,"[array([[127,   9],
+       [  6, 103]])]"
+phishing.csv,6,1,base,None,auc,0.9393888289260658,"[array([[127,   9],
+       [  6, 103]])]"
+phishing.csv,6,1,wagging,None,acc,0.9387755102040817,"[array([[129,   7],
+       [  8, 101]])]"
+phishing.csv,6,1,wagging,None,f1,0.9387465727162897,"[array([[129,   7],
+       [  8, 101]])]"
+phishing.csv,6,1,wagging,None,auc,0.9375674581759308,"[array([[129,   7],
+       [  8, 101]])]"
+phishing.csv,6,1,AdaBoost,None,acc,0.9551020408163265,"[array([[128,   8],
+       [  3, 106]])]"
+phishing.csv,6,1,AdaBoost,None,f1,0.9551849882896676,"[array([[128,   8],
+       [  3, 106]])]"
+phishing.csv,6,1,AdaBoost,None,auc,0.9568267674042094,"[array([[128,   8],
+       [  3, 106]])]"
+phishing.csv,6,1,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 2.0]",acc,0.9469387755102041,"[array([[130,   6],
+       [  7, 102]])]"
+phishing.csv,6,1,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",f1,0.9469136963541177,"[array([[130,   6],
+       [  7, 102]])]"
+phishing.csv,6,1,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",auc,0.9283931462493255,"[array([[129,   7],
+       [ 10,  99]])]"
+phishing.csv,6,1,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",acc,0.9469387755102041,"[array([[128,   8],
+       [  5, 104]])]"
+phishing.csv,6,1,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",f1,0.9346298779041221,"[array([[129,   7],
+       [  9, 100]])]"
+phishing.csv,6,1,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",auc,0.9550053966540746,"[array([[130,   6],
+       [  5, 104]])]"
+phishing.csv,7,1,base,None,acc,0.9428571428571428,"[array([[130,   6],
+       [  8, 101]])]"
+phishing.csv,7,1,base,None,f1,0.9428011431661067,"[array([[130,   6],
+       [  8, 101]])]"
+phishing.csv,7,1,base,None,auc,0.9412439287641663,"[array([[130,   6],
+       [  8, 101]])]"
+phishing.csv,7,1,wagging,None,acc,0.9387755102040817,"[array([[131,   5],
+       [ 10,  99]])]"
+phishing.csv,7,1,wagging,None,f1,0.9386094805034436,"[array([[131,   5],
+       [ 10,  99]])]"
+phishing.csv,7,1,wagging,None,auc,0.9357460874257961,"[array([[131,   5],
+       [ 10,  99]])]"
+phishing.csv,7,1,AdaBoost,None,acc,0.9510204081632653,"[array([[130,   6],
+       [  6, 103]])]"
+phishing.csv,7,1,AdaBoost,None,f1,0.9510204081632653,"[array([[130,   6],
+       [  6, 103]])]"
+phishing.csv,7,1,AdaBoost,None,auc,0.9504182406907717,"[array([[130,   6],
+       [  6, 103]])]"
+phishing.csv,7,1,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",acc,0.9551020408163265,"[array([[131,   5],
+       [  6, 103]])]"
+phishing.csv,7,1,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",f1,0.9509175795470564,"[array([[132,   4],
+       [  8, 101]])]"
+phishing.csv,7,1,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",auc,0.9403332433890988,"[array([[131,   5],
+       [  9, 100]])]"
+phishing.csv,7,1,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",acc,0.9387755102040817,"[array([[132,   4],
+       [ 11,  98]])]"
+phishing.csv,7,1,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",f1,0.9509175795470564,"[array([[132,   4],
+       [  8, 101]])]"
+phishing.csv,7,1,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",auc,0.9485968699406367,"[array([[132,   4],
+       [  8, 101]])]"
+phishing.csv,8,1,base,None,acc,0.9224489795918367,"[array([[128,   8],
+       [ 11,  98]])]"
+phishing.csv,8,1,base,None,f1,0.9223309315269449,"[array([[128,   8],
+       [ 11,  98]])]"
+phishing.csv,8,1,base,None,auc,0.9201295196977873,"[array([[128,   8],
+       [ 11,  98]])]"
+phishing.csv,8,1,wagging,None,acc,0.926530612244898,"[array([[130,   6],
+       [ 12,  97]])]"
+phishing.csv,8,1,wagging,None,f1,0.9262837862170794,"[array([[130,   6],
+       [ 12,  97]])]"
+phishing.csv,8,1,wagging,None,auc,0.9228953049109553,"[array([[130,   6],
+       [ 12,  97]])]"
+phishing.csv,8,1,AdaBoost,None,acc,0.9102040816326531,"[array([[125,  11],
+       [ 11,  98]])]"
+phishing.csv,8,1,AdaBoost,None,f1,0.9102040816326531,"[array([[125,  11],
+       [ 11,  98]])]"
+phishing.csv,8,1,AdaBoost,None,auc,0.9091001079330814,"[array([[125,  11],
+       [ 11,  98]])]"
+phishing.csv,8,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",acc,0.9183673469387755,"[array([[129,   7],
+       [ 13,  96]])]"
+phishing.csv,8,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",f1,0.918093095796755,"[array([[129,   7],
+       [ 13,  96]])]"
+phishing.csv,8,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",auc,0.9228953049109553,"[array([[130,   6],
+       [ 12,  97]])]"
+phishing.csv,8,1,Incremental_Mixed_Bagging,"[[-3.0, 1.0]]",acc,0.9306122448979591,"[array([[131,   5],
+       [ 12,  97]])]"
+phishing.csv,8,1,Incremental_Mixed_Bagging,"[[-3.0, 1.0]]",f1,0.9262837862170794,"[array([[130,   6],
+       [ 12,  97]])]"
+phishing.csv,8,1,Incremental_Mixed_Bagging,"[[-3.0, 1.0]]",auc,0.9192188343227199,"[array([[129,   7],
+       [ 12,  97]])]"
+phishing.csv,9,1,base,None,acc,0.9224489795918367,"[array([[126,  10],
+       [  9, 100]])]"
+phishing.csv,9,1,base,None,f1,0.9224829536525727,"[array([[126,  10],
+       [  9, 100]])]"
+phishing.csv,9,1,base,None,auc,0.9219508904479223,"[array([[126,  10],
+       [  9, 100]])]"
+phishing.csv,9,1,wagging,None,acc,0.9346938775510204,"[array([[128,   8],
+       [  8, 101]])]"
+phishing.csv,9,1,wagging,None,f1,0.9346938775510204,"[array([[128,   8],
+       [  8, 101]])]"
+phishing.csv,9,1,wagging,None,auc,0.9338909875876956,"[array([[128,   8],
+       [  8, 101]])]"
+phishing.csv,9,1,AdaBoost,None,acc,0.9306122448979591,"[array([[125,  11],
+       [  6, 103]])]"
+phishing.csv,9,1,AdaBoost,None,f1,0.9307404364476682,"[array([[125,  11],
+       [  6, 103]])]"
+phishing.csv,9,1,AdaBoost,None,auc,0.9320358877495951,"[array([[125,  11],
+       [  6, 103]])]"
+phishing.csv,9,1,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",acc,0.9428571428571428,"[array([[128,   8],
+       [  6, 103]])]"
+phishing.csv,9,1,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",f1,0.926530612244898,"[array([[127,   9],
+       [  9, 100]])]"
+phishing.csv,9,1,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",auc,0.9421546141392337,"[array([[129,   7],
+       [  7, 102]])]"
+phishing.csv,9,1,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.9346938775510204,"[array([[128,   8],
+       [  8, 101]])]"
+phishing.csv,9,1,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.9388886203950014,"[array([[126,  10],
+       [  5, 104]])]"
+phishing.csv,9,1,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",auc,0.9384781435509983,"[array([[128,   8],
+       [  7, 102]])]"
+phishing.csv,0,10,base,None,acc,0.9105691056910569,"[array([[126,  10],
+       [ 12,  98]])]"
+phishing.csv,0,10,base,None,f1,0.9104852623561392,"[array([[126,  10],
+       [ 12,  98]])]"
+phishing.csv,0,10,base,None,auc,0.9086898395721925,"[array([[126,  10],
+       [ 12,  98]])]"
+phishing.csv,0,10,wagging,None,acc,0.9308943089430894,"[array([[128,   8],
+       [  9, 101]])]"
+phishing.csv,0,10,wagging,None,f1,0.9308631005924691,"[array([[128,   8],
+       [  9, 101]])]"
+phishing.csv,0,10,wagging,None,auc,0.9296791443850267,"[array([[128,   8],
+       [  9, 101]])]"
+phishing.csv,0,10,AdaBoost,None,acc,0.9512195121951219,"[array([[129,   7],
+       [  5, 105]])]"
+phishing.csv,0,10,AdaBoost,None,f1,0.9512585756488194,"[array([[129,   7],
+       [  5, 105]])]"
+phishing.csv,0,10,AdaBoost,None,auc,0.9515374331550802,"[array([[129,   7],
+       [  5, 105]])]"
+phishing.csv,0,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",acc,0.9227642276422764,"[array([[126,  10],
+       [  9, 101]])]"
+phishing.csv,0,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",f1,0.9309231553854,"[array([[127,   9],
+       [  8, 102]])]"
+phishing.csv,0,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",auc,0.930548128342246,"[array([[127,   9],
+       [  8, 102]])]"
+phishing.csv,0,10,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",acc,0.943089430894309,"[array([[128,   8],
+       [  6, 104]])]"
+phishing.csv,0,10,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",f1,0.939094527391504,"[array([[127,   9],
+       [  6, 104]])]"
+phishing.csv,0,10,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,0.9350935828877006,"[array([[127,   9],
+       [  7, 103]])]"
+phishing.csv,1,10,base,None,acc,0.8780487804878049,"[array([[123,  13],
+       [ 17,  93]])]"
+phishing.csv,1,10,base,None,f1,0.8778033070185775,"[array([[123,  13],
+       [ 17,  93]])]"
+phishing.csv,1,10,base,None,auc,0.874933155080214,"[array([[123,  13],
+       [ 17,  93]])]"
+phishing.csv,1,10,wagging,None,acc,0.8983739837398373,"[array([[123,  13],
+       [ 12,  98]])]"
+phishing.csv,1,10,wagging,None,f1,0.8984164049785295,"[array([[123,  13],
+       [ 12,  98]])]"
+phishing.csv,1,10,wagging,None,auc,0.8976604278074867,"[array([[123,  13],
+       [ 12,  98]])]"
+phishing.csv,1,10,AdaBoost,None,acc,0.9105691056910569,"[array([[126,  10],
+       [ 12,  98]])]"
+phishing.csv,1,10,AdaBoost,None,f1,0.9104852623561392,"[array([[126,  10],
+       [ 12,  98]])]"
+phishing.csv,1,10,AdaBoost,None,auc,0.9086898395721925,"[array([[126,  10],
+       [ 12,  98]])]"
+phishing.csv,1,10,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",acc,0.9105691056910569,"[array([[124,  12],
+       [ 10, 100]])]"
+phishing.csv,1,10,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",f1,0.8943935805724423,"[array([[122,  14],
+       [ 12,  98]])]"
+phishing.csv,1,10,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",auc,0.9039438502673797,"[array([[121,  15],
+       [  9, 101]])]"
+phishing.csv,1,10,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",acc,0.9146341463414634,"[array([[124,  12],
+       [  9, 101]])]"
+phishing.csv,1,10,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",f1,0.9107476223474723,"[array([[122,  14],
+       [  8, 102]])]"
+phishing.csv,1,10,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",auc,0.8985294117647058,"[array([[122,  14],
+       [ 11,  99]])]"
+phishing.csv,2,10,base,None,acc,0.9186991869918699,"[array([[127,   9],
+       [ 11,  99]])]"
+phishing.csv,2,10,base,None,f1,0.9186229657783085,"[array([[127,   9],
+       [ 11,  99]])]"
+phishing.csv,2,10,base,None,auc,0.9169117647058823,"[array([[127,   9],
+       [ 11,  99]])]"
+phishing.csv,2,10,wagging,None,acc,0.9390243902439024,"[array([[128,   8],
+       [  7, 103]])]"
+phishing.csv,2,10,wagging,None,f1,0.9390498429871177,"[array([[128,   8],
+       [  7, 103]])]"
+phishing.csv,2,10,wagging,None,auc,0.9387700534759359,"[array([[128,   8],
+       [  7, 103]])]"
+phishing.csv,2,10,AdaBoost,None,acc,0.8943089430894309,"[array([[121,  15],
+       [ 11,  99]])]"
+phishing.csv,2,10,AdaBoost,None,f1,0.8944638740097423,"[array([[121,  15],
+       [ 11,  99]])]"
+phishing.csv,2,10,AdaBoost,None,auc,0.8948529411764705,"[array([[121,  15],
+       [ 11,  99]])]"
+phishing.csv,2,10,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",acc,0.9390243902439024,"[array([[128,   8],
+       [  7, 103]])]"
+phishing.csv,2,10,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",f1,0.935011434198426,"[array([[127,   9],
+       [  7, 103]])]"
+phishing.csv,2,10,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",auc,0.9342245989304813,"[array([[128,   8],
+       [  8, 102]])]"
+phishing.csv,2,10,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",acc,0.926829268292683,"[array([[127,   9],
+       [  9, 101]])]"
+phishing.csv,2,10,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",f1,0.9266819842111463,"[array([[129,   7],
+       [ 11,  99]])]"
+phishing.csv,2,10,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",auc,0.9342245989304813,"[array([[128,   8],
+       [  8, 102]])]"
+phishing.csv,3,10,base,None,acc,0.9105691056910569,"[array([[129,   7],
+       [ 15,  95]])]"
+phishing.csv,3,10,base,None,f1,0.9101593145311507,"[array([[129,   7],
+       [ 15,  95]])]"
+phishing.csv,3,10,base,None,auc,0.9060828877005348,"[array([[129,   7],
+       [ 15,  95]])]"
+phishing.csv,3,10,wagging,None,acc,0.9308943089430894,"[array([[131,   5],
+       [ 12,  98]])]"
+phishing.csv,3,10,wagging,None,f1,0.9306256866900035,"[array([[131,   5],
+       [ 12,  98]])]"
+phishing.csv,3,10,wagging,None,auc,0.9270721925133689,"[array([[131,   5],
+       [ 12,  98]])]"
+phishing.csv,3,10,AdaBoost,None,acc,0.9308943089430894,"[array([[129,   7],
+       [ 10, 100]])]"
+phishing.csv,3,10,AdaBoost,None,f1,0.9307935599674387,"[array([[129,   7],
+       [ 10, 100]])]"
+phishing.csv,3,10,AdaBoost,None,auc,0.9288101604278075,"[array([[129,   7],
+       [ 10, 100]])]"
+phishing.csv,3,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",acc,0.943089430894309,"[array([[132,   4],
+       [ 10, 100]])]"
+phishing.csv,3,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",f1,0.9387873706088266,"[array([[132,   4],
+       [ 11,  99]])]"
+phishing.csv,3,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",auc,0.9361631016042782,"[array([[131,   5],
+       [ 10, 100]])]"
+phishing.csv,3,10,Incremental_Mixed_Bagging,"[[-3.0, 1.0]]",acc,0.9512195121951219,"[array([[132,   4],
+       [  8, 102]])]"
+phishing.csv,3,10,Incremental_Mixed_Bagging,"[[-3.0, 1.0]]",f1,0.9511213228074309,"[array([[132,   4],
+       [  8, 102]])]"
+phishing.csv,3,10,Incremental_Mixed_Bagging,"[[-3.0, 1.0]]",auc,0.9497994652406418,"[array([[131,   5],
+       [  7, 103]])]"
+phishing.csv,4,10,base,None,acc,0.9308943089430894,"[array([[124,  13],
+       [  4, 105]])]"
+phishing.csv,4,10,base,None,f1,0.9310907526829402,"[array([[124,  13],
+       [  4, 105]])]"
+phishing.csv,4,10,base,None,auc,0.9342061206723364,"[array([[124,  13],
+       [  4, 105]])]"
+phishing.csv,4,10,wagging,None,acc,0.959349593495935,"[array([[129,   8],
+       [  2, 107]])]"
+phishing.csv,4,10,wagging,None,f1,0.9594389767191916,"[array([[129,   8],
+       [  2, 107]])]"
+phishing.csv,4,10,wagging,None,auc,0.9616286077814238,"[array([[129,   8],
+       [  2, 107]])]"
+phishing.csv,4,10,AdaBoost,None,acc,0.9390243902439024,"[array([[125,  12],
+       [  3, 106]])]"
+phishing.csv,4,10,AdaBoost,None,f1,0.9391977229555356,"[array([[125,  12],
+       [  3, 106]])]"
+phishing.csv,4,10,AdaBoost,None,auc,0.9424429116721356,"[array([[125,  12],
+       [  3, 106]])]"
+phishing.csv,4,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",acc,0.9512195121951219,"[array([[128,   9],
+       [  3, 106]])]"
+phishing.csv,4,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",f1,0.9553939689209626,"[array([[128,   9],
+       [  2, 107]])]"
+phishing.csv,4,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",auc,0.9533918167816245,"[array([[128,   9],
+       [  3, 106]])]"
+phishing.csv,4,10,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9552845528455285,"[array([[129,   8],
+       [  3, 106]])]"
+phishing.csv,4,10,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9594146992520974,"[array([[130,   7],
+       [  3, 106]])]"
+phishing.csv,4,10,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.9497421817451281,"[array([[127,  10],
+       [  3, 106]])]"
+phishing.csv,5,10,base,None,acc,0.8943089430894309,"[array([[125,  12],
+       [ 14,  95]])]"
+phishing.csv,5,10,base,None,f1,0.8942025712527657,"[array([[125,  12],
+       [ 14,  95]])]"
+phishing.csv,5,10,base,None,auc,0.8919841960758051,"[array([[125,  12],
+       [ 14,  95]])]"
+phishing.csv,5,10,wagging,None,acc,0.9105691056910569,"[array([[130,   7],
+       [ 15,  94]])]"
+phishing.csv,5,10,wagging,None,f1,0.9101341834087034,"[array([[130,   7],
+       [ 15,  94]])]"
+phishing.csv,5,10,wagging,None,auc,0.9056452152949843,"[array([[130,   7],
+       [ 15,  94]])]"
+phishing.csv,5,10,AdaBoost,None,acc,0.9308943089430894,"[array([[130,   7],
+       [ 10,  99]])]"
+phishing.csv,5,10,AdaBoost,None,f1,0.9307863947584148,"[array([[130,   7],
+       [ 10,  99]])]"
+phishing.csv,5,10,AdaBoost,None,auc,0.928580995111498,"[array([[130,   7],
+       [ 10,  99]])]"
+phishing.csv,5,10,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",acc,0.9227642276422764,"[array([[129,   8],
+       [ 11,  98]])]"
+phishing.csv,5,10,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",f1,0.9267556262519147,"[array([[129,   8],
+       [ 10,  99]])]"
+phishing.csv,5,10,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",auc,0.9432799839282127,"[array([[129,   8],
+       [  6, 103]])]"
+phishing.csv,5,10,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",acc,0.9349593495934959,"[array([[131,   6],
+       [ 10,  99]])]"
+phishing.csv,5,10,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",f1,0.942966984971403,"[array([[132,   5],
+       [  9, 100]])]"
+phishing.csv,5,10,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",auc,0.9295185160383044,"[array([[129,   8],
+       [  9, 100]])]"
+phishing.csv,6,10,base,None,acc,0.9387755102040817,"[array([[127,   9],
+       [  6, 103]])]"
+phishing.csv,6,10,base,None,f1,0.9388496605390799,"[array([[127,   9],
+       [  6, 103]])]"
+phishing.csv,6,10,base,None,auc,0.9393888289260658,"[array([[127,   9],
+       [  6, 103]])]"
+phishing.csv,6,10,wagging,None,acc,0.9387755102040817,"[array([[129,   7],
+       [  8, 101]])]"
+phishing.csv,6,10,wagging,None,f1,0.9387465727162897,"[array([[129,   7],
+       [  8, 101]])]"
+phishing.csv,6,10,wagging,None,auc,0.9375674581759308,"[array([[129,   7],
+       [  8, 101]])]"
+phishing.csv,6,10,AdaBoost,None,acc,0.9551020408163265,"[array([[128,   8],
+       [  3, 106]])]"
+phishing.csv,6,10,AdaBoost,None,f1,0.9551849882896676,"[array([[128,   8],
+       [  3, 106]])]"
+phishing.csv,6,10,AdaBoost,None,auc,0.9568267674042094,"[array([[128,   8],
+       [  3, 106]])]"
+phishing.csv,6,10,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 2.0]",acc,0.9469387755102041,"[array([[130,   6],
+       [  7, 102]])]"
+phishing.csv,6,10,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",f1,0.9469136963541177,"[array([[130,   6],
+       [  7, 102]])]"
+phishing.csv,6,10,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",auc,0.9283931462493255,"[array([[129,   7],
+       [ 10,  99]])]"
+phishing.csv,6,10,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",acc,0.9469387755102041,"[array([[128,   8],
+       [  5, 104]])]"
+phishing.csv,6,10,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",f1,0.9346298779041221,"[array([[129,   7],
+       [  9, 100]])]"
+phishing.csv,6,10,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",auc,0.9550053966540746,"[array([[130,   6],
+       [  5, 104]])]"
+phishing.csv,7,10,base,None,acc,0.9428571428571428,"[array([[130,   6],
+       [  8, 101]])]"
+phishing.csv,7,10,base,None,f1,0.9428011431661067,"[array([[130,   6],
+       [  8, 101]])]"
+phishing.csv,7,10,base,None,auc,0.9412439287641663,"[array([[130,   6],
+       [  8, 101]])]"
+phishing.csv,7,10,wagging,None,acc,0.9387755102040817,"[array([[131,   5],
+       [ 10,  99]])]"
+phishing.csv,7,10,wagging,None,f1,0.9386094805034436,"[array([[131,   5],
+       [ 10,  99]])]"
+phishing.csv,7,10,wagging,None,auc,0.9357460874257961,"[array([[131,   5],
+       [ 10,  99]])]"
+phishing.csv,7,10,AdaBoost,None,acc,0.9510204081632653,"[array([[130,   6],
+       [  6, 103]])]"
+phishing.csv,7,10,AdaBoost,None,f1,0.9510204081632653,"[array([[130,   6],
+       [  6, 103]])]"
+phishing.csv,7,10,AdaBoost,None,auc,0.9504182406907717,"[array([[130,   6],
+       [  6, 103]])]"
+phishing.csv,7,10,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",acc,0.9551020408163265,"[array([[131,   5],
+       [  6, 103]])]"
+phishing.csv,7,10,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",f1,0.9509175795470564,"[array([[132,   4],
+       [  8, 101]])]"
+phishing.csv,7,10,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",auc,0.9403332433890988,"[array([[131,   5],
+       [  9, 100]])]"
+phishing.csv,7,10,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",acc,0.9387755102040817,"[array([[132,   4],
+       [ 11,  98]])]"
+phishing.csv,7,10,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",f1,0.9509175795470564,"[array([[132,   4],
+       [  8, 101]])]"
+phishing.csv,7,10,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",auc,0.9485968699406367,"[array([[132,   4],
+       [  8, 101]])]"
+phishing.csv,8,10,base,None,acc,0.9224489795918367,"[array([[128,   8],
+       [ 11,  98]])]"
+phishing.csv,8,10,base,None,f1,0.9223309315269449,"[array([[128,   8],
+       [ 11,  98]])]"
+phishing.csv,8,10,base,None,auc,0.9201295196977873,"[array([[128,   8],
+       [ 11,  98]])]"
+phishing.csv,8,10,wagging,None,acc,0.926530612244898,"[array([[130,   6],
+       [ 12,  97]])]"
+phishing.csv,8,10,wagging,None,f1,0.9262837862170794,"[array([[130,   6],
+       [ 12,  97]])]"
+phishing.csv,8,10,wagging,None,auc,0.9228953049109553,"[array([[130,   6],
+       [ 12,  97]])]"
+phishing.csv,8,10,AdaBoost,None,acc,0.9102040816326531,"[array([[125,  11],
+       [ 11,  98]])]"
+phishing.csv,8,10,AdaBoost,None,f1,0.9102040816326531,"[array([[125,  11],
+       [ 11,  98]])]"
+phishing.csv,8,10,AdaBoost,None,auc,0.9091001079330814,"[array([[125,  11],
+       [ 11,  98]])]"
+phishing.csv,8,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",acc,0.9183673469387755,"[array([[129,   7],
+       [ 13,  96]])]"
+phishing.csv,8,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",f1,0.918093095796755,"[array([[129,   7],
+       [ 13,  96]])]"
+phishing.csv,8,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",auc,0.9228953049109553,"[array([[130,   6],
+       [ 12,  97]])]"
+phishing.csv,8,10,Incremental_Mixed_Bagging,"[[-3.0, 1.0]]",acc,0.9306122448979591,"[array([[131,   5],
+       [ 12,  97]])]"
+phishing.csv,8,10,Incremental_Mixed_Bagging,"[[-3.0, 1.0]]",f1,0.9262837862170794,"[array([[130,   6],
+       [ 12,  97]])]"
+phishing.csv,8,10,Incremental_Mixed_Bagging,"[[-3.0, 1.0]]",auc,0.9192188343227199,"[array([[129,   7],
+       [ 12,  97]])]"
+phishing.csv,9,10,base,None,acc,0.9224489795918367,"[array([[126,  10],
+       [  9, 100]])]"
+phishing.csv,9,10,base,None,f1,0.9224829536525727,"[array([[126,  10],
+       [  9, 100]])]"
+phishing.csv,9,10,base,None,auc,0.9219508904479223,"[array([[126,  10],
+       [  9, 100]])]"
+phishing.csv,9,10,wagging,None,acc,0.9346938775510204,"[array([[128,   8],
+       [  8, 101]])]"
+phishing.csv,9,10,wagging,None,f1,0.9346938775510204,"[array([[128,   8],
+       [  8, 101]])]"
+phishing.csv,9,10,wagging,None,auc,0.9338909875876956,"[array([[128,   8],
+       [  8, 101]])]"
+phishing.csv,9,10,AdaBoost,None,acc,0.9306122448979591,"[array([[125,  11],
+       [  6, 103]])]"
+phishing.csv,9,10,AdaBoost,None,f1,0.9307404364476682,"[array([[125,  11],
+       [  6, 103]])]"
+phishing.csv,9,10,AdaBoost,None,auc,0.9320358877495951,"[array([[125,  11],
+       [  6, 103]])]"
+phishing.csv,9,10,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",acc,0.9428571428571428,"[array([[128,   8],
+       [  6, 103]])]"
+phishing.csv,9,10,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",f1,0.926530612244898,"[array([[127,   9],
+       [  9, 100]])]"
+phishing.csv,9,10,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",auc,0.9421546141392337,"[array([[129,   7],
+       [  7, 102]])]"
+phishing.csv,9,10,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.9346938775510204,"[array([[128,   8],
+       [  8, 101]])]"
+phishing.csv,9,10,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.9388886203950014,"[array([[126,  10],
+       [  5, 104]])]"
+phishing.csv,9,10,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",auc,0.9384781435509983,"[array([[128,   8],
+       [  7, 102]])]"
+phishing.csv,0,20,base,None,acc,0.9105691056910569,"[array([[126,  10],
+       [ 12,  98]])]"
+phishing.csv,0,20,base,None,f1,0.9104852623561392,"[array([[126,  10],
+       [ 12,  98]])]"
+phishing.csv,0,20,base,None,auc,0.9086898395721925,"[array([[126,  10],
+       [ 12,  98]])]"
+phishing.csv,0,20,wagging,None,acc,0.9308943089430894,"[array([[128,   8],
+       [  9, 101]])]"
+phishing.csv,0,20,wagging,None,f1,0.9308631005924691,"[array([[128,   8],
+       [  9, 101]])]"
+phishing.csv,0,20,wagging,None,auc,0.9296791443850267,"[array([[128,   8],
+       [  9, 101]])]"
+phishing.csv,0,20,AdaBoost,None,acc,0.9512195121951219,"[array([[129,   7],
+       [  5, 105]])]"
+phishing.csv,0,20,AdaBoost,None,f1,0.9512585756488194,"[array([[129,   7],
+       [  5, 105]])]"
+phishing.csv,0,20,AdaBoost,None,auc,0.9515374331550802,"[array([[129,   7],
+       [  5, 105]])]"
+phishing.csv,0,20,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",acc,0.9227642276422764,"[array([[126,  10],
+       [  9, 101]])]"
+phishing.csv,0,20,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",f1,0.9309231553854,"[array([[127,   9],
+       [  8, 102]])]"
+phishing.csv,0,20,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",auc,0.930548128342246,"[array([[127,   9],
+       [  8, 102]])]"
+phishing.csv,0,20,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",acc,0.943089430894309,"[array([[128,   8],
+       [  6, 104]])]"
+phishing.csv,0,20,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",f1,0.939094527391504,"[array([[127,   9],
+       [  6, 104]])]"
+phishing.csv,0,20,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,0.9350935828877006,"[array([[127,   9],
+       [  7, 103]])]"
+phishing.csv,1,20,base,None,acc,0.8780487804878049,"[array([[123,  13],
+       [ 17,  93]])]"
+phishing.csv,1,20,base,None,f1,0.8778033070185775,"[array([[123,  13],
+       [ 17,  93]])]"
+phishing.csv,1,20,base,None,auc,0.874933155080214,"[array([[123,  13],
+       [ 17,  93]])]"
+phishing.csv,1,20,wagging,None,acc,0.8983739837398373,"[array([[123,  13],
+       [ 12,  98]])]"
+phishing.csv,1,20,wagging,None,f1,0.8984164049785295,"[array([[123,  13],
+       [ 12,  98]])]"
+phishing.csv,1,20,wagging,None,auc,0.8976604278074867,"[array([[123,  13],
+       [ 12,  98]])]"
+phishing.csv,1,20,AdaBoost,None,acc,0.9105691056910569,"[array([[126,  10],
+       [ 12,  98]])]"
+phishing.csv,1,20,AdaBoost,None,f1,0.9104852623561392,"[array([[126,  10],
+       [ 12,  98]])]"
+phishing.csv,1,20,AdaBoost,None,auc,0.9086898395721925,"[array([[126,  10],
+       [ 12,  98]])]"
+phishing.csv,1,20,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",acc,0.9105691056910569,"[array([[124,  12],
+       [ 10, 100]])]"
+phishing.csv,1,20,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",f1,0.8943935805724423,"[array([[122,  14],
+       [ 12,  98]])]"
+phishing.csv,1,20,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",auc,0.9039438502673797,"[array([[121,  15],
+       [  9, 101]])]"
+phishing.csv,1,20,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",acc,0.9146341463414634,"[array([[124,  12],
+       [  9, 101]])]"
+phishing.csv,1,20,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",f1,0.9107476223474723,"[array([[122,  14],
+       [  8, 102]])]"
+phishing.csv,1,20,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",auc,0.8985294117647058,"[array([[122,  14],
+       [ 11,  99]])]"
+phishing.csv,2,20,base,None,acc,0.9186991869918699,"[array([[127,   9],
+       [ 11,  99]])]"
+phishing.csv,2,20,base,None,f1,0.9186229657783085,"[array([[127,   9],
+       [ 11,  99]])]"
+phishing.csv,2,20,base,None,auc,0.9169117647058823,"[array([[127,   9],
+       [ 11,  99]])]"
+phishing.csv,2,20,wagging,None,acc,0.9390243902439024,"[array([[128,   8],
+       [  7, 103]])]"
+phishing.csv,2,20,wagging,None,f1,0.9390498429871177,"[array([[128,   8],
+       [  7, 103]])]"
+phishing.csv,2,20,wagging,None,auc,0.9387700534759359,"[array([[128,   8],
+       [  7, 103]])]"
+phishing.csv,2,20,AdaBoost,None,acc,0.8943089430894309,"[array([[121,  15],
+       [ 11,  99]])]"
+phishing.csv,2,20,AdaBoost,None,f1,0.8944638740097423,"[array([[121,  15],
+       [ 11,  99]])]"
+phishing.csv,2,20,AdaBoost,None,auc,0.8948529411764705,"[array([[121,  15],
+       [ 11,  99]])]"
+phishing.csv,2,20,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",acc,0.9390243902439024,"[array([[128,   8],
+       [  7, 103]])]"
+phishing.csv,2,20,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",f1,0.935011434198426,"[array([[127,   9],
+       [  7, 103]])]"
+phishing.csv,2,20,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",auc,0.9342245989304813,"[array([[128,   8],
+       [  8, 102]])]"
+phishing.csv,2,20,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",acc,0.926829268292683,"[array([[127,   9],
+       [  9, 101]])]"
+phishing.csv,2,20,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",f1,0.9266819842111463,"[array([[129,   7],
+       [ 11,  99]])]"
+phishing.csv,2,20,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",auc,0.9342245989304813,"[array([[128,   8],
+       [  8, 102]])]"
+phishing.csv,3,20,base,None,acc,0.9105691056910569,"[array([[129,   7],
+       [ 15,  95]])]"
+phishing.csv,3,20,base,None,f1,0.9101593145311507,"[array([[129,   7],
+       [ 15,  95]])]"
+phishing.csv,3,20,base,None,auc,0.9060828877005348,"[array([[129,   7],
+       [ 15,  95]])]"
+phishing.csv,3,20,wagging,None,acc,0.9308943089430894,"[array([[131,   5],
+       [ 12,  98]])]"
+phishing.csv,3,20,wagging,None,f1,0.9306256866900035,"[array([[131,   5],
+       [ 12,  98]])]"
+phishing.csv,3,20,wagging,None,auc,0.9270721925133689,"[array([[131,   5],
+       [ 12,  98]])]"
+phishing.csv,3,20,AdaBoost,None,acc,0.9308943089430894,"[array([[129,   7],
+       [ 10, 100]])]"
+phishing.csv,3,20,AdaBoost,None,f1,0.9307935599674387,"[array([[129,   7],
+       [ 10, 100]])]"
+phishing.csv,3,20,AdaBoost,None,auc,0.9288101604278075,"[array([[129,   7],
+       [ 10, 100]])]"
+phishing.csv,3,20,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",acc,0.943089430894309,"[array([[132,   4],
+       [ 10, 100]])]"
+phishing.csv,3,20,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",f1,0.9387873706088266,"[array([[132,   4],
+       [ 11,  99]])]"
+phishing.csv,3,20,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",auc,0.9361631016042782,"[array([[131,   5],
+       [ 10, 100]])]"
+phishing.csv,3,20,Incremental_Mixed_Bagging,"[[-3.0, 1.0]]",acc,0.9512195121951219,"[array([[132,   4],
+       [  8, 102]])]"
+phishing.csv,3,20,Incremental_Mixed_Bagging,"[[-3.0, 1.0]]",f1,0.9511213228074309,"[array([[132,   4],
+       [  8, 102]])]"
+phishing.csv,3,20,Incremental_Mixed_Bagging,"[[-3.0, 1.0]]",auc,0.9497994652406418,"[array([[131,   5],
+       [  7, 103]])]"
+phishing.csv,4,20,base,None,acc,0.9308943089430894,"[array([[124,  13],
+       [  4, 105]])]"
+phishing.csv,4,20,base,None,f1,0.9310907526829402,"[array([[124,  13],
+       [  4, 105]])]"
+phishing.csv,4,20,base,None,auc,0.9342061206723364,"[array([[124,  13],
+       [  4, 105]])]"
+phishing.csv,4,20,wagging,None,acc,0.959349593495935,"[array([[129,   8],
+       [  2, 107]])]"
+phishing.csv,4,20,wagging,None,f1,0.9594389767191916,"[array([[129,   8],
+       [  2, 107]])]"
+phishing.csv,4,20,wagging,None,auc,0.9616286077814238,"[array([[129,   8],
+       [  2, 107]])]"
+phishing.csv,4,20,AdaBoost,None,acc,0.9390243902439024,"[array([[125,  12],
+       [  3, 106]])]"
+phishing.csv,4,20,AdaBoost,None,f1,0.9391977229555356,"[array([[125,  12],
+       [  3, 106]])]"
+phishing.csv,4,20,AdaBoost,None,auc,0.9424429116721356,"[array([[125,  12],
+       [  3, 106]])]"
+phishing.csv,4,20,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",acc,0.9512195121951219,"[array([[128,   9],
+       [  3, 106]])]"
+phishing.csv,4,20,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",f1,0.9553939689209626,"[array([[128,   9],
+       [  2, 107]])]"
+phishing.csv,4,20,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",auc,0.9533918167816245,"[array([[128,   9],
+       [  3, 106]])]"
+phishing.csv,4,20,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9552845528455285,"[array([[129,   8],
+       [  3, 106]])]"
+phishing.csv,4,20,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9594146992520974,"[array([[130,   7],
+       [  3, 106]])]"
+phishing.csv,4,20,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.9497421817451281,"[array([[127,  10],
+       [  3, 106]])]"
+phishing.csv,5,20,base,None,acc,0.8943089430894309,"[array([[125,  12],
+       [ 14,  95]])]"
+phishing.csv,5,20,base,None,f1,0.8942025712527657,"[array([[125,  12],
+       [ 14,  95]])]"
+phishing.csv,5,20,base,None,auc,0.8919841960758051,"[array([[125,  12],
+       [ 14,  95]])]"
+phishing.csv,5,20,wagging,None,acc,0.9105691056910569,"[array([[130,   7],
+       [ 15,  94]])]"
+phishing.csv,5,20,wagging,None,f1,0.9101341834087034,"[array([[130,   7],
+       [ 15,  94]])]"
+phishing.csv,5,20,wagging,None,auc,0.9056452152949843,"[array([[130,   7],
+       [ 15,  94]])]"
+phishing.csv,5,20,AdaBoost,None,acc,0.9308943089430894,"[array([[130,   7],
+       [ 10,  99]])]"
+phishing.csv,5,20,AdaBoost,None,f1,0.9307863947584148,"[array([[130,   7],
+       [ 10,  99]])]"
+phishing.csv,5,20,AdaBoost,None,auc,0.928580995111498,"[array([[130,   7],
+       [ 10,  99]])]"
+phishing.csv,5,20,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",acc,0.9227642276422764,"[array([[129,   8],
+       [ 11,  98]])]"
+phishing.csv,5,20,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",f1,0.9267556262519147,"[array([[129,   8],
+       [ 10,  99]])]"
+phishing.csv,5,20,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",auc,0.9432799839282127,"[array([[129,   8],
+       [  6, 103]])]"
+phishing.csv,5,20,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",acc,0.9349593495934959,"[array([[131,   6],
+       [ 10,  99]])]"
+phishing.csv,5,20,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",f1,0.942966984971403,"[array([[132,   5],
+       [  9, 100]])]"
+phishing.csv,5,20,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",auc,0.9295185160383044,"[array([[129,   8],
+       [  9, 100]])]"
+phishing.csv,6,20,base,None,acc,0.9387755102040817,"[array([[127,   9],
+       [  6, 103]])]"
+phishing.csv,6,20,base,None,f1,0.9388496605390799,"[array([[127,   9],
+       [  6, 103]])]"
+phishing.csv,6,20,base,None,auc,0.9393888289260658,"[array([[127,   9],
+       [  6, 103]])]"
+phishing.csv,6,20,wagging,None,acc,0.9387755102040817,"[array([[129,   7],
+       [  8, 101]])]"
+phishing.csv,6,20,wagging,None,f1,0.9387465727162897,"[array([[129,   7],
+       [  8, 101]])]"
+phishing.csv,6,20,wagging,None,auc,0.9375674581759308,"[array([[129,   7],
+       [  8, 101]])]"
+phishing.csv,6,20,AdaBoost,None,acc,0.9551020408163265,"[array([[128,   8],
+       [  3, 106]])]"
+phishing.csv,6,20,AdaBoost,None,f1,0.9551849882896676,"[array([[128,   8],
+       [  3, 106]])]"
+phishing.csv,6,20,AdaBoost,None,auc,0.9568267674042094,"[array([[128,   8],
+       [  3, 106]])]"
+phishing.csv,6,20,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 2.0]",acc,0.9469387755102041,"[array([[130,   6],
+       [  7, 102]])]"
+phishing.csv,6,20,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",f1,0.9469136963541177,"[array([[130,   6],
+       [  7, 102]])]"
+phishing.csv,6,20,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",auc,0.9283931462493255,"[array([[129,   7],
+       [ 10,  99]])]"
+phishing.csv,6,20,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",acc,0.9469387755102041,"[array([[128,   8],
+       [  5, 104]])]"
+phishing.csv,6,20,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",f1,0.9346298779041221,"[array([[129,   7],
+       [  9, 100]])]"
+phishing.csv,6,20,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",auc,0.9550053966540746,"[array([[130,   6],
+       [  5, 104]])]"
+phishing.csv,7,20,base,None,acc,0.9428571428571428,"[array([[130,   6],
+       [  8, 101]])]"
+phishing.csv,7,20,base,None,f1,0.9428011431661067,"[array([[130,   6],
+       [  8, 101]])]"
+phishing.csv,7,20,base,None,auc,0.9412439287641663,"[array([[130,   6],
+       [  8, 101]])]"
+phishing.csv,7,20,wagging,None,acc,0.9387755102040817,"[array([[131,   5],
+       [ 10,  99]])]"
+phishing.csv,7,20,wagging,None,f1,0.9386094805034436,"[array([[131,   5],
+       [ 10,  99]])]"
+phishing.csv,7,20,wagging,None,auc,0.9357460874257961,"[array([[131,   5],
+       [ 10,  99]])]"
+phishing.csv,7,20,AdaBoost,None,acc,0.9510204081632653,"[array([[130,   6],
+       [  6, 103]])]"
+phishing.csv,7,20,AdaBoost,None,f1,0.9510204081632653,"[array([[130,   6],
+       [  6, 103]])]"
+phishing.csv,7,20,AdaBoost,None,auc,0.9504182406907717,"[array([[130,   6],
+       [  6, 103]])]"
+phishing.csv,7,20,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",acc,0.9551020408163265,"[array([[131,   5],
+       [  6, 103]])]"
+phishing.csv,7,20,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",f1,0.9509175795470564,"[array([[132,   4],
+       [  8, 101]])]"
+phishing.csv,7,20,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",auc,0.9403332433890988,"[array([[131,   5],
+       [  9, 100]])]"
+phishing.csv,7,20,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",acc,0.9387755102040817,"[array([[132,   4],
+       [ 11,  98]])]"
+phishing.csv,7,20,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",f1,0.9509175795470564,"[array([[132,   4],
+       [  8, 101]])]"
+phishing.csv,7,20,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",auc,0.9485968699406367,"[array([[132,   4],
+       [  8, 101]])]"
+phishing.csv,8,20,base,None,acc,0.9224489795918367,"[array([[128,   8],
+       [ 11,  98]])]"
+phishing.csv,8,20,base,None,f1,0.9223309315269449,"[array([[128,   8],
+       [ 11,  98]])]"
+phishing.csv,8,20,base,None,auc,0.9201295196977873,"[array([[128,   8],
+       [ 11,  98]])]"
+phishing.csv,8,20,wagging,None,acc,0.926530612244898,"[array([[130,   6],
+       [ 12,  97]])]"
+phishing.csv,8,20,wagging,None,f1,0.9262837862170794,"[array([[130,   6],
+       [ 12,  97]])]"
+phishing.csv,8,20,wagging,None,auc,0.9228953049109553,"[array([[130,   6],
+       [ 12,  97]])]"
+phishing.csv,8,20,AdaBoost,None,acc,0.9102040816326531,"[array([[125,  11],
+       [ 11,  98]])]"
+phishing.csv,8,20,AdaBoost,None,f1,0.9102040816326531,"[array([[125,  11],
+       [ 11,  98]])]"
+phishing.csv,8,20,AdaBoost,None,auc,0.9091001079330814,"[array([[125,  11],
+       [ 11,  98]])]"
+phishing.csv,8,20,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",acc,0.9183673469387755,"[array([[129,   7],
+       [ 13,  96]])]"
+phishing.csv,8,20,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",f1,0.918093095796755,"[array([[129,   7],
+       [ 13,  96]])]"
+phishing.csv,8,20,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",auc,0.9228953049109553,"[array([[130,   6],
+       [ 12,  97]])]"
+phishing.csv,8,20,Incremental_Mixed_Bagging,"[[-3.0, 1.0]]",acc,0.9306122448979591,"[array([[131,   5],
+       [ 12,  97]])]"
+phishing.csv,8,20,Incremental_Mixed_Bagging,"[[-3.0, 1.0]]",f1,0.9262837862170794,"[array([[130,   6],
+       [ 12,  97]])]"
+phishing.csv,8,20,Incremental_Mixed_Bagging,"[[-3.0, 1.0]]",auc,0.9192188343227199,"[array([[129,   7],
+       [ 12,  97]])]"
+phishing.csv,9,20,base,None,acc,0.9224489795918367,"[array([[126,  10],
+       [  9, 100]])]"
+phishing.csv,9,20,base,None,f1,0.9224829536525727,"[array([[126,  10],
+       [  9, 100]])]"
+phishing.csv,9,20,base,None,auc,0.9219508904479223,"[array([[126,  10],
+       [  9, 100]])]"
+phishing.csv,9,20,wagging,None,acc,0.9346938775510204,"[array([[128,   8],
+       [  8, 101]])]"
+phishing.csv,9,20,wagging,None,f1,0.9346938775510204,"[array([[128,   8],
+       [  8, 101]])]"
+phishing.csv,9,20,wagging,None,auc,0.9338909875876956,"[array([[128,   8],
+       [  8, 101]])]"
+phishing.csv,9,20,AdaBoost,None,acc,0.9306122448979591,"[array([[125,  11],
+       [  6, 103]])]"
+phishing.csv,9,20,AdaBoost,None,f1,0.9307404364476682,"[array([[125,  11],
+       [  6, 103]])]"
+phishing.csv,9,20,AdaBoost,None,auc,0.9320358877495951,"[array([[125,  11],
+       [  6, 103]])]"
+phishing.csv,9,20,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",acc,0.9428571428571428,"[array([[128,   8],
+       [  6, 103]])]"
+phishing.csv,9,20,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",f1,0.926530612244898,"[array([[127,   9],
+       [  9, 100]])]"
+phishing.csv,9,20,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",auc,0.9421546141392337,"[array([[129,   7],
+       [  7, 102]])]"
+phishing.csv,9,20,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.9346938775510204,"[array([[128,   8],
+       [  8, 101]])]"
+phishing.csv,9,20,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.9388886203950014,"[array([[126,  10],
+       [  5, 104]])]"
+phishing.csv,9,20,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",auc,0.9384781435509983,"[array([[128,   8],
+       [  7, 102]])]"
+phishing.csv,0,30,base,None,acc,0.9105691056910569,"[array([[126,  10],
+       [ 12,  98]])]"
+phishing.csv,0,30,base,None,f1,0.9104852623561392,"[array([[126,  10],
+       [ 12,  98]])]"
+phishing.csv,0,30,base,None,auc,0.9086898395721925,"[array([[126,  10],
+       [ 12,  98]])]"
+phishing.csv,0,30,wagging,None,acc,0.9308943089430894,"[array([[128,   8],
+       [  9, 101]])]"
+phishing.csv,0,30,wagging,None,f1,0.9308631005924691,"[array([[128,   8],
+       [  9, 101]])]"
+phishing.csv,0,30,wagging,None,auc,0.9296791443850267,"[array([[128,   8],
+       [  9, 101]])]"
+phishing.csv,0,30,AdaBoost,None,acc,0.9512195121951219,"[array([[129,   7],
+       [  5, 105]])]"
+phishing.csv,0,30,AdaBoost,None,f1,0.9512585756488194,"[array([[129,   7],
+       [  5, 105]])]"
+phishing.csv,0,30,AdaBoost,None,auc,0.9515374331550802,"[array([[129,   7],
+       [  5, 105]])]"
+phishing.csv,0,30,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",acc,0.9227642276422764,"[array([[126,  10],
+       [  9, 101]])]"
+phishing.csv,0,30,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",f1,0.9309231553854,"[array([[127,   9],
+       [  8, 102]])]"
+phishing.csv,0,30,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",auc,0.930548128342246,"[array([[127,   9],
+       [  8, 102]])]"
+phishing.csv,0,30,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",acc,0.943089430894309,"[array([[128,   8],
+       [  6, 104]])]"
+phishing.csv,0,30,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",f1,0.939094527391504,"[array([[127,   9],
+       [  6, 104]])]"
+phishing.csv,0,30,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,0.9350935828877006,"[array([[127,   9],
+       [  7, 103]])]"

@@ -1,0 +1,331 @@
+﻿dataset,CV_fold,n_trees,model,parameters,perf_measure,perf_value,Conf_Matrix
+cervical_cancer_risk_factors.csv,0,1,base,None,acc,0.9534883720930233,"[array([[79,  2],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,0,1,base,None,f1,0.9534883720930233,"[array([[79,  2],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,0,1,base,None,auc,0.7876543209876544,"[array([[79,  2],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,0,1,wagging,None,acc,0.9418604651162791,"[array([[79,  2],
+       [ 3,  2]])]"
+cervical_cancer_risk_factors.csv,0,1,wagging,None,f1,0.9388088330876176,"[array([[79,  2],
+       [ 3,  2]])]"
+cervical_cancer_risk_factors.csv,0,1,wagging,None,auc,0.6876543209876543,"[array([[79,  2],
+       [ 3,  2]])]"
+cervical_cancer_risk_factors.csv,0,1,AdaBoost,None,acc,0.9651162790697675,"[array([[80,  1],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,0,1,AdaBoost,None,f1,0.9632852998525704,"[array([[80,  1],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,0,1,AdaBoost,None,auc,0.7938271604938271,"[array([[80,  1],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,0,1,Grouped_Mixed_Bagging,"[[0.0, 1.0, 0.0], 1.0]",acc,0.9651162790697675,"[array([[80,  1],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,0,1,Grouped_Mixed_Bagging,"[[0.0, 1.0, 0.0], 1.0]",f1,0.9579583207490185,"[array([[81,  0],
+       [ 3,  2]])]"
+cervical_cancer_risk_factors.csv,0,1,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 3.0]",auc,0.8,"[array([[81,  0],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,0,1,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",acc,0.9651162790697675,"[array([[81,  0],
+       [ 3,  2]])]"
+cervical_cancer_risk_factors.csv,0,1,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",f1,0.9388088330876176,"[array([[79,  2],
+       [ 3,  2]])]"
+cervical_cancer_risk_factors.csv,0,1,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,0.8,"[array([[81,  0],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,1,1,base,None,acc,0.9302325581395349,"[array([[78,  3],
+       [ 3,  2]])]"
+cervical_cancer_risk_factors.csv,1,1,base,None,f1,0.9302325581395349,"[array([[78,  3],
+       [ 3,  2]])]"
+cervical_cancer_risk_factors.csv,1,1,base,None,auc,0.6814814814814815,"[array([[78,  3],
+       [ 3,  2]])]"
+cervical_cancer_risk_factors.csv,1,1,wagging,None,acc,0.9534883720930233,"[array([[79,  2],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,1,1,wagging,None,f1,0.9534883720930233,"[array([[79,  2],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,1,1,wagging,None,auc,0.7876543209876544,"[array([[79,  2],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,1,1,AdaBoost,None,acc,0.9186046511627907,"[array([[79,  2],
+       [ 5,  0]])]"
+cervical_cancer_risk_factors.csv,1,1,AdaBoost,None,f1,0.9019027484143761,"[array([[79,  2],
+       [ 5,  0]])]"
+cervical_cancer_risk_factors.csv,1,1,AdaBoost,None,auc,0.4876543209876543,"[array([[79,  2],
+       [ 5,  0]])]"
+cervical_cancer_risk_factors.csv,1,1,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 1.0]",acc,0.9767441860465116,"[array([[80,  1],
+       [ 1,  4]])]"
+cervical_cancer_risk_factors.csv,1,1,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 1.0]",f1,0.9665935682113639,"[array([[79,  2],
+       [ 1,  4]])]"
+cervical_cancer_risk_factors.csv,1,1,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 2.0]",auc,0.6876543209876543,"[array([[79,  2],
+       [ 3,  2]])]"
+cervical_cancer_risk_factors.csv,1,1,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",acc,0.9418604651162791,"[array([[78,  3],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,1,1,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",f1,0.9665935682113639,"[array([[79,  2],
+       [ 1,  4]])]"
+cervical_cancer_risk_factors.csv,1,1,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",auc,0.7876543209876544,"[array([[79,  2],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,2,1,base,None,acc,0.9534883720930233,"[array([[79,  2],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,2,1,base,None,f1,0.9534883720930233,"[array([[79,  2],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,2,1,base,None,auc,0.7876543209876544,"[array([[79,  2],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,2,1,wagging,None,acc,0.9651162790697675,"[array([[80,  1],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,2,1,wagging,None,f1,0.9632852998525704,"[array([[80,  1],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,2,1,wagging,None,auc,0.7938271604938271,"[array([[80,  1],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,2,1,AdaBoost,None,acc,0.9534883720930233,"[array([[79,  2],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,2,1,AdaBoost,None,f1,0.9534883720930233,"[array([[79,  2],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,2,1,AdaBoost,None,auc,0.7876543209876544,"[array([[79,  2],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,2,1,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",acc,0.9767441860465116,"[array([[80,  1],
+       [ 1,  4]])]"
+cervical_cancer_risk_factors.csv,2,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",f1,0.9632852998525704,"[array([[80,  1],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,2,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",auc,0.8938271604938272,"[array([[80,  1],
+       [ 1,  4]])]"
+cervical_cancer_risk_factors.csv,2,1,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",acc,0.9651162790697675,"[array([[80,  1],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,2,1,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",f1,0.9632852998525704,"[array([[80,  1],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,2,1,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,0.8938271604938272,"[array([[80,  1],
+       [ 1,  4]])]"
+cervical_cancer_risk_factors.csv,3,1,base,None,acc,0.9767441860465116,"[array([[78,  2],
+       [ 0,  6]])]"
+cervical_cancer_risk_factors.csv,3,1,base,None,f1,0.9782581269187097,"[array([[78,  2],
+       [ 0,  6]])]"
+cervical_cancer_risk_factors.csv,3,1,base,None,auc,0.9874999999999999,"[array([[78,  2],
+       [ 0,  6]])]"
+cervical_cancer_risk_factors.csv,3,1,wagging,None,acc,0.9651162790697675,"[array([[79,  1],
+       [ 2,  4]])]"
+cervical_cancer_risk_factors.csv,3,1,wagging,None,f1,0.9636389899281709,"[array([[79,  1],
+       [ 2,  4]])]"
+cervical_cancer_risk_factors.csv,3,1,wagging,None,auc,0.8270833333333333,"[array([[79,  1],
+       [ 2,  4]])]"
+cervical_cancer_risk_factors.csv,3,1,AdaBoost,None,acc,0.9651162790697675,"[array([[78,  2],
+       [ 1,  5]])]"
+cervical_cancer_risk_factors.csv,3,1,AdaBoost,None,f1,0.9663482634083774,"[array([[78,  2],
+       [ 1,  5]])]"
+cervical_cancer_risk_factors.csv,3,1,AdaBoost,None,auc,0.9041666666666667,"[array([[78,  2],
+       [ 1,  5]])]"
+cervical_cancer_risk_factors.csv,3,1,Grouped_Mixed_Bagging,"[[0.1, 0.8, 0.1], 2.0]",acc,0.9651162790697675,"[array([[79,  1],
+       [ 2,  4]])]"
+cervical_cancer_risk_factors.csv,3,1,Grouped_Mixed_Bagging,"[[0.1, 0.8, 0.1], 2.0]",f1,0.9636389899281709,"[array([[79,  1],
+       [ 2,  4]])]"
+cervical_cancer_risk_factors.csv,3,1,Grouped_Mixed_Bagging,"[[0.1, 0.8, 0.1], 2.0]",auc,0.9104166666666668,"[array([[79,  1],
+       [ 1,  5]])]"
+cervical_cancer_risk_factors.csv,3,1,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",acc,0.9767441860465116,"[array([[79,  1],
+       [ 1,  5]])]"
+cervical_cancer_risk_factors.csv,3,1,Incremental_Mixed_Bagging,"[[-2.0, 2.0]]",f1,0.9767441860465116,"[array([[79,  1],
+       [ 1,  5]])]"
+cervical_cancer_risk_factors.csv,3,1,Incremental_Mixed_Bagging,"[[-2.0, 2.0]]",auc,0.8270833333333333,"[array([[79,  1],
+       [ 2,  4]])]"
+cervical_cancer_risk_factors.csv,4,1,base,None,acc,0.8953488372093024,"[array([[76,  4],
+       [ 5,  1]])]"
+cervical_cancer_risk_factors.csv,4,1,base,None,f1,0.8909169697845128,"[array([[76,  4],
+       [ 5,  1]])]"
+cervical_cancer_risk_factors.csv,4,1,base,None,auc,0.5583333333333333,"[array([[76,  4],
+       [ 5,  1]])]"
+cervical_cancer_risk_factors.csv,4,1,wagging,None,acc,0.9651162790697675,"[array([[80,  0],
+       [ 3,  3]])]"
+cervical_cancer_risk_factors.csv,4,1,wagging,None,f1,0.9596233414181766,"[array([[80,  0],
+       [ 3,  3]])]"
+cervical_cancer_risk_factors.csv,4,1,wagging,None,auc,0.75,"[array([[80,  0],
+       [ 3,  3]])]"
+cervical_cancer_risk_factors.csv,4,1,AdaBoost,None,acc,0.8953488372093024,"[array([[76,  4],
+       [ 5,  1]])]"
+cervical_cancer_risk_factors.csv,4,1,AdaBoost,None,f1,0.8909169697845128,"[array([[76,  4],
+       [ 5,  1]])]"
+cervical_cancer_risk_factors.csv,4,1,AdaBoost,None,auc,0.5583333333333333,"[array([[76,  4],
+       [ 5,  1]])]"
+cervical_cancer_risk_factors.csv,4,1,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",acc,0.9418604651162791,"[array([[79,  1],
+       [ 4,  2]])]"
+cervical_cancer_risk_factors.csv,4,1,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",f1,0.9636389899281709,"[array([[79,  1],
+       [ 2,  4]])]"
+cervical_cancer_risk_factors.csv,4,1,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",auc,0.7437500000000001,"[array([[79,  1],
+       [ 3,  3]])]"
+cervical_cancer_risk_factors.csv,4,1,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.9651162790697675,"[array([[79,  1],
+       [ 2,  4]])]"
+cervical_cancer_risk_factors.csv,4,1,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9393983165469514,"[array([[78,  2],
+       [ 3,  3]])]"
+cervical_cancer_risk_factors.csv,4,1,Incremental_Mixed_Bagging,"[[-3.0, 1.0]]",auc,0.7437500000000001,"[array([[79,  1],
+       [ 3,  3]])]"
+cervical_cancer_risk_factors.csv,5,1,base,None,acc,0.9186046511627907,"[array([[76,  4],
+       [ 3,  3]])]"
+cervical_cancer_risk_factors.csv,5,1,base,None,f1,0.9214792812862141,"[array([[76,  4],
+       [ 3,  3]])]"
+cervical_cancer_risk_factors.csv,5,1,base,None,auc,0.7249999999999999,"[array([[76,  4],
+       [ 3,  3]])]"
+cervical_cancer_risk_factors.csv,5,1,wagging,None,acc,0.9069767441860465,"[array([[76,  4],
+       [ 4,  2]])]"
+cervical_cancer_risk_factors.csv,5,1,wagging,None,f1,0.9069767441860465,"[array([[76,  4],
+       [ 4,  2]])]"
+cervical_cancer_risk_factors.csv,5,1,wagging,None,auc,0.6416666666666666,"[array([[76,  4],
+       [ 4,  2]])]"
+cervical_cancer_risk_factors.csv,5,1,AdaBoost,None,acc,0.9186046511627907,"[array([[76,  4],
+       [ 3,  3]])]"
+cervical_cancer_risk_factors.csv,5,1,AdaBoost,None,f1,0.9214792812862141,"[array([[76,  4],
+       [ 3,  3]])]"
+cervical_cancer_risk_factors.csv,5,1,AdaBoost,None,auc,0.7249999999999999,"[array([[76,  4],
+       [ 3,  3]])]"
+cervical_cancer_risk_factors.csv,5,1,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 1.0]",acc,0.9186046511627907,"[array([[76,  4],
+       [ 3,  3]])]"
+cervical_cancer_risk_factors.csv,5,1,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 1.0]",f1,0.8909169697845128,"[array([[76,  4],
+       [ 5,  1]])]"
+cervical_cancer_risk_factors.csv,5,1,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 3.0]",auc,0.6416666666666666,"[array([[76,  4],
+       [ 4,  2]])]"
+cervical_cancer_risk_factors.csv,5,1,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,0.9069767441860465,"[array([[76,  4],
+       [ 4,  2]])]"
+cervical_cancer_risk_factors.csv,5,1,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,0.9069767441860465,"[array([[76,  4],
+       [ 4,  2]])]"
+cervical_cancer_risk_factors.csv,5,1,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,0.5583333333333333,"[array([[76,  4],
+       [ 5,  1]])]"
+cervical_cancer_risk_factors.csv,6,1,base,None,acc,0.9534883720930233,"[array([[77,  3],
+       [ 1,  5]])]"
+cervical_cancer_risk_factors.csv,6,1,base,None,f1,0.9565162538374197,"[array([[77,  3],
+       [ 1,  5]])]"
+cervical_cancer_risk_factors.csv,6,1,base,None,auc,0.8979166666666668,"[array([[77,  3],
+       [ 1,  5]])]"
+cervical_cancer_risk_factors.csv,6,1,wagging,None,acc,0.9418604651162791,"[array([[77,  3],
+       [ 2,  4]])]"
+cervical_cancer_risk_factors.csv,6,1,wagging,None,f1,0.9439137723472959,"[array([[77,  3],
+       [ 2,  4]])]"
+cervical_cancer_risk_factors.csv,6,1,wagging,None,auc,0.8145833333333332,"[array([[77,  3],
+       [ 2,  4]])]"
+cervical_cancer_risk_factors.csv,6,1,AdaBoost,None,acc,0.9534883720930233,"[array([[77,  3],
+       [ 1,  5]])]"
+cervical_cancer_risk_factors.csv,6,1,AdaBoost,None,f1,0.9565162538374197,"[array([[77,  3],
+       [ 1,  5]])]"
+cervical_cancer_risk_factors.csv,6,1,AdaBoost,None,auc,0.8979166666666668,"[array([[77,  3],
+       [ 1,  5]])]"
+cervical_cancer_risk_factors.csv,6,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",acc,0.9418604651162791,"[array([[77,  3],
+       [ 2,  4]])]"
+cervical_cancer_risk_factors.csv,6,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",f1,0.9439137723472959,"[array([[77,  3],
+       [ 2,  4]])]"
+cervical_cancer_risk_factors.csv,6,1,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 1.0]",auc,0.8979166666666668,"[array([[77,  3],
+       [ 1,  5]])]"
+cervical_cancer_risk_factors.csv,6,1,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",acc,0.9534883720930233,"[array([[77,  3],
+       [ 1,  5]])]"
+cervical_cancer_risk_factors.csv,6,1,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",f1,0.9565162538374197,"[array([[77,  3],
+       [ 1,  5]])]"
+cervical_cancer_risk_factors.csv,6,1,Incremental_Mixed_Bagging,"[[-1.0, 1.0]]",auc,0.8145833333333332,"[array([[77,  3],
+       [ 2,  4]])]"
+cervical_cancer_risk_factors.csv,7,1,base,None,acc,0.9534883720930233,"[array([[78,  2],
+       [ 2,  4]])]"
+cervical_cancer_risk_factors.csv,7,1,base,None,f1,0.9534883720930233,"[array([[78,  2],
+       [ 2,  4]])]"
+cervical_cancer_risk_factors.csv,7,1,base,None,auc,0.8208333333333332,"[array([[78,  2],
+       [ 2,  4]])]"
+cervical_cancer_risk_factors.csv,7,1,wagging,None,acc,0.9302325581395349,"[array([[77,  3],
+       [ 3,  3]])]"
+cervical_cancer_risk_factors.csv,7,1,wagging,None,f1,0.9302325581395351,"[array([[77,  3],
+       [ 3,  3]])]"
+cervical_cancer_risk_factors.csv,7,1,wagging,None,auc,0.7312500000000001,"[array([[77,  3],
+       [ 3,  3]])]"
+cervical_cancer_risk_factors.csv,7,1,AdaBoost,None,acc,0.9534883720930233,"[array([[78,  2],
+       [ 2,  4]])]"
+cervical_cancer_risk_factors.csv,7,1,AdaBoost,None,f1,0.9534883720930233,"[array([[78,  2],
+       [ 2,  4]])]"
+cervical_cancer_risk_factors.csv,7,1,AdaBoost,None,auc,0.8208333333333332,"[array([[78,  2],
+       [ 2,  4]])]"
+cervical_cancer_risk_factors.csv,7,1,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 1.0]",acc,0.9534883720930233,"[array([[78,  2],
+       [ 2,  4]])]"
+cervical_cancer_risk_factors.csv,7,1,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 1.0]",f1,0.9565162538374197,"[array([[77,  3],
+       [ 1,  5]])]"
+cervical_cancer_risk_factors.csv,7,1,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 1.0]",auc,0.8979166666666668,"[array([[77,  3],
+       [ 1,  5]])]"
+cervical_cancer_risk_factors.csv,7,1,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",acc,0.9534883720930233,"[array([[77,  3],
+       [ 1,  5]])]"
+cervical_cancer_risk_factors.csv,7,1,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",f1,0.9534883720930233,"[array([[78,  2],
+       [ 2,  4]])]"
+cervical_cancer_risk_factors.csv,7,1,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",auc,0.8208333333333332,"[array([[78,  2],
+       [ 2,  4]])]"
+cervical_cancer_risk_factors.csv,8,1,base,None,acc,0.9176470588235294,"[array([[77,  3],
+       [ 4,  1]])]"
+cervical_cancer_risk_factors.csv,8,1,base,None,f1,0.9133276499005399,"[array([[77,  3],
+       [ 4,  1]])]"
+cervical_cancer_risk_factors.csv,8,1,base,None,auc,0.58125,"[array([[77,  3],
+       [ 4,  1]])]"
+cervical_cancer_risk_factors.csv,8,1,wagging,None,acc,0.9647058823529412,"[array([[79,  1],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,8,1,wagging,None,f1,0.9628547071002312,"[array([[79,  1],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,8,1,wagging,None,auc,0.7937500000000001,"[array([[79,  1],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,8,1,AdaBoost,None,acc,0.9529411764705882,"[array([[78,  2],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,8,1,AdaBoost,None,f1,0.9529411764705882,"[array([[78,  2],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,8,1,AdaBoost,None,auc,0.7875,"[array([[78,  2],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,8,1,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 1.0]",acc,0.9647058823529412,"[array([[79,  1],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,8,1,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",f1,0.9628547071002312,"[array([[79,  1],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,8,1,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",auc,0.7937500000000001,"[array([[79,  1],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,8,1,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",acc,0.9647058823529412,"[array([[79,  1],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,8,1,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",f1,0.9628547071002312,"[array([[79,  1],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,8,1,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",auc,0.7937500000000001,"[array([[79,  1],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,9,1,base,None,acc,0.9529411764705882,"[array([[77,  3],
+       [ 1,  4]])]"
+cervical_cancer_risk_factors.csv,9,1,base,None,f1,0.9565649044427897,"[array([[77,  3],
+       [ 1,  4]])]"
+cervical_cancer_risk_factors.csv,9,1,base,None,auc,0.8812500000000001,"[array([[77,  3],
+       [ 1,  4]])]"
+cervical_cancer_risk_factors.csv,9,1,wagging,None,acc,0.9647058823529412,"[array([[77,  3],
+       [ 0,  5]])]"
+cervical_cancer_risk_factors.csv,9,1,wagging,None,f1,0.9684410755973138,"[array([[77,  3],
+       [ 0,  5]])]"
+cervical_cancer_risk_factors.csv,9,1,wagging,None,auc,0.9812500000000001,"[array([[77,  3],
+       [ 0,  5]])]"
+cervical_cancer_risk_factors.csv,9,1,AdaBoost,None,acc,0.9647058823529412,"[array([[77,  3],
+       [ 0,  5]])]"
+cervical_cancer_risk_factors.csv,9,1,AdaBoost,None,f1,0.9684410755973138,"[array([[77,  3],
+       [ 0,  5]])]"
+cervical_cancer_risk_factors.csv,9,1,AdaBoost,None,auc,0.9812500000000001,"[array([[77,  3],
+       [ 0,  5]])]"
+cervical_cancer_risk_factors.csv,9,1,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 2.0]",acc,0.9647058823529412,"[array([[77,  3],
+       [ 0,  5]])]"
+cervical_cancer_risk_factors.csv,9,1,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",f1,0.9565649044427897,"[array([[77,  3],
+       [ 1,  4]])]"
+cervical_cancer_risk_factors.csv,9,1,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 2.0]",auc,0.9812500000000001,"[array([[77,  3],
+       [ 0,  5]])]"
+cervical_cancer_risk_factors.csv,9,1,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9647058823529412,"[array([[77,  3],
+       [ 0,  5]])]"
+cervical_cancer_risk_factors.csv,9,1,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.9529411764705882,"[array([[78,  2],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,9,1,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",auc,0.9812500000000001,"[array([[77,  3],
+       [ 0,  5]])]"
+cervical_cancer_risk_factors.csv,0,10,base,None,acc,0.9534883720930233,"[array([[79,  2],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,0,10,base,None,f1,0.9534883720930233,"[array([[79,  2],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,0,10,base,None,auc,0.7876543209876544,"[array([[79,  2],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,0,10,wagging,None,acc,0.9418604651162791,"[array([[79,  2],
+       [ 3,  2]])]"
+cervical_cancer_risk_factors.csv,0,10,wagging,None,f1,0.9388088330876176,"[array([[79,  2],
+       [ 3,  2]])]"
+cervical_cancer_risk_factors.csv,0,10,wagging,None,auc,0.6876543209876543,"[array([[79,  2],
+       [ 3,  2]])]"
+cervical_cancer_risk_factors.csv,0,10,AdaBoost,None,acc,0.9651162790697675,"[array([[80,  1],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,0,10,AdaBoost,None,f1,0.9632852998525704,"[array([[80,  1],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,0,10,AdaBoost,None,auc,0.7938271604938271,"[array([[80,  1],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,0,10,Grouped_Mixed_Bagging,"[[0.0, 1.0, 0.0], 1.0]",acc,0.9651162790697675,"[array([[80,  1],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,0,10,Grouped_Mixed_Bagging,"[[0.0, 1.0, 0.0], 1.0]",f1,0.9579583207490185,"[array([[81,  0],
+       [ 3,  2]])]"
+cervical_cancer_risk_factors.csv,0,10,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 3.0]",auc,0.8,"[array([[81,  0],
+       [ 2,  3]])]"
+cervical_cancer_risk_factors.csv,0,10,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",acc,0.9651162790697675,"[array([[81,  0],
+       [ 3,  2]])]"
+cervical_cancer_risk_factors.csv,0,10,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",f1,0.9388088330876176,"[array([[79,  2],
+       [ 3,  2]])]"
+cervical_cancer_risk_factors.csv,0,10,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,0.8,"[array([[81,  0],
+       [ 2,  3]])]"

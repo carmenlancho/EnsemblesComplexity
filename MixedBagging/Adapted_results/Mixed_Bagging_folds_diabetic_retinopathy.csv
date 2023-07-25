@@ -1,0 +1,541 @@
+﻿dataset,CV_fold,n_trees,model,parameters,perf_measure,perf_value,Conf_Matrix
+diabetic_retinopathy.csv,0,1,base,None,acc,0.6293103448275862,"[array([[29, 25],
+       [18, 44]])]"
+diabetic_retinopathy.csv,0,1,base,None,f1,0.6263685857925093,"[array([[29, 25],
+       [18, 44]])]"
+diabetic_retinopathy.csv,0,1,base,None,auc,0.6233572281959379,"[array([[29, 25],
+       [18, 44]])]"
+diabetic_retinopathy.csv,0,1,wagging,None,acc,0.6637931034482759,"[array([[34, 20],
+       [19, 43]])]"
+diabetic_retinopathy.csv,0,1,wagging,None,f1,0.6635668707702225,"[array([[34, 20],
+       [19, 43]])]"
+diabetic_retinopathy.csv,0,1,wagging,None,auc,0.6615890083632019,"[array([[34, 20],
+       [19, 43]])]"
+diabetic_retinopathy.csv,0,1,AdaBoost,None,acc,0.5775862068965517,"[array([[29, 25],
+       [24, 38]])]"
+diabetic_retinopathy.csv,0,1,AdaBoost,None,f1,0.5773019658395102,"[array([[29, 25],
+       [24, 38]])]"
+diabetic_retinopathy.csv,0,1,AdaBoost,None,auc,0.5749701314217442,"[array([[29, 25],
+       [24, 38]])]"
+diabetic_retinopathy.csv,0,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",acc,0.6896551724137931,"[array([[34, 20],
+       [16, 46]])]"
+diabetic_retinopathy.csv,0,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",f1,0.6467362648950754,"[array([[34, 20],
+       [21, 41]])]"
+diabetic_retinopathy.csv,0,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",auc,0.6813022700119473,"[array([[37, 17],
+       [20, 42]])]"
+diabetic_retinopathy.csv,0,1,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.7068965517241379,"[array([[37, 17],
+       [17, 45]])]"
+diabetic_retinopathy.csv,0,1,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.6193219496021221,"[array([[30, 24],
+       [20, 42]])]"
+diabetic_retinopathy.csv,0,1,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.6765232974910396,"[array([[33, 21],
+       [16, 46]])]"
+diabetic_retinopathy.csv,1,1,base,None,acc,0.6434782608695652,"[array([[33, 21],
+       [20, 41]])]"
+diabetic_retinopathy.csv,1,1,base,None,f1,0.6432615467966951,"[array([[33, 21],
+       [20, 41]])]"
+diabetic_retinopathy.csv,1,1,base,None,auc,0.6416211293260474,"[array([[33, 21],
+       [20, 41]])]"
+diabetic_retinopathy.csv,1,1,wagging,None,acc,0.6869565217391305,"[array([[41, 13],
+       [23, 38]])]"
+diabetic_retinopathy.csv,1,1,wagging,None,f1,0.6862459206232235,"[array([[41, 13],
+       [23, 38]])]"
+diabetic_retinopathy.csv,1,1,wagging,None,auc,0.6911050394656952,"[array([[41, 13],
+       [23, 38]])]"
+diabetic_retinopathy.csv,1,1,AdaBoost,None,acc,0.6173913043478261,"[array([[31, 23],
+       [21, 40]])]"
+diabetic_retinopathy.csv,1,1,AdaBoost,None,f1,0.6168673423483023,"[array([[31, 23],
+       [21, 40]])]"
+diabetic_retinopathy.csv,1,1,AdaBoost,None,auc,0.6149058894960534,"[array([[31, 23],
+       [21, 40]])]"
+diabetic_retinopathy.csv,1,1,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 2.0]",acc,0.7043478260869566,"[array([[44, 10],
+       [24, 37]])]"
+diabetic_retinopathy.csv,1,1,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 2.0]",f1,0.6946383723877331,"[array([[42, 12],
+       [23, 38]])]"
+diabetic_retinopathy.csv,1,1,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 2.0]",auc,0.7302671523983,"[array([[47,  7],
+       [25, 36]])]"
+diabetic_retinopathy.csv,1,1,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.7130434782608696,"[array([[44, 10],
+       [23, 38]])]"
+diabetic_retinopathy.csv,1,1,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.6604078491727586,"[array([[39, 15],
+       [24, 37]])]"
+diabetic_retinopathy.csv,1,1,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.6643897996357012,"[array([[39, 15],
+       [24, 37]])]"
+diabetic_retinopathy.csv,2,1,base,None,acc,0.6521739130434783,"[array([[37, 17],
+       [23, 38]])]"
+diabetic_retinopathy.csv,2,1,base,None,f1,0.652331728872406,"[array([[37, 17],
+       [23, 38]])]"
+diabetic_retinopathy.csv,2,1,base,None,auc,0.6540680024286581,"[array([[37, 17],
+       [23, 38]])]"
+diabetic_retinopathy.csv,2,1,wagging,None,acc,0.6,"[array([[30, 24],
+       [22, 39]])]"
+diabetic_retinopathy.csv,2,1,wagging,None,f1,0.5994522215459525,"[array([[30, 24],
+       [22, 39]])]"
+diabetic_retinopathy.csv,2,1,wagging,None,auc,0.5974499089253188,"[array([[30, 24],
+       [22, 39]])]"
+diabetic_retinopathy.csv,2,1,AdaBoost,None,acc,0.6347826086956522,"[array([[33, 21],
+       [21, 40]])]"
+diabetic_retinopathy.csv,2,1,AdaBoost,None,f1,0.6347826086956522,"[array([[33, 21],
+       [21, 40]])]"
+diabetic_retinopathy.csv,2,1,AdaBoost,None,auc,0.6334244080145719,"[array([[33, 21],
+       [21, 40]])]"
+diabetic_retinopathy.csv,2,1,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.6869565217391305,"[array([[36, 18],
+       [18, 43]])]"
+diabetic_retinopathy.csv,2,1,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.6073921930699424,"[array([[37, 17],
+       [28, 33]])]"
+diabetic_retinopathy.csv,2,1,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.6088342440801457,"[array([[33, 21],
+       [24, 37]])]"
+diabetic_retinopathy.csv,2,1,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",acc,0.6260869565217392,"[array([[30, 24],
+       [19, 42]])]"
+diabetic_retinopathy.csv,2,1,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",f1,0.600363196125908,"[array([[33, 21],
+       [25, 36]])]"
+diabetic_retinopathy.csv,2,1,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",auc,0.6458712811171827,"[array([[37, 17],
+       [24, 37]])]"
+diabetic_retinopathy.csv,3,1,base,None,acc,0.6347826086956522,"[array([[31, 23],
+       [19, 42]])]"
+diabetic_retinopathy.csv,3,1,base,None,f1,0.6335562987736901,"[array([[31, 23],
+       [19, 42]])]"
+diabetic_retinopathy.csv,3,1,base,None,auc,0.6312993321190042,"[array([[31, 23],
+       [19, 42]])]"
+diabetic_retinopathy.csv,3,1,wagging,None,acc,0.6869565217391305,"[array([[41, 13],
+       [23, 38]])]"
+diabetic_retinopathy.csv,3,1,wagging,None,f1,0.6862459206232235,"[array([[41, 13],
+       [23, 38]])]"
+diabetic_retinopathy.csv,3,1,wagging,None,auc,0.6911050394656952,"[array([[41, 13],
+       [23, 38]])]"
+diabetic_retinopathy.csv,3,1,AdaBoost,None,acc,0.6173913043478261,"[array([[29, 25],
+       [19, 42]])]"
+diabetic_retinopathy.csv,3,1,AdaBoost,None,f1,0.6151054987212278,"[array([[29, 25],
+       [19, 42]])]"
+diabetic_retinopathy.csv,3,1,AdaBoost,None,auc,0.6127808136004856,"[array([[29, 25],
+       [19, 42]])]"
+diabetic_retinopathy.csv,3,1,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",acc,0.6434782608695652,"[array([[40, 14],
+       [27, 34]])]"
+diabetic_retinopathy.csv,3,1,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",f1,0.6671075209207782,"[array([[42, 12],
+       [26, 35]])]"
+diabetic_retinopathy.csv,3,1,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",auc,0.6993017607771707,"[array([[41, 13],
+       [22, 39]])]"
+diabetic_retinopathy.csv,3,1,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",acc,0.6956521739130435,"[array([[42, 12],
+       [23, 38]])]"
+diabetic_retinopathy.csv,3,1,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",f1,0.6434782608695652,"[array([[37, 17],
+       [24, 37]])]"
+diabetic_retinopathy.csv,3,1,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",auc,0.666514875531269,"[array([[41, 13],
+       [26, 35]])]"
+diabetic_retinopathy.csv,4,1,base,None,acc,0.5391304347826087,"[array([[25, 29],
+       [24, 37]])]"
+diabetic_retinopathy.csv,4,1,base,None,f1,0.5370165158228164,"[array([[25, 29],
+       [24, 37]])]"
+diabetic_retinopathy.csv,4,1,base,None,auc,0.5347601700060716,"[array([[25, 29],
+       [24, 37]])]"
+diabetic_retinopathy.csv,4,1,wagging,None,acc,0.7043478260869566,"[array([[43, 11],
+       [23, 38]])]"
+diabetic_retinopathy.csv,4,1,wagging,None,f1,0.7030039525691699,"[array([[43, 11],
+       [23, 38]])]"
+diabetic_retinopathy.csv,4,1,wagging,None,auc,0.7096235579842137,"[array([[43, 11],
+       [23, 38]])]"
+diabetic_retinopathy.csv,4,1,AdaBoost,None,acc,0.5565217391304348,"[array([[26, 28],
+       [23, 38]])]"
+diabetic_retinopathy.csv,4,1,AdaBoost,None,f1,0.5544875906974271,"[array([[26, 28],
+       [23, 38]])]"
+diabetic_retinopathy.csv,4,1,AdaBoost,None,auc,0.5522161505768064,"[array([[26, 28],
+       [23, 38]])]"
+diabetic_retinopathy.csv,4,1,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",acc,0.6695652173913044,"[array([[41, 13],
+       [25, 36]])]"
+diabetic_retinopathy.csv,4,1,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",f1,0.6671075209207782,"[array([[42, 12],
+       [26, 35]])]"
+diabetic_retinopathy.csv,4,1,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",auc,0.6921675774134791,"[array([[42, 12],
+       [24, 37]])]"
+diabetic_retinopathy.csv,4,1,Incremental_Mixed_Bagging,"[[-1.0, 1.0]]",acc,0.6782608695652174,"[array([[39, 15],
+       [22, 39]])]"
+diabetic_retinopathy.csv,4,1,Incremental_Mixed_Bagging,"[[-1.0, 1.0]]",f1,0.6846281777144214,"[array([[43, 11],
+       [25, 36]])]"
+diabetic_retinopathy.csv,4,1,Incremental_Mixed_Bagging,"[[-1.0, 1.0]]",auc,0.7014268366727383,"[array([[43, 11],
+       [24, 37]])]"
+diabetic_retinopathy.csv,5,1,base,None,acc,0.6260869565217392,"[array([[33, 21],
+       [22, 39]])]"
+diabetic_retinopathy.csv,5,1,base,None,f1,0.6262570587479026,"[array([[33, 21],
+       [22, 39]])]"
+diabetic_retinopathy.csv,5,1,base,None,auc,0.6252276867030966,"[array([[33, 21],
+       [22, 39]])]"
+diabetic_retinopathy.csv,5,1,wagging,None,acc,0.6521739130434783,"[array([[42, 12],
+       [28, 33]])]"
+diabetic_retinopathy.csv,5,1,wagging,None,f1,0.6483632803196698,"[array([[42, 12],
+       [28, 33]])]"
+diabetic_retinopathy.csv,5,1,wagging,None,auc,0.6593806921675773,"[array([[42, 12],
+       [28, 33]])]"
+diabetic_retinopathy.csv,5,1,AdaBoost,None,acc,0.5739130434782609,"[array([[32, 22],
+       [27, 34]])]"
+diabetic_retinopathy.csv,5,1,AdaBoost,None,f1,0.574235323908275,"[array([[32, 22],
+       [27, 34]])]"
+diabetic_retinopathy.csv,5,1,AdaBoost,None,auc,0.5749848208864602,"[array([[32, 22],
+       [27, 34]])]"
+diabetic_retinopathy.csv,5,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",acc,0.6695652173913044,"[array([[41, 13],
+       [25, 36]])]"
+diabetic_retinopathy.csv,5,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",f1,0.6680632411067193,"[array([[41, 13],
+       [25, 36]])]"
+diabetic_retinopathy.csv,5,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",auc,0.6305403764420158,"[array([[38, 16],
+       [27, 34]])]"
+diabetic_retinopathy.csv,5,1,Incremental_Mixed_Bagging,"[[-1.0, 1.0]]",acc,0.6608695652173913,"[array([[42, 12],
+       [27, 34]])]"
+diabetic_retinopathy.csv,5,1,Incremental_Mixed_Bagging,"[[-1.0, 1.0]]",f1,0.6413697844382835,"[array([[40, 14],
+       [27, 34]])]"
+diabetic_retinopathy.csv,5,1,Incremental_Mixed_Bagging,"[[-1.0, 1.0]]",auc,0.5956284153005466,"[array([[36, 18],
+       [29, 32]])]"
+diabetic_retinopathy.csv,6,1,base,None,acc,0.6347826086956522,"[array([[30, 24],
+       [18, 43]])]"
+diabetic_retinopathy.csv,6,1,base,None,f1,0.6326007033248082,"[array([[30, 24],
+       [18, 43]])]"
+diabetic_retinopathy.csv,6,1,base,None,auc,0.6302367941712205,"[array([[30, 24],
+       [18, 43]])]"
+diabetic_retinopathy.csv,6,1,wagging,None,acc,0.6260869565217392,"[array([[36, 18],
+       [25, 36]])]"
+diabetic_retinopathy.csv,6,1,wagging,None,f1,0.6260869565217392,"[array([[36, 18],
+       [25, 36]])]"
+diabetic_retinopathy.csv,6,1,wagging,None,auc,0.6284153005464481,"[array([[36, 18],
+       [25, 36]])]"
+diabetic_retinopathy.csv,6,1,AdaBoost,None,acc,0.6434782608695652,"[array([[31, 23],
+       [18, 43]])]"
+diabetic_retinopathy.csv,6,1,AdaBoost,None,f1,0.6418429650704807,"[array([[31, 23],
+       [18, 43]])]"
+diabetic_retinopathy.csv,6,1,AdaBoost,None,auc,0.6394960534304797,"[array([[31, 23],
+       [18, 43]])]"
+diabetic_retinopathy.csv,6,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",acc,0.6956521739130435,"[array([[43, 11],
+       [24, 37]])]"
+diabetic_retinopathy.csv,6,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",f1,0.6855335968379447,"[array([[42, 12],
+       [24, 37]])]"
+diabetic_retinopathy.csv,6,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",auc,0.6818457802064359,"[array([[40, 14],
+       [23, 38]])]"
+diabetic_retinopathy.csv,6,1,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,0.7304347826086957,"[array([[43, 11],
+       [20, 41]])]"
+diabetic_retinopathy.csv,6,1,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,0.6577774253971714,"[array([[42, 12],
+       [27, 34]])]"
+diabetic_retinopathy.csv,6,1,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,0.6458712811171827,"[array([[37, 17],
+       [24, 37]])]"
+diabetic_retinopathy.csv,7,1,base,None,acc,0.5739130434782609,"[array([[31, 23],
+       [26, 35]])]"
+diabetic_retinopathy.csv,7,1,base,None,f1,0.5743001313333793,"[array([[31, 23],
+       [26, 35]])]"
+diabetic_retinopathy.csv,7,1,base,None,auc,0.5739222829386763,"[array([[31, 23],
+       [26, 35]])]"
+diabetic_retinopathy.csv,7,1,wagging,None,acc,0.6521739130434783,"[array([[32, 22],
+       [18, 43]])]"
+diabetic_retinopathy.csv,7,1,wagging,None,f1,0.6510059988320858,"[array([[32, 22],
+       [18, 43]])]"
+diabetic_retinopathy.csv,7,1,wagging,None,auc,0.648755312689739,"[array([[32, 22],
+       [18, 43]])]"
+diabetic_retinopathy.csv,7,1,AdaBoost,None,acc,0.5739130434782609,"[array([[29, 25],
+       [24, 37]])]"
+diabetic_retinopathy.csv,7,1,AdaBoost,None,f1,0.5736540437326356,"[array([[29, 25],
+       [24, 37]])]"
+diabetic_retinopathy.csv,7,1,AdaBoost,None,auc,0.5717972070431087,"[array([[29, 25],
+       [24, 37]])]"
+diabetic_retinopathy.csv,7,1,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 2.0]",acc,0.6521739130434783,"[array([[34, 20],
+       [20, 41]])]"
+diabetic_retinopathy.csv,7,1,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 2.0]",f1,0.6516975839530023,"[array([[33, 21],
+       [19, 42]])]"
+diabetic_retinopathy.csv,7,1,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 2.0]",auc,0.6252276867030966,"[array([[33, 21],
+       [22, 39]])]"
+diabetic_retinopathy.csv,7,1,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.6,"[array([[30, 24],
+       [22, 39]])]"
+diabetic_retinopathy.csv,7,1,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.617738709337825,"[array([[34, 20],
+       [24, 37]])]"
+diabetic_retinopathy.csv,7,1,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.6561930783242258,"[array([[39, 15],
+       [25, 36]])]"
+diabetic_retinopathy.csv,8,1,base,None,acc,0.6260869565217392,"[array([[28, 26],
+       [17, 44]])]"
+diabetic_retinopathy.csv,8,1,base,None,f1,0.6219352502790937,"[array([[28, 26],
+       [17, 44]])]"
+diabetic_retinopathy.csv,8,1,base,None,auc,0.6199149969641773,"[array([[28, 26],
+       [17, 44]])]"
+diabetic_retinopathy.csv,8,1,wagging,None,acc,0.6695652173913044,"[array([[35, 19],
+       [19, 42]])]"
+diabetic_retinopathy.csv,8,1,wagging,None,f1,0.6695652173913044,"[array([[35, 19],
+       [19, 42]])]"
+diabetic_retinopathy.csv,8,1,wagging,None,auc,0.6683363691560412,"[array([[35, 19],
+       [19, 42]])]"
+diabetic_retinopathy.csv,8,1,AdaBoost,None,acc,0.6521739130434783,"[array([[29, 25],
+       [15, 46]])]"
+diabetic_retinopathy.csv,8,1,AdaBoost,None,f1,0.6476029146836599,"[array([[29, 25],
+       [15, 46]])]"
+diabetic_retinopathy.csv,8,1,AdaBoost,None,auc,0.6455676988463873,"[array([[29, 25],
+       [15, 46]])]"
+diabetic_retinopathy.csv,8,1,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 1.0]",acc,0.7217391304347827,"[array([[42, 12],
+       [20, 41]])]"
+diabetic_retinopathy.csv,8,1,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 1.0]",f1,0.7305574144461623,"[array([[39, 15],
+       [16, 45]])]"
+diabetic_retinopathy.csv,8,1,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 1.0]",auc,0.7310261080752883,"[array([[40, 14],
+       [17, 44]])]"
+diabetic_retinopathy.csv,8,1,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",acc,0.6869565217391305,"[array([[39, 15],
+       [21, 40]])]"
+diabetic_retinopathy.csv,8,1,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",f1,0.704481969541545,"[array([[40, 14],
+       [20, 41]])]"
+diabetic_retinopathy.csv,8,1,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",auc,0.7659380692167578,"[array([[42, 12],
+       [15, 46]])]"
+diabetic_retinopathy.csv,9,1,base,None,acc,0.6521739130434783,"[array([[29, 25],
+       [15, 46]])]"
+diabetic_retinopathy.csv,9,1,base,None,f1,0.6476029146836599,"[array([[29, 25],
+       [15, 46]])]"
+diabetic_retinopathy.csv,9,1,base,None,auc,0.6455676988463873,"[array([[29, 25],
+       [15, 46]])]"
+diabetic_retinopathy.csv,9,1,wagging,None,acc,0.6695652173913044,"[array([[39, 15],
+       [23, 38]])]"
+diabetic_retinopathy.csv,9,1,wagging,None,f1,0.6693653173413294,"[array([[39, 15],
+       [23, 38]])]"
+diabetic_retinopathy.csv,9,1,wagging,None,auc,0.6725865209471767,"[array([[39, 15],
+       [23, 38]])]"
+diabetic_retinopathy.csv,9,1,AdaBoost,None,acc,0.6086956521739131,"[array([[30, 24],
+       [21, 40]])]"
+diabetic_retinopathy.csv,9,1,AdaBoost,None,f1,0.6078012422360248,"[array([[30, 24],
+       [21, 40]])]"
+diabetic_retinopathy.csv,9,1,AdaBoost,None,auc,0.6056466302367941,"[array([[30, 24],
+       [21, 40]])]"
+diabetic_retinopathy.csv,9,1,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 1.0]",acc,0.6347826086956522,"[array([[37, 17],
+       [25, 36]])]"
+diabetic_retinopathy.csv,9,1,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 1.0]",f1,0.6871936758893281,"[array([[37, 17],
+       [19, 42]])]"
+diabetic_retinopathy.csv,9,1,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 1.0]",auc,0.6736490588949605,"[array([[40, 14],
+       [24, 37]])]"
+diabetic_retinopathy.csv,9,1,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.6869565217391305,"[array([[41, 13],
+       [23, 38]])]"
+diabetic_retinopathy.csv,9,1,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.6688151384356248,"[array([[40, 14],
+       [24, 37]])]"
+diabetic_retinopathy.csv,9,1,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",auc,0.6643897996357012,"[array([[39, 15],
+       [24, 37]])]"
+diabetic_retinopathy.csv,0,10,base,None,acc,0.6293103448275862,"[array([[29, 25],
+       [18, 44]])]"
+diabetic_retinopathy.csv,0,10,base,None,f1,0.6263685857925093,"[array([[29, 25],
+       [18, 44]])]"
+diabetic_retinopathy.csv,0,10,base,None,auc,0.6233572281959379,"[array([[29, 25],
+       [18, 44]])]"
+diabetic_retinopathy.csv,0,10,wagging,None,acc,0.6637931034482759,"[array([[34, 20],
+       [19, 43]])]"
+diabetic_retinopathy.csv,0,10,wagging,None,f1,0.6635668707702225,"[array([[34, 20],
+       [19, 43]])]"
+diabetic_retinopathy.csv,0,10,wagging,None,auc,0.6615890083632019,"[array([[34, 20],
+       [19, 43]])]"
+diabetic_retinopathy.csv,0,10,AdaBoost,None,acc,0.5775862068965517,"[array([[29, 25],
+       [24, 38]])]"
+diabetic_retinopathy.csv,0,10,AdaBoost,None,f1,0.5773019658395102,"[array([[29, 25],
+       [24, 38]])]"
+diabetic_retinopathy.csv,0,10,AdaBoost,None,auc,0.5749701314217442,"[array([[29, 25],
+       [24, 38]])]"
+diabetic_retinopathy.csv,0,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",acc,0.6896551724137931,"[array([[34, 20],
+       [16, 46]])]"
+diabetic_retinopathy.csv,0,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",f1,0.6467362648950754,"[array([[34, 20],
+       [21, 41]])]"
+diabetic_retinopathy.csv,0,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 2.0]",auc,0.6813022700119473,"[array([[37, 17],
+       [20, 42]])]"
+diabetic_retinopathy.csv,0,10,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.7068965517241379,"[array([[37, 17],
+       [17, 45]])]"
+diabetic_retinopathy.csv,0,10,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.6193219496021221,"[array([[30, 24],
+       [20, 42]])]"
+diabetic_retinopathy.csv,0,10,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.6765232974910396,"[array([[33, 21],
+       [16, 46]])]"
+diabetic_retinopathy.csv,1,10,base,None,acc,0.6434782608695652,"[array([[33, 21],
+       [20, 41]])]"
+diabetic_retinopathy.csv,1,10,base,None,f1,0.6432615467966951,"[array([[33, 21],
+       [20, 41]])]"
+diabetic_retinopathy.csv,1,10,base,None,auc,0.6416211293260474,"[array([[33, 21],
+       [20, 41]])]"
+diabetic_retinopathy.csv,1,10,wagging,None,acc,0.6869565217391305,"[array([[41, 13],
+       [23, 38]])]"
+diabetic_retinopathy.csv,1,10,wagging,None,f1,0.6862459206232235,"[array([[41, 13],
+       [23, 38]])]"
+diabetic_retinopathy.csv,1,10,wagging,None,auc,0.6911050394656952,"[array([[41, 13],
+       [23, 38]])]"
+diabetic_retinopathy.csv,1,10,AdaBoost,None,acc,0.6173913043478261,"[array([[31, 23],
+       [21, 40]])]"
+diabetic_retinopathy.csv,1,10,AdaBoost,None,f1,0.6168673423483023,"[array([[31, 23],
+       [21, 40]])]"
+diabetic_retinopathy.csv,1,10,AdaBoost,None,auc,0.6149058894960534,"[array([[31, 23],
+       [21, 40]])]"
+diabetic_retinopathy.csv,1,10,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 2.0]",acc,0.7043478260869566,"[array([[44, 10],
+       [24, 37]])]"
+diabetic_retinopathy.csv,1,10,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 2.0]",f1,0.6946383723877331,"[array([[42, 12],
+       [23, 38]])]"
+diabetic_retinopathy.csv,1,10,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 2.0]",auc,0.7302671523983,"[array([[47,  7],
+       [25, 36]])]"
+diabetic_retinopathy.csv,1,10,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.7130434782608696,"[array([[44, 10],
+       [23, 38]])]"
+diabetic_retinopathy.csv,1,10,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.6604078491727586,"[array([[39, 15],
+       [24, 37]])]"
+diabetic_retinopathy.csv,1,10,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.6643897996357012,"[array([[39, 15],
+       [24, 37]])]"
+diabetic_retinopathy.csv,2,10,base,None,acc,0.6521739130434783,"[array([[37, 17],
+       [23, 38]])]"
+diabetic_retinopathy.csv,2,10,base,None,f1,0.652331728872406,"[array([[37, 17],
+       [23, 38]])]"
+diabetic_retinopathy.csv,2,10,base,None,auc,0.6540680024286581,"[array([[37, 17],
+       [23, 38]])]"
+diabetic_retinopathy.csv,2,10,wagging,None,acc,0.6,"[array([[30, 24],
+       [22, 39]])]"
+diabetic_retinopathy.csv,2,10,wagging,None,f1,0.5994522215459525,"[array([[30, 24],
+       [22, 39]])]"
+diabetic_retinopathy.csv,2,10,wagging,None,auc,0.5974499089253188,"[array([[30, 24],
+       [22, 39]])]"
+diabetic_retinopathy.csv,2,10,AdaBoost,None,acc,0.6347826086956522,"[array([[33, 21],
+       [21, 40]])]"
+diabetic_retinopathy.csv,2,10,AdaBoost,None,f1,0.6347826086956522,"[array([[33, 21],
+       [21, 40]])]"
+diabetic_retinopathy.csv,2,10,AdaBoost,None,auc,0.6334244080145719,"[array([[33, 21],
+       [21, 40]])]"
+diabetic_retinopathy.csv,2,10,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.6869565217391305,"[array([[36, 18],
+       [18, 43]])]"
+diabetic_retinopathy.csv,2,10,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.6073921930699424,"[array([[37, 17],
+       [28, 33]])]"
+diabetic_retinopathy.csv,2,10,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.6088342440801457,"[array([[33, 21],
+       [24, 37]])]"
+diabetic_retinopathy.csv,2,10,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",acc,0.6260869565217392,"[array([[30, 24],
+       [19, 42]])]"
+diabetic_retinopathy.csv,2,10,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",f1,0.600363196125908,"[array([[33, 21],
+       [25, 36]])]"
+diabetic_retinopathy.csv,2,10,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",auc,0.6458712811171827,"[array([[37, 17],
+       [24, 37]])]"
+diabetic_retinopathy.csv,3,10,base,None,acc,0.6347826086956522,"[array([[31, 23],
+       [19, 42]])]"
+diabetic_retinopathy.csv,3,10,base,None,f1,0.6335562987736901,"[array([[31, 23],
+       [19, 42]])]"
+diabetic_retinopathy.csv,3,10,base,None,auc,0.6312993321190042,"[array([[31, 23],
+       [19, 42]])]"
+diabetic_retinopathy.csv,3,10,wagging,None,acc,0.6869565217391305,"[array([[41, 13],
+       [23, 38]])]"
+diabetic_retinopathy.csv,3,10,wagging,None,f1,0.6862459206232235,"[array([[41, 13],
+       [23, 38]])]"
+diabetic_retinopathy.csv,3,10,wagging,None,auc,0.6911050394656952,"[array([[41, 13],
+       [23, 38]])]"
+diabetic_retinopathy.csv,3,10,AdaBoost,None,acc,0.6173913043478261,"[array([[29, 25],
+       [19, 42]])]"
+diabetic_retinopathy.csv,3,10,AdaBoost,None,f1,0.6151054987212278,"[array([[29, 25],
+       [19, 42]])]"
+diabetic_retinopathy.csv,3,10,AdaBoost,None,auc,0.6127808136004856,"[array([[29, 25],
+       [19, 42]])]"
+diabetic_retinopathy.csv,3,10,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",acc,0.6434782608695652,"[array([[40, 14],
+       [27, 34]])]"
+diabetic_retinopathy.csv,3,10,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",f1,0.6671075209207782,"[array([[42, 12],
+       [26, 35]])]"
+diabetic_retinopathy.csv,3,10,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",auc,0.6993017607771707,"[array([[41, 13],
+       [22, 39]])]"
+diabetic_retinopathy.csv,3,10,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",acc,0.6956521739130435,"[array([[42, 12],
+       [23, 38]])]"
+diabetic_retinopathy.csv,3,10,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",f1,0.6434782608695652,"[array([[37, 17],
+       [24, 37]])]"
+diabetic_retinopathy.csv,3,10,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",auc,0.666514875531269,"[array([[41, 13],
+       [26, 35]])]"
+diabetic_retinopathy.csv,4,10,base,None,acc,0.5391304347826087,"[array([[25, 29],
+       [24, 37]])]"
+diabetic_retinopathy.csv,4,10,base,None,f1,0.5370165158228164,"[array([[25, 29],
+       [24, 37]])]"
+diabetic_retinopathy.csv,4,10,base,None,auc,0.5347601700060716,"[array([[25, 29],
+       [24, 37]])]"
+diabetic_retinopathy.csv,4,10,wagging,None,acc,0.7043478260869566,"[array([[43, 11],
+       [23, 38]])]"
+diabetic_retinopathy.csv,4,10,wagging,None,f1,0.7030039525691699,"[array([[43, 11],
+       [23, 38]])]"
+diabetic_retinopathy.csv,4,10,wagging,None,auc,0.7096235579842137,"[array([[43, 11],
+       [23, 38]])]"
+diabetic_retinopathy.csv,4,10,AdaBoost,None,acc,0.5565217391304348,"[array([[26, 28],
+       [23, 38]])]"
+diabetic_retinopathy.csv,4,10,AdaBoost,None,f1,0.5544875906974271,"[array([[26, 28],
+       [23, 38]])]"
+diabetic_retinopathy.csv,4,10,AdaBoost,None,auc,0.5522161505768064,"[array([[26, 28],
+       [23, 38]])]"
+diabetic_retinopathy.csv,4,10,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",acc,0.6695652173913044,"[array([[41, 13],
+       [25, 36]])]"
+diabetic_retinopathy.csv,4,10,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",f1,0.6671075209207782,"[array([[42, 12],
+       [26, 35]])]"
+diabetic_retinopathy.csv,4,10,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",auc,0.6921675774134791,"[array([[42, 12],
+       [24, 37]])]"
+diabetic_retinopathy.csv,4,10,Incremental_Mixed_Bagging,"[[-1.0, 1.0]]",acc,0.6782608695652174,"[array([[39, 15],
+       [22, 39]])]"
+diabetic_retinopathy.csv,4,10,Incremental_Mixed_Bagging,"[[-1.0, 1.0]]",f1,0.6846281777144214,"[array([[43, 11],
+       [25, 36]])]"
+diabetic_retinopathy.csv,4,10,Incremental_Mixed_Bagging,"[[-1.0, 1.0]]",auc,0.7014268366727383,"[array([[43, 11],
+       [24, 37]])]"
+diabetic_retinopathy.csv,5,10,base,None,acc,0.6260869565217392,"[array([[33, 21],
+       [22, 39]])]"
+diabetic_retinopathy.csv,5,10,base,None,f1,0.6262570587479026,"[array([[33, 21],
+       [22, 39]])]"
+diabetic_retinopathy.csv,5,10,base,None,auc,0.6252276867030966,"[array([[33, 21],
+       [22, 39]])]"
+diabetic_retinopathy.csv,5,10,wagging,None,acc,0.6521739130434783,"[array([[42, 12],
+       [28, 33]])]"
+diabetic_retinopathy.csv,5,10,wagging,None,f1,0.6483632803196698,"[array([[42, 12],
+       [28, 33]])]"
+diabetic_retinopathy.csv,5,10,wagging,None,auc,0.6593806921675773,"[array([[42, 12],
+       [28, 33]])]"
+diabetic_retinopathy.csv,5,10,AdaBoost,None,acc,0.5739130434782609,"[array([[32, 22],
+       [27, 34]])]"
+diabetic_retinopathy.csv,5,10,AdaBoost,None,f1,0.574235323908275,"[array([[32, 22],
+       [27, 34]])]"
+diabetic_retinopathy.csv,5,10,AdaBoost,None,auc,0.5749848208864602,"[array([[32, 22],
+       [27, 34]])]"
+diabetic_retinopathy.csv,5,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",acc,0.6695652173913044,"[array([[41, 13],
+       [25, 36]])]"
+diabetic_retinopathy.csv,5,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",f1,0.6680632411067193,"[array([[41, 13],
+       [25, 36]])]"
+diabetic_retinopathy.csv,5,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",auc,0.6305403764420158,"[array([[38, 16],
+       [27, 34]])]"
+diabetic_retinopathy.csv,5,10,Incremental_Mixed_Bagging,"[[-1.0, 1.0]]",acc,0.6608695652173913,"[array([[42, 12],
+       [27, 34]])]"
+diabetic_retinopathy.csv,5,10,Incremental_Mixed_Bagging,"[[-1.0, 1.0]]",f1,0.6413697844382835,"[array([[40, 14],
+       [27, 34]])]"
+diabetic_retinopathy.csv,5,10,Incremental_Mixed_Bagging,"[[-1.0, 1.0]]",auc,0.5956284153005466,"[array([[36, 18],
+       [29, 32]])]"
+diabetic_retinopathy.csv,6,10,base,None,acc,0.6347826086956522,"[array([[30, 24],
+       [18, 43]])]"
+diabetic_retinopathy.csv,6,10,base,None,f1,0.6326007033248082,"[array([[30, 24],
+       [18, 43]])]"
+diabetic_retinopathy.csv,6,10,base,None,auc,0.6302367941712205,"[array([[30, 24],
+       [18, 43]])]"
+diabetic_retinopathy.csv,6,10,wagging,None,acc,0.6260869565217392,"[array([[36, 18],
+       [25, 36]])]"
+diabetic_retinopathy.csv,6,10,wagging,None,f1,0.6260869565217392,"[array([[36, 18],
+       [25, 36]])]"
+diabetic_retinopathy.csv,6,10,wagging,None,auc,0.6284153005464481,"[array([[36, 18],
+       [25, 36]])]"
+diabetic_retinopathy.csv,6,10,AdaBoost,None,acc,0.6434782608695652,"[array([[31, 23],
+       [18, 43]])]"
+diabetic_retinopathy.csv,6,10,AdaBoost,None,f1,0.6418429650704807,"[array([[31, 23],
+       [18, 43]])]"
+diabetic_retinopathy.csv,6,10,AdaBoost,None,auc,0.6394960534304797,"[array([[31, 23],
+       [18, 43]])]"
+diabetic_retinopathy.csv,6,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",acc,0.6956521739130435,"[array([[43, 11],
+       [24, 37]])]"
+diabetic_retinopathy.csv,6,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",f1,0.6855335968379447,"[array([[42, 12],
+       [24, 37]])]"
+diabetic_retinopathy.csv,6,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",auc,0.6818457802064359,"[array([[40, 14],
+       [23, 38]])]"
+diabetic_retinopathy.csv,6,10,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,0.7304347826086957,"[array([[43, 11],
+       [20, 41]])]"
+diabetic_retinopathy.csv,6,10,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,0.6577774253971714,"[array([[42, 12],
+       [27, 34]])]"
+diabetic_retinopathy.csv,6,10,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,0.6458712811171827,"[array([[37, 17],
+       [24, 37]])]"
+diabetic_retinopathy.csv,7,10,base,None,acc,0.5739130434782609,"[array([[31, 23],
+       [26, 35]])]"
+diabetic_retinopathy.csv,7,10,base,None,f1,0.5743001313333793,"[array([[31, 23],
+       [26, 35]])]"
+diabetic_retinopathy.csv,7,10,base,None,auc,0.5739222829386763,"[array([[31, 23],
+       [26, 35]])]"
+diabetic_retinopathy.csv,7,10,wagging,None,acc,0.6521739130434783,"[array([[32, 22],
+       [18, 43]])]"
+diabetic_retinopathy.csv,7,10,wagging,None,f1,0.6510059988320858,"[array([[32, 22],
+       [18, 43]])]"
+diabetic_retinopathy.csv,7,10,wagging,None,auc,0.648755312689739,"[array([[32, 22],
+       [18, 43]])]"
+diabetic_retinopathy.csv,7,10,AdaBoost,None,acc,0.5739130434782609,"[array([[29, 25],
+       [24, 37]])]"
+diabetic_retinopathy.csv,7,10,AdaBoost,None,f1,0.5736540437326356,"[array([[29, 25],
+       [24, 37]])]"
+diabetic_retinopathy.csv,7,10,AdaBoost,None,auc,0.5717972070431087,"[array([[29, 25],
+       [24, 37]])]"
+diabetic_retinopathy.csv,7,10,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 2.0]",acc,0.6521739130434783,"[array([[34, 20],
+       [20, 41]])]"
+diabetic_retinopathy.csv,7,10,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 2.0]",f1,0.6516975839530023,"[array([[33, 21],
+       [19, 42]])]"
+diabetic_retinopathy.csv,7,10,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 2.0]",auc,0.6252276867030966,"[array([[33, 21],
+       [22, 39]])]"
+diabetic_retinopathy.csv,7,10,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.6,"[array([[30, 24],
+       [22, 39]])]"
+diabetic_retinopathy.csv,7,10,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.617738709337825,"[array([[34, 20],
+       [24, 37]])]"
+diabetic_retinopathy.csv,7,10,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.6561930783242258,"[array([[39, 15],
+       [25, 36]])]"

@@ -1,0 +1,1681 @@
+﻿dataset,CV_fold,n_trees,model,parameters,perf_measure,perf_value,Conf_Matrix
+voting_records.csv,0,1,base,None,acc,0.9090909090909091,"[array([[25,  2],
+       [ 2, 15]])]"
+voting_records.csv,0,1,base,None,f1,0.9090909090909091,"[array([[25,  2],
+       [ 2, 15]])]"
+voting_records.csv,0,1,base,None,auc,0.9041394335511982,"[array([[25,  2],
+       [ 2, 15]])]"
+voting_records.csv,0,1,wagging,None,acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,1,wagging,None,f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,1,wagging,None,auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,1,AdaBoost,None,acc,0.9545454545454546,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,0,1,AdaBoost,None,f1,0.9539366883116883,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,0,1,AdaBoost,None,auc,0.9411764705882353,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,0,1,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,1,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,1,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,1,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,1,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,1,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,1,base,None,acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,1,base,None,f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,1,base,None,auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,1,wagging,None,acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,1,wagging,None,f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,1,wagging,None,auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,1,AdaBoost,None,acc,0.8863636363636364,"[array([[26,  1],
+       [ 4, 13]])]"
+voting_records.csv,1,1,AdaBoost,None,f1,0.8838555332613057,"[array([[26,  1],
+       [ 4, 13]])]"
+voting_records.csv,1,1,AdaBoost,None,auc,0.8638344226579521,"[array([[26,  1],
+       [ 4, 13]])]"
+voting_records.csv,1,1,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",acc,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,1,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",f1,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,1,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",auc,0.9520697167755992,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,1,1,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",acc,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,1,1,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",f1,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,1,1,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",auc,0.9520697167755992,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,2,1,base,None,acc,0.9545454545454546,"[array([[25,  2],
+       [ 0, 17]])]"
+voting_records.csv,2,1,base,None,f1,0.9549339549339547,"[array([[25,  2],
+       [ 0, 17]])]"
+voting_records.csv,2,1,base,None,auc,0.962962962962963,"[array([[25,  2],
+       [ 0, 17]])]"
+voting_records.csv,2,1,wagging,None,acc,0.9772727272727273,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,1,wagging,None,f1,0.9773829943641265,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,1,wagging,None,auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,1,AdaBoost,None,acc,0.9772727272727273,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,1,AdaBoost,None,f1,0.9773829943641265,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,1,AdaBoost,None,auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,1,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",acc,0.9772727272727273,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,1,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",f1,0.9773829943641265,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,1,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.9772727272727273,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,1,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.9773829943641265,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,1,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,3,1,base,None,acc,0.9318181818181818,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,3,1,base,None,f1,0.9321489830923793,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,3,1,base,None,auc,0.9335511982570807,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,3,1,wagging,None,acc,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,1,wagging,None,f1,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,1,wagging,None,auc,0.9520697167755992,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,1,AdaBoost,None,acc,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,1,AdaBoost,None,f1,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,1,AdaBoost,None,auc,0.9520697167755992,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",acc,0.9318181818181818,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,3,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",f1,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,3,1,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",acc,0.9772727272727273,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,3,1,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",f1,1.0,"[array([[27,  0],
+       [ 0, 17]])]"
+voting_records.csv,3,1,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,4,1,base,None,acc,0.9545454545454546,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,4,1,base,None,f1,0.9539366883116883,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,4,1,base,None,auc,0.9411764705882353,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,4,1,wagging,None,acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,4,1,wagging,None,f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,4,1,wagging,None,auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,4,1,AdaBoost,None,acc,0.9318181818181818,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,4,1,AdaBoost,None,f1,0.9321489830923793,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,4,1,AdaBoost,None,auc,0.9335511982570807,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,4,1,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 1.0]",acc,0.9545454545454546,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,4,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",f1,0.9321489830923793,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,4,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",auc,0.9520697167755992,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,4,1,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",acc,0.9545454545454546,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,4,1,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",f1,0.9771349862258952,"[array([[27,  0],
+       [ 1, 16]])]"
+voting_records.csv,4,1,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",auc,0.9705882352941176,"[array([[27,  0],
+       [ 1, 16]])]"
+voting_records.csv,5,1,base,None,acc,0.9767441860465116,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,5,1,base,None,f1,0.976611219700294,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,5,1,base,None,auc,0.9705882352941176,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,5,1,wagging,None,acc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,1,wagging,None,f1,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,1,wagging,None,auc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,1,AdaBoost,None,acc,0.9767441860465116,"[array([[25,  1],
+       [ 0, 17]])]"
+voting_records.csv,5,1,AdaBoost,None,f1,0.9768484137841184,"[array([[25,  1],
+       [ 0, 17]])]"
+voting_records.csv,5,1,AdaBoost,None,auc,0.9807692307692308,"[array([[25,  1],
+       [ 0, 17]])]"
+voting_records.csv,5,1,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",acc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,1,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",f1,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,1,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",auc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,1,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",acc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,1,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",f1,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,1,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,6,1,base,None,acc,0.9534883720930233,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,1,base,None,f1,0.9538501291989663,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,1,base,None,auc,0.9615384615384616,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,1,wagging,None,acc,0.9534883720930233,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,1,wagging,None,f1,0.9538501291989663,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,1,wagging,None,auc,0.9615384615384616,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,1,AdaBoost,None,acc,0.9534883720930233,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,1,AdaBoost,None,f1,0.9538501291989663,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,1,AdaBoost,None,auc,0.9615384615384616,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,1,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",acc,0.9302325581395349,"[array([[24,  2],
+       [ 1, 16]])]"
+voting_records.csv,6,1,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",f1,0.930545241352355,"[array([[24,  2],
+       [ 1, 16]])]"
+voting_records.csv,6,1,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",auc,0.9321266968325792,"[array([[24,  2],
+       [ 1, 16]])]"
+voting_records.csv,6,1,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",acc,0.9534883720930233,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,1,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",f1,0.930545241352355,"[array([[24,  2],
+       [ 1, 16]])]"
+voting_records.csv,6,1,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,0.9321266968325792,"[array([[24,  2],
+       [ 1, 16]])]"
+voting_records.csv,7,1,base,None,acc,0.9534883720930233,"[array([[25,  1],
+       [ 1, 16]])]"
+voting_records.csv,7,1,base,None,f1,0.9534883720930233,"[array([[25,  1],
+       [ 1, 16]])]"
+voting_records.csv,7,1,base,None,auc,0.9513574660633485,"[array([[25,  1],
+       [ 1, 16]])]"
+voting_records.csv,7,1,wagging,None,acc,0.9767441860465116,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,1,wagging,None,f1,0.976611219700294,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,1,wagging,None,auc,0.9705882352941176,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,1,AdaBoost,None,acc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,7,1,AdaBoost,None,f1,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,7,1,AdaBoost,None,auc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,7,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",acc,0.9767441860465116,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",f1,0.9534883720930233,"[array([[25,  1],
+       [ 1, 16]])]"
+voting_records.csv,7,1,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",auc,0.9705882352941176,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,1,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",acc,0.9767441860465116,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,1,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",f1,0.976611219700294,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,1,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,0.9513574660633485,"[array([[25,  1],
+       [ 1, 16]])]"
+voting_records.csv,8,1,base,None,acc,0.8604651162790697,"[array([[24,  3],
+       [ 3, 13]])]"
+voting_records.csv,8,1,base,None,f1,0.8604651162790697,"[array([[24,  3],
+       [ 3, 13]])]"
+voting_records.csv,8,1,base,None,auc,0.8506944444444443,"[array([[24,  3],
+       [ 3, 13]])]"
+voting_records.csv,8,1,wagging,None,acc,0.9069767441860465,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,8,1,wagging,None,f1,0.9055370985603544,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,8,1,wagging,None,auc,0.8877314814814815,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,8,1,AdaBoost,None,acc,0.9302325581395349,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,8,1,AdaBoost,None,f1,0.9297415262906635,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,8,1,AdaBoost,None,auc,0.9189814814814815,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,8,1,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",acc,0.9302325581395349,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,8,1,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",f1,0.9534883720930233,"[array([[26,  1],
+       [ 1, 15]])]"
+voting_records.csv,8,1,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",auc,0.8877314814814815,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,8,1,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",acc,0.9534883720930233,"[array([[26,  1],
+       [ 1, 15]])]"
+voting_records.csv,8,1,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",f1,0.9297415262906635,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,8,1,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",auc,0.9502314814814816,"[array([[26,  1],
+       [ 1, 15]])]"
+voting_records.csv,9,1,base,None,acc,0.9069767441860465,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,9,1,base,None,f1,0.9055370985603544,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,9,1,base,None,auc,0.8877314814814815,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,9,1,wagging,None,acc,0.9302325581395349,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,1,wagging,None,f1,0.9297415262906635,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,1,wagging,None,auc,0.9189814814814815,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,1,AdaBoost,None,acc,0.9302325581395349,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,1,AdaBoost,None,f1,0.9297415262906635,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,1,AdaBoost,None,auc,0.9189814814814815,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,1,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",acc,0.9302325581395349,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,1,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",f1,0.9055370985603544,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,9,1,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",auc,0.9189814814814815,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,1,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,0.9302325581395349,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,1,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",f1,0.9297415262906635,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,1,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.8564814814814815,"[array([[26,  1],
+       [ 4, 12]])]"
+voting_records.csv,0,10,base,None,acc,0.9090909090909091,"[array([[25,  2],
+       [ 2, 15]])]"
+voting_records.csv,0,10,base,None,f1,0.9090909090909091,"[array([[25,  2],
+       [ 2, 15]])]"
+voting_records.csv,0,10,base,None,auc,0.9041394335511982,"[array([[25,  2],
+       [ 2, 15]])]"
+voting_records.csv,0,10,wagging,None,acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,10,wagging,None,f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,10,wagging,None,auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,10,AdaBoost,None,acc,0.9545454545454546,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,0,10,AdaBoost,None,f1,0.9539366883116883,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,0,10,AdaBoost,None,auc,0.9411764705882353,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,0,10,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,10,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,10,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,10,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,10,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,10,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,10,base,None,acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,10,base,None,f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,10,base,None,auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,10,wagging,None,acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,10,wagging,None,f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,10,wagging,None,auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,10,AdaBoost,None,acc,0.8863636363636364,"[array([[26,  1],
+       [ 4, 13]])]"
+voting_records.csv,1,10,AdaBoost,None,f1,0.8838555332613057,"[array([[26,  1],
+       [ 4, 13]])]"
+voting_records.csv,1,10,AdaBoost,None,auc,0.8638344226579521,"[array([[26,  1],
+       [ 4, 13]])]"
+voting_records.csv,1,10,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",acc,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,1,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",f1,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,1,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",auc,0.9520697167755992,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,1,10,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",acc,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,1,10,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",f1,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,1,10,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",auc,0.9520697167755992,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,2,10,base,None,acc,0.9545454545454546,"[array([[25,  2],
+       [ 0, 17]])]"
+voting_records.csv,2,10,base,None,f1,0.9549339549339547,"[array([[25,  2],
+       [ 0, 17]])]"
+voting_records.csv,2,10,base,None,auc,0.962962962962963,"[array([[25,  2],
+       [ 0, 17]])]"
+voting_records.csv,2,10,wagging,None,acc,0.9772727272727273,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,10,wagging,None,f1,0.9773829943641265,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,10,wagging,None,auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,10,AdaBoost,None,acc,0.9772727272727273,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,10,AdaBoost,None,f1,0.9773829943641265,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,10,AdaBoost,None,auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,10,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",acc,0.9772727272727273,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,10,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",f1,0.9773829943641265,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,10,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.9772727272727273,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,10,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.9773829943641265,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,10,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,3,10,base,None,acc,0.9318181818181818,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,3,10,base,None,f1,0.9321489830923793,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,3,10,base,None,auc,0.9335511982570807,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,3,10,wagging,None,acc,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,10,wagging,None,f1,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,10,wagging,None,auc,0.9520697167755992,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,10,AdaBoost,None,acc,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,10,AdaBoost,None,f1,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,10,AdaBoost,None,auc,0.9520697167755992,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",acc,0.9318181818181818,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,3,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",f1,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,3,10,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",acc,0.9772727272727273,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,3,10,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",f1,1.0,"[array([[27,  0],
+       [ 0, 17]])]"
+voting_records.csv,3,10,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,4,10,base,None,acc,0.9545454545454546,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,4,10,base,None,f1,0.9539366883116883,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,4,10,base,None,auc,0.9411764705882353,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,4,10,wagging,None,acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,4,10,wagging,None,f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,4,10,wagging,None,auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,4,10,AdaBoost,None,acc,0.9318181818181818,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,4,10,AdaBoost,None,f1,0.9321489830923793,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,4,10,AdaBoost,None,auc,0.9335511982570807,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,4,10,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 1.0]",acc,0.9545454545454546,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,4,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",f1,0.9321489830923793,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,4,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",auc,0.9520697167755992,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,4,10,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",acc,0.9545454545454546,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,4,10,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",f1,0.9771349862258952,"[array([[27,  0],
+       [ 1, 16]])]"
+voting_records.csv,4,10,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",auc,0.9705882352941176,"[array([[27,  0],
+       [ 1, 16]])]"
+voting_records.csv,5,10,base,None,acc,0.9767441860465116,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,5,10,base,None,f1,0.976611219700294,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,5,10,base,None,auc,0.9705882352941176,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,5,10,wagging,None,acc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,10,wagging,None,f1,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,10,wagging,None,auc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,10,AdaBoost,None,acc,0.9767441860465116,"[array([[25,  1],
+       [ 0, 17]])]"
+voting_records.csv,5,10,AdaBoost,None,f1,0.9768484137841184,"[array([[25,  1],
+       [ 0, 17]])]"
+voting_records.csv,5,10,AdaBoost,None,auc,0.9807692307692308,"[array([[25,  1],
+       [ 0, 17]])]"
+voting_records.csv,5,10,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",acc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,10,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",f1,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,10,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",auc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,10,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",acc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,10,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",f1,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,10,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,6,10,base,None,acc,0.9534883720930233,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,10,base,None,f1,0.9538501291989663,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,10,base,None,auc,0.9615384615384616,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,10,wagging,None,acc,0.9534883720930233,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,10,wagging,None,f1,0.9538501291989663,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,10,wagging,None,auc,0.9615384615384616,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,10,AdaBoost,None,acc,0.9534883720930233,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,10,AdaBoost,None,f1,0.9538501291989663,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,10,AdaBoost,None,auc,0.9615384615384616,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,10,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",acc,0.9302325581395349,"[array([[24,  2],
+       [ 1, 16]])]"
+voting_records.csv,6,10,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",f1,0.930545241352355,"[array([[24,  2],
+       [ 1, 16]])]"
+voting_records.csv,6,10,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",auc,0.9321266968325792,"[array([[24,  2],
+       [ 1, 16]])]"
+voting_records.csv,6,10,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",acc,0.9534883720930233,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,10,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",f1,0.930545241352355,"[array([[24,  2],
+       [ 1, 16]])]"
+voting_records.csv,6,10,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,0.9321266968325792,"[array([[24,  2],
+       [ 1, 16]])]"
+voting_records.csv,7,10,base,None,acc,0.9534883720930233,"[array([[25,  1],
+       [ 1, 16]])]"
+voting_records.csv,7,10,base,None,f1,0.9534883720930233,"[array([[25,  1],
+       [ 1, 16]])]"
+voting_records.csv,7,10,base,None,auc,0.9513574660633485,"[array([[25,  1],
+       [ 1, 16]])]"
+voting_records.csv,7,10,wagging,None,acc,0.9767441860465116,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,10,wagging,None,f1,0.976611219700294,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,10,wagging,None,auc,0.9705882352941176,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,10,AdaBoost,None,acc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,7,10,AdaBoost,None,f1,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,7,10,AdaBoost,None,auc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,7,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",acc,0.9767441860465116,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",f1,0.9534883720930233,"[array([[25,  1],
+       [ 1, 16]])]"
+voting_records.csv,7,10,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",auc,0.9705882352941176,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,10,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",acc,0.9767441860465116,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,10,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",f1,0.976611219700294,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,10,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,0.9513574660633485,"[array([[25,  1],
+       [ 1, 16]])]"
+voting_records.csv,8,10,base,None,acc,0.8604651162790697,"[array([[24,  3],
+       [ 3, 13]])]"
+voting_records.csv,8,10,base,None,f1,0.8604651162790697,"[array([[24,  3],
+       [ 3, 13]])]"
+voting_records.csv,8,10,base,None,auc,0.8506944444444443,"[array([[24,  3],
+       [ 3, 13]])]"
+voting_records.csv,8,10,wagging,None,acc,0.9069767441860465,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,8,10,wagging,None,f1,0.9055370985603544,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,8,10,wagging,None,auc,0.8877314814814815,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,8,10,AdaBoost,None,acc,0.9302325581395349,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,8,10,AdaBoost,None,f1,0.9297415262906635,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,8,10,AdaBoost,None,auc,0.9189814814814815,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,8,10,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",acc,0.9302325581395349,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,8,10,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",f1,0.9534883720930233,"[array([[26,  1],
+       [ 1, 15]])]"
+voting_records.csv,8,10,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",auc,0.8877314814814815,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,8,10,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",acc,0.9534883720930233,"[array([[26,  1],
+       [ 1, 15]])]"
+voting_records.csv,8,10,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",f1,0.9297415262906635,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,8,10,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",auc,0.9502314814814816,"[array([[26,  1],
+       [ 1, 15]])]"
+voting_records.csv,9,10,base,None,acc,0.9069767441860465,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,9,10,base,None,f1,0.9055370985603544,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,9,10,base,None,auc,0.8877314814814815,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,9,10,wagging,None,acc,0.9302325581395349,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,10,wagging,None,f1,0.9297415262906635,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,10,wagging,None,auc,0.9189814814814815,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,10,AdaBoost,None,acc,0.9302325581395349,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,10,AdaBoost,None,f1,0.9297415262906635,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,10,AdaBoost,None,auc,0.9189814814814815,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,10,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",acc,0.9302325581395349,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,10,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",f1,0.9055370985603544,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,9,10,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",auc,0.9189814814814815,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,10,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,0.9302325581395349,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,10,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",f1,0.9297415262906635,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,10,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.8564814814814815,"[array([[26,  1],
+       [ 4, 12]])]"
+voting_records.csv,0,20,base,None,acc,0.9090909090909091,"[array([[25,  2],
+       [ 2, 15]])]"
+voting_records.csv,0,20,base,None,f1,0.9090909090909091,"[array([[25,  2],
+       [ 2, 15]])]"
+voting_records.csv,0,20,base,None,auc,0.9041394335511982,"[array([[25,  2],
+       [ 2, 15]])]"
+voting_records.csv,0,20,wagging,None,acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,20,wagging,None,f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,20,wagging,None,auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,20,AdaBoost,None,acc,0.9545454545454546,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,0,20,AdaBoost,None,f1,0.9539366883116883,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,0,20,AdaBoost,None,auc,0.9411764705882353,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,0,20,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,20,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,20,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,20,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,20,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,20,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,20,base,None,acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,20,base,None,f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,20,base,None,auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,20,wagging,None,acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,20,wagging,None,f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,20,wagging,None,auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,20,AdaBoost,None,acc,0.8863636363636364,"[array([[26,  1],
+       [ 4, 13]])]"
+voting_records.csv,1,20,AdaBoost,None,f1,0.8838555332613057,"[array([[26,  1],
+       [ 4, 13]])]"
+voting_records.csv,1,20,AdaBoost,None,auc,0.8638344226579521,"[array([[26,  1],
+       [ 4, 13]])]"
+voting_records.csv,1,20,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",acc,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,1,20,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",f1,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,1,20,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",auc,0.9520697167755992,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,1,20,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",acc,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,1,20,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",f1,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,1,20,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",auc,0.9520697167755992,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,2,20,base,None,acc,0.9545454545454546,"[array([[25,  2],
+       [ 0, 17]])]"
+voting_records.csv,2,20,base,None,f1,0.9549339549339547,"[array([[25,  2],
+       [ 0, 17]])]"
+voting_records.csv,2,20,base,None,auc,0.962962962962963,"[array([[25,  2],
+       [ 0, 17]])]"
+voting_records.csv,2,20,wagging,None,acc,0.9772727272727273,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,20,wagging,None,f1,0.9773829943641265,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,20,wagging,None,auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,20,AdaBoost,None,acc,0.9772727272727273,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,20,AdaBoost,None,f1,0.9773829943641265,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,20,AdaBoost,None,auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,20,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",acc,0.9772727272727273,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,20,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",f1,0.9773829943641265,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,20,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,20,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.9772727272727273,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,20,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.9773829943641265,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,20,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,3,20,base,None,acc,0.9318181818181818,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,3,20,base,None,f1,0.9321489830923793,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,3,20,base,None,auc,0.9335511982570807,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,3,20,wagging,None,acc,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,20,wagging,None,f1,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,20,wagging,None,auc,0.9520697167755992,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,20,AdaBoost,None,acc,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,20,AdaBoost,None,f1,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,20,AdaBoost,None,auc,0.9520697167755992,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,20,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",acc,0.9318181818181818,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,3,20,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",f1,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,20,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,3,20,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",acc,0.9772727272727273,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,3,20,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",f1,1.0,"[array([[27,  0],
+       [ 0, 17]])]"
+voting_records.csv,3,20,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,4,20,base,None,acc,0.9545454545454546,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,4,20,base,None,f1,0.9539366883116883,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,4,20,base,None,auc,0.9411764705882353,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,4,20,wagging,None,acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,4,20,wagging,None,f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,4,20,wagging,None,auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,4,20,AdaBoost,None,acc,0.9318181818181818,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,4,20,AdaBoost,None,f1,0.9321489830923793,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,4,20,AdaBoost,None,auc,0.9335511982570807,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,4,20,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 1.0]",acc,0.9545454545454546,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,4,20,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",f1,0.9321489830923793,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,4,20,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",auc,0.9520697167755992,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,4,20,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",acc,0.9545454545454546,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,4,20,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",f1,0.9771349862258952,"[array([[27,  0],
+       [ 1, 16]])]"
+voting_records.csv,4,20,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",auc,0.9705882352941176,"[array([[27,  0],
+       [ 1, 16]])]"
+voting_records.csv,5,20,base,None,acc,0.9767441860465116,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,5,20,base,None,f1,0.976611219700294,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,5,20,base,None,auc,0.9705882352941176,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,5,20,wagging,None,acc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,20,wagging,None,f1,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,20,wagging,None,auc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,20,AdaBoost,None,acc,0.9767441860465116,"[array([[25,  1],
+       [ 0, 17]])]"
+voting_records.csv,5,20,AdaBoost,None,f1,0.9768484137841184,"[array([[25,  1],
+       [ 0, 17]])]"
+voting_records.csv,5,20,AdaBoost,None,auc,0.9807692307692308,"[array([[25,  1],
+       [ 0, 17]])]"
+voting_records.csv,5,20,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",acc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,20,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",f1,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,20,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",auc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,20,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",acc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,20,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",f1,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,20,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,6,20,base,None,acc,0.9534883720930233,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,20,base,None,f1,0.9538501291989663,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,20,base,None,auc,0.9615384615384616,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,20,wagging,None,acc,0.9534883720930233,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,20,wagging,None,f1,0.9538501291989663,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,20,wagging,None,auc,0.9615384615384616,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,20,AdaBoost,None,acc,0.9534883720930233,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,20,AdaBoost,None,f1,0.9538501291989663,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,20,AdaBoost,None,auc,0.9615384615384616,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,20,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",acc,0.9302325581395349,"[array([[24,  2],
+       [ 1, 16]])]"
+voting_records.csv,6,20,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",f1,0.930545241352355,"[array([[24,  2],
+       [ 1, 16]])]"
+voting_records.csv,6,20,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",auc,0.9321266968325792,"[array([[24,  2],
+       [ 1, 16]])]"
+voting_records.csv,6,20,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",acc,0.9534883720930233,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,20,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",f1,0.930545241352355,"[array([[24,  2],
+       [ 1, 16]])]"
+voting_records.csv,6,20,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,0.9321266968325792,"[array([[24,  2],
+       [ 1, 16]])]"
+voting_records.csv,7,20,base,None,acc,0.9534883720930233,"[array([[25,  1],
+       [ 1, 16]])]"
+voting_records.csv,7,20,base,None,f1,0.9534883720930233,"[array([[25,  1],
+       [ 1, 16]])]"
+voting_records.csv,7,20,base,None,auc,0.9513574660633485,"[array([[25,  1],
+       [ 1, 16]])]"
+voting_records.csv,7,20,wagging,None,acc,0.9767441860465116,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,20,wagging,None,f1,0.976611219700294,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,20,wagging,None,auc,0.9705882352941176,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,20,AdaBoost,None,acc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,7,20,AdaBoost,None,f1,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,7,20,AdaBoost,None,auc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,7,20,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",acc,0.9767441860465116,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,20,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",f1,0.9534883720930233,"[array([[25,  1],
+       [ 1, 16]])]"
+voting_records.csv,7,20,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",auc,0.9705882352941176,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,20,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",acc,0.9767441860465116,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,20,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",f1,0.976611219700294,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,20,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,0.9513574660633485,"[array([[25,  1],
+       [ 1, 16]])]"
+voting_records.csv,8,20,base,None,acc,0.8604651162790697,"[array([[24,  3],
+       [ 3, 13]])]"
+voting_records.csv,8,20,base,None,f1,0.8604651162790697,"[array([[24,  3],
+       [ 3, 13]])]"
+voting_records.csv,8,20,base,None,auc,0.8506944444444443,"[array([[24,  3],
+       [ 3, 13]])]"
+voting_records.csv,8,20,wagging,None,acc,0.9069767441860465,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,8,20,wagging,None,f1,0.9055370985603544,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,8,20,wagging,None,auc,0.8877314814814815,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,8,20,AdaBoost,None,acc,0.9302325581395349,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,8,20,AdaBoost,None,f1,0.9297415262906635,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,8,20,AdaBoost,None,auc,0.9189814814814815,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,8,20,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",acc,0.9302325581395349,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,8,20,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",f1,0.9534883720930233,"[array([[26,  1],
+       [ 1, 15]])]"
+voting_records.csv,8,20,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",auc,0.8877314814814815,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,8,20,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",acc,0.9534883720930233,"[array([[26,  1],
+       [ 1, 15]])]"
+voting_records.csv,8,20,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",f1,0.9297415262906635,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,8,20,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",auc,0.9502314814814816,"[array([[26,  1],
+       [ 1, 15]])]"
+voting_records.csv,9,20,base,None,acc,0.9069767441860465,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,9,20,base,None,f1,0.9055370985603544,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,9,20,base,None,auc,0.8877314814814815,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,9,20,wagging,None,acc,0.9302325581395349,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,20,wagging,None,f1,0.9297415262906635,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,20,wagging,None,auc,0.9189814814814815,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,20,AdaBoost,None,acc,0.9302325581395349,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,20,AdaBoost,None,f1,0.9297415262906635,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,20,AdaBoost,None,auc,0.9189814814814815,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,20,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",acc,0.9302325581395349,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,20,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",f1,0.9055370985603544,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,9,20,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",auc,0.9189814814814815,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,20,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,0.9302325581395349,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,20,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",f1,0.9297415262906635,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,20,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.8564814814814815,"[array([[26,  1],
+       [ 4, 12]])]"
+voting_records.csv,0,30,base,None,acc,0.9090909090909091,"[array([[25,  2],
+       [ 2, 15]])]"
+voting_records.csv,0,30,base,None,f1,0.9090909090909091,"[array([[25,  2],
+       [ 2, 15]])]"
+voting_records.csv,0,30,base,None,auc,0.9041394335511982,"[array([[25,  2],
+       [ 2, 15]])]"
+voting_records.csv,0,30,wagging,None,acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,30,wagging,None,f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,30,wagging,None,auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,30,AdaBoost,None,acc,0.9545454545454546,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,0,30,AdaBoost,None,f1,0.9539366883116883,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,0,30,AdaBoost,None,auc,0.9411764705882353,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,0,30,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,30,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,30,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,30,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,30,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,30,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,30,base,None,acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,30,base,None,f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,30,base,None,auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,30,wagging,None,acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,30,wagging,None,f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,30,wagging,None,auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,30,AdaBoost,None,acc,0.8863636363636364,"[array([[26,  1],
+       [ 4, 13]])]"
+voting_records.csv,1,30,AdaBoost,None,f1,0.8838555332613057,"[array([[26,  1],
+       [ 4, 13]])]"
+voting_records.csv,1,30,AdaBoost,None,auc,0.8638344226579521,"[array([[26,  1],
+       [ 4, 13]])]"
+voting_records.csv,1,30,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",acc,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,1,30,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",f1,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,1,30,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",auc,0.9520697167755992,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,1,30,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",acc,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,1,30,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",f1,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,1,30,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",auc,0.9520697167755992,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,2,30,base,None,acc,0.9545454545454546,"[array([[25,  2],
+       [ 0, 17]])]"
+voting_records.csv,2,30,base,None,f1,0.9549339549339547,"[array([[25,  2],
+       [ 0, 17]])]"
+voting_records.csv,2,30,base,None,auc,0.962962962962963,"[array([[25,  2],
+       [ 0, 17]])]"
+voting_records.csv,2,30,wagging,None,acc,0.9772727272727273,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,30,wagging,None,f1,0.9773829943641265,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,30,wagging,None,auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,30,AdaBoost,None,acc,0.9772727272727273,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,30,AdaBoost,None,f1,0.9773829943641265,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,30,AdaBoost,None,auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,30,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",acc,0.9772727272727273,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,30,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",f1,0.9773829943641265,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,30,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,30,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.9772727272727273,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,30,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.9773829943641265,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,30,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,3,30,base,None,acc,0.9318181818181818,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,3,30,base,None,f1,0.9321489830923793,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,3,30,base,None,auc,0.9335511982570807,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,3,30,wagging,None,acc,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,30,wagging,None,f1,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,30,wagging,None,auc,0.9520697167755992,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,30,AdaBoost,None,acc,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,30,AdaBoost,None,f1,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,30,AdaBoost,None,auc,0.9520697167755992,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,30,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",acc,0.9318181818181818,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,3,30,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",f1,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,30,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,3,30,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",acc,0.9772727272727273,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,3,30,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",f1,1.0,"[array([[27,  0],
+       [ 0, 17]])]"
+voting_records.csv,3,30,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,4,30,base,None,acc,0.9545454545454546,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,4,30,base,None,f1,0.9539366883116883,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,4,30,base,None,auc,0.9411764705882353,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,4,30,wagging,None,acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,4,30,wagging,None,f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,4,30,wagging,None,auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,4,30,AdaBoost,None,acc,0.9318181818181818,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,4,30,AdaBoost,None,f1,0.9321489830923793,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,4,30,AdaBoost,None,auc,0.9335511982570807,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,4,30,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 1.0]",acc,0.9545454545454546,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,4,30,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",f1,0.9321489830923793,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,4,30,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",auc,0.9520697167755992,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,4,30,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",acc,0.9545454545454546,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,4,30,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",f1,0.9771349862258952,"[array([[27,  0],
+       [ 1, 16]])]"
+voting_records.csv,4,30,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",auc,0.9705882352941176,"[array([[27,  0],
+       [ 1, 16]])]"
+voting_records.csv,5,30,base,None,acc,0.9767441860465116,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,5,30,base,None,f1,0.976611219700294,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,5,30,base,None,auc,0.9705882352941176,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,5,30,wagging,None,acc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,30,wagging,None,f1,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,30,wagging,None,auc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,30,AdaBoost,None,acc,0.9767441860465116,"[array([[25,  1],
+       [ 0, 17]])]"
+voting_records.csv,5,30,AdaBoost,None,f1,0.9768484137841184,"[array([[25,  1],
+       [ 0, 17]])]"
+voting_records.csv,5,30,AdaBoost,None,auc,0.9807692307692308,"[array([[25,  1],
+       [ 0, 17]])]"
+voting_records.csv,5,30,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",acc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,30,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",f1,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,30,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",auc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,30,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",acc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,30,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",f1,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,30,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,6,30,base,None,acc,0.9534883720930233,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,30,base,None,f1,0.9538501291989663,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,30,base,None,auc,0.9615384615384616,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,30,wagging,None,acc,0.9534883720930233,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,30,wagging,None,f1,0.9538501291989663,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,30,wagging,None,auc,0.9615384615384616,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,30,AdaBoost,None,acc,0.9534883720930233,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,30,AdaBoost,None,f1,0.9538501291989663,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,30,AdaBoost,None,auc,0.9615384615384616,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,30,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",acc,0.9302325581395349,"[array([[24,  2],
+       [ 1, 16]])]"
+voting_records.csv,6,30,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",f1,0.930545241352355,"[array([[24,  2],
+       [ 1, 16]])]"
+voting_records.csv,6,30,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",auc,0.9321266968325792,"[array([[24,  2],
+       [ 1, 16]])]"
+voting_records.csv,6,30,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",acc,0.9534883720930233,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,30,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",f1,0.930545241352355,"[array([[24,  2],
+       [ 1, 16]])]"
+voting_records.csv,6,30,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,0.9321266968325792,"[array([[24,  2],
+       [ 1, 16]])]"
+voting_records.csv,7,30,base,None,acc,0.9534883720930233,"[array([[25,  1],
+       [ 1, 16]])]"
+voting_records.csv,7,30,base,None,f1,0.9534883720930233,"[array([[25,  1],
+       [ 1, 16]])]"
+voting_records.csv,7,30,base,None,auc,0.9513574660633485,"[array([[25,  1],
+       [ 1, 16]])]"
+voting_records.csv,7,30,wagging,None,acc,0.9767441860465116,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,30,wagging,None,f1,0.976611219700294,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,30,wagging,None,auc,0.9705882352941176,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,30,AdaBoost,None,acc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,7,30,AdaBoost,None,f1,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,7,30,AdaBoost,None,auc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,7,30,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",acc,0.9767441860465116,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,30,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",f1,0.9534883720930233,"[array([[25,  1],
+       [ 1, 16]])]"
+voting_records.csv,7,30,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",auc,0.9705882352941176,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,30,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",acc,0.9767441860465116,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,30,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",f1,0.976611219700294,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,30,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,0.9513574660633485,"[array([[25,  1],
+       [ 1, 16]])]"
+voting_records.csv,8,30,base,None,acc,0.8604651162790697,"[array([[24,  3],
+       [ 3, 13]])]"
+voting_records.csv,8,30,base,None,f1,0.8604651162790697,"[array([[24,  3],
+       [ 3, 13]])]"
+voting_records.csv,8,30,base,None,auc,0.8506944444444443,"[array([[24,  3],
+       [ 3, 13]])]"
+voting_records.csv,8,30,wagging,None,acc,0.9069767441860465,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,8,30,wagging,None,f1,0.9055370985603544,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,8,30,wagging,None,auc,0.8877314814814815,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,8,30,AdaBoost,None,acc,0.9302325581395349,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,8,30,AdaBoost,None,f1,0.9297415262906635,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,8,30,AdaBoost,None,auc,0.9189814814814815,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,8,30,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",acc,0.9302325581395349,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,8,30,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",f1,0.9534883720930233,"[array([[26,  1],
+       [ 1, 15]])]"
+voting_records.csv,8,30,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",auc,0.8877314814814815,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,8,30,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",acc,0.9534883720930233,"[array([[26,  1],
+       [ 1, 15]])]"
+voting_records.csv,8,30,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",f1,0.9297415262906635,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,8,30,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",auc,0.9502314814814816,"[array([[26,  1],
+       [ 1, 15]])]"
+voting_records.csv,9,30,base,None,acc,0.9069767441860465,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,9,30,base,None,f1,0.9055370985603544,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,9,30,base,None,auc,0.8877314814814815,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,9,30,wagging,None,acc,0.9302325581395349,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,30,wagging,None,f1,0.9297415262906635,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,30,wagging,None,auc,0.9189814814814815,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,30,AdaBoost,None,acc,0.9302325581395349,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,30,AdaBoost,None,f1,0.9297415262906635,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,30,AdaBoost,None,auc,0.9189814814814815,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,30,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",acc,0.9302325581395349,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,30,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",f1,0.9055370985603544,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,9,30,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",auc,0.9189814814814815,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,30,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,0.9302325581395349,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,30,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",f1,0.9297415262906635,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,30,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.8564814814814815,"[array([[26,  1],
+       [ 4, 12]])]"
+voting_records.csv,0,40,base,None,acc,0.9090909090909091,"[array([[25,  2],
+       [ 2, 15]])]"
+voting_records.csv,0,40,base,None,f1,0.9090909090909091,"[array([[25,  2],
+       [ 2, 15]])]"
+voting_records.csv,0,40,base,None,auc,0.9041394335511982,"[array([[25,  2],
+       [ 2, 15]])]"
+voting_records.csv,0,40,wagging,None,acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,40,wagging,None,f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,40,wagging,None,auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,40,AdaBoost,None,acc,0.9545454545454546,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,0,40,AdaBoost,None,f1,0.9539366883116883,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,0,40,AdaBoost,None,auc,0.9411764705882353,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,0,40,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,40,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,40,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,40,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,40,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,40,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,40,base,None,acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,40,base,None,f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,40,base,None,auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,40,wagging,None,acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,40,wagging,None,f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,40,wagging,None,auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,40,AdaBoost,None,acc,0.8863636363636364,"[array([[26,  1],
+       [ 4, 13]])]"
+voting_records.csv,1,40,AdaBoost,None,f1,0.8838555332613057,"[array([[26,  1],
+       [ 4, 13]])]"
+voting_records.csv,1,40,AdaBoost,None,auc,0.8638344226579521,"[array([[26,  1],
+       [ 4, 13]])]"
+voting_records.csv,1,40,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",acc,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,1,40,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",f1,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,1,40,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",auc,0.9520697167755992,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,1,40,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",acc,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,1,40,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",f1,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,1,40,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",auc,0.9520697167755992,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,2,40,base,None,acc,0.9545454545454546,"[array([[25,  2],
+       [ 0, 17]])]"
+voting_records.csv,2,40,base,None,f1,0.9549339549339547,"[array([[25,  2],
+       [ 0, 17]])]"
+voting_records.csv,2,40,base,None,auc,0.962962962962963,"[array([[25,  2],
+       [ 0, 17]])]"
+voting_records.csv,2,40,wagging,None,acc,0.9772727272727273,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,40,wagging,None,f1,0.9773829943641265,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,40,wagging,None,auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,40,AdaBoost,None,acc,0.9772727272727273,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,40,AdaBoost,None,f1,0.9773829943641265,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,40,AdaBoost,None,auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,40,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",acc,0.9772727272727273,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,40,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",f1,0.9773829943641265,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,40,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,40,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.9772727272727273,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,40,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.9773829943641265,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,40,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,3,40,base,None,acc,0.9318181818181818,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,3,40,base,None,f1,0.9321489830923793,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,3,40,base,None,auc,0.9335511982570807,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,3,40,wagging,None,acc,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,40,wagging,None,f1,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,40,wagging,None,auc,0.9520697167755992,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,40,AdaBoost,None,acc,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,40,AdaBoost,None,f1,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,40,AdaBoost,None,auc,0.9520697167755992,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,40,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",acc,0.9318181818181818,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,3,40,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",f1,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,40,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,3,40,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",acc,0.9772727272727273,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,3,40,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",f1,1.0,"[array([[27,  0],
+       [ 0, 17]])]"
+voting_records.csv,3,40,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,4,40,base,None,acc,0.9545454545454546,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,4,40,base,None,f1,0.9539366883116883,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,4,40,base,None,auc,0.9411764705882353,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,4,40,wagging,None,acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,4,40,wagging,None,f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,4,40,wagging,None,auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,4,40,AdaBoost,None,acc,0.9318181818181818,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,4,40,AdaBoost,None,f1,0.9321489830923793,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,4,40,AdaBoost,None,auc,0.9335511982570807,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,4,40,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 1.0]",acc,0.9545454545454546,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,4,40,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",f1,0.9321489830923793,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,4,40,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",auc,0.9520697167755992,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,4,40,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",acc,0.9545454545454546,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,4,40,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",f1,0.9771349862258952,"[array([[27,  0],
+       [ 1, 16]])]"
+voting_records.csv,4,40,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",auc,0.9705882352941176,"[array([[27,  0],
+       [ 1, 16]])]"
+voting_records.csv,5,40,base,None,acc,0.9767441860465116,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,5,40,base,None,f1,0.976611219700294,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,5,40,base,None,auc,0.9705882352941176,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,5,40,wagging,None,acc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,40,wagging,None,f1,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,40,wagging,None,auc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,40,AdaBoost,None,acc,0.9767441860465116,"[array([[25,  1],
+       [ 0, 17]])]"
+voting_records.csv,5,40,AdaBoost,None,f1,0.9768484137841184,"[array([[25,  1],
+       [ 0, 17]])]"
+voting_records.csv,5,40,AdaBoost,None,auc,0.9807692307692308,"[array([[25,  1],
+       [ 0, 17]])]"
+voting_records.csv,5,40,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",acc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,40,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",f1,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,40,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",auc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,40,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",acc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,40,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",f1,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,40,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,6,40,base,None,acc,0.9534883720930233,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,40,base,None,f1,0.9538501291989663,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,40,base,None,auc,0.9615384615384616,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,40,wagging,None,acc,0.9534883720930233,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,40,wagging,None,f1,0.9538501291989663,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,40,wagging,None,auc,0.9615384615384616,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,40,AdaBoost,None,acc,0.9534883720930233,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,40,AdaBoost,None,f1,0.9538501291989663,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,40,AdaBoost,None,auc,0.9615384615384616,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,40,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",acc,0.9302325581395349,"[array([[24,  2],
+       [ 1, 16]])]"
+voting_records.csv,6,40,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",f1,0.930545241352355,"[array([[24,  2],
+       [ 1, 16]])]"
+voting_records.csv,6,40,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 1.0]",auc,0.9321266968325792,"[array([[24,  2],
+       [ 1, 16]])]"
+voting_records.csv,6,40,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",acc,0.9534883720930233,"[array([[24,  2],
+       [ 0, 17]])]"
+voting_records.csv,6,40,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",f1,0.930545241352355,"[array([[24,  2],
+       [ 1, 16]])]"
+voting_records.csv,6,40,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,0.9321266968325792,"[array([[24,  2],
+       [ 1, 16]])]"
+voting_records.csv,7,40,base,None,acc,0.9534883720930233,"[array([[25,  1],
+       [ 1, 16]])]"
+voting_records.csv,7,40,base,None,f1,0.9534883720930233,"[array([[25,  1],
+       [ 1, 16]])]"
+voting_records.csv,7,40,base,None,auc,0.9513574660633485,"[array([[25,  1],
+       [ 1, 16]])]"
+voting_records.csv,7,40,wagging,None,acc,0.9767441860465116,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,40,wagging,None,f1,0.976611219700294,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,40,wagging,None,auc,0.9705882352941176,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,40,AdaBoost,None,acc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,7,40,AdaBoost,None,f1,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,7,40,AdaBoost,None,auc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,7,40,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",acc,0.9767441860465116,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,40,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",f1,0.9534883720930233,"[array([[25,  1],
+       [ 1, 16]])]"
+voting_records.csv,7,40,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",auc,0.9705882352941176,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,40,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",acc,0.9767441860465116,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,40,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",f1,0.976611219700294,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,7,40,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,0.9513574660633485,"[array([[25,  1],
+       [ 1, 16]])]"
+voting_records.csv,8,40,base,None,acc,0.8604651162790697,"[array([[24,  3],
+       [ 3, 13]])]"
+voting_records.csv,8,40,base,None,f1,0.8604651162790697,"[array([[24,  3],
+       [ 3, 13]])]"
+voting_records.csv,8,40,base,None,auc,0.8506944444444443,"[array([[24,  3],
+       [ 3, 13]])]"
+voting_records.csv,8,40,wagging,None,acc,0.9069767441860465,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,8,40,wagging,None,f1,0.9055370985603544,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,8,40,wagging,None,auc,0.8877314814814815,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,8,40,AdaBoost,None,acc,0.9302325581395349,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,8,40,AdaBoost,None,f1,0.9297415262906635,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,8,40,AdaBoost,None,auc,0.9189814814814815,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,8,40,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",acc,0.9302325581395349,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,8,40,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",f1,0.9534883720930233,"[array([[26,  1],
+       [ 1, 15]])]"
+voting_records.csv,8,40,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",auc,0.8877314814814815,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,8,40,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",acc,0.9534883720930233,"[array([[26,  1],
+       [ 1, 15]])]"
+voting_records.csv,8,40,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",f1,0.9297415262906635,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,8,40,Incremental_Mixed_Bagging,"[[-4.0, 2.0]]",auc,0.9502314814814816,"[array([[26,  1],
+       [ 1, 15]])]"
+voting_records.csv,9,40,base,None,acc,0.9069767441860465,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,9,40,base,None,f1,0.9055370985603544,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,9,40,base,None,auc,0.8877314814814815,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,9,40,wagging,None,acc,0.9302325581395349,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,40,wagging,None,f1,0.9297415262906635,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,40,wagging,None,auc,0.9189814814814815,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,40,AdaBoost,None,acc,0.9302325581395349,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,40,AdaBoost,None,f1,0.9297415262906635,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,40,AdaBoost,None,auc,0.9189814814814815,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,40,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",acc,0.9302325581395349,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,40,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",f1,0.9055370985603544,"[array([[26,  1],
+       [ 3, 13]])]"
+voting_records.csv,9,40,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",auc,0.9189814814814815,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,40,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,0.9302325581395349,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,40,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",f1,0.9297415262906635,"[array([[26,  1],
+       [ 2, 14]])]"
+voting_records.csv,9,40,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.8564814814814815,"[array([[26,  1],
+       [ 4, 12]])]"
+voting_records.csv,0,50,base,None,acc,0.9090909090909091,"[array([[25,  2],
+       [ 2, 15]])]"
+voting_records.csv,0,50,base,None,f1,0.9090909090909091,"[array([[25,  2],
+       [ 2, 15]])]"
+voting_records.csv,0,50,base,None,auc,0.9041394335511982,"[array([[25,  2],
+       [ 2, 15]])]"
+voting_records.csv,0,50,wagging,None,acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,50,wagging,None,f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,50,wagging,None,auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,50,AdaBoost,None,acc,0.9545454545454546,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,0,50,AdaBoost,None,f1,0.9539366883116883,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,0,50,AdaBoost,None,auc,0.9411764705882353,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,0,50,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,50,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,50,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 2.0]",auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,50,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,50,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,0,50,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,50,base,None,acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,50,base,None,f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,50,base,None,auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,50,wagging,None,acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,50,wagging,None,f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,50,wagging,None,auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,1,50,AdaBoost,None,acc,0.8863636363636364,"[array([[26,  1],
+       [ 4, 13]])]"
+voting_records.csv,1,50,AdaBoost,None,f1,0.8838555332613057,"[array([[26,  1],
+       [ 4, 13]])]"
+voting_records.csv,1,50,AdaBoost,None,auc,0.8638344226579521,"[array([[26,  1],
+       [ 4, 13]])]"
+voting_records.csv,1,50,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",acc,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,1,50,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",f1,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,1,50,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",auc,0.9520697167755992,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,1,50,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",acc,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,1,50,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",f1,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,1,50,Incremental_Mixed_Bagging,"[[-2.0, 1.0]]",auc,0.9520697167755992,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,2,50,base,None,acc,0.9545454545454546,"[array([[25,  2],
+       [ 0, 17]])]"
+voting_records.csv,2,50,base,None,f1,0.9549339549339547,"[array([[25,  2],
+       [ 0, 17]])]"
+voting_records.csv,2,50,base,None,auc,0.962962962962963,"[array([[25,  2],
+       [ 0, 17]])]"
+voting_records.csv,2,50,wagging,None,acc,0.9772727272727273,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,50,wagging,None,f1,0.9773829943641265,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,50,wagging,None,auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,50,AdaBoost,None,acc,0.9772727272727273,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,50,AdaBoost,None,f1,0.9773829943641265,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,50,AdaBoost,None,auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,50,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",acc,0.9772727272727273,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,50,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",f1,0.9773829943641265,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,50,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,50,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.9772727272727273,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,50,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.9773829943641265,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,2,50,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,3,50,base,None,acc,0.9318181818181818,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,3,50,base,None,f1,0.9321489830923793,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,3,50,base,None,auc,0.9335511982570807,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,3,50,wagging,None,acc,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,50,wagging,None,f1,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,50,wagging,None,auc,0.9520697167755992,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,50,AdaBoost,None,acc,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,50,AdaBoost,None,f1,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,50,AdaBoost,None,auc,0.9520697167755992,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,50,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",acc,0.9318181818181818,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,3,50,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",f1,0.9545454545454546,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,3,50,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 1.0]",auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,3,50,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",acc,0.9772727272727273,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,3,50,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",f1,1.0,"[array([[27,  0],
+       [ 0, 17]])]"
+voting_records.csv,3,50,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,0.9814814814814815,"[array([[26,  1],
+       [ 0, 17]])]"
+voting_records.csv,4,50,base,None,acc,0.9545454545454546,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,4,50,base,None,f1,0.9539366883116883,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,4,50,base,None,auc,0.9411764705882353,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,4,50,wagging,None,acc,0.9318181818181818,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,4,50,wagging,None,f1,0.931404958677686,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,4,50,wagging,None,auc,0.9226579520697169,"[array([[26,  1],
+       [ 2, 15]])]"
+voting_records.csv,4,50,AdaBoost,None,acc,0.9318181818181818,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,4,50,AdaBoost,None,f1,0.9321489830923793,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,4,50,AdaBoost,None,auc,0.9335511982570807,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,4,50,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 1.0]",acc,0.9545454545454546,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,4,50,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",f1,0.9321489830923793,"[array([[25,  2],
+       [ 1, 16]])]"
+voting_records.csv,4,50,Grouped_Mixed_Bagging,"[[0.3, 0.7, 0.0], 3.0]",auc,0.9520697167755992,"[array([[26,  1],
+       [ 1, 16]])]"
+voting_records.csv,4,50,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",acc,0.9545454545454546,"[array([[27,  0],
+       [ 2, 15]])]"
+voting_records.csv,4,50,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",f1,0.9771349862258952,"[array([[27,  0],
+       [ 1, 16]])]"
+voting_records.csv,4,50,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",auc,0.9705882352941176,"[array([[27,  0],
+       [ 1, 16]])]"
+voting_records.csv,5,50,base,None,acc,0.9767441860465116,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,5,50,base,None,f1,0.976611219700294,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,5,50,base,None,auc,0.9705882352941176,"[array([[26,  0],
+       [ 1, 16]])]"
+voting_records.csv,5,50,wagging,None,acc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,50,wagging,None,f1,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,50,wagging,None,auc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,50,AdaBoost,None,acc,0.9767441860465116,"[array([[25,  1],
+       [ 0, 17]])]"
+voting_records.csv,5,50,AdaBoost,None,f1,0.9768484137841184,"[array([[25,  1],
+       [ 0, 17]])]"
+voting_records.csv,5,50,AdaBoost,None,auc,0.9807692307692308,"[array([[25,  1],
+       [ 0, 17]])]"
+voting_records.csv,5,50,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",acc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,50,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",f1,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,50,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",auc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,50,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",acc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,50,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",f1,1.0,"[array([[26,  0],
+       [ 0, 17]])]"
+voting_records.csv,5,50,Incremental_Mixed_Bagging,"[[-2.0, 0.0]]",auc,1.0,"[array([[26,  0],
+       [ 0, 17]])]"

@@ -1,0 +1,391 @@
+﻿dataset,CV_fold,n_trees,model,parameters,perf_measure,perf_value,Conf_Matrix
+cardiotocography_c1c2.csv,0,1,base,None,acc,0.9230769230769231,"[array([[157,   9],
+       [  6,  23]])]"
+cardiotocography_c1c2.csv,0,1,base,None,f1,0.9246177610321314,"[array([[157,   9],
+       [  6,  23]])]"
+cardiotocography_c1c2.csv,0,1,base,None,auc,0.8694432904029913,"[array([[157,   9],
+       [  6,  23]])]"
+cardiotocography_c1c2.csv,0,1,wagging,None,acc,0.958974358974359,"[array([[163,   3],
+       [  5,  24]])]"
+cardiotocography_c1c2.csv,0,1,wagging,None,f1,0.9583645895023142,"[array([[163,   3],
+       [  5,  24]])]"
+cardiotocography_c1c2.csv,0,1,wagging,None,auc,0.9047569588699625,"[array([[163,   3],
+       [  5,  24]])]"
+cardiotocography_c1c2.csv,0,1,AdaBoost,None,acc,0.9538461538461539,"[array([[161,   5],
+       [  4,  25]])]"
+cardiotocography_c1c2.csv,0,1,AdaBoost,None,f1,0.9541675693347565,"[array([[161,   5],
+       [  4,  25]])]"
+cardiotocography_c1c2.csv,0,1,AdaBoost,None,auc,0.9159742417947652,"[array([[161,   5],
+       [  4,  25]])]"
+cardiotocography_c1c2.csv,0,1,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",acc,0.958974358974359,"[array([[161,   5],
+       [  3,  26]])]"
+cardiotocography_c1c2.csv,0,1,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",f1,0.9541675693347565,"[array([[161,   5],
+       [  4,  25]])]"
+cardiotocography_c1c2.csv,0,1,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.9017449106771914,"[array([[162,   4],
+       [  5,  24]])]"
+cardiotocography_c1c2.csv,0,1,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.9487179487179487,"[array([[161,   5],
+       [  5,  24]])]"
+cardiotocography_c1c2.csv,0,1,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.9583645895023142,"[array([[163,   3],
+       [  5,  24]])]"
+cardiotocography_c1c2.csv,0,1,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.9534690486082259,"[array([[162,   4],
+       [  2,  27]])]"
+cardiotocography_c1c2.csv,1,1,base,None,acc,0.9230769230769231,"[array([[159,   7],
+       [  8,  21]])]"
+cardiotocography_c1c2.csv,1,1,base,None,f1,0.9225176593597647,"[array([[159,   7],
+       [  8,  21]])]"
+cardiotocography_c1c2.csv,1,1,base,None,auc,0.8409846281678438,"[array([[159,   7],
+       [  8,  21]])]"
+cardiotocography_c1c2.csv,1,1,wagging,None,acc,0.9538461538461539,"[array([[164,   2],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,1,1,wagging,None,f1,0.9520114732140934,"[array([[164,   2],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,1,1,wagging,None,auc,0.8732862484420439,"[array([[164,   2],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,1,1,AdaBoost,None,acc,0.9230769230769231,"[array([[162,   4],
+       [ 11,  18]])]"
+cardiotocography_c1c2.csv,1,1,AdaBoost,None,f1,0.9185920794458013,"[array([[162,   4],
+       [ 11,  18]])]"
+cardiotocography_c1c2.csv,1,1,AdaBoost,None,auc,0.7982966348151226,"[array([[162,   4],
+       [ 11,  18]])]"
+cardiotocography_c1c2.csv,1,1,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",acc,0.9641025641025641,"[array([[165,   1],
+       [  6,  23]])]"
+cardiotocography_c1c2.csv,1,1,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9462145349719313,"[array([[164,   2],
+       [  8,  21]])]"
+cardiotocography_c1c2.csv,1,1,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.8702742002492729,"[array([[163,   3],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,1,1,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,0.958974358974359,"[array([[165,   1],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,1,1,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,0.9520114732140934,"[array([[164,   2],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,1,1,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",auc,0.8732862484420439,"[array([[164,   2],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,2,1,base,None,acc,0.9230769230769231,"[array([[158,   8],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,2,1,base,None,f1,0.9236126155579277,"[array([[158,   8],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,2,1,base,None,auc,0.8552139592854174,"[array([[158,   8],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,2,1,wagging,None,acc,0.9282051282051282,"[array([[164,   2],
+       [ 12,  17]])]"
+cardiotocography_c1c2.csv,2,1,wagging,None,f1,0.9217761283550756,"[array([[164,   2],
+       [ 12,  17]])]"
+cardiotocography_c1c2.csv,2,1,wagging,None,auc,0.7870793518903199,"[array([[164,   2],
+       [ 12,  17]])]"
+cardiotocography_c1c2.csv,2,1,AdaBoost,None,acc,0.9384615384615385,"[array([[161,   5],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,2,1,AdaBoost,None,f1,0.9375468842534711,"[array([[161,   5],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,2,1,AdaBoost,None,auc,0.8642501038637308,"[array([[161,   5],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,2,1,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",acc,0.9384615384615385,"[array([[165,   1],
+       [ 11,  18]])]"
+cardiotocography_c1c2.csv,2,1,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",f1,0.9462145349719313,"[array([[164,   2],
+       [  8,  21]])]"
+cardiotocography_c1c2.csv,2,1,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",auc,0.8073327793934358,"[array([[165,   1],
+       [ 11,  18]])]"
+cardiotocography_c1c2.csv,2,1,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9230769230769231,"[array([[165,   1],
+       [ 14,  15]])]"
+cardiotocography_c1c2.csv,2,1,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9403008582602543,"[array([[164,   2],
+       [  9,  20]])]"
+cardiotocography_c1c2.csv,2,1,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.8388034898213543,"[array([[164,   2],
+       [  9,  20]])]"
+cardiotocography_c1c2.csv,3,1,base,None,acc,0.9076923076923077,"[array([[158,   8],
+       [ 10,  19]])]"
+cardiotocography_c1c2.csv,3,1,base,None,f1,0.9063203263802067,"[array([[158,   8],
+       [ 10,  19]])]"
+cardiotocography_c1c2.csv,3,1,base,None,auc,0.803489821354383,"[array([[158,   8],
+       [ 10,  19]])]"
+cardiotocography_c1c2.csv,3,1,wagging,None,acc,0.9282051282051282,"[array([[161,   5],
+       [  9,  20]])]"
+cardiotocography_c1c2.csv,3,1,wagging,None,f1,0.9259734093067427,"[array([[161,   5],
+       [  9,  20]])]"
+cardiotocography_c1c2.csv,3,1,wagging,None,auc,0.8297673452430411,"[array([[161,   5],
+       [  9,  20]])]"
+cardiotocography_c1c2.csv,3,1,AdaBoost,None,acc,0.9128205128205128,"[array([[160,   6],
+       [ 11,  18]])]"
+cardiotocography_c1c2.csv,3,1,AdaBoost,None,f1,0.9093550049599544,"[array([[160,   6],
+       [ 11,  18]])]"
+cardiotocography_c1c2.csv,3,1,AdaBoost,None,auc,0.7922725384295803,"[array([[160,   6],
+       [ 11,  18]])]"
+cardiotocography_c1c2.csv,3,1,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",acc,0.9487179487179487,"[array([[163,   3],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,3,1,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9318136589778381,"[array([[161,   5],
+       [  8,  21]])]"
+cardiotocography_c1c2.csv,3,1,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.8732862484420439,"[array([[164,   2],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,3,1,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9333333333333333,"[array([[160,   6],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,3,1,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.9318136589778381,"[array([[161,   5],
+       [  8,  21]])]"
+cardiotocography_c1c2.csv,3,1,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.8357914416285833,"[array([[163,   3],
+       [  9,  20]])]"
+cardiotocography_c1c2.csv,4,1,base,None,acc,0.9282051282051282,"[array([[160,   6],
+       [  8,  21]])]"
+cardiotocography_c1c2.csv,4,1,base,None,f1,0.9271380316290495,"[array([[160,   6],
+       [  8,  21]])]"
+cardiotocography_c1c2.csv,4,1,base,None,auc,0.8439966763606148,"[array([[160,   6],
+       [  8,  21]])]"
+cardiotocography_c1c2.csv,4,1,wagging,None,acc,0.9538461538461539,"[array([[164,   2],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,4,1,wagging,None,f1,0.9520114732140934,"[array([[164,   2],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,4,1,wagging,None,auc,0.8732862484420439,"[array([[164,   2],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,4,1,AdaBoost,None,acc,0.9333333333333333,"[array([[160,   6],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,4,1,AdaBoost,None,f1,0.9328486381117961,"[array([[160,   6],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,4,1,AdaBoost,None,auc,0.8612380556709597,"[array([[160,   6],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,4,1,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",acc,0.9435897435897436,"[array([[163,   3],
+       [  8,  21]])]"
+cardiotocography_c1c2.csv,4,1,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",f1,0.9527940716000418,"[array([[163,   3],
+       [  6,  23]])]"
+cardiotocography_c1c2.csv,4,1,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",auc,0.8388034898213543,"[array([[164,   2],
+       [  9,  20]])]"
+cardiotocography_c1c2.csv,4,1,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",acc,0.958974358974359,"[array([[164,   2],
+       [  6,  23]])]"
+cardiotocography_c1c2.csv,4,1,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",f1,0.9413473561505586,"[array([[163,   3],
+       [  8,  21]])]"
+cardiotocography_c1c2.csv,4,1,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.8500207727461571,"[array([[162,   4],
+       [  8,  21]])]"
+cardiotocography_c1c2.csv,5,1,base,None,acc,0.9487179487179487,"[array([[160,   5],
+       [  5,  25]])]"
+cardiotocography_c1c2.csv,5,1,base,None,f1,0.9487179487179487,"[array([[160,   5],
+       [  5,  25]])]"
+cardiotocography_c1c2.csv,5,1,base,None,auc,0.9015151515151516,"[array([[160,   5],
+       [  5,  25]])]"
+cardiotocography_c1c2.csv,5,1,wagging,None,acc,0.958974358974359,"[array([[163,   2],
+       [  6,  24]])]"
+cardiotocography_c1c2.csv,5,1,wagging,None,f1,0.9577548200302691,"[array([[163,   2],
+       [  6,  24]])]"
+cardiotocography_c1c2.csv,5,1,wagging,None,auc,0.893939393939394,"[array([[163,   2],
+       [  6,  24]])]"
+cardiotocography_c1c2.csv,5,1,AdaBoost,None,acc,0.958974358974359,"[array([[162,   3],
+       [  5,  25]])]"
+cardiotocography_c1c2.csv,5,1,AdaBoost,None,f1,0.9583905915438945,"[array([[162,   3],
+       [  5,  25]])]"
+cardiotocography_c1c2.csv,5,1,AdaBoost,None,auc,0.9075757575757576,"[array([[162,   3],
+       [  5,  25]])]"
+cardiotocography_c1c2.csv,5,1,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",acc,0.958974358974359,"[array([[163,   2],
+       [  6,  24]])]"
+cardiotocography_c1c2.csv,5,1,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9633195948985422,"[array([[163,   2],
+       [  5,  25]])]"
+cardiotocography_c1c2.csv,5,1,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",auc,0.9106060606060608,"[array([[163,   2],
+       [  5,  25]])]"
+cardiotocography_c1c2.csv,5,1,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.958974358974359,"[array([[162,   3],
+       [  5,  25]])]"
+cardiotocography_c1c2.csv,5,1,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9577548200302691,"[array([[163,   2],
+       [  6,  24]])]"
+cardiotocography_c1c2.csv,5,1,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.9106060606060608,"[array([[163,   2],
+       [  5,  25]])]"
+cardiotocography_c1c2.csv,6,1,base,None,acc,0.9333333333333333,"[array([[159,   6],
+       [  7,  23]])]"
+cardiotocography_c1c2.csv,6,1,base,None,f1,0.9328690665164626,"[array([[159,   6],
+       [  7,  23]])]"
+cardiotocography_c1c2.csv,6,1,base,None,auc,0.8651515151515151,"[array([[159,   6],
+       [  7,  23]])]"
+cardiotocography_c1c2.csv,6,1,wagging,None,acc,0.9538461538461539,"[array([[163,   2],
+       [  7,  23]])]"
+cardiotocography_c1c2.csv,6,1,wagging,None,f1,0.9520926834359671,"[array([[163,   2],
+       [  7,  23]])]"
+cardiotocography_c1c2.csv,6,1,wagging,None,auc,0.8772727272727273,"[array([[163,   2],
+       [  7,  23]])]"
+cardiotocography_c1c2.csv,6,1,AdaBoost,None,acc,0.9794871794871794,"[array([[164,   1],
+       [  3,  27]])]"
+cardiotocography_c1c2.csv,6,1,AdaBoost,None,f1,0.9791952957719472,"[array([[164,   1],
+       [  3,  27]])]"
+cardiotocography_c1c2.csv,6,1,AdaBoost,None,auc,0.9469696969696969,"[array([[164,   1],
+       [  3,  27]])]"
+cardiotocography_c1c2.csv,6,1,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",acc,0.9384615384615385,"[array([[161,   4],
+       [  8,  22]])]"
+cardiotocography_c1c2.csv,6,1,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",f1,0.9355921855921854,"[array([[162,   3],
+       [  9,  21]])]"
+cardiotocography_c1c2.csv,6,1,Grouped_Mixed_Bagging,"[[0.1, 0.8, 0.1], 1.0]",auc,0.8742424242424242,"[array([[162,   3],
+       [  7,  23]])]"
+cardiotocography_c1c2.csv,6,1,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9538461538461539,"[array([[162,   3],
+       [  6,  24]])]"
+cardiotocography_c1c2.csv,6,1,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9471935250378364,"[array([[162,   3],
+       [  7,  23]])]"
+cardiotocography_c1c2.csv,6,1,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.896969696969697,"[array([[164,   1],
+       [  6,  24]])]"
+cardiotocography_c1c2.csv,7,1,base,None,acc,0.9435897435897436,"[array([[160,   5],
+       [  6,  24]])]"
+cardiotocography_c1c2.csv,7,1,base,None,f1,0.9431969024370069,"[array([[160,   5],
+       [  6,  24]])]"
+cardiotocography_c1c2.csv,7,1,base,None,auc,0.8848484848484849,"[array([[160,   5],
+       [  6,  24]])]"
+cardiotocography_c1c2.csv,7,1,wagging,None,acc,0.9435897435897436,"[array([[163,   2],
+       [  9,  21]])]"
+cardiotocography_c1c2.csv,7,1,wagging,None,f1,0.9404504011748848,"[array([[163,   2],
+       [  9,  21]])]"
+cardiotocography_c1c2.csv,7,1,wagging,None,auc,0.843939393939394,"[array([[163,   2],
+       [  9,  21]])]"
+cardiotocography_c1c2.csv,7,1,AdaBoost,None,acc,0.9487179487179487,"[array([[161,   4],
+       [  6,  24]])]"
+cardiotocography_c1c2.csv,7,1,AdaBoost,None,f1,0.9479882394298682,"[array([[161,   4],
+       [  6,  24]])]"
+cardiotocography_c1c2.csv,7,1,AdaBoost,None,auc,0.8878787878787878,"[array([[161,   4],
+       [  6,  24]])]"
+cardiotocography_c1c2.csv,7,1,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 2.0]",acc,0.9435897435897436,"[array([[163,   2],
+       [  9,  21]])]"
+cardiotocography_c1c2.csv,7,1,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 2.0]",f1,0.9463268213268214,"[array([[163,   2],
+       [  8,  22]])]"
+cardiotocography_c1c2.csv,7,1,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",auc,0.8242424242424242,"[array([[162,   3],
+       [ 10,  20]])]"
+cardiotocography_c1c2.csv,7,1,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9487179487179487,"[array([[162,   3],
+       [  7,  23]])]"
+cardiotocography_c1c2.csv,7,1,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9404504011748848,"[array([[163,   2],
+       [  9,  21]])]"
+cardiotocography_c1c2.csv,7,1,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.8636363636363636,"[array([[164,   1],
+       [  8,  22]])]"
+cardiotocography_c1c2.csv,8,1,base,None,acc,0.9282051282051282,"[array([[162,   3],
+       [ 11,  19]])]"
+cardiotocography_c1c2.csv,8,1,base,None,f1,0.9235320892125627,"[array([[162,   3],
+       [ 11,  19]])]"
+cardiotocography_c1c2.csv,8,1,base,None,auc,0.8075757575757575,"[array([[162,   3],
+       [ 11,  19]])]"
+cardiotocography_c1c2.csv,8,1,wagging,None,acc,0.9230769230769231,"[array([[159,   6],
+       [  9,  21]])]"
+cardiotocography_c1c2.csv,8,1,wagging,None,f1,0.9213991319254476,"[array([[159,   6],
+       [  9,  21]])]"
+cardiotocography_c1c2.csv,8,1,wagging,None,auc,0.8318181818181818,"[array([[159,   6],
+       [  9,  21]])]"
+cardiotocography_c1c2.csv,8,1,AdaBoost,None,acc,0.9333333333333333,"[array([[157,   8],
+       [  5,  25]])]"
+cardiotocography_c1c2.csv,8,1,AdaBoost,None,f1,0.9346148245230814,"[array([[157,   8],
+       [  5,  25]])]"
+cardiotocography_c1c2.csv,8,1,AdaBoost,None,auc,0.8924242424242426,"[array([[157,   8],
+       [  5,  25]])]"
+cardiotocography_c1c2.csv,8,1,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",acc,0.9487179487179487,"[array([[163,   2],
+       [  8,  22]])]"
+cardiotocography_c1c2.csv,8,1,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",f1,0.9479882394298682,"[array([[161,   4],
+       [  6,  24]])]"
+cardiotocography_c1c2.csv,8,1,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",auc,0.890909090909091,"[array([[162,   3],
+       [  6,  24]])]"
+cardiotocography_c1c2.csv,8,1,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,0.9487179487179487,"[array([[161,   4],
+       [  6,  24]])]"
+cardiotocography_c1c2.csv,8,1,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,0.9471935250378364,"[array([[162,   3],
+       [  7,  23]])]"
+cardiotocography_c1c2.csv,8,1,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,0.8712121212121211,"[array([[161,   4],
+       [  7,  23]])]"
+cardiotocography_c1c2.csv,9,1,base,None,acc,0.9179487179487179,"[array([[155,  10],
+       [  6,  24]])]"
+cardiotocography_c1c2.csv,9,1,base,None,f1,0.9200094384143465,"[array([[155,  10],
+       [  6,  24]])]"
+cardiotocography_c1c2.csv,9,1,base,None,auc,0.8696969696969699,"[array([[155,  10],
+       [  6,  24]])]"
+cardiotocography_c1c2.csv,9,1,wagging,None,acc,0.9128205128205128,"[array([[156,   9],
+       [  8,  22]])]"
+cardiotocography_c1c2.csv,9,1,wagging,None,f1,0.9134026071591471,"[array([[156,   9],
+       [  8,  22]])]"
+cardiotocography_c1c2.csv,9,1,wagging,None,auc,0.8393939393939395,"[array([[156,   9],
+       [  8,  22]])]"
+cardiotocography_c1c2.csv,9,1,AdaBoost,None,acc,0.9128205128205128,"[array([[155,  10],
+       [  7,  23]])]"
+cardiotocography_c1c2.csv,9,1,AdaBoost,None,f1,0.9144963089917217,"[array([[155,  10],
+       [  7,  23]])]"
+cardiotocography_c1c2.csv,9,1,AdaBoost,None,auc,0.8530303030303031,"[array([[155,  10],
+       [  7,  23]])]"
+cardiotocography_c1c2.csv,9,1,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 2.0]",acc,0.9333333333333333,"[array([[159,   6],
+       [  7,  23]])]"
+cardiotocography_c1c2.csv,9,1,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 2.0]",f1,0.9179487179487179,"[array([[157,   8],
+       [  8,  22]])]"
+cardiotocography_c1c2.csv,9,1,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 2.0]",auc,0.8712121212121211,"[array([[161,   4],
+       [  7,  23]])]"
+cardiotocography_c1c2.csv,9,1,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9384615384615385,"[array([[159,   6],
+       [  6,  24]])]"
+cardiotocography_c1c2.csv,9,1,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9190219693760212,"[array([[156,   9],
+       [  7,  23]])]"
+cardiotocography_c1c2.csv,9,1,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.8818181818181818,"[array([[159,   6],
+       [  6,  24]])]"
+cardiotocography_c1c2.csv,0,10,base,None,acc,0.9230769230769231,"[array([[157,   9],
+       [  6,  23]])]"
+cardiotocography_c1c2.csv,0,10,base,None,f1,0.9246177610321314,"[array([[157,   9],
+       [  6,  23]])]"
+cardiotocography_c1c2.csv,0,10,base,None,auc,0.8694432904029913,"[array([[157,   9],
+       [  6,  23]])]"
+cardiotocography_c1c2.csv,0,10,wagging,None,acc,0.958974358974359,"[array([[163,   3],
+       [  5,  24]])]"
+cardiotocography_c1c2.csv,0,10,wagging,None,f1,0.9583645895023142,"[array([[163,   3],
+       [  5,  24]])]"
+cardiotocography_c1c2.csv,0,10,wagging,None,auc,0.9047569588699625,"[array([[163,   3],
+       [  5,  24]])]"
+cardiotocography_c1c2.csv,0,10,AdaBoost,None,acc,0.9538461538461539,"[array([[161,   5],
+       [  4,  25]])]"
+cardiotocography_c1c2.csv,0,10,AdaBoost,None,f1,0.9541675693347565,"[array([[161,   5],
+       [  4,  25]])]"
+cardiotocography_c1c2.csv,0,10,AdaBoost,None,auc,0.9159742417947652,"[array([[161,   5],
+       [  4,  25]])]"
+cardiotocography_c1c2.csv,0,10,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",acc,0.958974358974359,"[array([[161,   5],
+       [  3,  26]])]"
+cardiotocography_c1c2.csv,0,10,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",f1,0.9541675693347565,"[array([[161,   5],
+       [  4,  25]])]"
+cardiotocography_c1c2.csv,0,10,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.9017449106771914,"[array([[162,   4],
+       [  5,  24]])]"
+cardiotocography_c1c2.csv,0,10,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.9487179487179487,"[array([[161,   5],
+       [  5,  24]])]"
+cardiotocography_c1c2.csv,0,10,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.9583645895023142,"[array([[163,   3],
+       [  5,  24]])]"
+cardiotocography_c1c2.csv,0,10,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.9534690486082259,"[array([[162,   4],
+       [  2,  27]])]"
+cardiotocography_c1c2.csv,1,10,base,None,acc,0.9230769230769231,"[array([[159,   7],
+       [  8,  21]])]"
+cardiotocography_c1c2.csv,1,10,base,None,f1,0.9225176593597647,"[array([[159,   7],
+       [  8,  21]])]"
+cardiotocography_c1c2.csv,1,10,base,None,auc,0.8409846281678438,"[array([[159,   7],
+       [  8,  21]])]"
+cardiotocography_c1c2.csv,1,10,wagging,None,acc,0.9538461538461539,"[array([[164,   2],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,1,10,wagging,None,f1,0.9520114732140934,"[array([[164,   2],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,1,10,wagging,None,auc,0.8732862484420439,"[array([[164,   2],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,1,10,AdaBoost,None,acc,0.9230769230769231,"[array([[162,   4],
+       [ 11,  18]])]"
+cardiotocography_c1c2.csv,1,10,AdaBoost,None,f1,0.9185920794458013,"[array([[162,   4],
+       [ 11,  18]])]"
+cardiotocography_c1c2.csv,1,10,AdaBoost,None,auc,0.7982966348151226,"[array([[162,   4],
+       [ 11,  18]])]"
+cardiotocography_c1c2.csv,1,10,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",acc,0.9641025641025641,"[array([[165,   1],
+       [  6,  23]])]"
+cardiotocography_c1c2.csv,1,10,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9462145349719313,"[array([[164,   2],
+       [  8,  21]])]"
+cardiotocography_c1c2.csv,1,10,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.8702742002492729,"[array([[163,   3],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,1,10,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,0.958974358974359,"[array([[165,   1],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,1,10,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,0.9520114732140934,"[array([[164,   2],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,1,10,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",auc,0.8732862484420439,"[array([[164,   2],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,2,10,base,None,acc,0.9230769230769231,"[array([[158,   8],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,2,10,base,None,f1,0.9236126155579277,"[array([[158,   8],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,2,10,base,None,auc,0.8552139592854174,"[array([[158,   8],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,2,10,wagging,None,acc,0.9282051282051282,"[array([[164,   2],
+       [ 12,  17]])]"
+cardiotocography_c1c2.csv,2,10,wagging,None,f1,0.9217761283550756,"[array([[164,   2],
+       [ 12,  17]])]"
+cardiotocography_c1c2.csv,2,10,wagging,None,auc,0.7870793518903199,"[array([[164,   2],
+       [ 12,  17]])]"
+cardiotocography_c1c2.csv,2,10,AdaBoost,None,acc,0.9384615384615385,"[array([[161,   5],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,2,10,AdaBoost,None,f1,0.9375468842534711,"[array([[161,   5],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,2,10,AdaBoost,None,auc,0.8642501038637308,"[array([[161,   5],
+       [  7,  22]])]"
+cardiotocography_c1c2.csv,2,10,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",acc,0.9384615384615385,"[array([[165,   1],
+       [ 11,  18]])]"
+cardiotocography_c1c2.csv,2,10,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",f1,0.9462145349719313,"[array([[164,   2],
+       [  8,  21]])]"
+cardiotocography_c1c2.csv,2,10,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",auc,0.8073327793934358,"[array([[165,   1],
+       [ 11,  18]])]"
+cardiotocography_c1c2.csv,2,10,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9230769230769231,"[array([[165,   1],
+       [ 14,  15]])]"
+cardiotocography_c1c2.csv,2,10,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9403008582602543,"[array([[164,   2],
+       [  9,  20]])]"
+cardiotocography_c1c2.csv,2,10,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.8388034898213543,"[array([[164,   2],
+       [  9,  20]])]"
