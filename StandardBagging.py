@@ -10,6 +10,7 @@ from sklearn import preprocessing
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import confusion_matrix, accuracy_score
 from aux_functions import aggregation_results_final_algorith
+import multiprocessing as mp
 
 root_path = os.getcwd()
 
@@ -46,7 +47,12 @@ def voting_rule(preds):
 
 
 
-def StandardBagging(X,y,n_ensembles, name_data,path_to_save, stump):
+def StandardBagging(data,n_ensembles,n_ensembles_v, name_data,path_to_save, stump):
+
+    # X, y
+    X = data.iloc[:,:-1].to_numpy() # all variables except y
+    X = preprocessing.scale(X)
+    y = data[['y']].to_numpy()
 
     # dataframe to save the results
     results = pd.DataFrame(columns=['dataset','fold','n_ensemble','weights','confusion_matrix','accuracy',
@@ -138,29 +144,31 @@ def StandardBagging(X,y,n_ensembles, name_data,path_to_save, stump):
             acc = accuracy_score(y_predicted, y_test)
             conf_matrix = confusion_matrix(y_test, y_predicted).tolist()
 
-            results_dict = {'dataset': name_data, 'fold': fold, 'n_ensemble': i, 'weights': 'Uniform',
-                            'confusion_matrix': [conf_matrix], 'accuracy': acc,
-                            'Boots_Hostility_dataset': Boots_Hostility_dataset,
-                            'Boots_kDN_dataset': Boots_kDN_dataset,
-                            'Boots_DCP_dataset': Boots_DCP_dataset,
-                            'Boots_TD_U_dataset': Boots_TD_U_dataset,
-                            'Boots_CLD_dataset': Boots_CLD_dataset,
-                            'Boots_N1_dataset': Boots_N1_dataset,
-                            'Boots_N2_dataset': Boots_N2_dataset,
-                            'Boots_LSC_dataset': Boots_LSC_dataset,
-                            'Boots_F1_dataset': Boots_F1_dataset,
+            if (i in n_ensembles_v):
 
-                            'Boots_Hostility_class': [Boots_Hostility_class],
-                            'Boots_kDN_class': [Boots_kDN_class],
-                            'Boots_DCP_class': [Boots_DCP_class],
-                            'Boots_TD_U_class': [Boots_TD_U_class],
-                            'Boots_CLD_class': [Boots_CLD_class],
-                            'Boots_N1_class': [Boots_N1_class],
-                            'Boots_N2_class': [Boots_N2_class],
-                            'Boots_LSC_class': [Boots_LSC_class],
-                            'Boots_F1_class': [Boots_F1_class]}
-            results_aux = pd.DataFrame(results_dict, index=[0])
-            results = pd.concat([results, results_aux])
+                results_dict = {'dataset': name_data, 'fold': fold, 'n_ensemble': i, 'weights': 'Uniform',
+                                'confusion_matrix': [conf_matrix], 'accuracy': acc,
+                                'Boots_Hostility_dataset': Boots_Hostility_dataset,
+                                'Boots_kDN_dataset': Boots_kDN_dataset,
+                                'Boots_DCP_dataset': Boots_DCP_dataset,
+                                'Boots_TD_U_dataset': Boots_TD_U_dataset,
+                                'Boots_CLD_dataset': Boots_CLD_dataset,
+                                'Boots_N1_dataset': Boots_N1_dataset,
+                                'Boots_N2_dataset': Boots_N2_dataset,
+                                'Boots_LSC_dataset': Boots_LSC_dataset,
+                                'Boots_F1_dataset': Boots_F1_dataset,
+
+                                'Boots_Hostility_class': [Boots_Hostility_class],
+                                'Boots_kDN_class': [Boots_kDN_class],
+                                'Boots_DCP_class': [Boots_DCP_class],
+                                'Boots_TD_U_class': [Boots_TD_U_class],
+                                'Boots_CLD_class': [Boots_CLD_class],
+                                'Boots_N1_class': [Boots_N1_class],
+                                'Boots_N2_class': [Boots_N2_class],
+                                'Boots_LSC_class': [Boots_LSC_class],
+                                'Boots_F1_class': [Boots_F1_class]}
+                results_aux = pd.DataFrame(results_dict, index=[0])
+                results = pd.concat([results, results_aux])
 
     # To save the results
     os.chdir(path_to_save)
@@ -181,6 +189,52 @@ def StandardBagging(X,y,n_ensembles, name_data,path_to_save, stump):
 
 
 
+#
+# path_csv = os.chdir(root_path+'/datasets')
+# # Extraemos los nombres de todos los ficheros
+# total_name_list = []
+# for filename in os.listdir(path_csv):
+#     if filename.endswith('.csv'):
+#         total_name_list.append(filename)
+#
+#
+# path_to_save = root_path+'/Results_StandardBagging'
+# n_ensembles = 200 # maximum number of ensembles to consider (later we plot and stop when we want)
+# # CM_selected = 'Hostility' # selection of the complexity measure to guide the sampling
+# n_ensembles_v = [0, 9, 19, 29, 39, 49, 59, 69, 79, 89, 99,
+#                  109, 119, 129, 139, 149, 159, 169, 179, 189, 199]
+#
+# for data_file in total_name_list:
+#     os.chdir(root_path + '/datasets')
+#     print(data_file)
+#     file = data_file
+#     name_data = data_file[:-4]
+#     data = pd.read_csv(file)
+#     stump = 'no'
+#     results, df_aggre = StandardBagging(data,n_ensembles, name_data,path_to_save, stump)
+
+
+####################################
+#####   PARALLELIZED VERSION   #####
+####################################
+
+def results_StandardBagging(data_file):
+    n_ensembles = 200  # maximum number of ensembles to consider (later we plot and stop when we want)
+    n_ensembles_v = [0, 9, 19, 29, 39, 49, 59, 69, 79, 89, 99,
+                     109, 119, 129, 139, 149, 159, 169, 179, 189, 199]
+    path_to_save = root_path + '/Results_StandardBagging'
+
+    # for data_file in total_name_list:
+    os.chdir(root_path + '/datasets')
+    print(data_file)
+    name_data = data_file[:-4]
+    data = pd.read_csv(data_file)
+    stump = 'no'
+    StandardBagging(data,n_ensembles,n_ensembles_v, name_data,path_to_save, stump)
+
+    return
+
+# total_name_list
 
 path_csv = os.chdir(root_path+'/datasets')
 # Extraemos los nombres de todos los ficheros
@@ -189,47 +243,37 @@ for filename in os.listdir(path_csv):
     if filename.endswith('.csv'):
         total_name_list.append(filename)
 
+N= mp.cpu_count()
 
-path_to_save = root_path+'/Results_StandardBagging'
-n_ensembles = 200 # maximum number of ensembles to consider (later we plot and stop when we want)
-# CM_selected = 'Hostility' # selection of the complexity measure to guide the sampling
-
-
-for data_file in total_name_list:
-    os.chdir(root_path + '/datasets')
-    print(data_file)
-    file = data_file
-    name_data = data_file[:-4]
-    data = pd.read_csv(file)
-    X = data.iloc[:,:-1].to_numpy() # all variables except y
-    X = preprocessing.scale(X)
-    y = data[['y']].to_numpy()
-    stump = 'no'
-    results, df_aggre = StandardBagging(X,y,n_ensembles, name_data,path_to_save, stump)
+with mp.Pool(processes = N-20) as p:
+        p.map(results_StandardBagging, [data_file for data_file in total_name_list])
+        # p.close()
 
 
 
-### Leemos todos los resultados y seleccionamos el mejor ensemble para cada caso
 
+###########################################################################################
+#####    Leemos todos los resultados y seleccionamos el mejor ensemble para cada caso #####
+###########################################################################################
 
-path_csv = os.chdir(root_path+'/Results_StandardBagging')
-# Extraemos los nombres de todos los ficheros
-total_name_list = []
-for filename in os.listdir(path_csv):
-    if filename.endswith('.csv') and 'Aggregated' in filename:
-        total_name_list.append(filename)
-
-best_n_trees_df = pd.DataFrame()
-
-for file_i in total_name_list:
-    name_data = file_i[34:-4]
-    data_file = pd.read_csv(file_i)
-    index_max_acc = data_file.accuracy_mean.argmax()
-    max_acc = data_file.accuracy_mean.max()
-    best_n_ensemble = data_file.iloc[index_max_acc, 0]
-    best_n_ensemble_df = pd.DataFrame({'name_data':name_data,
-                                       'best_n_ensemble':best_n_ensemble,
-                                       'best_acc':max_acc}, index=[0])
-    best_n_trees_df = pd.concat([best_n_trees_df,best_n_ensemble_df])
-
+# path_csv = os.chdir(root_path+'/Results_StandardBagging')
+# # Extraemos los nombres de todos los ficheros
+# total_name_list = []
+# for filename in os.listdir(path_csv):
+#     if filename.endswith('.csv') and 'Aggregated' in filename:
+#         total_name_list.append(filename)
+#
+# best_n_trees_df = pd.DataFrame()
+#
+# for file_i in total_name_list:
+#     name_data = file_i[34:-4]
+#     data_file = pd.read_csv(file_i)
+#     index_max_acc = data_file.accuracy_mean.argmax()
+#     max_acc = data_file.accuracy_mean.max()
+#     best_n_ensemble = data_file.iloc[index_max_acc, 0]
+#     best_n_ensemble_df = pd.DataFrame({'name_data':name_data,
+#                                        'best_n_ensemble':best_n_ensemble,
+#                                        'best_acc':max_acc}, index=[0])
+#     best_n_trees_df = pd.concat([best_n_trees_df,best_n_ensemble_df])
+#
 
