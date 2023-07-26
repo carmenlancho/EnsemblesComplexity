@@ -245,7 +245,7 @@ for filename in os.listdir(path_csv):
 
 N= mp.cpu_count()
 
-with mp.Pool(processes = N-20) as p:
+with mp.Pool(processes = 2) as p:
         p.map(results_StandardBagging, [data_file for data_file in total_name_list])
         # p.close()
 
