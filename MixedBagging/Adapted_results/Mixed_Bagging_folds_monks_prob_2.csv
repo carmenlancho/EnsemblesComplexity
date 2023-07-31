@@ -3089,3 +3089,3213 @@ monks_prob_2.csv,2,100,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.9524746571
        [ 2, 12]])]"
 monks_prob_2.csv,2,100,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.8928571428571428,"[array([[29,  0],
        [ 3, 11]])]"
+monks_prob_2.csv,3,100,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,100,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,100,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,100,wagging,None,acc,0.9302325581395349,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,100,wagging,None,f1,0.9277621044605414,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,100,wagging,None,auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,100,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,100,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,100,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,100,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,3,100,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",f1,0.976510605994248,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,3,100,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",auc,0.9285714285714286,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,3,100,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9767441860465116,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,100,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.9317056536861488,"[array([[26,  3],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,100,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9827586206896552,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,100,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,100,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,100,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,100,wagging,None,acc,0.9302325581395349,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,100,wagging,None,f1,0.9308234499641245,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,100,wagging,None,auc,0.9298029556650247,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,100,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,100,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,100,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,100,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9767441860465116,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,100,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,100,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,100,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9534883720930233,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,100,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.8861760894769147,"[array([[25,  4],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,100,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.9470443349753696,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,5,100,base,None,acc,0.9534883720930233,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,100,base,None,f1,0.9542081949058694,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,100,base,None,auc,0.9655172413793103,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,100,wagging,None,acc,0.8837209302325582,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,100,wagging,None,f1,0.8847057499402075,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,100,wagging,None,auc,0.8768472906403941,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,100,AdaBoost,None,acc,0.9534883720930233,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,100,AdaBoost,None,f1,0.9542081949058694,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,100,AdaBoost,None,auc,0.9655172413793103,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,100,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.8837209302325582,"[array([[25,  4],
+       [ 1, 13]])]"
+monks_prob_2.csv,5,100,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.8406465252676806,"[array([[24,  5],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,100,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.8756157635467979,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,5,100,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9069767441860465,"[array([[27,  2],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,100,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.8186907838070631,"[array([[23,  6],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,100,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9298029556650247,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,6,100,base,None,acc,0.9069767441860465,"[array([[29,  0],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,100,base,None,f1,0.9022255563890973,"[array([[29,  0],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,100,base,None,auc,0.8571428571428572,"[array([[29,  0],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,100,wagging,None,acc,0.8837209302325582,"[array([[28,  1],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,100,wagging,None,f1,0.8796035074342355,"[array([[28,  1],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,100,wagging,None,auc,0.8399014778325125,"[array([[28,  1],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,100,AdaBoost,None,acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,6,100,AdaBoost,None,f1,0.9295318179827443,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,6,100,AdaBoost,None,auc,0.9113300492610837,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,6,100,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,6,100,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",f1,0.9542081949058694,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,6,100,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",auc,0.9470443349753696,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,6,100,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9767441860465116,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,6,100,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.9769411499880416,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,6,100,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9642857142857143,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,7,100,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,100,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,100,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,100,wagging,None,acc,0.813953488372093,"[array([[26,  3],
+       [ 5,  9]])]"
+monks_prob_2.csv,7,100,wagging,None,f1,0.8098986285032795,"[array([[26,  3],
+       [ 5,  9]])]"
+monks_prob_2.csv,7,100,wagging,None,auc,0.7697044334975369,"[array([[26,  3],
+       [ 5,  9]])]"
+monks_prob_2.csv,7,100,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,100,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,100,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,100,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,7,100,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.8574239713774597,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,7,100,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,7,100,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9302325581395349,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,7,100,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.8847057499402075,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,7,100,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.8066502463054187,"[array([[24,  5],
+       [ 3, 11]])]"
+monks_prob_2.csv,8,100,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,100,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,100,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,100,wagging,None,acc,0.8604651162790697,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,8,100,wagging,None,f1,0.8574239713774597,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,8,100,wagging,None,auc,0.8226600985221675,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,8,100,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,100,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,100,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,100,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",acc,0.8837209302325582,"[array([[29,  0],
+       [ 5,  9]])]"
+monks_prob_2.csv,8,100,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",f1,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,8,100,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",auc,0.9113300492610837,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,8,100,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,8,100,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.8825530299712404,"[array([[27,  2],
+       [ 3, 11]])]"
+monks_prob_2.csv,8,100,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9655172413793103,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,100,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,100,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,100,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,100,wagging,None,acc,0.9069767441860465,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,100,wagging,None,f1,0.9049493142516399,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,100,wagging,None,auc,0.8756157635467979,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,100,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,100,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,100,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,100,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",acc,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,9,100,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9769411499880416,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,100,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.8066502463054187,"[array([[24,  5],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,100,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9069767441860465,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,100,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,9,100,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9642857142857143,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,0,110,base,None,acc,0.8863636363636364,"[array([[28,  1],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,110,base,None,f1,0.8828448418612352,"[array([[28,  1],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,110,base,None,auc,0.8494252873563218,"[array([[28,  1],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,110,wagging,None,acc,0.9318181818181818,"[array([[28,  1],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,110,wagging,None,f1,0.9312204452473303,"[array([[28,  1],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,110,wagging,None,auc,0.9160919540229886,"[array([[28,  1],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,110,AdaBoost,None,acc,0.8636363636363636,"[array([[27,  2],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,110,AdaBoost,None,f1,0.861038961038961,"[array([[27,  2],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,110,AdaBoost,None,auc,0.8321839080459771,"[array([[27,  2],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,110,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",acc,0.9545454545454546,"[array([[28,  1],
+       [ 1, 14]])]"
+monks_prob_2.csv,0,110,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9536796536796537,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,110,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.9494252873563218,"[array([[28,  1],
+       [ 1, 14]])]"
+monks_prob_2.csv,0,110,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9772727272727273,"[array([[28,  1],
+       [ 0, 15]])]"
+monks_prob_2.csv,0,110,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.977439934146216,"[array([[28,  1],
+       [ 0, 15]])]"
+monks_prob_2.csv,0,110,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9494252873563218,"[array([[28,  1],
+       [ 1, 14]])]"
+monks_prob_2.csv,1,110,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,110,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,110,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,110,wagging,None,acc,0.9545454545454546,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,110,wagging,None,f1,0.9536796536796537,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,110,wagging,None,auc,0.9333333333333333,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,110,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,110,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,110,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,110,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",acc,0.9545454545454546,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,110,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",f1,0.9536796536796537,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,110,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",auc,0.9,"[array([[29,  0],
+       [ 3, 12]])]"
+monks_prob_2.csv,1,110,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",acc,0.9318181818181818,"[array([[26,  3],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,110,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",f1,0.9073593073593074,"[array([[28,  1],
+       [ 3, 12]])]"
+monks_prob_2.csv,1,110,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",auc,0.9666666666666667,"[array([[29,  0],
+       [ 1, 14]])]"
+monks_prob_2.csv,2,110,base,None,acc,0.9069767441860465,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,110,base,None,f1,0.9049493142516399,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,110,base,None,auc,0.8756157635467979,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,110,wagging,None,acc,0.8604651162790697,"[array([[29,  0],
+       [ 6,  8]])]"
+monks_prob_2.csv,2,110,wagging,None,f1,0.8479783298097251,"[array([[29,  0],
+       [ 6,  8]])]"
+monks_prob_2.csv,2,110,wagging,None,auc,0.7857142857142857,"[array([[29,  0],
+       [ 6,  8]])]"
+monks_prob_2.csv,2,110,AdaBoost,None,acc,0.9534883720930233,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,110,AdaBoost,None,f1,0.9524746571258198,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,110,AdaBoost,None,auc,0.9285714285714286,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,110,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,110,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.9277621044605414,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,110,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,110,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9534883720930233,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,110,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.9524746571258198,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,110,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,110,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,110,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,110,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,110,wagging,None,acc,0.9302325581395349,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,110,wagging,None,f1,0.9277621044605414,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,110,wagging,None,auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,110,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,110,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,110,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,110,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,3,110,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",f1,0.976510605994248,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,3,110,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",auc,0.9285714285714286,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,3,110,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9767441860465116,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,110,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.9317056536861488,"[array([[26,  3],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,110,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9827586206896552,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,110,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,110,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,110,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,110,wagging,None,acc,0.9302325581395349,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,110,wagging,None,f1,0.9308234499641245,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,110,wagging,None,auc,0.9298029556650247,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,110,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,110,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,110,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,110,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9767441860465116,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,110,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,110,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,110,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9534883720930233,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,110,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.8861760894769147,"[array([[25,  4],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,110,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.9470443349753696,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,5,110,base,None,acc,0.9534883720930233,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,110,base,None,f1,0.9542081949058694,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,110,base,None,auc,0.9655172413793103,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,110,wagging,None,acc,0.8837209302325582,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,110,wagging,None,f1,0.8847057499402075,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,110,wagging,None,auc,0.8768472906403941,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,110,AdaBoost,None,acc,0.9534883720930233,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,110,AdaBoost,None,f1,0.9542081949058694,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,110,AdaBoost,None,auc,0.9655172413793103,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,110,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.8837209302325582,"[array([[25,  4],
+       [ 1, 13]])]"
+monks_prob_2.csv,5,110,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.8406465252676806,"[array([[24,  5],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,110,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.8756157635467979,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,5,110,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9069767441860465,"[array([[27,  2],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,110,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.8186907838070631,"[array([[23,  6],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,110,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9298029556650247,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,6,110,base,None,acc,0.9069767441860465,"[array([[29,  0],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,110,base,None,f1,0.9022255563890973,"[array([[29,  0],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,110,base,None,auc,0.8571428571428572,"[array([[29,  0],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,110,wagging,None,acc,0.8837209302325582,"[array([[28,  1],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,110,wagging,None,f1,0.8796035074342355,"[array([[28,  1],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,110,wagging,None,auc,0.8399014778325125,"[array([[28,  1],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,110,AdaBoost,None,acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,6,110,AdaBoost,None,f1,0.9295318179827443,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,6,110,AdaBoost,None,auc,0.9113300492610837,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,6,110,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,6,110,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",f1,0.9542081949058694,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,6,110,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",auc,0.9470443349753696,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,6,110,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9767441860465116,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,6,110,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.9769411499880416,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,6,110,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9642857142857143,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,7,110,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,110,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,110,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,110,wagging,None,acc,0.813953488372093,"[array([[26,  3],
+       [ 5,  9]])]"
+monks_prob_2.csv,7,110,wagging,None,f1,0.8098986285032795,"[array([[26,  3],
+       [ 5,  9]])]"
+monks_prob_2.csv,7,110,wagging,None,auc,0.7697044334975369,"[array([[26,  3],
+       [ 5,  9]])]"
+monks_prob_2.csv,7,110,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,110,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,110,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,110,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,7,110,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.8574239713774597,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,7,110,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,7,110,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9302325581395349,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,7,110,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.8847057499402075,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,7,110,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.8066502463054187,"[array([[24,  5],
+       [ 3, 11]])]"
+monks_prob_2.csv,8,110,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,110,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,110,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,110,wagging,None,acc,0.8604651162790697,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,8,110,wagging,None,f1,0.8574239713774597,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,8,110,wagging,None,auc,0.8226600985221675,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,8,110,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,110,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,110,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,110,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",acc,0.8837209302325582,"[array([[29,  0],
+       [ 5,  9]])]"
+monks_prob_2.csv,8,110,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",f1,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,8,110,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",auc,0.9113300492610837,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,8,110,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,8,110,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.8825530299712404,"[array([[27,  2],
+       [ 3, 11]])]"
+monks_prob_2.csv,8,110,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9655172413793103,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,110,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,110,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,110,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,110,wagging,None,acc,0.9069767441860465,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,110,wagging,None,f1,0.9049493142516399,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,110,wagging,None,auc,0.8756157635467979,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,110,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,110,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,110,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,110,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",acc,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,9,110,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9769411499880416,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,110,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.8066502463054187,"[array([[24,  5],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,110,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9069767441860465,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,110,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,9,110,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9642857142857143,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,0,120,base,None,acc,0.8863636363636364,"[array([[28,  1],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,120,base,None,f1,0.8828448418612352,"[array([[28,  1],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,120,base,None,auc,0.8494252873563218,"[array([[28,  1],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,120,wagging,None,acc,0.9318181818181818,"[array([[28,  1],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,120,wagging,None,f1,0.9312204452473303,"[array([[28,  1],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,120,wagging,None,auc,0.9160919540229886,"[array([[28,  1],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,120,AdaBoost,None,acc,0.8636363636363636,"[array([[27,  2],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,120,AdaBoost,None,f1,0.861038961038961,"[array([[27,  2],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,120,AdaBoost,None,auc,0.8321839080459771,"[array([[27,  2],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,120,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",acc,0.9545454545454546,"[array([[28,  1],
+       [ 1, 14]])]"
+monks_prob_2.csv,0,120,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9536796536796537,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,120,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.9494252873563218,"[array([[28,  1],
+       [ 1, 14]])]"
+monks_prob_2.csv,0,120,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9772727272727273,"[array([[28,  1],
+       [ 0, 15]])]"
+monks_prob_2.csv,0,120,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.977439934146216,"[array([[28,  1],
+       [ 0, 15]])]"
+monks_prob_2.csv,0,120,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9494252873563218,"[array([[28,  1],
+       [ 1, 14]])]"
+monks_prob_2.csv,1,120,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,120,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,120,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,120,wagging,None,acc,0.9545454545454546,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,120,wagging,None,f1,0.9536796536796537,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,120,wagging,None,auc,0.9333333333333333,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,120,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,120,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,120,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,120,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",acc,0.9545454545454546,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,120,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",f1,0.9536796536796537,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,120,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",auc,0.9,"[array([[29,  0],
+       [ 3, 12]])]"
+monks_prob_2.csv,1,120,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",acc,0.9318181818181818,"[array([[26,  3],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,120,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",f1,0.9073593073593074,"[array([[28,  1],
+       [ 3, 12]])]"
+monks_prob_2.csv,1,120,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",auc,0.9666666666666667,"[array([[29,  0],
+       [ 1, 14]])]"
+monks_prob_2.csv,2,120,base,None,acc,0.9069767441860465,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,120,base,None,f1,0.9049493142516399,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,120,base,None,auc,0.8756157635467979,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,120,wagging,None,acc,0.8604651162790697,"[array([[29,  0],
+       [ 6,  8]])]"
+monks_prob_2.csv,2,120,wagging,None,f1,0.8479783298097251,"[array([[29,  0],
+       [ 6,  8]])]"
+monks_prob_2.csv,2,120,wagging,None,auc,0.7857142857142857,"[array([[29,  0],
+       [ 6,  8]])]"
+monks_prob_2.csv,2,120,AdaBoost,None,acc,0.9534883720930233,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,120,AdaBoost,None,f1,0.9524746571258198,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,120,AdaBoost,None,auc,0.9285714285714286,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,120,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,120,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.9277621044605414,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,120,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,120,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9534883720930233,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,120,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.9524746571258198,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,120,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,120,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,120,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,120,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,120,wagging,None,acc,0.9302325581395349,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,120,wagging,None,f1,0.9277621044605414,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,120,wagging,None,auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,120,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,120,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,120,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,120,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,3,120,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",f1,0.976510605994248,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,3,120,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",auc,0.9285714285714286,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,3,120,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9767441860465116,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,120,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.9317056536861488,"[array([[26,  3],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,120,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9827586206896552,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,120,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,120,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,120,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,120,wagging,None,acc,0.9302325581395349,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,120,wagging,None,f1,0.9308234499641245,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,120,wagging,None,auc,0.9298029556650247,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,120,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,120,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,120,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,120,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9767441860465116,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,120,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,120,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,120,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9534883720930233,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,120,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.8861760894769147,"[array([[25,  4],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,120,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.9470443349753696,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,5,120,base,None,acc,0.9534883720930233,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,120,base,None,f1,0.9542081949058694,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,120,base,None,auc,0.9655172413793103,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,120,wagging,None,acc,0.8837209302325582,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,120,wagging,None,f1,0.8847057499402075,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,120,wagging,None,auc,0.8768472906403941,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,120,AdaBoost,None,acc,0.9534883720930233,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,120,AdaBoost,None,f1,0.9542081949058694,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,120,AdaBoost,None,auc,0.9655172413793103,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,120,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.8837209302325582,"[array([[25,  4],
+       [ 1, 13]])]"
+monks_prob_2.csv,5,120,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.8406465252676806,"[array([[24,  5],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,120,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.8756157635467979,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,5,120,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9069767441860465,"[array([[27,  2],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,120,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.8186907838070631,"[array([[23,  6],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,120,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9298029556650247,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,6,120,base,None,acc,0.9069767441860465,"[array([[29,  0],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,120,base,None,f1,0.9022255563890973,"[array([[29,  0],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,120,base,None,auc,0.8571428571428572,"[array([[29,  0],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,120,wagging,None,acc,0.8837209302325582,"[array([[28,  1],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,120,wagging,None,f1,0.8796035074342355,"[array([[28,  1],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,120,wagging,None,auc,0.8399014778325125,"[array([[28,  1],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,120,AdaBoost,None,acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,6,120,AdaBoost,None,f1,0.9295318179827443,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,6,120,AdaBoost,None,auc,0.9113300492610837,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,6,120,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,6,120,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",f1,0.9542081949058694,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,6,120,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",auc,0.9470443349753696,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,6,120,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9767441860465116,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,6,120,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.9769411499880416,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,6,120,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9642857142857143,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,7,120,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,120,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,120,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,120,wagging,None,acc,0.813953488372093,"[array([[26,  3],
+       [ 5,  9]])]"
+monks_prob_2.csv,7,120,wagging,None,f1,0.8098986285032795,"[array([[26,  3],
+       [ 5,  9]])]"
+monks_prob_2.csv,7,120,wagging,None,auc,0.7697044334975369,"[array([[26,  3],
+       [ 5,  9]])]"
+monks_prob_2.csv,7,120,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,120,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,120,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,120,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,7,120,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.8574239713774597,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,7,120,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,7,120,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9302325581395349,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,7,120,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.8847057499402075,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,7,120,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.8066502463054187,"[array([[24,  5],
+       [ 3, 11]])]"
+monks_prob_2.csv,8,120,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,120,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,120,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,120,wagging,None,acc,0.8604651162790697,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,8,120,wagging,None,f1,0.8574239713774597,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,8,120,wagging,None,auc,0.8226600985221675,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,8,120,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,120,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,120,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,120,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",acc,0.8837209302325582,"[array([[29,  0],
+       [ 5,  9]])]"
+monks_prob_2.csv,8,120,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",f1,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,8,120,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",auc,0.9113300492610837,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,8,120,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,8,120,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.8825530299712404,"[array([[27,  2],
+       [ 3, 11]])]"
+monks_prob_2.csv,8,120,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9655172413793103,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,120,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,120,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,120,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,120,wagging,None,acc,0.9069767441860465,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,120,wagging,None,f1,0.9049493142516399,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,120,wagging,None,auc,0.8756157635467979,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,120,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,120,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,120,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,120,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",acc,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,9,120,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9769411499880416,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,120,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.8066502463054187,"[array([[24,  5],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,120,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9069767441860465,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,120,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,9,120,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9642857142857143,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,0,130,base,None,acc,0.8863636363636364,"[array([[28,  1],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,130,base,None,f1,0.8828448418612352,"[array([[28,  1],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,130,base,None,auc,0.8494252873563218,"[array([[28,  1],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,130,wagging,None,acc,0.9318181818181818,"[array([[28,  1],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,130,wagging,None,f1,0.9312204452473303,"[array([[28,  1],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,130,wagging,None,auc,0.9160919540229886,"[array([[28,  1],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,130,AdaBoost,None,acc,0.8636363636363636,"[array([[27,  2],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,130,AdaBoost,None,f1,0.861038961038961,"[array([[27,  2],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,130,AdaBoost,None,auc,0.8321839080459771,"[array([[27,  2],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,130,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",acc,0.9545454545454546,"[array([[28,  1],
+       [ 1, 14]])]"
+monks_prob_2.csv,0,130,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9536796536796537,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,130,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.9494252873563218,"[array([[28,  1],
+       [ 1, 14]])]"
+monks_prob_2.csv,0,130,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9772727272727273,"[array([[28,  1],
+       [ 0, 15]])]"
+monks_prob_2.csv,0,130,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.977439934146216,"[array([[28,  1],
+       [ 0, 15]])]"
+monks_prob_2.csv,0,130,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9494252873563218,"[array([[28,  1],
+       [ 1, 14]])]"
+monks_prob_2.csv,1,130,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,130,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,130,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,130,wagging,None,acc,0.9545454545454546,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,130,wagging,None,f1,0.9536796536796537,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,130,wagging,None,auc,0.9333333333333333,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,130,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,130,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,130,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,130,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",acc,0.9545454545454546,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,130,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",f1,0.9536796536796537,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,130,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",auc,0.9,"[array([[29,  0],
+       [ 3, 12]])]"
+monks_prob_2.csv,1,130,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",acc,0.9318181818181818,"[array([[26,  3],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,130,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",f1,0.9073593073593074,"[array([[28,  1],
+       [ 3, 12]])]"
+monks_prob_2.csv,1,130,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",auc,0.9666666666666667,"[array([[29,  0],
+       [ 1, 14]])]"
+monks_prob_2.csv,2,130,base,None,acc,0.9069767441860465,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,130,base,None,f1,0.9049493142516399,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,130,base,None,auc,0.8756157635467979,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,130,wagging,None,acc,0.8604651162790697,"[array([[29,  0],
+       [ 6,  8]])]"
+monks_prob_2.csv,2,130,wagging,None,f1,0.8479783298097251,"[array([[29,  0],
+       [ 6,  8]])]"
+monks_prob_2.csv,2,130,wagging,None,auc,0.7857142857142857,"[array([[29,  0],
+       [ 6,  8]])]"
+monks_prob_2.csv,2,130,AdaBoost,None,acc,0.9534883720930233,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,130,AdaBoost,None,f1,0.9524746571258198,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,130,AdaBoost,None,auc,0.9285714285714286,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,130,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,130,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.9277621044605414,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,130,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,130,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9534883720930233,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,130,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.9524746571258198,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,130,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,130,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,130,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,130,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,130,wagging,None,acc,0.9302325581395349,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,130,wagging,None,f1,0.9277621044605414,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,130,wagging,None,auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,130,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,130,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,130,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,130,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,3,130,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",f1,0.976510605994248,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,3,130,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",auc,0.9285714285714286,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,3,130,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9767441860465116,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,130,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.9317056536861488,"[array([[26,  3],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,130,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9827586206896552,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,130,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,130,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,130,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,130,wagging,None,acc,0.9302325581395349,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,130,wagging,None,f1,0.9308234499641245,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,130,wagging,None,auc,0.9298029556650247,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,130,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,130,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,130,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,130,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9767441860465116,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,130,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,130,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,130,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9534883720930233,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,130,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.8861760894769147,"[array([[25,  4],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,130,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.9470443349753696,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,5,130,base,None,acc,0.9534883720930233,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,130,base,None,f1,0.9542081949058694,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,130,base,None,auc,0.9655172413793103,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,130,wagging,None,acc,0.8837209302325582,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,130,wagging,None,f1,0.8847057499402075,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,130,wagging,None,auc,0.8768472906403941,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,130,AdaBoost,None,acc,0.9534883720930233,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,130,AdaBoost,None,f1,0.9542081949058694,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,130,AdaBoost,None,auc,0.9655172413793103,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,130,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.8837209302325582,"[array([[25,  4],
+       [ 1, 13]])]"
+monks_prob_2.csv,5,130,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.8406465252676806,"[array([[24,  5],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,130,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.8756157635467979,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,5,130,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9069767441860465,"[array([[27,  2],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,130,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.8186907838070631,"[array([[23,  6],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,130,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9298029556650247,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,6,130,base,None,acc,0.9069767441860465,"[array([[29,  0],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,130,base,None,f1,0.9022255563890973,"[array([[29,  0],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,130,base,None,auc,0.8571428571428572,"[array([[29,  0],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,130,wagging,None,acc,0.8837209302325582,"[array([[28,  1],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,130,wagging,None,f1,0.8796035074342355,"[array([[28,  1],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,130,wagging,None,auc,0.8399014778325125,"[array([[28,  1],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,130,AdaBoost,None,acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,6,130,AdaBoost,None,f1,0.9295318179827443,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,6,130,AdaBoost,None,auc,0.9113300492610837,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,6,130,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,6,130,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",f1,0.9542081949058694,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,6,130,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",auc,0.9470443349753696,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,6,130,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9767441860465116,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,6,130,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.9769411499880416,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,6,130,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9642857142857143,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,7,130,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,130,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,130,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,130,wagging,None,acc,0.813953488372093,"[array([[26,  3],
+       [ 5,  9]])]"
+monks_prob_2.csv,7,130,wagging,None,f1,0.8098986285032795,"[array([[26,  3],
+       [ 5,  9]])]"
+monks_prob_2.csv,7,130,wagging,None,auc,0.7697044334975369,"[array([[26,  3],
+       [ 5,  9]])]"
+monks_prob_2.csv,7,130,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,130,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,130,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,130,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,7,130,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.8574239713774597,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,7,130,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,7,130,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9302325581395349,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,7,130,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.8847057499402075,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,7,130,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.8066502463054187,"[array([[24,  5],
+       [ 3, 11]])]"
+monks_prob_2.csv,8,130,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,130,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,130,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,130,wagging,None,acc,0.8604651162790697,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,8,130,wagging,None,f1,0.8574239713774597,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,8,130,wagging,None,auc,0.8226600985221675,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,8,130,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,130,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,130,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,130,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",acc,0.8837209302325582,"[array([[29,  0],
+       [ 5,  9]])]"
+monks_prob_2.csv,8,130,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",f1,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,8,130,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",auc,0.9113300492610837,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,8,130,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,8,130,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.8825530299712404,"[array([[27,  2],
+       [ 3, 11]])]"
+monks_prob_2.csv,8,130,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9655172413793103,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,130,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,130,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,130,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,130,wagging,None,acc,0.9069767441860465,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,130,wagging,None,f1,0.9049493142516399,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,130,wagging,None,auc,0.8756157635467979,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,130,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,130,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,130,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,130,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",acc,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,9,130,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9769411499880416,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,130,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.8066502463054187,"[array([[24,  5],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,130,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9069767441860465,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,130,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,9,130,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9642857142857143,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,0,140,base,None,acc,0.8863636363636364,"[array([[28,  1],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,140,base,None,f1,0.8828448418612352,"[array([[28,  1],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,140,base,None,auc,0.8494252873563218,"[array([[28,  1],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,140,wagging,None,acc,0.9318181818181818,"[array([[28,  1],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,140,wagging,None,f1,0.9312204452473303,"[array([[28,  1],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,140,wagging,None,auc,0.9160919540229886,"[array([[28,  1],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,140,AdaBoost,None,acc,0.8636363636363636,"[array([[27,  2],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,140,AdaBoost,None,f1,0.861038961038961,"[array([[27,  2],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,140,AdaBoost,None,auc,0.8321839080459771,"[array([[27,  2],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,140,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",acc,0.9545454545454546,"[array([[28,  1],
+       [ 1, 14]])]"
+monks_prob_2.csv,0,140,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9536796536796537,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,140,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.9494252873563218,"[array([[28,  1],
+       [ 1, 14]])]"
+monks_prob_2.csv,0,140,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9772727272727273,"[array([[28,  1],
+       [ 0, 15]])]"
+monks_prob_2.csv,0,140,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.977439934146216,"[array([[28,  1],
+       [ 0, 15]])]"
+monks_prob_2.csv,0,140,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9494252873563218,"[array([[28,  1],
+       [ 1, 14]])]"
+monks_prob_2.csv,1,140,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,140,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,140,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,140,wagging,None,acc,0.9545454545454546,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,140,wagging,None,f1,0.9536796536796537,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,140,wagging,None,auc,0.9333333333333333,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,140,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,140,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,140,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,140,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",acc,0.9545454545454546,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,140,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",f1,0.9536796536796537,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,140,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",auc,0.9,"[array([[29,  0],
+       [ 3, 12]])]"
+monks_prob_2.csv,1,140,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",acc,0.9318181818181818,"[array([[26,  3],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,140,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",f1,0.9073593073593074,"[array([[28,  1],
+       [ 3, 12]])]"
+monks_prob_2.csv,1,140,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",auc,0.9666666666666667,"[array([[29,  0],
+       [ 1, 14]])]"
+monks_prob_2.csv,2,140,base,None,acc,0.9069767441860465,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,140,base,None,f1,0.9049493142516399,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,140,base,None,auc,0.8756157635467979,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,140,wagging,None,acc,0.8604651162790697,"[array([[29,  0],
+       [ 6,  8]])]"
+monks_prob_2.csv,2,140,wagging,None,f1,0.8479783298097251,"[array([[29,  0],
+       [ 6,  8]])]"
+monks_prob_2.csv,2,140,wagging,None,auc,0.7857142857142857,"[array([[29,  0],
+       [ 6,  8]])]"
+monks_prob_2.csv,2,140,AdaBoost,None,acc,0.9534883720930233,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,140,AdaBoost,None,f1,0.9524746571258198,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,140,AdaBoost,None,auc,0.9285714285714286,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,140,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,140,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.9277621044605414,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,140,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,140,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9534883720930233,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,140,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.9524746571258198,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,140,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,140,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,140,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,140,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,140,wagging,None,acc,0.9302325581395349,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,140,wagging,None,f1,0.9277621044605414,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,140,wagging,None,auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,140,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,140,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,140,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,140,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,3,140,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",f1,0.976510605994248,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,3,140,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",auc,0.9285714285714286,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,3,140,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9767441860465116,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,140,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.9317056536861488,"[array([[26,  3],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,140,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9827586206896552,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,140,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,140,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,140,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,140,wagging,None,acc,0.9302325581395349,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,140,wagging,None,f1,0.9308234499641245,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,140,wagging,None,auc,0.9298029556650247,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,140,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,140,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,140,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,140,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9767441860465116,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,140,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,140,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,140,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9534883720930233,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,140,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.8861760894769147,"[array([[25,  4],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,140,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.9470443349753696,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,5,140,base,None,acc,0.9534883720930233,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,140,base,None,f1,0.9542081949058694,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,140,base,None,auc,0.9655172413793103,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,140,wagging,None,acc,0.8837209302325582,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,140,wagging,None,f1,0.8847057499402075,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,140,wagging,None,auc,0.8768472906403941,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,140,AdaBoost,None,acc,0.9534883720930233,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,140,AdaBoost,None,f1,0.9542081949058694,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,140,AdaBoost,None,auc,0.9655172413793103,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,140,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.8837209302325582,"[array([[25,  4],
+       [ 1, 13]])]"
+monks_prob_2.csv,5,140,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.8406465252676806,"[array([[24,  5],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,140,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.8756157635467979,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,5,140,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9069767441860465,"[array([[27,  2],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,140,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.8186907838070631,"[array([[23,  6],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,140,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9298029556650247,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,6,140,base,None,acc,0.9069767441860465,"[array([[29,  0],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,140,base,None,f1,0.9022255563890973,"[array([[29,  0],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,140,base,None,auc,0.8571428571428572,"[array([[29,  0],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,140,wagging,None,acc,0.8837209302325582,"[array([[28,  1],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,140,wagging,None,f1,0.8796035074342355,"[array([[28,  1],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,140,wagging,None,auc,0.8399014778325125,"[array([[28,  1],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,140,AdaBoost,None,acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,6,140,AdaBoost,None,f1,0.9295318179827443,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,6,140,AdaBoost,None,auc,0.9113300492610837,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,6,140,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,6,140,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",f1,0.9542081949058694,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,6,140,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",auc,0.9470443349753696,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,6,140,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9767441860465116,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,6,140,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.9769411499880416,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,6,140,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9642857142857143,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,7,140,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,140,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,140,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,140,wagging,None,acc,0.813953488372093,"[array([[26,  3],
+       [ 5,  9]])]"
+monks_prob_2.csv,7,140,wagging,None,f1,0.8098986285032795,"[array([[26,  3],
+       [ 5,  9]])]"
+monks_prob_2.csv,7,140,wagging,None,auc,0.7697044334975369,"[array([[26,  3],
+       [ 5,  9]])]"
+monks_prob_2.csv,7,140,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,140,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,140,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,140,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,7,140,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.8574239713774597,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,7,140,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,7,140,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9302325581395349,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,7,140,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.8847057499402075,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,7,140,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.8066502463054187,"[array([[24,  5],
+       [ 3, 11]])]"
+monks_prob_2.csv,8,140,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,140,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,140,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,140,wagging,None,acc,0.8604651162790697,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,8,140,wagging,None,f1,0.8574239713774597,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,8,140,wagging,None,auc,0.8226600985221675,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,8,140,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,140,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,140,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,140,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",acc,0.8837209302325582,"[array([[29,  0],
+       [ 5,  9]])]"
+monks_prob_2.csv,8,140,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",f1,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,8,140,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",auc,0.9113300492610837,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,8,140,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,8,140,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.8825530299712404,"[array([[27,  2],
+       [ 3, 11]])]"
+monks_prob_2.csv,8,140,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9655172413793103,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,140,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,140,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,140,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,140,wagging,None,acc,0.9069767441860465,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,140,wagging,None,f1,0.9049493142516399,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,140,wagging,None,auc,0.8756157635467979,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,140,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,140,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,140,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,140,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",acc,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,9,140,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9769411499880416,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,140,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.8066502463054187,"[array([[24,  5],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,140,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9069767441860465,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,140,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,9,140,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9642857142857143,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,0,150,base,None,acc,0.8863636363636364,"[array([[28,  1],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,150,base,None,f1,0.8828448418612352,"[array([[28,  1],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,150,base,None,auc,0.8494252873563218,"[array([[28,  1],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,150,wagging,None,acc,0.9318181818181818,"[array([[28,  1],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,150,wagging,None,f1,0.9312204452473303,"[array([[28,  1],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,150,wagging,None,auc,0.9160919540229886,"[array([[28,  1],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,150,AdaBoost,None,acc,0.8636363636363636,"[array([[27,  2],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,150,AdaBoost,None,f1,0.861038961038961,"[array([[27,  2],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,150,AdaBoost,None,auc,0.8321839080459771,"[array([[27,  2],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,150,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",acc,0.9545454545454546,"[array([[28,  1],
+       [ 1, 14]])]"
+monks_prob_2.csv,0,150,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9536796536796537,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,150,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.9494252873563218,"[array([[28,  1],
+       [ 1, 14]])]"
+monks_prob_2.csv,0,150,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9772727272727273,"[array([[28,  1],
+       [ 0, 15]])]"
+monks_prob_2.csv,0,150,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.977439934146216,"[array([[28,  1],
+       [ 0, 15]])]"
+monks_prob_2.csv,0,150,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9494252873563218,"[array([[28,  1],
+       [ 1, 14]])]"
+monks_prob_2.csv,1,150,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,150,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,150,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,150,wagging,None,acc,0.9545454545454546,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,150,wagging,None,f1,0.9536796536796537,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,150,wagging,None,auc,0.9333333333333333,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,150,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,150,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,150,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,150,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",acc,0.9545454545454546,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,150,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",f1,0.9536796536796537,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,150,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",auc,0.9,"[array([[29,  0],
+       [ 3, 12]])]"
+monks_prob_2.csv,1,150,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",acc,0.9318181818181818,"[array([[26,  3],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,150,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",f1,0.9073593073593074,"[array([[28,  1],
+       [ 3, 12]])]"
+monks_prob_2.csv,1,150,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",auc,0.9666666666666667,"[array([[29,  0],
+       [ 1, 14]])]"
+monks_prob_2.csv,2,150,base,None,acc,0.9069767441860465,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,150,base,None,f1,0.9049493142516399,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,150,base,None,auc,0.8756157635467979,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,150,wagging,None,acc,0.8604651162790697,"[array([[29,  0],
+       [ 6,  8]])]"
+monks_prob_2.csv,2,150,wagging,None,f1,0.8479783298097251,"[array([[29,  0],
+       [ 6,  8]])]"
+monks_prob_2.csv,2,150,wagging,None,auc,0.7857142857142857,"[array([[29,  0],
+       [ 6,  8]])]"
+monks_prob_2.csv,2,150,AdaBoost,None,acc,0.9534883720930233,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,150,AdaBoost,None,f1,0.9524746571258198,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,150,AdaBoost,None,auc,0.9285714285714286,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,150,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,150,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.9277621044605414,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,150,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,150,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9534883720930233,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,150,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.9524746571258198,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,150,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,150,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,150,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,150,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,150,wagging,None,acc,0.9302325581395349,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,150,wagging,None,f1,0.9277621044605414,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,150,wagging,None,auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,150,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,150,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,150,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,150,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,3,150,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",f1,0.976510605994248,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,3,150,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",auc,0.9285714285714286,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,3,150,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9767441860465116,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,150,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.9317056536861488,"[array([[26,  3],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,150,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9827586206896552,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,150,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,150,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,150,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,150,wagging,None,acc,0.9302325581395349,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,150,wagging,None,f1,0.9308234499641245,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,150,wagging,None,auc,0.9298029556650247,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,150,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,150,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,150,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,150,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9767441860465116,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,150,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,150,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,150,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9534883720930233,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,150,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.8861760894769147,"[array([[25,  4],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,150,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.9470443349753696,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,5,150,base,None,acc,0.9534883720930233,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,150,base,None,f1,0.9542081949058694,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,150,base,None,auc,0.9655172413793103,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,150,wagging,None,acc,0.8837209302325582,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,150,wagging,None,f1,0.8847057499402075,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,150,wagging,None,auc,0.8768472906403941,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,150,AdaBoost,None,acc,0.9534883720930233,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,150,AdaBoost,None,f1,0.9542081949058694,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,150,AdaBoost,None,auc,0.9655172413793103,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,150,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.8837209302325582,"[array([[25,  4],
+       [ 1, 13]])]"
+monks_prob_2.csv,5,150,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.8406465252676806,"[array([[24,  5],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,150,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.8756157635467979,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,5,150,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9069767441860465,"[array([[27,  2],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,150,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.8186907838070631,"[array([[23,  6],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,150,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9298029556650247,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,6,150,base,None,acc,0.9069767441860465,"[array([[29,  0],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,150,base,None,f1,0.9022255563890973,"[array([[29,  0],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,150,base,None,auc,0.8571428571428572,"[array([[29,  0],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,150,wagging,None,acc,0.8837209302325582,"[array([[28,  1],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,150,wagging,None,f1,0.8796035074342355,"[array([[28,  1],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,150,wagging,None,auc,0.8399014778325125,"[array([[28,  1],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,150,AdaBoost,None,acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,6,150,AdaBoost,None,f1,0.9295318179827443,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,6,150,AdaBoost,None,auc,0.9113300492610837,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,6,150,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,6,150,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",f1,0.9542081949058694,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,6,150,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",auc,0.9470443349753696,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,6,150,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9767441860465116,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,6,150,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.9769411499880416,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,6,150,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9642857142857143,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,7,150,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,150,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,150,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,150,wagging,None,acc,0.813953488372093,"[array([[26,  3],
+       [ 5,  9]])]"
+monks_prob_2.csv,7,150,wagging,None,f1,0.8098986285032795,"[array([[26,  3],
+       [ 5,  9]])]"
+monks_prob_2.csv,7,150,wagging,None,auc,0.7697044334975369,"[array([[26,  3],
+       [ 5,  9]])]"
+monks_prob_2.csv,7,150,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,150,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,150,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,150,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,7,150,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.8574239713774597,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,7,150,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,7,150,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9302325581395349,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,7,150,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.8847057499402075,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,7,150,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.8066502463054187,"[array([[24,  5],
+       [ 3, 11]])]"
+monks_prob_2.csv,8,150,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,150,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,150,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,150,wagging,None,acc,0.8604651162790697,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,8,150,wagging,None,f1,0.8574239713774597,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,8,150,wagging,None,auc,0.8226600985221675,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,8,150,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,150,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,150,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,150,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",acc,0.8837209302325582,"[array([[29,  0],
+       [ 5,  9]])]"
+monks_prob_2.csv,8,150,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",f1,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,8,150,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",auc,0.9113300492610837,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,8,150,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,8,150,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.8825530299712404,"[array([[27,  2],
+       [ 3, 11]])]"
+monks_prob_2.csv,8,150,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9655172413793103,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,150,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,150,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,150,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,150,wagging,None,acc,0.9069767441860465,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,150,wagging,None,f1,0.9049493142516399,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,150,wagging,None,auc,0.8756157635467979,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,150,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,150,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,150,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,150,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",acc,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,9,150,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9769411499880416,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,150,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.8066502463054187,"[array([[24,  5],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,150,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9069767441860465,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,150,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,9,150,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9642857142857143,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,0,160,base,None,acc,0.8863636363636364,"[array([[28,  1],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,160,base,None,f1,0.8828448418612352,"[array([[28,  1],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,160,base,None,auc,0.8494252873563218,"[array([[28,  1],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,160,wagging,None,acc,0.9318181818181818,"[array([[28,  1],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,160,wagging,None,f1,0.9312204452473303,"[array([[28,  1],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,160,wagging,None,auc,0.9160919540229886,"[array([[28,  1],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,160,AdaBoost,None,acc,0.8636363636363636,"[array([[27,  2],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,160,AdaBoost,None,f1,0.861038961038961,"[array([[27,  2],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,160,AdaBoost,None,auc,0.8321839080459771,"[array([[27,  2],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,160,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",acc,0.9545454545454546,"[array([[28,  1],
+       [ 1, 14]])]"
+monks_prob_2.csv,0,160,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9536796536796537,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,160,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.9494252873563218,"[array([[28,  1],
+       [ 1, 14]])]"
+monks_prob_2.csv,0,160,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9772727272727273,"[array([[28,  1],
+       [ 0, 15]])]"
+monks_prob_2.csv,0,160,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.977439934146216,"[array([[28,  1],
+       [ 0, 15]])]"
+monks_prob_2.csv,0,160,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9494252873563218,"[array([[28,  1],
+       [ 1, 14]])]"
+monks_prob_2.csv,1,160,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,160,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,160,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,160,wagging,None,acc,0.9545454545454546,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,160,wagging,None,f1,0.9536796536796537,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,160,wagging,None,auc,0.9333333333333333,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,160,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,160,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,160,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,160,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",acc,0.9545454545454546,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,160,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",f1,0.9536796536796537,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,160,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",auc,0.9,"[array([[29,  0],
+       [ 3, 12]])]"
+monks_prob_2.csv,1,160,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",acc,0.9318181818181818,"[array([[26,  3],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,160,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",f1,0.9073593073593074,"[array([[28,  1],
+       [ 3, 12]])]"
+monks_prob_2.csv,1,160,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",auc,0.9666666666666667,"[array([[29,  0],
+       [ 1, 14]])]"
+monks_prob_2.csv,2,160,base,None,acc,0.9069767441860465,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,160,base,None,f1,0.9049493142516399,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,160,base,None,auc,0.8756157635467979,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,160,wagging,None,acc,0.8604651162790697,"[array([[29,  0],
+       [ 6,  8]])]"
+monks_prob_2.csv,2,160,wagging,None,f1,0.8479783298097251,"[array([[29,  0],
+       [ 6,  8]])]"
+monks_prob_2.csv,2,160,wagging,None,auc,0.7857142857142857,"[array([[29,  0],
+       [ 6,  8]])]"
+monks_prob_2.csv,2,160,AdaBoost,None,acc,0.9534883720930233,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,160,AdaBoost,None,f1,0.9524746571258198,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,160,AdaBoost,None,auc,0.9285714285714286,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,160,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,160,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.9277621044605414,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,160,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,160,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9534883720930233,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,160,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.9524746571258198,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,160,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,160,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,160,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,160,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,160,wagging,None,acc,0.9302325581395349,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,160,wagging,None,f1,0.9277621044605414,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,160,wagging,None,auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,160,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,160,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,160,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,160,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,3,160,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",f1,0.976510605994248,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,3,160,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",auc,0.9285714285714286,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,3,160,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9767441860465116,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,160,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.9317056536861488,"[array([[26,  3],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,160,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9827586206896552,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,160,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,160,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,160,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,160,wagging,None,acc,0.9302325581395349,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,160,wagging,None,f1,0.9308234499641245,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,160,wagging,None,auc,0.9298029556650247,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,160,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,160,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,160,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,160,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9767441860465116,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,160,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,160,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,160,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9534883720930233,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,160,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.8861760894769147,"[array([[25,  4],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,160,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.9470443349753696,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,5,160,base,None,acc,0.9534883720930233,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,160,base,None,f1,0.9542081949058694,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,160,base,None,auc,0.9655172413793103,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,160,wagging,None,acc,0.8837209302325582,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,160,wagging,None,f1,0.8847057499402075,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,160,wagging,None,auc,0.8768472906403941,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,160,AdaBoost,None,acc,0.9534883720930233,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,160,AdaBoost,None,f1,0.9542081949058694,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,160,AdaBoost,None,auc,0.9655172413793103,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,160,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.8837209302325582,"[array([[25,  4],
+       [ 1, 13]])]"
+monks_prob_2.csv,5,160,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.8406465252676806,"[array([[24,  5],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,160,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.8756157635467979,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,5,160,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9069767441860465,"[array([[27,  2],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,160,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.8186907838070631,"[array([[23,  6],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,160,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9298029556650247,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,6,160,base,None,acc,0.9069767441860465,"[array([[29,  0],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,160,base,None,f1,0.9022255563890973,"[array([[29,  0],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,160,base,None,auc,0.8571428571428572,"[array([[29,  0],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,160,wagging,None,acc,0.8837209302325582,"[array([[28,  1],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,160,wagging,None,f1,0.8796035074342355,"[array([[28,  1],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,160,wagging,None,auc,0.8399014778325125,"[array([[28,  1],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,160,AdaBoost,None,acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,6,160,AdaBoost,None,f1,0.9295318179827443,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,6,160,AdaBoost,None,auc,0.9113300492610837,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,6,160,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,6,160,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",f1,0.9542081949058694,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,6,160,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",auc,0.9470443349753696,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,6,160,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9767441860465116,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,6,160,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.9769411499880416,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,6,160,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9642857142857143,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,7,160,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,160,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,160,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,160,wagging,None,acc,0.813953488372093,"[array([[26,  3],
+       [ 5,  9]])]"
+monks_prob_2.csv,7,160,wagging,None,f1,0.8098986285032795,"[array([[26,  3],
+       [ 5,  9]])]"
+monks_prob_2.csv,7,160,wagging,None,auc,0.7697044334975369,"[array([[26,  3],
+       [ 5,  9]])]"
+monks_prob_2.csv,7,160,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,160,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,160,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,160,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,7,160,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.8574239713774597,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,7,160,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,7,160,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9302325581395349,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,7,160,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.8847057499402075,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,7,160,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.8066502463054187,"[array([[24,  5],
+       [ 3, 11]])]"
+monks_prob_2.csv,8,160,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,160,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,160,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,160,wagging,None,acc,0.8604651162790697,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,8,160,wagging,None,f1,0.8574239713774597,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,8,160,wagging,None,auc,0.8226600985221675,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,8,160,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,160,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,160,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,160,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",acc,0.8837209302325582,"[array([[29,  0],
+       [ 5,  9]])]"
+monks_prob_2.csv,8,160,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",f1,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,8,160,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",auc,0.9113300492610837,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,8,160,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,8,160,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.8825530299712404,"[array([[27,  2],
+       [ 3, 11]])]"
+monks_prob_2.csv,8,160,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9655172413793103,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,160,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,160,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,160,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,160,wagging,None,acc,0.9069767441860465,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,160,wagging,None,f1,0.9049493142516399,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,160,wagging,None,auc,0.8756157635467979,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,160,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,160,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,160,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,160,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",acc,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,9,160,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9769411499880416,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,160,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.8066502463054187,"[array([[24,  5],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,160,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9069767441860465,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,160,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,9,160,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9642857142857143,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,0,170,base,None,acc,0.8863636363636364,"[array([[28,  1],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,170,base,None,f1,0.8828448418612352,"[array([[28,  1],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,170,base,None,auc,0.8494252873563218,"[array([[28,  1],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,170,wagging,None,acc,0.9318181818181818,"[array([[28,  1],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,170,wagging,None,f1,0.9312204452473303,"[array([[28,  1],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,170,wagging,None,auc,0.9160919540229886,"[array([[28,  1],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,170,AdaBoost,None,acc,0.8636363636363636,"[array([[27,  2],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,170,AdaBoost,None,f1,0.861038961038961,"[array([[27,  2],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,170,AdaBoost,None,auc,0.8321839080459771,"[array([[27,  2],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,170,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",acc,0.9545454545454546,"[array([[28,  1],
+       [ 1, 14]])]"
+monks_prob_2.csv,0,170,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9536796536796537,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,170,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.9494252873563218,"[array([[28,  1],
+       [ 1, 14]])]"
+monks_prob_2.csv,0,170,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9772727272727273,"[array([[28,  1],
+       [ 0, 15]])]"
+monks_prob_2.csv,0,170,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.977439934146216,"[array([[28,  1],
+       [ 0, 15]])]"
+monks_prob_2.csv,0,170,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9494252873563218,"[array([[28,  1],
+       [ 1, 14]])]"
+monks_prob_2.csv,1,170,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,170,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,170,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,170,wagging,None,acc,0.9545454545454546,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,170,wagging,None,f1,0.9536796536796537,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,170,wagging,None,auc,0.9333333333333333,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,170,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,170,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,170,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,170,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",acc,0.9545454545454546,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,170,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",f1,0.9536796536796537,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,170,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",auc,0.9,"[array([[29,  0],
+       [ 3, 12]])]"
+monks_prob_2.csv,1,170,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",acc,0.9318181818181818,"[array([[26,  3],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,170,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",f1,0.9073593073593074,"[array([[28,  1],
+       [ 3, 12]])]"
+monks_prob_2.csv,1,170,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",auc,0.9666666666666667,"[array([[29,  0],
+       [ 1, 14]])]"
+monks_prob_2.csv,2,170,base,None,acc,0.9069767441860465,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,170,base,None,f1,0.9049493142516399,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,170,base,None,auc,0.8756157635467979,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,170,wagging,None,acc,0.8604651162790697,"[array([[29,  0],
+       [ 6,  8]])]"
+monks_prob_2.csv,2,170,wagging,None,f1,0.8479783298097251,"[array([[29,  0],
+       [ 6,  8]])]"
+monks_prob_2.csv,2,170,wagging,None,auc,0.7857142857142857,"[array([[29,  0],
+       [ 6,  8]])]"
+monks_prob_2.csv,2,170,AdaBoost,None,acc,0.9534883720930233,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,170,AdaBoost,None,f1,0.9524746571258198,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,170,AdaBoost,None,auc,0.9285714285714286,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,170,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,170,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.9277621044605414,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,170,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,170,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9534883720930233,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,170,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.9524746571258198,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,170,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,170,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,170,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,170,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,170,wagging,None,acc,0.9302325581395349,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,170,wagging,None,f1,0.9277621044605414,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,170,wagging,None,auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,170,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,170,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,170,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,170,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,3,170,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",f1,0.976510605994248,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,3,170,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",auc,0.9285714285714286,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,3,170,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9767441860465116,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,170,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.9317056536861488,"[array([[26,  3],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,170,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9827586206896552,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,170,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,170,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,170,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,170,wagging,None,acc,0.9302325581395349,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,170,wagging,None,f1,0.9308234499641245,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,170,wagging,None,auc,0.9298029556650247,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,170,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,170,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,170,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,170,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9767441860465116,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,170,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,170,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,170,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9534883720930233,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,170,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.8861760894769147,"[array([[25,  4],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,170,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.9470443349753696,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,5,170,base,None,acc,0.9534883720930233,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,170,base,None,f1,0.9542081949058694,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,170,base,None,auc,0.9655172413793103,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,170,wagging,None,acc,0.8837209302325582,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,170,wagging,None,f1,0.8847057499402075,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,170,wagging,None,auc,0.8768472906403941,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,170,AdaBoost,None,acc,0.9534883720930233,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,170,AdaBoost,None,f1,0.9542081949058694,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,170,AdaBoost,None,auc,0.9655172413793103,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,170,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.8837209302325582,"[array([[25,  4],
+       [ 1, 13]])]"
+monks_prob_2.csv,5,170,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.8406465252676806,"[array([[24,  5],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,170,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.8756157635467979,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,5,170,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9069767441860465,"[array([[27,  2],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,170,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.8186907838070631,"[array([[23,  6],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,170,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9298029556650247,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,6,170,base,None,acc,0.9069767441860465,"[array([[29,  0],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,170,base,None,f1,0.9022255563890973,"[array([[29,  0],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,170,base,None,auc,0.8571428571428572,"[array([[29,  0],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,170,wagging,None,acc,0.8837209302325582,"[array([[28,  1],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,170,wagging,None,f1,0.8796035074342355,"[array([[28,  1],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,170,wagging,None,auc,0.8399014778325125,"[array([[28,  1],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,170,AdaBoost,None,acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,6,170,AdaBoost,None,f1,0.9295318179827443,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,6,170,AdaBoost,None,auc,0.9113300492610837,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,6,170,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,6,170,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",f1,0.9542081949058694,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,6,170,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",auc,0.9470443349753696,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,6,170,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9767441860465116,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,6,170,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.9769411499880416,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,6,170,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9642857142857143,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,7,170,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,170,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,170,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,170,wagging,None,acc,0.813953488372093,"[array([[26,  3],
+       [ 5,  9]])]"
+monks_prob_2.csv,7,170,wagging,None,f1,0.8098986285032795,"[array([[26,  3],
+       [ 5,  9]])]"
+monks_prob_2.csv,7,170,wagging,None,auc,0.7697044334975369,"[array([[26,  3],
+       [ 5,  9]])]"
+monks_prob_2.csv,7,170,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,170,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,170,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,170,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,7,170,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.8574239713774597,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,7,170,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,7,170,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9302325581395349,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,7,170,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.8847057499402075,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,7,170,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.8066502463054187,"[array([[24,  5],
+       [ 3, 11]])]"
+monks_prob_2.csv,8,170,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,170,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,170,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,170,wagging,None,acc,0.8604651162790697,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,8,170,wagging,None,f1,0.8574239713774597,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,8,170,wagging,None,auc,0.8226600985221675,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,8,170,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,170,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,170,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,170,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",acc,0.8837209302325582,"[array([[29,  0],
+       [ 5,  9]])]"
+monks_prob_2.csv,8,170,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",f1,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,8,170,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",auc,0.9113300492610837,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,8,170,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,8,170,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.8825530299712404,"[array([[27,  2],
+       [ 3, 11]])]"
+monks_prob_2.csv,8,170,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9655172413793103,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,170,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,170,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,170,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,170,wagging,None,acc,0.9069767441860465,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,170,wagging,None,f1,0.9049493142516399,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,170,wagging,None,auc,0.8756157635467979,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,170,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,170,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,170,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,170,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",acc,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,9,170,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9769411499880416,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,170,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.8066502463054187,"[array([[24,  5],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,170,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9069767441860465,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,170,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,9,170,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9642857142857143,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,0,180,base,None,acc,0.8863636363636364,"[array([[28,  1],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,180,base,None,f1,0.8828448418612352,"[array([[28,  1],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,180,base,None,auc,0.8494252873563218,"[array([[28,  1],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,180,wagging,None,acc,0.9318181818181818,"[array([[28,  1],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,180,wagging,None,f1,0.9312204452473303,"[array([[28,  1],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,180,wagging,None,auc,0.9160919540229886,"[array([[28,  1],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,180,AdaBoost,None,acc,0.8636363636363636,"[array([[27,  2],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,180,AdaBoost,None,f1,0.861038961038961,"[array([[27,  2],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,180,AdaBoost,None,auc,0.8321839080459771,"[array([[27,  2],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,180,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",acc,0.9545454545454546,"[array([[28,  1],
+       [ 1, 14]])]"
+monks_prob_2.csv,0,180,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9536796536796537,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,180,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.9494252873563218,"[array([[28,  1],
+       [ 1, 14]])]"
+monks_prob_2.csv,0,180,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9772727272727273,"[array([[28,  1],
+       [ 0, 15]])]"
+monks_prob_2.csv,0,180,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.977439934146216,"[array([[28,  1],
+       [ 0, 15]])]"
+monks_prob_2.csv,0,180,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9494252873563218,"[array([[28,  1],
+       [ 1, 14]])]"
+monks_prob_2.csv,1,180,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,180,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,180,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,180,wagging,None,acc,0.9545454545454546,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,180,wagging,None,f1,0.9536796536796537,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,180,wagging,None,auc,0.9333333333333333,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,180,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,180,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,180,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,180,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",acc,0.9545454545454546,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,180,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",f1,0.9536796536796537,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,180,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",auc,0.9,"[array([[29,  0],
+       [ 3, 12]])]"
+monks_prob_2.csv,1,180,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",acc,0.9318181818181818,"[array([[26,  3],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,180,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",f1,0.9073593073593074,"[array([[28,  1],
+       [ 3, 12]])]"
+monks_prob_2.csv,1,180,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",auc,0.9666666666666667,"[array([[29,  0],
+       [ 1, 14]])]"
+monks_prob_2.csv,2,180,base,None,acc,0.9069767441860465,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,180,base,None,f1,0.9049493142516399,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,180,base,None,auc,0.8756157635467979,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,180,wagging,None,acc,0.8604651162790697,"[array([[29,  0],
+       [ 6,  8]])]"
+monks_prob_2.csv,2,180,wagging,None,f1,0.8479783298097251,"[array([[29,  0],
+       [ 6,  8]])]"
+monks_prob_2.csv,2,180,wagging,None,auc,0.7857142857142857,"[array([[29,  0],
+       [ 6,  8]])]"
+monks_prob_2.csv,2,180,AdaBoost,None,acc,0.9534883720930233,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,180,AdaBoost,None,f1,0.9524746571258198,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,180,AdaBoost,None,auc,0.9285714285714286,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,180,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,180,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.9277621044605414,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,180,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,180,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9534883720930233,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,180,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.9524746571258198,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,180,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,180,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,180,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,180,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,180,wagging,None,acc,0.9302325581395349,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,180,wagging,None,f1,0.9277621044605414,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,180,wagging,None,auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,180,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,180,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,180,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,180,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,3,180,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",f1,0.976510605994248,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,3,180,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",auc,0.9285714285714286,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,3,180,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9767441860465116,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,180,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.9317056536861488,"[array([[26,  3],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,180,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9827586206896552,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,180,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,180,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,180,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,180,wagging,None,acc,0.9302325581395349,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,180,wagging,None,f1,0.9308234499641245,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,180,wagging,None,auc,0.9298029556650247,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,180,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,180,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,180,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,180,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9767441860465116,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,180,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,180,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,180,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9534883720930233,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,180,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.8861760894769147,"[array([[25,  4],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,180,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.9470443349753696,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,5,180,base,None,acc,0.9534883720930233,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,180,base,None,f1,0.9542081949058694,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,180,base,None,auc,0.9655172413793103,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,180,wagging,None,acc,0.8837209302325582,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,180,wagging,None,f1,0.8847057499402075,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,180,wagging,None,auc,0.8768472906403941,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,180,AdaBoost,None,acc,0.9534883720930233,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,180,AdaBoost,None,f1,0.9542081949058694,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,180,AdaBoost,None,auc,0.9655172413793103,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,180,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.8837209302325582,"[array([[25,  4],
+       [ 1, 13]])]"
+monks_prob_2.csv,5,180,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.8406465252676806,"[array([[24,  5],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,180,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.8756157635467979,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,5,180,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9069767441860465,"[array([[27,  2],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,180,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.8186907838070631,"[array([[23,  6],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,180,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9298029556650247,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,6,180,base,None,acc,0.9069767441860465,"[array([[29,  0],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,180,base,None,f1,0.9022255563890973,"[array([[29,  0],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,180,base,None,auc,0.8571428571428572,"[array([[29,  0],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,180,wagging,None,acc,0.8837209302325582,"[array([[28,  1],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,180,wagging,None,f1,0.8796035074342355,"[array([[28,  1],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,180,wagging,None,auc,0.8399014778325125,"[array([[28,  1],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,180,AdaBoost,None,acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,6,180,AdaBoost,None,f1,0.9295318179827443,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,6,180,AdaBoost,None,auc,0.9113300492610837,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,6,180,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,6,180,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",f1,0.9542081949058694,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,6,180,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",auc,0.9470443349753696,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,6,180,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9767441860465116,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,6,180,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.9769411499880416,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,6,180,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9642857142857143,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,7,180,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,180,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,180,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,180,wagging,None,acc,0.813953488372093,"[array([[26,  3],
+       [ 5,  9]])]"
+monks_prob_2.csv,7,180,wagging,None,f1,0.8098986285032795,"[array([[26,  3],
+       [ 5,  9]])]"
+monks_prob_2.csv,7,180,wagging,None,auc,0.7697044334975369,"[array([[26,  3],
+       [ 5,  9]])]"
+monks_prob_2.csv,7,180,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,180,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,180,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,180,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,7,180,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.8574239713774597,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,7,180,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,7,180,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9302325581395349,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,7,180,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.8847057499402075,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,7,180,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.8066502463054187,"[array([[24,  5],
+       [ 3, 11]])]"
+monks_prob_2.csv,8,180,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,180,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,180,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,180,wagging,None,acc,0.8604651162790697,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,8,180,wagging,None,f1,0.8574239713774597,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,8,180,wagging,None,auc,0.8226600985221675,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,8,180,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,180,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,180,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,180,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",acc,0.8837209302325582,"[array([[29,  0],
+       [ 5,  9]])]"
+monks_prob_2.csv,8,180,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",f1,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,8,180,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",auc,0.9113300492610837,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,8,180,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,8,180,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.8825530299712404,"[array([[27,  2],
+       [ 3, 11]])]"
+monks_prob_2.csv,8,180,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9655172413793103,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,180,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,180,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,180,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,180,wagging,None,acc,0.9069767441860465,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,180,wagging,None,f1,0.9049493142516399,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,180,wagging,None,auc,0.8756157635467979,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,180,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,180,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,180,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,180,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",acc,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,9,180,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9769411499880416,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,180,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.8066502463054187,"[array([[24,  5],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,180,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9069767441860465,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,180,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,9,180,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9642857142857143,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,0,190,base,None,acc,0.8863636363636364,"[array([[28,  1],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,190,base,None,f1,0.8828448418612352,"[array([[28,  1],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,190,base,None,auc,0.8494252873563218,"[array([[28,  1],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,190,wagging,None,acc,0.9318181818181818,"[array([[28,  1],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,190,wagging,None,f1,0.9312204452473303,"[array([[28,  1],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,190,wagging,None,auc,0.9160919540229886,"[array([[28,  1],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,190,AdaBoost,None,acc,0.8636363636363636,"[array([[27,  2],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,190,AdaBoost,None,f1,0.861038961038961,"[array([[27,  2],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,190,AdaBoost,None,auc,0.8321839080459771,"[array([[27,  2],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,190,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",acc,0.9545454545454546,"[array([[28,  1],
+       [ 1, 14]])]"
+monks_prob_2.csv,0,190,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9536796536796537,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,190,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.9494252873563218,"[array([[28,  1],
+       [ 1, 14]])]"
+monks_prob_2.csv,0,190,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9772727272727273,"[array([[28,  1],
+       [ 0, 15]])]"
+monks_prob_2.csv,0,190,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.977439934146216,"[array([[28,  1],
+       [ 0, 15]])]"
+monks_prob_2.csv,0,190,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9494252873563218,"[array([[28,  1],
+       [ 1, 14]])]"
+monks_prob_2.csv,1,190,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,190,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,190,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,190,wagging,None,acc,0.9545454545454546,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,190,wagging,None,f1,0.9536796536796537,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,190,wagging,None,auc,0.9333333333333333,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,190,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,190,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,190,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,190,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",acc,0.9545454545454546,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,190,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",f1,0.9536796536796537,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,190,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",auc,0.9,"[array([[29,  0],
+       [ 3, 12]])]"
+monks_prob_2.csv,1,190,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",acc,0.9318181818181818,"[array([[26,  3],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,190,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",f1,0.9073593073593074,"[array([[28,  1],
+       [ 3, 12]])]"
+monks_prob_2.csv,1,190,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",auc,0.9666666666666667,"[array([[29,  0],
+       [ 1, 14]])]"
+monks_prob_2.csv,2,190,base,None,acc,0.9069767441860465,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,190,base,None,f1,0.9049493142516399,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,190,base,None,auc,0.8756157635467979,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,190,wagging,None,acc,0.8604651162790697,"[array([[29,  0],
+       [ 6,  8]])]"
+monks_prob_2.csv,2,190,wagging,None,f1,0.8479783298097251,"[array([[29,  0],
+       [ 6,  8]])]"
+monks_prob_2.csv,2,190,wagging,None,auc,0.7857142857142857,"[array([[29,  0],
+       [ 6,  8]])]"
+monks_prob_2.csv,2,190,AdaBoost,None,acc,0.9534883720930233,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,190,AdaBoost,None,f1,0.9524746571258198,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,190,AdaBoost,None,auc,0.9285714285714286,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,190,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,190,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.9277621044605414,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,190,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,190,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9534883720930233,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,190,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.9524746571258198,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,190,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,190,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,190,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,190,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,190,wagging,None,acc,0.9302325581395349,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,190,wagging,None,f1,0.9277621044605414,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,190,wagging,None,auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,190,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,190,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,190,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,190,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,3,190,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",f1,0.976510605994248,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,3,190,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",auc,0.9285714285714286,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,3,190,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9767441860465116,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,190,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.9317056536861488,"[array([[26,  3],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,190,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9827586206896552,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,190,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,190,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,190,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,190,wagging,None,acc,0.9302325581395349,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,190,wagging,None,f1,0.9308234499641245,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,190,wagging,None,auc,0.9298029556650247,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,190,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,190,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,190,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,190,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9767441860465116,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,190,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,190,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,190,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9534883720930233,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,190,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.8861760894769147,"[array([[25,  4],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,190,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.9470443349753696,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,5,190,base,None,acc,0.9534883720930233,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,190,base,None,f1,0.9542081949058694,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,190,base,None,auc,0.9655172413793103,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,190,wagging,None,acc,0.8837209302325582,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,190,wagging,None,f1,0.8847057499402075,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,190,wagging,None,auc,0.8768472906403941,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,190,AdaBoost,None,acc,0.9534883720930233,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,190,AdaBoost,None,f1,0.9542081949058694,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,190,AdaBoost,None,auc,0.9655172413793103,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,190,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.8837209302325582,"[array([[25,  4],
+       [ 1, 13]])]"
+monks_prob_2.csv,5,190,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.8406465252676806,"[array([[24,  5],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,190,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.8756157635467979,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,5,190,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9069767441860465,"[array([[27,  2],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,190,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.8186907838070631,"[array([[23,  6],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,190,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9298029556650247,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,6,190,base,None,acc,0.9069767441860465,"[array([[29,  0],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,190,base,None,f1,0.9022255563890973,"[array([[29,  0],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,190,base,None,auc,0.8571428571428572,"[array([[29,  0],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,190,wagging,None,acc,0.8837209302325582,"[array([[28,  1],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,190,wagging,None,f1,0.8796035074342355,"[array([[28,  1],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,190,wagging,None,auc,0.8399014778325125,"[array([[28,  1],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,190,AdaBoost,None,acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,6,190,AdaBoost,None,f1,0.9295318179827443,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,6,190,AdaBoost,None,auc,0.9113300492610837,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,6,190,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,6,190,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",f1,0.9542081949058694,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,6,190,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",auc,0.9470443349753696,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,6,190,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9767441860465116,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,6,190,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.9769411499880416,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,6,190,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9642857142857143,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,7,190,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,190,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,190,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,190,wagging,None,acc,0.813953488372093,"[array([[26,  3],
+       [ 5,  9]])]"
+monks_prob_2.csv,7,190,wagging,None,f1,0.8098986285032795,"[array([[26,  3],
+       [ 5,  9]])]"
+monks_prob_2.csv,7,190,wagging,None,auc,0.7697044334975369,"[array([[26,  3],
+       [ 5,  9]])]"
+monks_prob_2.csv,7,190,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,190,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,190,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,190,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,7,190,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.8574239713774597,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,7,190,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,7,190,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9302325581395349,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,7,190,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.8847057499402075,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,7,190,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.8066502463054187,"[array([[24,  5],
+       [ 3, 11]])]"
+monks_prob_2.csv,8,190,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,190,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,190,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,190,wagging,None,acc,0.8604651162790697,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,8,190,wagging,None,f1,0.8574239713774597,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,8,190,wagging,None,auc,0.8226600985221675,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,8,190,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,190,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,190,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,190,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",acc,0.8837209302325582,"[array([[29,  0],
+       [ 5,  9]])]"
+monks_prob_2.csv,8,190,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",f1,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,8,190,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",auc,0.9113300492610837,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,8,190,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,8,190,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.8825530299712404,"[array([[27,  2],
+       [ 3, 11]])]"
+monks_prob_2.csv,8,190,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9655172413793103,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,190,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,190,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,190,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,190,wagging,None,acc,0.9069767441860465,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,190,wagging,None,f1,0.9049493142516399,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,190,wagging,None,auc,0.8756157635467979,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,190,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,190,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,190,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,190,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",acc,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,9,190,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9769411499880416,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,190,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.8066502463054187,"[array([[24,  5],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,190,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9069767441860465,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,190,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,9,190,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9642857142857143,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,0,200,base,None,acc,0.8863636363636364,"[array([[28,  1],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,200,base,None,f1,0.8828448418612352,"[array([[28,  1],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,200,base,None,auc,0.8494252873563218,"[array([[28,  1],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,200,wagging,None,acc,0.9318181818181818,"[array([[28,  1],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,200,wagging,None,f1,0.9312204452473303,"[array([[28,  1],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,200,wagging,None,auc,0.9160919540229886,"[array([[28,  1],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,200,AdaBoost,None,acc,0.8636363636363636,"[array([[27,  2],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,200,AdaBoost,None,f1,0.861038961038961,"[array([[27,  2],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,200,AdaBoost,None,auc,0.8321839080459771,"[array([[27,  2],
+       [ 4, 11]])]"
+monks_prob_2.csv,0,200,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",acc,0.9545454545454546,"[array([[28,  1],
+       [ 1, 14]])]"
+monks_prob_2.csv,0,200,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9536796536796537,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,0,200,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.9494252873563218,"[array([[28,  1],
+       [ 1, 14]])]"
+monks_prob_2.csv,0,200,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9772727272727273,"[array([[28,  1],
+       [ 0, 15]])]"
+monks_prob_2.csv,0,200,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.977439934146216,"[array([[28,  1],
+       [ 0, 15]])]"
+monks_prob_2.csv,0,200,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9494252873563218,"[array([[28,  1],
+       [ 1, 14]])]"
+monks_prob_2.csv,1,200,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,200,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,200,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,200,wagging,None,acc,0.9545454545454546,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,200,wagging,None,f1,0.9536796536796537,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,200,wagging,None,auc,0.9333333333333333,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,200,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,200,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,200,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,200,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",acc,0.9545454545454546,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,200,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",f1,0.9536796536796537,"[array([[29,  0],
+       [ 2, 13]])]"
+monks_prob_2.csv,1,200,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",auc,0.9,"[array([[29,  0],
+       [ 3, 12]])]"
+monks_prob_2.csv,1,200,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",acc,0.9318181818181818,"[array([[26,  3],
+       [ 0, 15]])]"
+monks_prob_2.csv,1,200,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",f1,0.9073593073593074,"[array([[28,  1],
+       [ 3, 12]])]"
+monks_prob_2.csv,1,200,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",auc,0.9666666666666667,"[array([[29,  0],
+       [ 1, 14]])]"
+monks_prob_2.csv,2,200,base,None,acc,0.9069767441860465,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,200,base,None,f1,0.9049493142516399,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,200,base,None,auc,0.8756157635467979,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,200,wagging,None,acc,0.8604651162790697,"[array([[29,  0],
+       [ 6,  8]])]"
+monks_prob_2.csv,2,200,wagging,None,f1,0.8479783298097251,"[array([[29,  0],
+       [ 6,  8]])]"
+monks_prob_2.csv,2,200,wagging,None,auc,0.7857142857142857,"[array([[29,  0],
+       [ 6,  8]])]"
+monks_prob_2.csv,2,200,AdaBoost,None,acc,0.9534883720930233,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,200,AdaBoost,None,f1,0.9524746571258198,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,200,AdaBoost,None,auc,0.9285714285714286,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,200,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,200,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.9277621044605414,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,200,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,2,200,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9534883720930233,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,200,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.9524746571258198,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,2,200,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,200,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,200,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,200,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,200,wagging,None,acc,0.9302325581395349,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,200,wagging,None,f1,0.9277621044605414,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,200,wagging,None,auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,3,200,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,200,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,200,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,200,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,3,200,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",f1,0.976510605994248,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,3,200,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",auc,0.9285714285714286,"[array([[29,  0],
+       [ 2, 12]])]"
+monks_prob_2.csv,3,200,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9767441860465116,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,200,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.9317056536861488,"[array([[26,  3],
+       [ 0, 14]])]"
+monks_prob_2.csv,3,200,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9827586206896552,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,200,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,200,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,200,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,200,wagging,None,acc,0.9302325581395349,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,200,wagging,None,f1,0.9308234499641245,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,200,wagging,None,auc,0.9298029556650247,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,200,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,200,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,200,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,200,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9767441860465116,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,200,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,200,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,200,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9534883720930233,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,4,200,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.8861760894769147,"[array([[25,  4],
+       [ 1, 13]])]"
+monks_prob_2.csv,4,200,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.9470443349753696,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,5,200,base,None,acc,0.9534883720930233,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,200,base,None,f1,0.9542081949058694,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,200,base,None,auc,0.9655172413793103,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,200,wagging,None,acc,0.8837209302325582,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,200,wagging,None,f1,0.8847057499402075,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,200,wagging,None,auc,0.8768472906403941,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,200,AdaBoost,None,acc,0.9534883720930233,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,200,AdaBoost,None,f1,0.9542081949058694,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,200,AdaBoost,None,auc,0.9655172413793103,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,5,200,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.8837209302325582,"[array([[25,  4],
+       [ 1, 13]])]"
+monks_prob_2.csv,5,200,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.8406465252676806,"[array([[24,  5],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,200,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.8756157635467979,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,5,200,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9069767441860465,"[array([[27,  2],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,200,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.8186907838070631,"[array([[23,  6],
+       [ 2, 12]])]"
+monks_prob_2.csv,5,200,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9298029556650247,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,6,200,base,None,acc,0.9069767441860465,"[array([[29,  0],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,200,base,None,f1,0.9022255563890973,"[array([[29,  0],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,200,base,None,auc,0.8571428571428572,"[array([[29,  0],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,200,wagging,None,acc,0.8837209302325582,"[array([[28,  1],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,200,wagging,None,f1,0.8796035074342355,"[array([[28,  1],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,200,wagging,None,auc,0.8399014778325125,"[array([[28,  1],
+       [ 4, 10]])]"
+monks_prob_2.csv,6,200,AdaBoost,None,acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,6,200,AdaBoost,None,f1,0.9295318179827443,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,6,200,AdaBoost,None,auc,0.9113300492610837,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,6,200,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,6,200,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",f1,0.9542081949058694,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,6,200,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",auc,0.9470443349753696,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,6,200,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9767441860465116,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,6,200,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.9769411499880416,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,6,200,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9642857142857143,"[array([[29,  0],
+       [ 1, 13]])]"
+monks_prob_2.csv,7,200,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,200,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,200,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,200,wagging,None,acc,0.813953488372093,"[array([[26,  3],
+       [ 5,  9]])]"
+monks_prob_2.csv,7,200,wagging,None,f1,0.8098986285032795,"[array([[26,  3],
+       [ 5,  9]])]"
+monks_prob_2.csv,7,200,wagging,None,auc,0.7697044334975369,"[array([[26,  3],
+       [ 5,  9]])]"
+monks_prob_2.csv,7,200,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,200,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,200,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,7,200,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9302325581395349,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,7,200,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.8574239713774597,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,7,200,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.8928571428571428,"[array([[29,  0],
+       [ 3, 11]])]"
+monks_prob_2.csv,7,200,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",acc,0.9302325581395349,"[array([[27,  2],
+       [ 1, 13]])]"
+monks_prob_2.csv,7,200,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",f1,0.8847057499402075,"[array([[26,  3],
+       [ 2, 12]])]"
+monks_prob_2.csv,7,200,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.8066502463054187,"[array([[24,  5],
+       [ 3, 11]])]"
+monks_prob_2.csv,8,200,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,200,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,200,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,200,wagging,None,acc,0.8604651162790697,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,8,200,wagging,None,f1,0.8574239713774597,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,8,200,wagging,None,auc,0.8226600985221675,"[array([[27,  2],
+       [ 4, 10]])]"
+monks_prob_2.csv,8,200,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,200,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,200,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,8,200,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",acc,0.8837209302325582,"[array([[29,  0],
+       [ 5,  9]])]"
+monks_prob_2.csv,8,200,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",f1,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,8,200,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",auc,0.9113300492610837,"[array([[28,  1],
+       [ 2, 12]])]"
+monks_prob_2.csv,8,200,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,8,200,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.8825530299712404,"[array([[27,  2],
+       [ 3, 11]])]"
+monks_prob_2.csv,8,200,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9655172413793103,"[array([[27,  2],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,200,base,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,200,base,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,200,base,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,200,wagging,None,acc,0.9069767441860465,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,200,wagging,None,f1,0.9049493142516399,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,200,wagging,None,auc,0.8756157635467979,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,200,AdaBoost,None,acc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,200,AdaBoost,None,f1,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,200,AdaBoost,None,auc,1.0,"[array([[29,  0],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,200,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",acc,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,9,200,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9769411499880416,"[array([[28,  1],
+       [ 0, 14]])]"
+monks_prob_2.csv,9,200,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.8066502463054187,"[array([[24,  5],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,200,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9069767441860465,"[array([[28,  1],
+       [ 3, 11]])]"
+monks_prob_2.csv,9,200,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.9534883720930233,"[array([[28,  1],
+       [ 1, 13]])]"
+monks_prob_2.csv,9,200,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,0.9642857142857143,"[array([[29,  0],
+       [ 1, 13]])]"

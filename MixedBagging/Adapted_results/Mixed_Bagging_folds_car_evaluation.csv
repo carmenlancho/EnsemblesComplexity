@@ -5579,3 +5579,723 @@ car_evaluation.csv,5,180,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.99423518
        [  0,  52]])]"
 car_evaluation.csv,5,180,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9958677685950413,"[array([[120,   1],
        [  0,  52]])]"
+car_evaluation.csv,6,180,base,None,acc,0.9884393063583815,"[array([[120,   1],
+       [  1,  51]])]"
+car_evaluation.csv,6,180,base,None,f1,0.9884393063583815,"[array([[120,   1],
+       [  1,  51]])]"
+car_evaluation.csv,6,180,base,None,auc,0.9862523839796568,"[array([[120,   1],
+       [  1,  51]])]"
+car_evaluation.csv,6,180,wagging,None,acc,0.9884393063583815,"[array([[120,   1],
+       [  1,  51]])]"
+car_evaluation.csv,6,180,wagging,None,f1,0.9884393063583815,"[array([[120,   1],
+       [  1,  51]])]"
+car_evaluation.csv,6,180,wagging,None,auc,0.9862523839796568,"[array([[120,   1],
+       [  1,  51]])]"
+car_evaluation.csv,6,180,AdaBoost,None,acc,0.9826589595375722,"[array([[120,   1],
+       [  2,  50]])]"
+car_evaluation.csv,6,180,AdaBoost,None,f1,0.9826104608827171,"[array([[120,   1],
+       [  2,  50]])]"
+car_evaluation.csv,6,180,AdaBoost,None,auc,0.9766369993642722,"[array([[120,   1],
+       [  2,  50]])]"
+car_evaluation.csv,6,180,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",acc,0.9884393063583815,"[array([[120,   1],
+       [  1,  51]])]"
+car_evaluation.csv,6,180,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9884393063583815,"[array([[120,   1],
+       [  1,  51]])]"
+car_evaluation.csv,6,180,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,6,180,Incremental_Mixed_Bagging,"[[-1.0, 1.0]]",acc,0.9884393063583815,"[array([[120,   1],
+       [  1,  51]])]"
+car_evaluation.csv,6,180,Incremental_Mixed_Bagging,"[[-1.0, 1.0]]",f1,0.9942351862194523,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,6,180,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9807692307692308,"[array([[121,   0],
+       [  2,  50]])]"
+car_evaluation.csv,7,180,base,None,acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,180,base,None,f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,180,base,None,auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,180,wagging,None,acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,180,wagging,None,f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,180,wagging,None,auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,180,AdaBoost,None,acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,180,AdaBoost,None,f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,180,AdaBoost,None,auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,180,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,180,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,180,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,180,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,180,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,180,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,8,180,base,None,acc,0.9709302325581395,"[array([[120,   1],
+       [  4,  47]])]"
+car_evaluation.csv,8,180,base,None,f1,0.9706677597043046,"[array([[120,   1],
+       [  4,  47]])]"
+car_evaluation.csv,8,180,base,None,auc,0.9566520823205314,"[array([[120,   1],
+       [  4,  47]])]"
+car_evaluation.csv,8,180,wagging,None,acc,0.9825581395348837,"[array([[120,   1],
+       [  2,  49]])]"
+car_evaluation.csv,8,180,wagging,None,f1,0.9825076822927771,"[array([[120,   1],
+       [  2,  49]])]"
+car_evaluation.csv,8,180,wagging,None,auc,0.9762599254577865,"[array([[120,   1],
+       [  2,  49]])]"
+car_evaluation.csv,8,180,AdaBoost,None,acc,0.9709302325581395,"[array([[120,   1],
+       [  4,  47]])]"
+car_evaluation.csv,8,180,AdaBoost,None,f1,0.9706677597043046,"[array([[120,   1],
+       [  4,  47]])]"
+car_evaluation.csv,8,180,AdaBoost,None,auc,0.9566520823205314,"[array([[120,   1],
+       [  4,  47]])]"
+car_evaluation.csv,8,180,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",acc,0.9941860465116279,"[array([[120,   1],
+       [  0,  51]])]"
+car_evaluation.csv,8,180,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",f1,1.0,"[array([[121,   0],
+       [  0,  51]])]"
+car_evaluation.csv,8,180,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.9901960784313726,"[array([[121,   0],
+       [  1,  50]])]"
+car_evaluation.csv,8,180,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,1.0,"[array([[121,   0],
+       [  0,  51]])]"
+car_evaluation.csv,8,180,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",f1,1.0,"[array([[121,   0],
+       [  0,  51]])]"
+car_evaluation.csv,8,180,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",auc,0.9917355371900827,"[array([[119,   2],
+       [  0,  51]])]"
+car_evaluation.csv,9,180,base,None,acc,0.9825581395348837,"[array([[120,   1],
+       [  2,  49]])]"
+car_evaluation.csv,9,180,base,None,f1,0.9825076822927771,"[array([[120,   1],
+       [  2,  49]])]"
+car_evaluation.csv,9,180,base,None,auc,0.9762599254577865,"[array([[120,   1],
+       [  2,  49]])]"
+car_evaluation.csv,9,180,wagging,None,acc,0.9941860465116279,"[array([[120,   1],
+       [  0,  51]])]"
+car_evaluation.csv,9,180,wagging,None,f1,0.9942022074426474,"[array([[120,   1],
+       [  0,  51]])]"
+car_evaluation.csv,9,180,wagging,None,auc,0.9958677685950413,"[array([[120,   1],
+       [  0,  51]])]"
+car_evaluation.csv,9,180,AdaBoost,None,acc,0.9825581395348837,"[array([[120,   1],
+       [  2,  49]])]"
+car_evaluation.csv,9,180,AdaBoost,None,f1,0.9825076822927771,"[array([[120,   1],
+       [  2,  49]])]"
+car_evaluation.csv,9,180,AdaBoost,None,auc,0.9762599254577865,"[array([[120,   1],
+       [  2,  49]])]"
+car_evaluation.csv,9,180,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 3.0]",acc,1.0,"[array([[121,   0],
+       [  0,  51]])]"
+car_evaluation.csv,9,180,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",f1,0.9883034693099505,"[array([[121,   0],
+       [  2,  49]])]"
+car_evaluation.csv,9,180,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",auc,0.9901960784313726,"[array([[121,   0],
+       [  1,  50]])]"
+car_evaluation.csv,9,180,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,1.0,"[array([[121,   0],
+       [  0,  51]])]"
+car_evaluation.csv,9,180,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,1.0,"[array([[121,   0],
+       [  0,  51]])]"
+car_evaluation.csv,9,180,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,1.0,"[array([[121,   0],
+       [  0,  51]])]"
+car_evaluation.csv,0,190,base,None,acc,0.9942196531791907,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,0,190,base,None,f1,0.9942351862194523,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,0,190,base,None,auc,0.9958677685950413,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,0,190,wagging,None,acc,0.9942196531791907,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,0,190,wagging,None,f1,0.9942351862194523,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,0,190,wagging,None,auc,0.9958677685950413,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,0,190,AdaBoost,None,acc,0.9942196531791907,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,0,190,AdaBoost,None,f1,0.9942351862194523,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,0,190,AdaBoost,None,auc,0.9958677685950413,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,0,190,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",acc,0.9942196531791907,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,0,190,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",f1,0.9942351862194523,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,0,190,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",auc,0.9958677685950413,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,0,190,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9884393063583815,"[array([[119,   2],
+       [  0,  52]])]"
+car_evaluation.csv,0,190,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.988500199949104,"[array([[119,   2],
+       [  0,  52]])]"
+car_evaluation.csv,0,190,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",auc,0.9958677685950413,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,1,190,base,None,acc,0.9942196531791907,"[array([[121,   0],
+       [  1,  51]])]"
+car_evaluation.csv,1,190,base,None,f1,0.9942034869609057,"[array([[121,   0],
+       [  1,  51]])]"
+car_evaluation.csv,1,190,base,None,auc,0.9903846153846154,"[array([[121,   0],
+       [  1,  51]])]"
+car_evaluation.csv,1,190,wagging,None,acc,0.9942196531791907,"[array([[121,   0],
+       [  1,  51]])]"
+car_evaluation.csv,1,190,wagging,None,f1,0.9942034869609057,"[array([[121,   0],
+       [  1,  51]])]"
+car_evaluation.csv,1,190,wagging,None,auc,0.9903846153846154,"[array([[121,   0],
+       [  1,  51]])]"
+car_evaluation.csv,1,190,AdaBoost,None,acc,0.9942196531791907,"[array([[121,   0],
+       [  1,  51]])]"
+car_evaluation.csv,1,190,AdaBoost,None,f1,0.9942034869609057,"[array([[121,   0],
+       [  1,  51]])]"
+car_evaluation.csv,1,190,AdaBoost,None,auc,0.9903846153846154,"[array([[121,   0],
+       [  1,  51]])]"
+car_evaluation.csv,1,190,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9942196531791907,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,1,190,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.9942034869609057,"[array([[121,   0],
+       [  1,  51]])]"
+car_evaluation.csv,1,190,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9917355371900827,"[array([[119,   2],
+       [  0,  52]])]"
+car_evaluation.csv,1,190,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",acc,0.9942196531791907,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,1,190,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",f1,0.9942351862194523,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,1,190,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",auc,0.9958677685950413,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,2,190,base,None,acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,2,190,base,None,f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,2,190,base,None,auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,2,190,wagging,None,acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,2,190,wagging,None,f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,2,190,wagging,None,auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,2,190,AdaBoost,None,acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,2,190,AdaBoost,None,f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,2,190,AdaBoost,None,auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,2,190,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9884393063583815,"[array([[120,   1],
+       [  1,  51]])]"
+car_evaluation.csv,2,190,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,2,190,Grouped_Mixed_Bagging,"[[0.1, 0.8, 0.1], 3.0]",auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,2,190,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,2,190,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,2,190,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,3,190,base,None,acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,3,190,base,None,f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,3,190,base,None,auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,3,190,wagging,None,acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,3,190,wagging,None,f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,3,190,wagging,None,auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,3,190,AdaBoost,None,acc,0.9884393063583815,"[array([[121,   0],
+       [  2,  50]])]"
+car_evaluation.csv,3,190,AdaBoost,None,f1,0.988373346116614,"[array([[121,   0],
+       [  2,  50]])]"
+car_evaluation.csv,3,190,AdaBoost,None,auc,0.9807692307692308,"[array([[121,   0],
+       [  2,  50]])]"
+car_evaluation.csv,3,190,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,3,190,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,3,190,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,3,190,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,3,190,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9942034869609057,"[array([[121,   0],
+       [  1,  51]])]"
+car_evaluation.csv,3,190,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,4,190,base,None,acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,4,190,base,None,f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,4,190,base,None,auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,4,190,wagging,None,acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,4,190,wagging,None,f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,4,190,wagging,None,auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,4,190,AdaBoost,None,acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,4,190,AdaBoost,None,f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,4,190,AdaBoost,None,auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,4,190,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,4,190,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,4,190,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,4,190,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,4,190,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,4,190,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,5,190,base,None,acc,0.9942196531791907,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,5,190,base,None,f1,0.9942351862194523,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,5,190,base,None,auc,0.9958677685950413,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,5,190,wagging,None,acc,0.9942196531791907,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,5,190,wagging,None,f1,0.9942351862194523,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,5,190,wagging,None,auc,0.9958677685950413,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,5,190,AdaBoost,None,acc,0.9942196531791907,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,5,190,AdaBoost,None,f1,0.9942351862194523,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,5,190,AdaBoost,None,auc,0.9958677685950413,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,5,190,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",acc,0.9942196531791907,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,5,190,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",f1,0.9942351862194523,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,5,190,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",auc,0.9958677685950413,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,5,190,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,5,190,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9942351862194523,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,5,190,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9958677685950413,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,6,190,base,None,acc,0.9884393063583815,"[array([[120,   1],
+       [  1,  51]])]"
+car_evaluation.csv,6,190,base,None,f1,0.9884393063583815,"[array([[120,   1],
+       [  1,  51]])]"
+car_evaluation.csv,6,190,base,None,auc,0.9862523839796568,"[array([[120,   1],
+       [  1,  51]])]"
+car_evaluation.csv,6,190,wagging,None,acc,0.9884393063583815,"[array([[120,   1],
+       [  1,  51]])]"
+car_evaluation.csv,6,190,wagging,None,f1,0.9884393063583815,"[array([[120,   1],
+       [  1,  51]])]"
+car_evaluation.csv,6,190,wagging,None,auc,0.9862523839796568,"[array([[120,   1],
+       [  1,  51]])]"
+car_evaluation.csv,6,190,AdaBoost,None,acc,0.9826589595375722,"[array([[120,   1],
+       [  2,  50]])]"
+car_evaluation.csv,6,190,AdaBoost,None,f1,0.9826104608827171,"[array([[120,   1],
+       [  2,  50]])]"
+car_evaluation.csv,6,190,AdaBoost,None,auc,0.9766369993642722,"[array([[120,   1],
+       [  2,  50]])]"
+car_evaluation.csv,6,190,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",acc,0.9884393063583815,"[array([[120,   1],
+       [  1,  51]])]"
+car_evaluation.csv,6,190,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9884393063583815,"[array([[120,   1],
+       [  1,  51]])]"
+car_evaluation.csv,6,190,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,6,190,Incremental_Mixed_Bagging,"[[-1.0, 1.0]]",acc,0.9884393063583815,"[array([[120,   1],
+       [  1,  51]])]"
+car_evaluation.csv,6,190,Incremental_Mixed_Bagging,"[[-1.0, 1.0]]",f1,0.9942351862194523,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,6,190,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9807692307692308,"[array([[121,   0],
+       [  2,  50]])]"
+car_evaluation.csv,7,190,base,None,acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,190,base,None,f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,190,base,None,auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,190,wagging,None,acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,190,wagging,None,f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,190,wagging,None,auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,190,AdaBoost,None,acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,190,AdaBoost,None,f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,190,AdaBoost,None,auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,190,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,190,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,190,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,190,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,190,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,190,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,8,190,base,None,acc,0.9709302325581395,"[array([[120,   1],
+       [  4,  47]])]"
+car_evaluation.csv,8,190,base,None,f1,0.9706677597043046,"[array([[120,   1],
+       [  4,  47]])]"
+car_evaluation.csv,8,190,base,None,auc,0.9566520823205314,"[array([[120,   1],
+       [  4,  47]])]"
+car_evaluation.csv,8,190,wagging,None,acc,0.9825581395348837,"[array([[120,   1],
+       [  2,  49]])]"
+car_evaluation.csv,8,190,wagging,None,f1,0.9825076822927771,"[array([[120,   1],
+       [  2,  49]])]"
+car_evaluation.csv,8,190,wagging,None,auc,0.9762599254577865,"[array([[120,   1],
+       [  2,  49]])]"
+car_evaluation.csv,8,190,AdaBoost,None,acc,0.9709302325581395,"[array([[120,   1],
+       [  4,  47]])]"
+car_evaluation.csv,8,190,AdaBoost,None,f1,0.9706677597043046,"[array([[120,   1],
+       [  4,  47]])]"
+car_evaluation.csv,8,190,AdaBoost,None,auc,0.9566520823205314,"[array([[120,   1],
+       [  4,  47]])]"
+car_evaluation.csv,8,190,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",acc,0.9941860465116279,"[array([[120,   1],
+       [  0,  51]])]"
+car_evaluation.csv,8,190,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",f1,1.0,"[array([[121,   0],
+       [  0,  51]])]"
+car_evaluation.csv,8,190,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.9901960784313726,"[array([[121,   0],
+       [  1,  50]])]"
+car_evaluation.csv,8,190,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,1.0,"[array([[121,   0],
+       [  0,  51]])]"
+car_evaluation.csv,8,190,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",f1,1.0,"[array([[121,   0],
+       [  0,  51]])]"
+car_evaluation.csv,8,190,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",auc,0.9917355371900827,"[array([[119,   2],
+       [  0,  51]])]"
+car_evaluation.csv,9,190,base,None,acc,0.9825581395348837,"[array([[120,   1],
+       [  2,  49]])]"
+car_evaluation.csv,9,190,base,None,f1,0.9825076822927771,"[array([[120,   1],
+       [  2,  49]])]"
+car_evaluation.csv,9,190,base,None,auc,0.9762599254577865,"[array([[120,   1],
+       [  2,  49]])]"
+car_evaluation.csv,9,190,wagging,None,acc,0.9941860465116279,"[array([[120,   1],
+       [  0,  51]])]"
+car_evaluation.csv,9,190,wagging,None,f1,0.9942022074426474,"[array([[120,   1],
+       [  0,  51]])]"
+car_evaluation.csv,9,190,wagging,None,auc,0.9958677685950413,"[array([[120,   1],
+       [  0,  51]])]"
+car_evaluation.csv,9,190,AdaBoost,None,acc,0.9825581395348837,"[array([[120,   1],
+       [  2,  49]])]"
+car_evaluation.csv,9,190,AdaBoost,None,f1,0.9825076822927771,"[array([[120,   1],
+       [  2,  49]])]"
+car_evaluation.csv,9,190,AdaBoost,None,auc,0.9762599254577865,"[array([[120,   1],
+       [  2,  49]])]"
+car_evaluation.csv,9,190,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 3.0]",acc,1.0,"[array([[121,   0],
+       [  0,  51]])]"
+car_evaluation.csv,9,190,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",f1,0.9883034693099505,"[array([[121,   0],
+       [  2,  49]])]"
+car_evaluation.csv,9,190,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",auc,0.9901960784313726,"[array([[121,   0],
+       [  1,  50]])]"
+car_evaluation.csv,9,190,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,1.0,"[array([[121,   0],
+       [  0,  51]])]"
+car_evaluation.csv,9,190,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,1.0,"[array([[121,   0],
+       [  0,  51]])]"
+car_evaluation.csv,9,190,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,1.0,"[array([[121,   0],
+       [  0,  51]])]"
+car_evaluation.csv,0,200,base,None,acc,0.9942196531791907,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,0,200,base,None,f1,0.9942351862194523,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,0,200,base,None,auc,0.9958677685950413,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,0,200,wagging,None,acc,0.9942196531791907,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,0,200,wagging,None,f1,0.9942351862194523,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,0,200,wagging,None,auc,0.9958677685950413,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,0,200,AdaBoost,None,acc,0.9942196531791907,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,0,200,AdaBoost,None,f1,0.9942351862194523,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,0,200,AdaBoost,None,auc,0.9958677685950413,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,0,200,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",acc,0.9942196531791907,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,0,200,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",f1,0.9942351862194523,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,0,200,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",auc,0.9958677685950413,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,0,200,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9884393063583815,"[array([[119,   2],
+       [  0,  52]])]"
+car_evaluation.csv,0,200,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.988500199949104,"[array([[119,   2],
+       [  0,  52]])]"
+car_evaluation.csv,0,200,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",auc,0.9958677685950413,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,1,200,base,None,acc,0.9942196531791907,"[array([[121,   0],
+       [  1,  51]])]"
+car_evaluation.csv,1,200,base,None,f1,0.9942034869609057,"[array([[121,   0],
+       [  1,  51]])]"
+car_evaluation.csv,1,200,base,None,auc,0.9903846153846154,"[array([[121,   0],
+       [  1,  51]])]"
+car_evaluation.csv,1,200,wagging,None,acc,0.9942196531791907,"[array([[121,   0],
+       [  1,  51]])]"
+car_evaluation.csv,1,200,wagging,None,f1,0.9942034869609057,"[array([[121,   0],
+       [  1,  51]])]"
+car_evaluation.csv,1,200,wagging,None,auc,0.9903846153846154,"[array([[121,   0],
+       [  1,  51]])]"
+car_evaluation.csv,1,200,AdaBoost,None,acc,0.9942196531791907,"[array([[121,   0],
+       [  1,  51]])]"
+car_evaluation.csv,1,200,AdaBoost,None,f1,0.9942034869609057,"[array([[121,   0],
+       [  1,  51]])]"
+car_evaluation.csv,1,200,AdaBoost,None,auc,0.9903846153846154,"[array([[121,   0],
+       [  1,  51]])]"
+car_evaluation.csv,1,200,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9942196531791907,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,1,200,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.9942034869609057,"[array([[121,   0],
+       [  1,  51]])]"
+car_evaluation.csv,1,200,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9917355371900827,"[array([[119,   2],
+       [  0,  52]])]"
+car_evaluation.csv,1,200,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",acc,0.9942196531791907,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,1,200,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",f1,0.9942351862194523,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,1,200,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",auc,0.9958677685950413,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,2,200,base,None,acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,2,200,base,None,f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,2,200,base,None,auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,2,200,wagging,None,acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,2,200,wagging,None,f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,2,200,wagging,None,auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,2,200,AdaBoost,None,acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,2,200,AdaBoost,None,f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,2,200,AdaBoost,None,auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,2,200,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9884393063583815,"[array([[120,   1],
+       [  1,  51]])]"
+car_evaluation.csv,2,200,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,2,200,Grouped_Mixed_Bagging,"[[0.1, 0.8, 0.1], 3.0]",auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,2,200,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,2,200,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,2,200,Incremental_Mixed_Bagging,"[[0.0, 2.0]]",auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,3,200,base,None,acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,3,200,base,None,f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,3,200,base,None,auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,3,200,wagging,None,acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,3,200,wagging,None,f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,3,200,wagging,None,auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,3,200,AdaBoost,None,acc,0.9884393063583815,"[array([[121,   0],
+       [  2,  50]])]"
+car_evaluation.csv,3,200,AdaBoost,None,f1,0.988373346116614,"[array([[121,   0],
+       [  2,  50]])]"
+car_evaluation.csv,3,200,AdaBoost,None,auc,0.9807692307692308,"[array([[121,   0],
+       [  2,  50]])]"
+car_evaluation.csv,3,200,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,3,200,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,3,200,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,3,200,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,3,200,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9942034869609057,"[array([[121,   0],
+       [  1,  51]])]"
+car_evaluation.csv,3,200,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,4,200,base,None,acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,4,200,base,None,f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,4,200,base,None,auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,4,200,wagging,None,acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,4,200,wagging,None,f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,4,200,wagging,None,auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,4,200,AdaBoost,None,acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,4,200,AdaBoost,None,f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,4,200,AdaBoost,None,auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,4,200,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,4,200,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,4,200,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,4,200,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,4,200,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,4,200,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,5,200,base,None,acc,0.9942196531791907,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,5,200,base,None,f1,0.9942351862194523,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,5,200,base,None,auc,0.9958677685950413,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,5,200,wagging,None,acc,0.9942196531791907,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,5,200,wagging,None,f1,0.9942351862194523,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,5,200,wagging,None,auc,0.9958677685950413,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,5,200,AdaBoost,None,acc,0.9942196531791907,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,5,200,AdaBoost,None,f1,0.9942351862194523,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,5,200,AdaBoost,None,auc,0.9958677685950413,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,5,200,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",acc,0.9942196531791907,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,5,200,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",f1,0.9942351862194523,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,5,200,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",auc,0.9958677685950413,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,5,200,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,5,200,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9942351862194523,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,5,200,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9958677685950413,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,6,200,base,None,acc,0.9884393063583815,"[array([[120,   1],
+       [  1,  51]])]"
+car_evaluation.csv,6,200,base,None,f1,0.9884393063583815,"[array([[120,   1],
+       [  1,  51]])]"
+car_evaluation.csv,6,200,base,None,auc,0.9862523839796568,"[array([[120,   1],
+       [  1,  51]])]"
+car_evaluation.csv,6,200,wagging,None,acc,0.9884393063583815,"[array([[120,   1],
+       [  1,  51]])]"
+car_evaluation.csv,6,200,wagging,None,f1,0.9884393063583815,"[array([[120,   1],
+       [  1,  51]])]"
+car_evaluation.csv,6,200,wagging,None,auc,0.9862523839796568,"[array([[120,   1],
+       [  1,  51]])]"
+car_evaluation.csv,6,200,AdaBoost,None,acc,0.9826589595375722,"[array([[120,   1],
+       [  2,  50]])]"
+car_evaluation.csv,6,200,AdaBoost,None,f1,0.9826104608827171,"[array([[120,   1],
+       [  2,  50]])]"
+car_evaluation.csv,6,200,AdaBoost,None,auc,0.9766369993642722,"[array([[120,   1],
+       [  2,  50]])]"
+car_evaluation.csv,6,200,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",acc,0.9884393063583815,"[array([[120,   1],
+       [  1,  51]])]"
+car_evaluation.csv,6,200,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9884393063583815,"[array([[120,   1],
+       [  1,  51]])]"
+car_evaluation.csv,6,200,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,6,200,Incremental_Mixed_Bagging,"[[-1.0, 1.0]]",acc,0.9884393063583815,"[array([[120,   1],
+       [  1,  51]])]"
+car_evaluation.csv,6,200,Incremental_Mixed_Bagging,"[[-1.0, 1.0]]",f1,0.9942351862194523,"[array([[120,   1],
+       [  0,  52]])]"
+car_evaluation.csv,6,200,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9807692307692308,"[array([[121,   0],
+       [  2,  50]])]"
+car_evaluation.csv,7,200,base,None,acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,200,base,None,f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,200,base,None,auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,200,wagging,None,acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,200,wagging,None,f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,200,wagging,None,auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,200,AdaBoost,None,acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,200,AdaBoost,None,f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,200,AdaBoost,None,auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,200,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,200,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,200,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,200,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,200,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,7,200,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,1.0,"[array([[121,   0],
+       [  0,  52]])]"
+car_evaluation.csv,8,200,base,None,acc,0.9709302325581395,"[array([[120,   1],
+       [  4,  47]])]"
+car_evaluation.csv,8,200,base,None,f1,0.9706677597043046,"[array([[120,   1],
+       [  4,  47]])]"
+car_evaluation.csv,8,200,base,None,auc,0.9566520823205314,"[array([[120,   1],
+       [  4,  47]])]"
+car_evaluation.csv,8,200,wagging,None,acc,0.9825581395348837,"[array([[120,   1],
+       [  2,  49]])]"
+car_evaluation.csv,8,200,wagging,None,f1,0.9825076822927771,"[array([[120,   1],
+       [  2,  49]])]"
+car_evaluation.csv,8,200,wagging,None,auc,0.9762599254577865,"[array([[120,   1],
+       [  2,  49]])]"
+car_evaluation.csv,8,200,AdaBoost,None,acc,0.9709302325581395,"[array([[120,   1],
+       [  4,  47]])]"
+car_evaluation.csv,8,200,AdaBoost,None,f1,0.9706677597043046,"[array([[120,   1],
+       [  4,  47]])]"
+car_evaluation.csv,8,200,AdaBoost,None,auc,0.9566520823205314,"[array([[120,   1],
+       [  4,  47]])]"
+car_evaluation.csv,8,200,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",acc,0.9941860465116279,"[array([[120,   1],
+       [  0,  51]])]"
+car_evaluation.csv,8,200,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",f1,1.0,"[array([[121,   0],
+       [  0,  51]])]"
+car_evaluation.csv,8,200,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.9901960784313726,"[array([[121,   0],
+       [  1,  50]])]"
+car_evaluation.csv,8,200,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,1.0,"[array([[121,   0],
+       [  0,  51]])]"
+car_evaluation.csv,8,200,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",f1,1.0,"[array([[121,   0],
+       [  0,  51]])]"
+car_evaluation.csv,8,200,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",auc,0.9917355371900827,"[array([[119,   2],
+       [  0,  51]])]"
+car_evaluation.csv,9,200,base,None,acc,0.9825581395348837,"[array([[120,   1],
+       [  2,  49]])]"
+car_evaluation.csv,9,200,base,None,f1,0.9825076822927771,"[array([[120,   1],
+       [  2,  49]])]"
+car_evaluation.csv,9,200,base,None,auc,0.9762599254577865,"[array([[120,   1],
+       [  2,  49]])]"
+car_evaluation.csv,9,200,wagging,None,acc,0.9941860465116279,"[array([[120,   1],
+       [  0,  51]])]"
+car_evaluation.csv,9,200,wagging,None,f1,0.9942022074426474,"[array([[120,   1],
+       [  0,  51]])]"
+car_evaluation.csv,9,200,wagging,None,auc,0.9958677685950413,"[array([[120,   1],
+       [  0,  51]])]"
+car_evaluation.csv,9,200,AdaBoost,None,acc,0.9825581395348837,"[array([[120,   1],
+       [  2,  49]])]"
+car_evaluation.csv,9,200,AdaBoost,None,f1,0.9825076822927771,"[array([[120,   1],
+       [  2,  49]])]"
+car_evaluation.csv,9,200,AdaBoost,None,auc,0.9762599254577865,"[array([[120,   1],
+       [  2,  49]])]"
+car_evaluation.csv,9,200,Grouped_Mixed_Bagging,"[[0.2, 0.7, 0.1], 3.0]",acc,1.0,"[array([[121,   0],
+       [  0,  51]])]"
+car_evaluation.csv,9,200,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",f1,0.9883034693099505,"[array([[121,   0],
+       [  2,  49]])]"
+car_evaluation.csv,9,200,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",auc,0.9901960784313726,"[array([[121,   0],
+       [  1,  50]])]"
+car_evaluation.csv,9,200,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,1.0,"[array([[121,   0],
+       [  0,  51]])]"
+car_evaluation.csv,9,200,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,1.0,"[array([[121,   0],
+       [  0,  51]])]"
+car_evaluation.csv,9,200,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,1.0,"[array([[121,   0],
+       [  0,  51]])]"

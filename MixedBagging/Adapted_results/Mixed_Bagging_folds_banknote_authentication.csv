@@ -4709,3 +4709,1593 @@ banknote_authentication.csv,6,150,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,1
        [ 0, 61]])]"
 banknote_authentication.csv,6,150,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,1.0,"[array([[76,  0],
        [ 0, 61]])]"
+banknote_authentication.csv,7,150,base,None,acc,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,150,base,None,f1,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,150,base,None,auc,0.9704486626402071,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,150,wagging,None,acc,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,150,wagging,None,f1,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,150,wagging,None,auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,150,AdaBoost,None,acc,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,150,AdaBoost,None,f1,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,150,AdaBoost,None,auc,0.9704486626402071,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,150,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",acc,0.9781021897810219,"[array([[74,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,150,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,7,150,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,150,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",acc,0.9927007299270073,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,150,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",f1,0.9781186959643561,"[array([[74,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,150,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,8,150,base,None,acc,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,8,150,base,None,f1,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,8,150,base,None,auc,0.9704486626402071,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,8,150,wagging,None,acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,150,wagging,None,f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,150,wagging,None,auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,150,AdaBoost,None,acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,150,AdaBoost,None,f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,150,AdaBoost,None,auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,150,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,150,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,150,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,150,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,150,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,150,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,9,150,base,None,acc,0.9635036496350365,"[array([[74,  2],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,150,base,None,f1,0.9634721073887318,"[array([[74,  2],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,150,base,None,auc,0.9622519413287316,"[array([[74,  2],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,150,wagging,None,acc,0.9708029197080292,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,150,wagging,None,f1,0.9707492021360634,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,150,wagging,None,auc,0.9688308886971527,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,150,AdaBoost,None,acc,0.9708029197080292,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,150,AdaBoost,None,f1,0.9707492021360634,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,150,AdaBoost,None,auc,0.9688308886971527,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,150,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",acc,0.9781021897810219,"[array([[75,  1],
+       [ 2, 59]])]"
+banknote_authentication.csv,9,150,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",f1,0.9780832644332389,"[array([[75,  1],
+       [ 2, 59]])]"
+banknote_authentication.csv,9,150,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",auc,0.9770276100086281,"[array([[75,  1],
+       [ 2, 59]])]"
+banknote_authentication.csv,9,150,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9781021897810219,"[array([[75,  1],
+       [ 2, 59]])]"
+banknote_authentication.csv,9,150,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,9,150,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,0,160,base,None,acc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,160,base,None,f1,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,160,base,None,auc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,160,wagging,None,acc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,160,wagging,None,f1,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,160,wagging,None,auc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,160,AdaBoost,None,acc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,160,AdaBoost,None,f1,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,160,AdaBoost,None,auc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,160,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",acc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,160,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",f1,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,160,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",auc,0.9836065573770492,"[array([[77,  0],
+       [ 2, 59]])]"
+banknote_authentication.csv,0,160,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,160,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,160,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,160,base,None,acc,0.9855072463768116,"[array([[75,  2],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,160,base,None,f1,0.9855287763588493,"[array([[75,  2],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,160,base,None,auc,0.987012987012987,"[array([[75,  2],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,160,wagging,None,acc,0.9782608695652174,"[array([[75,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,1,160,wagging,None,f1,0.9782781971042217,"[array([[75,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,1,160,wagging,None,auc,0.9788162657015116,"[array([[75,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,1,160,AdaBoost,None,acc,0.9855072463768116,"[array([[75,  2],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,160,AdaBoost,None,f1,0.9855287763588493,"[array([[75,  2],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,160,AdaBoost,None,auc,0.987012987012987,"[array([[75,  2],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,160,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 3.0]",acc,0.9710144927536232,"[array([[75,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,1,160,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 3.0]",f1,0.9782781971042217,"[array([[75,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,1,160,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 3.0]",auc,0.985309772195018,"[array([[76,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,1,160,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",acc,0.9710144927536232,"[array([[75,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,1,160,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",f1,0.9710144927536232,"[array([[75,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,1,160,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",auc,0.9706195443900362,"[array([[75,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,2,160,base,None,acc,0.9927007299270073,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,160,base,None,f1,0.9926944214777463,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,160,base,None,auc,0.9918032786885246,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,160,wagging,None,acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,2,160,wagging,None,f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,2,160,wagging,None,auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,2,160,AdaBoost,None,acc,0.9927007299270073,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,160,AdaBoost,None,f1,0.9926944214777463,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,160,AdaBoost,None,auc,0.9918032786885246,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,160,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,2,160,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",f1,0.9926944214777463,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,160,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",auc,0.9918032786885246,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,160,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,2,160,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,2,160,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,160,base,None,acc,0.9927007299270073,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,3,160,base,None,f1,0.9926944214777463,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,3,160,base,None,auc,0.9918032786885246,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,3,160,wagging,None,acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,160,wagging,None,f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,160,wagging,None,auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,160,AdaBoost,None,acc,0.9927007299270073,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,3,160,AdaBoost,None,f1,0.9926944214777463,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,3,160,AdaBoost,None,auc,0.9918032786885246,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,3,160,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,160,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,160,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,160,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,160,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,160,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,160,base,None,acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,160,base,None,f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,160,base,None,auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,160,wagging,None,acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,160,wagging,None,f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,160,wagging,None,auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,160,AdaBoost,None,acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,160,AdaBoost,None,f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,160,AdaBoost,None,auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,160,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 1.0]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,160,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 1.0]",f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,160,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,160,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,160,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,160,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,5,160,base,None,acc,0.9781021897810219,"[array([[74,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,160,base,None,f1,0.9781186959643561,"[array([[74,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,160,base,None,auc,0.9786453839516825,"[array([[74,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,160,wagging,None,acc,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,160,wagging,None,f1,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,160,wagging,None,auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,160,AdaBoost,None,acc,0.9708029197080292,"[array([[73,  3],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,160,AdaBoost,None,f1,0.970843732831018,"[array([[73,  3],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,160,AdaBoost,None,auc,0.9720664365832614,"[array([[73,  3],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,160,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",acc,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,160,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",f1,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,160,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,160,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",acc,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,160,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",f1,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,160,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,160,base,None,acc,0.9927007299270073,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,160,base,None,f1,0.9926944214777463,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,160,base,None,auc,0.9918032786885246,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,160,wagging,None,acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,160,wagging,None,f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,160,wagging,None,auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,160,AdaBoost,None,acc,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,160,AdaBoost,None,f1,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,160,AdaBoost,None,auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,160,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,160,Grouped_Mixed_Bagging,"[[0.0, 1.0, 0.0], 2.0]",f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,160,Grouped_Mixed_Bagging,"[[0.0, 1.0, 0.0], 2.0]",auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,160,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,160,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,160,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,7,160,base,None,acc,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,160,base,None,f1,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,160,base,None,auc,0.9704486626402071,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,160,wagging,None,acc,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,160,wagging,None,f1,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,160,wagging,None,auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,160,AdaBoost,None,acc,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,160,AdaBoost,None,f1,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,160,AdaBoost,None,auc,0.9704486626402071,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,160,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",acc,0.9781021897810219,"[array([[74,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,160,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,7,160,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,160,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",acc,0.9927007299270073,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,160,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",f1,0.9781186959643561,"[array([[74,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,160,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,8,160,base,None,acc,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,8,160,base,None,f1,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,8,160,base,None,auc,0.9704486626402071,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,8,160,wagging,None,acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,160,wagging,None,f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,160,wagging,None,auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,160,AdaBoost,None,acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,160,AdaBoost,None,f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,160,AdaBoost,None,auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,160,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,160,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,160,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,160,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,160,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,160,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,9,160,base,None,acc,0.9635036496350365,"[array([[74,  2],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,160,base,None,f1,0.9634721073887318,"[array([[74,  2],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,160,base,None,auc,0.9622519413287316,"[array([[74,  2],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,160,wagging,None,acc,0.9708029197080292,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,160,wagging,None,f1,0.9707492021360634,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,160,wagging,None,auc,0.9688308886971527,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,160,AdaBoost,None,acc,0.9708029197080292,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,160,AdaBoost,None,f1,0.9707492021360634,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,160,AdaBoost,None,auc,0.9688308886971527,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,160,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",acc,0.9781021897810219,"[array([[75,  1],
+       [ 2, 59]])]"
+banknote_authentication.csv,9,160,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",f1,0.9780832644332389,"[array([[75,  1],
+       [ 2, 59]])]"
+banknote_authentication.csv,9,160,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",auc,0.9770276100086281,"[array([[75,  1],
+       [ 2, 59]])]"
+banknote_authentication.csv,9,160,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9781021897810219,"[array([[75,  1],
+       [ 2, 59]])]"
+banknote_authentication.csv,9,160,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,9,160,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,0,170,base,None,acc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,170,base,None,f1,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,170,base,None,auc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,170,wagging,None,acc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,170,wagging,None,f1,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,170,wagging,None,auc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,170,AdaBoost,None,acc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,170,AdaBoost,None,f1,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,170,AdaBoost,None,auc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,170,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",acc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,170,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",f1,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,170,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",auc,0.9836065573770492,"[array([[77,  0],
+       [ 2, 59]])]"
+banknote_authentication.csv,0,170,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,170,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,170,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,170,base,None,acc,0.9855072463768116,"[array([[75,  2],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,170,base,None,f1,0.9855287763588493,"[array([[75,  2],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,170,base,None,auc,0.987012987012987,"[array([[75,  2],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,170,wagging,None,acc,0.9782608695652174,"[array([[75,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,1,170,wagging,None,f1,0.9782781971042217,"[array([[75,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,1,170,wagging,None,auc,0.9788162657015116,"[array([[75,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,1,170,AdaBoost,None,acc,0.9855072463768116,"[array([[75,  2],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,170,AdaBoost,None,f1,0.9855287763588493,"[array([[75,  2],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,170,AdaBoost,None,auc,0.987012987012987,"[array([[75,  2],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,170,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 3.0]",acc,0.9710144927536232,"[array([[75,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,1,170,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 3.0]",f1,0.9782781971042217,"[array([[75,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,1,170,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 3.0]",auc,0.985309772195018,"[array([[76,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,1,170,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",acc,0.9710144927536232,"[array([[75,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,1,170,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",f1,0.9710144927536232,"[array([[75,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,1,170,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",auc,0.9706195443900362,"[array([[75,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,2,170,base,None,acc,0.9927007299270073,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,170,base,None,f1,0.9926944214777463,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,170,base,None,auc,0.9918032786885246,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,170,wagging,None,acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,2,170,wagging,None,f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,2,170,wagging,None,auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,2,170,AdaBoost,None,acc,0.9927007299270073,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,170,AdaBoost,None,f1,0.9926944214777463,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,170,AdaBoost,None,auc,0.9918032786885246,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,170,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,2,170,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",f1,0.9926944214777463,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,170,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",auc,0.9918032786885246,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,170,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,2,170,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,2,170,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,170,base,None,acc,0.9927007299270073,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,3,170,base,None,f1,0.9926944214777463,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,3,170,base,None,auc,0.9918032786885246,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,3,170,wagging,None,acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,170,wagging,None,f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,170,wagging,None,auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,170,AdaBoost,None,acc,0.9927007299270073,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,3,170,AdaBoost,None,f1,0.9926944214777463,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,3,170,AdaBoost,None,auc,0.9918032786885246,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,3,170,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,170,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,170,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,170,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,170,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,170,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,170,base,None,acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,170,base,None,f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,170,base,None,auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,170,wagging,None,acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,170,wagging,None,f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,170,wagging,None,auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,170,AdaBoost,None,acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,170,AdaBoost,None,f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,170,AdaBoost,None,auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,170,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 1.0]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,170,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 1.0]",f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,170,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,170,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,170,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,170,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,5,170,base,None,acc,0.9781021897810219,"[array([[74,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,170,base,None,f1,0.9781186959643561,"[array([[74,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,170,base,None,auc,0.9786453839516825,"[array([[74,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,170,wagging,None,acc,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,170,wagging,None,f1,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,170,wagging,None,auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,170,AdaBoost,None,acc,0.9708029197080292,"[array([[73,  3],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,170,AdaBoost,None,f1,0.970843732831018,"[array([[73,  3],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,170,AdaBoost,None,auc,0.9720664365832614,"[array([[73,  3],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,170,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",acc,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,170,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",f1,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,170,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,170,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",acc,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,170,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",f1,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,170,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,170,base,None,acc,0.9927007299270073,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,170,base,None,f1,0.9926944214777463,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,170,base,None,auc,0.9918032786885246,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,170,wagging,None,acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,170,wagging,None,f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,170,wagging,None,auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,170,AdaBoost,None,acc,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,170,AdaBoost,None,f1,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,170,AdaBoost,None,auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,170,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,170,Grouped_Mixed_Bagging,"[[0.0, 1.0, 0.0], 2.0]",f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,170,Grouped_Mixed_Bagging,"[[0.0, 1.0, 0.0], 2.0]",auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,170,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,170,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,170,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,7,170,base,None,acc,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,170,base,None,f1,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,170,base,None,auc,0.9704486626402071,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,170,wagging,None,acc,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,170,wagging,None,f1,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,170,wagging,None,auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,170,AdaBoost,None,acc,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,170,AdaBoost,None,f1,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,170,AdaBoost,None,auc,0.9704486626402071,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,170,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",acc,0.9781021897810219,"[array([[74,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,170,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,7,170,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,170,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",acc,0.9927007299270073,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,170,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",f1,0.9781186959643561,"[array([[74,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,170,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,8,170,base,None,acc,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,8,170,base,None,f1,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,8,170,base,None,auc,0.9704486626402071,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,8,170,wagging,None,acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,170,wagging,None,f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,170,wagging,None,auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,170,AdaBoost,None,acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,170,AdaBoost,None,f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,170,AdaBoost,None,auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,170,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,170,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,170,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,170,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,170,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,170,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,9,170,base,None,acc,0.9635036496350365,"[array([[74,  2],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,170,base,None,f1,0.9634721073887318,"[array([[74,  2],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,170,base,None,auc,0.9622519413287316,"[array([[74,  2],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,170,wagging,None,acc,0.9708029197080292,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,170,wagging,None,f1,0.9707492021360634,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,170,wagging,None,auc,0.9688308886971527,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,170,AdaBoost,None,acc,0.9708029197080292,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,170,AdaBoost,None,f1,0.9707492021360634,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,170,AdaBoost,None,auc,0.9688308886971527,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,170,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",acc,0.9781021897810219,"[array([[75,  1],
+       [ 2, 59]])]"
+banknote_authentication.csv,9,170,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",f1,0.9780832644332389,"[array([[75,  1],
+       [ 2, 59]])]"
+banknote_authentication.csv,9,170,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",auc,0.9770276100086281,"[array([[75,  1],
+       [ 2, 59]])]"
+banknote_authentication.csv,9,170,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9781021897810219,"[array([[75,  1],
+       [ 2, 59]])]"
+banknote_authentication.csv,9,170,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,9,170,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,0,180,base,None,acc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,180,base,None,f1,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,180,base,None,auc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,180,wagging,None,acc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,180,wagging,None,f1,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,180,wagging,None,auc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,180,AdaBoost,None,acc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,180,AdaBoost,None,f1,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,180,AdaBoost,None,auc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,180,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",acc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,180,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",f1,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,180,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",auc,0.9836065573770492,"[array([[77,  0],
+       [ 2, 59]])]"
+banknote_authentication.csv,0,180,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,180,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,180,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,180,base,None,acc,0.9855072463768116,"[array([[75,  2],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,180,base,None,f1,0.9855287763588493,"[array([[75,  2],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,180,base,None,auc,0.987012987012987,"[array([[75,  2],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,180,wagging,None,acc,0.9782608695652174,"[array([[75,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,1,180,wagging,None,f1,0.9782781971042217,"[array([[75,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,1,180,wagging,None,auc,0.9788162657015116,"[array([[75,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,1,180,AdaBoost,None,acc,0.9855072463768116,"[array([[75,  2],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,180,AdaBoost,None,f1,0.9855287763588493,"[array([[75,  2],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,180,AdaBoost,None,auc,0.987012987012987,"[array([[75,  2],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,180,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 3.0]",acc,0.9710144927536232,"[array([[75,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,1,180,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 3.0]",f1,0.9782781971042217,"[array([[75,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,1,180,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 3.0]",auc,0.985309772195018,"[array([[76,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,1,180,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",acc,0.9710144927536232,"[array([[75,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,1,180,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",f1,0.9710144927536232,"[array([[75,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,1,180,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",auc,0.9706195443900362,"[array([[75,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,2,180,base,None,acc,0.9927007299270073,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,180,base,None,f1,0.9926944214777463,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,180,base,None,auc,0.9918032786885246,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,180,wagging,None,acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,2,180,wagging,None,f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,2,180,wagging,None,auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,2,180,AdaBoost,None,acc,0.9927007299270073,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,180,AdaBoost,None,f1,0.9926944214777463,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,180,AdaBoost,None,auc,0.9918032786885246,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,180,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,2,180,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",f1,0.9926944214777463,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,180,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",auc,0.9918032786885246,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,180,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,2,180,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,2,180,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,180,base,None,acc,0.9927007299270073,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,3,180,base,None,f1,0.9926944214777463,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,3,180,base,None,auc,0.9918032786885246,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,3,180,wagging,None,acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,180,wagging,None,f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,180,wagging,None,auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,180,AdaBoost,None,acc,0.9927007299270073,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,3,180,AdaBoost,None,f1,0.9926944214777463,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,3,180,AdaBoost,None,auc,0.9918032786885246,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,3,180,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,180,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,180,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,180,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,180,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,180,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,180,base,None,acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,180,base,None,f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,180,base,None,auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,180,wagging,None,acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,180,wagging,None,f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,180,wagging,None,auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,180,AdaBoost,None,acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,180,AdaBoost,None,f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,180,AdaBoost,None,auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,180,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 1.0]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,180,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 1.0]",f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,180,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,180,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,180,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,180,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,5,180,base,None,acc,0.9781021897810219,"[array([[74,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,180,base,None,f1,0.9781186959643561,"[array([[74,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,180,base,None,auc,0.9786453839516825,"[array([[74,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,180,wagging,None,acc,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,180,wagging,None,f1,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,180,wagging,None,auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,180,AdaBoost,None,acc,0.9708029197080292,"[array([[73,  3],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,180,AdaBoost,None,f1,0.970843732831018,"[array([[73,  3],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,180,AdaBoost,None,auc,0.9720664365832614,"[array([[73,  3],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,180,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",acc,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,180,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",f1,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,180,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,180,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",acc,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,180,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",f1,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,180,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,180,base,None,acc,0.9927007299270073,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,180,base,None,f1,0.9926944214777463,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,180,base,None,auc,0.9918032786885246,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,180,wagging,None,acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,180,wagging,None,f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,180,wagging,None,auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,180,AdaBoost,None,acc,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,180,AdaBoost,None,f1,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,180,AdaBoost,None,auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,180,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,180,Grouped_Mixed_Bagging,"[[0.0, 1.0, 0.0], 2.0]",f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,180,Grouped_Mixed_Bagging,"[[0.0, 1.0, 0.0], 2.0]",auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,180,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,180,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,180,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,7,180,base,None,acc,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,180,base,None,f1,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,180,base,None,auc,0.9704486626402071,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,180,wagging,None,acc,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,180,wagging,None,f1,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,180,wagging,None,auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,180,AdaBoost,None,acc,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,180,AdaBoost,None,f1,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,180,AdaBoost,None,auc,0.9704486626402071,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,180,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",acc,0.9781021897810219,"[array([[74,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,180,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,7,180,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,180,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",acc,0.9927007299270073,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,180,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",f1,0.9781186959643561,"[array([[74,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,180,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,8,180,base,None,acc,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,8,180,base,None,f1,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,8,180,base,None,auc,0.9704486626402071,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,8,180,wagging,None,acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,180,wagging,None,f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,180,wagging,None,auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,180,AdaBoost,None,acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,180,AdaBoost,None,f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,180,AdaBoost,None,auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,180,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,180,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,180,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,180,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,180,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,180,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,9,180,base,None,acc,0.9635036496350365,"[array([[74,  2],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,180,base,None,f1,0.9634721073887318,"[array([[74,  2],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,180,base,None,auc,0.9622519413287316,"[array([[74,  2],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,180,wagging,None,acc,0.9708029197080292,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,180,wagging,None,f1,0.9707492021360634,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,180,wagging,None,auc,0.9688308886971527,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,180,AdaBoost,None,acc,0.9708029197080292,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,180,AdaBoost,None,f1,0.9707492021360634,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,180,AdaBoost,None,auc,0.9688308886971527,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,180,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",acc,0.9781021897810219,"[array([[75,  1],
+       [ 2, 59]])]"
+banknote_authentication.csv,9,180,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",f1,0.9780832644332389,"[array([[75,  1],
+       [ 2, 59]])]"
+banknote_authentication.csv,9,180,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",auc,0.9770276100086281,"[array([[75,  1],
+       [ 2, 59]])]"
+banknote_authentication.csv,9,180,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9781021897810219,"[array([[75,  1],
+       [ 2, 59]])]"
+banknote_authentication.csv,9,180,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,9,180,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,0,190,base,None,acc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,190,base,None,f1,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,190,base,None,auc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,190,wagging,None,acc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,190,wagging,None,f1,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,190,wagging,None,auc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,190,AdaBoost,None,acc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,190,AdaBoost,None,f1,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,190,AdaBoost,None,auc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,190,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",acc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,190,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",f1,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,190,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",auc,0.9836065573770492,"[array([[77,  0],
+       [ 2, 59]])]"
+banknote_authentication.csv,0,190,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,190,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,190,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,190,base,None,acc,0.9855072463768116,"[array([[75,  2],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,190,base,None,f1,0.9855287763588493,"[array([[75,  2],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,190,base,None,auc,0.987012987012987,"[array([[75,  2],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,190,wagging,None,acc,0.9782608695652174,"[array([[75,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,1,190,wagging,None,f1,0.9782781971042217,"[array([[75,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,1,190,wagging,None,auc,0.9788162657015116,"[array([[75,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,1,190,AdaBoost,None,acc,0.9855072463768116,"[array([[75,  2],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,190,AdaBoost,None,f1,0.9855287763588493,"[array([[75,  2],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,190,AdaBoost,None,auc,0.987012987012987,"[array([[75,  2],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,190,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 3.0]",acc,0.9710144927536232,"[array([[75,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,1,190,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 3.0]",f1,0.9782781971042217,"[array([[75,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,1,190,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 3.0]",auc,0.985309772195018,"[array([[76,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,1,190,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",acc,0.9710144927536232,"[array([[75,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,1,190,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",f1,0.9710144927536232,"[array([[75,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,1,190,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",auc,0.9706195443900362,"[array([[75,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,2,190,base,None,acc,0.9927007299270073,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,190,base,None,f1,0.9926944214777463,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,190,base,None,auc,0.9918032786885246,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,190,wagging,None,acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,2,190,wagging,None,f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,2,190,wagging,None,auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,2,190,AdaBoost,None,acc,0.9927007299270073,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,190,AdaBoost,None,f1,0.9926944214777463,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,190,AdaBoost,None,auc,0.9918032786885246,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,190,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,2,190,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",f1,0.9926944214777463,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,190,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",auc,0.9918032786885246,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,190,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,2,190,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,2,190,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,190,base,None,acc,0.9927007299270073,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,3,190,base,None,f1,0.9926944214777463,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,3,190,base,None,auc,0.9918032786885246,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,3,190,wagging,None,acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,190,wagging,None,f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,190,wagging,None,auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,190,AdaBoost,None,acc,0.9927007299270073,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,3,190,AdaBoost,None,f1,0.9926944214777463,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,3,190,AdaBoost,None,auc,0.9918032786885246,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,3,190,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,190,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,190,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,190,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,190,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,190,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,190,base,None,acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,190,base,None,f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,190,base,None,auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,190,wagging,None,acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,190,wagging,None,f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,190,wagging,None,auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,190,AdaBoost,None,acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,190,AdaBoost,None,f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,190,AdaBoost,None,auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,190,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 1.0]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,190,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 1.0]",f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,190,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,190,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,190,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,190,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,5,190,base,None,acc,0.9781021897810219,"[array([[74,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,190,base,None,f1,0.9781186959643561,"[array([[74,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,190,base,None,auc,0.9786453839516825,"[array([[74,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,190,wagging,None,acc,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,190,wagging,None,f1,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,190,wagging,None,auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,190,AdaBoost,None,acc,0.9708029197080292,"[array([[73,  3],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,190,AdaBoost,None,f1,0.970843732831018,"[array([[73,  3],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,190,AdaBoost,None,auc,0.9720664365832614,"[array([[73,  3],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,190,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",acc,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,190,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",f1,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,190,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,190,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",acc,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,190,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",f1,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,190,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,190,base,None,acc,0.9927007299270073,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,190,base,None,f1,0.9926944214777463,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,190,base,None,auc,0.9918032786885246,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,190,wagging,None,acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,190,wagging,None,f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,190,wagging,None,auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,190,AdaBoost,None,acc,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,190,AdaBoost,None,f1,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,190,AdaBoost,None,auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,190,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,190,Grouped_Mixed_Bagging,"[[0.0, 1.0, 0.0], 2.0]",f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,190,Grouped_Mixed_Bagging,"[[0.0, 1.0, 0.0], 2.0]",auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,190,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,190,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,190,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,7,190,base,None,acc,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,190,base,None,f1,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,190,base,None,auc,0.9704486626402071,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,190,wagging,None,acc,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,190,wagging,None,f1,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,190,wagging,None,auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,190,AdaBoost,None,acc,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,190,AdaBoost,None,f1,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,190,AdaBoost,None,auc,0.9704486626402071,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,190,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",acc,0.9781021897810219,"[array([[74,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,190,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,7,190,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,190,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",acc,0.9927007299270073,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,190,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",f1,0.9781186959643561,"[array([[74,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,190,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,8,190,base,None,acc,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,8,190,base,None,f1,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,8,190,base,None,auc,0.9704486626402071,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,8,190,wagging,None,acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,190,wagging,None,f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,190,wagging,None,auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,190,AdaBoost,None,acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,190,AdaBoost,None,f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,190,AdaBoost,None,auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,190,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,190,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,190,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,190,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,190,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,190,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,9,190,base,None,acc,0.9635036496350365,"[array([[74,  2],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,190,base,None,f1,0.9634721073887318,"[array([[74,  2],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,190,base,None,auc,0.9622519413287316,"[array([[74,  2],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,190,wagging,None,acc,0.9708029197080292,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,190,wagging,None,f1,0.9707492021360634,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,190,wagging,None,auc,0.9688308886971527,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,190,AdaBoost,None,acc,0.9708029197080292,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,190,AdaBoost,None,f1,0.9707492021360634,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,190,AdaBoost,None,auc,0.9688308886971527,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,190,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",acc,0.9781021897810219,"[array([[75,  1],
+       [ 2, 59]])]"
+banknote_authentication.csv,9,190,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",f1,0.9780832644332389,"[array([[75,  1],
+       [ 2, 59]])]"
+banknote_authentication.csv,9,190,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",auc,0.9770276100086281,"[array([[75,  1],
+       [ 2, 59]])]"
+banknote_authentication.csv,9,190,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9781021897810219,"[array([[75,  1],
+       [ 2, 59]])]"
+banknote_authentication.csv,9,190,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,9,190,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,0,200,base,None,acc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,200,base,None,f1,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,200,base,None,auc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,200,wagging,None,acc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,200,wagging,None,f1,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,200,wagging,None,auc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,200,AdaBoost,None,acc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,200,AdaBoost,None,f1,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,200,AdaBoost,None,auc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,200,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",acc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,200,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",f1,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,200,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",auc,0.9836065573770492,"[array([[77,  0],
+       [ 2, 59]])]"
+banknote_authentication.csv,0,200,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,200,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,0,200,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,1.0,"[array([[77,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,200,base,None,acc,0.9855072463768116,"[array([[75,  2],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,200,base,None,f1,0.9855287763588493,"[array([[75,  2],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,200,base,None,auc,0.987012987012987,"[array([[75,  2],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,200,wagging,None,acc,0.9782608695652174,"[array([[75,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,1,200,wagging,None,f1,0.9782781971042217,"[array([[75,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,1,200,wagging,None,auc,0.9788162657015116,"[array([[75,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,1,200,AdaBoost,None,acc,0.9855072463768116,"[array([[75,  2],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,200,AdaBoost,None,f1,0.9855287763588493,"[array([[75,  2],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,200,AdaBoost,None,auc,0.987012987012987,"[array([[75,  2],
+       [ 0, 61]])]"
+banknote_authentication.csv,1,200,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 3.0]",acc,0.9710144927536232,"[array([[75,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,1,200,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 3.0]",f1,0.9782781971042217,"[array([[75,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,1,200,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 3.0]",auc,0.985309772195018,"[array([[76,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,1,200,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",acc,0.9710144927536232,"[array([[75,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,1,200,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",f1,0.9710144927536232,"[array([[75,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,1,200,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",auc,0.9706195443900362,"[array([[75,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,2,200,base,None,acc,0.9927007299270073,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,200,base,None,f1,0.9926944214777463,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,200,base,None,auc,0.9918032786885246,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,200,wagging,None,acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,2,200,wagging,None,f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,2,200,wagging,None,auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,2,200,AdaBoost,None,acc,0.9927007299270073,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,200,AdaBoost,None,f1,0.9926944214777463,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,200,AdaBoost,None,auc,0.9918032786885246,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,200,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,2,200,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",f1,0.9926944214777463,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,200,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",auc,0.9918032786885246,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,2,200,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,2,200,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,2,200,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,200,base,None,acc,0.9927007299270073,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,3,200,base,None,f1,0.9926944214777463,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,3,200,base,None,auc,0.9918032786885246,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,3,200,wagging,None,acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,200,wagging,None,f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,200,wagging,None,auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,200,AdaBoost,None,acc,0.9927007299270073,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,3,200,AdaBoost,None,f1,0.9926944214777463,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,3,200,AdaBoost,None,auc,0.9918032786885246,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,3,200,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,200,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,200,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,200,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,200,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,3,200,Incremental_Mixed_Bagging,"[[-3.0, 2.0]]",auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,200,base,None,acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,200,base,None,f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,200,base,None,auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,200,wagging,None,acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,200,wagging,None,f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,200,wagging,None,auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,200,AdaBoost,None,acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,200,AdaBoost,None,f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,200,AdaBoost,None,auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,200,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 1.0]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,200,Grouped_Mixed_Bagging,"[[0.2, 0.8, 0.0], 1.0]",f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,200,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,200,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,200,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,4,200,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,5,200,base,None,acc,0.9781021897810219,"[array([[74,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,200,base,None,f1,0.9781186959643561,"[array([[74,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,200,base,None,auc,0.9786453839516825,"[array([[74,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,200,wagging,None,acc,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,200,wagging,None,f1,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,200,wagging,None,auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,200,AdaBoost,None,acc,0.9708029197080292,"[array([[73,  3],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,200,AdaBoost,None,f1,0.970843732831018,"[array([[73,  3],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,200,AdaBoost,None,auc,0.9720664365832614,"[array([[73,  3],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,200,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",acc,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,200,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",f1,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,200,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,200,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",acc,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,200,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",f1,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,5,200,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,200,base,None,acc,0.9927007299270073,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,200,base,None,f1,0.9926944214777463,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,200,base,None,auc,0.9918032786885246,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,200,wagging,None,acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,200,wagging,None,f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,200,wagging,None,auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,200,AdaBoost,None,acc,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,200,AdaBoost,None,f1,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,200,AdaBoost,None,auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,6,200,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,200,Grouped_Mixed_Bagging,"[[0.0, 1.0, 0.0], 2.0]",f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,200,Grouped_Mixed_Bagging,"[[0.0, 1.0, 0.0], 2.0]",auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,200,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,200,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,6,200,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,7,200,base,None,acc,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,200,base,None,f1,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,200,base,None,auc,0.9704486626402071,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,200,wagging,None,acc,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,200,wagging,None,f1,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,200,wagging,None,auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,200,AdaBoost,None,acc,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,200,AdaBoost,None,f1,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,200,AdaBoost,None,auc,0.9704486626402071,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,7,200,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",acc,0.9781021897810219,"[array([[74,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,200,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",f1,1.0,"[array([[76,  0],
+       [ 0, 61]])]"
+banknote_authentication.csv,7,200,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,200,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",acc,0.9927007299270073,"[array([[76,  0],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,200,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",f1,0.9781186959643561,"[array([[74,  2],
+       [ 1, 60]])]"
+banknote_authentication.csv,7,200,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,8,200,base,None,acc,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,8,200,base,None,f1,0.9708029197080292,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,8,200,base,None,auc,0.9704486626402071,"[array([[74,  2],
+       [ 2, 59]])]"
+banknote_authentication.csv,8,200,wagging,None,acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,200,wagging,None,f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,200,wagging,None,auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,200,AdaBoost,None,acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,200,AdaBoost,None,f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,200,AdaBoost,None,auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,200,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,200,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,200,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,200,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9927007299270073,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,200,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9927062319881188,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,8,200,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9934210526315789,"[array([[75,  1],
+       [ 0, 61]])]"
+banknote_authentication.csv,9,200,base,None,acc,0.9635036496350365,"[array([[74,  2],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,200,base,None,f1,0.9634721073887318,"[array([[74,  2],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,200,base,None,auc,0.9622519413287316,"[array([[74,  2],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,200,wagging,None,acc,0.9708029197080292,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,200,wagging,None,f1,0.9707492021360634,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,200,wagging,None,auc,0.9688308886971527,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,200,AdaBoost,None,acc,0.9708029197080292,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,200,AdaBoost,None,f1,0.9707492021360634,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,200,AdaBoost,None,auc,0.9688308886971527,"[array([[75,  1],
+       [ 3, 58]])]"
+banknote_authentication.csv,9,200,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",acc,0.9781021897810219,"[array([[75,  1],
+       [ 2, 59]])]"
+banknote_authentication.csv,9,200,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",f1,0.9780832644332389,"[array([[75,  1],
+       [ 2, 59]])]"
+banknote_authentication.csv,9,200,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",auc,0.9770276100086281,"[array([[75,  1],
+       [ 2, 59]])]"
+banknote_authentication.csv,9,200,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9781021897810219,"[array([[75,  1],
+       [ 2, 59]])]"
+banknote_authentication.csv,9,200,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9854014598540146,"[array([[75,  1],
+       [ 1, 60]])]"
+banknote_authentication.csv,9,200,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.9852243313201035,"[array([[75,  1],
+       [ 1, 60]])]"
