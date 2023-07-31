@@ -348,7 +348,7 @@ def results_ComplexityBagging(data_file):
 
 N= mp.cpu_count()
 
-with mp.Pool(processes = N-1) as p:
+with mp.Pool(processes = N-20) as p:
         p.map(results_ComplexityBagging, [data_file for data_file in total_name_list])
         # p.close()
 
