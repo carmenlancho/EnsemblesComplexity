@@ -263,7 +263,7 @@ for filename in os.listdir(path_csv):
 # yeast da problemas porque una clase es muy pequeña y no aparece en todos los folds (creo que tb es por DCP)
 # haberman da problemas y es por DCP que da solo dos valores y concuerdan con la y
 
-# total_name_list = ['Data13.csv']
+total_name_list = ['ring.csv']
 
 # total_name_list = [#'teaching_assistant_MH.csv','contraceptive_NL.csv','hill_valley_without_noise_traintest.csv',
 #  # 'breast-w.csv','contraceptive_LS.csv','ilpd.csv','phoneme.csv',
@@ -348,7 +348,7 @@ def results_ComplexityBagging(data_file):
 
 N= mp.cpu_count()
 
-with mp.Pool(processes = N-20) as p:
+with mp.Pool(processes = 2) as p:
         p.map(results_ComplexityBagging, [data_file for data_file in total_name_list])
         # p.close()
 
