@@ -323,8 +323,10 @@ def results_ComplexityBagging(data_file):
     n_ensembles = 200  # maximum number of ensembles to consider (later we plot and stop when we want)
     n_ensembles_v = [0, 9, 19, 29, 39, 49, 59, 69, 79, 89, 99,
                      109, 119, 129, 139, 149, 159, 169, 179, 189, 199]
-    alpha_v = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
-    split_v = [1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30]  # s=1 base case
+    # alpha_v = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+    # split_v = [1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30]  # s=1 base case
+    alpha_v = [20]
+    split_v = [26, 28, 30]  # s=1 base case
     path_to_save = root_path + '/Results_general_algorithm'
 
     # for data_file in total_name_list:
