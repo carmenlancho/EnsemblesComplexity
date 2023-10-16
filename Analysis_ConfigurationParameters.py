@@ -5,6 +5,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import seaborn as sns
 import os
 
 root_path = os.getcwd()
@@ -44,6 +45,23 @@ path_to_save = root_path+'/Results_general_algorithm'
 os.chdir(path_to_save)
 nombre_csv_agg = 'SummarizeResults_ParameterConfiguration_CDB.csv'
 df_total.to_csv(nombre_csv_agg, encoding='utf_8_sig', index=False)
+
+### Heatmap per complexity measure
+df_total_host = df_total.loc[df_total['weights'] == 'Hostility',:]
+summary_host = df_total_host.groupby(['alpha','split'], as_index=False)['accuracy_mean_mean'].mean()
+summary_host = pd.DataFrame(summary_host)
+
+df_to_plot = summary_host.pivot(index='alpha', columns='split', values='accuracy_mean_mean')
+df_to_plot.index = pd.CategoricalIndex(df_to_plot.index,
+                                       categories= [ '20', '18', '16', '14','12', '10', '8', '6', '4', '2'])
+df_to_plot.sort_index(level=0, inplace=True)
+df_to_plot = df_to_plot.reindex(columns=['1', '2', '4', '6', '8', '10', '12', '14', '16', '18', '20', '22', '24', '26', '28','30'])
+
+fig, ax = plt.subplots(figsize=(14,6))
+p1 = sns.heatmap(df_to_plot, cmap="YlGnBu", annot=True)
+plt.show()
+
+
 
 
 
