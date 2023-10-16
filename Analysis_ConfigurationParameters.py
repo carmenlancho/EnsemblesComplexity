@@ -39,6 +39,11 @@ for data_file in total_name_list:
 # Reorder columns
 df_total = df_total.reindex(columns=['Dataset', 'alpha', 'split','weights', 'accuracy_mean_mean', 'accuracy_mean_median',
        'accuracy_mean_std'])
+# To save the results
+path_to_save = root_path+'/Results_general_algorithm'
+os.chdir(path_to_save)
+nombre_csv_agg = 'SummarizeResults_ParameterConfiguration_CDB.csv'
+df_total.to_csv(nombre_csv_agg, encoding='utf_8_sig', index=False)
 
 
 
