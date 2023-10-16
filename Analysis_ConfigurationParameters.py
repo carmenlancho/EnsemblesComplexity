@@ -48,4 +48,3 @@ df_total.to_csv(nombre_csv_agg, encoding='utf_8_sig', index=False)
 
 
 
-
