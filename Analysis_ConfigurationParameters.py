@@ -76,6 +76,59 @@ p1 = sns.heatmap(df_to_plot, cmap="YlGnBu", annot=True)
 plt.show()
 
 
+#######################################################################################
+#############                          LINEAR MODEL                       #############
+#######################################################################################
+
+import statsmodels.api as sm
+from statsmodels.formula.api import ols
+from statsmodels.stats.multicomp import pairwise_tukeyhsd
+
+### Mean ###
+model = ols('accuracy_mean_mean ~ C(alpha) + C(split) + C(weights)', data=df_total)
+fitted_model = model.fit()
+fitted_model.summary()
+
+anova_result = sm.stats.anova_lm(fitted_model, typ=2)
+print(anova_result)
+
+
+### Median ###
+model = ols('accuracy_mean_median ~ C(alpha) + C(split) + C(weights)', data=df_total)
+fitted_model = model.fit()
+fitted_model.summary()
+
+anova_result = sm.stats.anova_lm(fitted_model, typ=2)
+print(anova_result)
+
+
+### STD ###
+model = ols('accuracy_mean_std ~ C(alpha) + C(split) + C(weights)', data=df_total)
+fitted_model = model.fit()
+fitted_model.summary()
+
+anova_result = sm.stats.anova_lm(fitted_model, typ=2)
+print(anova_result)
+
+# perform Tukey's test
+tukey = pairwise_tukeyhsd(endog=df_total['accuracy_mean_std'],
+                          groups=df_total['alpha'],
+                          alpha=0.05)
+print(tukey)
+
+tukey = pairwise_tukeyhsd(endog=df_total['accuracy_mean_std'],
+                          groups=df_total['split'],
+                          alpha=0.05)
+print(tukey)
+
+
+tukey = pairwise_tukeyhsd(endog=df_total['accuracy_mean_std'],
+                          groups=df_total['weights'],
+                          alpha=0.05)
+print(tukey)
+
+
+
 
 
 
