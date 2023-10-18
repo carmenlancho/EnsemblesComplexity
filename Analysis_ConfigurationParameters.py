@@ -7,6 +7,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import os
+import statsmodels.api as sm
+from statsmodels.formula.api import ols
+from statsmodels.stats.multicomp import pairwise_tukeyhsd
 
 root_path = os.getcwd()
 
@@ -76,34 +79,57 @@ p1 = sns.heatmap(df_to_plot, cmap="YlGnBu", annot=True)
 plt.show()
 
 
+
+#####################################################################################################################
+###########                            ANALYSIS ACCORDING TO level of COMPLEXITY                          ###########
+#####################################################################################################################
+# df_total
+df_complexity= pd.read_csv('complex_info_total.csv')
+df_host = df_complexity[['Dataset','Hostility']].copy()
+bins = [0, 0.15, 0.3, 2]
+group_names = ['easy','medium','hard']
+df_host['complexity'] = pd.cut(df_host['Hostility'], bins, labels=group_names, right=False)
+
+df_total_complex = pd.merge(df_total, df_host, on='Dataset', how='outer')
+
+
 #######################################################################################
 #############                          LINEAR MODEL                       #############
 #######################################################################################
 
-import statsmodels.api as sm
-from statsmodels.formula.api import ols
-from statsmodels.stats.multicomp import pairwise_tukeyhsd
 
 ### Mean ###
-model = ols('accuracy_mean_mean ~ C(alpha) + C(split) + C(weights)', data=df_total)
+model = ols('accuracy_mean_mean ~ C(alpha) + C(split) + C(weights) + C(complexity)', data=df_total_complex)
 fitted_model = model.fit()
 fitted_model.summary()
 
 anova_result = sm.stats.anova_lm(fitted_model, typ=2)
 print(anova_result)
+
+tukey = pairwise_tukeyhsd(endog=df_total_complex['accuracy_mean_mean'],
+                          groups=df_total_complex['complexity'],
+                          alpha=0.05)
+print(tukey)
+
 
 
 ### Median ###
-model = ols('accuracy_mean_median ~ C(alpha) + C(split) + C(weights)', data=df_total)
+model = ols('accuracy_mean_median ~ C(alpha) + C(split) + C(weights) + C(complexity)', data=df_total_complex)
 fitted_model = model.fit()
 fitted_model.summary()
 
 anova_result = sm.stats.anova_lm(fitted_model, typ=2)
 print(anova_result)
 
+tukey = pairwise_tukeyhsd(endog=df_total_complex['accuracy_mean_median'],
+                          groups=df_total_complex['complexity'],
+                          alpha=0.05)
+print(tukey)
+
+
 
 ### STD ###
-model = ols('accuracy_mean_std ~ C(alpha) + C(split) + C(weights)', data=df_total)
+model = ols('accuracy_mean_std ~ C(alpha) + C(split) + C(weights) + C(complexity)', data=df_total_complex)
 fitted_model = model.fit()
 fitted_model.summary()
 
@@ -111,22 +137,89 @@ anova_result = sm.stats.anova_lm(fitted_model, typ=2)
 print(anova_result)
 
 # perform Tukey's test
-tukey = pairwise_tukeyhsd(endog=df_total['accuracy_mean_std'],
-                          groups=df_total['alpha'],
+tukey = pairwise_tukeyhsd(endog=df_total_complex['accuracy_mean_std'],
+                          groups=df_total_complex['alpha'],
                           alpha=0.05)
 print(tukey)
 
-tukey = pairwise_tukeyhsd(endog=df_total['accuracy_mean_std'],
-                          groups=df_total['split'],
+tukey = pairwise_tukeyhsd(endog=df_total_complex['accuracy_mean_std'],
+                          groups=df_total_complex['split'],
                           alpha=0.05)
 print(tukey)
 
 
-tukey = pairwise_tukeyhsd(endog=df_total['accuracy_mean_std'],
-                          groups=df_total['weights'],
+tukey = pairwise_tukeyhsd(endog=df_total_complex['accuracy_mean_std'],
+                          groups=df_total_complex['weights'],
                           alpha=0.05)
 print(tukey)
 
+tukey = pairwise_tukeyhsd(endog=df_total_complex['accuracy_mean_std'],
+                          groups=df_total_complex['complexity'],
+                          alpha=0.05)
+print(tukey)
+
+
+### Heatmap per complexity measure and per type of dataset according to its complexity
+df_total_complex = df_total.loc[df_total['weights'] == 'Hostility',:]
+summary_host = df_total_host.groupby(['alpha','split'], as_index=False)['accuracy_mean_mean'].mean()
+summary_host = pd.DataFrame(summary_host)
+
+df_to_plot = summary_host.pivot(index='alpha', columns='split', values='accuracy_mean_mean')
+df_to_plot.sort_index(level=0, inplace=True, ascending=False)
+
+CM = 'Hostility'
+df_total_hard = df_total_complex.loc[(df_total_complex['weights'] == CM) & (df_total_complex['complexity'] == 'hard'), :]
+df_total_medium = df_total_complex.loc[(df_total_complex['weights'] == CM) & (df_total_complex['complexity'] == 'medium'), :]
+df_total_easy = df_total_complex.loc[(df_total_complex['weights'] == CM) & (df_total_complex['complexity'] == 'easy'), :]
+
+
+
+summary_hard = df_total_hard.groupby(['alpha', 'split'], as_index=False)[['accuracy_mean_mean',
+                                                                          'accuracy_mean_median',
+                                                                          'accuracy_mean_std']].mean()
+
+summary_medium = df_total_medium.groupby(['alpha', 'split'], as_index=False)[['accuracy_mean_mean',
+                                                                          'accuracy_mean_median',
+                                                                          'accuracy_mean_std']].mean()
+
+summary_easy = df_total_easy.groupby(['alpha', 'split'], as_index=False)[['accuracy_mean_mean',
+                                                                          'accuracy_mean_median',
+                                                                          'accuracy_mean_std']].mean()
+
+df_to_plot_mean_h = summary_hard.pivot(index='alpha', columns='split', values='accuracy_mean_mean')
+df_to_plot_mean_h.sort_index(level=0, inplace=True, ascending=False)
+df_to_plot_mean_m = summary_medium.pivot(index='alpha', columns='split', values='accuracy_mean_mean')
+df_to_plot_mean_m.sort_index(level=0, inplace=True, ascending=False)
+df_to_plot_mean_e = summary_easy.pivot(index='alpha', columns='split', values='accuracy_mean_mean')
+df_to_plot_mean_e.sort_index(level=0, inplace=True, ascending=False)
+
+df_to_plot_median_h = summary_hard.pivot(index='alpha', columns='split', values='accuracy_mean_median')
+df_to_plot_median_h.sort_index(level=0, inplace=True, ascending=False)
+df_to_plot_median_m = summary_medium.pivot(index='alpha', columns='split', values='accuracy_mean_median')
+df_to_plot_median_m.sort_index(level=0, inplace=True, ascending=False)
+df_to_plot_median_e = summary_easy.pivot(index='alpha', columns='split', values='accuracy_mean_median')
+df_to_plot_median_e.sort_index(level=0, inplace=True, ascending=False)
+
+df_to_plot_std_h = summary_hard.pivot(index='alpha', columns='split', values='accuracy_mean_std')
+df_to_plot_std_h.sort_index(level=0, inplace=True, ascending=False)
+df_to_plot_std_m = summary_medium.pivot(index='alpha', columns='split', values='accuracy_mean_std')
+df_to_plot_std_m.sort_index(level=0, inplace=True, ascending=False)
+df_to_plot_std_e = summary_easy.pivot(index='alpha', columns='split', values='accuracy_mean_std')
+df_to_plot_std_e.sort_index(level=0, inplace=True, ascending=False)
+
+fig, axes = plt.subplots(3, 3, figsize=(20, 16))
+sns.heatmap(df_to_plot_mean_h, cmap="YlGnBu",ax=axes[0,0]).set(title='Hard Mean')
+sns.heatmap( df_to_plot_median_h, cmap="YlGnBu",ax=axes[0,1]).set(title='Hard Median')
+sns.heatmap( df_to_plot_std_h, cmap="YlGnBu", ax=axes[0,2]).set(title='Hard STD')
+
+sns.heatmap(df_to_plot_mean_m, cmap="YlGnBu", ax=axes[1,0]).set(title='Medium Mean')
+sns.heatmap( df_to_plot_median_m, cmap="YlGnBu", ax=axes[1,1]).set(title='Medium Median')
+sns.heatmap( df_to_plot_std_m, cmap="YlGnBu", ax=axes[1,2]).set(title='Medium STD')
+
+sns.heatmap(df_to_plot_mean_e, cmap="YlGnBu", ax=axes[2,0]).set(title='Easy Mean')
+sns.heatmap( df_to_plot_median_e, cmap="YlGnBu", ax=axes[2,1]).set(title='Easy Median')
+sns.heatmap( df_to_plot_std_e, cmap="YlGnBu", ax=axes[2,2]).set(title='Easy STD')
+plt.show()
 
 
 
