@@ -160,12 +160,12 @@ print(tukey)
 
 
 ### Heatmap per complexity measure and per type of dataset according to its complexity
-df_total_complex = df_total.loc[df_total['weights'] == 'Hostility',:]
-summary_host = df_total_host.groupby(['alpha','split'], as_index=False)['accuracy_mean_mean'].mean()
-summary_host = pd.DataFrame(summary_host)
-
-df_to_plot = summary_host.pivot(index='alpha', columns='split', values='accuracy_mean_mean')
-df_to_plot.sort_index(level=0, inplace=True, ascending=False)
+# df_total_complex = df_total.loc[df_total['weights'] == 'Hostility',:]
+# summary_host = df_total_complex.groupby(['alpha','split'], as_index=False)['accuracy_mean_mean'].mean()
+# summary_host = pd.DataFrame(summary_host)
+#
+# df_to_plot = summary_host.pivot(index='alpha', columns='split', values='accuracy_mean_mean')
+# df_to_plot.sort_index(level=0, inplace=True, ascending=False)
 
 CM = 'Hostility'
 df_total_hard = df_total_complex.loc[(df_total_complex['weights'] == CM) & (df_total_complex['complexity'] == 'hard'), :]
