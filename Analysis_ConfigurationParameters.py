@@ -224,6 +224,98 @@ plt.show()
 path_csv = os.chdir(root_path+'/Results_general_algorithm')
 df_total = pd.read_csv('SummarizeResults_ParameterConfiguration_CDB.csv')
 
+# df_total
+df_complexity= pd.read_csv('complex_info_total.csv')
+df_host = df_complexity[['Dataset','Hostility']].copy()
+bins = [0, 0.15, 0.3, 2]
+group_names = ['easy','medium','hard']
+df_host['complexity'] = pd.cut(df_host['Hostility'], bins, labels=group_names, right=False)
 
+df_total_complex = pd.merge(df_total, df_host, on='Dataset', how='outer')
+
+df_rank = df_total_complex.copy()
+
+list_datasets = list(np.unique(df_total['Dataset']))
+list_CM = list(np.unique(df_total['weights']))
+
+for dataset in list_datasets:
+    for CM in list_CM:
+        filter = (df_rank['Dataset'] == dataset) & (df_rank['weights'] == CM)
+
+        df_rank.loc[filter,'rank_mean_accuracy'] = df_rank.loc[filter,'accuracy_mean_mean'].rank(ascending=False,method='min')
+        df_rank.loc[filter,'rank_median_accuracy'] = df_rank.loc[filter,'accuracy_mean_median'].rank(ascending=False,method='min')
+        df_rank.loc[filter,'rank_std_accuracy'] = df_rank.loc[filter,'accuracy_mean_std'].rank(ascending=True,method='min')
+
+
+
+#######################################################################################
+#############                          LINEAR MODEL                       #############
+#######################################################################################
+
+
+### Mean ###
+model = ols('rank_mean_accuracy ~ C(alpha) + C(split) + C(weights) + C(complexity)', data=df_rank)
+fitted_model = model.fit()
+fitted_model.summary()
+
+anova_result = sm.stats.anova_lm(fitted_model, typ=2)
+print(anova_result)
+
+tukey = pairwise_tukeyhsd(endog=df_rank['rank_mean_accuracy'],
+                          groups=df_rank['complexity'],
+                          alpha=0.05)
+print(tukey)
+
+tukey = pairwise_tukeyhsd(endog=df_rank['rank_mean_accuracy'],
+                          groups=df_rank['alpha'],
+                          alpha=0.05)
+print(tukey)
+
+
+
+### Median ###
+model = ols('rank_median_accuracy ~ C(alpha) + C(split) + C(weights) + C(complexity)', data=df_rank)
+fitted_model = model.fit()
+fitted_model.summary()
+
+anova_result = sm.stats.anova_lm(fitted_model, typ=2)
+print(anova_result)
+
+tukey = pairwise_tukeyhsd(endog=df_rank['rank_mean_accuracy'],
+                          groups=df_rank['complexity'],
+                          alpha=0.05)
+print(tukey)
+
+
+
+### STD ###
+model = ols('rank_std_accuracy ~ C(alpha) + C(split) + C(weights) + C(complexity)', data=df_rank)
+fitted_model = model.fit()
+fitted_model.summary()
+
+anova_result = sm.stats.anova_lm(fitted_model, typ=2)
+print(anova_result)
+
+# perform Tukey's test
+tukey = pairwise_tukeyhsd(endog=df_rank['rank_std_accuracy'],
+                          groups=df_rank['alpha'],
+                          alpha=0.05)
+print(tukey)
+
+tukey = pairwise_tukeyhsd(endog=df_rank['rank_std_accuracy'],
+                          groups=df_rank['split'],
+                          alpha=0.05)
+print(tukey)
+
+
+tukey = pairwise_tukeyhsd(endog=df_rank['rank_std_accuracy'],
+                          groups=df_rank['weights'],
+                          alpha=0.05)
+print(tukey)
+
+tukey = pairwise_tukeyhsd(endog=df_rank['rank_std_accuracy'],
+                          groups=df_rank['complexity'],
+                          alpha=0.05)
+print(tukey)
 
 
