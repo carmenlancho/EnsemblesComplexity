@@ -10,6 +10,7 @@ import os
 import statsmodels.api as sm
 from statsmodels.formula.api import ols
 from statsmodels.stats.multicomp import pairwise_tukeyhsd
+from statsmodels.stats.multitest import multipletests
 
 root_path = os.getcwd()
 
@@ -142,6 +143,12 @@ tukey = pairwise_tukeyhsd(endog=df_total_complex['accuracy_mean_std'],
                           alpha=0.05)
 print(tukey)
 
+# pw = fitted_model.t_test_pairwise("C(alpha)")
+# aa = pw.result_frame
+#
+#
+# df_total_complex.groupby('alpha').mean()
+
 tukey = pairwise_tukeyhsd(endog=df_total_complex['accuracy_mean_std'],
                           groups=df_total_complex['split'],
                           alpha=0.05)
@@ -246,76 +253,5 @@ for dataset in list_datasets:
         df_rank.loc[filter,'rank_median_accuracy'] = df_rank.loc[filter,'accuracy_mean_median'].rank(ascending=False,method='min')
         df_rank.loc[filter,'rank_std_accuracy'] = df_rank.loc[filter,'accuracy_mean_std'].rank(ascending=True,method='min')
 
-
-
-#######################################################################################
-#############                          LINEAR MODEL                       #############
-#######################################################################################
-
-
-### Mean ###
-model = ols('rank_mean_accuracy ~ C(alpha) + C(split) + C(weights) + C(complexity)', data=df_rank)
-fitted_model = model.fit()
-fitted_model.summary()
-
-anova_result = sm.stats.anova_lm(fitted_model, typ=2)
-print(anova_result)
-
-tukey = pairwise_tukeyhsd(endog=df_rank['rank_mean_accuracy'],
-                          groups=df_rank['complexity'],
-                          alpha=0.05)
-print(tukey)
-
-tukey = pairwise_tukeyhsd(endog=df_rank['rank_mean_accuracy'],
-                          groups=df_rank['alpha'],
-                          alpha=0.05)
-print(tukey)
-
-
-
-### Median ###
-model = ols('rank_median_accuracy ~ C(alpha) + C(split) + C(weights) + C(complexity)', data=df_rank)
-fitted_model = model.fit()
-fitted_model.summary()
-
-anova_result = sm.stats.anova_lm(fitted_model, typ=2)
-print(anova_result)
-
-tukey = pairwise_tukeyhsd(endog=df_rank['rank_mean_accuracy'],
-                          groups=df_rank['complexity'],
-                          alpha=0.05)
-print(tukey)
-
-
-
-### STD ###
-model = ols('rank_std_accuracy ~ C(alpha) + C(split) + C(weights) + C(complexity)', data=df_rank)
-fitted_model = model.fit()
-fitted_model.summary()
-
-anova_result = sm.stats.anova_lm(fitted_model, typ=2)
-print(anova_result)
-
-# perform Tukey's test
-tukey = pairwise_tukeyhsd(endog=df_rank['rank_std_accuracy'],
-                          groups=df_rank['alpha'],
-                          alpha=0.05)
-print(tukey)
-
-tukey = pairwise_tukeyhsd(endog=df_rank['rank_std_accuracy'],
-                          groups=df_rank['split'],
-                          alpha=0.05)
-print(tukey)
-
-
-tukey = pairwise_tukeyhsd(endog=df_rank['rank_std_accuracy'],
-                          groups=df_rank['weights'],
-                          alpha=0.05)
-print(tukey)
-
-tukey = pairwise_tukeyhsd(endog=df_rank['rank_std_accuracy'],
-                          groups=df_rank['complexity'],
-                          alpha=0.05)
-print(tukey)
 
 
