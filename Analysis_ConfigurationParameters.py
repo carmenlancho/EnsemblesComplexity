@@ -137,6 +137,19 @@ fitted_model.summary()
 anova_result = sm.stats.anova_lm(fitted_model, typ=2)
 print(anova_result)
 
+
+import pingouin as pg
+res = pg.rm_anova(dv='accuracy_mean_mean', within=['weights','alpha','split'], subject='Dataset',
+                  data=df_total_complex, detailed=True)
+res
+
+# Mauchly’s test of sphericity
+pg.sphericity(data=df_total_complex, dv='accuracy_mean_mean', subject='Dataset', within='alpha')
+
+### Alpha
+df_total_complex.groupby('alpha').var()
+
+
 # perform Tukey's test
 tukey = pairwise_tukeyhsd(endog=df_total_complex['accuracy_mean_std'],
                           groups=df_total_complex['alpha'],
