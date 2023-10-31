@@ -27,49 +27,105 @@ res.aov <- anova_test(
   within = c(weights, split,alpha)
 )
 get_anova_table(res.aov, correction = 'GG')
-
-
-set.seed(123)
-data("selfesteem2", package = "datarium")
-selfesteem2 %>% sample_n_by(treatment, size = 1)
-
-# Gather the columns t1, t2 and t3 into long format.
-# Convert id and time into factor variables
-selfesteem2 <- selfesteem2 %>%
-  gather(key = "time", value = "score", t1, t2, t3) %>%
-  convert_as_factor(id, time)
-# Inspect some random rows of the data by groups
-set.seed(123)
-selfesteem2 %>% sample_n_by(treatment, time, size = 1)
-
-bxp <- ggboxplot(
-  selfesteem2, x = "time", y = "score",
-  color = "treatment", palette = "jco"
-)
-bxp
-
-# Identify outliers
-selfesteem2 %>%
-  group_by(treatment, time) %>%
-  identify_outliers(score)
-
-
-# Normality assumption
-# Compute Shapiro-Wilk test for each combinations of factor levels:
-
-selfesteem2 %>%
-  group_by(treatment, time) %>%
-  shapiro_test(score)
-
-
-# Create QQ plot for each cell of design:
-
-ggqqplot(selfesteem2, "score", ggtheme = theme_bw()) +
-  facet_grid(time ~ treatment, labeller = "label_both")
-
+# No significant differences with accuracy_mean_mean
 
 res.aov <- anova_test(
-  data = selfesteem2, dv = score, wid = id,
-  within = c(treatment, time)
+  data = datos,formula = accuracy_mean_median ~ weights*split*alpha,
+  dv = accuracy_mean_mean, wid = Dataset,
+  within = c(weights, split,alpha)
 )
-get_anova_table(res.aov)
+get_anova_table(res.aov, correction = 'GG')
+# No significant differences with accuracy_mean_median
+
+res.aov <- anova_test(
+  data = datos,formula = accuracy_mean_std ~ weights*split*alpha,
+  dv = accuracy_mean_mean, wid = Dataset,
+  within = c(weights, split,alpha)
+)
+get_anova_table(res.aov, correction = 'GG')
+# Significant differences: weights, split, alpha, weights:split
+
+
+# pairwise comparisons
+# P-values are adjusted using the Bonferroni multiple testing correction method.
+pwc_split <- datos %>%
+  pairwise_t_test(
+    accuracy_mean_std ~ split, paired = TRUE,
+    p.adjust.method = "bonferroni"
+  )
+pwc_split
+
+
+
+datos %>%
+  group_by(split) %>%
+  summarise_at(vars(accuracy_mean_std),
+               list(Mean_split = mean))
+# the higher the value of split, the higher the variance
+
+
+pwc_alpha <- datos %>%
+  pairwise_t_test(
+    accuracy_mean_std ~ alpha, paired = TRUE,
+    p.adjust.method = "bonferroni"
+  )
+pwc_alpha
+
+datos %>%
+  group_by(alpha) %>%
+  summarise_at(vars(accuracy_mean_std),
+               list(Mean_alpha = mean))
+# the higher the value of alpha, the higher the variance
+
+
+# Pairwise comparisons: esta no tiene sentido porque la triple interacción es no significativa
+pwc2 <- datos %>%
+  group_by(alpha,weights) %>%
+  pairwise_t_test(
+    accuracy_mean_std ~ split, paired = TRUE,
+    p.adjust.method = "bonferroni"
+  )
+pwc2
+
+# tb puedo probar con un lmer
+pwc <- selfesteem %>%
+  pairwise_t_test(
+    score ~ time, paired = TRUE,
+    p.adjust.method = "bonferroni"
+  )
+pwc
+
+
+################# LMER ####################
+
+## Libraries
+library(dplyr)
+library(ggplot2)
+library(lme4)
+library(lmerTest)
+library(tidyverse)
+library(emmeans)
+library(optimx)
+library(ggsignif)
+
+
+m1b = lmer(accuracy_mean_std ~ 1 + weights + split + alpha + 
+             (1 + weights + split + alpha  | Dataset), datos,
+           control=lmerControl(optimizer="bobyqa",optCtrl=list(maxfun=2e5))) 
+summary(m1b)
+
+
+emm = emmeans(m1b, ~ split)
+pairs(emm)
+
+### Residual Checks
+# https://www.rensvandeschoot.com/tutorials/lme4/
+plot(fitted(m1b), resid(m1b, type = "pearson")) #
+abline(0,0, col="red")
+
+qqnorm(resid(m1b)) 
+qqline(resid(m1b), col = "red") # add a perfect fit line
+
+# random intercept subject
+qqnorm(ranef(m1b)$Subject[,1] )
+qqline(ranef(m1b)$Subject[,1], col = "red")
