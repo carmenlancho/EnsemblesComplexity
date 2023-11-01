@@ -103,3 +103,77 @@ path_to_save = os.chdir(root_path+'/MixedBagging/Adapted_results')
 os.chdir(path_to_save)
 nombre_csv_agg = 'SummarizeResults_MixedBagging.csv'
 df_mixed.to_csv(nombre_csv_agg, encoding='utf_8_sig', index=False)
+
+
+
+#########################################################################################################
+#####                                SUMMARY TABLE OF ALL MODELS                                    #####
+#########################################################################################################
+
+table_comparison = pd.DataFrame(columns=['Dataset','Standard_Bag','Incre_Bag','Grouped_Bag'])
+table_comparison['Dataset'] = df_standard['Dataset']
+df_standard["Table"] = (round(df_standard["accuracy_mean_mean"],3).astype('str') +
+                       " (" +
+                        round(df_standard["accuracy_mean_std"],3).astype('str') + ")")
+table_comparison['Standard_Bag'] = df_standard["Table"]
+table_comparison.set_index('Dataset', inplace=True)
+
+
+## Best parameters per dataset in CDB
+best_param = df_total.loc[df_total.groupby(["Dataset", "weights"])["accuracy_mean_mean"].idxmax()]
+best_param['Table'] = (round(best_param["accuracy_mean_mean"],3).astype('str') +
+                       " (" +
+                        round(best_param["accuracy_mean_std"],3).astype('str') + ")")
+
+df_aux = best_param.loc[best_param['weights']=='Hostility',['Dataset','Table']]
+df_aux.set_index('Dataset', inplace=True)
+table_comparison = table_comparison.join(df_aux['Table'])
+table_comparison.rename(columns = {'Table':'CDB_Best_Host'}, inplace = True)
+
+df_aux = best_param.loc[best_param['weights']=='kDN',['Dataset','Table']]
+df_aux.set_index('Dataset', inplace=True)
+table_comparison = table_comparison.join(df_aux['Table'])
+table_comparison.rename(columns = {'Table':'CDB_Best_kDN'}, inplace = True)
+
+df_aux = best_param.loc[best_param['weights']=='CLD',['Dataset','Table']]
+df_aux.set_index('Dataset', inplace=True)
+table_comparison = table_comparison.join(df_aux['Table'])
+table_comparison.rename(columns = {'Table':'CDB_Best_CLD'}, inplace = True)
+
+df_aux = best_param.loc[best_param['weights']=='LSC',['Dataset','Table']]
+df_aux.set_index('Dataset', inplace=True)
+table_comparison = table_comparison.join(df_aux['Table'])
+table_comparison.rename(columns = {'Table':'CDB_Best_LSC'}, inplace = True)
+
+df_aux = best_param.loc[best_param['weights']=='N1',['Dataset','Table']]
+df_aux.set_index('Dataset', inplace=True)
+table_comparison = table_comparison.join(df_aux['Table'])
+table_comparison.rename(columns = {'Table':'CDB_Best_N1'}, inplace = True)
+
+df_aux = best_param.loc[best_param['weights']=='N2',['Dataset','Table']]
+df_aux.set_index('Dataset', inplace=True)
+table_comparison = table_comparison.join(df_aux['Table'])
+table_comparison.rename(columns = {'Table':'CDB_Best_N2'}, inplace = True)
+
+df_aux = best_param.loc[best_param['weights']=='DCP',['Dataset','Table']]
+df_aux.set_index('Dataset', inplace=True)
+table_comparison = table_comparison.join(df_aux['Table'])
+table_comparison.rename(columns = {'Table':'CDB_Best_DCP'}, inplace = True)
+
+df_aux = best_param.loc[best_param['weights']=='TD_U',['Dataset','Table']]
+df_aux.set_index('Dataset', inplace=True)
+table_comparison = table_comparison.join(df_aux['Table'])
+table_comparison.rename(columns = {'Table':'CDB_Best_TD_U'}, inplace = True)
+
+df_aux = best_param.loc[best_param['weights']=='F1',['Dataset','Table']]
+df_aux.set_index('Dataset', inplace=True)
+table_comparison = table_comparison.join(df_aux['Table'])
+table_comparison.rename(columns = {'Table':'CDB_Best_F1'}, inplace = True)
+
+## Parameters
+best_param['param'] = ('a=' + best_param["alpha"].astype('str') +
+                       ', s=' + best_param["split"].astype('str'))
+parameters_CM = best_param.pivot(index='Dataset', columns='weights', values='param')
+
+
+ # FALTA ORDENAR POR COMPLEXITY
