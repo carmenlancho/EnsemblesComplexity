@@ -1199,7 +1199,8 @@ def AdaptedMixedBagging(dataset_name):
     return
 
 
-path_csv = os.chdir(root_path+'/Datasets/')
+path_csv = os.chdir(root_path+'/MixedBagging/Datasets/') # ordenador
+# path_csv = os.chdir(root_path+'/Datasets/') # server
 # Extraemos los nombres de todos los ficheros
 total_name_list = []
 for filename in os.listdir(path_csv):
