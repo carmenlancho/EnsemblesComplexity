@@ -402,6 +402,7 @@ def create_regular_bags(trainset, nbags):
 """ hard_quotient: How much oversampling or undersampling to be done """
 """ Regular (conventional) bagging is a special case where mix ratio is 0:1:0 """
 
+
 # def create_mixed_bags(trainset, ih, nbags=defnumbags, mix_ratio=[0.33, 0.33, 0.33], hard_quotient=0.5):
 def create_mixed_bags(trainset, ih, nbags, mix_ratio=[0.33, 0.33, 0.33], hard_quotient=0.5):
     neasy = round(nbags * mix_ratio[0])
@@ -510,7 +511,7 @@ def visualize_dataset(X, y, ih):
 
 """ Make models from each bag and test them on the testing set """
 
-
+# bags = mixed_bags[i]
 def make_models(bags, clf, X_test, Y_test):
     nbags = bags.shape[0]
     nfeatures = bags.shape[2] - 2  # because the last two columns are y and ih
@@ -567,14 +568,14 @@ def calculate_pred(predictions, predictions_proba):
 """ MAIN SCRIPT ============================================================="""
 
 
-
+# dataset_name = 'teaching_assistant_MH.csv'
 def AdaptedMixedBagging(dataset_name):
     classifier = 'DT'  # Which classifier to use. DT = Decision Tree, NB = Naive Bayes, KNN = k-nearest neighbors
 
-    synthdata = False  # True whe working with synthetic data
+    # synthdata = False  # True whe working with synthetic data
     vizbags = False  # True when we want to visualize bags
     vizdataset = False  # True when we want to visualize dataset with dimensionality reduction
-    verbose = True  # Whether to print info of each fold
+    # verbose = True  # Whether to print info of each fold
 
     # defnumbags = 20  # default number of bags
     numruns = 1  # No. of runs (with diff rand seeds) for k-fold evaluation
@@ -613,14 +614,14 @@ def AdaptedMixedBagging(dataset_name):
     # nclusperclass = 2
 
 
-    path_to_save = root_path + '/MixedBagging/Adapted_results' # ordenador
-    # path_to_save = root_path + '/Adapted_results' # server
+    # path_to_save = root_path + '/MixedBagging/Adapted_results' # ordenador
+    path_to_save = root_path + '/Adapted_results' # server
 
-    verbose = True
+    # verbose = True
 
     # defnumbags = 20  # default number of bags
     # defnumbags_v = [8, 10]
-    defnumbags_v = [1,10,20,30,40,50,60,70,80,90,
+    defnumbags_v = [2,10,20,30,40,50,60,70,80,90,
                      100,110,120,130,140,150,160,170,180,190,200]
 
     np.set_printoptions(threshold=np.inf)  # To print the whole array instead of "..." in the middle parts
@@ -634,6 +635,7 @@ def AdaptedMixedBagging(dataset_name):
         results_df = pd.DataFrame()  # results for each dataset
 
         for defnumbags in defnumbags_v:
+            print(defnumbags)
 
             # # Create files to write out the prints
             # outfilename = "MixedBagging/outputs/DT_d1/" + dataset_name[:-4] + "_n_trees_" +str(defnumbags) + "_summary.txt"
@@ -643,8 +645,8 @@ def AdaptedMixedBagging(dataset_name):
             # csvfile = open(csvfilename, 'w')
             # csvwriter = csv.writer(csvfile, delimiter=",", lineterminator='\n')
 
-            data = pd.read_csv(root_path + '/MixedBagging/Datasets/' + dataset_name)  # ordenador
-            # data = pd.read_csv(root_path + '/Datasets/' + dataset_name)  # server
+            # data = pd.read_csv(root_path + '/MixedBagging/Datasets/' + dataset_name)  # ordenador
+            data = pd.read_csv(root_path + '/Datasets/' + dataset_name)  # server
             X_mis = data.iloc[:, :-1]  # Columns 0 to end - 1 # cambio ix por iloc
             y = data.iloc[:, -1]  # Last column # cambio ix por iloc
 
@@ -762,6 +764,9 @@ def AdaptedMixedBagging(dataset_name):
                             for hq, mx in itertools.product(hqs, mix_ratios):
                                 mixed_bags.append(create_mixed_bags(trainset, ih_tr, defnumbags, mix_ratio=mx,
                                                                     hard_quotient=hq))  # Mixed bags with different mixed ratios
+                                # len(mixed_bags)
+                                # mixed_bags[0]
+                                # type(defnumbags)
 
                             grad_bags = list()
                             for h_i in hardness_intervals:
@@ -769,6 +774,7 @@ def AdaptedMixedBagging(dataset_name):
                                     create_gradually_mixed_bags(trainset, ih_tr, defnumbags, low_bag_hardness=h_i[0],
                                                                 high_bag_hardness=h_i[
                                                                     1]))  # GRadually mixed bags with different intervals
+                            # grad_bags[i]
 
 
                             # Visualize bags when necessary. Code just has mixed bags, but can try others
@@ -905,7 +911,7 @@ def AdaptedMixedBagging(dataset_name):
                     reg_bags = create_regular_bags(trainvalset,defnumbags)
 
                     # Wagging. Its slightly different because we get a bag of weights rather than instances
-                    wag_weights_bags = create_wagging_weights(len(X_tr_val))
+                    wag_weights_bags = create_wagging_weights(len(X_tr_val), defnumbags)
 
                     # Mixed bags
                     # idx_max_xxx_mx now has index of best mixture in terms of acc, f1, auc. But idx contains info of both HQ and mix_ratio.
@@ -1164,7 +1170,7 @@ def AdaptedMixedBagging(dataset_name):
                     results_df = pd.concat([results_df, res_df])
                     # To save the results
                     os.chdir(path_to_save)
-                    nombre_results = 'Mixed_Bagging_folds_' + str(dataset_name) + '.csv'
+                    nombre_results = 'Mixed_Bagging_folds_' + str(dataset_name)# + '.csv'
                     results_df.to_csv(nombre_results, encoding='utf_8_sig', index=False)
 
                     fold = fold + 1
@@ -1190,7 +1196,7 @@ def AdaptedMixedBagging(dataset_name):
 
             # To save the results
             os.chdir(path_to_save)
-            nombre_results_aggre = 'Mixed_Bagging_aggregated_' + str(dataset_name) + '.csv'
+            nombre_results_aggre = 'Mixed_Bagging_aggregated_' + str(dataset_name)# + '.csv'
             df_aggre.to_csv(nombre_results_aggre, encoding='utf_8_sig', index=False)
 
 
@@ -1199,8 +1205,8 @@ def AdaptedMixedBagging(dataset_name):
     return
 
 
-path_csv = os.chdir(root_path+'/MixedBagging/Datasets/') # ordenador
-# path_csv = os.chdir(root_path+'/Datasets/') # server
+# path_csv = os.chdir(root_path+'/MixedBagging/Datasets/') # ordenador
+path_csv = os.chdir(root_path+'/Datasets/') # server
 # Extraemos los nombres de todos los ficheros
 total_name_list = []
 for filename in os.listdir(path_csv):
@@ -1242,7 +1248,7 @@ for filename in os.listdir(path_csv):
 
 N= mp.cpu_count()
 
-with mp.Pool(processes = 4) as p:
+with mp.Pool(processes = N-20) as p:
         p.map(AdaptedMixedBagging, [dataset_name for dataset_name in total_name_list])
         # p.close()
 
