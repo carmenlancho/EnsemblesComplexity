@@ -241,7 +241,7 @@ vizbags = False  # True when we want to visualize bags
 vizdataset = False  # True when we want to visualize dataset with dimensionality reduction
 verbose = True  # Whether to print info of each fold
 
-defnumbags = 20  # default number of bags
+# defnumbags = 20  # default number of bags
 numruns = 1  # No. of runs (with diff rand seeds) for k-fold evaluation
 numfolds = 10  # No. of folds for test set evaluation
 numcvruns = 1  # No. of runs for cross validation
@@ -266,15 +266,15 @@ hardness_intervals = [[-6.0, 6.0], [-5.0, 5.0], [-4.0, 4.0], [-3.0, 3.0],
 numratios = len(mix_ratios)
 numhqs = len(hqs)
 """ Parameter values of make_classification defined globally for ease of modification """
-nsamples = 500
-nfeatures = 10
-ninformative = np.round(nfeatures * 0.6)  # 60% of features are informative
-nredundant = np.round(nfeatures * 0.1)  # 10% of features are redundant.   Remaining 30% are useless (noise) features
-flipy = 0.05
-balance = [0.5, 0.5]
-# randomstate = 1
-classsep = 1.0
-nclusperclass = 2
+# nsamples = 500
+# nfeatures = 10
+# ninformative = np.round(nfeatures * 0.6)  # 60% of features are informative
+# nredundant = np.round(nfeatures * 0.1)  # 10% of features are redundant.   Remaining 30% are useless (noise) features
+# flipy = 0.05
+# balance = [0.5, 0.5]
+# # randomstate = 1
+# classsep = 1.0
+# nclusperclass = 2
 
 """ Create 'normal' bags: a random subsample from the dataset with replacement """
 
@@ -349,7 +349,8 @@ def wagging_weights_gaussian(n):
 """ Create weights for wagging """
 
 
-def create_wagging_weights(num, nbags=defnumbags):
+# def create_wagging_weights(num, nbags=defnumbags):
+def create_wagging_weights(num, nbags):
     bag_weights = list()
 
     for i in range(nbags):
@@ -385,8 +386,8 @@ def make_wagging_models(bag_weights, clf, X_train, Y_train, X_test, Y_test):
 
 """ Create regular bootstraps """
 
-
-def create_regular_bags(trainset, nbags=defnumbags):
+# def create_regular_bags(trainset, nbags=defnumbags):
+def create_regular_bags(trainset, nbags):
     bags = list()
 
     for i in range(nbags):
@@ -401,8 +402,8 @@ def create_regular_bags(trainset, nbags=defnumbags):
 """ hard_quotient: How much oversampling or undersampling to be done """
 """ Regular (conventional) bagging is a special case where mix ratio is 0:1:0 """
 
-
-def create_mixed_bags(trainset, ih, nbags=defnumbags, mix_ratio=[0.33, 0.33, 0.33], hard_quotient=0.5):
+# def create_mixed_bags(trainset, ih, nbags=defnumbags, mix_ratio=[0.33, 0.33, 0.33], hard_quotient=0.5):
+def create_mixed_bags(trainset, ih, nbags, mix_ratio=[0.33, 0.33, 0.33], hard_quotient=0.5):
     neasy = round(nbags * mix_ratio[0])
     nnormal = round(nbags * mix_ratio[1])
     nhard = round(nbags * mix_ratio[2])
@@ -424,8 +425,8 @@ def create_mixed_bags(trainset, ih, nbags=defnumbags, mix_ratio=[0.33, 0.33, 0.3
 
 """ Create bootstraps for gradually-changing mixed bagging """
 
-
-def create_gradually_mixed_bags(trainset, ih, nbags=defnumbags, low_bag_hardness=0.5, high_bag_hardness=1.5):
+# def create_gradually_mixed_bags(trainset, ih, nbags=defnumbags, low_bag_hardness=0.5, high_bag_hardness=1.5):
+def create_gradually_mixed_bags(trainset, ih, nbags, low_bag_hardness=0.5, high_bag_hardness=1.5):
     bag_hardness_values = np.linspace(low_bag_hardness, high_bag_hardness,
                                       nbags)  # Divide up the range to find hardness value for each bag
 
@@ -575,14 +576,13 @@ def AdaptedMixedBagging(dataset_name):
     vizdataset = False  # True when we want to visualize dataset with dimensionality reduction
     verbose = True  # Whether to print info of each fold
 
-    defnumbags = 20  # default number of bags
+    # defnumbags = 20  # default number of bags
     numruns = 1  # No. of runs (with diff rand seeds) for k-fold evaluation
     numfolds = 10  # No. of folds for test set evaluation
     numcvruns = 1  # No. of runs for cross validation
     numcvfolds = 10  # No. of folds for cross-validation (for model selection)
-    numsynthruns = 10  # No. of runs for synthetic dataset experiments
-    clfList = [0, 1, 2,
-               3]  # Identify which of the classifiers to use for IH calculation. THe numbers associated with each clf can be found in ih_calc
+    # numsynthruns = 10  # No. of runs for synthetic dataset experiments
+    clfList = [0, 1, 2, 3]  # Identify which of the classifiers to use for IH calculation. THe numbers associated with each clf can be found in ih_calc
 
     # Mix ratios and hardness quotients (hq) to be tested
     mix_ratios = [[0.4, 0.4, 0.2], [0.3, 0.6, 0.1], [0.2, 0.7, 0.1], [0.2, 0.8, 0.0], [0.3, 0.7, 0.0],
@@ -601,16 +601,16 @@ def AdaptedMixedBagging(dataset_name):
     numratios = len(mix_ratios)
     numhqs = len(hqs)
     """ Parameter values of make_classification defined globally for ease of modification """
-    nsamples = 500
-    nfeatures = 10
-    ninformative = np.round(nfeatures * 0.6)  # 60% of features are informative
-    nredundant = np.round(
-        nfeatures * 0.1)  # 10% of features are redundant.   Remaining 30% are useless (noise) features
-    flipy = 0.05
-    balance = [0.5, 0.5]
-    # randomstate = 1
-    classsep = 1.0
-    nclusperclass = 2
+    # nsamples = 500
+    # nfeatures = 10
+    # ninformative = np.round(nfeatures * 0.6)  # 60% of features are informative
+    # nredundant = np.round(
+    #     nfeatures * 0.1)  # 10% of features are redundant.   Remaining 30% are useless (noise) features
+    # flipy = 0.05
+    # balance = [0.5, 0.5]
+    # # randomstate = 1
+    # classsep = 1.0
+    # nclusperclass = 2
 
 
     # path_to_save = root_path + '/MixedBagging/Adapted_results' # ordenador
@@ -760,15 +760,16 @@ def AdaptedMixedBagging(dataset_name):
 
                             mixed_bags = list()
                             for hq, mx in itertools.product(hqs, mix_ratios):
-                                mixed_bags.append(create_mixed_bags(trainset, ih_tr, mix_ratio=mx,
+                                mixed_bags.append(create_mixed_bags(trainset, ih_tr, defnumbags, mix_ratio=mx,
                                                                     hard_quotient=hq))  # Mixed bags with different mixed ratios
 
                             grad_bags = list()
                             for h_i in hardness_intervals:
                                 grad_bags.append(
-                                    create_gradually_mixed_bags(trainset, ih_tr, low_bag_hardness=h_i[0],
+                                    create_gradually_mixed_bags(trainset, ih_tr, defnumbags, low_bag_hardness=h_i[0],
                                                                 high_bag_hardness=h_i[
                                                                     1]))  # GRadually mixed bags with different intervals
+
 
                             # Visualize bags when necessary. Code just has mixed bags, but can try others
                             if vizbags == True:
@@ -901,7 +902,7 @@ def AdaptedMixedBagging(dataset_name):
 
                     # Create bags for everyone. For mixed bags, use the combo/interval we found to be best according to validation set
                     # Regular bagging
-                    reg_bags = create_regular_bags(trainvalset)
+                    reg_bags = create_regular_bags(trainvalset,defnumbags)
 
                     # Wagging. Its slightly different because we get a bag of weights rather than instances
                     wag_weights_bags = create_wagging_weights(len(X_tr_val))
@@ -909,15 +910,15 @@ def AdaptedMixedBagging(dataset_name):
                     # Mixed bags
                     # idx_max_xxx_mx now has index of best mixture in terms of acc, f1, auc. But idx contains info of both HQ and mix_ratio.
                     # Example: numratios = 10, numhqs = 3, so idx= 24 actually means hq = 24/10 = 2 and mix_ratio = 24 % 10 = 4
-                    mixed_bags_acc = create_mixed_bags(trainvalset, ih,
+                    mixed_bags_acc = create_mixed_bags(trainvalset, ih, defnumbags,
                                                        mix_ratio=mix_ratios[idx_max_acc_mx % numratios],
                                                        hard_quotient=hqs[
                                                            idx_max_acc_mx // numratios])  # Mixed bags with different mixed ratios
-                    mixed_bags_f1 = create_mixed_bags(trainvalset, ih,
+                    mixed_bags_f1 = create_mixed_bags(trainvalset, ih, defnumbags,
                                                       mix_ratio=mix_ratios[idx_max_f1_mx % numratios],
                                                       hard_quotient=hqs[
                                                           idx_max_f1_mx // numratios])  # Mixed bags with different mixed ratios
-                    mixed_bags_auc = create_mixed_bags(trainvalset, ih,
+                    mixed_bags_auc = create_mixed_bags(trainvalset, ih, defnumbags,
                                                        mix_ratio=mix_ratios[idx_max_auc_mx % numratios],
                                                        hard_quotient=hqs[
                                                            idx_max_auc_mx // numratios])  # Mixed bags with different mixed ratios
@@ -932,17 +933,17 @@ def AdaptedMixedBagging(dataset_name):
                     #         "\t%s  %s" % (mix_ratios[idx_max_auc_mx % numratios], hqs[idx_max_auc_mx // numratios]))
 
                     # Grad bags
-                    grad_bags_acc = create_gradually_mixed_bags(trainvalset, ih,
+                    grad_bags_acc = create_gradually_mixed_bags(trainvalset, ih, defnumbags,
                                                                 low_bag_hardness=hardness_intervals[idx_max_acc_gr][
                                                                     0],
                                                                 high_bag_hardness=
                                                                 hardness_intervals[idx_max_acc_gr][1])
-                    grad_bags_f1 = create_gradually_mixed_bags(trainvalset, ih,
+                    grad_bags_f1 = create_gradually_mixed_bags(trainvalset, ih, defnumbags,
                                                                low_bag_hardness=hardness_intervals[idx_max_f1_gr][
                                                                    0],
                                                                high_bag_hardness=hardness_intervals[idx_max_f1_gr][
                                                                    1])
-                    grad_bags_auc = create_gradually_mixed_bags(trainvalset, ih,
+                    grad_bags_auc = create_gradually_mixed_bags(trainvalset, ih, defnumbags,
                                                                 low_bag_hardness=hardness_intervals[idx_max_auc_gr][
                                                                     0],
                                                                 high_bag_hardness=
@@ -1240,7 +1241,7 @@ for filename in os.listdir(path_csv):
 
 N= mp.cpu_count()
 
-with mp.Pool(processes = N-20) as p:
+with mp.Pool(processes = 4) as p:
         p.map(AdaptedMixedBagging, [dataset_name for dataset_name in total_name_list])
         # p.close()
 
