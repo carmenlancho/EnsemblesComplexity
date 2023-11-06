@@ -110,13 +110,35 @@ df_mixed.to_csv(nombre_csv_agg, encoding='utf_8_sig', index=False)
 #####                                SUMMARY TABLE OF ALL MODELS                                    #####
 #########################################################################################################
 
-table_comparison = pd.DataFrame(columns=['Dataset','Standard_Bag','Incre_Bag','Grouped_Bag'])
+table_comparison = pd.DataFrame(columns=['Dataset','Standard_Bag'])
 table_comparison['Dataset'] = df_standard['Dataset']
 df_standard["Table"] = (round(df_standard["accuracy_mean_mean"],3).astype('str') +
                        " (" +
                         round(df_standard["accuracy_mean_std"],3).astype('str') + ")")
 table_comparison['Standard_Bag'] = df_standard["Table"]
 table_comparison.set_index('Dataset', inplace=True)
+
+## Grouped and incremented
+df_mixed_aux = df_mixed.loc[df_mixed['model']=='Grouped_Mixed_Bagging',
+                                    ['Dataset','accuracy_mean_mean','accuracy_mean_std']]
+df_mixed_aux.columns = ['Dataset', 'Grouped_accuracy_mean_mean', 'Grouped_accuracy_mean_std']
+df_mixed_inc = df_mixed.loc[df_mixed['model']=='Incremental_Mixed_Bagging',
+                                    ['Dataset','accuracy_mean_mean','accuracy_mean_std']]
+df_mixed_inc.columns = ['Dataset', 'Incremental_accuracy_mean_mean', 'Incremental_accuracy_mean_std']
+df_mixed_aux.set_index('Dataset', inplace=True)
+df_mixed_inc.set_index('Dataset', inplace=True)
+
+df_mixed_aux['Grouped_Bag'] = (round(df_mixed_aux["Grouped_accuracy_mean_mean"],3).astype('str') +
+                       " (" +
+                        round(df_mixed_aux["Grouped_accuracy_mean_std"],3).astype('str') + ")")
+
+df_mixed_inc['Incre_Bag'] = (round(df_mixed_inc["Incremental_accuracy_mean_mean"],3).astype('str') +
+                       " (" +
+                        round(df_mixed_inc["Incremental_accuracy_mean_std"],3).astype('str') + ")")
+
+
+table_comparison = table_comparison.join(df_mixed_aux['Grouped_Bag'])
+table_comparison = table_comparison.join(df_mixed_inc['Incre_Bag'])
 
 
 ## Best parameters per dataset in CDB
@@ -169,6 +191,13 @@ df_aux = best_param.loc[best_param['weights']=='F1',['Dataset','Table']]
 df_aux.set_index('Dataset', inplace=True)
 table_comparison = table_comparison.join(df_aux['Table'])
 table_comparison.rename(columns = {'Table':'CDB_Best_F1'}, inplace = True)
+
+# To save the results
+path_to_save = os.chdir(root_path+'/Results_Comparison_Methods')
+os.chdir(path_to_save)
+nombre_csv_agg = 'table_comparison.csv'
+table_comparison.to_csv(nombre_csv_agg, encoding='utf_8_sig', index=True)
+table_comparison
 
 ## Parameters
 best_param['param'] = ('a=' + best_param["alpha"].astype('str') +
