@@ -1,4 +1,4 @@
-pclass,sex,age,sibsp,parch,fare,emb-C,emb-Q,emb-S,survived
+pclass,sex,age,sibsp,parch,fare,emb-C,emb-Q,emb-S,y
 1,0,29,0,0,211.3375,0,0,1,1
 1,1,0.9167,1,2,151.55,0,0,1,1
 1,0,2,1,2,151.55,0,0,1,0
