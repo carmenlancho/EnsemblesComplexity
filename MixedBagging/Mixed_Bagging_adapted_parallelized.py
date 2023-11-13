@@ -55,7 +55,7 @@ def calculate_concrete_IH(X, y, full, clfList):
     knn_clf = KNeighborsClassifier(n_neighbors=int(n_neigh_int))  # k = sqrt(n)/2 # le pongo int
     tree_clf = DecisionTreeClassifier(max_depth=5)
     nb_clf = GaussianNB()
-    lr_clf = LogisticRegression()
+    lr_clf = LogisticRegression(max_iter=1000)
     lda_clf = LinearDiscriminantAnalysis()
     qda_clf = QuadraticDiscriminantAnalysis()
 
