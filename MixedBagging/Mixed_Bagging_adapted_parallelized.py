@@ -537,9 +537,11 @@ def make_models(bags, clf, X_test, Y_test):
     return predictions_asarray, predictions_proba_asarray
 
 
+
 """ Calculate final prediction from the predictions of several bag """
 
-
+# predictions = pred
+# pred_proba
 def calculate_pred(predictions, predictions_proba):
     ninst = predictions.shape[1]  # No. of instances
     nbags = predictions.shape[0]  # No. of bags
@@ -569,6 +571,8 @@ def calculate_pred(predictions, predictions_proba):
 
 
 # dataset_name = 'teaching_assistant_MH.csv'
+# dataset_name = 'cleveland2.csv'
+# dataset_name = 'analcatdata_authorship.csv'
 def AdaptedMixedBagging(dataset_name):
     classifier = 'DT'  # Which classifier to use. DT = Decision Tree, NB = Naive Bayes, KNN = k-nearest neighbors
 
@@ -614,8 +618,8 @@ def AdaptedMixedBagging(dataset_name):
     # nclusperclass = 2
 
 
-    # path_to_save = root_path + '/MixedBagging/Adapted_results' # ordenador
-    path_to_save = root_path + '/Adapted_results' # server
+    path_to_save = root_path + '/MixedBagging/Adapted_results' # ordenador
+    # path_to_save = root_path + '/Adapted_results' # server
 
     # verbose = True
 
@@ -645,10 +649,11 @@ def AdaptedMixedBagging(dataset_name):
             # csvfile = open(csvfilename, 'w')
             # csvwriter = csv.writer(csvfile, delimiter=",", lineterminator='\n')
 
-            # data = pd.read_csv(root_path + '/MixedBagging/Datasets/' + dataset_name)  # ordenador
-            data = pd.read_csv(root_path + '/Datasets/' + dataset_name)  # server
+            data = pd.read_csv(root_path + '/MixedBagging/Datasets/' + dataset_name)  # ordenador
+            # data = pd.read_csv(root_path + '/Datasets/' + dataset_name)  # server
             X_mis = data.iloc[:, :-1]  # Columns 0 to end - 1 # cambio ix por iloc
             y = data.iloc[:, -1]  # Last column # cambio ix por iloc
+            n_classes = len(np.unique(y))
 
             imp = SimpleImputer(missing_values=999,
                                 strategy='most_frequent')  # Impute missing values which are coded as'999' in all datasets
@@ -837,6 +842,7 @@ def AdaptedMixedBagging(dataset_name):
                                                                                        average='weighted')
                                 cv_auc_mx[cvrun * numcvfolds + cvfold][i] = mt.roc_auc_score(Y_validate,
                                                                                              mix_final_pred[i])
+
                                 # cv_confmatrix_mx[cvrun * numcvfolds + cvfold][i] = np.array(mt.confusion_matrix(Y_validate,mix_final_pred[i]).tolist())
                             # Check all hardness intervals for gradually mixed bags
                             for i in range(len(hardness_intervals)):
@@ -1205,8 +1211,8 @@ def AdaptedMixedBagging(dataset_name):
     return
 
 
-# path_csv = os.chdir(root_path+'/MixedBagging/Datasets/') # ordenador
-path_csv = os.chdir(root_path+'/Datasets/') # server
+path_csv = os.chdir(root_path+'/MixedBagging/Datasets/') # ordenador
+# path_csv = os.chdir(root_path+'/Datasets/') # server
 # Extraemos los nombres de todos los ficheros
 total_name_list = []
 for filename in os.listdir(path_csv):
@@ -1215,40 +1221,42 @@ for filename in os.listdir(path_csv):
 
 
 
+total_name_list = [ 'segment.csv', 'analcatdata_authorship.csv', 'cleveland.csv']
+
 # total_name_list = [  # 'teaching_assistant_MH.csv','chronic_kidney.csv','contraceptive_NL.csv',
-    # 'balance_scale_BR.csv',
-    #     'seismic-bumps.csv',
-    #     'voting_records.csv',
-    #     'phishing.csv',
-    # 'monks_prob_3.csv','breast-w.csv','credit-a.csv',
-    #     'contraceptive_LS.csv','wine_c1c3.csv',
-    # 'tic-tac-toe.csv',
-    #     'mammographic_mass.csv',
-    #     'contraceptive_NS.csv','wine_c1c2.csv',
-    # 'haberman.csv','cardiotocography_c1c3.csv','hepatitis.csv','titanic.csv',
-    # 'internet_ad_cfs.csv','indian_liver_patients.csv',
-    #     'monks_prob_2.csv',
-    # 'breast_cancer.csv','arrhythmia_cfs.csv','vertebral_column.csv','sonar.csv',
-    # 'spect_heart.csv',
-    #     'horse_colic.csv',
-    #     'cardiotocography_c2c3.csv',
-    # 'monks_prob_1.csv',
-    #     'credit-g.csv',
-    #     'car_evaluation.csv',
-    #     'climate_model.csv',
-    # 'diabetic_retinopathy.csv','teaching_assistant_LM.csv','ionosphere.csv',
-    # 'kr-vs-kp.csv',
-    #     'pima_indians_diabetes.csv','cervical_cancer_risk_factors.csv',
-    # 'cardiotocography_c1c2.csv',
-    #     'teaching_assistant_LH.csv',
-    # 'heart_disease.csv','balance_scale_LR.csv',
-    # 'balance_scale_BL.csv','banknote_authentication.csv',
-    # 'wine_c2c3.csv']
+#     'balance_scale_BR.csv',
+#         'seismic-bumps.csv',
+#         'voting_records.csv',
+#         'phishing.csv',
+#     'monks_prob_3.csv','breast-w.csv','credit-a.csv',
+#         'contraceptive_LS.csv','wine_c1c3.csv',
+#     'tic-tac-toe.csv',
+#         'mammographic_mass.csv',
+#         'contraceptive_NS.csv','wine_c1c2.csv',
+#     'haberman.csv','cardiotocography_c1c3.csv','hepatitis.csv','titanic.csv',
+#     'internet_ad_cfs.csv','indian_liver_patients.csv',
+#         'monks_prob_2.csv',
+#     'breast_cancer.csv','arrhythmia_cfs.csv','vertebral_column.csv','sonar.csv',
+#     'spect_heart.csv',
+#         'horse_colic.csv',
+#         'cardiotocography_c2c3.csv',
+#     'monks_prob_1.csv',
+#         'credit-g.csv',
+#         'car_evaluation.csv',
+#         'climate_model.csv',
+#     'diabetic_retinopathy.csv','teaching_assistant_LM.csv','ionosphere.csv',
+#     'kr-vs-kp.csv',
+#         'pima_indians_diabetes.csv','cervical_cancer_risk_factors.csv',
+#     'cardiotocography_c1c2.csv',
+#         'teaching_assistant_LH.csv',
+#     'heart_disease.csv','balance_scale_LR.csv',
+#     'balance_scale_BL.csv','banknote_authentication.csv',
+#     'wine_c2c3.csv']
 
 
 N= mp.cpu_count()
 
-with mp.Pool(processes = N-20) as p:
+with mp.Pool(processes = 2) as p:
         p.map(AdaptedMixedBagging, [dataset_name for dataset_name in total_name_list])
         # p.close()
 
