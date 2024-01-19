@@ -193,8 +193,9 @@ table_comparison = table_comparison.join(df_aux['Table'])
 table_comparison.rename(columns = {'Table':'CDB_Best_F1'}, inplace = True)
 
 # To save the results
-path_to_save = os.chdir(root_path+'/Results_Comparison_Methods')
-os.chdir(path_to_save)
+# path_to_save = os.chdir(root_path+'/Results_Comparison_Methods')
+# os.chdir(path_to_save)
+os.chdir(root_path+'/Results_Comparison_Methods')
 nombre_csv_agg = 'table_comparison.csv'
 table_comparison.to_csv(nombre_csv_agg, encoding='utf_8_sig', index=True)
 table_comparison
@@ -203,6 +204,8 @@ table_comparison
 best_param['param'] = ('a=' + best_param["alpha"].astype('str') +
                        ', s=' + best_param["split"].astype('str'))
 parameters_CM = best_param.pivot(index='Dataset', columns='weights', values='param')
+nombre_csv_agg_param = 'parameters_CM.csv'
+parameters_CM.to_csv(nombre_csv_agg_param, encoding='utf_8_sig', index=True)
 
 
  # FALTA ORDENAR POR COMPLEXITY
