@@ -111,10 +111,10 @@ df_standard_20 = pd.read_csv('SummarizeResults_StandardBagging_from20ensembles.c
 # df_standard_30 = pd.read_csv('SummarizeResults_StandardBagging_from30ensembles.csv') # from 30 ensembles
 
 
-#################################
-###       MIXED BAGGING       ###
-#################################
-
+################################
+##       MIXED BAGGING       ###
+################################
+#
 # path_csv = os.chdir(root_path+'/MixedBagging/Adapted_results')
 #
 # # Extraemos los nombres de todos los ficheros
@@ -122,7 +122,12 @@ df_standard_20 = pd.read_csv('SummarizeResults_StandardBagging_from20ensembles.c
 # for filename in os.listdir(path_csv):
 #     if filename.endswith('.csv') and filename.startswith('Mixed_Bagging_aggregated'):
 #         total_name_list.append(filename)
-# # len(total_name_list)
+# # len
+#
+# # Quitamos n_ensemble = 0 y 9, para empezar en 20
+# # hacemos otro empezando en 30
+# out_values1 = [2,10]
+# out_values2 = [2,10,20]
 #
 # # General df to save all the results
 # cols = ['model','perf_measure','accuracy_mean_mean','accuracy_mean_median', 'accuracy_mean_std','Dataset']
@@ -134,10 +139,13 @@ df_standard_20 = pd.read_csv('SummarizeResults_StandardBagging_from20ensembles.c
 #     name_data = data_file[data_file.find('Mixed_Bagging_aggregated_') +
 #                           len('Mixed_Bagging_aggregated_'):data_file.rfind('.csv')]
 #     data = pd.read_csv(file)
+#     # Quitamos los n_trees que no queremos
+#     # data = data[~data['n_trees'].isin(out_values1)] # from 20 ensembles
+#     data = data[~data['n_trees'].isin(out_values2)]  # from 30 ensembles
 #     df_summary = data.groupby(by=['model','perf_measure'], as_index=False).agg({'perf_value_mean': [np.mean, np.median, np.std]})
-#     data.groupby(by=['perf_measure','model'], as_index=False).agg({'n_trees': 'median'})
-#     aa = data.loc[(data['model'] == 'AdaBoost') & (data['perf_measure'] == 'acc')]
-#     aa['perf_value_mean'].std()
+#     # data.groupby(by=['perf_measure','model'], as_index=False).agg({'n_trees': 'median'})
+#     # aa = data.loc[(data['model'] == 'AdaBoost') & (data['perf_measure'] == 'acc')]
+#     # aa['perf_value_mean'].std()
 #
 #     df_summary.columns = ['model','perf_measure','accuracy_mean_mean','accuracy_mean_median',  'accuracy_mean_std']
 #     df_summary['Dataset'] = name_data
@@ -149,13 +157,18 @@ df_standard_20 = pd.read_csv('SummarizeResults_StandardBagging_from20ensembles.c
 #     df_mixed = pd.concat([df_mixed,df_summary])
 #
 # # To save the results
-# path_to_save = os.chdir(root_path+'/MixedBagging/Adapted_results')
-# os.chdir(path_to_save)
-# nombre_csv_agg = 'SummarizeResults_MixedBagging.csv'
+# # path_to_save = os.chdir(root_path+'/MixedBagging/Adapted_results')
+# # os.chdir(path_to_save)
+# os.chdir(root_path+'/MixedBagging/Adapted_results')
+# # nombre_csv_agg = 'SummarizeResults_MixedBagging.csv'
+# # nombre_csv_agg = 'SummarizeResults_MixedBagging_from20ensembles.csv' # out_values1
+# nombre_csv_agg = 'SummarizeResults_MixedBagging_from30ensembles.csv' # out_values2
 # df_mixed.to_csv(nombre_csv_agg, encoding='utf_8_sig', index=False)
 
 path_csv = os.chdir(root_path+'/MixedBagging/Adapted_results')
-df_mixed = pd.read_csv('SummarizeResults_MixedBagging.csv')
+# df_mixed = pd.read_csv('SummarizeResults_MixedBagging.csv') # all n_trees
+df_mixed_20 = pd.read_csv('SummarizeResults_MixedBagging_from20ensembles.csv') # from 20 n_trees
+# df_mixed_30 = pd.read_csv('SummarizeResults_MixedBagging_from30ensembles.csv') # from 30 n_trees
 
 
 
