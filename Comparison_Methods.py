@@ -60,9 +60,9 @@ df_total_to_filter = df_total_to_filter[~df_total_to_filter['split'].isin(values
 
 
 
-#################################
-###      STANDARD BAGGING     ###
-#################################
+################################
+##      STANDARD BAGGING     ###
+################################
 # path_csv = os.chdir(root_path+'/Results_StandardBagging')
 #
 # # Extraemos los nombres de todos los ficheros
@@ -71,6 +71,11 @@ df_total_to_filter = df_total_to_filter[~df_total_to_filter['split'].isin(values
 #     if filename.endswith('.csv') and filename.startswith('Aggregated'):
 #         total_name_list.append(filename)
 # # len(total_name_list)
+#
+# # Quitamos n_ensemble = 0 y 9, para empezar en 20
+# # hacemos otro empezando en 30
+# out_values1 = [0,9]
+# out_values2 = [0,9,19]
 #
 # # General df to save all the results
 # cols = ['weights','accuracy_mean_mean','accuracy_mean_median', 'accuracy_mean_std','Dataset']
@@ -84,6 +89,9 @@ df_total_to_filter = df_total_to_filter[~df_total_to_filter['split'].isin(values
 #     name_data = data_file[data_file.find('AggregatedResults_StandardBagging_') +
 #                           len('AggregatedResults_StandardBagging_'):data_file.rfind('.csv')]
 #     data = pd.read_csv(file)
+#     # Quitamos los n_ensemble que no queremos
+#     data = data[~data['n_ensemble'].isin(out_values1)] # from 20 ensembles
+#     # data = data[~data['n_ensemble'].isin(out_values2)]  # from 30 ensembles
 #     df_summary = data.groupby(by='weights', as_index=False).agg({'accuracy_mean': [np.mean, np.median, np.std]})
 #     df_summary.columns = ['weights','accuracy_mean_mean','accuracy_mean_median',  'accuracy_mean_std']
 #     df_summary['Dataset'] = name_data
@@ -93,11 +101,14 @@ df_total_to_filter = df_total_to_filter[~df_total_to_filter['split'].isin(values
 # # To save the results
 # path_to_save = root_path+'/Results_StandardBagging'
 # os.chdir(path_to_save)
-# nombre_csv_agg = 'SummarizeResults_StandardBagging.csv'
+# nombre_csv_agg = 'SummarizeResults_StandardBagging_from20ensembles.csv' # out_values1
+# # nombre_csv_agg = 'SummarizeResults_StandardBagging_from30ensembles.csv' # out_values2
 # df_standard.to_csv(nombre_csv_agg, encoding='utf_8_sig', index=False)
 
 path_csv = os.chdir(root_path+'/Results_StandardBagging')
-df_standard = pd.read_csv('SummarizeResults_StandardBagging.csv')
+# df_standard = pd.read_csv('SummarizeResults_StandardBagging.csv') ## all n_ensembles
+df_standard_20 = pd.read_csv('SummarizeResults_StandardBagging_from20ensembles.csv') # from20ensembles
+# df_standard_30 = pd.read_csv('SummarizeResults_StandardBagging_from30ensembles.csv') # from 30 ensembles
 
 
 #################################
