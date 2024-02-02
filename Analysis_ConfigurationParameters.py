@@ -61,6 +61,64 @@ root_path = os.getcwd()
 # df_total.to_csv(nombre_csv_agg, encoding='utf_8_sig', index=False)
 
 
+
+
+##########################################################################
+########              SUMMARIZE OF ALL AGGREGATED CSVs            ########
+##########################################################################
+# Quitamos n_ensemble = 0 y 9, para empezar en 20
+# hacemos otro empezando en 30
+out_values1 = [0,9]
+out_values2 = [0,9,19]
+
+path_csv = os.chdir(root_path+'/Results_general_algorithm/Aggregated_results')
+# Extraemos los nombres de todos los ficheros
+total_name_list = []
+for filename in os.listdir(path_csv):
+    if filename.endswith('.csv') and filename.startswith('Aggregated'):
+        total_name_list.append(filename)
+
+# len(total_name_list) # 7520
+
+# General df to save all the results
+cols = ['weights','accuracy_mean_mean','accuracy_mean_median', 'accuracy_mean_std','Dataset','alpha','split']
+df_total = pd.DataFrame(columns=cols)
+i = 0
+for data_file in total_name_list:
+    i = i + 1
+    # print(data_file)
+    print(i)
+    file = data_file
+    name_data = data_file[data_file.find('AggregatedResults_CDB_') + len('AggregatedResults_CDB_'):data_file.rfind('_split')]
+    alpha = data_file[data_file.find('alpha') + len('alpha'):data_file.rfind('.csv')]
+    split = data_file[data_file.find('split') + len('split'):data_file.rfind('_alpha')]
+    data = pd.read_csv(file)
+    # data.shape
+    # Quitamos los n_ensemble que no queremos
+    # data = data[~data['n_ensemble'].isin(out_values1)] # from 20 ensembles
+    data = data[~data['n_ensemble'].isin(out_values2)]  # from 30 ensembles
+    df_summary = data.groupby(by='weights', as_index=False).agg({'accuracy_mean': [np.mean, np.median, np.std]})
+    df_summary.columns = ['weights','accuracy_mean_mean','accuracy_mean_median',  'accuracy_mean_std']
+    df_summary['Dataset'] = name_data
+    df_summary['alpha'] = alpha
+    df_summary['split'] = split
+
+    df_total = pd.concat([df_total,df_summary])
+
+# df_total.shape # 67680
+
+# Reorder columns
+df_total = df_total.reindex(columns=['Dataset', 'alpha', 'split','weights', 'accuracy_mean_mean', 'accuracy_mean_median',
+       'accuracy_mean_std'])
+# To save the results
+path_to_save = root_path+'/Results_general_algorithm'
+os.chdir(path_to_save)
+# nombre_csv_agg = 'SummarizeResults_ParameterConfiguration_CDB_from20ensembles.csv' # out_values1
+nombre_csv_agg = 'SummarizeResults_ParameterConfiguration_CDB_from30ensembles.csv' # out_values2
+df_total.to_csv(nombre_csv_agg, encoding='utf_8_sig', index=False)
+
+
+
 ##########################################################################
 ########                      SUMMARIZED CSV                      ########
 ##########################################################################
