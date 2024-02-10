@@ -26,7 +26,9 @@ df_total = pd.read_csv('SummarizeResults_ParameterConfiguration_CDB.csv')
 ### COMPLEXITY-DRIVEN BAGGING: FILTRO DE PARÁMETROS ###
 #################################
 path_csv = os.chdir(root_path+'/Results_general_algorithm')
-df_total_to_filter = pd.read_csv('SummarizeResults_ParameterConfiguration_CDB.csv')
+# df_total_to_filter = pd.read_csv('SummarizeResults_ParameterConfiguration_CDB.csv')
+# df_total_to_filter = pd.read_csv('SummarizeResults_ParameterConfiguration_CDB_from20ensembles.csv')
+df_total_to_filter = pd.read_csv('SummarizeResults_ParameterConfiguration_CDB_from30ensembles.csv')
 # este archivo ha sido previamente agregado en el script Analysis_ConfigurationParameters
 df_total_to_filter.shape
 
@@ -53,6 +55,24 @@ df_total_to_filter = df_total_to_filter[~df_total_to_filter['split'].isin(values
 values_alpha = [12,14,16,18,20,4,8]
 df_total_to_filter = df_total_to_filter[~df_total_to_filter['alpha'].isin(values_alpha)]
 values_split = [22,24,26,28,30,6,10,12,16,18]
+df_total_to_filter = df_total_to_filter[~df_total_to_filter['split'].isin(values_split)]
+
+#  Seguimos con alpha = [2,4,6,8,10] y s = [1,2,4,6,8,10,12,14] ## Filter5Params
+values_alpha = [12,14,16,18,20]
+df_total_to_filter = df_total_to_filter[~df_total_to_filter['alpha'].isin(values_alpha)]
+values_split = [16,18,20,22,24,26,28,30]
+df_total_to_filter = df_total_to_filter[~df_total_to_filter['split'].isin(values_split)]
+
+#  Seguimos con alpha = [2,4,6,8,10] y s = [1,2,4,6,8] ## Filter6Params
+values_alpha = [12,14,16,18,20]
+df_total_to_filter = df_total_to_filter[~df_total_to_filter['alpha'].isin(values_alpha)]
+values_split = [10,12,14,16,18,20,22,24,26,28,30]
+df_total_to_filter = df_total_to_filter[~df_total_to_filter['split'].isin(values_split)]
+
+#  Seguimos con alpha = [2,6,10] y s = [1,2,4,8,12,14] ## Filter7Params
+values_alpha = [12,14,16,18,20,4,8]
+df_total_to_filter = df_total_to_filter[~df_total_to_filter['alpha'].isin(values_alpha)]
+values_split = [6,10,16,18,20,22,24,26,28,30]
 df_total_to_filter = df_total_to_filter[~df_total_to_filter['split'].isin(values_split)]
 
 
@@ -107,8 +127,8 @@ df_total_to_filter = df_total_to_filter[~df_total_to_filter['split'].isin(values
 
 path_csv = os.chdir(root_path+'/Results_StandardBagging')
 # df_standard = pd.read_csv('SummarizeResults_StandardBagging.csv') ## all n_ensembles
-df_standard_20 = pd.read_csv('SummarizeResults_StandardBagging_from20ensembles.csv') # from20ensembles
-# df_standard_30 = pd.read_csv('SummarizeResults_StandardBagging_from30ensembles.csv') # from 30 ensembles
+# df_standard = pd.read_csv('SummarizeResults_StandardBagging_from20ensembles.csv') # from20ensembles
+df_standard = pd.read_csv('SummarizeResults_StandardBagging_from30ensembles.csv') # from 30 ensembles
 
 
 ################################
@@ -167,8 +187,8 @@ df_standard_20 = pd.read_csv('SummarizeResults_StandardBagging_from20ensembles.c
 
 path_csv = os.chdir(root_path+'/MixedBagging/Adapted_results')
 # df_mixed = pd.read_csv('SummarizeResults_MixedBagging.csv') # all n_trees
-df_mixed_20 = pd.read_csv('SummarizeResults_MixedBagging_from20ensembles.csv') # from 20 n_trees
-# df_mixed_30 = pd.read_csv('SummarizeResults_MixedBagging_from30ensembles.csv') # from 30 n_trees
+# df_mixed = pd.read_csv('SummarizeResults_MixedBagging_from20ensembles.csv') # from 20 n_trees
+df_mixed = pd.read_csv('SummarizeResults_MixedBagging_from30ensembles.csv') # from 30 n_trees
 
 
 
@@ -264,7 +284,7 @@ table_comparison.rename(columns = {'Table':'CDB_Best_F1'}, inplace = True)
 # path_to_save = os.chdir(root_path+'/Results_Comparison_Methods')
 # os.chdir(path_to_save)
 os.chdir(root_path+'/Results_Comparison_Methods')
-nombre_csv_agg = 'table_comparison_Filter4Params.csv'
+nombre_csv_agg = 'table_comparison_from30_Filter7Params.csv'
 table_comparison.to_csv(nombre_csv_agg, encoding='utf_8_sig', index=True)
 table_comparison
 
@@ -272,8 +292,14 @@ table_comparison
 best_param['param'] = ('a=' + best_param["alpha"].astype('str') +
                        ', s=' + best_param["split"].astype('str'))
 parameters_CM = best_param.pivot(index='Dataset', columns='weights', values='param')
-nombre_csv_agg_param = 'parameters_CM_Filter4Params.csv'
+nombre_csv_agg_param = 'parameters_CM_from30_Filter7Params.csv'
 parameters_CM.to_csv(nombre_csv_agg_param, encoding='utf_8_sig', index=True)
 
 
  # FALTA ORDENAR POR COMPLEXITY
+
+
+
+#########################################################################################################
+#####                                  PLOT OF THE EVOLUTION                                        #####
+#########################################################################################################
