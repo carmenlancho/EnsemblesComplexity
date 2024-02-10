@@ -472,3 +472,46 @@ for dataset_name in list_datasets:
 
 
 
+#########################################################
+#######         MAXIMUM AND WHEN OBTAINED         #######
+#########################################################
+############## Complexity driven Bagging
+
+df_to_plot_cdb_filtered = df_to_plot_cdb.loc[df_to_plot_cdb['n_ensemble']>10,:]
+df_to_plot_cdb_filtered.reset_index(drop=True,inplace=True)
+df_max_when_CDB_Host = df_to_plot_cdb_filtered.loc[df_to_plot_cdb_filtered.groupby(['Dataset'])["CDB_Host_accuracy"].idxmax()]
+df_max_when_CDB_Host.reset_index(drop=True,inplace=True)
+df_max_when_CDB_Host.columns = ['CDB_Host_when', 'CDB_Host_max', 'Dataset']
+
+df_to_plot_standard_filtered = df_to_plot_standard.loc[df_to_plot_standard['n_ensemble']>10,:]
+df_to_plot_standard_filtered.reset_index(drop=True,inplace=True)
+df_max_when_standard = df_to_plot_standard_filtered.loc[df_to_plot_standard_filtered.groupby(['Dataset'])["StandardBagging_accuracy"].idxmax(),:]
+df_max_when_standard.reset_index(drop=True,inplace=True)
+df_max_when_standard.columns = ['StandardBag_when', 'StandardBag_max', 'Dataset']
+
+
+df_to_plot_mixed_filtered = df_to_plot_mixed.loc[df_to_plot_mixed['n_ensemble']>10,:]
+df_to_plot_mixed_filtered.reset_index(drop=True,inplace=True)
+df_max_when_incremental = df_to_plot_mixed_filtered.loc[df_to_plot_mixed_filtered.groupby(['Dataset'])["IncrementalBagging_accuracy"].idxmax()]
+df_max_when_grouped = df_to_plot_mixed_filtered.loc[df_to_plot_mixed_filtered.groupby(['Dataset'])["GroupedBagging_accuracy"].idxmax()]
+df_max_when_grouped.drop(['IncrementalBagging_accuracy'],inplace=True,axis=1)
+df_max_when_grouped.reset_index(drop=True,inplace=True)
+df_max_when_grouped.columns = ['GroupedBag_when', 'GroupedBag_max', 'Dataset']
+df_max_when_incremental.drop(['GroupedBagging_accuracy'],inplace=True,axis=1)
+df_max_when_incremental.reset_index(drop=True,inplace=True)
+df_max_when_incremental.columns = ['IncrementalBag_when', 'Dataset', 'IncrementalBag_max']
+
+dfff = pd.merge(df_max_when_CDB_Host,df_max_when_standard,on='Dataset')
+dfff2 = pd.merge(df_max_when_grouped,df_max_when_incremental,on='Dataset')
+df_max_when = pd.merge(dfff,dfff2,on='Dataset')
+
+os.chdir(root_path+'/Results_Comparison_Methods')
+# df_max_when_CDB_Host.to_csv('df_max_when_CDB_Host.csv', encoding='utf_8_sig', index=True)
+# df_max_when_standard.to_csv('df_max_when_standard.csv', encoding='utf_8_sig', index=True)
+# df_max_when_grouped.to_csv('df_max_when_grouped.csv', encoding='utf_8_sig', index=True)
+# df_max_when_incremental.to_csv('df_max_when_incremental.csv', encoding='utf_8_sig', index=True)
+df_max_when.to_csv('df_max_when_all_methods_From20_Param6.csv', encoding='utf_8_sig', index=True)
+
+
+
+
