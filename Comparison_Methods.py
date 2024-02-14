@@ -412,26 +412,42 @@ for filename in os.listdir(path_csv):
 path_csv = os.chdir(root_path+'/Results_Comparison_Methods')
 
 best_param = pd.read_csv('best_param_from20_Filter6Params.csv')
-best_param_host = best_param.loc[best_param['weights'] == 'Hostility',['Dataset','alpha','split']]
+# best_param_host = best_param.loc[best_param['weights'] == 'Hostility',['Dataset','alpha','split']]
+
+CM_list = ['Hostility','kDN','DCP','TD_U','CLD','N1','N2','LSC','F1']
 
 path_csv = os.chdir(root_path+'/Results_general_algorithm/Aggregated_results')
 # General df to save all the results
-cols = ['n_ensemble','CDB_Host_accuracy','Dataset']
+cols = ['Dataset','CDB_Hostility_accuracy','CDB_kDN_accuracy','CDB_DCP_accuracy','CDB_TD_U_accuracy',
+    'CDB_CLD_accuracy','CDB_N1_accuracy','CDB_N2_accuracy','CDB_LSC_accuracy','CDB_F1_accuracy',
+    'n_ensemble']
 df_to_plot_cdb = pd.DataFrame(columns=cols)
 for dataset_i in list_datasets:
     print(dataset_i)
-    # file = data_file
-    alpha = best_param_host.loc[best_param_host['Dataset']==dataset_i,['alpha']].values[0]
-    split = best_param_host.loc[best_param_host['Dataset'] == dataset_i, ['split']].values[0]
-    param_to_search = dataset_i+ '_split'+str(split[0]) +'_alpha'+str(alpha[0])
+    dict_dataset = {'Dataset': dataset_i}
+    for cm in CM_list:
+        print(cm)
+        alpha = best_param.loc[(best_param['Dataset']==dataset_i) & (best_param['weights']==cm),['alpha']].values[0]
+        split = best_param.loc[(best_param['Dataset']==dataset_i) & (best_param['weights']==cm),['split']].values[0]
+        param_to_search = dataset_i+ '_split'+str(split[0]) +'_alpha'+str(alpha[0])
+        # alpha = best_param_host.loc[best_param_host['Dataset']==dataset_i,['alpha']].values[0]
+        # split = best_param_host.loc[best_param_host['Dataset'] == dataset_i, ['split']].values[0]
+        # param_to_search = dataset_i+ '_split'+str(split[0]) +'_alpha'+str(alpha[0])
 
-    matching_file = [s for s in total_name_list if param_to_search in s][0]
+        matching_file = [s for s in total_name_list if param_to_search in s][0]
 
-    data_df = pd.read_csv(matching_file)
-    data_df2 = data_df.loc[data_df['weights'] == 'Hostility', ['n_ensemble', 'accuracy_mean']].copy()
-    data_df2['Dataset'] = dataset_i
-    data_df2.columns = cols
-    df_to_plot_cdb = pd.concat([df_to_plot_cdb, data_df2])
+        data_df = pd.read_csv(matching_file)
+        # data_df2 = data_df.loc[data_df['weights'] == cm, ['n_ensemble', 'accuracy_mean']].copy()
+        data_df2 = data_df.loc[data_df['weights'] == cm, ['n_ensemble', 'accuracy_mean']].copy()
+        var_dict = 'CDB_'+ str(cm)+'_accuracy'
+        dict_dataset[var_dict] = np.array(data_df2['accuracy_mean'])
+
+        # data_df2['Dataset'] = dataset_i
+        # data_df2.columns = cols
+        # df_to_plot_cdb = pd.concat([df_to_plot_cdb, data_df2])
+    dict_dataset['n_ensemble'] = np.array(data_df2['n_ensemble'])
+    df_dataset = pd.DataFrame(dict_dataset)
+    df_to_plot_cdb = pd.concat([df_to_plot_cdb, df_dataset])
 
 
 df_to_plot_cdb.reset_index(drop=True,inplace=True)
@@ -445,20 +461,38 @@ def plot_acc_ensembles(dataset_name, path_to_save):
     data_plot_cbd = df_to_plot_cdb.loc[(df_to_plot_cdb['Dataset'] == dataset_name) & (df_to_plot_cdb['n_ensemble']>10)]
     df_plot_mixed = df_to_plot_mixed.loc[(df_to_plot_mixed['Dataset'] == dataset_name) & (df_to_plot_mixed['n_ensemble']>10)]
 
-    plt.plot(data_plot_standard['n_ensemble'],data_plot_standard['StandardBagging_accuracy'],'P', linestyle = 'dotted',
-             label = 'Standard Bagging',color = 'k')
-    plt.plot(data_plot_cbd['n_ensemble'],data_plot_cbd['CDB_Host_accuracy'],'o', linestyle = 'dashed',
+
+    plt.plot(data_plot_cbd['n_ensemble'],data_plot_cbd['CDB_Hostility_accuracy'],'.', linestyle = 'dashed',
              label = 'CDB_Hostility',color='orange')
+    plt.plot(data_plot_cbd['n_ensemble'],data_plot_cbd['CDB_kDN_accuracy'],'.', linestyle = 'dashed',
+             label = 'CDB_kDN',color='tomato')
+    plt.plot(data_plot_cbd['n_ensemble'],data_plot_cbd['CDB_DCP_accuracy'],'.', linestyle = 'dashed',
+             label = 'CDB_DCP',color='gold')
+    plt.plot(data_plot_cbd['n_ensemble'],data_plot_cbd['CDB_TD_U_accuracy'],'.', linestyle = 'dashed',
+             label = 'CDB_TD_U',color='salmon')
+    plt.plot(data_plot_cbd['n_ensemble'],data_plot_cbd['CDB_CLD_accuracy'],'.', linestyle = 'dashed',
+             label = 'CDB_CLD',color='pink')
+    plt.plot(data_plot_cbd['n_ensemble'],data_plot_cbd['CDB_N1_accuracy'],'.', linestyle = 'dashed',
+             label = 'CDB_N1',color='violet')
+    plt.plot(data_plot_cbd['n_ensemble'],data_plot_cbd['CDB_N2_accuracy'],'.', linestyle = 'dashed',
+             label = 'CDB_N2',color='coral')
+    plt.plot(data_plot_cbd['n_ensemble'],data_plot_cbd['CDB_LSC_accuracy'],'.', linestyle = 'dashed',
+             label = 'CDB_LSC',color='orchid')
+    plt.plot(data_plot_cbd['n_ensemble'],data_plot_cbd['CDB_F1_accuracy'],'.', linestyle = 'dashed',
+             label = 'CDB_F1',color='lightcoral')
+    plt.plot(data_plot_standard['n_ensemble'],data_plot_standard['StandardBagging_accuracy'],'P', linestyle = 'dotted',
+             label = 'Bagging',color = 'k')
     plt.plot(df_plot_mixed['n_ensemble'],df_plot_mixed['GroupedBagging_accuracy'],'^', linestyle = 'dotted',
-             label = 'Grouped_Mixed_Bagging',color = 'c')
-    plt.plot(df_plot_mixed['n_ensemble'],df_plot_mixed['IncrementalBagging_accuracy'],'s', linestyle = 'dashed',
-             label = 'Incremental_Mixed_Bagging',color='red')
-    plt.legend()
+             label = 'Grouped',color = 'dimgray')
+    plt.plot(df_plot_mixed['n_ensemble'],df_plot_mixed['IncrementalBagging_accuracy'],'s', linestyle = 'dotted',
+             label = 'Incremental',color='darkolivegreen')
+    plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.05),
+               ncol=4)
     plt.title(dataset_name)
     plt.tight_layout()
     # plt.show()
     os.chdir(path_to_save)
-    plt.savefig('Accuracy_evolution_From20Ensembles_Host_' + str(dataset_name) + '.png')
+    plt.savefig('Accuracy_evolution_From20Ensembles_' + str(dataset_name) + '.png')
     plt.clf()
 
     return
