@@ -194,5 +194,28 @@ table_comparison.rename(columns = {'accuracy_mean_mean':'CDB_F1_mean',
 # Deletion of multiclass problems (segment, cleveland and analcatdata_authorship)
 table_comparison.drop(['analcatdata_authorship', 'cleveland', 'segment'], inplace=True)
 
+table_comparison_mean = table_comparison.loc[:,table_comparison.columns[table_comparison.columns.str.endswith('mean')]]
 
+methods = ['Standard_Bag_mean','Grouped_Bag_mean','Incre_Bag_mean','CDB_Host_mean',
+           'CDB_kDN_mean','CDB_CLD_mean','CDB_LSC_mean','CDB_N1_mean','CDB_N2_mean',
+           'CDB_DCP_mean','CDB_TD_U_mean','CDB_F1_mean']
+method = 'CDB_Host_mean'
+df_mean = table_comparison_mean
+def rank_df(df_mean, method, methods=methods):
+    rank_index = [i for i in methods if i != method]
+    wtl_df = pd.DataFrame(index=rank_index,
+                          columns=['Wins', 'Ties', 'Losses'])
+    for i in rank_index:
+        wtl_df.loc[i, 'Wins'] = sum(df_mean[method] > df_mean[i])
+        wtl_df.loc[i, 'Losses'] = sum(df_mean[method] < df_mean[i])
+        wtl_df.loc[i, 'Ties'] = len(df_mean) - wtl_df.loc[i, 'Wins'] - wtl_df.loc[i, 'Losses']
+    wtl_plot = wtl_df.copy()
+    wtl_plot['Ties'] = wtl_df['Wins'] + wtl_df['Ties']
+    wtl_plot['Losses'] = wtl_plot['Ties'] + wtl_df['Losses']
 
+    return wtl_df, wtl_plot
+
+total_dict = {}
+for method_i in methods:
+    wtl_df,_ = rank_df(table_comparison_mean, method_i, methods=methods)
+    total_dict[method_i] = wtl_df
