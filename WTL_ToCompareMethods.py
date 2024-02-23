@@ -484,8 +484,11 @@ n_trees = 29
 _, table_comparison_n_trees = Results_n_ensembles(df_cdb, df_mixed, df_standard, n_trees)
 
 
-
-
+#### WTL
+total_dict_30 = {}
+for method_i in methods:
+    wtl_df,_ = rank_df(table_comparison_n_trees, method_i, methods=methods)
+    total_dict_30[method_i] = wtl_df
 
 
 
