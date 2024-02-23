@@ -219,3 +219,273 @@ total_dict = {}
 for method_i in methods:
     wtl_df,_ = rank_df(table_comparison_mean, method_i, methods=methods)
     total_dict[method_i] = wtl_df
+
+
+#### Hacemos lo mismo pero con distintos n_ensemble: 20, 50, 100, 150, 200
+
+##########################################################################
+########              RESULTS FROM CDB WITH DIFFERENT TREES            ########
+##########################################################################
+# el tamaño de ensamblado que queremos
+# el mínimo es 20 por el tema de cubrir el espacio de complejidad en función del parámetro split
+# desired_ntrees = [19,29,49,99,149,199]
+#
+# path_csv = os.chdir(root_path+'/Results_general_algorithm/Aggregated_results')
+# # Extraemos los nombres de todos los ficheros
+# # Filtramos en función de los parámetros que queremos
+# alphas_v= ['alpha2','alpha4','alpha6','alpha8','alpha10']
+# split_v= ['split1','split2','split4','split6','split8']
+# total_name_list = []
+# for filename in os.listdir(path_csv):
+#     if filename.endswith('.csv') and filename.startswith('Aggregated') and (any(alpha_text in filename for alpha_text in alphas_v)) and (any(split_text in filename for split_text in split_v)):
+#         total_name_list.append(filename)
+#
+# len(total_name_list)
+#
+# # General df to save all the results
+# cols = ['n_ensemble','weights','accuracy_mean', 'accuracy_std','Dataset','alpha','split']
+# df_total = pd.DataFrame(columns=cols)
+# # i=0
+# for data_file in total_name_list:
+#     # i = i+1
+#     # print(i)
+#     # print(data_file)
+#     file = data_file
+#     name_data = data_file[data_file.find('AggregatedResults_CDB_') + len('AggregatedResults_CDB_'):data_file.rfind('_split')]
+#     alpha = data_file[data_file.find('alpha') + len('alpha'):data_file.rfind('.csv')]
+#     split = data_file[data_file.find('split') + len('split'):data_file.rfind('_alpha')]
+#     data = pd.read_csv(file)
+#     # data.shape
+#     # # Solo queremos los n_ensembles 20,30,50,100,150,200
+#     data = data[data['n_ensemble'].isin(desired_ntrees)] # from 20 ensembles
+#     # Selection of columnas
+#     data_filter = data[['n_ensemble','weights','accuracy_mean', 'accuracy_std']]
+#     data_filter.insert(4, "Dataset", name_data)
+#     data_filter.insert(5, "alpha", alpha)
+#     data_filter.insert(6, "split", split)
+#
+#     df_total = pd.concat([df_total,data_filter])
+#
+# # df_total.shape
+# df_total.columns
+# # Reorder columns
+# df_total = df_total.reindex(columns=['Dataset','n_ensemble', 'alpha', 'split','weights', 'accuracy_mean', 'accuracy_std'])
+# df_total.reset_index(drop=True,inplace=True)
+# # To save the results
+# path_to_save = root_path+'/Results_general_algorithm'
+# os.chdir(path_to_save)
+# nombre_csv = 'Results_CDB_Filter6Parameters_20_30_50_100_150_200_ensembles.csv'
+# df_total.to_csv(nombre_csv, encoding='utf_8_sig', index=False)
+
+
+
+
+
+
+################################
+##      STANDARD BAGGING     ###
+################################
+# path_csv = os.chdir(root_path+'/Results_StandardBagging')
+#
+# # Extraemos los nombres de todos los ficheros
+# total_name_list = []
+# for filename in os.listdir(path_csv):
+#     if filename.endswith('.csv') and filename.startswith('Aggregated'):
+#         total_name_list.append(filename)
+# # len(total_name_list)
+#
+#
+# desired_ntrees = [19,29,49,99,149,199]
+#
+# # General df to save all the results
+# cols = ['n_ensemble','weights','accuracy_mean', 'accuracy_std','Dataset']
+# df_standard = pd.DataFrame(columns=cols)
+# for data_file in total_name_list:
+#     # print(data_file)
+#     file = data_file
+#     name_data = data_file[data_file.find('AggregatedResults_StandardBagging_') +
+#                           len('AggregatedResults_StandardBagging_'):data_file.rfind('.csv')]
+#     data = pd.read_csv(file)
+#     # Solo queremos los n_ensembles 20,30,50,100,150,200
+#     data = data[data['n_ensemble'].isin(desired_ntrees)] # from 20 ensembles
+#     # Selection of columnas
+#     data_filter = data[['n_ensemble','weights','accuracy_mean', 'accuracy_std']]
+#     data_filter.insert(4, "Dataset", name_data)
+#     df_standard = pd.concat([df_standard,data_filter])
+#
+# # To save the results
+# path_to_save = root_path+'/Results_StandardBagging'
+# os.chdir(path_to_save)
+# nombre_csv = 'Results_StandardBagging_20_30_50_100_150_200_ensembles.csv.csv'
+# df_standard.to_csv(nombre_csv, encoding='utf_8_sig', index=False)
+
+path_csv = os.chdir(root_path+'/Results_StandardBagging')
+df_standard = pd.read_csv('Results_StandardBagging_20_30_50_100_150_200_ensembles.csv')
+
+
+
+
+
+################################
+##       MIXED BAGGING       ###
+################################
+
+# path_csv = os.chdir(root_path+'/MixedBagging/Adapted_results')
+#
+# # Extraemos los nombres de todos los ficheros
+# total_name_list = []
+# for filename in os.listdir(path_csv):
+#     if filename.endswith('.csv') and filename.startswith('Mixed_Bagging_aggregated'):
+#         total_name_list.append(filename)
+#
+#
+# desired_ntrees = [20,30,50,100,150,200]
+#
+# # General df to save all the results
+# cols = ['n_trees','model','perf_value_mean', 'perf_value_std','Dataset']
+# df_mixed = pd.DataFrame(columns=cols)
+#
+# for data_file in total_name_list:
+#     print(data_file)
+#     file = data_file
+#     name_data = data_file[data_file.find('Mixed_Bagging_aggregated_') +
+#                           len('Mixed_Bagging_aggregated_'):data_file.rfind('.csv')]
+#     data = pd.read_csv(file)
+#
+#     # Solo queremos los n_ensembles 20,30,50,100,150,200
+#     data = data[data['n_trees'].isin(desired_ntrees)] # from 20 ensembles
+#     # For now, we only keep Grouped_Mixed_Bagging, Incremental_Mixed_Bagging and accuracy
+#     models_v = ['Grouped_Mixed_Bagging', 'Incremental_Mixed_Bagging']
+#     perf_v = ['acc']
+#     data_filter = data[data['model'].isin(models_v) & data['perf_measure'].isin(perf_v)]
+#     # Selection of columnas
+#     data_filter = data_filter[['n_trees','model','perf_value_mean', 'perf_value_std']]
+#     data_filter.insert(4, "Dataset", name_data)
+#     df_mixed = pd.concat([df_mixed,data_filter])
+#
+# df_mixed.rename(columns={'perf_value_mean': 'accuracy_mean', 'perf_value_std': 'accuracy_std'}, inplace=True)
+#
+#
+# # To save the results
+# # path_to_save = os.chdir(root_path+'/MixedBagging/Adapted_results')
+# # os.chdir(path_to_save)
+# os.chdir(root_path+'/MixedBagging/Adapted_results')
+# nombre_csv = 'Results_MixedBagging_20_30_50_100_150_200_ensembles.csv' # out_values2
+# df_mixed.to_csv(nombre_csv, encoding='utf_8_sig', index=False)
+
+path_csv = os.chdir(root_path+'/MixedBagging/Adapted_results')
+df_mixed = pd.read_csv('Results_MixedBagging_20_30_50_100_150_200_ensembles.csv') # from 20 n_trees
+
+
+
+
+
+# Me quedo con el número de ensamblados que quiero y selecciono los mejores parámetros
+
+def Results_n_ensembles(df_cdb, df_mixed, df_standard, n_trees):
+
+    # Filter
+    df_cdb_trees = df_cdb[df_cdb['n_ensemble'] == n_trees]
+    df_standard_trees = df_standard[df_standard['n_ensemble'] == n_trees]
+    df_mixed_trees = df_mixed[df_mixed['n_trees'] == (n_trees+1)]
+
+    table_comparison = pd.DataFrame(columns=['Dataset', 'Standard_Bag_mean', 'Standard_Bag_std'])
+    table_comparison['Dataset'] = df_standard_trees['Dataset']
+    table_comparison['Standard_Bag_mean'] = df_standard_trees["accuracy_mean"]
+    table_comparison['Standard_Bag_std'] = df_standard_trees["accuracy_std"]
+    table_comparison.set_index('Dataset', inplace=True)
+
+    ## Grouped and incremented
+    df_mixed_aux = df_mixed_trees.loc[df_mixed_trees['model'] == 'Grouped_Mixed_Bagging',
+    ['Dataset', 'accuracy_mean', 'accuracy_std']]
+    df_mixed_aux.columns = ['Dataset', 'Grouped_accuracy_mean', 'Grouped_accuracy_std']
+    df_mixed_inc = df_mixed_trees.loc[df_mixed_trees['model'] == 'Incremental_Mixed_Bagging',
+    ['Dataset', 'accuracy_mean', 'accuracy_std']]
+    df_mixed_inc.columns = ['Dataset', 'Incremental_accuracy_mean', 'Incremental_accuracy_std']
+    df_mixed_aux.set_index('Dataset', inplace=True)
+    df_mixed_inc.set_index('Dataset', inplace=True)
+
+    table_comparison = table_comparison.join(df_mixed_aux[['Grouped_accuracy_mean', 'Grouped_accuracy_std']])
+    table_comparison = table_comparison.join(
+        df_mixed_inc[['Incremental_accuracy_mean', 'Incremental_accuracy_std']])
+    table_comparison.columns = ['Standard_Bag_mean', 'Standard_Bag_std', 'Grouped_Bag_mean', 'Grouped_Bag_std',
+                                'Incre_Bag_mean', 'Incre_Bag_std']
+
+    ## Best parameters per dataset in CDB
+    best_param = df_cdb_trees.loc[df_cdb_trees.groupby(["Dataset", "weights"])["accuracy_mean"].idxmax()]
+
+    # Hostility
+    df_aux = best_param.loc[
+        best_param['weights'] == 'Hostility', ['Dataset', 'accuracy_mean', 'accuracy_std']]
+    df_aux.set_index('Dataset', inplace=True)
+    table_comparison = table_comparison.join(df_aux[['accuracy_mean', 'accuracy_std']])
+    table_comparison.rename(columns={'accuracy_mean': 'CDB_Host_mean',
+                                     'accuracy_std': 'CDB_Host_std'}, inplace=True)
+    # kDN
+    df_aux = best_param.loc[best_param['weights'] == 'kDN', ['Dataset', 'accuracy_mean', 'accuracy_std']]
+    df_aux.set_index('Dataset', inplace=True)
+    table_comparison = table_comparison.join(df_aux[['accuracy_mean', 'accuracy_std']])
+    table_comparison.rename(columns={'accuracy_mean': 'CDB_kDN_mean',
+                                     'accuracy_std': 'CDB_kDN_std'}, inplace=True)
+    # CLD
+    df_aux = best_param.loc[best_param['weights'] == 'CLD', ['Dataset', 'accuracy_mean', 'accuracy_std']]
+    df_aux.set_index('Dataset', inplace=True)
+    table_comparison = table_comparison.join(df_aux[['accuracy_mean', 'accuracy_std']])
+    table_comparison.rename(columns={'accuracy_mean': 'CDB_CLD_mean',
+                                     'accuracy_std': 'CDB_CLD_std'}, inplace=True)
+    # LSC
+    df_aux = best_param.loc[best_param['weights'] == 'LSC', ['Dataset', 'accuracy_mean', 'accuracy_std']]
+    df_aux.set_index('Dataset', inplace=True)
+    table_comparison = table_comparison.join(df_aux[['accuracy_mean', 'accuracy_std']])
+    table_comparison.rename(columns={'accuracy_mean': 'CDB_LSC_mean',
+                                     'accuracy_std': 'CDB_LSC_std'}, inplace=True)
+    # N1
+    df_aux = best_param.loc[best_param['weights'] == 'N1', ['Dataset', 'accuracy_mean', 'accuracy_std']]
+    df_aux.set_index('Dataset', inplace=True)
+    table_comparison = table_comparison.join(df_aux[['accuracy_mean', 'accuracy_std']])
+    table_comparison.rename(columns={'accuracy_mean': 'CDB_N1_mean',
+                                     'accuracy_std': 'CDB_N1_std'}, inplace=True)
+    # N2
+    df_aux = best_param.loc[best_param['weights'] == 'N2', ['Dataset', 'accuracy_mean', 'accuracy_std']]
+    df_aux.set_index('Dataset', inplace=True)
+    table_comparison = table_comparison.join(df_aux[['accuracy_mean', 'accuracy_std']])
+    table_comparison.rename(columns={'accuracy_mean': 'CDB_N2_mean',
+                                     'accuracy_std': 'CDB_N2_std'}, inplace=True)
+    # DCP
+    df_aux = best_param.loc[best_param['weights'] == 'DCP', ['Dataset', 'accuracy_mean', 'accuracy_std']]
+    df_aux.set_index('Dataset', inplace=True)
+    table_comparison = table_comparison.join(df_aux[['accuracy_mean', 'accuracy_std']])
+    table_comparison.rename(columns={'accuracy_mean': 'CDB_DCP_mean',
+                                     'accuracy_std': 'CDB_DCP_std'}, inplace=True)
+    # TD_U
+    df_aux = best_param.loc[best_param['weights'] == 'TD_U', ['Dataset', 'accuracy_mean', 'accuracy_std']]
+    df_aux.set_index('Dataset', inplace=True)
+    table_comparison = table_comparison.join(df_aux[['accuracy_mean', 'accuracy_std']])
+    table_comparison.rename(columns={'accuracy_mean': 'CDB_TD_U_mean',
+                                     'accuracy_std': 'CDB_TD_U_std'}, inplace=True)
+    # F1
+    df_aux = best_param.loc[best_param['weights'] == 'F1', ['Dataset', 'accuracy_mean', 'accuracy_std']]
+    df_aux.set_index('Dataset', inplace=True)
+    table_comparison = table_comparison.join(df_aux[['accuracy_mean', 'accuracy_std']])
+    table_comparison.rename(columns={'accuracy_mean': 'CDB_F1_mean',
+                                     'accuracy_std': 'CDB_F1_std'}, inplace=True)
+
+
+    table_comparison_mean = table_comparison.loc[:,
+                            table_comparison.columns[table_comparison.columns.str.endswith('mean')]]
+
+    return table_comparison, table_comparison_mean
+
+
+path_csv = os.chdir(root_path+'/Results_general_algorithm')
+df_cdb = pd.read_csv('Results_CDB_Filter6Parameters_20_30_50_100_150_200_ensembles.csv')
+
+n_trees = 29
+_, table_comparison_n_trees = Results_n_ensembles(df_cdb, df_mixed, df_standard, n_trees)
+
+
+
+
+
+
+
