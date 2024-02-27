@@ -486,9 +486,15 @@ _, table_comparison_n_trees = Results_n_ensembles(df_cdb, df_mixed, df_standard,
 
 #### WTL
 total_dict_30 = {}
+total_dict_30_str = {}
 for method_i in methods:
     wtl_df,_ = rank_df(table_comparison_n_trees, method_i, methods=methods)
+    wtl_df_str = pd.DataFrame()
+    wtl_df_str['wtl'] = "(" + wtl_df.apply(lambda row: ','.join(row.values.astype(str)), axis=1) + ")"
     total_dict_30[method_i] = wtl_df
+    total_dict_30_str[method_i] = wtl_df_str
+
+total_dict_30_str['CDB_DCP_mean'].T
 
 
 
