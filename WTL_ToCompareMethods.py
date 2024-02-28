@@ -480,21 +480,55 @@ def Results_n_ensembles(df_cdb, df_mixed, df_standard, n_trees):
 path_csv = os.chdir(root_path+'/Results_general_algorithm')
 df_cdb = pd.read_csv('Results_CDB_Filter6Parameters_20_30_50_100_150_200_ensembles.csv')
 
-n_trees = 29
-_, table_comparison_n_trees = Results_n_ensembles(df_cdb, df_mixed, df_standard, n_trees)
+
+# # Ejemplito
+# n_trees = 29
+# _, table_comparison_n_trees = Results_n_ensembles(df_cdb, df_mixed, df_standard, n_trees)
+#
+#
+# #### WTL
+# total_dict_30 = {}
+# total_dict_30_str = {}
+# for method_i in methods:
+#     wtl_df,_ = rank_df(table_comparison_n_trees, method_i, methods=methods)
+#     wtl_df_str = pd.DataFrame()
+#     wtl_df_str['wtl'] = "(" + wtl_df.apply(lambda row: ','.join(row.values.astype(str)), axis=1) + ")"
+#     total_dict_30[method_i] = wtl_df
+#     total_dict_30_str[method_i] = wtl_df_str
+#
+# total_dict_30_str['CDB_DCP_mean'].T
 
 
-#### WTL
-total_dict_30 = {}
-total_dict_30_str = {}
-for method_i in methods:
-    wtl_df,_ = rank_df(table_comparison_n_trees, method_i, methods=methods)
-    wtl_df_str = pd.DataFrame()
-    wtl_df_str['wtl'] = "(" + wtl_df.apply(lambda row: ','.join(row.values.astype(str)), axis=1) + ")"
-    total_dict_30[method_i] = wtl_df
-    total_dict_30_str[method_i] = wtl_df_str
+### Sacamos los resultados para distintos cortes
+n_trees_v = [19,29,49,99,149,199]
 
-total_dict_30_str['CDB_DCP_mean'].T
+total_dict_str = {}
+for n_trees in n_trees_v:
+    n_trees_str = str(n_trees+1)
+    _, table_comparison_n_trees = Results_n_ensembles(df_cdb, df_mixed, df_standard, n_trees)
+    total_dict_ntrees = {}
+    total_dict_ntrees_str = {}
+    for method_i in methods:
+        wtl_df, _ = rank_df(table_comparison_n_trees, method_i, methods=methods)
+        wtl_df_str = pd.DataFrame()
+        wtl_df_str['wtl'] = "(" + wtl_df.apply(lambda row: ','.join(row.values.astype(str)), axis=1) + ")"
+        total_dict_ntrees[method_i] = wtl_df
+        total_dict_ntrees_str[method_i] = wtl_df_str
+    total_dict_str[n_trees_str] = total_dict_ntrees_str
 
+
+
+# n_trees_index = list(total_dict_str.keys())
+methods_CM = methods[3:]
+dict_to_table = {}
+for method_i in methods_CM:
+    df_to_append = pd.DataFrame()
+    for k in total_dict_str.keys():
+        df_to_append = pd.concat([df_to_append,pd.DataFrame(total_dict_str[k][method_i].T)])
+    df_to_append.index = list(total_dict_str.keys())
+    dict_to_table[method_i] = df_to_append
+
+
+dict_to_table['CDB_TD_U_mean']
 
 
