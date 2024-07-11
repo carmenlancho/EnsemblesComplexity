@@ -9,7 +9,7 @@ import random # for sampling with weights
 from sklearn import preprocessing
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import confusion_matrix, accuracy_score
-from aux_functions import aggregation_results_final_algorith
+from aux_functions import aggregation_results_final_algorithm_cycle
 import math
 import multiprocessing as mp
 
@@ -51,11 +51,22 @@ split =10
 length_cycle = 2*split + 1
 max_n_models = 200
 n_cycles = math.ceil(max_n_models/length_cycle) # algunos se pasan mucho, ya lo gestionaremos
-cycles_vector = length_cycle
+#cycles_vector = length_cycle
 n_models = n_cycles*length_cycle
 n_ensembles_v = list(np.arange(length_cycle-1, n_models, length_cycle))
 
-def ComplexityDrivenBagging_cycles(data,n_ensembles, n_ensembles_v, name_data,path_to_save, split, stump,alpha):
+def ComplexityDrivenBagging_cycles(data,max_n_models, name_data,path_to_save, split, stump,alpha):
+    # n_ensembles = n_models
+
+    # Cycles management
+    length_cycle = 2 * split + 1
+    n_cycles = math.ceil(max_n_models / length_cycle)  # algunos se pasan mucho, ya lo gestionaremos
+    n_models = n_cycles * length_cycle
+    n_ensembles_v = list(np.arange(length_cycle - 1, n_models, length_cycle))
+    #num_cycles_v = list(np.arange(1, n_cycles+1, 1))
+
+
+
 
     # X, y
     X = data.iloc[:,:-1].to_numpy() # all variables except y
@@ -63,7 +74,7 @@ def ComplexityDrivenBagging_cycles(data,n_ensembles, n_ensembles_v, name_data,pa
     y = data[['y']].to_numpy()
 
     # dataframe to save the results
-    results = pd.DataFrame(columns=['dataset','fold','n_ensemble','weights','confusion_matrix','accuracy',
+    results = pd.DataFrame(columns=['dataset','fold','n_cycle','n_ensemble','weights','confusion_matrix','accuracy',
                                     'Boots_Hostility_dataset','Boots_kDN_dataset','Boots_DCP_dataset',
                                     'Boots_TD_U_dataset','Boots_CLD_dataset', 'Boots_N1_dataset',
                                     'Boots_N2_dataset','Boots_LSC_dataset','Boots_F1_dataset',
@@ -143,7 +154,7 @@ def ComplexityDrivenBagging_cycles(data,n_ensembles, n_ensembles_v, name_data,pa
             ensemble_preds = pd.DataFrame()
             # i = 0
             j = 0
-            for i in range(n_ensembles):
+            for i in range(n_models):
 
                 # print(i)
                 # Get bootstrap sample following CM_weights
@@ -217,7 +228,8 @@ def ComplexityDrivenBagging_cycles(data,n_ensembles, n_ensembles_v, name_data,pa
 
 
                 if (i in n_ensembles_v):
-                    results_dict = {'dataset':name_data,'fold':fold, 'n_ensemble':i, 'weights':CM_selected,
+                    num_cycles = n_ensembles_v.index(i) + 1
+                    results_dict = {'dataset':name_data,'fold':fold,'n_cycle': num_cycles, 'n_ensemble':i, 'weights':CM_selected,
                                         'confusion_matrix':[conf_matrix], 'accuracy':acc,
                                         'Boots_Hostility_dataset':Boots_Hostility_dataset,
                                         'Boots_kDN_dataset': Boots_kDN_dataset,
@@ -247,7 +259,7 @@ def ComplexityDrivenBagging_cycles(data,n_ensembles, n_ensembles_v, name_data,pa
     results.to_csv(nombre_csv, encoding='utf_8_sig',index=False)
 
     ##### Agregation of results
-    df_aggre = aggregation_results_final_algorith(results)
+    df_aggre = aggregation_results_final_algorithm_cycle(results)
 
     # To save the results
     os.chdir(path_to_save)
@@ -305,10 +317,10 @@ total_name_list = ['diabetes.csv']
 # split_v = [1,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30] # s=1 base case
 #
 alpha_v = [2]
-split_v = [1] # s=1 base case
+split_v = [4] # s=1 base case
 
 
-
+path_to_save = root_path + '/Results_general_algorithm_cycles'
 
 for data_file in total_name_list:
     os.chdir(root_path + '/datasets')
@@ -322,10 +334,10 @@ for data_file in total_name_list:
             # split = 1
             print(split)
             # alpha = 0
-            results, df_aggre = ComplexityDrivenBagging(data,n_ensembles,n_ensembles_v, name_data,path_to_save, split, stump,alpha)
+            results, df_aggre = ComplexityDrivenBagging_cycles(data,max_n_models, name_data,path_to_save, split, stump,alpha)
 
 
-
+###############--------------------- PARALELIZADO ---------------------###############
 
 def results_ComplexityBagging(data_file):
     n_ensembles = 200  # maximum number of ensembles to consider (later we plot and stop when we want)
@@ -362,7 +374,7 @@ with mp.Pool(processes = N-20) as p:
         p.map(results_ComplexityBagging, [data_file for data_file in total_name_list])
         # p.close()
 
-
+###############--------------------- PARALELIZADO ---------------------###############
 
 # with Pool(processes=8) as p, tqdm(total=len(parallel_args)) as pbar:
 #     for _ in tqdm(enumerate(p.imap_unordered(run_experiment, parallel_args))):
