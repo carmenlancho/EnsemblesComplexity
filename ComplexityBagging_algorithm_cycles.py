@@ -376,29 +376,3 @@ with mp.Pool(processes = N-20) as p:
 
 ###############--------------------- PARALELIZADO ---------------------###############
 
-# with Pool(processes=8) as p, tqdm(total=len(parallel_args)) as pbar:
-#     for _ in tqdm(enumerate(p.imap_unordered(run_experiment, parallel_args))):
-#         pbar.update()
-#
-#
-# from multiprocessing import Pool
-#
-# L1 = [1,2,3]
-# L2 = [3,4,5]
-# L3 = [5,6,7]
-#
-# def f(li):
-#     return [x * 2 for x in li]
-#
-# if __name__ == '__main__':
-#     with Pool(4) as pool:
-#         print(pool.map(f, [L1, L2, L3]))
-#
-# name1 = 'ionosphere.csv'
-# name2 = 'mammographic.csv'
-# start_time = time.time()
-# if __name__ == '__main__':
-#     with Pool(4) as pool:
-#         print(pool.map(results_ComplexityBagging, total_name_list))
-#
-# print("--- %s seconds ---" % (time.time() - start_time))
