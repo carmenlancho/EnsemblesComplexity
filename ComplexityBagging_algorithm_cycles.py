@@ -91,7 +91,7 @@ def ComplexityDrivenBagging_cycles(data,max_n_models, name_data,path_to_save, sp
     fold = 0
     for train_index, test_index in skf.split(X, y):
         fold = fold + 1
-        print(fold)
+        # print(fold)
         # print(train_index)
         # print(test_index)
         X_train, X_test = X[train_index], X[test_index]
