@@ -47,13 +47,13 @@ def voting_rule(preds):
 
 
 #### Con esto estaría hecho por ciclos
-split =10
-length_cycle = 2*split + 1
-max_n_models = 200
-n_cycles = math.ceil(max_n_models/length_cycle) # algunos se pasan mucho, ya lo gestionaremos
-#cycles_vector = length_cycle
-n_models = n_cycles*length_cycle
-n_ensembles_v = list(np.arange(length_cycle-1, n_models, length_cycle))
+# split = 16
+# length_cycle = 2*split + 1
+# max_n_models = 200
+# n_cycles = math.ceil(max_n_models/length_cycle) # algunos se pasan mucho, ya lo gestionaremos
+# #cycles_vector = length_cycle
+# n_models = n_cycles*length_cycle
+# n_ensembles_v = list(np.arange(length_cycle-1, n_models, length_cycle))
 
 def ComplexityDrivenBagging_cycles(data,max_n_models, name_data,path_to_save, split, stump,alpha):
     # n_ensembles = n_models
@@ -71,7 +71,7 @@ def ComplexityDrivenBagging_cycles(data,max_n_models, name_data,path_to_save, sp
     # X, y
     X = data.iloc[:,:-1].to_numpy() # all variables except y
     X = preprocessing.scale(X)
-    y = data[['y']].to_numpy()
+    y = data[['y']].to_numpy().reshape(-1)
 
     # dataframe to save the results
     results = pd.DataFrame(columns=['dataset','fold','n_cycle','n_ensemble','weights','confusion_matrix','accuracy',
@@ -283,7 +283,7 @@ for filename in os.listdir(path_csv):
 # yeast da problemas porque una clase es muy pequeña y no aparece en todos los folds (creo que tb es por DCP)
 # haberman da problemas y es por DCP que da solo dos valores y concuerdan con la y
 
-total_name_list = ['diabetes.csv']
+# total_name_list = ['diabetes.csv']
 
 # total_name_list = [#'teaching_assistant_MH.csv','contraceptive_NL.csv','hill_valley_without_noise_traintest.csv',
 #  # 'breast-w.csv','contraceptive_LS.csv','ilpd.csv','phoneme.csv',
@@ -316,38 +316,37 @@ total_name_list = ['diabetes.csv']
 # alpha_v = [2,4,6,8,10,12,14,16,18,20]
 # split_v = [1,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30] # s=1 base case
 #
-alpha_v = [2]
-split_v = [4] # s=1 base case
+# alpha_v = [2]
+# split_v = [4] # s=1 base case
+# max_n_models = 200 # 300
+#
 
-
-path_to_save = root_path + '/Results_general_algorithm_cycles'
-
-for data_file in total_name_list:
-    os.chdir(root_path + '/datasets')
-    print(data_file)
-    file = data_file
-    name_data = data_file[:-4]
-    data = pd.read_csv(file)
-    stump = 'no'
-    for alpha in alpha_v:
-        for split in split_v:
-            # split = 1
-            print(split)
-            # alpha = 0
-            results, df_aggre = ComplexityDrivenBagging_cycles(data,max_n_models, name_data,path_to_save, split, stump,alpha)
+# path_to_save = root_path + '/Results_general_algorithm_cycles'
+#
+# for data_file in total_name_list:
+#     os.chdir(root_path + '/datasets')
+#     print(data_file)
+#     file = data_file
+#     name_data = data_file[:-4]
+#     data = pd.read_csv(file)
+#     stump = 'no'
+#     for alpha in alpha_v:
+#         for split in split_v:
+#             # split = 1
+#             print(split)
+#             # alpha = 0
+#             results, df_aggre = ComplexityDrivenBagging_cycles(data,max_n_models, name_data,path_to_save, split, stump,alpha)
 
 
 ###############--------------------- PARALELIZADO ---------------------###############
 
 def results_ComplexityBagging(data_file):
-    n_ensembles = 200  # maximum number of ensembles to consider (later we plot and stop when we want)
-    n_ensembles_v = [0, 9, 19, 29, 39, 49, 59, 69, 79, 89, 99,
-                     109, 119, 129, 139, 149, 159, 169, 179, 189, 199]
-    # alpha_v = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
-    # split_v = [1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30]  # s=1 base case
-    alpha_v = [20]
-    split_v = [26, 28, 30]  # s=1 base case
-    path_to_save = root_path + '/Results_general_algorithm'
+    max_n_models = 300 # maximum number of ensembles to consider (later we plot and stop when we want)
+    alpha_v = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+    split_v = [1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30]  # s=1 base case
+    # alpha_v = [20]
+    # split_v = [26, 28, 30]  # s=1 base case
+    path_to_save = root_path + '/Results_general_algorithm_cycles'
 
     # for data_file in total_name_list:
     os.chdir(root_path + '/datasets')
@@ -360,7 +359,7 @@ def results_ComplexityBagging(data_file):
             # split = 1
             print(split)
             # alpha = 0
-            ComplexityDrivenBagging(data,n_ensembles,n_ensembles_v, name_data,path_to_save, split, stump,alpha)
+            ComplexityDrivenBagging_cycles(data,max_n_models, name_data,path_to_save, split, stump,alpha)
 
     return
 
@@ -374,5 +373,5 @@ with mp.Pool(processes = N-20) as p:
         p.map(results_ComplexityBagging, [data_file for data_file in total_name_list])
         # p.close()
 
-###############--------------------- PARALELIZADO ---------------------###############
+###############--------------------- FIN PARALELIZADO ---------------------###############
 
