@@ -36,7 +36,7 @@ dependencies:
     - deprecation==2.1.0
     - fonttools==4.53.1
     - future==1.0.0
-    - holoviews==1.17.1
+    - holoviews==1.15.0
     - hyperopt==0.2.7
     - idna==3.7
     - imbalanced-learn==0.12.3
@@ -56,8 +56,8 @@ dependencies:
     - packaging==24.1
     - pandas==2.2.2
     - pandas-flavor==0.6.0
-    - panel==0.14.4
-    - param==1.13.0
+    - panel==0.14.1
+    - param==1.12.2
     - patsy==0.5.6
     - pillow==10.4.0
     - pingouin==0.5.4
