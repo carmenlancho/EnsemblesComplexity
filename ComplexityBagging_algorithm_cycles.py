@@ -71,7 +71,7 @@ def ComplexityDrivenBagging_cycles(data,max_n_models, name_data,path_to_save, sp
     # X, y
     X = data.iloc[:,:-1].to_numpy() # all variables except y
     X = preprocessing.scale(X)
-    y = data[['y']].to_numpy()#.reshape(-1)
+    y = data[['y']].to_numpy().reshape(-1)
 
     # dataframe to save the results
     results = pd.DataFrame(columns=['dataset','fold','n_cycle','n_ensemble','weights','confusion_matrix','accuracy',
@@ -369,7 +369,7 @@ def results_ComplexityBagging(data_file):
 
 N= mp.cpu_count()
 # N-20
-with mp.Pool(processes = N-20) as p:
+with mp.Pool(processes = N-10) as p:
         p.map(results_ComplexityBagging, [data_file for data_file in total_name_list])
         # p.close()
 
