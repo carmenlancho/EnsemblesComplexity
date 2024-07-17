@@ -219,9 +219,10 @@ def StandardBagging(data,n_ensembles,n_ensembles_v, name_data,path_to_save, stum
 ####################################
 
 def results_StandardBagging(data_file):
-    n_ensembles = 200  # maximum number of ensembles to consider (later we plot and stop when we want)
-    n_ensembles_v = [0, 9, 19, 29, 39, 49, 59, 69, 79, 89, 99,
-                     109, 119, 129, 139, 149, 159, 169, 179, 189, 199]
+    n_ensembles = 300  # maximum number of ensembles to consider (later we plot and stop when we want)
+    # n_ensembles_v = [0, 9, 19, 29, 39, 49, 59, 69, 79, 89, 99,
+    #                  109, 119, 129, 139, 149, 159, 169, 179, 189, 199]
+    n_ensembles_v = list(np.arange(0,301,1)) # los saco todos porque son acumulativos
     path_to_save = root_path + '/Results_StandardBagging'
 
     # for data_file in total_name_list:
