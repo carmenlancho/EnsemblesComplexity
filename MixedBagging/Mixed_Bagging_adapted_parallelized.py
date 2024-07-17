@@ -625,8 +625,9 @@ def AdaptedMixedBagging(dataset_name):
 
     # defnumbags = 20  # default number of bags
     # defnumbags_v = [8, 10]
-    defnumbags_v = [2,10,20,30,40,50,60,70,80,90,
-                     100,110,120,130,140,150,160,170,180,190,200]
+    # defnumbags_v = [2,10,20,30,40,50,60,70,80,90,
+    #                  100,110,120,130,140,150,160,170,180,190,200]
+    defnumbags_v = list(np.arange(5,304,5)) # saco de 5 en 5 y cuando sepamos nuestro mejor combo, lo sacamos en específico
 
     np.set_printoptions(threshold=np.inf)  # To print the whole array instead of "..." in the middle parts
 
