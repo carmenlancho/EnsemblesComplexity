@@ -239,10 +239,10 @@ def aggregation_results_boosting(results):
     res_agg_std.columns = ['dataset', 'n_ensemble', 'method_weights', 'exp_loss_avg_train_std',
        'misc_rate_train_std', 'misc_rate_test_std']
 
-    res_agg_confmatrix = results.groupby(['dataset','n_ensemble'])['conf_matrix_test'].apply(lambda x: np.sum(np.array(x.tolist()), axis=0).tolist())
+    res_agg_confmatrix = results.groupby(['dataset','n_ensemble', 'method_weights'])['conf_matrix_test'].apply(lambda x: np.sum(np.array(x.tolist()), axis=0).tolist())
     res_agg_confmatrix = pd.DataFrame(res_agg_confmatrix)
     res_agg_confmatrix.reset_index(inplace=True)
-    res_agg_confmatrix.columns = ['dataset', 'n_ensemble', 'conf_matrix_test_total']
+    res_agg_confmatrix.columns = ['dataset', 'n_ensemble', 'method_weights', 'conf_matrix_test_total']
     # All together in a dataframe
     res_agg = pd.merge(res_agg_mean, res_agg_std[['n_ensemble', 'exp_loss_avg_train_std',
        'misc_rate_train_std', 'misc_rate_test_std']], left_on=['n_ensemble'], right_on=['n_ensemble'])
