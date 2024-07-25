@@ -266,7 +266,28 @@ def CV_boosting(dataset,X,y,M,method_weights, plot_error,n_cv_splits):
         results = pd.concat([results, results_aux])
         results.reset_index(drop=True, inplace=True)
 
-    return results
+    # Aggregation per fold
+    res_agg_mean = results.groupby(['dataset','n_ensemble','method_weights'], as_index=False)[['exp_loss_avg_train',
+                                                                    'misc_rate_train','misc_rate_test']].mean()
+    res_agg_mean.columns = ['dataset', 'n_ensemble', 'method_weights', 'exp_loss_avg_train_mean',
+       'misc_rate_train_mean', 'misc_rate_test_mean']
+    res_agg_std = results.groupby(['dataset','n_ensemble','method_weights'], as_index=False)[['exp_loss_avg_train',
+                                                                    'misc_rate_train','misc_rate_test']].std()
+    res_agg_std.columns = ['dataset', 'n_ensemble', 'method_weights', 'exp_loss_avg_train_std',
+       'misc_rate_train_std', 'misc_rate_test_std']
+
+    res_agg_confmatrix = results.groupby(['dataset','n_ensemble'])['conf_matrix_test'].apply(lambda x: np.sum(np.array(x.tolist()), axis=0).tolist())
+    res_agg_confmatrix = pd.DataFrame(res_agg_confmatrix)
+    res_agg_confmatrix.reset_index(inplace=True)
+    res_agg_confmatrix.columns = ['dataset', 'n_ensemble', 'conf_matrix_test_total']
+    # All together in a dataframe
+    res_agg = pd.merge(res_agg_mean, res_agg_std[['n_ensemble', 'exp_loss_avg_train_std',
+       'misc_rate_train_std', 'misc_rate_test_std']], left_on=['n_ensemble'], right_on=['n_ensemble'])
+
+    res_agg = pd.merge(res_agg, res_agg_confmatrix[['n_ensemble', 'conf_matrix_test_total']],
+                       left_on=['n_ensemble'], right_on=['n_ensemble'])
+
+    return results, res_agg
 
 
 dataset = 'bands'
