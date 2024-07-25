@@ -136,8 +136,10 @@ for train_index, test_index in skf.split(X, y):
 def boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights, plot_error):
     # X_train and X_test are already preprocessed
     # y in {-1,1}
-    if any(y==0):
-        y[y == 0] = -1  # sign format
+    if any(y_train==0):
+        y_train[y_train == 0] = -1  # sign format
+    if any(y_test==0):
+        y_test[y_test == 0] = -1  # sign format
 
     n_train = len(y_train)
     n_test = len(y_test)
@@ -219,6 +221,47 @@ M = 20  # number of models, ensemble size
 final_pred_train, final_pred_test, exp_loss_avg, misc_rate =  boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights, plot_error)
 
 
+### Cross-Validation Boosting
+# dataset='aa'
+def CV_boosting(dataset,X,y,M,method_weights, plot_error,n_cv_splits):
+
+    if any(y==0):
+        y[y == 0] = -1  # sign format
+
+    dataset_v = [dataset for _ in range(M)]
+    n_ensemble_v = list(np.arange(1,M+1))
+    weights_v = [method_weights] * M
+
+    # dataframe to save the results
+    results = pd.DataFrame(columns=['dataset','fold','n_ensemble','weights','exp_loss_avg','misc_rate'])
+
+
+    skf = StratifiedKFold(n_splits=n_cv_splits, random_state=1, shuffle=True)
+    fold = 0
+    for train_index, test_index in skf.split(X, y):
+        fold = fold + 1
+        print(fold)
+        X_train, X_test = X[train_index], X[test_index]
+        y_train, y_test = y[train_index], y[test_index]
+
+        final_pred_train, final_pred_test, exp_loss_avg, misc_rate = boosting_algorithm(X_train, y_train, X_test,
+                                                                                        y_test, M, method_weights,
+                                                                                        plot_error)
+
+        fold_v = [fold]*M
+        results_dict = {'dataset':dataset_v,'fold':fold_v,'n_ensemble':n_ensemble_v,'weights':weights_v,
+                        'exp_loss_avg':exp_loss_avg,'misc_rate':misc_rate} # falta por añadir confusion matrix
+        results_aux = pd.DataFrame(results_dict)
+        results = pd.concat([results, results_aux])
+        results.reset_index(drop=True, inplace=True)
+
+    return results
+
+
+dataset = 'bands'
+n_cv_splits = 10
+plot_error = False
+results = CV_boosting(dataset,X,y,M,method_weights, plot_error,n_cv_splits)
 
 
 
