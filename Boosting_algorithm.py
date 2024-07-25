@@ -300,7 +300,7 @@ def CV_boosting(dataset,X,y,M,method_weights, plot_error,n_cv_splits):
 dataset = 'bands'
 n_cv_splits = 10
 plot_error = False
-results = CV_boosting(dataset,X,y,M,method_weights, plot_error,n_cv_splits)
+results, res_agg = CV_boosting(dataset,X,y,M,method_weights, plot_error,n_cv_splits)
 
 
 
