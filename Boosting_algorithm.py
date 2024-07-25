@@ -41,7 +41,7 @@ X = preprocessing.scale(X)
 y = data[['y']].to_numpy().reshape(-1)
 y[y==0] = -1 # sign format
 
-M = 20 # number of models, ensemble size
+M = 2000 # number of models, ensemble size
 
 
 skf = StratifiedKFold(n_splits=10, random_state=1, shuffle=True)
@@ -63,6 +63,10 @@ for train_index, test_index in skf.split(X, y):
     preds_train = []
     # Preds_test
     preds_test = []
+    # Exponential loss
+    exp_loss_avg = []
+    # Misclassification rate
+    misc_rate = []
 
 
     # Initialize weights
@@ -107,10 +111,22 @@ for train_index, test_index in skf.split(X, y):
     df_preds_test = np.zeros(n_test)
     for m in range(M):
         df_preds_train = df_preds_train + (preds_train[m] * alpha_list[m])
+        exp_loss_avg_m = (1/n)*np.sum(np.exp(-np.sign(df_preds_train)*y_train))
+        exp_loss_avg.append(exp_loss_avg_m)
+        misc_rate_m = np.sum(np.not_equal(y_train, np.sign(df_preds_train)))/n
+        misc_rate.append(misc_rate_m)
         df_preds_test = df_preds_test + (preds_test[m] * alpha_list[m])
 
     final_pred_train = np.sign(df_preds_train)
     final_pred_test = np.sign(df_preds_test)
+
+    # Plot misclassification rate and exponential loss
+    iterations = np.arange(1,M+1)
+    plt.plot(iterations, exp_loss_avg, label="Average exponential loss",color='#1AB7D3')
+    plt.plot(iterations, misc_rate, label="Misclassification rate", color='crimson')
+    plt.xlabel('Number of boosting iterations')
+    plt.legend()
+    plt.show()
 
 
 
