@@ -196,7 +196,7 @@ def boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights,CM_selecte
         weights_hard_v = np.array(weights_hard)
 
     for m in range(M):
-        print(m)
+        # print(m)
         # m = 0
 
         # Fit a classifier with the specific weights
@@ -318,7 +318,7 @@ def CV_boosting(dataset,X,y,M,method_weights,CM_selected, plot_error,n_cv_splits
     fold = 0
     for train_index, test_index in skf.split(X, y):
         fold = fold + 1
-        print(fold)
+        # print(fold)
         X_train, X_test = X[train_index], X[test_index]
         y_train, y_test = y[train_index], y[test_index]
 
@@ -329,7 +329,7 @@ def CV_boosting(dataset,X,y,M,method_weights,CM_selected, plot_error,n_cv_splits
         results_dict = {'dataset':dataset_v,'fold':fold_v,'n_ensemble':n_ensemble_v,'method_weights':weights_type,
                         'compl_measure':CM_selected_v,
                         'exp_loss_avg_train':exp_loss_avg,'misc_rate_train':misc_rate,
-                        'misc_rate_test':misc_rate_test,'conf_matrix_test':conf_matrix} # falta por añadir confusion matrix
+                        'misc_rate_test':misc_rate_test,'conf_matrix_test':conf_matrix}
 
         results_aux = pd.DataFrame(results_dict)
         results = pd.concat([results, results_aux])
@@ -350,6 +350,93 @@ method_weights = 'init_easy'
 CM_selected = 'kDN'
 M=200
 results, res_agg = CV_boosting(dataset,X,y,M,method_weights,CM_selected, plot_error,n_cv_splits)
+
+
+# Función para sacarlo para todas las medidas de complejidad
+
+def boosting_all_combinations(path_to_save, dataset, X,y):
+    CM_list = ['Hostility', 'kDN', 'DCP', 'TD_U', 'CLD', 'N1', 'N2', 'LSC', 'F1']
+    method_weights_list = ['classic','init_easy','init_easy_w_complex']
+
+    # Para guardar todos los resultados
+    results_total = pd.DataFrame(columns=['dataset','fold','n_ensemble','method_weights','compl_measure',
+                                          'exp_loss_avg_train','misc_rate_train',
+                                          'misc_rate_test','conf_matrix_test'])
+    res_agg_total = pd.DataFrame(columns=['dataset', 'n_ensemble', 'method_weights', 'compl_measure',
+                                            'exp_loss_avg_train_mean', 'misc_rate_train_mean',
+                                             'misc_rate_test_mean', 'exp_loss_avg_train_std', 'misc_rate_train_std',
+                                             'misc_rate_test_std', 'conf_matrix_test_total'])
+
+    # Algunos parámetros que dejamos fijos
+    M = 300 # 20
+    n_cv_splits = 10 # 5
+    plot_error = False
+
+
+    ## Caso clásico
+    method_weights = 'classic'
+    CM_selected = 'none'
+    results, res_agg = CV_boosting(dataset, X, y, M, method_weights, CM_selected, plot_error, n_cv_splits)
+    results_total = pd.concat([results_total, results])
+    res_agg_total = pd.concat([res_agg_total, res_agg])
+
+    # Including complexity
+    method_weights_list.remove('classic')
+    for method_weights in method_weights_list:
+        print(method_weights)
+        for CM_selected in CM_list:
+            print(CM_selected)
+            results, res_agg = CV_boosting(dataset, X, y, M, method_weights, CM_selected, plot_error, n_cv_splits)
+
+            results_total = pd.concat([results_total, results])
+            res_agg_total = pd.concat([res_agg_total, res_agg])
+
+
+
+    # To save the results
+    os.chdir(path_to_save)
+    nombre_csv = 'Results_Boosting_' + dataset + '.csv'
+    nombre_csv_aggr = 'AggregatedResults_Boosting_' + dataset + '.csv'
+    results_total.to_csv(nombre_csv, encoding='utf_8_sig',index=False)
+    res_agg_total.to_csv(nombre_csv_aggr, encoding='utf_8_sig', index=False)
+
+    return results_total, res_agg_total
+
+
+
+
+path_csv = os.chdir(root_path+'/datasets')
+# Extraemos los nombres de todos los ficheros
+total_name_list = []
+for filename in os.listdir(path_csv):
+    if filename.endswith('.csv'):
+        total_name_list.append(filename)
+
+# yeast da problemas porque una clase es muy pequeña y no aparece en todos los folds (creo que tb es por DCP)
+# haberman da problemas y es por DCP que da solo dos valores y concuerdan con la y
+
+total_name_list = ['bands.csv']
+
+
+for data_file in total_name_list:
+    os.chdir(root_path + '/datasets')
+    print(data_file)
+    file = data_file
+    name_data = data_file[:-4]
+    data = pd.read_csv(file)
+
+method_weights = 'classic'
+# Get X (features) and y (target)
+X = data.iloc[:,:-1].to_numpy() # all variables except y
+X = preprocessing.scale(X)
+y = data[['y']].to_numpy().reshape(-1)
+y[y==0] = -1 # sign format
+
+
+path_to_save = root_path + '/Results_Boosting'
+boosting_all_combinations(path_to_save, name_data, X,y)
+
+
 
 
 
