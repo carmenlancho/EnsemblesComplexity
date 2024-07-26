@@ -164,7 +164,8 @@ def boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights,CM_selecte
     # Initialize weights
     if (method_weights == 'classic'):
         weights_v = np.ones(n_train) / n_train
-    elif (method_weights == 'init_easy'):  # comienzo con mayor peso a los puntos fáciles
+    elif (method_weights == 'init_easy'):
+        # comienzo con mayor peso a los puntos fáciles
         # Get complexity measure on train set
         data_train = pd.DataFrame(X_train)
         y_cm = y_train.copy()
@@ -176,8 +177,23 @@ def boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights,CM_selecte
         ranking_easy = CM_values.rank(method='average', ascending=False)  # more weight to easy
         weights_v = ranking_easy / sum(ranking_easy)  # probability distribution
         weights_v = np.array(weights_v)
-    else:  # comienzo con mayor peso a los puntos fáciles y actualización de pesos con complejidad
-        weights_v = np.ones(n_train) / n_train  # sera una función de la complejidad
+    elif (method_weights == 'init_easy_w_complex'):
+        # Get complexity measure on train set
+        data_train = pd.DataFrame(X_train)
+        y_cm = y_train.copy()
+        y_cm[y_cm == -1] = 0  # not sign format
+        data_train['y'] = y_cm
+        data_train.columns = data.columns
+        df_measures, _ = all_measures(data_train,False,None, None)
+        CM_values = df_measures[CM_selected]
+        # Para el inicio
+        ranking_easy = CM_values.rank(method='average', ascending=False)  # more weight to easy
+        weights_v = ranking_easy / sum(ranking_easy)  # probability distribution
+        weights_v = np.array(weights_v)
+        # Para el update de los pesos
+        ranking_hard = CM_values.rank(method='average', ascending=True)  # more weight to difficult
+        weights_hard = ranking_hard / sum(ranking_hard)  # probability distribution
+        weights_hard_v = np.array(weights_hard)
 
     for m in range(M):
         print(m)
@@ -204,7 +220,17 @@ def boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights,CM_selecte
         preds_test.append(y_pred_test)
 
         # Update the observations weights
-        weights_v[disagree] = weights_v[disagree] * np.exp(alpha_m)
+        if (method_weights=='classic') | (method_weights=='init_easy'):
+            weights_v[disagree] = weights_v[disagree] * np.exp(alpha_m)
+        else: # actualizamos tb en función de la complejidad
+            update_boosting = weights_v[disagree] * np.exp(alpha_m)
+            update_complexity = weights_hard_v[disagree]
+            total_update_weights = (19/20)*update_boosting + (1/20)*update_complexity
+            total_update_weights = total_update_weights/ sum(total_update_weights)
+            weights_v[disagree] = total_update_weights
+
+
+
 
     # Predictions for train and test
     df_preds_train = np.zeros(n_train)
@@ -317,10 +343,12 @@ def CV_boosting(dataset,X,y,M,method_weights,CM_selected, plot_error,n_cv_splits
 
 dataset = 'bands'
 n_cv_splits = 10
-plot_error = False
-# method_weights = 'init_easy'
-method_weights = 'classic'
-CM_selected = 'Hostility'
+plot_error = True
+method_weights = 'init_easy'
+# method_weights = 'classic'
+# method_weights = 'init_easy_w_complex'
+CM_selected = 'kDN'
+M=200
 results, res_agg = CV_boosting(dataset,X,y,M,method_weights,CM_selected, plot_error,n_cv_splits)
 
 
