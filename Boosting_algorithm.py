@@ -14,34 +14,34 @@ import multiprocessing as mp
 
 root_path = os.getcwd()
 
-path_csv = os.chdir(root_path+'/datasets')
-# Extraemos los nombres de todos los ficheros
-total_name_list = []
-for filename in os.listdir(path_csv):
-    if filename.endswith('.csv'):
-        total_name_list.append(filename)
-
-# yeast da problemas porque una clase es muy pequeña y no aparece en todos los folds (creo que tb es por DCP)
-# haberman da problemas y es por DCP que da solo dos valores y concuerdan con la y
-
-total_name_list = ['bands.csv']
-
-
-for data_file in total_name_list:
-    os.chdir(root_path + '/datasets')
-    print(data_file)
-    file = data_file
-    name_data = data_file[:-4]
-    data = pd.read_csv(file)
-
-method_weights = 'classic'
-# Get X (features) and y (target)
-X = data.iloc[:,:-1].to_numpy() # all variables except y
-X = preprocessing.scale(X)
-y = data[['y']].to_numpy().reshape(-1)
-y[y==0] = -1 # sign format
-
-M = 20 # number of models, ensemble size
+# path_csv = os.chdir(root_path+'/datasets')
+# # Extraemos los nombres de todos los ficheros
+# total_name_list = []
+# for filename in os.listdir(path_csv):
+#     if filename.endswith('.csv'):
+#         total_name_list.append(filename)
+#
+# # yeast da problemas porque una clase es muy pequeña y no aparece en todos los folds (creo que tb es por DCP)
+# # haberman da problemas y es por DCP que da solo dos valores y concuerdan con la y
+#
+# total_name_list = ['bands.csv']
+#
+#
+# for data_file in total_name_list:
+#     os.chdir(root_path + '/datasets')
+#     print(data_file)
+#     file = data_file
+#     name_data = data_file[:-4]
+#     data = pd.read_csv(file)
+#
+# method_weights = 'classic'
+# # Get X (features) and y (target)
+# X = data.iloc[:,:-1].to_numpy() # all variables except y
+# X = preprocessing.scale(X)
+# y = data[['y']].to_numpy().reshape(-1)
+# y[y==0] = -1 # sign format
+#
+# M = 20 # number of models, ensemble size
 
 #
 # skf = StratifiedKFold(n_splits=10, random_state=1, shuffle=True)
@@ -341,15 +341,15 @@ def CV_boosting(dataset,X,y,M,method_weights,CM_selected, plot_error,n_cv_splits
     return results, res_agg
 
 
-dataset = 'bands'
-n_cv_splits = 10
-plot_error = True
-method_weights = 'init_easy'
-# method_weights = 'classic'
-# method_weights = 'init_easy_w_complex'
-CM_selected = 'kDN'
-M=200
-results, res_agg = CV_boosting(dataset,X,y,M,method_weights,CM_selected, plot_error,n_cv_splits)
+# dataset = 'bands'
+# n_cv_splits = 10
+# plot_error = True
+# method_weights = 'init_easy'
+# # method_weights = 'classic'
+# # method_weights = 'init_easy_w_complex'
+# CM_selected = 'kDN'
+# M=200
+# results, res_agg = CV_boosting(dataset,X,y,M,method_weights,CM_selected, plot_error,n_cv_splits)
 
 
 # Función para sacarlo para todas las medidas de complejidad
@@ -412,29 +412,32 @@ for filename in os.listdir(path_csv):
     if filename.endswith('.csv'):
         total_name_list.append(filename)
 
-# yeast da problemas porque una clase es muy pequeña y no aparece en todos los folds (creo que tb es por DCP)
-# haberman da problemas y es por DCP que da solo dos valores y concuerdan con la y
 
-total_name_list = ['bands.csv']
+# total_name_list = ['bands.csv']
 
-
+path_to_save = root_path + '/Results_Boosting'
 for data_file in total_name_list:
     os.chdir(root_path + '/datasets')
     print(data_file)
     file = data_file
     name_data = data_file[:-4]
     data = pd.read_csv(file)
+    # Get X (features) and y (target)
+    X = data.iloc[:, :-1].to_numpy()  # all variables except y
+    X = preprocessing.scale(X)
+    y = data[['y']].to_numpy().reshape(-1)
+    y[y == 0] = -1  # sign format
 
-method_weights = 'classic'
-# Get X (features) and y (target)
-X = data.iloc[:,:-1].to_numpy() # all variables except y
-X = preprocessing.scale(X)
-y = data[['y']].to_numpy().reshape(-1)
-y[y==0] = -1 # sign format
+    _, _ = boosting_all_combinations(path_to_save, name_data, X, y)
 
 
-path_to_save = root_path + '/Results_Boosting'
-boosting_all_combinations(path_to_save, name_data, X,y)
+
+
+
+
+
+
+
 
 
 
