@@ -133,7 +133,8 @@ M = 20 # number of models, ensemble size
 # method_weights = 'classic'
 # plot_error = False
 # M = 20  # number of models, ensemble size
-def boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights, plot_error):
+# CM_selected = 'Hostility'
+def boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights,CM_selected, plot_error):
     # X_train and X_test are already preprocessed
     # y in {-1,1}
     if any(y_train==0):
@@ -163,7 +164,19 @@ def boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights, plot_erro
     # Initialize weights
     if (method_weights == 'classic'):
         weights_v = np.ones(n_train) / n_train
-    else:  # algo de complejidad
+    elif (method_weights == 'init_easy'):  # comienzo con mayor peso a los puntos fáciles
+        # Get complexity measure on train set
+        data_train = pd.DataFrame(X_train)
+        y_cm = y_train.copy()
+        y_cm[y_cm == -1] = 0  # not sign format
+        data_train['y'] = y_cm
+        data_train.columns = data.columns
+        df_measures, _ = all_measures(data_train,False,None, None)
+        CM_values = df_measures[CM_selected]
+        ranking_easy = CM_values.rank(method='average', ascending=False)  # more weight to easy
+        weights_v = ranking_easy / sum(ranking_easy)  # probability distribution
+        weights_v = np.array(weights_v)
+    else:  # comienzo con mayor peso a los puntos fáciles y actualización de pesos con complejidad
         weights_v = np.ones(n_train) / n_train  # sera una función de la complejidad
 
     for m in range(M):
@@ -257,17 +270,21 @@ def aggregation_results_boosting(results):
 
 ### Cross-Validation Boosting
 # dataset='aa'
-def CV_boosting(dataset,X,y,M,method_weights, plot_error,n_cv_splits):
+# M = 20
+def CV_boosting(dataset,X,y,M,method_weights,CM_selected, plot_error,n_cv_splits):
 
     if any(y==0):
         y[y == 0] = -1  # sign format
+    if method_weights == 'classic':
+        CM_selected = None
 
-    dataset_v = [dataset for _ in range(M)]
+    dataset_v = [dataset]*M
     n_ensemble_v = list(np.arange(1,M+1))
     weights_type = [method_weights] * M
+    CM_selected_v = [CM_selected]*M
 
     # dataframe to save the results
-    results = pd.DataFrame(columns=['dataset','fold','n_ensemble','method_weights','exp_loss_avg_train',
+    results = pd.DataFrame(columns=['dataset','fold','n_ensemble','method_weights','CM_selected','exp_loss_avg_train',
                                     'misc_rate_train','misc_rate_test','conf_matrix_test'])
 
 
@@ -279,12 +296,12 @@ def CV_boosting(dataset,X,y,M,method_weights, plot_error,n_cv_splits):
         X_train, X_test = X[train_index], X[test_index]
         y_train, y_test = y[train_index], y[test_index]
 
-        final_pred_train, final_pred_test, exp_loss_avg, misc_rate, misc_rate_test,conf_matrix = boosting_algorithm(X_train, y_train, X_test,
-                                                                                        y_test, M, method_weights,
-                                                                                        plot_error)
+        final_pred_train, final_pred_test, exp_loss_avg, misc_rate, misc_rate_test,conf_matrix = boosting_algorithm(X_train,y_train,X_test,y_test,M,
+                                                                                                                    method_weights,CM_selected, plot_error)
 
         fold_v = [fold]*M
         results_dict = {'dataset':dataset_v,'fold':fold_v,'n_ensemble':n_ensemble_v,'method_weights':weights_type,
+                        'compl_measure':CM_selected_v,
                         'exp_loss_avg_train':exp_loss_avg,'misc_rate_train':misc_rate,
                         'misc_rate_test':misc_rate_test,'conf_matrix_test':conf_matrix} # falta por añadir confusion matrix
 
@@ -301,7 +318,10 @@ def CV_boosting(dataset,X,y,M,method_weights, plot_error,n_cv_splits):
 dataset = 'bands'
 n_cv_splits = 10
 plot_error = False
-results, res_agg = CV_boosting(dataset,X,y,M,method_weights, plot_error,n_cv_splits)
+method_weights = 'init_easy'
+# method_weights = 'classic'
+CM_selected = 'Hostility'
+results, res_agg = CV_boosting(dataset,X,y,M,method_weights,CM_selected, plot_error,n_cv_splits)
 
 
 
