@@ -243,17 +243,17 @@ def boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights,CM_selecte
 
 
 def aggregation_results_boosting(results):
-    res_agg_mean = results.groupby(['dataset','n_ensemble','method_weights'], as_index=False)[['exp_loss_avg_train',
+    res_agg_mean = results.groupby(['dataset','n_ensemble','method_weights','compl_measure'], as_index=False)[['exp_loss_avg_train',
                                                                     'misc_rate_train','misc_rate_test']].mean()
     res_agg_mean.rename({'exp_loss_avg_train': 'exp_loss_avg_train_mean', 'misc_rate_train': 'misc_rate_train_mean',
                          'misc_rate_test':'misc_rate_test_mean'}, axis=1, inplace=True)
 
-    res_agg_std = results.groupby(['dataset','n_ensemble','method_weights'], as_index=False)[['exp_loss_avg_train',
+    res_agg_std = results.groupby(['dataset','n_ensemble','method_weights','compl_measure'], as_index=False)[['exp_loss_avg_train',
                                                                     'misc_rate_train','misc_rate_test']].std()
     res_agg_std.rename({'exp_loss_avg_train': 'exp_loss_avg_train_std', 'misc_rate_train': 'misc_rate_train_std',
                          'misc_rate_test':'misc_rate_test_std'}, axis=1, inplace=True)
 
-    res_agg_confmatrix = results.groupby(['dataset','n_ensemble', 'method_weights'])['conf_matrix_test'].apply(lambda x: np.sum(np.array(x.tolist()), axis=0).tolist())
+    res_agg_confmatrix = results.groupby(['dataset','n_ensemble', 'method_weights','compl_measure'])['conf_matrix_test'].apply(lambda x: np.sum(np.array(x.tolist()), axis=0).tolist())
     res_agg_confmatrix = pd.DataFrame(res_agg_confmatrix)
     res_agg_confmatrix.reset_index(inplace=True)
     res_agg_confmatrix.rename({'conf_matrix_test': 'conf_matrix_test_total'}, axis=1, inplace=True)
@@ -276,7 +276,7 @@ def CV_boosting(dataset,X,y,M,method_weights,CM_selected, plot_error,n_cv_splits
     if any(y==0):
         y[y == 0] = -1  # sign format
     if method_weights == 'classic':
-        CM_selected = None
+        CM_selected = 'none'
 
     dataset_v = [dataset]*M
     n_ensemble_v = list(np.arange(1,M+1))
@@ -284,7 +284,7 @@ def CV_boosting(dataset,X,y,M,method_weights,CM_selected, plot_error,n_cv_splits
     CM_selected_v = [CM_selected]*M
 
     # dataframe to save the results
-    results = pd.DataFrame(columns=['dataset','fold','n_ensemble','method_weights','CM_selected','exp_loss_avg_train',
+    results = pd.DataFrame(columns=['dataset','fold','n_ensemble','method_weights','compl_measure','exp_loss_avg_train',
                                     'misc_rate_train','misc_rate_test','conf_matrix_test'])
 
 
@@ -318,8 +318,8 @@ def CV_boosting(dataset,X,y,M,method_weights,CM_selected, plot_error,n_cv_splits
 dataset = 'bands'
 n_cv_splits = 10
 plot_error = False
-method_weights = 'init_easy'
-# method_weights = 'classic'
+# method_weights = 'init_easy'
+method_weights = 'classic'
 CM_selected = 'Hostility'
 results, res_agg = CV_boosting(dataset,X,y,M,method_weights,CM_selected, plot_error,n_cv_splits)
 
