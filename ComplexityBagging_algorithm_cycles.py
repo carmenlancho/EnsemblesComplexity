@@ -365,7 +365,8 @@ def results_ComplexityBagging(data_file):
 
 # total_name_list
 
-
+# 17/08/2024
+# en ring me faltan 14 todavía en aggregated y en totales
 
 N= mp.cpu_count()
 # N-20
