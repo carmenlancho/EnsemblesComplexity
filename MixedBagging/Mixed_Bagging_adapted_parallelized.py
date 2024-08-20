@@ -1222,7 +1222,7 @@ for filename in os.listdir(path_csv):
 
 
 
-total_name_list = [ 'segment.csv', 'analcatdata_authorship.csv', 'cleveland.csv']
+#total_name_list = [ 'segment.csv', 'analcatdata_authorship.csv', 'cleveland.csv']
 
 # total_name_list = [  # 'teaching_assistant_MH.csv','chronic_kidney.csv','contraceptive_NL.csv',
 #     'balance_scale_BR.csv',
