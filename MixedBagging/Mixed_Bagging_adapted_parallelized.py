@@ -627,7 +627,7 @@ def AdaptedMixedBagging(dataset_name):
     # defnumbags_v = [8, 10]
     # defnumbags_v = [2,10,20,30,40,50,60,70,80,90,
     #                  100,110,120,130,140,150,160,170,180,190,200]
-    defnumbags_v = list(np.arange(5,304,5)) # saco de 5 en 5 y cuando sepamos nuestro mejor combo, lo sacamos en específico
+    defnumbags_v = list(np.arange(0,301,1)) # los sacamos todos porque no son muchísimas filas
 
     np.set_printoptions(threshold=np.inf)  # To print the whole array instead of "..." in the middle parts
 
@@ -1257,7 +1257,7 @@ total_name_list = [ 'segment.csv', 'analcatdata_authorship.csv', 'cleveland.csv'
 
 N= mp.cpu_count()
 
-with mp.Pool(processes = 2) as p:
+with mp.Pool(processes = N-10) as p:
         p.map(AdaptedMixedBagging, [dataset_name for dataset_name in total_name_list])
         # p.close()
 
