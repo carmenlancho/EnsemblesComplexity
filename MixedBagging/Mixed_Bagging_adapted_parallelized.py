@@ -618,8 +618,8 @@ def AdaptedMixedBagging(dataset_name):
     # nclusperclass = 2
 
 
-    path_to_save = root_path + '/MixedBagging/Adapted_results' # ordenador
-    # path_to_save = root_path + '/Adapted_results' # server
+    # path_to_save = root_path + '/MixedBagging/Adapted_results' # ordenador
+    path_to_save = root_path + '/Adapted_results' # server
 
     # verbose = True
 
@@ -650,8 +650,8 @@ def AdaptedMixedBagging(dataset_name):
             # csvfile = open(csvfilename, 'w')
             # csvwriter = csv.writer(csvfile, delimiter=",", lineterminator='\n')
 
-            data = pd.read_csv(root_path + '/MixedBagging/Datasets/' + dataset_name)  # ordenador
-            # data = pd.read_csv(root_path + '/Datasets/' + dataset_name)  # server
+            # data = pd.read_csv(root_path + '/MixedBagging/Datasets/' + dataset_name)  # ordenador
+            data = pd.read_csv(root_path + '/Datasets/' + dataset_name)  # server
             X_mis = data.iloc[:, :-1]  # Columns 0 to end - 1 # cambio ix por iloc
             y = data.iloc[:, -1]  # Last column # cambio ix por iloc
             n_classes = len(np.unique(y))
@@ -1212,8 +1212,8 @@ def AdaptedMixedBagging(dataset_name):
     return
 
 
-path_csv = os.chdir(root_path+'/MixedBagging/Datasets/') # ordenador
-# path_csv = os.chdir(root_path+'/Datasets/') # server
+# path_csv = os.chdir(root_path+'/MixedBagging/Datasets/') # ordenador
+path_csv = os.chdir(root_path+'/Datasets/') # server
 # Extraemos los nombres de todos los ficheros
 total_name_list = []
 for filename in os.listdir(path_csv):
