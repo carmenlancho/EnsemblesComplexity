@@ -627,7 +627,7 @@ def AdaptedMixedBagging(dataset_name):
     # defnumbags_v = [8, 10]
     # defnumbags_v = [2,10,20,30,40,50,60,70,80,90,
     #                  100,110,120,130,140,150,160,170,180,190,200]
-    defnumbags_v = list(np.arange(0,301,1)) # los sacamos todos porque no son muchísimas filas
+    defnumbags_v = list(np.arange(2,301,1)) # los sacamos todos porque no son muchísimas filas
 
     np.set_printoptions(threshold=np.inf)  # To print the whole array instead of "..." in the middle parts
 
