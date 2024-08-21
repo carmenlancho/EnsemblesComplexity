@@ -61,11 +61,12 @@ df_total = df_total.reindex(columns=['Dataset','weights', 'alpha', 'split','n_cy
 path_to_save = root_path+'/Results_general_algorithm_cycles'
 os.chdir(path_to_save)
 nombre_csv_agg = 'TotalAggregatedResults_ParameterConfiguration_CDB.csv'
-df_total.to_csv(nombre_csv_agg, encoding='utf_8_sig', index=False)
+# df_total.to_csv(nombre_csv_agg, encoding='utf_8_sig', index=False)
 
 
 # no podemos abrirlo completo en csv porque son demasiadas filas, pero si lo cargo, va bien
-# data2 = pd.read_csv('TotalAggregatedResults_ParameterConfiguration_CDB.csv')
+df_total = pd.read_csv('TotalAggregatedResults_ParameterConfiguration_CDB.csv')
+
 
 
 
