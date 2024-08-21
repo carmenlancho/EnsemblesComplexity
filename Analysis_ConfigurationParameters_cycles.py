@@ -70,8 +70,12 @@ df_total = pd.read_csv('TotalAggregatedResults_ParameterConfiguration_CDB.csv')
 
 
 
+#####################################################################################
+########          GIVEN SPLIT S AND ALPHA, BEST NUMBER OF CYCLES?         ###########
+#####################################################################################
 
 
+df_summary = df_total.groupby(by=['weights','n_cycle','n_ensemble','alpha','split'], as_index=False).agg({'accuracy_mean': [np.mean, np.median, np.std]})
 
 
 
