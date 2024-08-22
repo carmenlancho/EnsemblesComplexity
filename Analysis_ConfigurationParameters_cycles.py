@@ -65,6 +65,7 @@ nombre_csv_agg = 'TotalAggregatedResults_ParameterConfiguration_CDB.csv'
 
 
 # no podemos abrirlo completo en csv porque son demasiadas filas, pero si lo cargo, va bien
+path_csv = os.chdir(root_path+'/Results_general_algorithm_cycles')
 df_total = pd.read_csv('TotalAggregatedResults_ParameterConfiguration_CDB.csv')
 
 
@@ -74,8 +75,20 @@ df_total = pd.read_csv('TotalAggregatedResults_ParameterConfiguration_CDB.csv')
 ########          GIVEN SPLIT S AND ALPHA, BEST NUMBER OF CYCLES?         ###########
 #####################################################################################
 
+# Para cada medida de complejidad
+df_summary_CM = df_total.groupby(by=['weights','n_cycle','n_ensemble','alpha','split'], as_index=False).agg({'accuracy_mean': [np.mean, np.median, np.std]})
+df_summary_CM.columns = ['weights','n_cycle','n_ensemble','alpha','split','accuracy_mean_mean','accuracy_mean_median',  'accuracy_mean_std']
+# Juntando todas las medidas de complejidad
+df_summary = df_total.groupby(by=['n_cycle','n_ensemble','alpha','split'], as_index=False).agg({'accuracy_mean': [np.mean, np.median, np.std]})
+df_summary.columns = ['n_cycle','n_ensemble','alpha','split','accuracy_mean_mean','accuracy_mean_median',  'accuracy_mean_std']
+# Máximo accuracy para cada combo split-alpha (para saber en qué ciclo se consigue)
+aa = df_summary.groupby(by=['alpha','split'], as_index=False).idxmax('accuracy_mean_mean')
 
-df_summary = df_total.groupby(by=['weights','n_cycle','n_ensemble','alpha','split'], as_index=False).agg({'accuracy_mean': [np.mean, np.median, np.std]})
+# Aquí vemos que en general sale el máximo por 300, es decir, el máximo número de modelos probados
+df_max_acc = df_summary.loc[df_summary.reset_index().groupby(['alpha','split'])['accuracy_mean_mean'].idxmax()]
+# Así, para cada como split-alpha vamos a buscar cuándo el accuracy deja de ser significativamente mayor
+
+
 
 
 
