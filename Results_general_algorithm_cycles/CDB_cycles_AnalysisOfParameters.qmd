@@ -245,7 +245,7 @@ combo_friedman = data.frame(valores_combo)
 combo_friedman$p_value = rep(NA,n_combo)
 
 for (i in valores_combo){
-  print(i)
+  #print(i)
   datos_i = datos[datos$combo_alpha_split==i,]
   fri = friedman.test(accuracy_mean_mean ~ n_cycle |Dataset, data=as.matrix(datos_i))
   combo_friedman[combo_friedman$valores_combo==i,2] = fri$p.value
