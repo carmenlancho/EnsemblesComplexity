@@ -45,7 +45,7 @@ datos <- datos %>%
 table_split <- datos %>%
   group_by(split) %>%
   summarise_at(vars(accuracy_mean_mean),  list(mean = mean, median = median, std = sd))
-datatable(table_split)
+knitr::kable(table_split)
 ```
 
 The higher the value of split, the higher the mean (with some exceptions) of accuracy, the lower the median and the lower the standard deviation. ¿Medium-low split values?
@@ -56,7 +56,7 @@ The higher the value of split, the higher the mean (with some exceptions) of acc
 table_alpha <- datos %>%
   group_by(alpha) %>%
   summarise_at(vars(accuracy_mean_mean),  list(mean = mean, median = median, std = sd))
-datatable(table_alpha)
+knitr::kable(table_alpha)
 ```
 
 The higher the value of alpha, the lower the mean and the median of accuracy. The standard deviation keeps lower for low-medium values. --\> Low-medium values of alpha. Lower than 12.
@@ -71,9 +71,9 @@ We cannot perform a summary of 'n_cycle' in general because the number of cycles
 table_split1 <- datos %>% filter(split == 1) %>%
   group_by(n_cycle) %>%
   summarise_at(vars(accuracy_mean_mean),  list(mean = mean, median = median, std = sd))
-#knitr::kable(table_split1)
+knitr::kable(table_split1)
 
-datatable(table_split1)
+#datatable(table_split1)
 ```
 
 ```{r echo=FALSE}
@@ -118,7 +118,7 @@ The higher the number of cycles, the higher the mean, median of accuracy and the
 table_split2 <- datos %>% filter(split == 2) %>%
   group_by(n_cycle) %>%
   summarise_at(vars(accuracy_mean_mean),  list(mean = mean, median = median, std = sd))
-datatable(table_split2)
+knitr::kable(table_split2)
 ```
 
 ```{r echo=FALSE}
@@ -159,7 +159,7 @@ g1 + g2 + plot_layout(nrow = 2)
 table_split4 <- datos %>% filter(split == 4) %>%
   group_by(n_cycle) %>%
   summarise_at(vars(accuracy_mean_mean),  list(mean = mean, median = median, std = sd))
-datatable(table_split4)
+knitr::kable(table_split4)
 ```
 
 ```{r echo=FALSE}
@@ -200,7 +200,7 @@ g1 + g2 + plot_layout(nrow = 2)
 table_split10 <- datos %>% filter(split == 10) %>%
   group_by(n_cycle) %>%
   summarise_at(vars(accuracy_mean_mean),  list(mean = mean, median = median, std = sd))
-datatable(table_split10)
+knitr::kable(table_split10)
 ```
 
 ```{r echo=FALSE}
