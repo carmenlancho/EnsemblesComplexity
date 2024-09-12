@@ -2,6 +2,7 @@
 title: "CDB_cycles_AnalysisOfParameters"
 editor: visual
 format: gfm
+always_allow_html: true
 ---
 
 In this notebook, we are studying the different parameters of our method Complexity Driven Bagging so as to offer a range of selection to the final user. In particular, we have three parameters:
@@ -25,6 +26,7 @@ library(tidyverse)
 library(ggpubr)
 library(rstatix)
 library(datarium)
+library(DT)
 
 getwd()
 setwd("/home/carmen/PycharmProjects/EnsemblesComplexity/Results_general_algorithm_cycles")
@@ -37,56 +39,264 @@ datos <- datos %>%
   convert_as_factor(Dataset, combo_alpha_split, n_cycle,n_ensemble)
 ```
 
+### Mean, median and standard deviation of accuracy for all levels of split
+
 ```{r}
 table_split <- datos %>%
   group_by(split) %>%
   summarise_at(vars(accuracy_mean_mean),  list(mean = mean, median = median, std = sd))
-knitr::kable(table_split)
+datatable(table_split)
 ```
+
+The higher the value of split, the higher the mean (with some exceptions) of accuracy, the lower the median and the lower the standard deviation. ¿Medium-low split values?
+
+### Mean, median and standard deviation of accuracy for all levels of alpha
 
 ```{r}
 table_alpha <- datos %>%
   group_by(alpha) %>%
   summarise_at(vars(accuracy_mean_mean),  list(mean = mean, median = median, std = sd))
-knitr::kable(table_alpha)
+datatable(table_alpha)
 ```
+
+The higher the value of alpha, the lower the mean and the median of accuracy. The standard deviation keeps lower for low-medium values. --\> Low-medium values of alpha. Lower than 12.
+
+### Mean, median and standard deviation of accuracy for all levels of n_cycles (for some split values)
 
 We cannot perform a summary of 'n_cycle' in general because the number of cycles depends on the value of split. Thus, we show some cases.
 
-split = 1
+**split = 1**
 
 ```{r}
 table_split1 <- datos %>% filter(split == 1) %>%
   group_by(n_cycle) %>%
   summarise_at(vars(accuracy_mean_mean),  list(mean = mean, median = median, std = sd))
-knitr::kable(table_split1)
+#knitr::kable(table_split1)
+
+datatable(table_split1)
 ```
 
-split = 2
+```{r echo=FALSE}
+library(ggplot2)
+library(patchwork)
+# Convertir el dataframe al formato largo para ggplot
+df_long <- tidyr::pivot_longer(table_split1, cols = c("mean", "median", "std"), 
+                               names_to = "variable", values_to = "value")
+
+
+
+# Crear el primer gráfico (mean y median) con ajuste en los breaks del eje x
+g1 <- ggplot(df_long[df_long$variable %in% c("mean", "median"),], 
+             aes(x = n_cycle, y = value, color = variable)) +
+  geom_line(size = 1) +
+  geom_point(size = 1) +
+  labs(title = "Evolution mean median",
+       x = "n_cycle", y = "Value", color = " ") +
+  theme_minimal() +
+  scale_color_manual(values = c("mean" = "purple", "median" = "orange"))
+
+# Crear el segundo gráfico (std) con ajuste en los breaks del eje x
+g2 <- ggplot(df_long[df_long$variable == "std",], 
+             aes(x = n_cycle, y = value, color = variable)) +
+  geom_line(size = 1) +
+  geom_point(size = 1) +
+  labs(title = "Evolution std",
+       x = "n_cycle", y = "Value", color = " ") +
+  theme_minimal() +
+  scale_color_manual(values = c("std" = "blue"))
+
+# Colocar los dos gráficos juntos con patchwork
+g1 + g2 + plot_layout(nrow = 2)
+
+```
+
+The higher the number of cycles, the higher the mean, median of accuracy and the lower the standard deviation. However, for high values of cycles, the accuracy clearly stabilizes and there is no
+
+**split = 2**
 
 ```{r}
 table_split2 <- datos %>% filter(split == 2) %>%
   group_by(n_cycle) %>%
   summarise_at(vars(accuracy_mean_mean),  list(mean = mean, median = median, std = sd))
-knitr::kable(table_split2)
+datatable(table_split2)
 ```
 
-split = 4
+```{r echo=FALSE}
+# Convertir el dataframe al formato largo para ggplot
+df_long <- tidyr::pivot_longer(table_split2, cols = c("mean", "median", "std"), 
+                               names_to = "variable", values_to = "value")
+
+df_long$n_cycle <- as.numeric(df_long$n_cycle)
+
+# Crear el primer gráfico (mean y median) con ajuste en los breaks del eje x
+g1 <- ggplot(df_long[df_long$variable %in% c("mean", "median"),], 
+             aes(x = n_cycle, y = value, color = variable)) +
+  geom_line(size = 1) +
+  geom_point(size = 1) +
+  labs(title = "Evolution mean median",
+       x = "n_cycle", y = "Value", color = " ") +
+  theme_minimal() +
+  scale_color_manual(values = c("mean" = "purple", "median" = "orange"))
+
+# Crear el segundo gráfico (std) con ajuste en los breaks del eje x
+g2 <- ggplot(df_long[df_long$variable == "std",], 
+             aes(x = n_cycle, y = value, color = variable)) +
+  geom_line(size = 1) +
+  geom_point(size = 1) +
+  labs(title = "Evolution std",
+       x = "n_cycle", y = "Value", color = " ") +
+  theme_minimal() +
+  scale_color_manual(values = c("std" = "blue"))
+
+# Colocar los dos gráficos juntos con patchwork
+g1 + g2 + plot_layout(nrow = 2)
+
+```
+
+**split = 4**
 
 ```{r}
 table_split4 <- datos %>% filter(split == 4) %>%
   group_by(n_cycle) %>%
   summarise_at(vars(accuracy_mean_mean),  list(mean = mean, median = median, std = sd))
-knitr::kable(table_split4)
+datatable(table_split4)
 ```
 
-split = 10
+```{r echo=FALSE}
+# Convertir el dataframe al formato largo para ggplot
+df_long <- tidyr::pivot_longer(table_split4, cols = c("mean", "median", "std"), 
+                               names_to = "variable", values_to = "value")
+
+df_long$n_cycle <- as.numeric(df_long$n_cycle)
+
+# Crear el primer gráfico (mean y median) con ajuste en los breaks del eje x
+g1 <- ggplot(df_long[df_long$variable %in% c("mean", "median"),], 
+             aes(x = n_cycle, y = value, color = variable)) +
+  geom_line(size = 1) +
+  geom_point(size = 1) +
+  labs(title = "Evolution mean median",
+       x = "n_cycle", y = "Value", color = " ") +
+  theme_minimal() +
+  scale_color_manual(values = c("mean" = "purple", "median" = "orange"))
+
+# Crear el segundo gráfico (std) con ajuste en los breaks del eje x
+g2 <- ggplot(df_long[df_long$variable == "std",], 
+             aes(x = n_cycle, y = value, color = variable)) +
+  geom_line(size = 1) +
+  geom_point(size = 1) +
+  labs(title = "Evolution std",
+       x = "n_cycle", y = "Value", color = " ") +
+  theme_minimal() +
+  scale_color_manual(values = c("std" = "blue"))
+
+# Colocar los dos gráficos juntos con patchwork
+g1 + g2 + plot_layout(nrow = 2)
+
+```
+
+**split = 10**
 
 ```{r}
 table_split10 <- datos %>% filter(split == 10) %>%
   group_by(n_cycle) %>%
   summarise_at(vars(accuracy_mean_mean),  list(mean = mean, median = median, std = sd))
-knitr::kable(table_split10)
+datatable(table_split10)
+```
+
+```{r echo=FALSE}
+# Convertir el dataframe al formato largo para ggplot
+df_long <- tidyr::pivot_longer(table_split10, cols = c("mean", "median", "std"), 
+                               names_to = "variable", values_to = "value")
+
+df_long$n_cycle <- as.numeric(df_long$n_cycle)
+
+# Crear el primer gráfico (mean y median) con ajuste en los breaks del eje x
+g1 <- ggplot(df_long[df_long$variable %in% c("mean", "median"),], 
+             aes(x = n_cycle, y = value, color = variable)) +
+  geom_line(size = 1) +
+  geom_point(size = 1) +
+  labs(title = "Evolution mean median",
+       x = "n_cycle", y = "Value", color = " ") +
+  theme_minimal() +
+  scale_color_manual(values = c("mean" = "purple", "median" = "orange"))
+
+# Crear el segundo gráfico (std) con ajuste en los breaks del eje x
+g2 <- ggplot(df_long[df_long$variable == "std",], 
+             aes(x = n_cycle, y = value, color = variable)) +
+  geom_line(size = 1) +
+  geom_point(size = 1) +
+  labs(title = "Evolution std",
+       x = "n_cycle", y = "Value", color = " ") +
+  theme_minimal() +
+  scale_color_manual(values = c("std" = "blue"))
+
+# Colocar los dos gráficos juntos con patchwork
+g1 + g2 + plot_layout(nrow = 2)
+
 ```
 
 # Number of cycles
+
+```{r}
+# Tenemos que hacer el análisis para cada combo_alpha_split
+valores_combo = levels(datos$combo_alpha_split)
+n_combo = length(valores_combo)
+combo_friedman = data.frame(valores_combo)
+combo_friedman$p_value = rep(NA,n_combo)
+
+for (i in valores_combo){
+  print(i)
+  datos_i = datos[datos$combo_alpha_split==i,]
+  fri = friedman.test(accuracy_mean_mean ~ n_cycle |Dataset, data=as.matrix(datos_i))
+  combo_friedman[combo_friedman$valores_combo==i,2] = fri$p.value
+}
+combo_friedman[combo_friedman$p_value> 0.05]
+# es decir, en todos los casos hay diferencias significativas
+```
+
+Una vez hemos visto que existen diferencias significativas entre al menos un valor del combo hacemos las comparaciones múltiples
+
+```{r}
+
+dif_no_sig <- data.frame(valores_combo)
+dif_no_sig$niveles = rep(NA,n_combo)
+
+# Lo dejamos en comentarios porque tarda mucho
+
+# for (i in valores_combo){
+#   print(i)
+#   datos_i = datos[datos$combo_alpha_split==i,]
+#   datos_i$n_cycle <- factor(datos_i$n_cycle) # los niveles del factor cambian en cada subset
+#   pwc2 <- datos_i %>% 
+#     wilcox_test(accuracy_mean_mean ~ n_cycle, paired = TRUE, p.adjust.method = "bonferroni")
+#   # Filtrar comparaciones con diferencias no significativas (suponiendo un umbral de p > 0.05)
+#   no_significativas <- pwc2[pwc2$p.adj>0.1,]
+# 
+#   
+#   # si no todas las comparaciones con ese nivel son no significativas, lo quitamos 
+#   # es decir, no nos vale que solo no haya diferencia entre 3 y 5 y con el resto (3-6,3-7,etc) sí
+#   max_cycles = max(as.numeric(pwc2$group2))
+#   valores_check <- unique(as.numeric(no_significativas$group1))
+#   for (v in valores_check){
+#     if (sum(no_significativas$group1 == v) <(max_cycles - v) ){
+#       no_significativas = no_significativas[no_significativas$group1!=v,]
+#     }
+#   }
+#   
+#   # Extraer los niveles de los pares con diferencias no significativas
+#   niveles_no_significativos <- unique(c(no_significativas$group1, no_significativas$group2))
+# 
+#   dif_no_sig[dif_no_sig$valores_combo==i,2] = paste(niveles_no_significativos, collapse = ", ")
+# }
+
+#write.csv(dif_no_sig, "CDB_cycles_ParametersComboAlphaSplit_dif_no_signif_cycles_mean.csv")
+```
+
+```{r}
+dif_no_sig_mean <- read.csv('CDB_cycles_ParametersComboAlphaSplit_dif_no_signif_cycles_mean.csv') 
+print(dif_no_sig_mean)
+```
+
+AHORA AQUÍ TENGO QUE RESUMIR A PARTIR DE CUANDO NO HAY DIFERENCIAS SIGNIFICATIVAS PARA CADA CASO Y RELACIONARLO CON EL NÚMERO DE ENSEMBLES
+
+LUEGO HACER LO MISMO PARA STD Y CON ELLO FILTRAR N_CYCLES
