@@ -38,17 +38,17 @@ datos <- datos %>%
 ```
 
 ```{r}
-datos %>%
+table_split <- datos %>%
   group_by(split) %>%
-  summarise_at(vars(accuracy_mean_mean),
-               funs(mean,median, sd))
+  summarise_at(vars(accuracy_mean_mean),  list(mean = mean, median = median, std = sd))
+knitr::kable(table_split)
 ```
 
 ```{r}
-datos %>%
+table_alpha <- datos %>%
   group_by(alpha) %>%
-  summarise_at(vars(accuracy_mean_mean),
-               funs(mean,median, sd))
+  summarise_at(vars(accuracy_mean_mean),  list(mean = mean, median = median, std = sd))
+knitr::kable(table_alpha)
 ```
 
 We cannot perform a summary of 'n_cycle' in general because the number of cycles depends on the value of split. Thus, we show some cases.
@@ -56,37 +56,37 @@ We cannot perform a summary of 'n_cycle' in general because the number of cycles
 split = 1
 
 ```{r}
-datos %>% filter(split == 1) %>%
+table_split1 <- datos %>% filter(split == 1) %>%
   group_by(n_cycle) %>%
-  summarise_at(vars(accuracy_mean_mean),
-               funs(mean,median, sd))
+  summarise_at(vars(accuracy_mean_mean),  list(mean = mean, median = median, std = sd))
+knitr::kable(table_split1)
 ```
 
 split = 2
 
 ```{r}
-datos %>% filter(split == 2) %>%
+table_split2 <- datos %>% filter(split == 2) %>%
   group_by(n_cycle) %>%
-  summarise_at(vars(accuracy_mean_mean),
-               funs(mean,median, sd))
+  summarise_at(vars(accuracy_mean_mean),  list(mean = mean, median = median, std = sd))
+knitr::kable(table_split2)
 ```
 
 split = 4
 
 ```{r}
-datos %>% filter(split == 4) %>%
+table_split4 <- datos %>% filter(split == 4) %>%
   group_by(n_cycle) %>%
-  summarise_at(vars(accuracy_mean_mean),
-               funs(mean,median, sd))
+  summarise_at(vars(accuracy_mean_mean),  list(mean = mean, median = median, std = sd))
+knitr::kable(table_split4)
 ```
 
 split = 10
 
 ```{r}
-datos %>% filter(split == 10) %>%
+table_split10 <- datos %>% filter(split == 10) %>%
   group_by(n_cycle) %>%
-  summarise_at(vars(accuracy_mean_mean),
-               funs(mean,median, sd))
+  summarise_at(vars(accuracy_mean_mean),  list(mean = mean, median = median, std = sd))
+knitr::kable(table_split10)
 ```
 
 # Number of cycles
