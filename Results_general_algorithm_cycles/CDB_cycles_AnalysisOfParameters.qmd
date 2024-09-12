@@ -1,6 +1,7 @@
 ---
 title: "CDB_cycles_AnalysisOfParameters"
 editor: visual
+format: gfm
 ---
 
 In this notebook, we are studying the different parameters of our method Complexity Driven Bagging so as to offer a range of selection to the final user. In particular, we have three parameters:
