@@ -1,0 +1,91 @@
+---
+title: "CDB_cycles_AnalysisOfParameters"
+editor: visual
+---
+
+In this notebook, we are studying the different parameters of our method Complexity Driven Bagging so as to offer a range of selection to the final user. In particular, we have three parameters:
+
+-   Split: the number of splits in which we cut the complexity spectrum. s=1 implies we are training with one easy sample, one uniform sample and one hard sample. That is, the cycle length is 3. s=2 implies 6 samples of different complexity (cycle length is 6).
+
+-   Alpha: to give more weight to the easiest and the hardest instances in the bootstrap sampling procedure with the aim of training the classifier with samples of higher or lower complexity (thus, enlarging the original range of complexity).
+
+-   Number of cycles. How many times the procedure is repeated. This is totally related with the final number of ensembles.
+
+Besides this 3 parameters, we have obtained results for different complexity measures. For the analysis of the parameters, we have aggregated results over the different complexity measures.
+
+First, we are studying the recommended number of cycles. That is, given a value of split and a value of alpha, we want to know when the best accuracy is obtained, when there are significant differences, etc. so as to recommend the lower number of cycles (lower number of ensembles) with the best performance.
+
+Once the number of cycles is reduced, we perform a similar analysis on the alpha parameter and the on the split parameter.
+
+# First view
+
+```{r}
+library(tidyverse)
+library(ggpubr)
+library(rstatix)
+library(datarium)
+
+getwd()
+setwd("/home/carmen/PycharmProjects/EnsemblesComplexity/Results_general_algorithm_cycles")
+#datos <- read.csv('TotalAggregatedResults_ParameterConfiguration_CDB.csv') 
+# Data aggregated over complexity measures
+datos <- read.csv('df_summary_data.csv') 
+str(datos)
+# Convert id and time into factor variables
+datos <- datos %>%
+  convert_as_factor(Dataset, combo_alpha_split, n_cycle,n_ensemble)
+```
+
+```{r}
+datos %>%
+  group_by(split) %>%
+  summarise_at(vars(accuracy_mean_mean),
+               funs(mean,median, sd))
+```
+
+```{r}
+datos %>%
+  group_by(alpha) %>%
+  summarise_at(vars(accuracy_mean_mean),
+               funs(mean,median, sd))
+```
+
+We cannot perform a summary of 'n_cycle' in general because the number of cycles depends on the value of split. Thus, we show some cases.
+
+split = 1
+
+```{r}
+datos %>% filter(split == 1) %>%
+  group_by(n_cycle) %>%
+  summarise_at(vars(accuracy_mean_mean),
+               funs(mean,median, sd))
+```
+
+split = 2
+
+```{r}
+datos %>% filter(split == 2) %>%
+  group_by(n_cycle) %>%
+  summarise_at(vars(accuracy_mean_mean),
+               funs(mean,median, sd))
+```
+
+split = 4
+
+```{r}
+datos %>% filter(split == 4) %>%
+  group_by(n_cycle) %>%
+  summarise_at(vars(accuracy_mean_mean),
+               funs(mean,median, sd))
+```
+
+split = 10
+
+```{r}
+datos %>% filter(split == 10) %>%
+  group_by(n_cycle) %>%
+  summarise_at(vars(accuracy_mean_mean),
+               funs(mean,median, sd))
+```
+
+# Number of cycles
