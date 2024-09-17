@@ -27,6 +27,8 @@ library(ggpubr)
 library(rstatix)
 library(datarium)
 library(DT)
+library(ggplot2)
+library(patchwork)
 
 getwd()
 setwd("/home/carmen/PycharmProjects/EnsemblesComplexity/Results_general_algorithm_cycles")
@@ -41,22 +43,87 @@ datos <- datos %>%
 
 ### Mean, median and standard deviation of accuracy for all levels of split
 
-```{r}
+```{r warning=FALSE}
 table_split <- datos %>%
   group_by(split) %>%
   summarise_at(vars(accuracy_mean_mean),  list(mean = mean, median = median, std = sd))
 knitr::kable(table_split)
 ```
 
+```{r echo=FALSE, warning=FALSE}
+
+# Convertir el dataframe al formato largo para ggplot
+df_long <- tidyr::pivot_longer(table_split, cols = c("mean", "median", "std"), 
+                               names_to = "variable", values_to = "value")
+
+df_long$split <- as.numeric(df_long$split)
+
+# Crear el primer gráfico (mean y median) con ajuste en los breaks del eje x
+g1 <- ggplot(df_long[df_long$variable %in% c("mean", "median"),], 
+             aes(x = split, y = value, color = variable)) +
+  geom_line(size = 1) +
+  geom_point(size = 1) +
+  labs(title = "Evolution mean median",
+       x = "split", y = "Value", color = " ") +
+  theme_minimal() +
+  scale_color_manual(values = c("mean" = "purple", "median" = "orange"))
+
+# Crear el segundo gráfico (std) con ajuste en los breaks del eje x
+g2 <- ggplot(df_long[df_long$variable == "std",], 
+             aes(x = split, y = value, color = variable)) +
+  geom_line(size = 1) +
+  geom_point(size = 1) +
+  labs(title = "Evolution std",
+       x = "split", y = "Value", color = " ") +
+  theme_minimal() +
+  scale_color_manual(values = c("std" = "blue"))
+
+# Colocar los dos gráficos juntos con patchwork
+g1 + g2 + plot_layout(nrow = 2)
+
+```
+
 The higher the value of split, the higher the mean (with some exceptions) of accuracy, the lower the median and the lower the standard deviation. ¿Medium-low split values?
 
 ### Mean, median and standard deviation of accuracy for all levels of alpha
 
-```{r}
+```{r warning=FALSE}
 table_alpha <- datos %>%
   group_by(alpha) %>%
   summarise_at(vars(accuracy_mean_mean),  list(mean = mean, median = median, std = sd))
 knitr::kable(table_alpha)
+```
+
+```{r echo=FALSE, warning=FALSE}
+
+# Convertir el dataframe al formato largo para ggplot
+df_long <- tidyr::pivot_longer(table_alpha, cols = c("mean", "median", "std"), 
+                               names_to = "variable", values_to = "value")
+
+df_long$alpha <- as.numeric(df_long$alpha)
+
+# Crear el primer gráfico (mean y median) con ajuste en los breaks del eje x
+g1 <- ggplot(df_long[df_long$variable %in% c("mean", "median"),], 
+             aes(x = alpha, y = value, color = variable)) +
+  geom_line(size = 1) +
+  geom_point(size = 1) +
+  labs(title = "Evolution mean median",
+       x = "alpha", y = "Value", color = " ") +
+  theme_minimal() +
+  scale_color_manual(values = c("mean" = "purple", "median" = "orange"))
+
+# Crear el segundo gráfico (std) con ajuste en los breaks del eje x
+g2 <- ggplot(df_long[df_long$variable == "std",], 
+             aes(x = alpha, y = value, color = variable)) +
+  geom_line(size = 1) +
+  geom_point(size = 1) +
+  labs(title = "Evolution std",
+       x = "alpha", y = "Value", color = " ") +
+  theme_minimal() +
+  scale_color_manual(values = c("std" = "blue"))
+
+# Colocar los dos gráficos juntos con patchwork
+g1 + g2 + plot_layout(nrow = 2)
 ```
 
 The higher the value of alpha, the lower the mean and the median of accuracy. The standard deviation keeps lower for low-medium values. --\> Low-medium values of alpha. Lower than 12.
@@ -67,7 +134,7 @@ We cannot perform a summary of 'n_cycle' in general because the number of cycles
 
 **split = 1**
 
-```{r}
+```{r warning=FALSE}
 table_split1 <- datos %>% filter(split == 1) %>%
   group_by(n_cycle) %>%
   summarise_at(vars(accuracy_mean_mean),  list(mean = mean, median = median, std = sd))
@@ -76,14 +143,13 @@ knitr::kable(table_split1)
 #datatable(table_split1)
 ```
 
-```{r echo=FALSE}
-library(ggplot2)
-library(patchwork)
+```{r echo=FALSE, warning=FALSE}
+
 # Convertir el dataframe al formato largo para ggplot
 df_long <- tidyr::pivot_longer(table_split1, cols = c("mean", "median", "std"), 
                                names_to = "variable", values_to = "value")
 
-
+df_long$n_cycle <- as.numeric(df_long$n_cycle)
 
 # Crear el primer gráfico (mean y median) con ajuste en los breaks del eje x
 g1 <- ggplot(df_long[df_long$variable %in% c("mean", "median"),], 
@@ -114,14 +180,14 @@ The higher the number of cycles, the higher the mean, median of accuracy and the
 
 **split = 2**
 
-```{r}
+```{r warning=FALSE}
 table_split2 <- datos %>% filter(split == 2) %>%
   group_by(n_cycle) %>%
   summarise_at(vars(accuracy_mean_mean),  list(mean = mean, median = median, std = sd))
 knitr::kable(table_split2)
 ```
 
-```{r echo=FALSE}
+```{r echo=FALSE, warning=FALSE}
 # Convertir el dataframe al formato largo para ggplot
 df_long <- tidyr::pivot_longer(table_split2, cols = c("mean", "median", "std"), 
                                names_to = "variable", values_to = "value")
@@ -155,14 +221,14 @@ g1 + g2 + plot_layout(nrow = 2)
 
 **split = 4**
 
-```{r}
+```{r warning=FALSE}
 table_split4 <- datos %>% filter(split == 4) %>%
   group_by(n_cycle) %>%
   summarise_at(vars(accuracy_mean_mean),  list(mean = mean, median = median, std = sd))
 knitr::kable(table_split4)
 ```
 
-```{r echo=FALSE}
+```{r echo=FALSE, warning=FALSE}
 # Convertir el dataframe al formato largo para ggplot
 df_long <- tidyr::pivot_longer(table_split4, cols = c("mean", "median", "std"), 
                                names_to = "variable", values_to = "value")
@@ -196,14 +262,14 @@ g1 + g2 + plot_layout(nrow = 2)
 
 **split = 10**
 
-```{r}
+```{r warning=FALSE}
 table_split10 <- datos %>% filter(split == 10) %>%
   group_by(n_cycle) %>%
   summarise_at(vars(accuracy_mean_mean),  list(mean = mean, median = median, std = sd))
 knitr::kable(table_split10)
 ```
 
-```{r echo=FALSE}
+```{r echo=FALSE, warning=FALSE}
 # Convertir el dataframe al formato largo para ggplot
 df_long <- tidyr::pivot_longer(table_split10, cols = c("mean", "median", "std"), 
                                names_to = "variable", values_to = "value")
@@ -237,7 +303,7 @@ g1 + g2 + plot_layout(nrow = 2)
 
 # Number of cycles
 
-```{r}
+```{r warning=FALSE}
 # Tenemos que hacer el análisis para cada combo_alpha_split
 valores_combo = levels(datos$combo_alpha_split)
 n_combo = length(valores_combo)
@@ -256,7 +322,7 @@ combo_friedman[combo_friedman$p_value> 0.05]
 
 Una vez hemos visto que existen diferencias significativas entre al menos un valor del combo hacemos las comparaciones múltiples
 
-```{r}
+```{r warning=FALSE}
 
 dif_no_sig <- data.frame(valores_combo)
 dif_no_sig$niveles = rep(NA,n_combo)
@@ -292,7 +358,7 @@ dif_no_sig$niveles = rep(NA,n_combo)
 #write.csv(dif_no_sig, "CDB_cycles_ParametersComboAlphaSplit_dif_no_signif_cycles_mean.csv")
 ```
 
-```{r}
+```{r warning=FALSE}
 dif_no_sig_mean <- read.csv('CDB_cycles_ParametersComboAlphaSplit_dif_no_signif_cycles_mean.csv') 
 print(dif_no_sig_mean)
 ```
