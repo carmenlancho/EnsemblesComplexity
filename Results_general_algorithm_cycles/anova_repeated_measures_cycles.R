@@ -13,6 +13,10 @@ str(datos)
 datos <- datos %>%
   convert_as_factor(Dataset, combo_alpha_split, n_cycle,n_ensemble)
 
+
+#################################################################################################
+################                       ESTUDIO POR CICLOS                        ################
+#################################################################################################
 # Tenemos que hacer el análisis para cada combo_alpha_split
 valores_combo = levels(datos$combo_alpha_split)
 n_combo = length(valores_combo)
@@ -157,5 +161,102 @@ datos %>%
 # the higher the value of split, the higher the variance
 
 
+#################################################################################################
+################                        ESTUDIO POR SPLIT                        ################
+#################################################################################################
+str(datos)
+datos$split <- as.factor(datos$split)
+
+
+## No cumple las hipótesis de la versión paramétrica
+# res.aov <- anova_test(
+#   data = datos,formula = accuracy_mean_mean ~ split,
+#   dv = accuracy_mean_mean, wid = Dataset,
+#   within = c(split)
+# )
+# get_anova_table(res.aov, correction = 'GG')
+# # Significant differences with accuracy_mean_mean
+# 
+# 
+# # Normality check
+# plot(res.aov)
+# summary(res.aov)
+# res = attributes(res.aov)$args$model$residuals
+# index_sample <- sample(1:length(res),4000)
+# res_sample <- res[index_sample]
+# 
+# shapiro.test(as.numeric(res_sample))
+# hist(res)
+# #No cumple las hipótesis para versión paramétrica
+
+
+## Friedman no se puede utilizar porque el diseño no es balanceado
+# friedman.test(accuracy_mean_mean ~ split |Dataset,datos)
+# table(datos$Dataset,datos$split)
+
+# Tenemos que utiliar el test de Skillings-Mac
+# Skillings, J. H., Mack, G.A. (1981) On the use of a Friedman-type statistic in balanced and unbalanced block designs, Technometrics 23, 171--177
+#library(Skillings.Mack)
+#Ski.Mack(D_fri$accuracy_mean_mean, groups=D_fri$Dataset, blocks=D_fri$split, simulate.p.value = FALSE, B = 10000)
+# Para realizar este test, necesito añadir las filas "vacías"
+# Pero luego al hacer las comparaciones múltiples, no sé qué test hacer
+
+
+# Así, hacemos el estudio agregando por n_cycles que además me tiene sentido
+# porque no quiero que haya diferencia de potencia entre un valor de split u otro
+# y para split = 1 tengo 1000 datos por dataset y para split =30 tengo 50
+# así solo dejamos que haya variabilidad con respecto a alpha
+datos_alpha_split <- datos %>% group_by(Dataset, alpha, split) %>%  # Agrupar por las demás variables
+  summarise(accuracy_mean_mean = mean(accuracy_mean_mean),
+            accuracy_median_mean = mean(accuracy_mean_median),
+            accuracy_std_mean = mean(accuracy_mean_std))
+
+datos_alpha_split <- datos_alpha_split %>%
+  convert_as_factor(Dataset, alpha, split)
+
+datos_alpha_split<- as.data.frame(datos_alpha_split)
+str(datos_alpha_split)
+
+# Friedman test
+friedman.test(accuracy_mean_mean ~ split |Dataset,data=as.matrix(datos_alpha_split))
+friedman.test(accuracy_median_mean ~ split |Dataset,data=as.matrix(datos_alpha_split))
+# no sé por qué da error
+
+# Friedman, no paramétrico
+res.fried <- datos_alpha_split %>% friedman_test(accuracy_mean_mean ~ split |Dataset)
+res.fried$p
+
+pwc2 <- datos_alpha_split %>% 
+  wilcox_test(accuracy_mean_mean ~ split, paired = TRUE, p.adjust.method = "bonferroni")
+
+pwc2_median <- datos_alpha_split %>% 
+  wilcox_test(accuracy_median_mean ~ split, paired = TRUE, p.adjust.method = "bonferroni")
+
+pwc2_std <- datos_alpha_split %>% 
+  wilcox_test(accuracy_std_mean ~ split, paired = TRUE, p.adjust.method = "bonferroni")
+
+
+#################################################################################################
+################                        ESTUDIO POR ALPHA                        ################
+#################################################################################################
+
+
+# Friedman test
+friedman.test(accuracy_mean_mean ~ alpha |Dataset,data=as.matrix(datos_alpha_split))
+friedman.test(accuracy_median_mean ~ alpha |Dataset,data=as.matrix(datos_alpha_split))
+# no sé por qué da error
+
+# Friedman, no paramétrico
+res.fried <- datos_alpha_split %>% friedman_test(accuracy_mean_mean ~ alpha |Dataset)
+res.fried$p
+
+pwc2_media <- datos_alpha_split %>% 
+  wilcox_test(accuracy_mean_mean ~ alpha, paired = TRUE, p.adjust.method = "bonferroni")
+
+pwc2_median <- datos_alpha_split %>% 
+  wilcox_test(accuracy_median_mean ~ alpha, paired = TRUE, p.adjust.method = "bonferroni")
+
+pwc2_std <- datos_alpha_split %>% 
+  wilcox_test(accuracy_std_mean ~ alpha, paired = TRUE, p.adjust.method = "bonferroni")
 
 
