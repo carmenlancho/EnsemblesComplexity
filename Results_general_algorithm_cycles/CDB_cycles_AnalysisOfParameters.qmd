@@ -13,15 +13,15 @@ In this notebook, we are studying the different parameters of our method Complex
 
 -   Number of cycles. How many times the procedure is repeated. This is totally related with the final number of ensembles.
 
-Besides this 3 parameters, we have obtained results for different complexity measures. For the analysis of the parameters, we have aggregated results over the different complexity measures.
+Besides these 3 parameters, we have obtained results for different complexity measures. For the analysis of the parameters, we have aggregated results over the different complexity measures.
 
 First, we are studying the recommended number of cycles. That is, given a value of split and a value of alpha, we want to know when the best accuracy is obtained, when there are significant differences, etc. so as to recommend the lower number of cycles (lower number of ensembles) with the best performance.
 
-Once the number of cycles is reduced, we perform a similar analysis on the alpha parameter and the on the split parameter.
+Once the number of cycles is reduced, we perform a similar analysis on the alpha parameter and on the split parameter.
 
 # First view
 
-```{r}
+```{r warning=FALSE}
 library(tidyverse)
 library(ggpubr)
 library(rstatix)
@@ -246,7 +246,7 @@ g1 + g2 + plot_layout(nrow = 2)
 
 ```
 
-The higher the number of cycles, the higher the mean, median of accuracy and the lower the standard deviation. However, for high values of cycles, the accuracy clearly stabilizes and there is no
+The higher the number of cycles, the higher the mean, median of accuracy and the lower the standard deviation. For high values of cycles, the accuracy clearly stabilizes and there is no always a clear increase over time. For example, results with 89 cycles are better than with 100.
 
 **split = 2**
 
@@ -289,6 +289,8 @@ g1 + g2 + plot_layout(nrow = 2)
 
 ```
 
+The higher the number of cycles, the higher the mean, median of accuracy and the lower the standard deviation. For high values of cycles, the accuracy clearly stabilizes and there is no always a clear increase over time.
+
 **split = 4**
 
 ```{r warning=FALSE}
@@ -329,6 +331,8 @@ g2 <- ggplot(df_long[df_long$variable == "std",],
 g1 + g2 + plot_layout(nrow = 2)
 
 ```
+
+The higher the number of cycles, the higher the mean, median of accuracy and the lower the standard deviation. For high values of cycles, the accuracy stabilizes but keeps showing an increasing trend. The longest the cycle, the less stable the trend (still increasing).
 
 **split = 10**
 
@@ -371,6 +375,8 @@ g1 + g2 + plot_layout(nrow = 2)
 
 ```
 
+The higher the number of cycles, the higher the mean, median of accuracy and the lower the standard deviation. For high values of cycles, the accuracy stabilizes but keeps showing an increasing trend. The longest the cycle, the less stable the trend (still increasing).
+
 # Number of cycles
 
 ```{r warning=FALSE}
@@ -390,7 +396,7 @@ combo_friedman[combo_friedman$p_value> 0.05]
 # es decir, en todos los casos hay diferencias significativas
 ```
 
-Una vez hemos visto que existen diferencias significativas entre al menos un valor del combo hacemos las comparaciones múltiples
+Once we have checked that there are significant differences between at least one value in the combo, we make multiple comparisons to analyze when adding another cycle is not worthy since the increase is not significant.
 
 ```{r warning=FALSE}
 
@@ -428,11 +434,121 @@ dif_no_sig$niveles = rep(NA,n_combo)
 #write.csv(dif_no_sig, "CDB_cycles_ParametersComboAlphaSplit_dif_no_signif_cycles_mean.csv")
 ```
 
+In this dataframe we have, for every combination of alpha and split, the number of cycles with no significant difference between all of them.
+
 ```{r warning=FALSE}
 dif_no_sig_mean <- read.csv('CDB_cycles_ParametersComboAlphaSplit_dif_no_signif_cycles_mean.csv') 
 head(dif_no_sig_mean)
 ```
 
+Let's relate that with the number of models to have a first view of where to stop adding models. We create two different columns:
+
+-   num_models: it relates the first (minimum) number of cycles that presents no significant differences with all its consecutive number of cycles with the number of models it implies.
+
+-   num_models2: it is exactly the same concept as num_models but with the second value of number of cycles in case we want to be more conservative
+
+```{r}
+# Variables to character
+dif_no_sig_mean$niveles <- as.character(dif_no_sig_mean$niveles)
+dif_no_sig_mean$valores_combo <- as.character(dif_no_sig_mean$valores_combo)
+
+# Order the values 
+dif_no_sig_mean$niveles <- sapply(strsplit(dif_no_sig_mean$niveles, ", "), function(x) {
+  paste(sort(as.numeric(x)), collapse = ", ")
+})
+
+# Extraer el valor numérico después de "split" en la columna B
+dif_no_sig_mean$valor_split <- as.numeric(gsub(".*split", "", dif_no_sig_mean$valores_combo))
+
+# New columns with number of models
+dif_no_sig_mean$num_models <- mapply(function(a, b) {
+  min(as.numeric(strsplit(a, ", ")[[1]])) * (2*b +1)
+}, dif_no_sig_mean$niveles, dif_no_sig_mean$valor_split)
+
+# New columns with number of models (for the second value)
+dif_no_sig_mean$num_models2 <- mapply(function(a, b) {
+  valores <- sort(as.numeric(strsplit(a, ", ")[[1]])) 
+  segundo_min <- ifelse(length(valores) > 1, valores[2], valores[1])  # Obtener el segundo mínimo o el primero si hay solo uno
+  segundo_min * (2*b +1)
+}, dif_no_sig_mean$niveles, dif_no_sig_mean$valor_split)
+
+head(dif_no_sig_mean)
+```
+
+We perform the same analysis for the median and the standard deviation
+
+```{r}
+# dif_no_sig_mean$niveles_mediana = rep(NA,n_combo)
+# 
+# # Lo dejamos en comentarios porque tarda mucho
+# 
+# for (i in valores_combo){
+#   print(i)
+#   datos_i = datos[datos$combo_alpha_split==i,]
+#   datos_i$n_cycle <- factor(datos_i$n_cycle) # los niveles del factor cambian en cada subset
+#   pwc2 <- datos_i %>%
+#     wilcox_test(accuracy_mean_median ~ n_cycle, paired = TRUE, p.adjust.method = "bonferroni")
+#   # Filtrar comparaciones con diferencias no significativas (suponiendo un umbral de p > 0.05)
+#   no_significativas <- pwc2[pwc2$p.adj>0.1,]
+# 
+# 
+#   # si no todas las comparaciones con ese nivel son no significativas, lo quitamos
+#   # es decir, no nos vale que solo no haya diferencia entre 3 y 5 y con el resto (3-6,3-7,etc) sí
+#   max_cycles = max(as.numeric(pwc2$group2))
+#   valores_check <- unique(as.numeric(no_significativas$group1))
+#   for (v in valores_check){
+#     if (sum(no_significativas$group1 == v) <(max_cycles - v) ){
+#       no_significativas = no_significativas[no_significativas$group1!=v,]
+#     }
+#   }
+# 
+#   # Extraer los niveles de los pares con diferencias no significativas
+#   niveles_no_significativos <- unique(c(no_significativas$group1, no_significativas$group2))
+# 
+#   dif_no_sig_mean[dif_no_sig_mean$valores_combo==i,'niveles_mediana'] = paste(niveles_no_significativos, collapse = ", ")
+# }
+
+#write.csv(dif_no_sig_mean, "CDB_cycles_ParametersComboAlphaSplit_dif_no_signif_cycles_mean_median.csv")
+```
+
+Ahora para std
+
+```{r}
+# dif_no_sig_mean$niveles_std = rep(NA,n_combo)
+# 
+# # Lo dejamos en comentarios porque tarda mucho
+# 
+# for (i in valores_combo){
+#   print(i)
+#   datos_i = datos[datos$combo_alpha_split==i,]
+#   datos_i$n_cycle <- factor(datos_i$n_cycle) # los niveles del factor cambian en cada subset
+#   pwc2 <- datos_i %>%
+#     wilcox_test(accuracy_mean_std ~ n_cycle, paired = TRUE, p.adjust.method = "bonferroni")
+#   # Filtrar comparaciones con diferencias no significativas (suponiendo un umbral de p > 0.05)
+#   no_significativas <- pwc2[pwc2$p.adj>0.1,]
+# 
+# 
+#   # si no todas las comparaciones con ese nivel son no significativas, lo quitamos
+#   # es decir, no nos vale que solo no haya diferencia entre 3 y 5 y con el resto (3-6,3-7,etc) sí
+#   max_cycles = max(as.numeric(pwc2$group2))
+#   valores_check <- unique(as.numeric(no_significativas$group1))
+#   for (v in valores_check){
+#     if (sum(no_significativas$group1 == v) <(max_cycles - v) ){
+#       no_significativas = no_significativas[no_significativas$group1!=v,]
+#     }
+#   }
+# 
+#   # Extraer los niveles de los pares con diferencias no significativas
+#   niveles_no_significativos <- unique(c(no_significativas$group1, no_significativas$group2))
+# 
+#   dif_no_sig_mean[dif_no_sig_mean$valores_combo==i,'niveles_std'] = paste(niveles_no_significativos, collapse = ", ")
+# }
+
+#write.csv(dif_no_sig_mean, "CDB_cycles_ParametersComboAlphaSplit_dif_no_signif_cycles_mean_median_std.csv")
+```
+
 AHORA AQUÍ TENGO QUE RESUMIR A PARTIR DE CUANDO NO HAY DIFERENCIAS SIGNIFICATIVAS PARA CADA CASO Y RELACIONARLO CON EL NÚMERO DE ENSEMBLES
 
 LUEGO HACER LO MISMO PARA STD Y CON ELLO FILTRAR N_CYCLES
+
+¿Qué es mejor: ciclos cortos o largos?
