@@ -475,7 +475,9 @@ dif_no_sig_mean$num_models2 <- mapply(function(a, b) {
 head(dif_no_sig_mean)
 ```
 
-We perform the same analysis for the median and the standard deviation
+We perform the same analysis for the median and the standard deviation.
+
+For the **median**:
 
 ```{r}
 # dif_no_sig_mean$niveles_mediana = rep(NA,n_combo)
@@ -511,7 +513,7 @@ We perform the same analysis for the median and the standard deviation
 #write.csv(dif_no_sig_mean, "CDB_cycles_ParametersComboAlphaSplit_dif_no_signif_cycles_mean_median.csv")
 ```
 
-Ahora para std
+For the **standard deviation**:
 
 ```{r}
 # dif_no_sig_mean$niveles_std = rep(NA,n_combo)
@@ -545,6 +547,56 @@ Ahora para std
 # }
 
 #write.csv(dif_no_sig_mean, "CDB_cycles_ParametersComboAlphaSplit_dif_no_signif_cycles_mean_median_std.csv")
+```
+
+Now we relate the number of cycles with the number of ensembles for all statistical measures (mean, median, std):
+
+```{r warning=FALSE}
+dif_no_sig_all <- read.csv('CDB_cycles_ParametersComboAlphaSplit_dif_no_signif_cycles_mean_median_std.csv') 
+head(dif_no_sig_all)
+```
+
+```{r warning=FALSE}
+# Variables to character
+dif_no_sig_all$niveles_mediana <- as.character(dif_no_sig_all$niveles_mediana)
+dif_no_sig_all$niveles_std <- as.character(dif_no_sig_all$niveles_std)
+dif_no_sig_all$valores_combo <- as.character(dif_no_sig_all$valores_combo)
+
+# Order the values 
+dif_no_sig_all$niveles_mediana <- sapply(strsplit(dif_no_sig_all$niveles_mediana, ", "), function(x) {
+  paste(sort(as.numeric(x)), collapse = ", ")
+})
+
+dif_no_sig_all$niveles_std <- sapply(strsplit(dif_no_sig_all$niveles_std, ", "), function(x) {
+  paste(sort(as.numeric(x)), collapse = ", ")
+})
+
+
+# New columns with number of models
+dif_no_sig_all$num_models_mediana <- mapply(function(a, b) {
+  min(as.numeric(strsplit(a, ", ")[[1]])) * (2*b +1)
+}, dif_no_sig_all$niveles_mediana, dif_no_sig_all$valor_split)
+
+dif_no_sig_all$num_models_std <- mapply(function(a, b) {
+  min(as.numeric(strsplit(a, ", ")[[1]])) * (2*b +1)
+}, dif_no_sig_all$niveles_std, dif_no_sig_all$valor_split)
+
+# New columns with number of models (for the second value)
+dif_no_sig_all$num_models2_mediana <- mapply(function(a, b) {
+  valores <- sort(as.numeric(strsplit(a, ", ")[[1]])) 
+  segundo_min <- ifelse(length(valores) > 1, valores[2], valores[1])  # Obtener el segundo mínimo o el primero si hay solo uno
+  segundo_min * (2*b +1)
+}, dif_no_sig_all$niveles_mediana, dif_no_sig_all$valor_split)
+
+dif_no_sig_all$num_models2_std <- mapply(function(a, b) {
+  valores <- sort(as.numeric(strsplit(a, ", ")[[1]])) 
+  segundo_min <- ifelse(length(valores) > 1, valores[2], valores[1])  # Obtener el segundo mínimo o el primero si hay solo uno
+  segundo_min * (2*b +1)
+}, dif_no_sig_all$niveles_std, dif_no_sig_all$valor_split)
+
+head(dif_no_sig_all)
+
+#write.csv(dif_no_sig_all, "CDB_cycles_ParametersComboAlphaSplit_dif_no_signif_cycles_mean_median_std_num_models.csv")
 ```
 
 AHORA AQUÍ TENGO QUE RESUMIR A PARTIR DE CUANDO NO HAY DIFERENCIAS SIGNIFICATIVAS PARA CADA CASO Y RELACIONARLO CON EL NÚMERO DE ENSEMBLES
