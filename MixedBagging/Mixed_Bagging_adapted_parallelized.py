@@ -1224,7 +1224,7 @@ for filename in os.listdir(path_csv):
 
 
 
-#total_name_list = [ 'arrhythmia_cfs.csv', 'cleveland.csv', 'ionosphere.csv', 'pima.csv','parkinsons.csv']
+# total_name_list = [ 'arrhythmia_cfs.csv', 'cleveland.csv', 'ionosphere.csv', 'pima.csv','parkinsons.csv']
 
 # total_name_list = [  # 'teaching_assistant_MH.csv','chronic_kidney.csv','contraceptive_NL.csv',
 #     'balance_scale_BR.csv',
@@ -1259,7 +1259,7 @@ for filename in os.listdir(path_csv):
 
 N= mp.cpu_count()
 
-with mp.Pool(processes = 3) as p:
+with mp.Pool(processes = N-10) as p:
         p.map(AdaptedMixedBagging, [dataset_name for dataset_name in total_name_list])
         # p.close()
 
