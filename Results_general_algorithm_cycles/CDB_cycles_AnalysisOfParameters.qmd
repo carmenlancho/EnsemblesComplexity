@@ -15,13 +15,19 @@ In this notebook, we are studying the different parameters of our method Complex
 
 Besides these 3 parameters, we have obtained results for different complexity measures. For the analysis of the parameters, we have aggregated results over the different complexity measures.
 
-First, we are studying the recommended number of cycles. That is, given a value of split and a value of alpha, we want to know when the best accuracy is obtained, when there are significant differences, etc. so as to recommend the lower number of cycles (lower number of ensembles) with the best performance.
+First, we are studying, for each one of the parameters (alpha, split, number of cycles) independently, for which values there are no significant differences and, thus, can be eliminated from the range of recommended values.
 
-Once the number of cycles is reduced, we perform a similar analysis on the alpha parameter and on the split parameter.
+In particular:
 
-# First view
+-   For alpha and split, we aggregate over the rest of parameters since the number of tested models depends on the value of split. Therefore, for low split values, there are a lot of results but for high split values there are just a few (1000 vs 50). This requires special statistical test because the design is imbalanced. Furthermore, the comparison will not be fair since the number of models is indeed the same (we have used around 300 models in all cases) but when split is low, the number of cycles is higher and more results are saved (for example 1000) and when split is high there are only a few cycles (for example 50) but representing the same amount of models. Thus, to make the comparison fair (and not play with different samples sizes and variances), we aggregate over the rest of the results.
 
-```{r warning=FALSE}
+-   For the number of cycles, we compared the number of cycles for every combination of split and alpha. The idea is that, given a value of split and a value of alpha, we want to know when the best accuracy is obtained, when there are significant differences, etc. so as to recommend the lower number of cycles (lower number of ensembles) with the best performance. We start by identifying, for each combination of split and alpha, from what number of cycles onwards there is no significant difference in the accuracy obtained.
+
+After this analysis, we will have a first range recommendation for every parameter. Notice that, in all cases, we take into account the mean, median and standard deviation of the accuracy.
+
+# Parameter analysis
+
+```{r warning=FALSE, include=FALSE}
 library(tidyverse)
 library(ggpubr)
 library(rstatix)
@@ -129,7 +135,7 @@ For the **std of the accuracy**, there are no significant differences among:
 
 -   12 with 14, 16, 20, 22, 26, 30
 
--   From 14 to 30, almost all comparisons are not significantly different --\> maximum value of split should be 16
+-   From 14 to 30, almost all comparisons are not significantly different --\> maximum value of split should be 14
 
 ### Mean, median and standard deviation of accuracy for all levels of alpha
 
@@ -594,10 +600,79 @@ dif_no_sig_all$num_models2_std <- mapply(function(a, b) {
   segundo_min * (2*b +1)
 }, dif_no_sig_all$niveles_std, dif_no_sig_all$valor_split)
 
+# Sacamos tb el valor en ciclos
+dif_no_sig_all$cycles_mean <- sapply(strsplit(dif_no_sig_all$niveles, ", "), function(x) {
+  min(as.numeric(x))})
+
+dif_no_sig_all$cycles_median <- sapply(strsplit(dif_no_sig_all$niveles_mediana, ", "), function(x) {
+  min(as.numeric(x))})
+
+dif_no_sig_all$cycles_std <- sapply(strsplit(dif_no_sig_all$niveles_std, ", "), function(x) {
+  min(as.numeric(x))})
+
+
 head(dif_no_sig_all)
 
 #write.csv(dif_no_sig_all, "CDB_cycles_ParametersComboAlphaSplit_dif_no_signif_cycles_mean_median_std_num_models.csv")
 ```
+
+We have performed multiple comparisons analysis for the number of cycles with respect to the mean, median and std of the accuracy and found the number of cycles above which there is no significant difference for each statistical measure. Now we have to take the maximum number of cycles over the three statistical measure to select a range of cycles. After that we can analyze which is the best cycle structure (for example, a high number of short cycles or a short number of long cycles).
+
+```{r}
+dif_no_sig_all$max_num_cycles <- apply(X=dif_no_sig_all[,c('cycles_mean','cycles_median','cycles_std')], MARGIN=1, FUN=max)
+dif_no_sig_all$max_num_models <- apply(X=dif_no_sig_all[,c('num_models','num_models_mediana','num_models_std')], MARGIN=1, FUN=max)
+
+```
+
+If we analyze the number of models above which there are no significant different, we can see that the maximum value is 294 and quartile 75% is 175, implying that our maximum tested number of models (300) is ok and that lower number of models in an ensemble can obtain competitive accuracy results.
+
+```{r}
+p<-ggplot(dif_no_sig_all, aes(x=max_num_models)) + 
+  geom_histogram(color="black", fill="white")
+p
+```
+
+```{r}
+summary(dif_no_sig_all$max_num_models)
+```
+
+From the study of alpha and split we know that:
+
+-   From 16 to 30, almost all comparisons are not significantly different --\> **maximum value of split should be 16. Domain: \[1, 2, 4, 6, 8, 10, 12, 14\]**
+
+-   Maximum alpha value should be 10-12: **Domain: \[2, 4, 6, 8, 10\]**
+
+Note that these ranges go inline with the previous study where we make no distinction about cycles.
+
+Let's filter now the previous information according to these ranges:
+
+```{r}
+dif_no_sig_all$valor_alpha <- as.numeric(gsub("alpha([0-9]+)-split[0-9]+", "\\1", dif_no_sig_all$valores_combo))
+# Filtrar el dataset para eliminar las filas donde alpha > 12 y split > 16
+df_filtered <- dif_no_sig_all[(dif_no_sig_all$valor_alpha < 12 & dif_no_sig_all$valor_split < 16), ]
+```
+
+```{r}
+summary(df_filtered$max_num_models)
+```
+
+After filtering the not desired values for alpha and split, the maximum number of models where the significant differences stops is 200.
+
+Este df_filtered son 40 filas, es decir, 40 combinaciones de alpha y split. Entonces vamos a estudiarlos 1 a 1. Hago un gráfico de la evolución del accuracy en cada caso y señalo cuando se supone que no hay diferencias significativas. Esto lo hacemos de nuevo agregado por medidas de complejidad y luego elijo un par y lo visualizo para ellas. Aquí estoy un poco perdida porque en general se ve que según aumenta el número de modelos, aumenta el accuracy pero supuestamente ya no de forma significativa y deberíamos guiarnos por eso. Yo creo que el orden es:
+
+1.  Hacer estos gráficos de evoluación del accuracy para los 40 casos y mirarlo para alguna medida de complejidad
+
+2.  Seleccionar el mejor valor de accuracy para estos 40 casos
+
+3.  Sacar conclusiones de la comparación de 1 y 2
+
+4.  Para nuestro método, escoger el mejor valor de parámetros en 2 casos:
+
+    1.  alpha, split y n_cycles reducido en función de las comparaciones múltiples
+
+    2.  alpha y split reducido en función de las comparaciones múltiples y n_cycles sin reducir
+
+    Comparar estas 2 versiones nuestras standard bagging y mixed bagging con el mismo número de parámetros
 
 AHORA AQUÍ TENGO QUE RESUMIR A PARTIR DE CUANDO NO HAY DIFERENCIAS SIGNIFICATIVAS PARA CADA CASO Y RELACIONARLO CON EL NÚMERO DE ENSEMBLES
 
