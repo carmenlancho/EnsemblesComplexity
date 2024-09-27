@@ -402,622 +402,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>table_split1 <span class="ot">&lt;-</span> datos <span class="sc">%&gt;%</span> <span class="fu">filter</span>(split <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(n_cycle) <span class="sc">%&gt;%</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_at</span>(<span class="fu">vars</span>(accuracy_mean_mean),  <span class="fu">list</span>(<span class="at">mean =</span> mean, <span class="at">median =</span> median, <span class="at">std =</span> sd))</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(table_split1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<table class="table table-sm table-striped">
-<thead>
-<tr class="header">
-<th style="text-align: left;">n_cycle</th>
-<th style="text-align: right;">mean</th>
-<th style="text-align: right;">median</th>
-<th style="text-align: right;">std</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">1</td>
-<td style="text-align: right;">0.7756790</td>
-<td style="text-align: right;">0.7591390</td>
-<td style="text-align: right;">0.1335892</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">2</td>
-<td style="text-align: right;">0.7859496</td>
-<td style="text-align: right;">0.7744528</td>
-<td style="text-align: right;">0.1303084</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">3</td>
-<td style="text-align: right;">0.7970600</td>
-<td style="text-align: right;">0.7860915</td>
-<td style="text-align: right;">0.1266214</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">4</td>
-<td style="text-align: right;">0.7994771</td>
-<td style="text-align: right;">0.7875739</td>
-<td style="text-align: right;">0.1258194</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">5</td>
-<td style="text-align: right;">0.8029400</td>
-<td style="text-align: right;">0.7898607</td>
-<td style="text-align: right;">0.1245428</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">6</td>
-<td style="text-align: right;">0.8037183</td>
-<td style="text-align: right;">0.7907027</td>
-<td style="text-align: right;">0.1243518</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">7</td>
-<td style="text-align: right;">0.8059178</td>
-<td style="text-align: right;">0.7915995</td>
-<td style="text-align: right;">0.1233060</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">8</td>
-<td style="text-align: right;">0.8065337</td>
-<td style="text-align: right;">0.7929174</td>
-<td style="text-align: right;">0.1230520</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">9</td>
-<td style="text-align: right;">0.8075320</td>
-<td style="text-align: right;">0.7934322</td>
-<td style="text-align: right;">0.1226671</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">10</td>
-<td style="text-align: right;">0.8078526</td>
-<td style="text-align: right;">0.7934658</td>
-<td style="text-align: right;">0.1225563</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">11</td>
-<td style="text-align: right;">0.8085271</td>
-<td style="text-align: right;">0.7943898</td>
-<td style="text-align: right;">0.1222828</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">12</td>
-<td style="text-align: right;">0.8087429</td>
-<td style="text-align: right;">0.7941222</td>
-<td style="text-align: right;">0.1223141</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">13</td>
-<td style="text-align: right;">0.8092267</td>
-<td style="text-align: right;">0.7945299</td>
-<td style="text-align: right;">0.1220799</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">14</td>
-<td style="text-align: right;">0.8093845</td>
-<td style="text-align: right;">0.7946952</td>
-<td style="text-align: right;">0.1220494</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">15</td>
-<td style="text-align: right;">0.8097374</td>
-<td style="text-align: right;">0.7951246</td>
-<td style="text-align: right;">0.1218240</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">16</td>
-<td style="text-align: right;">0.8099223</td>
-<td style="text-align: right;">0.7949990</td>
-<td style="text-align: right;">0.1218300</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">17</td>
-<td style="text-align: right;">0.8102507</td>
-<td style="text-align: right;">0.7952207</td>
-<td style="text-align: right;">0.1216323</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">18</td>
-<td style="text-align: right;">0.8105223</td>
-<td style="text-align: right;">0.7958553</td>
-<td style="text-align: right;">0.1214596</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">19</td>
-<td style="text-align: right;">0.8106788</td>
-<td style="text-align: right;">0.7953371</td>
-<td style="text-align: right;">0.1214272</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">20</td>
-<td style="text-align: right;">0.8107571</td>
-<td style="text-align: right;">0.7950385</td>
-<td style="text-align: right;">0.1213842</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">21</td>
-<td style="text-align: right;">0.8109622</td>
-<td style="text-align: right;">0.7958051</td>
-<td style="text-align: right;">0.1212865</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">22</td>
-<td style="text-align: right;">0.8109908</td>
-<td style="text-align: right;">0.7961829</td>
-<td style="text-align: right;">0.1212791</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">23</td>
-<td style="text-align: right;">0.8112208</td>
-<td style="text-align: right;">0.7960142</td>
-<td style="text-align: right;">0.1212699</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">24</td>
-<td style="text-align: right;">0.8113277</td>
-<td style="text-align: right;">0.7959811</td>
-<td style="text-align: right;">0.1211238</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">25</td>
-<td style="text-align: right;">0.8114490</td>
-<td style="text-align: right;">0.7956136</td>
-<td style="text-align: right;">0.1211408</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">26</td>
-<td style="text-align: right;">0.8115016</td>
-<td style="text-align: right;">0.7960230</td>
-<td style="text-align: right;">0.1211391</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">27</td>
-<td style="text-align: right;">0.8116710</td>
-<td style="text-align: right;">0.7959297</td>
-<td style="text-align: right;">0.1209756</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">28</td>
-<td style="text-align: right;">0.8116816</td>
-<td style="text-align: right;">0.7963127</td>
-<td style="text-align: right;">0.1210195</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">29</td>
-<td style="text-align: right;">0.8118198</td>
-<td style="text-align: right;">0.7964280</td>
-<td style="text-align: right;">0.1209704</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">30</td>
-<td style="text-align: right;">0.8118466</td>
-<td style="text-align: right;">0.7961231</td>
-<td style="text-align: right;">0.1209071</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">31</td>
-<td style="text-align: right;">0.8119325</td>
-<td style="text-align: right;">0.7966748</td>
-<td style="text-align: right;">0.1209119</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">32</td>
-<td style="text-align: right;">0.8120285</td>
-<td style="text-align: right;">0.7968614</td>
-<td style="text-align: right;">0.1208236</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">33</td>
-<td style="text-align: right;">0.8120469</td>
-<td style="text-align: right;">0.7969262</td>
-<td style="text-align: right;">0.1208331</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">34</td>
-<td style="text-align: right;">0.8120727</td>
-<td style="text-align: right;">0.7968393</td>
-<td style="text-align: right;">0.1208331</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">35</td>
-<td style="text-align: right;">0.8121428</td>
-<td style="text-align: right;">0.7971642</td>
-<td style="text-align: right;">0.1207984</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">36</td>
-<td style="text-align: right;">0.8122442</td>
-<td style="text-align: right;">0.7970744</td>
-<td style="text-align: right;">0.1207836</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">37</td>
-<td style="text-align: right;">0.8122955</td>
-<td style="text-align: right;">0.7967401</td>
-<td style="text-align: right;">0.1206765</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">38</td>
-<td style="text-align: right;">0.8123182</td>
-<td style="text-align: right;">0.7968937</td>
-<td style="text-align: right;">0.1206443</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">39</td>
-<td style="text-align: right;">0.8123705</td>
-<td style="text-align: right;">0.7970083</td>
-<td style="text-align: right;">0.1205937</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">40</td>
-<td style="text-align: right;">0.8123626</td>
-<td style="text-align: right;">0.7970500</td>
-<td style="text-align: right;">0.1206607</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">41</td>
-<td style="text-align: right;">0.8123521</td>
-<td style="text-align: right;">0.7971789</td>
-<td style="text-align: right;">0.1206786</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">42</td>
-<td style="text-align: right;">0.8124012</td>
-<td style="text-align: right;">0.7973908</td>
-<td style="text-align: right;">0.1207203</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">43</td>
-<td style="text-align: right;">0.8124386</td>
-<td style="text-align: right;">0.7970934</td>
-<td style="text-align: right;">0.1206390</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">44</td>
-<td style="text-align: right;">0.8124917</td>
-<td style="text-align: right;">0.7976081</td>
-<td style="text-align: right;">0.1206672</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">45</td>
-<td style="text-align: right;">0.8126015</td>
-<td style="text-align: right;">0.7972997</td>
-<td style="text-align: right;">0.1205904</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">46</td>
-<td style="text-align: right;">0.8125787</td>
-<td style="text-align: right;">0.7974742</td>
-<td style="text-align: right;">0.1206267</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">47</td>
-<td style="text-align: right;">0.8126099</td>
-<td style="text-align: right;">0.7981018</td>
-<td style="text-align: right;">0.1206047</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">48</td>
-<td style="text-align: right;">0.8126412</td>
-<td style="text-align: right;">0.7974160</td>
-<td style="text-align: right;">0.1205582</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">49</td>
-<td style="text-align: right;">0.8126142</td>
-<td style="text-align: right;">0.7976274</td>
-<td style="text-align: right;">0.1206082</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">50</td>
-<td style="text-align: right;">0.8126496</td>
-<td style="text-align: right;">0.7971792</td>
-<td style="text-align: right;">0.1205949</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">51</td>
-<td style="text-align: right;">0.8126936</td>
-<td style="text-align: right;">0.7973646</td>
-<td style="text-align: right;">0.1206044</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">52</td>
-<td style="text-align: right;">0.8126897</td>
-<td style="text-align: right;">0.7972023</td>
-<td style="text-align: right;">0.1206168</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">53</td>
-<td style="text-align: right;">0.8127480</td>
-<td style="text-align: right;">0.7972210</td>
-<td style="text-align: right;">0.1205667</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">54</td>
-<td style="text-align: right;">0.8127801</td>
-<td style="text-align: right;">0.7973761</td>
-<td style="text-align: right;">0.1205324</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">55</td>
-<td style="text-align: right;">0.8128307</td>
-<td style="text-align: right;">0.7970356</td>
-<td style="text-align: right;">0.1205376</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">56</td>
-<td style="text-align: right;">0.8129148</td>
-<td style="text-align: right;">0.7974204</td>
-<td style="text-align: right;">0.1204809</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">57</td>
-<td style="text-align: right;">0.8129611</td>
-<td style="text-align: right;">0.7974561</td>
-<td style="text-align: right;">0.1204807</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">58</td>
-<td style="text-align: right;">0.8129984</td>
-<td style="text-align: right;">0.7975191</td>
-<td style="text-align: right;">0.1204710</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">59</td>
-<td style="text-align: right;">0.8129814</td>
-<td style="text-align: right;">0.7973425</td>
-<td style="text-align: right;">0.1204628</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">60</td>
-<td style="text-align: right;">0.8129268</td>
-<td style="text-align: right;">0.7970889</td>
-<td style="text-align: right;">0.1204369</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">61</td>
-<td style="text-align: right;">0.8129403</td>
-<td style="text-align: right;">0.7973984</td>
-<td style="text-align: right;">0.1204499</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">62</td>
-<td style="text-align: right;">0.8129809</td>
-<td style="text-align: right;">0.7975005</td>
-<td style="text-align: right;">0.1204287</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">63</td>
-<td style="text-align: right;">0.8129665</td>
-<td style="text-align: right;">0.7972464</td>
-<td style="text-align: right;">0.1204683</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">64</td>
-<td style="text-align: right;">0.8129417</td>
-<td style="text-align: right;">0.7974337</td>
-<td style="text-align: right;">0.1205009</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">65</td>
-<td style="text-align: right;">0.8129671</td>
-<td style="text-align: right;">0.7976248</td>
-<td style="text-align: right;">0.1204499</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">66</td>
-<td style="text-align: right;">0.8129913</td>
-<td style="text-align: right;">0.7976016</td>
-<td style="text-align: right;">0.1204484</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">67</td>
-<td style="text-align: right;">0.8129390</td>
-<td style="text-align: right;">0.7976989</td>
-<td style="text-align: right;">0.1204725</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">68</td>
-<td style="text-align: right;">0.8129920</td>
-<td style="text-align: right;">0.7976058</td>
-<td style="text-align: right;">0.1204102</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">69</td>
-<td style="text-align: right;">0.8129712</td>
-<td style="text-align: right;">0.7978455</td>
-<td style="text-align: right;">0.1205171</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">70</td>
-<td style="text-align: right;">0.8130038</td>
-<td style="text-align: right;">0.7980463</td>
-<td style="text-align: right;">0.1204603</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">71</td>
-<td style="text-align: right;">0.8129974</td>
-<td style="text-align: right;">0.7982311</td>
-<td style="text-align: right;">0.1204690</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">72</td>
-<td style="text-align: right;">0.8130344</td>
-<td style="text-align: right;">0.7980669</td>
-<td style="text-align: right;">0.1204248</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">73</td>
-<td style="text-align: right;">0.8130781</td>
-<td style="text-align: right;">0.7981644</td>
-<td style="text-align: right;">0.1204235</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">74</td>
-<td style="text-align: right;">0.8130691</td>
-<td style="text-align: right;">0.7979457</td>
-<td style="text-align: right;">0.1204334</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">75</td>
-<td style="text-align: right;">0.8131017</td>
-<td style="text-align: right;">0.7983264</td>
-<td style="text-align: right;">0.1204169</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">76</td>
-<td style="text-align: right;">0.8130674</td>
-<td style="text-align: right;">0.7980832</td>
-<td style="text-align: right;">0.1204308</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">77</td>
-<td style="text-align: right;">0.8130863</td>
-<td style="text-align: right;">0.7981275</td>
-<td style="text-align: right;">0.1204443</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">78</td>
-<td style="text-align: right;">0.8131161</td>
-<td style="text-align: right;">0.7980625</td>
-<td style="text-align: right;">0.1203965</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">79</td>
-<td style="text-align: right;">0.8130629</td>
-<td style="text-align: right;">0.7979155</td>
-<td style="text-align: right;">0.1204396</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">80</td>
-<td style="text-align: right;">0.8130626</td>
-<td style="text-align: right;">0.7979968</td>
-<td style="text-align: right;">0.1203842</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">81</td>
-<td style="text-align: right;">0.8131001</td>
-<td style="text-align: right;">0.7981658</td>
-<td style="text-align: right;">0.1203663</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">82</td>
-<td style="text-align: right;">0.8131419</td>
-<td style="text-align: right;">0.7982563</td>
-<td style="text-align: right;">0.1203453</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">83</td>
-<td style="text-align: right;">0.8131550</td>
-<td style="text-align: right;">0.7978702</td>
-<td style="text-align: right;">0.1203282</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">84</td>
-<td style="text-align: right;">0.8131063</td>
-<td style="text-align: right;">0.7979332</td>
-<td style="text-align: right;">0.1203814</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">85</td>
-<td style="text-align: right;">0.8131826</td>
-<td style="text-align: right;">0.7984805</td>
-<td style="text-align: right;">0.1203830</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">86</td>
-<td style="text-align: right;">0.8131811</td>
-<td style="text-align: right;">0.7983165</td>
-<td style="text-align: right;">0.1204275</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">87</td>
-<td style="text-align: right;">0.8131718</td>
-<td style="text-align: right;">0.7987177</td>
-<td style="text-align: right;">0.1204139</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">88</td>
-<td style="text-align: right;">0.8131923</td>
-<td style="text-align: right;">0.7983681</td>
-<td style="text-align: right;">0.1203962</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">89</td>
-<td style="text-align: right;">0.8132136</td>
-<td style="text-align: right;">0.7983247</td>
-<td style="text-align: right;">0.1203777</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">90</td>
-<td style="text-align: right;">0.8132081</td>
-<td style="text-align: right;">0.7984851</td>
-<td style="text-align: right;">0.1203830</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">91</td>
-<td style="text-align: right;">0.8131905</td>
-<td style="text-align: right;">0.7982224</td>
-<td style="text-align: right;">0.1203960</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">92</td>
-<td style="text-align: right;">0.8131368</td>
-<td style="text-align: right;">0.7983780</td>
-<td style="text-align: right;">0.1203972</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">93</td>
-<td style="text-align: right;">0.8132379</td>
-<td style="text-align: right;">0.7979346</td>
-<td style="text-align: right;">0.1203632</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">94</td>
-<td style="text-align: right;">0.8131966</td>
-<td style="text-align: right;">0.7979371</td>
-<td style="text-align: right;">0.1203722</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">95</td>
-<td style="text-align: right;">0.8132150</td>
-<td style="text-align: right;">0.7985201</td>
-<td style="text-align: right;">0.1203570</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">96</td>
-<td style="text-align: right;">0.8132221</td>
-<td style="text-align: right;">0.7984918</td>
-<td style="text-align: right;">0.1203692</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">97</td>
-<td style="text-align: right;">0.8131727</td>
-<td style="text-align: right;">0.7982352</td>
-<td style="text-align: right;">0.1203869</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">98</td>
-<td style="text-align: right;">0.8131899</td>
-<td style="text-align: right;">0.7982940</td>
-<td style="text-align: right;">0.1203663</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">99</td>
-<td style="text-align: right;">0.8132345</td>
-<td style="text-align: right;">0.7982095</td>
-<td style="text-align: right;">0.1203836</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">100</td>
-<td style="text-align: right;">0.8131859</td>
-<td style="text-align: right;">0.7980677</td>
-<td style="text-align: right;">0.1203859</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#datatable(table_split1)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">#knitr::kable(table_split1)</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">#datatable(table_split1)</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="do">## solo para html</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">#library(DT)</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="do">## Crear una tabla interactiva con paginación</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co">#datatable(table_split1, </span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co">#          options = list(pageLength = 15, # Muestra 15 filas por página</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co">#                         lengthMenu = c(15, 30, 50, 100), # Opciones de filas por página</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co">#                         autoWidth = TRUE))</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div class="cell-output-display">
@@ -1027,10 +422,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>The higher the number of cycles, the higher the mean, median of accuracy and the lower the standard deviation. For high values of cycles, the accuracy clearly stabilizes and there is no always a clear increase over time. For example, results with 89 cycles are better than with 100.</p>
 <p><strong>split = 2</strong></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>table_split2 <span class="ot">&lt;-</span> datos <span class="sc">%&gt;%</span> <span class="fu">filter</span>(split <span class="sc">==</span> <span class="dv">2</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(n_cycle) <span class="sc">%&gt;%</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_at</span>(<span class="fu">vars</span>(accuracy_mean_mean),  <span class="fu">list</span>(<span class="at">mean =</span> mean, <span class="at">median =</span> median, <span class="at">std =</span> sd))</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(table_split2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>table_split2 <span class="ot">&lt;-</span> datos <span class="sc">%&gt;%</span> <span class="fu">filter</span>(split <span class="sc">==</span> <span class="dv">2</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(n_cycle) <span class="sc">%&gt;%</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_at</span>(<span class="fu">vars</span>(accuracy_mean_mean),  <span class="fu">list</span>(<span class="at">mean =</span> mean, <span class="at">median =</span> median, <span class="at">std =</span> sd))</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(table_split2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="table table-sm table-striped">
 <thead>
@@ -1414,10 +809,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>The higher the number of cycles, the higher the mean, median of accuracy and the lower the standard deviation. For high values of cycles, the accuracy clearly stabilizes and there is no always a clear increase over time.</p>
 <p><strong>split = 4</strong></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>table_split4 <span class="ot">&lt;-</span> datos <span class="sc">%&gt;%</span> <span class="fu">filter</span>(split <span class="sc">==</span> <span class="dv">4</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(n_cycle) <span class="sc">%&gt;%</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_at</span>(<span class="fu">vars</span>(accuracy_mean_mean),  <span class="fu">list</span>(<span class="at">mean =</span> mean, <span class="at">median =</span> median, <span class="at">std =</span> sd))</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(table_split4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>table_split4 <span class="ot">&lt;-</span> datos <span class="sc">%&gt;%</span> <span class="fu">filter</span>(split <span class="sc">==</span> <span class="dv">4</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(n_cycle) <span class="sc">%&gt;%</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_at</span>(<span class="fu">vars</span>(accuracy_mean_mean),  <span class="fu">list</span>(<span class="at">mean =</span> mean, <span class="at">median =</span> median, <span class="at">std =</span> sd))</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(table_split4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="table table-sm table-striped">
 <thead>
@@ -1645,10 +1040,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>The higher the number of cycles, the higher the mean, median of accuracy and the lower the standard deviation. For high values of cycles, the accuracy stabilizes but keeps showing an increasing trend. The longest the cycle, the less stable the trend (still increasing).</p>
 <p><strong>split = 10</strong></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>table_split10 <span class="ot">&lt;-</span> datos <span class="sc">%&gt;%</span> <span class="fu">filter</span>(split <span class="sc">==</span> <span class="dv">10</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(n_cycle) <span class="sc">%&gt;%</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_at</span>(<span class="fu">vars</span>(accuracy_mean_mean),  <span class="fu">list</span>(<span class="at">mean =</span> mean, <span class="at">median =</span> median, <span class="at">std =</span> sd))</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(table_split10)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>table_split10 <span class="ot">&lt;-</span> datos <span class="sc">%&gt;%</span> <span class="fu">filter</span>(split <span class="sc">==</span> <span class="dv">10</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(n_cycle) <span class="sc">%&gt;%</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_at</span>(<span class="fu">vars</span>(accuracy_mean_mean),  <span class="fu">list</span>(<span class="at">mean =</span> mean, <span class="at">median =</span> median, <span class="at">std =</span> sd))</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(table_split10)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="table table-sm table-striped">
 <thead>
@@ -1765,63 +1160,63 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="number-of-cycles" class="level1">
 <h1>Number of cycles</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Tenemos que hacer el análisis para cada combo_alpha_split</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>valores_combo <span class="ot">=</span> <span class="fu">levels</span>(datos<span class="sc">$</span>combo_alpha_split)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>n_combo <span class="ot">=</span> <span class="fu">length</span>(valores_combo)</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>combo_friedman <span class="ot">=</span> <span class="fu">data.frame</span>(valores_combo)</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>combo_friedman<span class="sc">$</span>p_value <span class="ot">=</span> <span class="fu">rep</span>(<span class="cn">NA</span>,n_combo)</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> valores_combo){</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="co">#print(i)</span></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  datos_i <span class="ot">=</span> datos[datos<span class="sc">$</span>combo_alpha_split<span class="sc">==</span>i,]</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  fri <span class="ot">=</span> <span class="fu">friedman.test</span>(accuracy_mean_mean <span class="sc">~</span> n_cycle <span class="sc">|</span>Dataset, <span class="at">data=</span><span class="fu">as.matrix</span>(datos_i))</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  combo_friedman[combo_friedman<span class="sc">$</span>valores_combo<span class="sc">==</span>i,<span class="dv">2</span>] <span class="ot">=</span> fri<span class="sc">$</span>p.value</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>combo_friedman[combo_friedman<span class="sc">$</span>p_value<span class="sc">&gt;</span> <span class="fl">0.05</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Tenemos que hacer el análisis para cada combo_alpha_split</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>valores_combo <span class="ot">=</span> <span class="fu">levels</span>(datos<span class="sc">$</span>combo_alpha_split)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>n_combo <span class="ot">=</span> <span class="fu">length</span>(valores_combo)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>combo_friedman <span class="ot">=</span> <span class="fu">data.frame</span>(valores_combo)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>combo_friedman<span class="sc">$</span>p_value <span class="ot">=</span> <span class="fu">rep</span>(<span class="cn">NA</span>,n_combo)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> valores_combo){</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="co">#print(i)</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  datos_i <span class="ot">=</span> datos[datos<span class="sc">$</span>combo_alpha_split<span class="sc">==</span>i,]</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  fri <span class="ot">=</span> <span class="fu">friedman.test</span>(accuracy_mean_mean <span class="sc">~</span> n_cycle <span class="sc">|</span>Dataset, <span class="at">data=</span><span class="fu">as.matrix</span>(datos_i))</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  combo_friedman[combo_friedman<span class="sc">$</span>valores_combo<span class="sc">==</span>i,<span class="dv">2</span>] <span class="ot">=</span> fri<span class="sc">$</span>p.value</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>combo_friedman[combo_friedman<span class="sc">$</span>p_value<span class="sc">&gt;</span> <span class="fl">0.05</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>data frame with 0 columns and 160 rows</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># es decir, en todos los casos hay diferencias significativas</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># es decir, en todos los casos hay diferencias significativas</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Once we have checked that there are significant differences between at least one value in the combo, we make multiple comparisons to analyze when adding another cycle is not worthy since the increase is not significant.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>dif_no_sig <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(valores_combo)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>dif_no_sig<span class="sc">$</span>niveles <span class="ot">=</span> <span class="fu">rep</span>(<span class="cn">NA</span>,n_combo)</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Lo dejamos en comentarios porque tarda mucho</span></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="co"># for (i in valores_combo){</span></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co">#   print(i)</span></span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="co">#   datos_i = datos[datos$combo_alpha_split==i,]</span></span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="co">#   datos_i$n_cycle &lt;- factor(datos_i$n_cycle) # los niveles del factor cambian en cada subset</span></span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="co">#   pwc2 &lt;- datos_i %&gt;% </span></span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="co">#     wilcox_test(accuracy_mean_mean ~ n_cycle, paired = TRUE, p.adjust.method = "bonferroni")</span></span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="co">#   # Filtrar comparaciones con diferencias no significativas (suponiendo un umbral de p &gt; 0.05)</span></span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="co">#   no_significativas &lt;- pwc2[pwc2$p.adj&gt;0.1,]</span></span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="co">#   </span></span>
-<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="co">#   # si no todas las comparaciones con ese nivel son no significativas, lo quitamos </span></span>
-<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="co">#   # es decir, no nos vale que solo no haya diferencia entre 3 y 5 y con el resto (3-6,3-7,etc) sí</span></span>
-<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="co">#   max_cycles = max(as.numeric(pwc2$group2))</span></span>
-<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a><span class="co">#   valores_check &lt;- unique(as.numeric(no_significativas$group1))</span></span>
-<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a><span class="co">#   for (v in valores_check){</span></span>
-<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a><span class="co">#     if (sum(no_significativas$group1 == v) &lt;(max_cycles - v) ){</span></span>
-<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a><span class="co">#       no_significativas = no_significativas[no_significativas$group1!=v,]</span></span>
-<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a><span class="co">#     }</span></span>
-<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a><span class="co">#   }</span></span>
-<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a><span class="co">#   </span></span>
-<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a><span class="co">#   # Extraer los niveles de los pares con diferencias no significativas</span></span>
-<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a><span class="co">#   niveles_no_significativos &lt;- unique(c(no_significativas$group1, no_significativas$group2))</span></span>
-<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a><span class="co">#   dif_no_sig[dif_no_sig$valores_combo==i,2] = paste(niveles_no_significativos, collapse = ", ")</span></span>
-<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a><span class="co"># }</span></span>
-<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a><span class="co">#write.csv(dif_no_sig, "CDB_cycles_ParametersComboAlphaSplit_dif_no_signif_cycles_mean.csv")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>dif_no_sig <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(valores_combo)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>dif_no_sig<span class="sc">$</span>niveles <span class="ot">=</span> <span class="fu">rep</span>(<span class="cn">NA</span>,n_combo)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Lo dejamos en comentarios porque tarda mucho</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co"># for (i in valores_combo){</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co">#   print(i)</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co">#   datos_i = datos[datos$combo_alpha_split==i,]</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="co">#   datos_i$n_cycle &lt;- factor(datos_i$n_cycle) # los niveles del factor cambian en cada subset</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="co">#   pwc2 &lt;- datos_i %&gt;% </span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="co">#     wilcox_test(accuracy_mean_mean ~ n_cycle, paired = TRUE, p.adjust.method = "bonferroni")</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="co">#   # Filtrar comparaciones con diferencias no significativas (suponiendo un umbral de p &gt; 0.05)</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="co">#   no_significativas &lt;- pwc2[pwc2$p.adj&gt;0.1,]</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="co">#   </span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="co">#   # si no todas las comparaciones con ese nivel son no significativas, lo quitamos </span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="co">#   # es decir, no nos vale que solo no haya diferencia entre 3 y 5 y con el resto (3-6,3-7,etc) sí</span></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a><span class="co">#   max_cycles = max(as.numeric(pwc2$group2))</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a><span class="co">#   valores_check &lt;- unique(as.numeric(no_significativas$group1))</span></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a><span class="co">#   for (v in valores_check){</span></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a><span class="co">#     if (sum(no_significativas$group1 == v) &lt;(max_cycles - v) ){</span></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a><span class="co">#       no_significativas = no_significativas[no_significativas$group1!=v,]</span></span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a><span class="co">#     }</span></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a><span class="co">#   }</span></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a><span class="co">#   </span></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a><span class="co">#   # Extraer los niveles de los pares con diferencias no significativas</span></span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a><span class="co">#   niveles_no_significativos &lt;- unique(c(no_significativas$group1, no_significativas$group2))</span></span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a><span class="co">#   dif_no_sig[dif_no_sig$valores_combo==i,2] = paste(niveles_no_significativos, collapse = ", ")</span></span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="co"># }</span></span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a><span class="co">#write.csv(dif_no_sig, "CDB_cycles_ParametersComboAlphaSplit_dif_no_signif_cycles_mean.csv")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>In this dataframe we have, for every combination of alpha and split, the number of cycles with no significant difference between all of them.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>dif_no_sig_mean <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'CDB_cycles_ParametersComboAlphaSplit_dif_no_signif_cycles_mean.csv'</span>) </span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dif_no_sig_mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>dif_no_sig_mean <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'CDB_cycles_ParametersComboAlphaSplit_dif_no_signif_cycles_mean.csv'</span>) </span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dif_no_sig_mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  X   valores_combo
 1 1  alpha10-split1
@@ -1845,31 +1240,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>num_models2: it is exactly the same concept as num_models but with the second value of number of cycles in case we want to be more conservative</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Variables to character</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>dif_no_sig_mean<span class="sc">$</span>niveles <span class="ot">&lt;-</span> <span class="fu">as.character</span>(dif_no_sig_mean<span class="sc">$</span>niveles)</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>dif_no_sig_mean<span class="sc">$</span>valores_combo <span class="ot">&lt;-</span> <span class="fu">as.character</span>(dif_no_sig_mean<span class="sc">$</span>valores_combo)</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Order the values </span></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>dif_no_sig_mean<span class="sc">$</span>niveles <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="fu">strsplit</span>(dif_no_sig_mean<span class="sc">$</span>niveles, <span class="st">", "</span>), <span class="cf">function</span>(x) {</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">paste</span>(<span class="fu">sort</span>(<span class="fu">as.numeric</span>(x)), <span class="at">collapse =</span> <span class="st">", "</span>)</span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Extraer el valor numérico después de "split" en la columna B</span></span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>dif_no_sig_mean<span class="sc">$</span>valor_split <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">".*split"</span>, <span class="st">""</span>, dif_no_sig_mean<span class="sc">$</span>valores_combo))</span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="co"># New columns with number of models</span></span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>dif_no_sig_mean<span class="sc">$</span>num_models <span class="ot">&lt;-</span> <span class="fu">mapply</span>(<span class="cf">function</span>(a, b) {</span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">min</span>(<span class="fu">as.numeric</span>(<span class="fu">strsplit</span>(a, <span class="st">", "</span>)[[<span class="dv">1</span>]])) <span class="sc">*</span> (<span class="dv">2</span><span class="sc">*</span>b <span class="sc">+</span><span class="dv">1</span>)</span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>}, dif_no_sig_mean<span class="sc">$</span>niveles, dif_no_sig_mean<span class="sc">$</span>valor_split)</span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a><span class="co"># New columns with number of models (for the second value)</span></span>
-<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>dif_no_sig_mean<span class="sc">$</span>num_models2 <span class="ot">&lt;-</span> <span class="fu">mapply</span>(<span class="cf">function</span>(a, b) {</span>
-<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>  valores <span class="ot">&lt;-</span> <span class="fu">sort</span>(<span class="fu">as.numeric</span>(<span class="fu">strsplit</span>(a, <span class="st">", "</span>)[[<span class="dv">1</span>]])) </span>
-<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>  segundo_min <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(<span class="fu">length</span>(valores) <span class="sc">&gt;</span> <span class="dv">1</span>, valores[<span class="dv">2</span>], valores[<span class="dv">1</span>])  <span class="co"># Obtener el segundo mínimo o el primero si hay solo uno</span></span>
-<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>  segundo_min <span class="sc">*</span> (<span class="dv">2</span><span class="sc">*</span>b <span class="sc">+</span><span class="dv">1</span>)</span>
-<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>}, dif_no_sig_mean<span class="sc">$</span>niveles, dif_no_sig_mean<span class="sc">$</span>valor_split)</span>
-<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dif_no_sig_mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Variables to character</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>dif_no_sig_mean<span class="sc">$</span>niveles <span class="ot">&lt;-</span> <span class="fu">as.character</span>(dif_no_sig_mean<span class="sc">$</span>niveles)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>dif_no_sig_mean<span class="sc">$</span>valores_combo <span class="ot">&lt;-</span> <span class="fu">as.character</span>(dif_no_sig_mean<span class="sc">$</span>valores_combo)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Order the values </span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>dif_no_sig_mean<span class="sc">$</span>niveles <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="fu">strsplit</span>(dif_no_sig_mean<span class="sc">$</span>niveles, <span class="st">", "</span>), <span class="cf">function</span>(x) {</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">paste</span>(<span class="fu">sort</span>(<span class="fu">as.numeric</span>(x)), <span class="at">collapse =</span> <span class="st">", "</span>)</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Extraer el valor numérico después de "split" en la columna B</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>dif_no_sig_mean<span class="sc">$</span>valor_split <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">".*split"</span>, <span class="st">""</span>, dif_no_sig_mean<span class="sc">$</span>valores_combo))</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="co"># New columns with number of models</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>dif_no_sig_mean<span class="sc">$</span>num_models <span class="ot">&lt;-</span> <span class="fu">mapply</span>(<span class="cf">function</span>(a, b) {</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">min</span>(<span class="fu">as.numeric</span>(<span class="fu">strsplit</span>(a, <span class="st">", "</span>)[[<span class="dv">1</span>]])) <span class="sc">*</span> (<span class="dv">2</span><span class="sc">*</span>b <span class="sc">+</span><span class="dv">1</span>)</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>}, dif_no_sig_mean<span class="sc">$</span>niveles, dif_no_sig_mean<span class="sc">$</span>valor_split)</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a><span class="co"># New columns with number of models (for the second value)</span></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>dif_no_sig_mean<span class="sc">$</span>num_models2 <span class="ot">&lt;-</span> <span class="fu">mapply</span>(<span class="cf">function</span>(a, b) {</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>  valores <span class="ot">&lt;-</span> <span class="fu">sort</span>(<span class="fu">as.numeric</span>(<span class="fu">strsplit</span>(a, <span class="st">", "</span>)[[<span class="dv">1</span>]])) </span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>  segundo_min <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(<span class="fu">length</span>(valores) <span class="sc">&gt;</span> <span class="dv">1</span>, valores[<span class="dv">2</span>], valores[<span class="dv">1</span>])  <span class="co"># Obtener el segundo mínimo o el primero si hay solo uno</span></span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>  segundo_min <span class="sc">*</span> (<span class="dv">2</span><span class="sc">*</span>b <span class="sc">+</span><span class="dv">1</span>)</span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>}, dif_no_sig_mean<span class="sc">$</span>niveles, dif_no_sig_mean<span class="sc">$</span>valor_split)</span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dif_no_sig_mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  X   valores_combo
 1 1  alpha10-split1
@@ -1897,7 +1292,41 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>We perform the same analysis for the median and the standard deviation.</p>
 <p>For the <strong>median</strong>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># dif_no_sig_mean$niveles_mediana = rep(NA,n_combo)</span></span>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># dif_no_sig_mean$niveles_mediana = rep(NA,n_combo)</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co"># # Lo dejamos en comentarios porque tarda mucho</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="co"># for (i in valores_combo){</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co">#   print(i)</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co">#   datos_i = datos[datos$combo_alpha_split==i,]</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="co">#   datos_i$n_cycle &lt;- factor(datos_i$n_cycle) # los niveles del factor cambian en cada subset</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="co">#   pwc2 &lt;- datos_i %&gt;%</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="co">#     wilcox_test(accuracy_mean_median ~ n_cycle, paired = TRUE, p.adjust.method = "bonferroni")</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="co">#   # Filtrar comparaciones con diferencias no significativas (suponiendo un umbral de p &gt; 0.05)</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="co">#   no_significativas &lt;- pwc2[pwc2$p.adj&gt;0.1,]</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a><span class="co">#   # si no todas las comparaciones con ese nivel son no significativas, lo quitamos</span></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a><span class="co">#   # es decir, no nos vale que solo no haya diferencia entre 3 y 5 y con el resto (3-6,3-7,etc) sí</span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="co">#   max_cycles = max(as.numeric(pwc2$group2))</span></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a><span class="co">#   valores_check &lt;- unique(as.numeric(no_significativas$group1))</span></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a><span class="co">#   for (v in valores_check){</span></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a><span class="co">#     if (sum(no_significativas$group1 == v) &lt;(max_cycles - v) ){</span></span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a><span class="co">#       no_significativas = no_significativas[no_significativas$group1!=v,]</span></span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a><span class="co">#     }</span></span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a><span class="co">#   }</span></span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a><span class="co">#   # Extraer los niveles de los pares con diferencias no significativas</span></span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a><span class="co">#   niveles_no_significativos &lt;- unique(c(no_significativas$group1, no_significativas$group2))</span></span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a><span class="co">#   dif_no_sig_mean[dif_no_sig_mean$valores_combo==i,'niveles_mediana'] = paste(niveles_no_significativos, collapse = ", ")</span></span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a><span class="co"># }</span></span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a><span class="co">#write.csv(dif_no_sig_mean, "CDB_cycles_ParametersComboAlphaSplit_dif_no_signif_cycles_mean_median.csv")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>For the <strong>standard deviation</strong>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># dif_no_sig_mean$niveles_std = rep(NA,n_combo)</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co"># # Lo dejamos en comentarios porque tarda mucho</span></span>
 <span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
@@ -1906,7 +1335,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="co">#   datos_i = datos[datos$combo_alpha_split==i,]</span></span>
 <span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="co">#   datos_i$n_cycle &lt;- factor(datos_i$n_cycle) # los niveles del factor cambian en cada subset</span></span>
 <span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="co">#   pwc2 &lt;- datos_i %&gt;%</span></span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="co">#     wilcox_test(accuracy_mean_median ~ n_cycle, paired = TRUE, p.adjust.method = "bonferroni")</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="co">#     wilcox_test(accuracy_mean_std ~ n_cycle, paired = TRUE, p.adjust.method = "bonferroni")</span></span>
 <span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="co">#   # Filtrar comparaciones con diferencias no significativas (suponiendo un umbral de p &gt; 0.05)</span></span>
 <span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="co">#   no_significativas &lt;- pwc2[pwc2$p.adj&gt;0.1,]</span></span>
 <span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
@@ -1924,49 +1353,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a><span class="co">#   # Extraer los niveles de los pares con diferencias no significativas</span></span>
 <span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a><span class="co">#   niveles_no_significativos &lt;- unique(c(no_significativas$group1, no_significativas$group2))</span></span>
 <span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a><span class="co">#   dif_no_sig_mean[dif_no_sig_mean$valores_combo==i,'niveles_mediana'] = paste(niveles_no_significativos, collapse = ", ")</span></span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a><span class="co">#   dif_no_sig_mean[dif_no_sig_mean$valores_combo==i,'niveles_std'] = paste(niveles_no_significativos, collapse = ", ")</span></span>
 <span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a><span class="co"># }</span></span>
 <span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a><span class="co">#write.csv(dif_no_sig_mean, "CDB_cycles_ParametersComboAlphaSplit_dif_no_signif_cycles_mean_median.csv")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>For the <strong>standard deviation</strong>:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># dif_no_sig_mean$niveles_std = rep(NA,n_combo)</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co"># # Lo dejamos en comentarios porque tarda mucho</span></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co"># for (i in valores_combo){</span></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="co">#   print(i)</span></span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="co">#   datos_i = datos[datos$combo_alpha_split==i,]</span></span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="co">#   datos_i$n_cycle &lt;- factor(datos_i$n_cycle) # los niveles del factor cambian en cada subset</span></span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="co">#   pwc2 &lt;- datos_i %&gt;%</span></span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="co">#     wilcox_test(accuracy_mean_std ~ n_cycle, paired = TRUE, p.adjust.method = "bonferroni")</span></span>
-<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="co">#   # Filtrar comparaciones con diferencias no significativas (suponiendo un umbral de p &gt; 0.05)</span></span>
-<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a><span class="co">#   no_significativas &lt;- pwc2[pwc2$p.adj&gt;0.1,]</span></span>
-<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a><span class="co">#   # si no todas las comparaciones con ese nivel son no significativas, lo quitamos</span></span>
-<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a><span class="co">#   # es decir, no nos vale que solo no haya diferencia entre 3 y 5 y con el resto (3-6,3-7,etc) sí</span></span>
-<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a><span class="co">#   max_cycles = max(as.numeric(pwc2$group2))</span></span>
-<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a><span class="co">#   valores_check &lt;- unique(as.numeric(no_significativas$group1))</span></span>
-<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a><span class="co">#   for (v in valores_check){</span></span>
-<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a><span class="co">#     if (sum(no_significativas$group1 == v) &lt;(max_cycles - v) ){</span></span>
-<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a><span class="co">#       no_significativas = no_significativas[no_significativas$group1!=v,]</span></span>
-<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a><span class="co">#     }</span></span>
-<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a><span class="co">#   }</span></span>
-<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a><span class="co">#   # Extraer los niveles de los pares con diferencias no significativas</span></span>
-<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a><span class="co">#   niveles_no_significativos &lt;- unique(c(no_significativas$group1, no_significativas$group2))</span></span>
-<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a><span class="co">#   dif_no_sig_mean[dif_no_sig_mean$valores_combo==i,'niveles_std'] = paste(niveles_no_significativos, collapse = ", ")</span></span>
-<span id="cb17-29"><a href="#cb17-29" aria-hidden="true" tabindex="-1"></a><span class="co"># }</span></span>
-<span id="cb17-30"><a href="#cb17-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-31"><a href="#cb17-31" aria-hidden="true" tabindex="-1"></a><span class="co">#write.csv(dif_no_sig_mean, "CDB_cycles_ParametersComboAlphaSplit_dif_no_signif_cycles_mean_median_std.csv")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a><span class="co">#write.csv(dif_no_sig_mean, "CDB_cycles_ParametersComboAlphaSplit_dif_no_signif_cycles_mean_median_std.csv")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now we relate the number of cycles with the number of ensembles for all statistical measures (mean, median, std):</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>dif_no_sig_all <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'CDB_cycles_ParametersComboAlphaSplit_dif_no_signif_cycles_mean_median_std.csv'</span>) </span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dif_no_sig_all)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>dif_no_sig_all <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'CDB_cycles_ParametersComboAlphaSplit_dif_no_signif_cycles_mean_median_std.csv'</span>) </span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dif_no_sig_all)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  X.1 X   valores_combo
 1   1 1  alpha10-split1
@@ -2006,55 +1401,55 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Variables to character</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>dif_no_sig_all<span class="sc">$</span>niveles_mediana <span class="ot">&lt;-</span> <span class="fu">as.character</span>(dif_no_sig_all<span class="sc">$</span>niveles_mediana)</span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>dif_no_sig_all<span class="sc">$</span>niveles_std <span class="ot">&lt;-</span> <span class="fu">as.character</span>(dif_no_sig_all<span class="sc">$</span>niveles_std)</span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>dif_no_sig_all<span class="sc">$</span>valores_combo <span class="ot">&lt;-</span> <span class="fu">as.character</span>(dif_no_sig_all<span class="sc">$</span>valores_combo)</span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Order the values </span></span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>dif_no_sig_all<span class="sc">$</span>niveles_mediana <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="fu">strsplit</span>(dif_no_sig_all<span class="sc">$</span>niveles_mediana, <span class="st">", "</span>), <span class="cf">function</span>(x) {</span>
-<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">paste</span>(<span class="fu">sort</span>(<span class="fu">as.numeric</span>(x)), <span class="at">collapse =</span> <span class="st">", "</span>)</span>
-<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>dif_no_sig_all<span class="sc">$</span>niveles_std <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="fu">strsplit</span>(dif_no_sig_all<span class="sc">$</span>niveles_std, <span class="st">", "</span>), <span class="cf">function</span>(x) {</span>
-<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">paste</span>(<span class="fu">sort</span>(<span class="fu">as.numeric</span>(x)), <span class="at">collapse =</span> <span class="st">", "</span>)</span>
-<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a><span class="co"># New columns with number of models</span></span>
-<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a>dif_no_sig_all<span class="sc">$</span>num_models_mediana <span class="ot">&lt;-</span> <span class="fu">mapply</span>(<span class="cf">function</span>(a, b) {</span>
-<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">min</span>(<span class="fu">as.numeric</span>(<span class="fu">strsplit</span>(a, <span class="st">", "</span>)[[<span class="dv">1</span>]])) <span class="sc">*</span> (<span class="dv">2</span><span class="sc">*</span>b <span class="sc">+</span><span class="dv">1</span>)</span>
-<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a>}, dif_no_sig_all<span class="sc">$</span>niveles_mediana, dif_no_sig_all<span class="sc">$</span>valor_split)</span>
-<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-21"><a href="#cb20-21" aria-hidden="true" tabindex="-1"></a>dif_no_sig_all<span class="sc">$</span>num_models_std <span class="ot">&lt;-</span> <span class="fu">mapply</span>(<span class="cf">function</span>(a, b) {</span>
-<span id="cb20-22"><a href="#cb20-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">min</span>(<span class="fu">as.numeric</span>(<span class="fu">strsplit</span>(a, <span class="st">", "</span>)[[<span class="dv">1</span>]])) <span class="sc">*</span> (<span class="dv">2</span><span class="sc">*</span>b <span class="sc">+</span><span class="dv">1</span>)</span>
-<span id="cb20-23"><a href="#cb20-23" aria-hidden="true" tabindex="-1"></a>}, dif_no_sig_all<span class="sc">$</span>niveles_std, dif_no_sig_all<span class="sc">$</span>valor_split)</span>
-<span id="cb20-24"><a href="#cb20-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-25"><a href="#cb20-25" aria-hidden="true" tabindex="-1"></a><span class="co"># New columns with number of models (for the second value)</span></span>
-<span id="cb20-26"><a href="#cb20-26" aria-hidden="true" tabindex="-1"></a>dif_no_sig_all<span class="sc">$</span>num_models2_mediana <span class="ot">&lt;-</span> <span class="fu">mapply</span>(<span class="cf">function</span>(a, b) {</span>
-<span id="cb20-27"><a href="#cb20-27" aria-hidden="true" tabindex="-1"></a>  valores <span class="ot">&lt;-</span> <span class="fu">sort</span>(<span class="fu">as.numeric</span>(<span class="fu">strsplit</span>(a, <span class="st">", "</span>)[[<span class="dv">1</span>]])) </span>
-<span id="cb20-28"><a href="#cb20-28" aria-hidden="true" tabindex="-1"></a>  segundo_min <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(<span class="fu">length</span>(valores) <span class="sc">&gt;</span> <span class="dv">1</span>, valores[<span class="dv">2</span>], valores[<span class="dv">1</span>])  <span class="co"># Obtener el segundo mínimo o el primero si hay solo uno</span></span>
-<span id="cb20-29"><a href="#cb20-29" aria-hidden="true" tabindex="-1"></a>  segundo_min <span class="sc">*</span> (<span class="dv">2</span><span class="sc">*</span>b <span class="sc">+</span><span class="dv">1</span>)</span>
-<span id="cb20-30"><a href="#cb20-30" aria-hidden="true" tabindex="-1"></a>}, dif_no_sig_all<span class="sc">$</span>niveles_mediana, dif_no_sig_all<span class="sc">$</span>valor_split)</span>
-<span id="cb20-31"><a href="#cb20-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-32"><a href="#cb20-32" aria-hidden="true" tabindex="-1"></a>dif_no_sig_all<span class="sc">$</span>num_models2_std <span class="ot">&lt;-</span> <span class="fu">mapply</span>(<span class="cf">function</span>(a, b) {</span>
-<span id="cb20-33"><a href="#cb20-33" aria-hidden="true" tabindex="-1"></a>  valores <span class="ot">&lt;-</span> <span class="fu">sort</span>(<span class="fu">as.numeric</span>(<span class="fu">strsplit</span>(a, <span class="st">", "</span>)[[<span class="dv">1</span>]])) </span>
-<span id="cb20-34"><a href="#cb20-34" aria-hidden="true" tabindex="-1"></a>  segundo_min <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(<span class="fu">length</span>(valores) <span class="sc">&gt;</span> <span class="dv">1</span>, valores[<span class="dv">2</span>], valores[<span class="dv">1</span>])  <span class="co"># Obtener el segundo mínimo o el primero si hay solo uno</span></span>
-<span id="cb20-35"><a href="#cb20-35" aria-hidden="true" tabindex="-1"></a>  segundo_min <span class="sc">*</span> (<span class="dv">2</span><span class="sc">*</span>b <span class="sc">+</span><span class="dv">1</span>)</span>
-<span id="cb20-36"><a href="#cb20-36" aria-hidden="true" tabindex="-1"></a>}, dif_no_sig_all<span class="sc">$</span>niveles_std, dif_no_sig_all<span class="sc">$</span>valor_split)</span>
-<span id="cb20-37"><a href="#cb20-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-38"><a href="#cb20-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Sacamos tb el valor en ciclos</span></span>
-<span id="cb20-39"><a href="#cb20-39" aria-hidden="true" tabindex="-1"></a>dif_no_sig_all<span class="sc">$</span>cycles_mean <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="fu">strsplit</span>(dif_no_sig_all<span class="sc">$</span>niveles, <span class="st">", "</span>), <span class="cf">function</span>(x) {</span>
-<span id="cb20-40"><a href="#cb20-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">min</span>(<span class="fu">as.numeric</span>(x))})</span>
-<span id="cb20-41"><a href="#cb20-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-42"><a href="#cb20-42" aria-hidden="true" tabindex="-1"></a>dif_no_sig_all<span class="sc">$</span>cycles_median <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="fu">strsplit</span>(dif_no_sig_all<span class="sc">$</span>niveles_mediana, <span class="st">", "</span>), <span class="cf">function</span>(x) {</span>
-<span id="cb20-43"><a href="#cb20-43" aria-hidden="true" tabindex="-1"></a>  <span class="fu">min</span>(<span class="fu">as.numeric</span>(x))})</span>
-<span id="cb20-44"><a href="#cb20-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-45"><a href="#cb20-45" aria-hidden="true" tabindex="-1"></a>dif_no_sig_all<span class="sc">$</span>cycles_std <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="fu">strsplit</span>(dif_no_sig_all<span class="sc">$</span>niveles_std, <span class="st">", "</span>), <span class="cf">function</span>(x) {</span>
-<span id="cb20-46"><a href="#cb20-46" aria-hidden="true" tabindex="-1"></a>  <span class="fu">min</span>(<span class="fu">as.numeric</span>(x))})</span>
-<span id="cb20-47"><a href="#cb20-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-48"><a href="#cb20-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-49"><a href="#cb20-49" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dif_no_sig_all)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Variables to character</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>dif_no_sig_all<span class="sc">$</span>niveles_mediana <span class="ot">&lt;-</span> <span class="fu">as.character</span>(dif_no_sig_all<span class="sc">$</span>niveles_mediana)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>dif_no_sig_all<span class="sc">$</span>niveles_std <span class="ot">&lt;-</span> <span class="fu">as.character</span>(dif_no_sig_all<span class="sc">$</span>niveles_std)</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>dif_no_sig_all<span class="sc">$</span>valores_combo <span class="ot">&lt;-</span> <span class="fu">as.character</span>(dif_no_sig_all<span class="sc">$</span>valores_combo)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Order the values </span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>dif_no_sig_all<span class="sc">$</span>niveles_mediana <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="fu">strsplit</span>(dif_no_sig_all<span class="sc">$</span>niveles_mediana, <span class="st">", "</span>), <span class="cf">function</span>(x) {</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">paste</span>(<span class="fu">sort</span>(<span class="fu">as.numeric</span>(x)), <span class="at">collapse =</span> <span class="st">", "</span>)</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>dif_no_sig_all<span class="sc">$</span>niveles_std <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="fu">strsplit</span>(dif_no_sig_all<span class="sc">$</span>niveles_std, <span class="st">", "</span>), <span class="cf">function</span>(x) {</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">paste</span>(<span class="fu">sort</span>(<span class="fu">as.numeric</span>(x)), <span class="at">collapse =</span> <span class="st">", "</span>)</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a><span class="co"># New columns with number of models</span></span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>dif_no_sig_all<span class="sc">$</span>num_models_mediana <span class="ot">&lt;-</span> <span class="fu">mapply</span>(<span class="cf">function</span>(a, b) {</span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">min</span>(<span class="fu">as.numeric</span>(<span class="fu">strsplit</span>(a, <span class="st">", "</span>)[[<span class="dv">1</span>]])) <span class="sc">*</span> (<span class="dv">2</span><span class="sc">*</span>b <span class="sc">+</span><span class="dv">1</span>)</span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>}, dif_no_sig_all<span class="sc">$</span>niveles_mediana, dif_no_sig_all<span class="sc">$</span>valor_split)</span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a>dif_no_sig_all<span class="sc">$</span>num_models_std <span class="ot">&lt;-</span> <span class="fu">mapply</span>(<span class="cf">function</span>(a, b) {</span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">min</span>(<span class="fu">as.numeric</span>(<span class="fu">strsplit</span>(a, <span class="st">", "</span>)[[<span class="dv">1</span>]])) <span class="sc">*</span> (<span class="dv">2</span><span class="sc">*</span>b <span class="sc">+</span><span class="dv">1</span>)</span>
+<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a>}, dif_no_sig_all<span class="sc">$</span>niveles_std, dif_no_sig_all<span class="sc">$</span>valor_split)</span>
+<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a><span class="co"># New columns with number of models (for the second value)</span></span>
+<span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a>dif_no_sig_all<span class="sc">$</span>num_models2_mediana <span class="ot">&lt;-</span> <span class="fu">mapply</span>(<span class="cf">function</span>(a, b) {</span>
+<span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a>  valores <span class="ot">&lt;-</span> <span class="fu">sort</span>(<span class="fu">as.numeric</span>(<span class="fu">strsplit</span>(a, <span class="st">", "</span>)[[<span class="dv">1</span>]])) </span>
+<span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a>  segundo_min <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(<span class="fu">length</span>(valores) <span class="sc">&gt;</span> <span class="dv">1</span>, valores[<span class="dv">2</span>], valores[<span class="dv">1</span>])  <span class="co"># Obtener el segundo mínimo o el primero si hay solo uno</span></span>
+<span id="cb19-29"><a href="#cb19-29" aria-hidden="true" tabindex="-1"></a>  segundo_min <span class="sc">*</span> (<span class="dv">2</span><span class="sc">*</span>b <span class="sc">+</span><span class="dv">1</span>)</span>
+<span id="cb19-30"><a href="#cb19-30" aria-hidden="true" tabindex="-1"></a>}, dif_no_sig_all<span class="sc">$</span>niveles_mediana, dif_no_sig_all<span class="sc">$</span>valor_split)</span>
+<span id="cb19-31"><a href="#cb19-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-32"><a href="#cb19-32" aria-hidden="true" tabindex="-1"></a>dif_no_sig_all<span class="sc">$</span>num_models2_std <span class="ot">&lt;-</span> <span class="fu">mapply</span>(<span class="cf">function</span>(a, b) {</span>
+<span id="cb19-33"><a href="#cb19-33" aria-hidden="true" tabindex="-1"></a>  valores <span class="ot">&lt;-</span> <span class="fu">sort</span>(<span class="fu">as.numeric</span>(<span class="fu">strsplit</span>(a, <span class="st">", "</span>)[[<span class="dv">1</span>]])) </span>
+<span id="cb19-34"><a href="#cb19-34" aria-hidden="true" tabindex="-1"></a>  segundo_min <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(<span class="fu">length</span>(valores) <span class="sc">&gt;</span> <span class="dv">1</span>, valores[<span class="dv">2</span>], valores[<span class="dv">1</span>])  <span class="co"># Obtener el segundo mínimo o el primero si hay solo uno</span></span>
+<span id="cb19-35"><a href="#cb19-35" aria-hidden="true" tabindex="-1"></a>  segundo_min <span class="sc">*</span> (<span class="dv">2</span><span class="sc">*</span>b <span class="sc">+</span><span class="dv">1</span>)</span>
+<span id="cb19-36"><a href="#cb19-36" aria-hidden="true" tabindex="-1"></a>}, dif_no_sig_all<span class="sc">$</span>niveles_std, dif_no_sig_all<span class="sc">$</span>valor_split)</span>
+<span id="cb19-37"><a href="#cb19-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-38"><a href="#cb19-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Sacamos tb el valor en ciclos</span></span>
+<span id="cb19-39"><a href="#cb19-39" aria-hidden="true" tabindex="-1"></a>dif_no_sig_all<span class="sc">$</span>cycles_mean <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="fu">strsplit</span>(dif_no_sig_all<span class="sc">$</span>niveles, <span class="st">", "</span>), <span class="cf">function</span>(x) {</span>
+<span id="cb19-40"><a href="#cb19-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">min</span>(<span class="fu">as.numeric</span>(x))})</span>
+<span id="cb19-41"><a href="#cb19-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-42"><a href="#cb19-42" aria-hidden="true" tabindex="-1"></a>dif_no_sig_all<span class="sc">$</span>cycles_median <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="fu">strsplit</span>(dif_no_sig_all<span class="sc">$</span>niveles_mediana, <span class="st">", "</span>), <span class="cf">function</span>(x) {</span>
+<span id="cb19-43"><a href="#cb19-43" aria-hidden="true" tabindex="-1"></a>  <span class="fu">min</span>(<span class="fu">as.numeric</span>(x))})</span>
+<span id="cb19-44"><a href="#cb19-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-45"><a href="#cb19-45" aria-hidden="true" tabindex="-1"></a>dif_no_sig_all<span class="sc">$</span>cycles_std <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="fu">strsplit</span>(dif_no_sig_all<span class="sc">$</span>niveles_std, <span class="st">", "</span>), <span class="cf">function</span>(x) {</span>
+<span id="cb19-46"><a href="#cb19-46" aria-hidden="true" tabindex="-1"></a>  <span class="fu">min</span>(<span class="fu">as.numeric</span>(x))})</span>
+<span id="cb19-47"><a href="#cb19-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-48"><a href="#cb19-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-49"><a href="#cb19-49" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dif_no_sig_all)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  X.1 X   valores_combo
 1   1 1  alpha10-split1
@@ -2106,27 +1501,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 5           4             3          5
 6           5             3          3</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">#write.csv(dif_no_sig_all, "CDB_cycles_ParametersComboAlphaSplit_dif_no_signif_cycles_mean_median_std_num_models.csv")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">#write.csv(dif_no_sig_all, "CDB_cycles_ParametersComboAlphaSplit_dif_no_signif_cycles_mean_median_std_num_models.csv")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We have performed multiple comparisons analysis for the number of cycles with respect to the mean, median and std of the accuracy and found the number of cycles above which there is no significant difference for each statistical measure. Now we have to take the maximum number of cycles over the three statistical measure to select a range of cycles. After that we can analyze which is the best cycle structure (for example, a high number of short cycles or a short number of long cycles).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>dif_no_sig_all<span class="sc">$</span>max_num_cycles <span class="ot">&lt;-</span> <span class="fu">apply</span>(<span class="at">X=</span>dif_no_sig_all[,<span class="fu">c</span>(<span class="st">'cycles_mean'</span>,<span class="st">'cycles_median'</span>,<span class="st">'cycles_std'</span>)], <span class="at">MARGIN=</span><span class="dv">1</span>, <span class="at">FUN=</span>max)</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>dif_no_sig_all<span class="sc">$</span>max_num_models <span class="ot">&lt;-</span> <span class="fu">apply</span>(<span class="at">X=</span>dif_no_sig_all[,<span class="fu">c</span>(<span class="st">'num_models'</span>,<span class="st">'num_models_mediana'</span>,<span class="st">'num_models_std'</span>)], <span class="at">MARGIN=</span><span class="dv">1</span>, <span class="at">FUN=</span>max)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>dif_no_sig_all<span class="sc">$</span>max_num_cycles <span class="ot">&lt;-</span> <span class="fu">apply</span>(<span class="at">X=</span>dif_no_sig_all[,<span class="fu">c</span>(<span class="st">'cycles_mean'</span>,<span class="st">'cycles_median'</span>,<span class="st">'cycles_std'</span>)], <span class="at">MARGIN=</span><span class="dv">1</span>, <span class="at">FUN=</span>max)</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>dif_no_sig_all<span class="sc">$</span>max_num_models <span class="ot">&lt;-</span> <span class="fu">apply</span>(<span class="at">X=</span>dif_no_sig_all[,<span class="fu">c</span>(<span class="st">'num_models'</span>,<span class="st">'num_models_mediana'</span>,<span class="st">'num_models_std'</span>)], <span class="at">MARGIN=</span><span class="dv">1</span>, <span class="at">FUN=</span>max)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>If we analyze the number of models above which there are no significant different, we can see that the maximum value is 294 and quartile 75% is 175, implying that our maximum tested number of models (300) is ok and that lower number of models in an ensemble can obtain competitive accuracy results.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>p<span class="ot">&lt;-</span><span class="fu">ggplot</span>(dif_no_sig_all, <span class="fu">aes</span>(<span class="at">x=</span>max_num_models)) <span class="sc">+</span> </span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">color=</span><span class="st">"black"</span>, <span class="at">fill=</span><span class="st">"white"</span>)</span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>p<span class="ot">&lt;-</span><span class="fu">ggplot</span>(dif_no_sig_all, <span class="fu">aes</span>(<span class="at">x=</span>max_num_models)) <span class="sc">+</span> </span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">color=</span><span class="st">"black"</span>, <span class="at">fill=</span><span class="st">"white"</span>)</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="CDB_cycles_AnalysisOfParameters_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(dif_no_sig_all<span class="sc">$</span>max_num_models)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(dif_no_sig_all<span class="sc">$</span>max_num_models)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
    55.0   117.0   147.0   147.7   175.5   294.0 </code></pre>
@@ -2140,12 +1532,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Note that these ranges go inline with the previous study where we make no distinction about cycles.</p>
 <p>Let’s filter now the previous information according to these ranges:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>dif_no_sig_all<span class="sc">$</span>valor_alpha <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">"alpha([0-9]+)-split[0-9]+"</span>, <span class="st">"</span><span class="sc">\\</span><span class="st">1"</span>, dif_no_sig_all<span class="sc">$</span>valores_combo))</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Filtrar el dataset para eliminar las filas donde alpha &gt; 12 y split &gt; 16</span></span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>df_filtered <span class="ot">&lt;-</span> dif_no_sig_all[(dif_no_sig_all<span class="sc">$</span>valor_alpha <span class="sc">&lt;</span> <span class="dv">12</span> <span class="sc">&amp;</span> dif_no_sig_all<span class="sc">$</span>valor_split <span class="sc">&lt;</span> <span class="dv">16</span>), ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>dif_no_sig_all<span class="sc">$</span>valor_alpha <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">"alpha([0-9]+)-split[0-9]+"</span>, <span class="st">"</span><span class="sc">\\</span><span class="st">1"</span>, dif_no_sig_all<span class="sc">$</span>valores_combo))</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Filtrar el dataset para eliminar las filas donde alpha &gt; 12 y split &gt; 16</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>df_filtered <span class="ot">&lt;-</span> dif_no_sig_all[(dif_no_sig_all<span class="sc">$</span>valor_alpha <span class="sc">&lt;</span> <span class="dv">12</span> <span class="sc">&amp;</span> dif_no_sig_all<span class="sc">$</span>valor_split <span class="sc">&lt;</span> <span class="dv">16</span>), ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(df_filtered<span class="sc">$</span>max_num_models)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(df_filtered<span class="sc">$</span>max_num_models)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
   55.00   89.25  116.00  112.67  125.00  200.00 </code></pre>
@@ -2154,7 +1546,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>After filtering the not desired values for alpha and split, the maximum number of models where the significant differences stops is 200.</p>
 <p>Este df_filtered son 40 filas, es decir, 40 combinaciones de alpha y split. Entonces vamos a estudiarlos 1 a 1. Hago un gráfico de la evolución del accuracy en cada caso y señalo cuando se supone que no hay diferencias significativas. Esto lo hacemos de nuevo agregado por medidas de complejidad y luego elijo un par y lo visualizo para ellas. Aquí estoy un poco perdida porque en general se ve que según aumenta el número de modelos, aumenta el accuracy pero supuestamente ya no de forma significativa y deberíamos guiarnos por eso. Yo creo que el orden es:</p>
 <ol type="1">
-<li><p>Hacer estos gráficos de evoluación del accuracy para los 40 casos y mirarlo para alguna medida de complejidad</p></li>
+<li><p>Hacer estos gráficos de evolución del accuracy para los 40 casos y mirarlo para alguna medida de complejidad</p></li>
 <li><p>Seleccionar el mejor valor de accuracy para estos 40 casos</p></li>
 <li><p>Sacar conclusiones de la comparación de 1 y 2</p></li>
 <li><p>Para nuestro método, escoger el mejor valor de parámetros en 2 casos:</p>
@@ -2164,6 +1556,33 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ol>
 <p>Comparar estas 2 versiones nuestras standard bagging y mixed bagging con el mismo número de parámetros</p></li>
 </ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>datos_alpha_s <span class="ot">&lt;-</span> datos <span class="sc">%&gt;%</span> <span class="fu">filter</span>(alpha<span class="sc">&lt;</span><span class="dv">12</span>, split <span class="sc">&lt;</span><span class="dv">16</span>) </span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>datos_alpha_s <span class="ot">&lt;-</span> datos_alpha_s <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(alpha, split, n_cycle, n_ensemble) <span class="sc">%&gt;%</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_at</span>(<span class="fu">vars</span>(accuracy_mean_mean),  <span class="fu">list</span>(<span class="at">accuracy_mean_dataset_mean =</span> mean, <span class="at">accuracy_mean_dataset_median =</span> median, <span class="at">accuracy_mean_dataset_std =</span> sd))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Hacemos los gráficos</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>datos_alpha_s_1 <span class="ot">&lt;-</span> datos_alpha_s <span class="sc">%&gt;%</span> <span class="fu">filter</span>(alpha<span class="sc">==</span><span class="dv">2</span>, split<span class="sc">==</span><span class="dv">1</span>)</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>datos_alpha_s_1 <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(datos_alpha_s_1)</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>datos_alpha_s_1<span class="sc">$</span>n_cycle <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(datos_alpha_s_1<span class="sc">$</span>n_cycle)</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>datos_alpha_s_1<span class="sc">$</span>n_ensemble <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(datos_alpha_s_1<span class="sc">$</span>n_ensemble)</span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(datos_alpha_s_1<span class="sc">$</span>n_cycle,datos_alpha_s_1<span class="sc">$</span>accuracy_mean_dataset_mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="CDB_cycles_AnalysisOfParameters_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>datos_alpha_s_2 <span class="ot">&lt;-</span> datos_alpha_s <span class="sc">%&gt;%</span> <span class="fu">filter</span>(alpha<span class="sc">==</span><span class="dv">2</span>, split<span class="sc">==</span><span class="dv">2</span>)</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>datos_alpha_s_2 <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(datos_alpha_s_2)</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>datos_alpha_s_2<span class="sc">$</span>n_cycle <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(datos_alpha_s_2<span class="sc">$</span>n_cycle)</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>datos_alpha_s_2<span class="sc">$</span>n_ensemble <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(datos_alpha_s_2<span class="sc">$</span>n_ensemble)</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(datos_alpha_s_1<span class="sc">$</span>n_ensemble,datos_alpha_s_1<span class="sc">$</span>accuracy_mean_dataset_mean, <span class="at">type=</span><span class="st">'l'</span>)</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>(datos_alpha_s_2<span class="sc">$</span>n_ensemble,datos_alpha_s_2<span class="sc">$</span>accuracy_mean_dataset_mean, <span class="at">type=</span><span class="st">'l'</span>, <span class="at">col=</span><span class="st">'red'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="CDB_cycles_AnalysisOfParameters_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 <p>AHORA AQUÍ TENGO QUE RESUMIR A PARTIR DE CUANDO NO HAY DIFERENCIAS SIGNIFICATIVAS PARA CADA CASO Y RELACIONARLO CON EL NÚMERO DE ENSEMBLES</p>
 <p>LUEGO HACER LO MISMO PARA STD Y CON ELLO FILTRAR N_CYCLES</p>
 <p>¿Qué es mejor: ciclos cortos o largos?</p>

@@ -5,6 +5,18 @@ format: gfm
 always_allow_html: true
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,warning = FALSE, message = FALSE)
+# Cargamos las librerias que vamos necesitando a lo largo del codigo
+library(tidyverse)
+library(ggpubr)
+library(rstatix)
+library(datarium)
+library(DT)
+library(ggplot2)
+library(patchwork)
+```
+
 In this notebook, we are studying the different parameters of our method Complexity Driven Bagging so as to offer a range of selection to the final user. In particular, we have three parameters:
 
 -   Split: the number of splits in which we cut the complexity spectrum. s=1 implies we are training with one easy sample, one uniform sample and one hard sample. That is, the cycle length is 3. s=2 implies 6 samples of different complexity (cycle length is 6).
@@ -28,13 +40,6 @@ After this analysis, we will have a first range recommendation for every paramet
 # Parameter analysis
 
 ```{r warning=FALSE, include=FALSE}
-library(tidyverse)
-library(ggpubr)
-library(rstatix)
-library(datarium)
-library(DT)
-library(ggplot2)
-library(patchwork)
 
 getwd()
 setwd("/home/carmen/PycharmProjects/EnsemblesComplexity/Results_general_algorithm_cycles")
@@ -214,9 +219,19 @@ We cannot perform a summary of 'n_cycle' in general because the number of cycles
 table_split1 <- datos %>% filter(split == 1) %>%
   group_by(n_cycle) %>%
   summarise_at(vars(accuracy_mean_mean),  list(mean = mean, median = median, std = sd))
-knitr::kable(table_split1)
+#knitr::kable(table_split1)
 
 #datatable(table_split1)
+## solo para html
+#library(DT)
+
+## Crear una tabla interactiva con paginación
+#datatable(table_split1, 
+#          options = list(pageLength = 15, # Muestra 15 filas por página
+#                         lengthMenu = c(15, 30, 50, 100), # Opciones de filas por página
+#                         autoWidth = TRUE))
+
+
 ```
 
 ```{r echo=FALSE, warning=FALSE}
@@ -626,7 +641,7 @@ dif_no_sig_all$max_num_models <- apply(X=dif_no_sig_all[,c('num_models','num_mod
 
 If we analyze the number of models above which there are no significant different, we can see that the maximum value is 294 and quartile 75% is 175, implying that our maximum tested number of models (300) is ok and that lower number of models in an ensemble can obtain competitive accuracy results.
 
-```{r}
+```{r warning=FALSE}
 p<-ggplot(dif_no_sig_all, aes(x=max_num_models)) + 
   geom_histogram(color="black", fill="white")
 p
@@ -660,7 +675,7 @@ After filtering the not desired values for alpha and split, the maximum number o
 
 Este df_filtered son 40 filas, es decir, 40 combinaciones de alpha y split. Entonces vamos a estudiarlos 1 a 1. Hago un gráfico de la evolución del accuracy en cada caso y señalo cuando se supone que no hay diferencias significativas. Esto lo hacemos de nuevo agregado por medidas de complejidad y luego elijo un par y lo visualizo para ellas. Aquí estoy un poco perdida porque en general se ve que según aumenta el número de modelos, aumenta el accuracy pero supuestamente ya no de forma significativa y deberíamos guiarnos por eso. Yo creo que el orden es:
 
-1.  Hacer estos gráficos de evoluación del accuracy para los 40 casos y mirarlo para alguna medida de complejidad
+1.  Hacer estos gráficos de evolución del accuracy para los 40 casos y mirarlo para alguna medida de complejidad
 
 2.  Seleccionar el mejor valor de accuracy para estos 40 casos
 
@@ -673,6 +688,32 @@ Este df_filtered son 40 filas, es decir, 40 combinaciones de alpha y split. Ento
     2.  alpha y split reducido en función de las comparaciones múltiples y n_cycles sin reducir
 
     Comparar estas 2 versiones nuestras standard bagging y mixed bagging con el mismo número de parámetros
+
+```{r}
+datos_alpha_s <- datos %>% filter(alpha<12, split <16) 
+datos_alpha_s <- datos_alpha_s %>% group_by(alpha, split, n_cycle, n_ensemble) %>%
+  summarise_at(vars(accuracy_mean_mean),  list(accuracy_mean_dataset_mean = mean, accuracy_mean_dataset_median = median, accuracy_mean_dataset_std = sd))
+
+```
+
+Hacemos los gráficos
+
+```{r}
+datos_alpha_s_1 <- datos_alpha_s %>% filter(alpha==2, split==1)
+datos_alpha_s_1 <- as.data.frame(datos_alpha_s_1)
+datos_alpha_s_1$n_cycle <- as.numeric(datos_alpha_s_1$n_cycle)
+datos_alpha_s_1$n_ensemble <- as.numeric(datos_alpha_s_1$n_ensemble)
+plot(datos_alpha_s_1$n_cycle,datos_alpha_s_1$accuracy_mean_dataset_mean)
+```
+
+```{r}
+datos_alpha_s_2 <- datos_alpha_s %>% filter(alpha==2, split==2)
+datos_alpha_s_2 <- as.data.frame(datos_alpha_s_2)
+datos_alpha_s_2$n_cycle <- as.numeric(datos_alpha_s_2$n_cycle)
+datos_alpha_s_2$n_ensemble <- as.numeric(datos_alpha_s_2$n_ensemble)
+plot(datos_alpha_s_1$n_ensemble,datos_alpha_s_1$accuracy_mean_dataset_mean, type='l')
+points(datos_alpha_s_2$n_ensemble,datos_alpha_s_2$accuracy_mean_dataset_mean, type='l', col='red')
+```
 
 AHORA AQUÍ TENGO QUE RESUMIR A PARTIR DE CUANDO NO HAY DIFERENCIAS SIGNIFICATIVAS PARA CADA CASO Y RELACIONARLO CON EL NÚMERO DE ENSEMBLES
 
