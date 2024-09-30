@@ -54,6 +54,7 @@ def voting_rule(preds):
 # #cycles_vector = length_cycle
 # n_models = n_cycles*length_cycle
 # n_ensembles_v = list(np.arange(length_cycle-1, n_models, length_cycle))
+split = 1
 
 def ComplexityDrivenBagging_cycles(data,max_n_models, name_data,path_to_save, split, stump,alpha):
     # n_ensembles = n_models
@@ -226,7 +227,7 @@ def ComplexityDrivenBagging_cycles(data,max_n_models, name_data,path_to_save, sp
                 acc = accuracy_score(y_predicted, y_test)
                 conf_matrix = confusion_matrix(y_test, y_predicted).tolist()
 
-
+                # Como empezamos en 0, el número de ensembles que guarda siempre es 1 menos del real
                 if (i in n_ensembles_v):
                     num_cycles = n_ensembles_v.index(i) + 1
                     results_dict = {'dataset':name_data,'fold':fold,'n_cycle': num_cycles, 'n_ensemble':i, 'weights':CM_selected,

@@ -1,8 +1,10 @@
 ---
 title: "CDB_cycles_AnalysisOfParameters"
 editor: visual
-format: gfm
-always_allow_html: true
+format:
+  html: 
+    page-layout: full
+    embed-resources: true
 ---
 
 ```{r setup, include=FALSE}
@@ -15,6 +17,8 @@ library(datarium)
 library(DT)
 library(ggplot2)
 library(patchwork)
+library(plotly)
+library(dplyr)
 ```
 
 In this notebook, we are studying the different parameters of our method Complexity Driven Bagging so as to offer a range of selection to the final user. In particular, we have three parameters:
@@ -47,6 +51,8 @@ setwd("/home/carmen/PycharmProjects/EnsemblesComplexity/Results_general_algorith
 # Data aggregated over complexity measures
 datos <- read.csv('df_summary_data.csv') 
 str(datos)
+# Como en python empezamos en 0, tenemos que sumar 1 a n_ensemble
+datos$n_ensemble <- datos$n_ensemble + 1
 # Convert id and time into factor variables
 datos <- datos %>%
   convert_as_factor(Dataset, combo_alpha_split, n_cycle,n_ensemble)
@@ -671,7 +677,7 @@ df_filtered <- dif_no_sig_all[(dif_no_sig_all$valor_alpha < 12 & dif_no_sig_all$
 summary(df_filtered$max_num_models)
 ```
 
-After filtering the not desired values for alpha and split, the maximum number of models where the significant differences stops is 200.
+After filtering the not desired values for alpha and split, the maximum number of models where the significant differences stop is 200.
 
 Este df_filtered son 40 filas, es decir, 40 combinaciones de alpha y split. Entonces vamos a estudiarlos 1 a 1. Hago un gráfico de la evolución del accuracy en cada caso y señalo cuando se supone que no hay diferencias significativas. Esto lo hacemos de nuevo agregado por medidas de complejidad y luego elijo un par y lo visualizo para ellas. Aquí estoy un poco perdida porque en general se ve que según aumenta el número de modelos, aumenta el accuracy pero supuestamente ya no de forma significativa y deberíamos guiarnos por eso. Yo creo que el orden es:
 
@@ -696,24 +702,187 @@ datos_alpha_s <- datos_alpha_s %>% group_by(alpha, split, n_cycle, n_ensemble) %
 
 ```
 
-Hacemos los gráficos
+For each combination of alpha and split we are plotting, with an orange dot, the maximum accuracy achieved and, with a blue dot, the number of ensembles from which there are no significant differences. In this case, the first thing to outline is that the orange point is not achieved at the maximum number of models tried (aroung 300), meaning that not always more models imply better performance. The blue dot appears quite before.
 
 ```{r}
 datos_alpha_s_1 <- datos_alpha_s %>% filter(alpha==2, split==1)
 datos_alpha_s_1 <- as.data.frame(datos_alpha_s_1)
-datos_alpha_s_1$n_cycle <- as.numeric(datos_alpha_s_1$n_cycle)
-datos_alpha_s_1$n_ensemble <- as.numeric(datos_alpha_s_1$n_ensemble)
-plot(datos_alpha_s_1$n_cycle,datos_alpha_s_1$accuracy_mean_dataset_mean)
+datos_alpha_s_1$n_cycle <- as.numeric(as.character(datos_alpha_s_1$n_cycle))
+datos_alpha_s_1$n_ensemble <- as.numeric(as.character(datos_alpha_s_1$n_ensemble))
+
+idmax = which.max(datos_alpha_s_1$accuracy_mean_dataset_mean)
+# max(datos_alpha_s_1$accuracy_mean_dataset_mean)
+max_acc_ensemble = datos_alpha_s_1[idmax,'n_ensemble']
+max_signifi = dif_no_sig_all[(dif_no_sig_all$valor_alpha == 2) & (dif_no_sig_all$valor_split == 1),'max_num_models'] 
+# datos_alpha_s_1[datos_alpha_s_1$n_ensemble==max_signifi,'accuracy_mean_dataset_mean']
+
+
+plot(datos_alpha_s_1$n_ensemble, datos_alpha_s_1$accuracy_mean_dataset_mean, type='l', xlab='n ensembles', ylab = 'accuracy mean', main ='alpha = 2, split =1')
+points(max_acc_ensemble, datos_alpha_s_1$accuracy_mean_dataset_mean[datos_alpha_s_1$n_ensemble == max_acc_ensemble], col='darkorange1', pch=19)
+points(max_signifi, datos_alpha_s_1$accuracy_mean_dataset_mean[datos_alpha_s_1$n_ensemble == max_signifi], col='blue', pch=19)
+
+```
+
+The accuracy associated to each point is:
+
+```{r}
+# El máximo en cada caso es
+print(paste('Accuracy blue dot:', round(datos_alpha_s_1[datos_alpha_s_1$n_ensemble==max_signifi,'accuracy_mean_dataset_mean'],4)))
+print(paste('Accuracy orange dot:', round(max(datos_alpha_s_1$accuracy_mean_dataset_mean),4)))
+```
+
+Let's now make the same graph over the 40 combinations of alpha and split.
+
+### Common legend
+
+-   **Orange point**: It represents the number of ensembles with the highest accuracy value
+-   **Blue point**: It indicates the maximum number of ensembles without significant differences with higher number of ensembles
+-   **X axis**: Number of ensembles.
+-   **Y axis**: Accuracy (average over dataset and complexity measures and cross validation)
+
+```{r fig.width=16, fig.height=10, fig.align = 'center'}
+
+df_ranking <- data.frame(df_filtered$valores_combo)
+colnames(df_ranking) <- 'valores_combo'
+df_ranking$valor_split <- df_filtered$valor_split
+df_ranking$valor_alpha <- df_filtered$valor_alpha
+df_ranking$max_total <- rep(NA,dim(df_ranking)[1])
+df_ranking$max_no_signif <- rep(NA,dim(df_ranking)[1])
+
+# Configuración de la cuadrícula (5 filas y 8 columnas)
+par(mfrow = c(5, 8), mar = c(2, 2, 2, 1))
+
+max_acc_max_ensemble = 0
+
+# Bucles para alpha y split
+for (alpha_value in c(2, 4, 6, 8, 10)) {
+  for (split_value in c(1, 2, 4, 6, 8, 10, 12, 14)) {
+    # Filtrar los datos por alpha y split
+    datos_alpha_s_1 <- datos_alpha_s %>% filter(alpha == alpha_value, split == split_value)
+    datos_alpha_s_1 <- as.data.frame(datos_alpha_s_1)
+    datos_alpha_s_1$n_cycle <- as.numeric(as.character(datos_alpha_s_1$n_cycle))
+    datos_alpha_s_1$n_ensemble <- as.numeric(as.character(datos_alpha_s_1$n_ensemble))
+    
+    # Encontrar el máximo
+    idmax <- which.max(datos_alpha_s_1$accuracy_mean_dataset_mean)
+    max_acc_ensemble <- datos_alpha_s_1[idmax, 'n_ensemble']
+    # Guardamos para ranking
+    df_ranking[(df_ranking$valor_alpha == alpha_value) & (df_ranking$valor_split == split_value),'max_total'] = max(datos_alpha_s_1$accuracy_mean_dataset_mean)
+
+    # Cuántas veces el máximo accuracy se logra con el máximo número de modelos
+    max_acc_max_ensemble = max_acc_max_ensemble + sum(max_acc_ensemble== max(datos_alpha_s_1[,'n_ensemble']))
+    max_signifi <- dif_no_sig_all[(dif_no_sig_all$valor_alpha == alpha_value) & (dif_no_sig_all$valor_split == split_value), 'max_num_models']
+    # Guardamos para ranking
+    df_ranking[(df_ranking$valor_alpha == alpha_value) & (df_ranking$valor_split == split_value),'max_no_signif'] = max(datos_alpha_s_1[datos_alpha_s_1$n_ensemble <= max_signifi,'accuracy_mean_dataset_mean'])
+    
+    # Graficar
+    plot(datos_alpha_s_1$n_ensemble, datos_alpha_s_1$accuracy_mean_dataset_mean, type = 'l', 
+         xlab = 'n ensembles', ylab = 'accuracy mean', main = paste('alpha =', alpha_value, 'split =', split_value))
+    
+    # Añadir los puntos correspondientes
+    points(max_acc_ensemble, datos_alpha_s_1$accuracy_mean_dataset_mean[datos_alpha_s_1$n_ensemble == max_acc_ensemble], col = 'darkorange1', pch = 19)
+    points(max_signifi, datos_alpha_s_1$accuracy_mean_dataset_mean[datos_alpha_s_1$n_ensemble == max_signifi], col = 'blue', pch = 19)
+  }
+}
+
+# Restablecer los parámetros gráficos
+par(mfrow = c(1, 1))
+
+
+```
+
+From the total of 40 combinations, in 17 (max_acc_max_ensemble) of them the maximum accuracy is obtained at the maximum number of models tested.
+
+The same plot but with equal y axis to enable fair comparisons.
+
+```{r fig.width=16, fig.height=10, fig.align = 'center'}
+# Configuración de la cuadrícula (5 filas y 8 columnas)
+par(mfrow = c(5, 8), mar = c(2, 2, 2, 1))
+
+# Bucles para alpha y split
+for (alpha_value in c(2, 4, 6, 8, 10)) {
+  for (split_value in c(1, 2, 4, 6, 8, 10, 12, 14)) {
+    # Filtrar los datos por alpha y split
+    datos_alpha_s_1 <- datos_alpha_s %>% filter(alpha == alpha_value, split == split_value)
+    datos_alpha_s_1 <- as.data.frame(datos_alpha_s_1)
+    datos_alpha_s_1$n_cycle <- as.numeric(as.character(datos_alpha_s_1$n_cycle))
+    datos_alpha_s_1$n_ensemble <- as.numeric(as.character(datos_alpha_s_1$n_ensemble))
+    
+    # Encontrar el máximo
+    idmax <- which.max(datos_alpha_s_1$accuracy_mean_dataset_mean)
+    max_acc_ensemble <- datos_alpha_s_1[idmax, 'n_ensemble']
+    max_signifi <- dif_no_sig_all[(dif_no_sig_all$valor_alpha == alpha_value) & (dif_no_sig_all$valor_split == split_value), 'max_num_models']
+    
+    # Graficar
+    plot(datos_alpha_s_1$n_ensemble, datos_alpha_s_1$accuracy_mean_dataset_mean, type = 'l', 
+         xlab = 'n ensembles', ylab = 'accuracy mean', main = paste('alpha =', alpha_value, 'split =', split_value),ylim=c(0.810,0.8153))
+    
+    # Añadir los puntos correspondientes
+    points(max_acc_ensemble, datos_alpha_s_1$accuracy_mean_dataset_mean[datos_alpha_s_1$n_ensemble == max_acc_ensemble], col = 'darkorange1', pch = 19)
+    points(max_signifi, datos_alpha_s_1$accuracy_mean_dataset_mean[datos_alpha_s_1$n_ensemble == max_signifi], col = 'blue', pch = 19)
+  }
+}
+
+# Restablecer los parámetros gráficos
+par(mfrow = c(1, 1))
+
+
+```
+
+Low split values with hight alpha values is not recommended (split 1 with alpha = 6,8,10, split 2 with alpha 10). They obtain the lower accuracy performances. --\> omit split = 1 for the range of recommended parameters.
+
+For the rest of values, similar patterns are found.
+
+We now plot all the lines in the same plot. The one obtaining clearly lower accuracy values is split = 1 and alpha = 10. The rest of values are visually super close and moving in a really close range. This indicates that any combination of the parameters is adequate.
+
+```{r}
+
+datos_alpha_s$n_ensemble <- as.numeric(as.character(datos_alpha_s$n_ensemble))
+datos_alpha_s$accuracy_mean_dataset_mean <- as.numeric(as.character(datos_alpha_s$accuracy_mean_dataset_mean))
+
+p <- plot_ly()
+
+for (alpha_value in c(2, 4, 6, 8, 10)) {
+  for (split_value in c(1, 2, 4, 6, 8, 10, 12, 14)) {
+    datos_alpha_s_1 <- datos_alpha_s %>% filter(alpha == alpha_value, split == split_value)
+    p <- p %>%
+      add_lines(x = datos_alpha_s_1$n_ensemble, 
+                y = datos_alpha_s_1$accuracy_mean_dataset_mean, 
+                name = paste("alpha =", alpha_value, "split =", split_value), 
+                line = list(width = 2))
+  }
+}
+
+p <- p %>%
+  layout(title = 'All combinations of alpha and split',
+         xaxis = list(title = 'n ensembles'),
+         yaxis = list(title = 'accuracy mean'),
+         legend = list(title = list(text = 'Legend')))
+
+p
+```
+
+Let's now obtain a ranking according to the maximum accuracy (orange point) and another according to the maximum accuracy obtain before no significant differences.
+
+```{r}
+df_ranking_order <- df_ranking  %>% arrange(desc(max_total))
+df_ranking_order_sig <- df_ranking  %>% arrange(desc(max_no_signif))
+df_ranking$max_total_order = rank(-df_ranking$max_total)
+df_ranking$max_no_signif_order = rank(-df_ranking$max_no_signif)
 ```
 
 ```{r}
-datos_alpha_s_2 <- datos_alpha_s %>% filter(alpha==2, split==2)
-datos_alpha_s_2 <- as.data.frame(datos_alpha_s_2)
-datos_alpha_s_2$n_cycle <- as.numeric(datos_alpha_s_2$n_cycle)
-datos_alpha_s_2$n_ensemble <- as.numeric(datos_alpha_s_2$n_ensemble)
-plot(datos_alpha_s_1$n_ensemble,datos_alpha_s_1$accuracy_mean_dataset_mean, type='l')
-points(datos_alpha_s_2$n_ensemble,datos_alpha_s_2$accuracy_mean_dataset_mean, type='l', col='red')
+knitr::kable(df_ranking_order)
 ```
+
+```{r}
+cor.test(df_ranking$max_total_order, df_ranking$max_no_signif_order, method=c('spearman'))
+cor.test(df_ranking$max_total_order, df_ranking$max_no_signif_order, method=c('pearson'))
+```
+
+Both rankings do not have a high correlation but they generally agree in terms of what gets the worst results (alpha high and split low). The lack of agreement on which is best can be interpreted as meaning that different combinations of parameters work well.
+
+For now, it is not clear what is better: lots of short cycles or few of long cycles. It seems that an intermediate point between those two states is adequate.
 
 AHORA AQUÍ TENGO QUE RESUMIR A PARTIR DE CUANDO NO HAY DIFERENCIAS SIGNIFICATIVAS PARA CADA CASO Y RELACIONARLO CON EL NÚMERO DE ENSEMBLES
 
