@@ -849,7 +849,12 @@ for (alpha_value in c(2, 4, 6, 8, 10)) {
       add_lines(x = datos_alpha_s_1$n_ensemble, 
                 y = datos_alpha_s_1$accuracy_mean_dataset_mean, 
                 name = paste("alpha =", alpha_value, "split =", split_value), 
-                line = list(width = 2))
+                line = list(width = 2),
+                hovertemplate = paste('Alpha: ', alpha_value, 
+                                    ' Split:', alpha_value,
+                                    '<br>N ensemble:', datos_alpha_s_1$n_ensemble,
+                                    '<br>Accuracy:', round(datos_alpha_s_1$accuracy_mean_dataset_mean,4),
+                                    '<extra></extra>'))
   }
 }
 
@@ -872,7 +877,7 @@ df_ranking$max_no_signif_order = rank(-df_ranking$max_no_signif)
 ```
 
 ```{r}
-knitr::kable(df_ranking_order)
+knitr::kable(df_ranking %>% arrange(max_total_order))
 ```
 
 ```{r}
@@ -883,6 +888,332 @@ cor.test(df_ranking$max_total_order, df_ranking$max_no_signif_order, method=c('p
 Both rankings do not have a high correlation but they generally agree in terms of what gets the worst results (alpha high and split low). The lack of agreement on which is best can be interpreted as meaning that different combinations of parameters work well.
 
 For now, it is not clear what is better: lots of short cycles or few of long cycles. It seems that an intermediate point between those two states is adequate.
+
+## Analysis per Complexity Measure
+
+Now, we repeat the same analysis but for each complexity measure.
+
+```{r}
+#setwd("/home/carmen/PycharmProjects/EnsemblesComplexity/Results_general_algorithm_cycles")
+# Data disaggregated per complexity measures
+datos_CM <- read.csv('df_summary_CM.csv') 
+str(datos_CM)
+# Como en python empezamos en 0, tenemos que sumar 1 a n_ensemble
+datos_CM$n_ensemble <- datos_CM$n_ensemble + 1
+# Convert id and time into factor variables
+datos_CM <- datos_CM %>%
+  convert_as_factor(weights, n_cycle,n_ensemble)
+```
+
+```{r}
+datos_CM_filtro <- datos_CM %>% filter(alpha<12, split <16) 
+# No hace falta agregar más porque este dataset ya está agregado en origen
+```
+
+For the information about significant differences, we use the values obtain in general. That is, we are not repeating the multiple comparisons analyses per each complexity measure.
+
+```{r}
+plot_2max_grid_with_ranking <- function(CM,df_filtered,dif_no_sig_all,datos_CM){
+  df_ranking_CM <- data.frame(df_filtered$valores_combo)
+colnames(df_ranking_CM) <- 'valores_combo'
+df_ranking_CM$valor_split <- df_filtered$valor_split
+df_ranking_CM$valor_alpha <- df_filtered$valor_alpha
+df_ranking_CM$max_total <- rep(NA,dim(df_ranking_CM)[1])
+df_ranking_CM$max_no_signif <- rep(NA,dim(df_ranking_CM)[1])
+
+# Configuración de la cuadrícula (5 filas y 8 columnas)
+par(mfrow = c(5, 8), mar = c(2, 2, 2, 1))
+
+max_acc_max_ensemble = 0
+
+# Bucles para alpha y split
+for (alpha_value in c(2, 4, 6, 8, 10)) {
+  for (split_value in c(1, 2, 4, 6, 8, 10, 12, 14)) {
+    # Filtrar los datos por alpha y split
+    datos_CM_case <- datos_CM %>% filter(weights == CM,
+                                         alpha == alpha_value, split == split_value)
+    datos_CM_case <- as.data.frame(datos_CM_case)
+    datos_CM_case$n_cycle <- as.numeric(as.character(datos_CM_case$n_cycle))
+    datos_CM_case$n_ensemble <- as.numeric(as.character(datos_CM_case$n_ensemble))
+    
+    # Encontrar el máximo
+    idmax <- which.max(datos_CM_case$accuracy_mean_mean)
+    max_acc_ensemble <- datos_CM_case[idmax, 'n_ensemble']
+    # Guardamos para ranking
+    df_ranking_CM[(df_ranking_CM$valor_alpha == alpha_value) & (df_ranking_CM$valor_split == split_value),'max_total'] = max(datos_CM_case$accuracy_mean_mean)
+    
+    # Cuántas veces el máximo accuracy se logra con el máximo número de modelos
+    max_acc_max_ensemble = max_acc_max_ensemble + sum(max_acc_ensemble== max(datos_alpha_s_1[,'n_ensemble']))
+    max_signifi <- dif_no_sig_all[(dif_no_sig_all$valor_alpha == alpha_value) & (dif_no_sig_all$valor_split == split_value), 'max_num_models']
+    # Guardamos para ranking
+    df_ranking_CM[(df_ranking_CM$valor_alpha == alpha_value) & (df_ranking_CM$valor_split == split_value),'max_no_signif'] = max(datos_CM_case[datos_CM_case$n_ensemble <= max_signifi,'accuracy_mean_mean'])
+    
+    # Graficar
+    plot(datos_CM_case$n_ensemble, datos_CM_case$accuracy_mean_mean, type = 'l', 
+         xlab = 'n ensembles', ylab = 'accuracy mean', main = paste('alpha =', alpha_value, 'split =', split_value),ylim=c(0.805,0.818))
+    
+    # Añadir los puntos correspondientes
+    points(max_acc_ensemble, datos_CM_case$accuracy_mean_mean[datos_CM_case$n_ensemble == max_acc_ensemble], col = 'darkorange1', pch = 19)
+    points(max_signifi, datos_CM_case$accuracy_mean_mean[datos_CM_case$n_ensemble == max_signifi], col = 'blue', pch = 19)
+  }
+}
+
+# Restablecer los parámetros gráficos
+par(mfrow = c(1, 1))
+return(df_ranking_CM)
+}
+
+```
+
+```{r}
+plot_all_combinations <- function(CM,datos_CM_filtro){
+  datos_CM_filtro$n_ensemble <- as.numeric(as.character(datos_CM_filtro$n_ensemble))
+datos_CM_filtro$accuracy_mean_mean <- as.numeric(as.character(datos_CM_filtro$accuracy_mean_mean))
+
+p <- plot_ly()
+
+for (alpha_value in c(2, 4, 6, 8, 10)) {
+  for (split_value in c(1, 2, 4, 6, 8, 10, 12, 14)) {
+    datos_CM_case <- datos_CM_filtro %>% filter(weights == CM,
+      alpha == alpha_value, split == split_value)
+    p <- p %>%
+      add_lines(x = datos_CM_case$n_ensemble, 
+                y = datos_CM_case$accuracy_mean_mean, 
+                name = paste("alpha =", alpha_value, "split =", split_value), 
+                line = list(width = 2),
+                hovertemplate = paste('Alpha: ', alpha_value, 
+                                    ' Split:', alpha_value,
+                                    '<br>N ensemble:', datos_CM_case$n_ensemble,
+                                    '<br>Accuracy:', round(datos_CM_case$accuracy_mean_mean,4),
+                                    '<extra></extra>'))
+  }
+}
+
+p <- p %>%
+  layout(title = paste(CM,': All combinations of alpha and split'),
+         xaxis = list(title = 'n ensembles'),
+         yaxis = list(title = 'accuracy mean'),
+         legend = list(title = list(text = 'Legend')))
+
+p
+}
+```
+
+### CLD
+
+```{r fig.width=16, fig.height=10, fig.align = 'center'}
+CM = 'CLD'
+df_ranking_CM = plot_2max_grid_with_ranking(CM,df_filtered,dif_no_sig_all,datos_CM)
+```
+
+```{r}
+plot_all_combinations(CM,datos_CM_filtro)
+```
+
+```{r}
+df_ranking_CM$max_total_order = rank(-df_ranking_CM$max_total)
+df_ranking_CM$max_no_signif_order = rank(-df_ranking_CM$max_no_signif)
+
+cor.test(df_ranking_CM$max_total_order, df_ranking_CM$max_no_signif_order, method=c('spearman'))
+cor.test(df_ranking_CM$max_total_order, df_ranking_CM$max_no_signif_order, method=c('pearson'))
+
+```
+
+```{r}
+knitr::kable(df_ranking_CM %>% arrange(max_total_order))
+```
+
+### DCP
+
+```{r fig.width=16, fig.height=10, fig.align = 'center'}
+CM = 'DCP'
+df_ranking_CM = plot_2max_grid_with_ranking(CM,df_filtered,dif_no_sig_all,datos_CM)
+```
+
+```{r}
+plot_all_combinations(CM,datos_CM_filtro)
+```
+
+```{r}
+df_ranking_CM$max_total_order = rank(-df_ranking_CM$max_total)
+df_ranking_CM$max_no_signif_order = rank(-df_ranking_CM$max_no_signif)
+
+cor.test(df_ranking_CM$max_total_order, df_ranking_CM$max_no_signif_order, method=c('spearman'))
+cor.test(df_ranking_CM$max_total_order, df_ranking_CM$max_no_signif_order, method=c('pearson'))
+
+```
+
+```{r}
+knitr::kable(df_ranking_CM %>% arrange(max_total_order))
+```
+
+### F1
+
+```{r fig.width=16, fig.height=10, fig.align = 'center'}
+CM = 'F1'
+df_ranking_CM = plot_2max_grid_with_ranking(CM,df_filtered,dif_no_sig_all,datos_CM)
+```
+
+```{r}
+plot_all_combinations(CM,datos_CM_filtro)
+```
+
+```{r}
+df_ranking_CM$max_total_order = rank(-df_ranking_CM$max_total)
+df_ranking_CM$max_no_signif_order = rank(-df_ranking_CM$max_no_signif)
+
+cor.test(df_ranking_CM$max_total_order, df_ranking_CM$max_no_signif_order, method=c('spearman'))
+cor.test(df_ranking_CM$max_total_order, df_ranking_CM$max_no_signif_order, method=c('pearson'))
+
+```
+
+```{r}
+knitr::kable(df_ranking_CM %>% arrange(max_total_order))
+```
+
+### Hostility
+
+```{r fig.width=16, fig.height=10, fig.align = 'center'}
+CM = 'Hostility'
+df_ranking_CM = plot_2max_grid_with_ranking(CM,df_filtered,dif_no_sig_all,datos_CM)
+```
+
+```{r}
+plot_all_combinations(CM,datos_CM_filtro)
+```
+
+```{r}
+df_ranking_CM$max_total_order = rank(-df_ranking_CM$max_total)
+df_ranking_CM$max_no_signif_order = rank(-df_ranking_CM$max_no_signif)
+
+cor.test(df_ranking_CM$max_total_order, df_ranking_CM$max_no_signif_order, method=c('spearman'))
+cor.test(df_ranking_CM$max_total_order, df_ranking_CM$max_no_signif_order, method=c('pearson'))
+
+```
+
+```{r}
+knitr::kable(df_ranking_CM %>% arrange(max_total_order))
+```
+
+### kDN
+
+```{r fig.width=16, fig.height=10, fig.align = 'center'}
+CM = 'kDN'
+df_ranking_CM = plot_2max_grid_with_ranking(CM,df_filtered,dif_no_sig_all,datos_CM)
+```
+
+```{r}
+plot_all_combinations(CM,datos_CM_filtro)
+```
+
+```{r}
+df_ranking_CM$max_total_order = rank(-df_ranking_CM$max_total)
+df_ranking_CM$max_no_signif_order = rank(-df_ranking_CM$max_no_signif)
+
+cor.test(df_ranking_CM$max_total_order, df_ranking_CM$max_no_signif_order, method=c('spearman'))
+cor.test(df_ranking_CM$max_total_order, df_ranking_CM$max_no_signif_order, method=c('pearson'))
+
+```
+
+```{r}
+knitr::kable(df_ranking_CM %>% arrange(max_total_order))
+```
+
+### LSC
+
+```{r fig.width=16, fig.height=10, fig.align = 'center'}
+CM = 'LSC'
+df_ranking_CM = plot_2max_grid_with_ranking(CM,df_filtered,dif_no_sig_all,datos_CM)
+```
+
+```{r}
+plot_all_combinations(CM,datos_CM_filtro)
+```
+
+```{r}
+df_ranking_CM$max_total_order = rank(-df_ranking_CM$max_total)
+df_ranking_CM$max_no_signif_order = rank(-df_ranking_CM$max_no_signif)
+
+cor.test(df_ranking_CM$max_total_order, df_ranking_CM$max_no_signif_order, method=c('spearman'))
+cor.test(df_ranking_CM$max_total_order, df_ranking_CM$max_no_signif_order, method=c('pearson'))
+
+```
+
+```{r}
+knitr::kable(df_ranking_CM %>% arrange(max_total_order))
+```
+
+### N1
+
+```{r fig.width=16, fig.height=10, fig.align = 'center'}
+CM = 'N1'
+df_ranking_CM = plot_2max_grid_with_ranking(CM,df_filtered,dif_no_sig_all,datos_CM)
+```
+
+```{r}
+plot_all_combinations(CM,datos_CM_filtro)
+```
+
+```{r}
+df_ranking_CM$max_total_order = rank(-df_ranking_CM$max_total)
+df_ranking_CM$max_no_signif_order = rank(-df_ranking_CM$max_no_signif)
+
+cor.test(df_ranking_CM$max_total_order, df_ranking_CM$max_no_signif_order, method=c('spearman'))
+cor.test(df_ranking_CM$max_total_order, df_ranking_CM$max_no_signif_order, method=c('pearson'))
+
+```
+
+```{r fig.width=16, fig.height=10, fig.align = 'center'}
+knitr::kable(df_ranking_CM %>% arrange(max_total_order))
+```
+
+### N2
+
+```{r fig.width=16, fig.height=10, fig.align = 'center'}
+CM = 'N2'
+df_ranking_CM = plot_2max_grid_with_ranking(CM,df_filtered,dif_no_sig_all,datos_CM)
+```
+
+```{r}
+plot_all_combinations(CM,datos_CM_filtro)
+```
+
+```{r}
+df_ranking_CM$max_total_order = rank(-df_ranking_CM$max_total)
+df_ranking_CM$max_no_signif_order = rank(-df_ranking_CM$max_no_signif)
+
+cor.test(df_ranking_CM$max_total_order, df_ranking_CM$max_no_signif_order, method=c('spearman'))
+cor.test(df_ranking_CM$max_total_order, df_ranking_CM$max_no_signif_order, method=c('pearson'))
+
+```
+
+```{r}
+knitr::kable(df_ranking_CM %>% arrange(max_total_order))
+```
+
+### TD_U
+
+```{r fig.width=16, fig.height=10, fig.align = 'center'}
+CM = 'TD_U'
+df_ranking_CM = plot_2max_grid_with_ranking(CM,df_filtered,dif_no_sig_all,datos_CM)
+```
+
+```{r}
+plot_all_combinations(CM,datos_CM_filtro)
+```
+
+```{r}
+df_ranking_CM$max_total_order = rank(-df_ranking_CM$max_total)
+df_ranking_CM$max_no_signif_order = rank(-df_ranking_CM$max_no_signif)
+
+cor.test(df_ranking_CM$max_total_order, df_ranking_CM$max_no_signif_order, method=c('spearman'))
+cor.test(df_ranking_CM$max_total_order, df_ranking_CM$max_no_signif_order, method=c('pearson'))
+
+```
+
+```{r}
+knitr::kable(df_ranking_CM %>% arrange(max_total_order))
+```
 
 AHORA AQUÍ TENGO QUE RESUMIR A PARTIR DE CUANDO NO HAY DIFERENCIAS SIGNIFICATIVAS PARA CADA CASO Y RELACIONARLO CON EL NÚMERO DE ENSEMBLES
 
