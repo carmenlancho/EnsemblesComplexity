@@ -643,6 +643,7 @@ We have performed multiple comparisons analysis for the number of cycles with re
 dif_no_sig_all$max_num_cycles <- apply(X=dif_no_sig_all[,c('cycles_mean','cycles_median','cycles_std')], MARGIN=1, FUN=max)
 dif_no_sig_all$max_num_models <- apply(X=dif_no_sig_all[,c('num_models','num_models_mediana','num_models_std')], MARGIN=1, FUN=max)
 
+#write.csv(dif_no_sig_all, "CDB_cycles_ParametersComboAlphaSplit_dif_no_signif_cycles_mean_median_std_num_models.csv")
 ```
 
 If we analyze the number of models above which there are no significant different, we can see that the maximum value is 294 and quartile 75% is 175, implying that our maximum tested number of models (300) is ok and that lower number of models in an ensemble can obtain competitive accuracy results.
