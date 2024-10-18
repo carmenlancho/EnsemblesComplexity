@@ -3,6 +3,7 @@ title: "CDB_cycles_AnalysisOfParameters"
 editor: visual
 format:
   html: 
+    self-contained: true
     page-layout: full
     embed-resources: true
 ---
@@ -1258,7 +1259,7 @@ knitr::kable(df_ranking_CM %>% arrange(max_total_order))
 
 -   For every complexity measure, there are different values of the parameters that offer the best solution. They all have generally in common that intermediate values of alpha and split are better. But there are some exceptions, for example alpha and split equal to 10 works well for Hostility. From this, we can conclude that intermediate length of cycles are better than too short (s=1) or too long (s=10) cycles.
 
--   We have a total of 40 combinations of alpha and split values. For that 40 cases, the higher accuracy is obtained at the maximum number of models tested (around 300) in 6.5 cases (on average for all the complexity measures). In particular:
+-   We have a total of 40 combinations of alpha and split values. For that 40 cases, the higher accuracy is obtained at the maximum number of models tested (around 300) in 6.5 cases (on average for all the complexity measures). In particular, the maximum accuracy is obtained with the maximum number of tested models in the following cases (out of 40) for each specific complexity measure:
 
     -   CLD: 4 times
 
@@ -1278,7 +1279,9 @@ knitr::kable(df_ranking_CM %>% arrange(max_total_order))
 
     -   TDU: 6 times
 
--   Regarding the correlation (both in terms of Pearson and Spearman correlation) between the ranking of alpha-split combinations according to the higher accuracy obtained when considering all the ensembles tested and when only considering those number of ensembles for which there are significant differences: in general the correlation is medium - low, indicating that there is no a clear agreement between those significant differences and the real maximum. Anyway, we have to compare what are the real differences in terms of if it is really worthy to keep training more and more models for maybe an increase of 0.001 in accuracy (differences are not significant and all graphs have shown that the accuracy is moving always in a close interval of values). In particular:
+It is interesting to examine whether the complexity measures for which the highest accuracy is achieved with the maximum number of models tested are those with the worst performance.
+
+-   Regarding the correlation (both in terms of Pearson and Spearman correlation) between the ranking of alpha-split combinations according to the higher accuracy obtained when considering all the ensembles tested and when only considering those number of ensembles for which there are significant differences: in general the correlation is medium - low, indicating that there is no clear agreement between those significant differences and the real maximum. Anyway, we have to compare what are the real differences in terms of if it is really worthy to keep training more and more models for maybe an increase of 0.001 in accuracy (differences are not significant and all graphs have shown that the accuracy is moving always in a close interval of values). In particular:
 
     -   CLD: corr 0.388
 
@@ -1303,9 +1306,3 @@ knitr::kable(df_ranking_CM %>% arrange(max_total_order))
             -   Considering all the ensembles tested
 
             -   Considering only those where there are significant differences
-
-AHORA AQUÍ TENGO QUE RESUMIR A PARTIR DE CUANDO NO HAY DIFERENCIAS SIGNIFICATIVAS PARA CADA CASO Y RELACIONARLO CON EL NÚMERO DE ENSEMBLES
-
-LUEGO HACER LO MISMO PARA STD Y CON ELLO FILTRAR N_CYCLES
-
-¿Qué es mejor: ciclos cortos o largos?
