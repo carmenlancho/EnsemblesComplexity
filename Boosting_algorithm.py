@@ -212,7 +212,7 @@ def boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights,CM_selecte
         error_m = (sum(weights_v * disagree)) / sum(weights_v)
 
         # Compute alpha_m
-        alpha_m = np.log((1 - error_m) / error_m)
+        alpha_m = 1/2 * np.log((1 - error_m) / error_m)
         alpha_list.append(alpha_m)
 
         # Evaluate on test
@@ -221,13 +221,18 @@ def boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights,CM_selecte
 
         # Update the observations weights
         if (method_weights=='classic') | (method_weights=='init_easy'):
-            weights_v[disagree] = weights_v[disagree] * np.exp(alpha_m)
+            # weights_v[disagree] = weights_v[disagree] * np.exp(alpha_m) # Está mal porque se actualizan todos los pesos
+            weights_v = weights_v * np.exp(-alpha_m * y_train * y_pred)
         else: # actualizamos tb en función de la complejidad
-            update_boosting = weights_v[disagree] * np.exp(alpha_m)
-            update_complexity = weights_hard_v[disagree]
+            # update_boosting = weights_v[disagree] * np.exp(alpha_m) # Está mal porque se actualizan todos los pesos
+            update_boosting = weights_v * np.exp(-alpha_m * y_train * y_pred)
+            update_complexity = weights_hard_v#[disagree]
             total_update_weights = (19/20)*update_boosting + (1/20)*update_complexity
             total_update_weights = total_update_weights/ sum(total_update_weights)
             weights_v[disagree] = total_update_weights
+
+        # Weight normalization
+        weights_v = weights_v / np.sum(weights_v)
 
 
 
