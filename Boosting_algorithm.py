@@ -228,8 +228,8 @@ def boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights,CM_selecte
             update_boosting = weights_v * np.exp(-alpha_m * y_train * y_pred)
             update_complexity = weights_hard_v#[disagree]
             total_update_weights = (19/20)*update_boosting + (1/20)*update_complexity
-            total_update_weights = total_update_weights/ sum(total_update_weights)
-            weights_v[disagree] = total_update_weights
+            #total_update_weights = total_update_weights/ sum(total_update_weights)
+            weights_v = total_update_weights
 
         # Weight normalization
         weights_v = weights_v / np.sum(weights_v)
