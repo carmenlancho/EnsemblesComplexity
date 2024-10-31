@@ -177,6 +177,19 @@ def boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights,CM_selecte
         ranking_easy = CM_values.rank(method='average', ascending=False)  # more weight to easy
         weights_v = ranking_easy / sum(ranking_easy)  # probability distribution
         weights_v = np.array(weights_v)
+    elif (method_weights == 'init_hard'):
+        # comienzo con mayor peso a los puntos difíciles
+        # Get complexity measure on train set
+        data_train = pd.DataFrame(X_train)
+        y_cm = y_train.copy()
+        y_cm[y_cm == -1] = 0  # not sign format
+        data_train['y'] = y_cm
+        data_train.columns = data.columns
+        df_measures, _ = all_measures(data_train,False,None, None)
+        CM_values = df_measures[CM_selected]
+        ranking_hard = CM_values.rank(method='average', ascending=True)  # more weight to difficult
+        weights_v = ranking_hard / sum(ranking_hard)  # probability distribution
+        weights_v = np.array(weights_v)
     elif (method_weights == 'init_easy_w_complex'):
         # Get complexity measure on train set
         data_train = pd.DataFrame(X_train)
@@ -212,7 +225,10 @@ def boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights,CM_selecte
         error_m = (sum(weights_v * disagree)) / sum(weights_v)
 
         # Compute alpha_m
-        alpha_m = 1/2 * np.log((1 - error_m) / error_m)
+        if (error_m != 0.0):
+            alpha_m = 1/2 * np.log((1 - error_m) / error_m)
+        else:
+            alpha_m = 0 # since there is no error, there is no change in weights
         alpha_list.append(alpha_m)
 
         # Evaluate on test
@@ -220,14 +236,14 @@ def boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights,CM_selecte
         preds_test.append(y_pred_test)
 
         # Update the observations weights
-        if (method_weights=='classic') | (method_weights=='init_easy'):
+        if (method_weights=='classic') | (method_weights=='init_easy') | (method_weights=='init_hard'):
             # weights_v[disagree] = weights_v[disagree] * np.exp(alpha_m) # Está mal porque se actualizan todos los pesos
             weights_v = weights_v * np.exp(-alpha_m * y_train * y_pred)
         else: # actualizamos tb en función de la complejidad
             # update_boosting = weights_v[disagree] * np.exp(alpha_m) # Está mal porque se actualizan todos los pesos
             update_boosting = weights_v * np.exp(-alpha_m * y_train * y_pred)
             update_complexity = weights_hard_v#[disagree]
-            total_update_weights = (19/20)*update_boosting + (1/20)*update_complexity
+            total_update_weights = update_boosting + update_complexity
             #total_update_weights = total_update_weights/ sum(total_update_weights)
             weights_v = total_update_weights
 
@@ -361,7 +377,7 @@ def CV_boosting(dataset,X,y,M,method_weights,CM_selected, plot_error,n_cv_splits
 
 def boosting_all_combinations(path_to_save, dataset, X,y):
     CM_list = ['Hostility', 'kDN', 'DCP', 'TD_U', 'CLD', 'N1', 'N2', 'LSC', 'F1']
-    method_weights_list = ['classic','init_easy','init_easy_w_complex']
+    method_weights_list = ['classic','init_easy','init_hard','init_easy_w_complex']
 
     # Para guardar todos los resultados
     results_total = pd.DataFrame(columns=['dataset','fold','n_ensemble','method_weights','compl_measure',
@@ -418,34 +434,39 @@ for filename in os.listdir(path_csv):
         total_name_list.append(filename)
 
 
+ #'segment.csv', # da error porque es multiclase, no lo usamos
+
 # total_name_list = ['bands.csv']
 total_name_list = [#'teaching_assistant_MH.csv','cleveland.csv','contraceptive_NL.csv','hill_valley_without_noise_traintest.csv',
  #'glass0.csv','saheart.csv','breast-w.csv','contraceptive_LS.csv','yeast1.csv',
  #'ilpd.csv','phoneme.csv','mammographic.csv','contraceptive_NS.csv','bupa.csv','Yeast_CYTvsNUC.csv','ring.csv','titanic.csv',
  #'musk1.csv','spectfheart.csv','arrhythmia_cfs.csv','vertebral_column.csv','profb.csv','sonar.csv',
  #'liver-disorders.csv','steel-plates-fault.csv','credit-g.csv','glass1.csv',
- #'segment.csv', # da error
- #'breastcancer.csv',# da error
- # 'diabetes.csv','diabetic_retinopathy.csv', 'analcatdata_authorship.csv', 'WineQualityRed_5vs6.csv',
-# 'teaching_assistant_LM.csv', 'ionosphere.csv', 'bands.csv',
- 'wdbc.csv',
- 'sylvine.csv',
- 'teaching_assistant_LH.csv',
- 'vehicle2.csv',
- 'pima.csv',
- 'spambase.csv',
- 'fri_c0_250_50.csv',
- 'parkinsons.csv',
- 'bodyfat.csv',
- 'banknote_authentication.csv',
- 'chatfield_4.csv']
 
-path_to_save = root_path + '/Results_Boosting'
+ 'breastcancer.csv',# da error
+ # 'diabetes.csv','diabetic_retinopathy.csv', 'analcatdata_authorship.csv', 'WineQualityRed_5vs6.csv',
+ #'teaching_assistant_LM.csv', 'ionosphere.csv', 'bands.csv',
+ #'wdbc.csv',
+ #'sylvine.csv',
+ #'teaching_assistant_LH.csv',
+ #'vehicle2.csv',
+ #'pima.csv',
+# 'spambase.csv', # muy lento, PONERLO LUEGO
+ #'fri_c0_250_50.csv',
+ #'parkinsons.csv',
+ 'bodyfat.csv', # da error
+ #'banknote_authentication.csv',
+ #'chatfield_4.csv'
+]
+
+path_to_save = root_path + '/Results_Boosting_complex'
 for data_file in total_name_list:
     os.chdir(root_path + '/datasets')
     print(data_file)
     file = data_file
+    #file = 'breastcancer.csv'
     name_data = data_file[:-4]
+    #dataset = name_data
     data = pd.read_csv(file)
     # Get X (features) and y (target)
     X = data.iloc[:, :-1].to_numpy()  # all variables except y
