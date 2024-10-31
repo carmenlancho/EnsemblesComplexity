@@ -213,6 +213,7 @@ def boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights,CM_selecte
         # m = 0
 
         # Fit a classifier with the specific weights
+        random.seed(1)
         clf_m = DecisionTreeClassifier(random_state=0, max_depth=1)
         clf_m.fit(X_train, y_train, sample_weight=weights_v)
         # We append the classifier to the list
@@ -229,6 +230,7 @@ def boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights,CM_selecte
             alpha_m = 1/2 * np.log((1 - error_m) / error_m)
         else:
             alpha_m = 0 # since there is no error, there is no change in weights
+            # mejor hacer error_m = 0.00001 en pla muy bajito y dejar que tire
         alpha_list.append(alpha_m)
 
         # Evaluate on test
@@ -450,10 +452,10 @@ total_name_list = [#'teaching_assistant_MH.csv','cleveland.csv','contraceptive_N
  #'teaching_assistant_LH.csv',
  #'vehicle2.csv',
  #'pima.csv',
- 'spambase.csv', # muy lento, PONERLO LUEGO
+ #'spambase.csv',
  #'fri_c0_250_50.csv',
  #'parkinsons.csv',
-# 'bodyfat.csv',
+'bodyfat.csv',
  #'banknote_authentication.csv',
  #'chatfield_4.csv'
 ]
