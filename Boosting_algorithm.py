@@ -442,8 +442,7 @@ total_name_list = [#'teaching_assistant_MH.csv','cleveland.csv','contraceptive_N
  #'ilpd.csv','phoneme.csv','mammographic.csv','contraceptive_NS.csv','bupa.csv','Yeast_CYTvsNUC.csv','ring.csv','titanic.csv',
  #'musk1.csv','spectfheart.csv','arrhythmia_cfs.csv','vertebral_column.csv','profb.csv','sonar.csv',
  #'liver-disorders.csv','steel-plates-fault.csv','credit-g.csv','glass1.csv',
-
- 'breastcancer.csv',# da error
+ #'breastcancer.csv',
  # 'diabetes.csv','diabetic_retinopathy.csv', 'analcatdata_authorship.csv', 'WineQualityRed_5vs6.csv',
  #'teaching_assistant_LM.csv', 'ionosphere.csv', 'bands.csv',
  #'wdbc.csv',
@@ -451,10 +450,10 @@ total_name_list = [#'teaching_assistant_MH.csv','cleveland.csv','contraceptive_N
  #'teaching_assistant_LH.csv',
  #'vehicle2.csv',
  #'pima.csv',
-# 'spambase.csv', # muy lento, PONERLO LUEGO
+ 'spambase.csv', # muy lento, PONERLO LUEGO
  #'fri_c0_250_50.csv',
  #'parkinsons.csv',
- 'bodyfat.csv', # da error
+# 'bodyfat.csv',
  #'banknote_authentication.csv',
  #'chatfield_4.csv'
 ]
