@@ -458,7 +458,7 @@ total_name_list = [#'teaching_assistant_MH.csv','cleveland.csv','contraceptive_N
  #'chatfield_4.csv'
 ]
 
-path_to_save = root_path + '/Results_Boosting_complex'
+path_to_save = root_path + '/Results_Boosting'
 for data_file in total_name_list:
     os.chdir(root_path + '/datasets')
     print(data_file)
