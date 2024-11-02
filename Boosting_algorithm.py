@@ -229,7 +229,7 @@ def boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights,CM_selecte
         if (error_m != 0.0):
             alpha_m = 1/2 * np.log((1 - error_m) / error_m)
         else:
-            alpha_m = 0 # since there is no error, there is no change in weights
+            alpha_m = 0.00001 # since there is no error, there is no change in weights
             # mejor hacer error_m = 0.00001 en pla muy bajito y dejar que tire
         alpha_list.append(alpha_m)
 
@@ -444,7 +444,7 @@ total_name_list = [#'teaching_assistant_MH.csv','cleveland.csv','contraceptive_N
  #'ilpd.csv','phoneme.csv','mammographic.csv','contraceptive_NS.csv','bupa.csv','Yeast_CYTvsNUC.csv','ring.csv','titanic.csv',
  #'musk1.csv','spectfheart.csv','arrhythmia_cfs.csv','vertebral_column.csv','profb.csv','sonar.csv',
  #'liver-disorders.csv','steel-plates-fault.csv','credit-g.csv','glass1.csv',
- #'breastcancer.csv',
+ 'breastcancer.csv',
  # 'diabetes.csv','diabetic_retinopathy.csv', 'analcatdata_authorship.csv', 'WineQualityRed_5vs6.csv',
  #'teaching_assistant_LM.csv', 'ionosphere.csv', 'bands.csv',
  #'wdbc.csv',
