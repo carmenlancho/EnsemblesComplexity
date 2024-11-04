@@ -446,27 +446,27 @@ for filename in os.listdir(path_csv):
 
  #'segment.csv', # da error porque es multiclase, no lo usamos
 
- total_name_list = ['bands.csv']
-#total_name_list = [#'teaching_assistant_MH.csv','cleveland.csv','contraceptive_NL.csv','hill_valley_without_noise_traintest.csv',
- #'glass0.csv','saheart.csv','breast-w.csv','contraceptive_LS.csv','yeast1.csv',
- #'ilpd.csv','phoneme.csv','mammographic.csv','contraceptive_NS.csv','bupa.csv','Yeast_CYTvsNUC.csv','ring.csv','titanic.csv',
- #'musk1.csv','spectfheart.csv','arrhythmia_cfs.csv','vertebral_column.csv','profb.csv','sonar.csv',
- #'liver-disorders.csv','steel-plates-fault.csv','credit-g.csv','glass1.csv',
- #'breastcancer.csv',
- # 'diabetes.csv','diabetic_retinopathy.csv', 'analcatdata_authorship.csv', 'WineQualityRed_5vs6.csv',
- #'teaching_assistant_LM.csv', 'ionosphere.csv', 'bands.csv',
- #'wdbc.csv',
- #'sylvine.csv',
- #'teaching_assistant_LH.csv',
- #'vehicle2.csv',
- #'pima.csv',
- #'spambase.csv',
- #'fri_c0_250_50.csv',
- #'parkinsons.csv',
-#'bodyfat.csv',
- #'banknote_authentication.csv',
- #'chatfield_4.csv'
-#]
+ #total_name_list = ['bands.csv']
+total_name_list = ['teaching_assistant_MH.csv','contraceptive_NL.csv','hill_valley_without_noise_traintest.csv',
+ 'glass0.csv','saheart.csv','breast-w.csv','contraceptive_LS.csv','yeast1.csv',
+ 'ilpd.csv','phoneme.csv','mammographic.csv','contraceptive_NS.csv','bupa.csv','Yeast_CYTvsNUC.csv','ring.csv','titanic.csv',
+ 'musk1.csv','spectfheart.csv','arrhythmia_cfs.csv','vertebral_column.csv','profb.csv','sonar.csv',
+ 'liver-disorders.csv','steel-plates-fault.csv','credit-g.csv','glass1.csv',
+ 'breastcancer.csv',
+ 'diabetes.csv','diabetic_retinopathy.csv', 'WineQualityRed_5vs6.csv',
+ 'teaching_assistant_LM.csv', 'ionosphere.csv', 'bands.csv',
+ 'wdbc.csv',
+ 'sylvine.csv',
+ 'teaching_assistant_LH.csv',
+ 'vehicle2.csv',
+ 'pima.csv',
+ 'spambase.csv',
+ 'fri_c0_250_50.csv',
+ 'parkinsons.csv',
+'bodyfat.csv',
+ 'banknote_authentication.csv',
+ 'chatfield_4.csv'
+]
 
 path_to_save = root_path + '/Results_Boosting_x2'
 for data_file in total_name_list:
