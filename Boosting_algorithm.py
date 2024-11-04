@@ -387,7 +387,7 @@ def CV_boosting(dataset,X,y,M,method_weights,CM_selected, plot_error,n_cv_splits
 
 def boosting_all_combinations(path_to_save, dataset, X,y):
     CM_list = ['Hostility', 'kDN', 'DCP', 'TD_U', 'CLD', 'N1', 'N2', 'LSC', 'F1']
-    method_weights_list = ['classic','init_easy','init_hard','init_easy_w_complex']
+    method_weights_list = ['classic','init_easy','init_hard','init_easy_x2','init_hard_x2']
 
     # Para guardar todos los resultados
     results_total = pd.DataFrame(columns=['dataset','fold','n_ensemble','method_weights','compl_measure',
@@ -468,7 +468,7 @@ for filename in os.listdir(path_csv):
  #'chatfield_4.csv'
 #]
 
-path_to_save = root_path + '/Results_Boosting'
+path_to_save = root_path + '/Results_Boosting_x2'
 for data_file in total_name_list:
     os.chdir(root_path + '/datasets')
     print(data_file)
