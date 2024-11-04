@@ -206,6 +206,22 @@ def boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights,CM_selecte
         ranking_easy_w = ranking_easy**factor
         weights_v = ranking_easy_w / sum(ranking_easy_w)  # probability distribution
         weights_v = np.array(weights_v)
+    elif (method_weights == 'init_hard_x2'):
+        # comienzo con mayor peso a los puntos difíciles
+        # Get complexity measure on train set
+        data_train = pd.DataFrame(X_train)
+        y_cm = y_train.copy()
+        y_cm[y_cm == -1] = 0  # not sign format
+        data_train['y'] = y_cm
+        data_train.columns = data.columns
+        df_measures, _ = all_measures(data_train,False,None, None)
+        CM_values = df_measures[CM_selected]
+        ranking_hard = CM_values.rank(method='average', ascending=True)  # more weight to difficult
+        # Even more weight to difficult
+        factor = 1.5
+        ranking_hard_w = ranking_hard ** factor
+        weights_v = ranking_hard_w / sum(ranking_hard_w)  # probability distribution
+        weights_v = np.array(weights_v)
 
     for m in range(M):
         # print(m)
