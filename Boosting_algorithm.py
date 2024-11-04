@@ -190,23 +190,22 @@ def boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights,CM_selecte
         ranking_hard = CM_values.rank(method='average', ascending=True)  # more weight to difficult
         weights_v = ranking_hard / sum(ranking_hard)  # probability distribution
         weights_v = np.array(weights_v)
-    elif (method_weights == 'init_easy_w_complex'):
+    elif (method_weights == 'init_easy_x2'):
+        # comienzo con mayor peso a los puntos fáciles
         # Get complexity measure on train set
         data_train = pd.DataFrame(X_train)
         y_cm = y_train.copy()
         y_cm[y_cm == -1] = 0  # not sign format
         data_train['y'] = y_cm
         data_train.columns = data.columns
-        df_measures, _ = all_measures(data_train,False,None, None)
+        df_measures, _ = all_measures(data_train, False, None, None)
         CM_values = df_measures[CM_selected]
-        # Para el inicio
         ranking_easy = CM_values.rank(method='average', ascending=False)  # more weight to easy
-        weights_v = ranking_easy / sum(ranking_easy)  # probability distribution
+        # Even more weight to easy
+        factor = 1.5
+        ranking_easy_w = ranking_easy**factor
+        weights_v = ranking_easy_w / sum(ranking_easy_w)  # probability distribution
         weights_v = np.array(weights_v)
-        # Para el update de los pesos
-        ranking_hard = CM_values.rank(method='average', ascending=True)  # more weight to difficult
-        weights_hard = ranking_hard / sum(ranking_hard)  # probability distribution
-        weights_hard_v = np.array(weights_hard)
 
     for m in range(M):
         # print(m)
@@ -238,16 +237,7 @@ def boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights,CM_selecte
         preds_test.append(y_pred_test)
 
         # Update the observations weights
-        if (method_weights=='classic') | (method_weights=='init_easy') | (method_weights=='init_hard'):
-            # weights_v[disagree] = weights_v[disagree] * np.exp(alpha_m) # Está mal porque se actualizan todos los pesos
-            weights_v = weights_v * np.exp(-alpha_m * y_train * y_pred)
-        else: # actualizamos tb en función de la complejidad
-            # update_boosting = weights_v[disagree] * np.exp(alpha_m) # Está mal porque se actualizan todos los pesos
-            update_boosting = weights_v * np.exp(-alpha_m * y_train * y_pred)
-            update_complexity = weights_hard_v#[disagree]
-            total_update_weights = update_boosting + update_complexity
-            #total_update_weights = total_update_weights/ sum(total_update_weights)
-            weights_v = total_update_weights
+        weights_v = weights_v * np.exp(-alpha_m * y_train * y_pred)
 
         # Weight normalization
         weights_v = weights_v / np.sum(weights_v)
@@ -320,6 +310,8 @@ def aggregation_results_boosting(results):
 ### Cross-Validation Boosting
 # dataset='aa'
 # M = 20
+# CM_selected = 'Hostility'
+# n_cv_splits = 10
 def CV_boosting(dataset,X,y,M,method_weights,CM_selected, plot_error,n_cv_splits):
 
     if any(y==0):
@@ -369,7 +361,7 @@ def CV_boosting(dataset,X,y,M,method_weights,CM_selected, plot_error,n_cv_splits
 # plot_error = True
 # method_weights = 'init_easy'
 # # method_weights = 'classic'
-# # method_weights = 'init_easy_w_complex'
+# # method_weights = 'init_easy_x2'
 # CM_selected = 'kDN'
 # M=200
 # results, res_agg = CV_boosting(dataset,X,y,M,method_weights,CM_selected, plot_error,n_cv_splits)
@@ -438,13 +430,13 @@ for filename in os.listdir(path_csv):
 
  #'segment.csv', # da error porque es multiclase, no lo usamos
 
-# total_name_list = ['bands.csv']
-total_name_list = [#'teaching_assistant_MH.csv','cleveland.csv','contraceptive_NL.csv','hill_valley_without_noise_traintest.csv',
+ total_name_list = ['bands.csv']
+#total_name_list = [#'teaching_assistant_MH.csv','cleveland.csv','contraceptive_NL.csv','hill_valley_without_noise_traintest.csv',
  #'glass0.csv','saheart.csv','breast-w.csv','contraceptive_LS.csv','yeast1.csv',
  #'ilpd.csv','phoneme.csv','mammographic.csv','contraceptive_NS.csv','bupa.csv','Yeast_CYTvsNUC.csv','ring.csv','titanic.csv',
  #'musk1.csv','spectfheart.csv','arrhythmia_cfs.csv','vertebral_column.csv','profb.csv','sonar.csv',
  #'liver-disorders.csv','steel-plates-fault.csv','credit-g.csv','glass1.csv',
- 'breastcancer.csv',
+ #'breastcancer.csv',
  # 'diabetes.csv','diabetic_retinopathy.csv', 'analcatdata_authorship.csv', 'WineQualityRed_5vs6.csv',
  #'teaching_assistant_LM.csv', 'ionosphere.csv', 'bands.csv',
  #'wdbc.csv',
@@ -455,10 +447,10 @@ total_name_list = [#'teaching_assistant_MH.csv','cleveland.csv','contraceptive_N
  #'spambase.csv',
  #'fri_c0_250_50.csv',
  #'parkinsons.csv',
-'bodyfat.csv',
+#'bodyfat.csv',
  #'banknote_authentication.csv',
  #'chatfield_4.csv'
-]
+#]
 
 path_to_save = root_path + '/Results_Boosting'
 for data_file in total_name_list:
