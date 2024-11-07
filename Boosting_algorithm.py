@@ -6,7 +6,7 @@ from sklearn.model_selection import StratifiedKFold
 from All_measures import all_measures
 import random # for sampling with weights
 from sklearn import preprocessing
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.tree import DecisionTreeClassifier, DecisionTreeRegressor
 from sklearn.metrics import confusion_matrix, accuracy_score
 from aux_functions import aggregation_results_final_algorithm_cycle
 import math
@@ -446,7 +446,7 @@ for filename in os.listdir(path_csv):
 
  #'segment.csv', # da error porque es multiclase, no lo usamos
 
- #total_name_list = ['bands.csv']
+#total_name_list = ['bands.csv']
 total_name_list = [#'teaching_assistant_MH.csv','contraceptive_NL.csv','hill_valley_without_noise_traintest.csv',
 # 'glass0.csv','saheart.csv','breast-w.csv','contraceptive_LS.csv', 'yeast1.csv','ilpd.csv',
   #  'phoneme.csv','mammographic.csv','contraceptive_NS.csv','bupa.csv','Yeast_CYTvsNUC.csv','ring.csv','titanic.csv',
@@ -468,7 +468,7 @@ total_name_list = [#'teaching_assistant_MH.csv','contraceptive_NL.csv','hill_val
  'chatfield_4.csv'
 ]
 
-path_to_save = root_path + '/Results_Boosting_x2'
+path_to_save = root_path + '/Results_Boosting_weights'
 for data_file in total_name_list:
     os.chdir(root_path + '/datasets')
     print(data_file)
@@ -487,7 +487,91 @@ for data_file in total_name_list:
 
 
 
-
+# n_cv_splits = 5
+# skf = StratifiedKFold(n_splits=n_cv_splits, random_state=1, shuffle=True)
+# fold = 0
+# for train_index, test_index in skf.split(X, y):
+#     fold = fold + 1
+#     # print(fold)
+#     X_train, X_test = X[train_index], X[test_index]
+#     y_train, y_test = y[train_index], y[test_index]
+#
+# M=20
+# plot_error = True
+# def logitboost_algorithm(X_train, y_train, X_test, y_test, M, method_weights, CM_selected, plot_error):
+#     # Asegurarse de que y_train e y_test tengan valores en {-1, 1}
+#     if any(y_train == 0):
+#         y_train[y_train == 0] = -1
+#     if any(y_test == 0):
+#         y_test[y_test == 0] = -1
+#
+#     n_train = len(y_train)
+#     n_test = len(y_test)
+#
+#     # Listas para almacenar los modelos y alphas
+#     clf_list = []
+#
+#     # Variables para guardar las predicciones
+#     preds_train = np.zeros(n_train)
+#     preds_test = np.zeros(n_test)
+#
+#     # Almacenar las pérdidas y las tasas de error
+#     log_loss_avg = []
+#     misc_rate = []
+#     misc_rate_test = []
+#     conf_matrix = []
+#
+#     # Inicialización de pesos
+#     weights_v = np.ones(n_train) / n_train
+#
+#     for m in range(M):
+#         print(m)
+#         # Calcular las probabilidades actuales
+#         p_train = 1 / (1 + np.exp(-preds_train))
+#
+#         # Calcular las pseudorespuestas y los pesos
+#         z_i = (y_train - p_train) / (p_train * (1 - p_train))
+#         w_i = p_train * (1 - p_train)
+#
+#         # Ajustar el modelo débil en las pseudorespuestas con pesos
+#         clf_m = DecisionTreeRegressor(max_depth=1, random_state=0)
+#         clf_m.fit(X_train, z_i, sample_weight=w_i)
+#         clf_list.append(clf_m)
+#
+#         # Predicciones del modelo débil y actualización
+#         y_pred_m = clf_m.predict(X_train)
+#         preds_train += 0.5 * y_pred_m
+#         preds_test += 0.5 * clf_m.predict(X_test)
+#
+#         # Calcular la pérdida logarítmica promedio en el conjunto de entrenamiento
+#         log_loss_m = -np.mean(y_train * preds_train - np.log(1 + np.exp(preds_train)))
+#         log_loss_avg.append(log_loss_m)
+#
+#         # Calcular la tasa de error en entrenamiento y prueba
+#         misc_rate_m = np.mean(np.sign(preds_train) != y_train)
+#         misc_rate.append(misc_rate_m)
+#
+#         misc_rate_test_m = np.mean(np.sign(preds_test) != y_test)
+#         misc_rate_test.append(misc_rate_test_m)
+#
+#         # Matriz de confusión
+#         conf_matrix.append(confusion_matrix(y_test, np.sign(preds_test)).tolist())
+#
+#     # Predicciones finales en entrenamiento y prueba
+#     final_pred_train = np.sign(preds_train)
+#     final_pred_test = np.sign(preds_test)
+#
+#     # Plot de la pérdida logarítmica y tasa de error si es necesario
+#     if plot_error:
+#         iterations = np.arange(1, M + 1)
+#         plt.plot(iterations, log_loss_avg, label="Average log-loss", color='#1AB7D3')
+#         plt.plot(iterations, misc_rate, label="Misclassification rate", color='crimson')
+#         plt.xlabel('Number of boosting iterations')
+#         plt.legend()
+#         plt.show()
+#
+#     return final_pred_train, final_pred_test, log_loss_avg, misc_rate, misc_rate_test, conf_matrix
+#
 
 
 
