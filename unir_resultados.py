@@ -6,19 +6,12 @@ import re
 import os
 
 root_path = os.getcwd()
-# Ruta donde se encuentran los CSVs
+
+###################################################################################################################
+####--------------                             RESULTADOS PARA FACTOR                            --------------####
+###################################################################################################################
+
 ruta_csvs = root_path + '/Results_Boostin_weights/*.csv'
-
-total_name_list = ['teaching_assistant_MH.csv','contraceptive_NL.csv','hill_valley_without_noise_traintest.csv',
- 'glass0.csv','saheart.csv','breast-w.csv','contraceptive_LS.csv', 'yeast1.csv','ilpd.csv',
-    'phoneme.csv','mammographic.csv','contraceptive_NS.csv','bupa.csv','Yeast_CYTvsNUC.csv','ring.csv','titanic.csv',
- 'musk1.csv','spectfheart.csv','arrhythmia_cfs.csv','vertebral_column.csv','profb.csv','sonar.csv',
- 'liver-disorders.csv','steel-plates-fault.csv','credit-g.csv','glass1.csv','breastcancer.csv',
-'diabetes.csv', 'diabetic_retinopathy.csv', 'WineQualityRed_5vs6.csv','teaching_assistant_LM.csv',
-'ionosphere.csv', 'bands.csv','wdbc.csv','sylvine.csv', 'teaching_assistant_LH.csv',
-'vehicle2.csv', 'pima.csv','spambase.csv','fri_c0_250_50.csv','parkinsons.csv','bodyfat.csv',
- 'banknote_authentication.csv','chatfield_4.csv']
-
 
 datasets_total = {}
 datasets_aggregated = {}
@@ -62,3 +55,87 @@ for name_dataset, df_combined in datasets_total.items():
 for name_dataset, df_combined in datasets_aggregated.items():
     file_out = f"AggregatedResults_Boosting_{name_dataset}_weights_factor.csv"
     df_combined.to_csv(file_out, index=False)
+
+
+
+###################################################################################################################
+####--------------                   RESULTADOS UNIENDO TODAS LAS TIPOLOGÍAS                     --------------####
+###################################################################################################################
+# unimos classic, init_easy, init_hard, init_easy_x2, init_hard_x2, error_w_easy, error_w_hard
+
+
+# Rutas de las dos carpetas
+ruta_csvs_carpeta1 =  root_path + '/Results_Boostin_weights/*.csv'
+ruta_csvs_carpeta2 =  root_path + '/Results_Boostin_x2/*.csv'
+
+# Diccionarios para almacenar los datos combinados por dataset y tipo (totales o agregados)
+datasets_total = {}
+datasets_aggregated = {}
+
+
+
+# Procesar los archivos de la primera carpeta
+for file in glob.glob(ruta_csvs_carpeta1):
+    # Extraer el nombre del dataset del archivo
+    name_dataset = re.search('Boosting_(.*).csv', file).group(1)
+    print(name_dataset)
+
+    # Leer el CSV
+    df = pd.read_csv(file)
+
+    # Agregar la columna 'factor' si es necesario
+    if 'Factor' not in df.columns:
+        df['Factor'] = None
+    #df = agregar_factor(df)
+
+    # Verificar si es un archivo "total" o "agregado"
+    if "Aggregated" in file:
+        if name_dataset in datasets_aggregated:
+            df = df[df['method_weights'] != 'classic']  # Filtrar para evitar duplicados de "classic"
+            datasets_aggregated[name_dataset] = pd.concat([datasets_aggregated[name_dataset], df])
+        else:
+            datasets_aggregated[name_dataset] = df
+    else:
+        if name_dataset in datasets_total:
+            df = df[df['method_weights'] != 'classic']  # Filtrar para evitar duplicados de "classic"
+            datasets_total[name_dataset] = pd.concat([datasets_total[name_dataset], df])
+        else:
+            datasets_total[name_dataset] = df
+
+# Procesar los archivos de la segunda carpeta
+for file in glob.glob(ruta_csvs_carpeta2):
+    # Extraer el nombre del dataset del archivo
+    name_dataset = re.search('Boosting_(.*).csv', file).group(1)
+
+    # Leer el CSV
+    df = pd.read_csv(file)
+
+    # Agregar la columna 'factor' si es necesario
+    if 'Factor' not in df.columns:
+        df['Factor'] = None
+    #df = agregar_factor(df)
+
+    # Verificar si es un archivo "total" o "agregado"
+    if "Aggregated" in file:
+        if name_dataset in datasets_aggregated:
+            df = df[df['method_weights'] != 'classic']  # Filtrar para evitar duplicados de "classic"
+            datasets_aggregated[name_dataset] = pd.concat([datasets_aggregated[name_dataset], df])
+        else:
+            datasets_aggregated[name_dataset] = df
+    else:
+        if name_dataset in datasets_total:
+            df = df[df['method_weights'] != 'classic']  # Filtrar para evitar duplicados de "classic"
+            datasets_total[name_dataset] = pd.concat([datasets_total[name_dataset], df])
+        else:
+            datasets_total[name_dataset] = df
+
+
+# Guardar cada dataset combinado en un archivo CSV
+for name_dataset, df_combined in datasets_total.items():
+    file_out = f"Results_Boosting_{name_dataset}.csv"
+    df_combined.to_csv(file_out, index=False)
+
+for name_dataset, df_combined in datasets_aggregated.items():
+    file_out = f"AggregatedResults_Boosting_{name_dataset}_agregados.csv"
+    df_combined.to_csv(file_out, index=False)
+
