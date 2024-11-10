@@ -130,7 +130,7 @@ root_path = os.getcwd()
 
 
 ## Función general
-# method_weights = 'classic'
+# method_weights = 'error_w' #'classic' #'error_w'
 # plot_error = False
 # M = 20  # number of models, ensemble size
 # CM_selected = 'Hostility'
@@ -222,6 +222,28 @@ def boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights,CM_selecte
         ranking_hard_w = ranking_hard ** factor
         weights_v = ranking_hard_w / sum(ranking_hard_w)  # probability distribution
         weights_v = np.array(weights_v)
+    elif (method_weights == 'error_w_hard'):
+        weights_v = np.ones(n_train) / n_train # por ahora empezamos con los pesos iniciales normales
+        # Get complexity measure on train set
+        data_train = pd.DataFrame(X_train)
+        y_cm = y_train.copy()
+        y_cm[y_cm == -1] = 0  # not sign format
+        data_train['y'] = y_cm
+        data_train.columns = data.columns
+        df_measures, _ = all_measures(data_train, False, None, None)
+        CM_values = df_measures[CM_selected] # more weight to difficult
+        factor_lambda = 0.025
+    elif (method_weights == 'error_w_easy'):
+        weights_v = np.ones(n_train) / n_train # por ahora empezamos con los pesos iniciales normales
+        # Get complexity measure on train set
+        data_train = pd.DataFrame(X_train)
+        y_cm = y_train.copy()
+        y_cm[y_cm == -1] = 0  # not sign format
+        data_train['y'] = y_cm
+        data_train.columns = data.columns
+        df_measures, _ = all_measures(data_train, False, None, None)
+        CM_values = 1 - df_measures[CM_selected] # more weight to easy
+        factor_lambda = 0.05
 
     for m in range(M):
         # print(m)
@@ -238,7 +260,11 @@ def boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights,CM_selecte
         y_pred = clf_m.predict(X_train)
         preds_train.append(y_pred)
         disagree = np.not_equal(y_train, y_pred)
-        error_m = (sum(weights_v * disagree)) / sum(weights_v)
+        if (method_weights == 'error_w_easy') | (method_weights == 'error_w_hard'):
+            error_m = (sum(weights_v * (1 + factor_lambda*CM_values) * disagree)) / sum(weights_v * (1 + factor_lambda*CM_values))
+        else:
+            error_m = (sum(weights_v * disagree)) / sum(weights_v)
+
 
         # Compute alpha_m
         if (error_m != 0.0):
@@ -293,7 +319,7 @@ def boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights,CM_selecte
 
 # method_weights = 'classic'
 # plot_error = False
-# M = 20  # number of models, ensemble size
+# M = 200  # number of models, ensemble size
 # final_pred_train, final_pred_test, exp_loss_avg, misc_rate, misc_rate_test, conf_matrix =  boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights, plot_error)
 
 
@@ -387,7 +413,9 @@ def CV_boosting(dataset,X,y,M,method_weights,CM_selected, plot_error,n_cv_splits
 
 def boosting_all_combinations(path_to_save, dataset, X,y):
     CM_list = ['Hostility', 'kDN', 'DCP', 'TD_U', 'CLD', 'N1', 'N2', 'LSC', 'F1']
-    method_weights_list = ['classic','init_easy','init_hard','init_easy_x2','init_hard_x2']
+    # method_weights_list = ['classic','init_easy','init_hard','init_easy_x2','init_hard_x2',
+    #                        'error_w_easy','error_w_hard']
+    method_weights_list = ['classic','error_w_easy','error_w_hard']
 
     # Para guardar todos los resultados
     results_total = pd.DataFrame(columns=['dataset','fold','n_ensemble','method_weights','compl_measure',
@@ -426,8 +454,8 @@ def boosting_all_combinations(path_to_save, dataset, X,y):
 
     # To save the results
     os.chdir(path_to_save)
-    nombre_csv = 'Results_Boosting_' + dataset + '.csv'
-    nombre_csv_aggr = 'AggregatedResults_Boosting_' + dataset + '.csv'
+    nombre_csv = 'Results_Boosting_' + dataset + '_factor005.csv'
+    nombre_csv_aggr = 'AggregatedResults_Boosting_' + dataset + '_factor005.csv'
     results_total.to_csv(nombre_csv, encoding='utf_8_sig',index=False)
     res_agg_total.to_csv(nombre_csv_aggr, encoding='utf_8_sig', index=False)
 
@@ -447,15 +475,15 @@ for filename in os.listdir(path_csv):
  #'segment.csv', # da error porque es multiclase, no lo usamos
 
 #total_name_list = ['bands.csv']
-total_name_list = [#'teaching_assistant_MH.csv','contraceptive_NL.csv','hill_valley_without_noise_traintest.csv',
-# 'glass0.csv','saheart.csv','breast-w.csv','contraceptive_LS.csv', 'yeast1.csv','ilpd.csv',
-  #  'phoneme.csv','mammographic.csv','contraceptive_NS.csv','bupa.csv','Yeast_CYTvsNUC.csv','ring.csv','titanic.csv',
-# 'musk1.csv','spectfheart.csv','arrhythmia_cfs.csv','vertebral_column.csv','profb.csv','sonar.csv',
- #'liver-disorders.csv','steel-plates-fault.csv','credit-g.csv','glass1.csv',
- #'breastcancer.csv', 'diabetes.csv',
-  #  'diabetic_retinopathy.csv', 'WineQualityRed_5vs6.csv',
-# 'teaching_assistant_LM.csv', 'ionosphere.csv', 'bands.csv',
- #'wdbc.csv',
+total_name_list = ['teaching_assistant_MH.csv','contraceptive_NL.csv','hill_valley_without_noise_traintest.csv',
+ 'glass0.csv','saheart.csv','breast-w.csv','contraceptive_LS.csv', 'yeast1.csv','ilpd.csv',
+    'phoneme.csv','mammographic.csv','contraceptive_NS.csv','bupa.csv','Yeast_CYTvsNUC.csv','ring.csv','titanic.csv',
+ 'musk1.csv','spectfheart.csv','arrhythmia_cfs.csv','vertebral_column.csv','profb.csv','sonar.csv',
+ 'liver-disorders.csv','steel-plates-fault.csv','credit-g.csv','glass1.csv',
+ 'breastcancer.csv', 'diabetes.csv',
+    'diabetic_retinopathy.csv', 'WineQualityRed_5vs6.csv',
+ 'teaching_assistant_LM.csv', 'ionosphere.csv', 'bands.csv',
+ 'wdbc.csv',
  'sylvine.csv',
  'teaching_assistant_LH.csv',
  'vehicle2.csv',
