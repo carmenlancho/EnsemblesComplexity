@@ -109,13 +109,13 @@ For the **mean of the accuracy**, there are no significant differences among:
 
 -   4 with 6, 6 with 8 and 12
 
--   8 with 12,14,16
+-   8 with 10,12,14, 22
 
--   10 with 12, 14, 18, 22
+-   10 with 12, 14,16, 18, 22
 
--   12 with 14, 16, 18, 20, 22
+-   12 with 14, 18, 22
 
--   14 with 16, 18, 20, 22, 26
+-   14 with 16, 18, 20, 22
 
 -   From 16 to 30, almost all comparisons are not significantly different --\> maximum value of split should be 16
 
@@ -123,7 +123,7 @@ For the **median of the accuracy**, there are no significant differences among:
 
 -   4 with 6 and 10
 
--   6 with 8, 10, 12
+-   6 with 8, 10, 12, 14
 
 -   8 with 10, 12, 14, 16, 18, 20, 22
 
@@ -198,13 +198,17 @@ For the **mean of the accuracy**, there are ONLY significant differences among:
 
 -   2 with 10
 
+-   6 with 16
+
+-   8 with 16
+
 -   10 with 12, 14, 16, 18, 20
 
 For the **median of the accuracy**, there are ONLY significant differences among:
 
--   2 with 4, 6, 8, 10, 14
+-   2 with 6, 8, 10
 
--   10 with 12, 16, 20
+-   10 with 16, 20
 
 For the **std of the accuracy**, there are NO significant differences among:
 
@@ -437,13 +441,13 @@ dif_no_sig$niveles = rep(NA,n_combo)
 #   print(i)
 #   datos_i = datos[datos$combo_alpha_split==i,]
 #   datos_i$n_cycle <- factor(datos_i$n_cycle) # los niveles del factor cambian en cada subset
-#   pwc2 <- datos_i %>% 
+#   pwc2 <- datos_i %>%
 #     wilcox_test(accuracy_mean_mean ~ n_cycle, paired = TRUE, p.adjust.method = "bonferroni")
 #   # Filtrar comparaciones con diferencias no significativas (suponiendo un umbral de p > 0.05)
 #   no_significativas <- pwc2[pwc2$p.adj>0.1,]
 # 
-#   
-#   # si no todas las comparaciones con ese nivel son no significativas, lo quitamos 
+# 
+#   # si no todas las comparaciones con ese nivel son no significativas, lo quitamos
 #   # es decir, no nos vale que solo no haya diferencia entre 3 y 5 y con el resto (3-6,3-7,etc) sí
 #   max_cycles = max(as.numeric(pwc2$group2))
 #   valores_check <- unique(as.numeric(no_significativas$group1))
@@ -452,14 +456,13 @@ dif_no_sig$niveles = rep(NA,n_combo)
 #       no_significativas = no_significativas[no_significativas$group1!=v,]
 #     }
 #   }
-#   
+# 
 #   # Extraer los niveles de los pares con diferencias no significativas
 #   niveles_no_significativos <- unique(c(no_significativas$group1, no_significativas$group2))
-# 
 #   dif_no_sig[dif_no_sig$valores_combo==i,2] = paste(niveles_no_significativos, collapse = ", ")
 # }
-
-#write.csv(dif_no_sig, "CDB_cycles_ParametersComboAlphaSplit_dif_no_signif_cycles_mean.csv")
+# 
+# write.csv(dif_no_sig, "CDB_cycles_ParametersComboAlphaSplit_dif_no_signif_cycles_mean.csv")
 ```
 
 In this dataframe we have, for every combination of alpha and split, the number of cycles with no significant difference between all of them.
@@ -522,7 +525,6 @@ For the **median**:
 #   no_significativas <- pwc2[pwc2$p.adj>0.1,]
 # 
 # 
-#   # si no todas las comparaciones con ese nivel son no significativas, lo quitamos
 #   # es decir, no nos vale que solo no haya diferencia entre 3 y 5 y con el resto (3-6,3-7,etc) sí
 #   max_cycles = max(as.numeric(pwc2$group2))
 #   valores_check <- unique(as.numeric(no_significativas$group1))
@@ -535,10 +537,10 @@ For the **median**:
 #   # Extraer los niveles de los pares con diferencias no significativas
 #   niveles_no_significativos <- unique(c(no_significativas$group1, no_significativas$group2))
 # 
-#   dif_no_sig_mean[dif_no_sig_mean$valores_combo==i,'niveles_mediana'] = paste(niveles_no_significativos, collapse = ", ")
+#  dif_no_sig_mean[dif_no_sig_mean$valores_combo==i,'niveles_mediana'] = paste(niveles_no_significativos, collapse = ", ")
 # }
-
-#write.csv(dif_no_sig_mean, "CDB_cycles_ParametersComboAlphaSplit_dif_no_signif_cycles_mean_median.csv")
+# 
+# write.csv(dif_no_sig_mean, "CDB_cycles_ParametersComboAlphaSplit_dif_no_signif_cycles_mean_median.csv")
 ```
 
 For the **standard deviation**:
@@ -570,11 +572,11 @@ For the **standard deviation**:
 # 
 #   # Extraer los niveles de los pares con diferencias no significativas
 #   niveles_no_significativos <- unique(c(no_significativas$group1, no_significativas$group2))
-# 
+#  
 #   dif_no_sig_mean[dif_no_sig_mean$valores_combo==i,'niveles_std'] = paste(niveles_no_significativos, collapse = ", ")
 # }
-
-#write.csv(dif_no_sig_mean, "CDB_cycles_ParametersComboAlphaSplit_dif_no_signif_cycles_mean_median_std.csv")
+# 
+# write.csv(dif_no_sig_mean, "CDB_cycles_ParametersComboAlphaSplit_dif_no_signif_cycles_mean_median_std.csv")
 ```
 
 Now we relate the number of cycles with the number of ensembles for all statistical measures (mean, median, std):
@@ -647,7 +649,7 @@ dif_no_sig_all$max_num_models <- apply(X=dif_no_sig_all[,c('num_models','num_mod
 #write.csv(dif_no_sig_all, "CDB_cycles_ParametersComboAlphaSplit_dif_no_signif_cycles_mean_median_std_num_models.csv")
 ```
 
-If we analyze the number of models above which there are no significant different, we can see that the maximum value is 294 and quartile 75% is 175, implying that our maximum tested number of models (300) is ok and that lower number of models in an ensemble can obtain competitive accuracy results.
+If we analyze the number of models above which there are no significant different, we can see that the maximum value is 294 and quartile 75% is 180, implying that our maximum tested number of models (300) is ok and that lower number of models in an ensemble can obtain competitive accuracy results.
 
 ```{r warning=FALSE}
 p<-ggplot(dif_no_sig_all, aes(x=max_num_models)) + 
