@@ -136,6 +136,37 @@ for name_dataset, df_combined in datasets_total.items():
     df_combined.to_csv(file_out, index=False)
 
 for name_dataset, df_combined in datasets_aggregated.items():
-    file_out = f"AggregatedResults_Boosting_{name_dataset}_agregados.csv"
+    file_out = f"AggregatedResults_Boosting_{name_dataset}.csv"
     df_combined.to_csv(file_out, index=False)
+
+
+###################################################################################################################
+####--------------                   ELIMINAMOS VARIABLE FACTOR                     --------------####
+###################################################################################################################
+
+path_in = root_path + '/Results_Boosting_allmethods/*.csv'
+path_out = root_path + '/Results_Boosting_allmethods_modificados'
+
+# Asegurarse de que la carpeta de salida existe
+os.makedirs(path_out, exist_ok=True)
+
+for archivo in glob.glob(path_in):
+    df = pd.read_csv(archivo)
+
+    # Cambiamos la columna 'method_weights' para incluir la información de 'factor'
+    df['method_weights'] = df.apply(
+        lambda row: f"{row['method_weights']}_{row['Factor']}" if row['method_weights'] in ['error_w_easy',
+                                                                                            'error_w_hard'] else row[
+            'method_weights'],
+        axis=1
+    )
+
+    # Eliminar la columna 'factor'
+    df = df.drop(columns=['Factor'])
+
+    nombre_archivo = os.path.basename(archivo)
+    df.to_csv(os.path.join(path_out, nombre_archivo), index=False)
+
+
+
 
