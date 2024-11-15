@@ -23,14 +23,14 @@ root_path = os.getcwd()
 # Como ahora tb queremos estudiar el número de ciclos, no podemos empezar agregando
 # Así, comenzamos poniendo todos los resultados en el mismo dataset y luego ya vamos agregando
 
-path_csv = os.chdir(root_path+'/Results_general_algorithm_cycles')
+path_csv = os.chdir(root_path+'/Results_general_algorithm_cycles/AggregatedResults_CDB_cycles_binary')
 # Extraemos los nombres de todos los ficheros
 total_name_list = []
 for filename in os.listdir(path_csv):
     if filename.endswith('.csv') and filename.startswith('Aggregated'):
         total_name_list.append(filename)
 
-# len(total_name_list) # 7520
+# len(total_name_list) # 7040
 
 # General df to save all the results
 cols = ['weights','n_cycle','n_ensemble', 'accuracy_mean', 'accuracy_std','Dataset','alpha','split']
@@ -53,7 +53,7 @@ for data_file in total_name_list:
 
     df_total = pd.concat([df_total,df_select])
 
-# df_total.shape # 1404360
+# df_total.shape # 1314720
 
 # Reorder columns
 df_total = df_total.reindex(columns=['Dataset','weights', 'alpha', 'split','n_cycle','n_ensemble', 'accuracy_mean', 'accuracy_std'])
@@ -78,20 +78,24 @@ df_total = pd.read_csv('TotalAggregatedResults_ParameterConfiguration_CDB.csv')
 # Para cada medida de complejidad y dataset
 df_summary_CM = df_total.groupby(by=['weights','n_cycle','n_ensemble','alpha','split'], as_index=False).agg({'accuracy_mean': [np.mean, np.median, np.std]})
 df_summary_CM.columns = ['weights','n_cycle','n_ensemble','alpha','split','accuracy_mean_mean','accuracy_mean_median',  'accuracy_mean_std']
+# df_summary_CM.to_csv('df_summary_CM.csv', encoding='utf_8_sig', index=False)
 # Agregamos medidas de complejidad y no datasets
 df_summary_data = df_total.groupby(by=['Dataset','n_cycle','n_ensemble','alpha','split'], as_index=False).agg({'accuracy_mean': [np.mean, np.median, np.std]})
 df_summary_data.columns = ['Dataset','n_cycle','n_ensemble','alpha','split','accuracy_mean_mean','accuracy_mean_median',  'accuracy_mean_std']
 # Comienzo juntando alpha-split
 df_summary_data["combo_alpha_split"] = 'alpha'+df_summary_data["alpha"].astype(str) + '-split' + df_summary_data["split"].astype(str)
+# df_summary_data.to_csv('df_summary_data.csv', encoding='utf_8_sig', index=False)
 
 # Juntando todas las medidas de complejidad
 df_summary = df_total.groupby(by=['n_cycle','n_ensemble','alpha','split'], as_index=False).agg({'accuracy_mean': [np.mean, np.median, np.std]})
 df_summary.columns = ['n_cycle','n_ensemble','alpha','split','accuracy_mean_mean','accuracy_mean_median',  'accuracy_mean_std']
+# df_summary.to_csv('df_summary.csv', encoding='utf_8_sig', index=False)
+
 # Máximo accuracy para cada combo split-alpha (para saber en qué ciclo se consigue)
 # Aquí vemos que en general sale el máximo por 300, es decir, el máximo número de modelos probados
 df_max_acc = df_summary.loc[df_summary.reset_index().groupby(['alpha','split'])['accuracy_mean_mean'].idxmax()]
 # Así, para cada como split-alpha vamos a buscar cuándo el accuracy deja de ser significativamente mayor
-
+# df_max_acc.to_csv('df_max_acc.csv', encoding='utf_8_sig', index=False)
 
 # Comienzo juntando alpha-split
 df_summary["combo_alpha_split"] = 'alpha'+df_summary["alpha"].astype(str) + '-split' + df_summary["split"].astype(str)
