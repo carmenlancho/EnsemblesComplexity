@@ -300,6 +300,30 @@ mean_cols = ['Standard_Bag_mean',
        'CDB_Host_mean',  'CDB_kDN_mean', 'CDB_CLD_mean',
              'CDB_LSC_mean', 'CDB_N1_mean',
        'CDB_N2_mean',  'CDB_DCP_mean','CDB_TD_U_mean',
-             'CDB_F1_mean', 'CDB_F1_std']
+             'CDB_F1_mean']
 mean_data = table_comparison[mean_cols]
+
+
+# Reestructurar los datos para cada métrica
+mean_data = table_comparison[[col for col in table_comparison.columns if '_mean' in col]].melt(var_name='Method', value_name='Mean')
+std_data = table_comparison[[col for col in table_comparison.columns if '_std' in col]].melt(var_name='Method', value_name='STD')
+ensemble_data = table_comparison[[col for col in table_comparison.columns if '_n_ensemble' in col]].melt(var_name='Method', value_name='Num ensemble')
+
+
+sns.boxplot(x='Method', y='Mean', data=mean_data,color='#D4D7FC')
+plt.xticks(rotation=45, ha='right')
+plt.tight_layout()
+plt.show()
+
+
+sns.boxplot(x='Method', y='STD', data=std_data,color='#D4D7FC')
+plt.xticks(rotation=45, ha='right')
+plt.tight_layout()
+plt.show()
+
+sns.boxplot(x='Method', y='Num ensemble', data=ensemble_data,color='#D4D7FC')
+plt.xticks(rotation=45, ha='right')
+plt.tight_layout()
+plt.show()
+
 
