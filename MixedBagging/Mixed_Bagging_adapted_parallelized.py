@@ -628,7 +628,7 @@ def AdaptedMixedBagging(dataset_name):
     # defnumbags_v = [2,10,20,30,40,50,60,70,80,90,
     #                  100,110,120,130,140,150,160,170,180,190,200]
     #defnumbags_v = list(np.arange(2,301,1)) # los sacamos todos porque no son muchísimas filas # es demasiado lento
-    defnumbags_v = list(np.arange(145,301,5))#list(np.arange(5,301,5)) # los sacamos todos porque no son muchísimas filas
+    defnumbags_v = list(np.arange(160,301,5))#list(np.arange(5,301,5)) # los sacamos todos porque no son muchísimas filas
 
 
     np.set_printoptions(threshold=np.inf)  # To print the whole array instead of "..." in the middle parts
@@ -1259,7 +1259,7 @@ total_name_list = [ 'ring.csv']
 
 N= mp.cpu_count()
 
-with mp.Pool(processes = N-10) as p:
+with mp.Pool(processes = N-5) as p:
         p.map(AdaptedMixedBagging, [dataset_name for dataset_name in total_name_list])
         # p.close()
 
