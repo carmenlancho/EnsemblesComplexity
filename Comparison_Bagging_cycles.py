@@ -260,6 +260,7 @@ wtl_df, _ = rank_df(table_comparison_mean, method_i, methods=methods)
 wtl_df_str = pd.DataFrame()
 wtl_df_str['wtl'] = "(" + wtl_df.apply(lambda row: ','.join(row.values.astype(str)), axis=1) + ")"
 
+# Estudio WTL comparando medias de accuracy
 wtl_df_str = pd.DataFrame()
 for method_i in methods[3:]:
     CM = method_i[len('CDB_'):-len('_mean')]
@@ -325,5 +326,197 @@ sns.boxplot(x='Method', y='Num ensemble', data=ensemble_data,color='#D4D7FC')
 plt.xticks(rotation=45, ha='right')
 plt.tight_layout()
 plt.show()
+
+######################################################################################################################
+##########                       MULTIPLE COMPARISON SIGNIF                           ################################
+######################################################################################################################
+
+# We repeat the same analysis but only taking into account the number of cycles
+# with significant differences
+df_cdb_f.columns
+path_csv = os.chdir(root_path+'/Results_general_algorithm_cycles')
+# df con el máximo número de modelos con diferencia significativa
+df_signif = pd.read_csv('CDB_cycles_ParametersComboAlphaSplit_dif_no_signif_cycles_mean_median_std_num_models.csv')
+
+## Vamos a añadir a df_cdb_f la columna del máximo número de modelos
+
+# Separamos la columna valores_combo en alpha y split
+df_signif[['alpha', 'split']] = (
+    df_signif['valores_combo']
+    .str.extract(r'alpha(\d+)-split(\d+)')  # Extrae los números después de 'alpha' y 'split'
+    .astype(int)  # Convierte a entero para asegurar el mismo tipo en ambos datasets
+)
+
+# print(df_cdb_f.dtypes)
+# print(df_signif.dtypes)
+
+# Merge entre df_cdb_f y df_signif
+df_cdb_f['alpha'] = df_cdb_f['alpha'].astype(str)
+df_cdb_f['split'] = df_cdb_f['split'].astype(str)
+df_signif['alpha'] = df_signif['alpha'].astype(str)
+df_signif['split'] = df_signif['split'].astype(str)
+df_cdb_m = pd.merge(
+    df_cdb_f,
+    df_signif[['alpha', 'split', 'max_num_models']],  # Solo necesitamos estas columnas tras la separación
+    on=['alpha', 'split'],
+    how='left')
+
+# Filtrar los valores donde n_ensemble es menor o igual al máximo permitido
+df_cdb_signif = df_cdb_m[df_cdb_m['n_ensemble'] <= df_cdb_m['max_num_models']]
+
+### Repetimos el análisis anterior pero solo con los que tienen diferencias significativas
+
+# Best result per dataset and complexity measure
+best_param_cdb_signif = df_cdb_signif.loc[df_cdb_signif.groupby(["Dataset", "weights"])["accuracy_mean"].idxmax()]
+
+
+table_comparison, table_comparison_mean = Results_format_for_WTL(best_param_cdb_signif, best_param_mixed, best_param_standard)
+# QUITAMOS RING PORQUE AUN NO ESTÁ
+table_comparison.drop(['ring'],inplace=True)
+table_comparison_mean.drop(['ring'],inplace=True)
+
+
+# Estudio WTL comparando medias de accuracy
+methods = ['Standard_Bag_mean','Grouped_Bag_mean','Incre_Bag_mean','CDB_Host_mean',
+           'CDB_kDN_mean','CDB_CLD_mean','CDB_LSC_mean','CDB_N1_mean','CDB_N2_mean',
+           'CDB_DCP_mean','CDB_TD_U_mean','CDB_F1_mean']
+wtl_df_str_signif = pd.DataFrame()
+for method_i in methods[3:]:
+    CM = method_i[len('CDB_'):-len('_mean')]
+    wtl_df, _ = rank_df(table_comparison_mean, method_i, methods=methods)
+    name_column = 'wtl_' + CM
+    wtl_df_str_signif[name_column] = "(" + wtl_df.apply(lambda row: ','.join(row.values.astype(str)), axis=1) + ")"
+wtl_df_str_signif.drop(['CDB_kDN_mean','CDB_CLD_mean','CDB_LSC_mean','CDB_N1_mean','CDB_N2_mean',
+           'CDB_DCP_mean','CDB_TD_U_mean','CDB_F1_mean'],inplace=True)
+
+
+
+## Hacemos estudio WTL para n_ensembles
+table_comparison_n_ensemble = table_comparison.loc[:,
+                        table_comparison.columns[table_comparison.columns.str.endswith('ensemble')]]
+wtl_df_n_ensemble_signif = pd.DataFrame()
+methods = ['Standard_Bag_n_ensemble','Grouped_n_ensemble','Incremental_n_ensemble',
+           'CDB_Host_n_ensemble',
+           'CDB_kDN_n_ensemble','CDB_CLD_n_ensemble','CDB_LSC_n_ensemble',
+           'CDB_N1_n_ensemble','CDB_N2_n_ensemble',
+           'CDB_DCP_n_ensemble','CDB_TD_U_n_ensemble','CDB_F1_n_ensemble']
+for method_i in methods[3:]:
+    CM = method_i[len('CDB_'):-len('_n_ensemble')]
+    wtl_df, _ = rank_df(table_comparison_n_ensemble, method_i, methods=methods)
+    name_column = 'wtl_' + CM
+    wtl_df_n_ensemble_signif[name_column] = "(" + wtl_df.apply(lambda row: ','.join(row.values.astype(str)), axis=1) + ")"
+
+# Here we prefer to loss, it means the number of ensembles is lower
+wtl_df_n_ensemble_signif.drop(['CDB_kDN_n_ensemble','CDB_CLD_n_ensemble','CDB_LSC_n_ensemble',
+           'CDB_N1_n_ensemble','CDB_N2_n_ensemble',
+           'CDB_DCP_n_ensemble','CDB_TD_U_n_ensemble','CDB_F1_n_ensemble'],inplace=True)
+
+
+
+
+## Gráficos
+
+
+# Seleccionar datos para mean
+mean_cols = ['Standard_Bag_mean',
+       'Grouped_Bag_mean',  'Incre_Bag_mean',
+       'CDB_Host_mean',  'CDB_kDN_mean', 'CDB_CLD_mean',
+             'CDB_LSC_mean', 'CDB_N1_mean',
+       'CDB_N2_mean',  'CDB_DCP_mean','CDB_TD_U_mean',
+             'CDB_F1_mean']
+mean_data = table_comparison[mean_cols]
+
+
+# Reestructurar los datos para cada métrica
+mean_data = table_comparison[[col for col in table_comparison.columns if '_mean' in col]].melt(var_name='Method', value_name='Mean')
+std_data = table_comparison[[col for col in table_comparison.columns if '_std' in col]].melt(var_name='Method', value_name='STD')
+ensemble_data = table_comparison[[col for col in table_comparison.columns if '_n_ensemble' in col]].melt(var_name='Method', value_name='Num ensemble')
+
+
+sns.boxplot(x='Method', y='Mean', data=mean_data,color='#D4D7FC')
+plt.xticks(rotation=45, ha='right')
+plt.tight_layout()
+plt.show()
+
+
+sns.boxplot(x='Method', y='STD', data=std_data,color='#D4D7FC')
+plt.xticks(rotation=45, ha='right')
+plt.tight_layout()
+plt.show()
+
+sns.boxplot(x='Method', y='Num ensemble', data=ensemble_data,color='#D4D7FC')
+plt.xticks(rotation=45, ha='right')
+plt.tight_layout()
+plt.show()
+
+## En este caso, hacer plots no tiene mucho sentido porque los métodos de Mixed bagging van cambiando para cada caso
+# pero bueno igual lo vamos a hacer
+
+
+### Gráficos evolución
+
+
+
+# Para CDB nos quedamos con el mejor valor y cogemos el resto de sus valores
+
+
+list_datasets = best_param_cdb_signif.Dataset.unique()
+CM = 'Hostility'
+df_mixed.rename(columns={'n_trees':'n_ensemble'}, inplace=True)
+
+
+
+for dataset_i in list_datasets:
+    print(dataset_i)
+    values = best_param_cdb_signif.loc[(best_param_cdb_signif['Dataset']==dataset_i) &
+    (best_param_cdb_signif['weights']==CM),['alpha','split']]
+    alpha = values.iloc[0]['alpha']
+    split = values.iloc[0]['split']
+
+    df_cdb_signif_plot = df_cdb_signif.loc[(df_cdb_signif['Dataset']==dataset_i) &
+    (df_cdb_signif['weights']==CM) & (df_cdb_signif['alpha']==alpha) &
+    (df_cdb_signif['split']==split),:]
+
+    df_cdb_plot = df_cdb_f.loc[(df_cdb_f['Dataset']==dataset_i) &
+    (df_cdb_f['weights']==CM) & (df_cdb_f['alpha']==alpha) &
+    (df_cdb_f['split']==split),:]
+
+    df_cdb_signif_plot['model'] = 'CDB_'+CM
+    df_cdb_plot['model'] = 'CCDB'
+    df_standard_plot = df_standard.loc[(df_standard['Dataset']==dataset_i),:]
+    df_standard_plot['model'] = 'StandardBagg'
+    df_mixed_plot = df_mixed.loc[(df_mixed['Dataset'] == dataset_i), :]
+
+
+    df_plot = pd.concat([df_cdb_plot, df_cdb_signif_plot, df_standard_plot, df_mixed_plot])
+    df_plot = df_plot[['n_ensemble', 'accuracy_mean', 'model']]  # Solo mantener las columnas relevantes
+
+    # colors = {
+    #     'CCDB': '#003366',  # Azul oscuro
+    #     'CDB_'+CM: '#66b3ff',  # Azul claro
+    #     'Grouped_Mixed_Bagging': '#F5AA0A',
+    #     'Incremental_Mixed_Bagging': '#E10A45',
+    #      'StandardBagg': '#1F2E2D'
+    # }
+
+
+    plt.figure(figsize=(10, 6))
+    for method, group in df_plot.groupby('model'):
+        plt.plot(group['n_ensemble'], group['accuracy_mean'], marker='o', label=method)
+
+    # Personalización del gráfico
+    plt.title('Comparison of methods - Bagging '+dataset_i, fontsize=14)
+    plt.xlabel('n_ensemble', fontsize=12)
+    plt.ylabel('accuracy_mean', fontsize=12)
+    plt.legend(title='Method', fontsize=10)
+    plt.grid(alpha=0.3)
+    plt.show()
+
+
+df_cdb_signif.columns # n_ensemble
+
+df_standard.columns # n_ensemble
+
+df_mixed.columns # n_trees
 
 
