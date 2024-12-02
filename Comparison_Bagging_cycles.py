@@ -500,7 +500,7 @@ for dataset_i in list_datasets:
     # }
 
 
-    plt.figure(figsize=(10, 6))
+    #plt.figure(figsize=(10, 6))
     for method, group in df_plot.groupby('model'):
         plt.plot(group['n_ensemble'], group['accuracy_mean'], marker='o', label=method)
 
