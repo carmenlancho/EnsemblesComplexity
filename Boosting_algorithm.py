@@ -555,7 +555,7 @@ for data_file in total_name_list:
 #     for m in range(M):
 #         print(m)
 #         # Calcular las probabilidades actuales
-#         p_train = 1 / (1 + np.exp(-preds_train))
+#         p_train = 1 / (1 + np.exp(-2*preds_train))
 #
 #         # Calcular las pseudorespuestas y los pesos
 #         z_i = (y_train - p_train) / (p_train * (1 - p_train))
