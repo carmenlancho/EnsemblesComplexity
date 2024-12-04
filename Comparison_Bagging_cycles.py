@@ -520,3 +520,62 @@ df_standard.columns # n_ensemble
 df_mixed.columns # n_trees
 
 
+
+
+
+list_datasets = best_param_cdb.Dataset.unique()
+CM = 'Hostility'
+df_mixed.rename(columns={'n_trees':'n_ensemble'}, inplace=True)
+
+
+
+for dataset_i in list_datasets:
+    print(dataset_i)
+    values = best_param_cdb.loc[(best_param_cdb['Dataset']==dataset_i) &
+    (best_param_cdb['weights']==CM),['alpha','split']]
+    alpha = values.iloc[0]['alpha']
+    split = values.iloc[0]['split']
+
+    df_cdb_signif_plot = df_cdb_f.loc[(df_cdb_f['Dataset']==dataset_i) &
+    (df_cdb_f['weights']==CM) & (df_cdb_f['alpha']==str(alpha)) &
+    (df_cdb_f['split']==str(split)),:]
+
+
+    df_cdb_plot = df_cdb_f.loc[(df_cdb_f['Dataset']==dataset_i) &
+    (df_cdb_f['weights']==CM) & (df_cdb_f['alpha']==alpha) &
+    (df_cdb_f['split']==split),:]
+
+    df_cdb_signif_plot['model'] = 'CDB_'+CM
+    df_cdb_plot['model'] = 'CCDB'
+    df_standard_plot = df_standard.loc[(df_standard['Dataset']==dataset_i),:]
+    df_standard_plot['model'] = 'StandardBagg'
+    df_mixed_plot = df_mixed.loc[(df_mixed['Dataset'] == dataset_i), :]
+
+
+    df_plot = pd.concat([df_cdb_plot, df_cdb_signif_plot, df_standard_plot, df_mixed_plot])
+    df_plot = df_plot[['n_ensemble', 'accuracy_mean', 'model']]  # Solo mantener las columnas relevantes
+
+    # colors = {
+    #     'CCDB': '#003366',  # Azul oscuro
+    #     'CDB_'+CM: '#66b3ff',  # Azul claro
+    #     'Grouped_Mixed_Bagging': '#F5AA0A',
+    #     'Incremental_Mixed_Bagging': '#E10A45',
+    #      'StandardBagg': '#1F2E2D'
+    # }
+
+
+    #plt.figure(figsize=(10, 6))
+    for method, group in df_plot.groupby('model'):
+        plt.plot(group['n_ensemble'], group['accuracy_mean'], marker='o', label=method)
+
+    # Personalización del gráfico
+    plt.title('Comparison of methods - Bagging '+dataset_i, fontsize=14)
+    plt.xlabel('n_ensemble', fontsize=12)
+    plt.ylabel('accuracy_mean', fontsize=12)
+    plt.legend(title='Method', fontsize=10)
+    plt.grid(alpha=0.3)
+    plt.show()
+
+
+
+
