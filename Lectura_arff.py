@@ -72,3 +72,38 @@ stats_df = pd.DataFrame(stats)
 # Guardar estadísticas en un archivo CSV
 stats_csv = os.path.join(output_folder, "info_datasets.csv")
 stats_df.to_csv(stats_csv, index=False)
+
+
+### Leemos los csv y le cambiamos el formato al target
+# Nombre: class --> y
+# Valores: majority/minority --> 0/1
+
+
+# Ruta donde están los archivos CSV
+input_folder = root_path + '/datasets/datos_arff'
+output_folder_modified = os.path.join(input_folder, "modified_csv")  # Carpeta para guardar los modificados
+os.makedirs(output_folder_modified, exist_ok=True)
+
+# Procesar cada archivo CSV
+for file_name in os.listdir(input_folder):
+    if file_name.endswith(".csv"):
+        file_path = os.path.join(input_folder, file_name)
+
+        # Leer archivo CSV
+        df = pd.read_csv(file_path)
+
+        # Renombrar la columna "class" a "y"
+        if 'class' in df.columns:
+            df.rename(columns={'class': 'y'}, inplace=True)
+
+        # Reemplazar las categorías "majority" y "minority" por 0 y 1
+        if 'y' in df.columns:
+            df['y'] = df['y'].replace({'majority': 0, 'minority': 1})
+
+        # Guardar el archivo modificado
+        output_csv = os.path.join(output_folder_modified, file_name)
+        df.to_csv(output_csv, index=False)
+
+
+
+
