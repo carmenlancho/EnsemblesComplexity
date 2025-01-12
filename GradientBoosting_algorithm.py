@@ -553,23 +553,27 @@ for filename in os.listdir(path_csv):
 #  'chatfield_4.csv'
 # ]
 
-total_name_list = ['chscase_vine2.csv','chscase_census3.csv','jEdit_4.2_4.3.csv','baskball.csv',
- 'visualizing_ethanol.csv','rabe_97.csv','mbagrade.csv','corral.csv','elusage.csv',
- 'hutsof99_logis.csv','magic.csv','chscase_census4.csv','triazines.csv',
- 'chscase_census6.csv','balance-scale.csv','sleuth_ex1714.csv', 'lowbwt.csv',
- 'sleuth_ex2016.csv','analcatdata_gviolence.csv', 'analcatdata_japansolvent.csv',
- 'rmftsa_ladata.csv', 'pollution.csv','rmftsa_sleepdata.csv','pm10.csv',
- 'qualitative-bankruptcy.csv','cmc.csv','jEdit_4.0_4.2.csv','analcatdata_vineyard.csv',
- 'sleuth_ex1221.csv','lupus.csv','banana.csv','cleve.csv','sleuth_case1201.csv',
- 'rabe_131.csv','chscase_census2.csv','Australian.csv','disclosure_z.csv','stock.csv',
- 'zoo.csv','diggle_table_a1.csv','wind_correlations.csv','disclosure_x_bias.csv',
- 'chscase_census5.csv','rabe_266.csv','sleuth_ex2015.csv','rabe_265.csv',
- 'disclosure_x_noise.csv','diggle_table_a2.csv','visualizing_environmental.csv',
- 'vineyard.csv','sleuth_case2002.csv','plasma_retinol.csv','ecoli.csv','chscase_vine1.csv',
- 'no2.csv','boston.csv','quake.csv','sensory.csv','hutsof99_child_witness.csv',
- 'visualizing_hamster.csv','pyrim.csv','strikes.csv','witmer_census_1980.csv',
- 'pwLinear.csv','vinnie.csv','heart-statlog.csv','kc1-binary.csv',
- 'disclosure_x_tampered.csv','acute-inflammations.csv','visualizing_galaxy.csv']
+#total_name_list = [#'chscase_vine2.csv','chscase_census3.csv','jEdit_4.2_4.3.csv','baskball.csv',
+ #'visualizing_ethanol.csv','rabe_97.csv','mbagrade.csv','corral.csv','elusage.csv',
+ #'hutsof99_logis.csv',
+                   #'magic.csv', # ha petado
+ #                   'chscase_census4.csv','triazines.csv',
+ # 'chscase_census6.csv','balance-scale.csv','sleuth_ex1714.csv', 'lowbwt.csv',
+ # 'sleuth_ex2016.csv','analcatdata_gviolence.csv', 'analcatdata_japansolvent.csv',
+ # 'rmftsa_ladata.csv', 'pollution.csv','rmftsa_sleepdata.csv','pm10.csv',
+ # 'qualitative-bankruptcy.csv','cmc.csv','jEdit_4.0_4.2.csv','analcatdata_vineyard.csv',
+ # 'sleuth_ex1221.csv','lupus.csv','banana.csv','cleve.csv','sleuth_case1201.csv',
+ # 'rabe_131.csv','chscase_census2.csv','Australian.csv','disclosure_z.csv','stock.csv',
+ # 'zoo.csv','diggle_table_a1.csv','wind_correlations.csv','disclosure_x_bias.csv',
+ # 'chscase_census5.csv','rabe_266.csv','sleuth_ex2015.csv','rabe_265.csv',
+ # 'disclosure_x_noise.csv','diggle_table_a2.csv','visualizing_environmental.csv',
+ # 'vineyard.csv','sleuth_case2002.csv','plasma_retinol.csv','ecoli.csv','chscase_vine1.csv',
+ # 'no2.csv','boston.csv','quake.csv','sensory.csv','hutsof99_child_witness.csv',
+ # 'visualizing_hamster.csv','pyrim.csv','strikes.csv','witmer_census_1980.csv',
+ # 'pwLinear.csv','vinnie.csv','heart-statlog.csv','kc1-binary.csv',
+ # 'disclosure_x_tampered.csv',
+    #'acute-inflammations.csv', # no ha funcionado
+    #'visualizing_galaxy.csv']
 
 
 path_to_save = root_path + '/Results_GB'
