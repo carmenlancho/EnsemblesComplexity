@@ -553,7 +553,7 @@ for filename in os.listdir(path_csv):
 #  'chatfield_4.csv'
 # ]
 
-#total_name_list = [#'chscase_vine2.csv','chscase_census3.csv','jEdit_4.2_4.3.csv','baskball.csv',
+# total_name_list = [#'chscase_vine2.csv','chscase_census3.csv','jEdit_4.2_4.3.csv','baskball.csv',
  #'visualizing_ethanol.csv','rabe_97.csv','mbagrade.csv','corral.csv','elusage.csv',
  #'hutsof99_logis.csv',
                    #'magic.csv', # ha petado
