@@ -77,7 +77,7 @@ def all_measures(data,save_csv,path_to_save, name_data):
 
     return df_measures, df_classes_dataset
 
-#
+
 #
 # path_csv = os.chdir(root_path+'/datasets')
 # # Extraemos los nombres de todos los ficheros
@@ -86,6 +86,7 @@ def all_measures(data,save_csv,path_to_save, name_data):
 #     if filename.endswith('.csv'):
 #         total_name_list.append(filename)
 # total_name_list.sort()
+# # len(total_name_list)
 #
 # # total_name_list = ['Data13.csv']
 #
@@ -105,6 +106,7 @@ def all_measures(data,save_csv,path_to_save, name_data):
 #     data.columns = data_aux.columns
 #     # data = pd.read_csv('Dataset9_6000_estandarizado.csv')
 #     # path_to_save = root_path+'/Results_Complexity_InstanceLevel'
+#     # path_to_save = root_path+'/Results_GB'
 #     # save_csv = True
 #     save_csv = False
 #     # df_measures, df_classes_dataset = all_measures(data, save_csv, path_to_save, name_data)
