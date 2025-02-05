@@ -730,4 +730,165 @@ def summaryStatistics_HardGB_perCM(df_hardGB2,CM):
 
 ### tod lo de arriba lo hemos copiado para tenerlo ahí
 
+#############################################################################################################
+#################                         QUIÉN SE DEGRADA MÁS?????                         #################
+#############################################################################################################
+
+## Como nuestra std es menor, vamos a ver si nosotros nos degradamos menos
+
+
+#
+# import matplotlib.pyplot as plt
+# import seaborn as sns
+# from scipy.stats import linregress
+#
+# performance_my_method = all_datasets.loc[(all_datasets['dataset']=='pyrim')&
+#                  (all_datasets['loss_selected']=='exponential')&
+#                 (all_datasets['method_weights']=='sample_weight_easy')&
+#                     (all_datasets['compl_measure']=='N2'),'test_acc_mean']
+#
+# performance_classic = all_datasets.loc[(all_datasets['dataset']=='pyrim')&
+#                  (all_datasets['loss_selected']=='exponential')&
+#                 (all_datasets['method_weights']=='classic')&
+#                     (all_datasets['compl_measure']=='none'),'test_acc_mean']
+#
+# # Suponiendo que performance_my_method y performance_classic son listas con los valores
+# # de rendimiento en cada número de ensamblados.
+#
+# num_ensemblados = np.array([10, 25, 50, 100, 150, 200, 250, 300])  # Modifica si tienes otros valores
+# num_ensemblados = range(300)
+#
+# # Regresión lineal para ver tendencia
+# slope_my, intercept_my, r_value_my, p_value_my, _ = linregress(num_ensemblados, performance_my_method)
+# slope_classic, intercept_classic, r_value_classic, p_value_classic, _ = linregress(num_ensemblados, performance_classic)
+#
+# # Visualización
+# plt.figure(figsize=(8, 5))
+# sns.lineplot(x=num_ensemblados, y=performance_my_method, marker='o', label="Métod Modificado")
+# sns.lineplot(x=num_ensemblados, y=performance_classic, marker='s', linestyle="dashed", label="Gradient Boosting Clásico")
+# plt.xlabel("Número de ensamblados")
+# plt.ylabel("Rendimiento (accuracy, AUC, etc.)")
+# plt.title("Degradación del rendimiento con más ensamblados")
+# plt.legend()
+# plt.show()
+#
+# # Interpretación
+# print(f"Pendiente en mi métod: {slope_my:.4f} (p-valor: {p_value_my:.4f})")
+# print(f"Pendiente en boosting clásico: {slope_classic:.4f} (p-valor: {p_value_classic:.4f})")
+#
+# if slope_my < slope_classic:
+#     print("Mi métod se degrada menos con más ensamblados.")
+# else:
+#     print("El boosting clásico mantiene mejor el rendimiento con más ensamblados.")
+
+
+from scipy.stats import linregress, wilcoxon
+df_hardGB2
+# Lista de todos los datasets
+datasets = df_hardGB2['dataset'].unique()
+
+# Para guardar performance
+performance_CDGB = {}
+performance_classic = {}
+
+CM = 'Hostility'
+# Iteramos sobre cada dataset para obtener su rendimiento
+for dataset in datasets:
+    performance_CDGB[dataset] = df_hardGB2.loc[
+        (df_hardGB2['dataset'] == dataset) &
+        (df_hardGB2['method_weights'] == 'sample_weight_easy') &
+        (df_hardGB2['compl_measure'] == CM),
+        'test_acc_mean'
+    ].values
+    performance_classic[dataset] = df_hardGB2.loc[
+        (df_hardGB2['dataset'] == dataset) &
+        (df_hardGB2['method_weights'] == 'classic') &
+        (df_hardGB2['compl_measure'] == 'none'),
+        'test_acc_mean'
+    ].values
+
+
+num_ensembles = range(300)
+
+# Guardamos las pendientes para cada dataset
+slopes_CDGB = []
+slopes_classic = []
+
+for dataset in performance_CDGB.keys():
+    # Obtener rendimiento
+    y_CDGB = performance_CDGB[dataset]
+    y_classic = performance_classic[dataset]
+
+    # Ajuste de regresión lineal
+    slope_CDGB, _, _, p_CDGB, _ = linregress(num_ensembles, y_CDGB)
+    slope_classic, _, _, p_classic, _ = linregress(num_ensembles, y_classic)
+
+    slopes_CDGB.append(slope_CDGB)
+    slopes_classic.append(slope_classic)
+
+# Convertimos en DataFrame para análisis
+df_slopes = pd.DataFrame({
+    "Dataset": list(performance_CDGB.keys()),
+    "Slopes CDGB": slopes_CDGB,
+    "Slopes Classic": slopes_classic
+})
+
+# Visualización de la distribución de pendientes
+plt.figure(figsize=(8, 5))
+sns.kdeplot(slopes_CDGB, label="Complexity driven GB", fill=True)
+sns.kdeplot(slopes_classic, label="Classic GB", fill=True, linestyle="dashed")
+plt.axvline(np.mean(slopes_CDGB), color='blue', linestyle='dotted', label="Avg Complexity driven GB")
+plt.axvline(np.mean(slopes_classic), color='red', linestyle='dotted', label="Avg Classic GB")
+plt.xlabel("Regression slopes (degradación del rendimiento)")
+plt.ylabel("Density")
+plt.legend()
+plt.title("Comparison")
+plt.show()
+
+# Test estadístico para comparar las pendientes
+stat, p_value = wilcoxon(slopes_CDGB, slopes_classic)
+p_value
+# if p-value<0.05, hay diferencias significativas
+# else, no hay diferencias significativas en la degradación del modelo
+
+## FALTA HACERLO FUNCIÓN PARA LAS DISTINTAS MEDIDAS DE COMPLEJIDAD
+
+
+
+
+
+
+
+
+
+
+#################################################################################################
+#############                PARA OBTENER MÁS MEDIDAS DE EVALUACIÓN                 #############
+#################################################################################################
+# OJO! ESTOY HAY QUE HACERLO EN LOS FOLDS, NO EN LA VERSIÓN AGREGADA PORQUE NO SALE LO MISMO
+# pero aquí tenemos el código para cuando lo hagamos
+
 all_datasets.conf_matr_test_total[0]
+
+import ast  # Para convertir la cadena en una lista de listas
+
+# Convertimos la columna de matrices de confusión a listas de listas para que sea un objeto de python
+all_datasets['conf_matr_test_total'] = all_datasets['conf_matr_test_total'].apply(ast.literal_eval)
+
+all_datasets['TN'] = all_datasets['conf_matr_test_total'].apply(lambda x: x[0][0])
+all_datasets['FP'] = all_datasets['conf_matr_test_total'].apply(lambda x: x[0][1])
+all_datasets['FN'] = all_datasets['conf_matr_test_total'].apply(lambda x: x[1][0])
+all_datasets['TP'] = all_datasets['conf_matr_test_total'].apply(lambda x: x[1][1])
+
+# Calcular métricas de rendimiento
+all_datasets['Accuracy'] = (all_datasets['TP'] + all_datasets['TN']) / (all_datasets['TP'] + all_datasets['TN'] + all_datasets['FP'] + all_datasets['FN'])
+all_datasets['Precision'] = all_datasets['TP'] / (all_datasets['TP'] + all_datasets['FP'])
+all_datasets['Recall'] = all_datasets['TP'] / (all_datasets['TP'] + all_datasets['FN'])
+all_datasets['Specificity'] = all_datasets['TN'] / (all_datasets['TN'] + all_datasets['FP'])
+all_datasets['F1_score'] = 2 * (all_datasets['Precision'] * all_datasets['Recall']) / (all_datasets['Precision'] + all_datasets['Recall'])
+# Calcular MCC
+all_datasets['MCC'] = (all_datasets['TP'] * all_datasets['TN'] - all_datasets['FP'] * all_datasets['FN']) / np.sqrt(
+    (all_datasets['TP'] + all_datasets['FP']) * (all_datasets['TP'] + all_datasets['FN']) * (all_datasets['TN'] + all_datasets['FP']) * (all_datasets['TN'] + all_datasets['FN'])
+)
+# Reescalamos MCC de [-1, 1] a [0, 1]
+all_datasets['MCC_scaled'] = (all_datasets['MCC'] + 1) / 2
