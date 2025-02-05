@@ -294,7 +294,7 @@ def gradient_boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights,l
 
         # Matriz de confusión para train y test
         cm_train = confusion_matrix(y_train, train_pred)
-        cm_test = confusion_matrix(y_test, test_pred)
+        cm_test = confusion_matrix(y_test, test_pred) # [[TN, FP], [FN, TP]]
 
         # Guardar las matrices
         # confusion_matrices_train.append(cm_train)
