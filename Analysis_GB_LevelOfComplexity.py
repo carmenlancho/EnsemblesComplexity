@@ -820,8 +820,8 @@ for dataset in performance_CDGB.keys():
     y_classic = performance_classic[dataset]
 
     # Ajuste de regresión lineal
-    slope_CDGB, _, _, p_CDGB, _ = linregress(num_ensembles, y_CDGB)
-    slope_classic, _, _, p_classic, _ = linregress(num_ensembles, y_classic)
+    slope_CDGB, intercept_CDGB, _, p_CDGB, _ = linregress(num_ensembles, y_CDGB)
+    slope_classic, intercept_classic, _, p_classic, _ = linregress(num_ensembles, y_classic)
 
     slopes_CDGB.append(slope_CDGB)
     slopes_classic.append(slope_classic)
@@ -853,7 +853,77 @@ p_value
 
 ## FALTA HACERLO FUNCIÓN PARA LAS DISTINTAS MEDIDAS DE COMPLEJIDAD
 
+CM = 'Hostility'
+df = df_hardGB2
+def linreg_std_degradation(df,CM):
+    # Lista de todos los datasets
+    datasets = df['dataset'].unique()
 
+    # Para guardar performance
+    performance_CDGB = {}
+    performance_classic = {}
+
+    # Iteramos sobre cada dataset para obtener su rendimiento
+    for dataset in datasets:
+        performance_CDGB[dataset] = df.loc[
+            (df['dataset'] == dataset) &
+            (df['method_weights'] == 'sample_weight_easy') &
+            (df['compl_measure'] == CM),
+            'test_acc_mean'
+        ].values
+        performance_classic[dataset] = df.loc[
+            (df['dataset'] == dataset) &
+            (df['method_weights'] == 'classic') &
+            (df['compl_measure'] == 'none'),
+            'test_acc_mean'
+        ].values
+
+    num_ensembles = range(300)
+
+    # Guardamos las pendientes para cada dataset
+    slopes_CDGB = []
+    slopes_classic = []
+
+    for dataset in performance_CDGB.keys():
+        # Obtener rendimiento
+        y_CDGB = performance_CDGB[dataset]
+        y_classic = performance_classic[dataset]
+
+        # Ajuste de regresión lineal
+        slope_CDGB, intercept_CDGB, _, p_CDGB, _ = linregress(num_ensembles, y_CDGB)
+        slope_classic, intercept_classic, _, p_classic, _ = linregress(num_ensembles, y_classic)
+
+        slopes_CDGB.append(slope_CDGB)
+        slopes_classic.append(slope_classic)
+
+    # Convertimos en DataFrame para análisis
+    df_slopes = pd.DataFrame({
+        "Dataset": list(performance_CDGB.keys()),
+        "Slopes CDGB": slopes_CDGB,
+        "Slopes Classic": slopes_classic
+    })
+
+    # Visualización de la distribución de pendientes
+    plt.figure(figsize=(8, 5))
+    sns.kdeplot(slopes_CDGB, label="Complexity driven GB", fill=True)
+    sns.kdeplot(slopes_classic, label="Classic GB", fill=True, linestyle="dashed")
+    plt.axvline(np.mean(slopes_CDGB), color='blue', linestyle='dotted', label="Avg Complexity driven GB")
+    plt.axvline(np.mean(slopes_classic), color='red', linestyle='dotted', label="Avg Classic GB")
+    plt.xlabel("Regression slopes (degradación del rendimiento)")
+    plt.ylabel("Density")
+    plt.legend()
+    plt.title("Comparison "+str(CM))
+    plt.show()
+
+    # Test estadístico para comparar las pendientes
+    stat, p_value = wilcoxon(slopes_CDGB, slopes_classic)
+    p_value
+
+    return p_value
+
+CM = 'Hostility'
+df = df_hardGB2
+p_valor = linreg_std_degradation(df,CM)
 
 
 
