@@ -1,0 +1,3601 @@
+﻿dataset,CV_fold,n_trees,model,parameters,perf_measure,perf_value,Conf_Matrix
+ring.csv,0,245,base,None,acc,0.8770270270270271,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,245,base,None,f1,0.8768995277160823,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,245,base,None,auc,0.8767888319904158,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,245,wagging,None,acc,0.9432432432432433,"[array([[357,  10],
+       [ 32, 341]])]"
+ring.csv,0,245,wagging,None,f1,0.9432067426542566,"[array([[357,  10],
+       [ 32, 341]])]"
+ring.csv,0,245,wagging,None,auc,0.9434805794391158,"[array([[357,  10],
+       [ 32, 341]])]"
+ring.csv,0,245,AdaBoost,None,acc,0.8770270270270271,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,245,AdaBoost,None,f1,0.8768770103414801,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,245,AdaBoost,None,auc,0.8767669167439789,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,245,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",acc,0.9432432432432433,"[array([[354,  13],
+       [ 29, 344]])]"
+ring.csv,0,245,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",f1,0.9445756700133582,"[array([[355,  12],
+       [ 29, 344]])]"
+ring.csv,0,245,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",auc,0.9528639574552017,"[array([[357,  10],
+       [ 25, 348]])]"
+ring.csv,0,245,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9486486486486486,"[array([[355,  12],
+       [ 26, 347]])]"
+ring.csv,0,245,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9513477976574048,"[array([[354,  13],
+       [ 23, 350]])]"
+ring.csv,0,245,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9474581966674215,"[array([[355,  12],
+       [ 27, 346]])]"
+ring.csv,1,245,base,None,acc,0.8635135135135135,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,245,base,None,f1,0.8634159645368429,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,245,base,None,auc,0.8633182605138394,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,245,wagging,None,acc,0.9364864864864865,"[array([[351,  16],
+       [ 31, 342]])]"
+ring.csv,1,245,wagging,None,f1,0.936470826163604,"[array([[351,  16],
+       [ 31, 342]])]"
+ring.csv,1,245,wagging,None,auc,0.9366466750918614,"[array([[351,  16],
+       [ 31, 342]])]"
+ring.csv,1,245,AdaBoost,None,acc,0.8662162162162163,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,245,AdaBoost,None,f1,0.8661705062495473,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,245,AdaBoost,None,auc,0.8660868866470404,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,245,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9472972972972973,"[array([[356,  11],
+       [ 28, 345]])]"
+ring.csv,1,245,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.9405170806766552,"[array([[354,  13],
+       [ 31, 342]])]"
+ring.csv,1,245,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9434367489462419,"[array([[355,  12],
+       [ 30, 343]])]"
+ring.csv,1,245,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",acc,0.9432432432432433,"[array([[354,  13],
+       [ 29, 344]])]"
+ring.csv,1,245,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",f1,0.9432390972669724,"[array([[351,  16],
+       [ 26, 347]])]"
+ring.csv,1,245,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.9461396293401318,"[array([[356,  11],
+       [ 29, 344]])]"
+ring.csv,2,245,base,None,acc,0.8702702702702703,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,245,base,None,f1,0.8702607922991485,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,245,base,None,auc,0.8702179106004047,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,245,wagging,None,acc,0.9459459459459459,"[array([[358,   9],
+       [ 31, 342]])]"
+ring.csv,2,245,wagging,None,f1,0.9459111834802442,"[array([[358,   9],
+       [ 31, 342]])]"
+ring.csv,2,245,wagging,None,auc,0.9461834598330058,"[array([[358,   9],
+       [ 31, 342]])]"
+ring.csv,2,245,AdaBoost,None,acc,0.8743243243243243,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,245,AdaBoost,None,f1,0.874303433131669,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,245,AdaBoost,None,auc,0.8742393583215844,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,245,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9459459459459459,"[array([[357,  10],
+       [ 30, 343]])]"
+ring.csv,2,245,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.9432067426542566,"[array([[357,  10],
+       [ 32, 341]])]"
+ring.csv,2,245,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9475020271602954,"[array([[357,  10],
+       [ 29, 344]])]"
+ring.csv,2,245,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.95,"[array([[357,  10],
+       [ 27, 346]])]"
+ring.csv,2,245,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9459111834802442,"[array([[358,   9],
+       [ 31, 342]])]"
+ring.csv,2,245,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.9475020271602954,"[array([[357,  10],
+       [ 29, 344]])]"
+ring.csv,3,245,base,None,acc,0.8513513513513513,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,245,base,None,f1,0.8513513513513513,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,245,base,None,auc,0.8513415783360485,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,245,wagging,None,acc,0.9351351351351351,"[array([[351,  16],
+       [ 32, 341]])]"
+ring.csv,3,245,wagging,None,f1,0.9351161791928917,"[array([[351,  16],
+       [ 32, 341]])]"
+ring.csv,3,245,wagging,None,auc,0.9353061925181348,"[array([[351,  16],
+       [ 32, 341]])]"
+ring.csv,3,245,AdaBoost,None,acc,0.85,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,245,AdaBoost,None,f1,0.8499980823704094,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,245,AdaBoost,None,auc,0.849979180515885,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,245,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9432432432432433,"[array([[354,  13],
+       [ 29, 344]])]"
+ring.csv,3,245,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.9391790827629681,"[array([[351,  16],
+       [ 29, 344]])]"
+ring.csv,3,245,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9407338685523519,"[array([[354,  13],
+       [ 31, 342]])]"
+ring.csv,3,245,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,0.9351351351351351,"[array([[353,  14],
+       [ 34, 339]])]"
+ring.csv,3,245,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",f1,0.9405170806766552,"[array([[354,  13],
+       [ 31, 342]])]"
+ring.csv,3,245,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",auc,0.9393714707321884,"[array([[353,  14],
+       [ 31, 342]])]"
+ring.csv,4,245,base,None,acc,0.8810810810810811,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,245,base,None,f1,0.8810706544749097,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,245,base,None,auc,0.8810087373250343,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,245,wagging,None,acc,0.9310810810810811,"[array([[351,  15],
+       [ 36, 338]])]"
+ring.csv,4,245,wagging,None,f1,0.9310467116996158,"[array([[351,  15],
+       [ 36, 338]])]"
+ring.csv,4,245,wagging,None,auc,0.9313798544753221,"[array([[351,  15],
+       [ 36, 338]])]"
+ring.csv,4,245,AdaBoost,None,acc,0.8905405405405405,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,245,AdaBoost,None,f1,0.8905387412694009,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,245,AdaBoost,None,auc,0.8905131352093744,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,245,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",acc,0.9310810810810811,"[array([[354,  12],
+       [ 39, 335]])]"
+ring.csv,4,245,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",f1,0.9296578157104473,"[array([[354,  12],
+       [ 40, 334]])]"
+ring.csv,4,245,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",auc,0.9273983811110136,"[array([[352,  14],
+       [ 40, 334]])]"
+ring.csv,4,245,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,0.9364864864864865,"[array([[354,  12],
+       [ 35, 339]])]"
+ring.csv,4,245,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,0.9323850290701119,"[array([[353,  13],
+       [ 37, 337]])]"
+ring.csv,4,245,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,0.9368151135267817,"[array([[354,  12],
+       [ 35, 339]])]"
+ring.csv,5,245,base,None,acc,0.8810810810810811,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,245,base,None,f1,0.8810836872184952,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,245,base,None,auc,0.8810964027936062,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,245,wagging,None,acc,0.9581081081081081,"[array([[361,   5],
+       [ 26, 348]])]"
+ring.csv,5,245,wagging,None,f1,0.9580872169154528,"[array([[361,   5],
+       [ 26, 348]])]"
+ring.csv,5,245,wagging,None,auc,0.9584100406183338,"[array([[361,   5],
+       [ 26, 348]])]"
+ring.csv,5,245,AdaBoost,None,acc,0.8864864864864865,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,245,AdaBoost,None,f1,0.8864690727501287,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,245,AdaBoost,None,auc,0.8866777709593525,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,245,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9581081081081081,"[array([[361,   5],
+       [ 26, 348]])]"
+ring.csv,5,245,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.9607958503455866,"[array([[361,   5],
+       [ 24, 350]])]"
+ring.csv,5,245,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9610838374097775,"[array([[361,   5],
+       [ 24, 350]])]"
+ring.csv,5,245,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9594594594594594,"[array([[361,   5],
+       [ 25, 349]])]"
+ring.csv,5,245,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.9580921158866614,"[array([[360,   6],
+       [ 25, 349]])]"
+ring.csv,5,245,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.9583808187954764,"[array([[360,   6],
+       [ 25, 349]])]"
+ring.csv,6,245,base,None,acc,0.8648648648648649,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,245,base,None,f1,0.8648332626233179,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,245,base,None,auc,0.8647321819935128,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,245,wagging,None,acc,0.9527027027027027,"[array([[358,   8],
+       [ 27, 347]])]"
+ring.csv,6,245,wagging,None,f1,0.9526846469688113,"[array([[358,   8],
+       [ 27, 347]])]"
+ring.csv,6,245,wagging,None,auc,0.952974781566874,"[array([[358,   8],
+       [ 27, 347]])]"
+ring.csv,6,245,AdaBoost,None,acc,0.8675675675675676,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,245,AdaBoost,None,f1,0.8675365973708516,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,245,AdaBoost,None,auc,0.8674352006078139,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,245,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",acc,0.9554054054054054,"[array([[359,   7],
+       [ 26, 348]])]"
+ring.csv,6,245,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",f1,0.9526846469688113,"[array([[358,   8],
+       [ 27, 347]])]"
+ring.csv,6,245,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",auc,0.952974781566874,"[array([[358,   8],
+       [ 27, 347]])]"
+ring.csv,6,245,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,0.9581081081081081,"[array([[360,   6],
+       [ 25, 349]])]"
+ring.csv,6,245,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,0.9540433130597065,"[array([[357,   9],
+       [ 25, 349]])]"
+ring.csv,6,245,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,0.9530040033897315,"[array([[359,   7],
+       [ 28, 346]])]"
+ring.csv,7,245,base,None,acc,0.8959459459459459,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,245,base,None,f1,0.8959472761934999,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,245,base,None,auc,0.895948394260834,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,245,wagging,None,acc,0.9540540540540541,"[array([[355,  11],
+       [ 23, 351]])]"
+ring.csv,7,245,wagging,None,f1,0.9540500265342481,"[array([[355,  11],
+       [ 23, 351]])]"
+ring.csv,7,245,wagging,None,auc,0.9542240144940242,"[array([[355,  11],
+       [ 23, 351]])]"
+ring.csv,7,245,AdaBoost,None,acc,0.8932432432432432,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,245,AdaBoost,None,f1,0.8932446080426816,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,245,AdaBoost,None,auc,0.8932453756465328,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,245,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",acc,0.9540540540540541,"[array([[356,  10],
+       [ 24, 350]])]"
+ring.csv,7,245,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",f1,0.9554027179587131,"[array([[355,  11],
+       [ 22, 352]])]"
+ring.csv,7,245,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",auc,0.9569562549311825,"[array([[357,   9],
+       [ 23, 351]])]"
+ring.csv,7,245,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",acc,0.9540540540540541,"[array([[356,  10],
+       [ 24, 350]])]"
+ring.csv,7,245,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",f1,0.9540470056369569,"[array([[356,  10],
+       [ 24, 350]])]"
+ring.csv,7,245,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",auc,0.9555609128897461,"[array([[355,  11],
+       [ 22, 352]])]"
+ring.csv,8,245,base,None,acc,0.8621621621621621,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,245,base,None,f1,0.8621410107303524,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,245,base,None,auc,0.8620583852020689,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,245,wagging,None,acc,0.9445945945945946,"[array([[354,  12],
+       [ 29, 345]])]"
+ring.csv,8,245,wagging,None,f1,0.9445791119775037,"[array([[354,  12],
+       [ 29, 345]])]"
+ring.csv,8,245,wagging,None,auc,0.9448365039011133,"[array([[354,  12],
+       [ 29, 345]])]"
+ring.csv,8,245,AdaBoost,None,acc,0.85,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,245,AdaBoost,None,f1,0.8498834498834499,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,245,AdaBoost,None,auc,0.8497340814119986,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,245,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",acc,0.9432432432432433,"[array([[352,  14],
+       [ 28, 346]])]"
+ring.csv,8,245,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",f1,0.9526936328330172,"[array([[356,  10],
+       [ 25, 349]])]"
+ring.csv,8,245,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",auc,0.9475395225154146,"[array([[355,  11],
+       [ 28, 346]])]"
+ring.csv,8,245,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,0.9527027027027027,"[array([[356,  10],
+       [ 25, 349]])]"
+ring.csv,8,245,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,0.9499904118520467,"[array([[355,  11],
+       [ 26, 348]])]"
+ring.csv,8,245,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.9529163379211595,"[array([[356,  10],
+       [ 25, 349]])]"
+ring.csv,9,245,base,None,acc,0.8486486486486486,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,245,base,None,f1,0.848598868933764,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,245,base,None,auc,0.8484848484848486,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,245,wagging,None,acc,0.9459459459459459,"[array([[356,  10],
+       [ 30, 344]])]"
+ring.csv,9,245,wagging,None,f1,0.9459222491137383,"[array([[356,  10],
+       [ 30, 344]])]"
+ring.csv,9,245,wagging,None,auc,0.9462318459425499,"[array([[356,  10],
+       [ 30, 344]])]"
+ring.csv,9,245,AdaBoost,None,acc,0.8702702702702703,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,245,AdaBoost,None,f1,0.8702399321183851,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,245,AdaBoost,None,auc,0.8701382192221151,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,245,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9445945945945946,"[array([[354,  12],
+       [ 29, 345]])]"
+ring.csv,9,245,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.9472825699298204,"[array([[355,  11],
+       [ 28, 346]])]"
+ring.csv,9,245,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.9502133193068585,"[array([[355,  11],
+       [ 26, 348]])]"
+ring.csv,9,245,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",acc,0.9513513513513514,"[array([[355,  11],
+       [ 25, 349]])]"
+ring.csv,9,245,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",f1,0.9472825699298204,"[array([[355,  11],
+       [ 28, 346]])]"
+ring.csv,9,245,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",auc,0.9515794395254376,"[array([[356,  10],
+       [ 26, 348]])]"
+ring.csv,0,250,base,None,acc,0.8770270270270271,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,250,base,None,f1,0.8768995277160823,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,250,base,None,auc,0.8767888319904158,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,250,wagging,None,acc,0.9445945945945946,"[array([[355,  12],
+       [ 29, 344]])]"
+ring.csv,0,250,wagging,None,f1,0.9445756700133582,"[array([[355,  12],
+       [ 29, 344]])]"
+ring.csv,0,250,wagging,None,auc,0.9447772315199684,"[array([[355,  12],
+       [ 29, 344]])]"
+ring.csv,0,250,AdaBoost,None,acc,0.8770270270270271,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,250,AdaBoost,None,f1,0.8768770103414801,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,250,AdaBoost,None,auc,0.8767669167439789,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,250,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",acc,0.9459459459459459,"[array([[356,  11],
+       [ 29, 344]])]"
+ring.csv,0,250,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",f1,0.9540480125536851,"[array([[356,  11],
+       [ 23, 350]])]"
+ring.csv,0,250,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",auc,0.9488205944875849,"[array([[356,  11],
+       [ 27, 346]])]"
+ring.csv,0,250,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,0.9459459459459459,"[array([[356,  11],
+       [ 29, 344]])]"
+ring.csv,0,250,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",f1,0.9526948421489752,"[array([[356,  11],
+       [ 24, 349]])]"
+ring.csv,0,250,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",auc,0.9434367489462419,"[array([[355,  12],
+       [ 30, 343]])]"
+ring.csv,1,250,base,None,acc,0.8635135135135135,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,250,base,None,f1,0.8634159645368429,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,250,base,None,auc,0.8633182605138394,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,250,wagging,None,acc,0.9391891891891891,"[array([[352,  15],
+       [ 30, 343]])]"
+ring.csv,1,250,wagging,None,f1,0.939174195263025,"[array([[352,  15],
+       [ 30, 343]])]"
+ring.csv,1,250,wagging,None,auc,0.9393495554857514,"[array([[352,  15],
+       [ 30, 343]])]"
+ring.csv,1,250,AdaBoost,None,acc,0.8662162162162163,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,250,AdaBoost,None,f1,0.8661705062495473,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,250,AdaBoost,None,auc,0.8660868866470404,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,250,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",acc,0.9432432432432433,"[array([[355,  12],
+       [ 30, 343]])]"
+ring.csv,1,250,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",f1,0.9445853865173709,"[array([[353,  14],
+       [ 27, 346]])]"
+ring.csv,1,250,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",auc,0.9406900380594779,"[array([[352,  15],
+       [ 29, 344]])]"
+ring.csv,1,250,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,0.9445945945945946,"[array([[354,  13],
+       [ 28, 345]])]"
+ring.csv,1,250,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,0.9445756700133582,"[array([[355,  12],
+       [ 29, 344]])]"
+ring.csv,1,250,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,0.940646207566604,"[array([[350,  17],
+       [ 27, 346]])]"
+ring.csv,2,250,base,None,acc,0.8702702702702703,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,250,base,None,f1,0.8702607922991485,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,250,base,None,auc,0.8702179106004047,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,250,wagging,None,acc,0.9445945945945946,"[array([[357,  10],
+       [ 31, 342]])]"
+ring.csv,2,250,wagging,None,f1,0.9445627102324978,"[array([[357,  10],
+       [ 31, 342]])]"
+ring.csv,2,250,wagging,None,auc,0.9448210620128423,"[array([[357,  10],
+       [ 31, 342]])]"
+ring.csv,2,250,AdaBoost,None,acc,0.8743243243243243,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,250,AdaBoost,None,f1,0.874303433131669,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,250,AdaBoost,None,auc,0.8742393583215844,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,250,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",acc,0.9432432432432433,"[array([[357,  10],
+       [ 32, 341]])]"
+ring.csv,2,250,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",f1,0.9459111834802442,"[array([[358,   9],
+       [ 31, 342]])]"
+ring.csv,2,250,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",auc,0.9475020271602954,"[array([[357,  10],
+       [ 29, 344]])]"
+ring.csv,2,250,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9418918918918919,"[array([[357,  10],
+       [ 33, 340]])]"
+ring.csv,2,250,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9445627102324978,"[array([[357,  10],
+       [ 31, 342]])]"
+ring.csv,2,250,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9475239424067323,"[array([[358,   9],
+       [ 30, 343]])]"
+ring.csv,3,250,base,None,acc,0.8513513513513513,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,250,base,None,f1,0.8513513513513513,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,250,base,None,auc,0.8513415783360485,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,250,wagging,None,acc,0.9310810810810811,"[array([[351,  16],
+       [ 35, 338]])]"
+ring.csv,3,250,wagging,None,f1,0.9310499849740412,"[array([[351,  16],
+       [ 35, 338]])]"
+ring.csv,3,250,wagging,None,auc,0.9312847447969553,"[array([[351,  16],
+       [ 35, 338]])]"
+ring.csv,3,250,AdaBoost,None,acc,0.85,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,250,AdaBoost,None,f1,0.8499980823704094,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,250,AdaBoost,None,auc,0.849979180515885,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,250,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",acc,0.9337837837837838,"[array([[353,  14],
+       [ 35, 338]])]"
+ring.csv,3,250,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9337456780827413,"[array([[353,  14],
+       [ 35, 338]])]"
+ring.csv,3,250,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",auc,0.9379871576655879,"[array([[351,  16],
+       [ 30, 343]])]"
+ring.csv,3,250,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",acc,0.9351351351351351,"[array([[353,  14],
+       [ 34, 339]])]"
+ring.csv,3,250,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",f1,0.9378133116165032,"[array([[353,  14],
+       [ 32, 341]])]"
+ring.csv,3,250,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",auc,0.9366905055847353,"[array([[353,  14],
+       [ 33, 340]])]"
+ring.csv,4,250,base,None,acc,0.8810810810810811,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,250,base,None,f1,0.8810706544749097,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,250,base,None,auc,0.8810087373250343,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,250,wagging,None,acc,0.9351351351351351,"[array([[354,  12],
+       [ 36, 338]])]"
+ring.csv,4,250,wagging,None,f1,0.9350896279073074,"[array([[354,  12],
+       [ 36, 338]])]"
+ring.csv,4,250,wagging,None,auc,0.9354782151310599,"[array([[354,  12],
+       [ 36, 338]])]"
+ring.csv,4,250,AdaBoost,None,acc,0.8905405405405405,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,250,AdaBoost,None,f1,0.8905387412694009,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,250,AdaBoost,None,auc,0.8905131352093744,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,250,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",acc,0.9297297297297298,"[array([[354,  12],
+       [ 40, 334]])]"
+ring.csv,4,250,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",f1,0.9323632843369686,"[array([[355,  11],
+       [ 39, 335]])]"
+ring.csv,4,250,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",auc,0.9287352795067356,"[array([[352,  14],
+       [ 39, 335]])]"
+ring.csv,4,250,Incremental_Mixed_Bagging,"[[-2.0, 2.0]]",acc,0.9324324324324325,"[array([[352,  14],
+       [ 36, 338]])]"
+ring.csv,4,250,Incremental_Mixed_Bagging,"[[-2.0, 2.0]]",f1,0.9377942267445029,"[array([[355,  11],
+       [ 35, 339]])]"
+ring.csv,4,250,Incremental_Mixed_Bagging,"[[-2.0, 2.0]]",auc,0.9354197714853453,"[array([[352,  14],
+       [ 34, 340]])]"
+ring.csv,5,250,base,None,acc,0.8810810810810811,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,250,base,None,f1,0.8810836872184952,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,250,base,None,auc,0.8810964027936062,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,250,wagging,None,acc,0.9567567567567568,"[array([[361,   5],
+       [ 27, 347]])]"
+ring.csv,5,250,wagging,None,f1,0.956732425697943,"[array([[361,   5],
+       [ 27, 347]])]"
+ring.csv,5,250,wagging,None,auc,0.9570731422226118,"[array([[361,   5],
+       [ 27, 347]])]"
+ring.csv,5,250,AdaBoost,None,acc,0.8864864864864865,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,250,AdaBoost,None,f1,0.8864690727501287,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,250,AdaBoost,None,auc,0.8866777709593525,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,250,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 1.0]",acc,0.9594594594594594,"[array([[361,   5],
+       [ 25, 349]])]"
+ring.csv,5,250,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 1.0]",f1,0.9580872169154528,"[array([[361,   5],
+       [ 26, 348]])]"
+ring.csv,5,250,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 1.0]",auc,0.9557362438268899,"[array([[361,   5],
+       [ 28, 346]])]"
+ring.csv,5,250,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,0.9567567567567568,"[array([[361,   5],
+       [ 27, 347]])]"
+ring.csv,5,250,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,0.9594416868353038,"[array([[361,   5],
+       [ 25, 349]])]"
+ring.csv,5,250,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,0.9557070220040326,"[array([[360,   6],
+       [ 27, 347]])]"
+ring.csv,6,250,base,None,acc,0.8648648648648649,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,250,base,None,f1,0.8648332626233179,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,250,base,None,auc,0.8647321819935128,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,250,wagging,None,acc,0.9567567567567568,"[array([[360,   6],
+       [ 26, 348]])]"
+ring.csv,6,250,wagging,None,f1,0.9567377992909908,"[array([[360,   6],
+       [ 26, 348]])]"
+ring.csv,6,250,wagging,None,auc,0.9570439203997545,"[array([[360,   6],
+       [ 26, 348]])]"
+ring.csv,6,250,AdaBoost,None,acc,0.8675675675675676,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,250,AdaBoost,None,f1,0.8675365973708516,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,250,AdaBoost,None,auc,0.8674352006078139,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,250,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",acc,0.9527027027027027,"[array([[359,   7],
+       [ 28, 346]])]"
+ring.csv,6,250,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",f1,0.9608032957759284,"[array([[359,   7],
+       [ 22, 352]])]"
+ring.csv,6,250,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",auc,0.9557070220040326,"[array([[360,   6],
+       [ 27, 347]])]"
+ring.csv,6,250,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9540540540540541,"[array([[359,   7],
+       [ 27, 347]])]"
+ring.csv,6,250,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9513353572750834,"[array([[357,   9],
+       [ 27, 347]])]"
+ring.csv,6,250,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.955648578358318,"[array([[358,   8],
+       [ 25, 349]])]"
+ring.csv,7,250,base,None,acc,0.8959459459459459,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,250,base,None,f1,0.8959472761934999,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,250,base,None,auc,0.895948394260834,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,250,wagging,None,acc,0.9527027027027027,"[array([[356,  10],
+       [ 25, 349]])]"
+ring.csv,7,250,wagging,None,f1,0.9526936328330172,"[array([[356,  10],
+       [ 25, 349]])]"
+ring.csv,7,250,wagging,None,auc,0.9529163379211595,"[array([[356,  10],
+       [ 25, 349]])]"
+ring.csv,7,250,AdaBoost,None,acc,0.8932432432432432,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,250,AdaBoost,None,f1,0.8932446080426816,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,250,AdaBoost,None,auc,0.8932453756465328,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,250,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9540540540540541,"[array([[356,  10],
+       [ 24, 350]])]"
+ring.csv,7,250,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.9540500265342481,"[array([[355,  11],
+       [ 23, 351]])]"
+ring.csv,7,250,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9555901347126033,"[array([[356,  10],
+       [ 23, 351]])]"
+ring.csv,7,250,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9554054054054054,"[array([[356,  10],
+       [ 23, 351]])]"
+ring.csv,7,250,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9554027179587131,"[array([[355,  11],
+       [ 22, 352]])]"
+ring.csv,7,250,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.9569270331083253,"[array([[356,  10],
+       [ 22, 352]])]"
+ring.csv,8,250,base,None,acc,0.8621621621621621,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,250,base,None,f1,0.8621410107303524,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,250,base,None,auc,0.8620583852020689,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,250,wagging,None,acc,0.9391891891891891,"[array([[352,  14],
+       [ 31, 343]])]"
+ring.csv,8,250,wagging,None,f1,0.93917219607287,"[array([[352,  14],
+       [ 31, 343]])]"
+ring.csv,8,250,wagging,None,auc,0.939430466672511,"[array([[352,  14],
+       [ 31, 343]])]"
+ring.csv,8,250,AdaBoost,None,acc,0.85,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,250,AdaBoost,None,f1,0.8498834498834499,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,250,AdaBoost,None,auc,0.8497340814119986,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,250,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.95,"[array([[355,  11],
+       [ 26, 348]])]"
+ring.csv,8,250,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.9486407710060105,"[array([[354,  12],
+       [ 26, 348]])]"
+ring.csv,8,250,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9488764209111364,"[array([[355,  11],
+       [ 27, 347]])]"
+ring.csv,8,250,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",acc,0.9486486486486486,"[array([[355,  11],
+       [ 27, 347]])]"
+ring.csv,8,250,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",f1,0.9445734435920361,"[array([[355,  11],
+       [ 30, 344]])]"
+ring.csv,8,250,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",auc,0.9488764209111364,"[array([[355,  11],
+       [ 27, 347]])]"
+ring.csv,9,250,base,None,acc,0.8486486486486486,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,250,base,None,f1,0.848598868933764,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,250,base,None,auc,0.8484848484848486,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,250,wagging,None,acc,0.9391891891891891,"[array([[353,  13],
+       [ 32, 342]])]"
+ring.csv,9,250,wagging,None,f1,0.9391659746741859,"[array([[353,  13],
+       [ 32, 342]])]"
+ring.csv,9,250,wagging,None,auc,0.9394596884953684,"[array([[353,  13],
+       [ 32, 342]])]"
+ring.csv,9,250,AdaBoost,None,acc,0.8702702702702703,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,250,AdaBoost,None,f1,0.8702399321183851,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,250,AdaBoost,None,auc,0.8701382192221151,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,250,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9432432432432433,"[array([[354,  12],
+       [ 30, 344]])]"
+ring.csv,9,250,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.9472825699298204,"[array([[355,  11],
+       [ 28, 346]])]"
+ring.csv,9,250,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9515209958797229,"[array([[354,  12],
+       [ 24, 350]])]"
+ring.csv,9,250,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,0.9486486486486486,"[array([[355,  11],
+       [ 27, 347]])]"
+ring.csv,9,250,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",f1,0.9472825699298204,"[array([[355,  11],
+       [ 28, 346]])]"
+ring.csv,9,250,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",auc,0.9475395225154146,"[array([[355,  11],
+       [ 28, 346]])]"
+ring.csv,0,255,base,None,acc,0.8770270270270271,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,255,base,None,f1,0.8768995277160823,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,255,base,None,auc,0.8767888319904158,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,255,wagging,None,acc,0.9486486486486486,"[array([[357,  10],
+       [ 28, 345]])]"
+ring.csv,0,255,wagging,None,f1,0.9486283878571112,"[array([[357,  10],
+       [ 28, 345]])]"
+ring.csv,0,255,wagging,None,auc,0.948842509734022,"[array([[357,  10],
+       [ 28, 345]])]"
+ring.csv,0,255,AdaBoost,None,acc,0.8770270270270271,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,255,AdaBoost,None,f1,0.8768770103414801,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,255,AdaBoost,None,auc,0.8767669167439789,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,255,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9472972972972973,"[array([[355,  12],
+       [ 27, 346]])]"
+ring.csv,0,255,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.954044655684,"[array([[357,  10],
+       [ 24, 349]])]"
+ring.csv,0,255,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9501391618148745,"[array([[355,  12],
+       [ 25, 348]])]"
+ring.csv,0,255,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,0.9459459459459459,"[array([[355,  12],
+       [ 28, 345]])]"
+ring.csv,0,255,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",f1,0.9432266567937801,"[array([[354,  13],
+       [ 29, 344]])]"
+ring.csv,0,255,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",auc,0.9528420422087646,"[array([[356,  11],
+       [ 24, 349]])]"
+ring.csv,1,255,base,None,acc,0.8635135135135135,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,255,base,None,f1,0.8634159645368429,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,255,base,None,auc,0.8633182605138394,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,255,wagging,None,acc,0.9364864864864865,"[array([[351,  16],
+       [ 31, 342]])]"
+ring.csv,1,255,wagging,None,f1,0.936470826163604,"[array([[351,  16],
+       [ 31, 342]])]"
+ring.csv,1,255,wagging,None,auc,0.9366466750918614,"[array([[351,  16],
+       [ 31, 342]])]"
+ring.csv,1,255,AdaBoost,None,acc,0.8662162162162163,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,255,AdaBoost,None,f1,0.8661705062495473,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,255,AdaBoost,None,auc,0.8660868866470404,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,255,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",acc,0.95,"[array([[357,  10],
+       [ 27, 346]])]"
+ring.csv,1,255,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",f1,0.9459246187969591,"[array([[356,  11],
+       [ 29, 344]])]"
+ring.csv,1,255,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",auc,0.9379871576655879,"[array([[351,  16],
+       [ 30, 343]])]"
+ring.csv,1,255,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,0.9432432432432433,"[array([[353,  14],
+       [ 28, 345]])]"
+ring.csv,1,255,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",f1,0.941872044160351,"[array([[354,  13],
+       [ 30, 343]])]"
+ring.csv,1,255,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",auc,0.9393714707321884,"[array([[353,  14],
+       [ 31, 342]])]"
+ring.csv,2,255,base,None,acc,0.8702702702702703,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,255,base,None,f1,0.8702607922991485,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,255,base,None,auc,0.8702179106004047,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,255,wagging,None,acc,0.9459459459459459,"[array([[357,  10],
+       [ 30, 343]])]"
+ring.csv,2,255,wagging,None,f1,0.9459182970154757,"[array([[357,  10],
+       [ 30, 343]])]"
+ring.csv,2,255,wagging,None,auc,0.9461615445865689,"[array([[357,  10],
+       [ 30, 343]])]"
+ring.csv,2,255,AdaBoost,None,acc,0.8743243243243243,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,255,AdaBoost,None,f1,0.874303433131669,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,255,AdaBoost,None,auc,0.8742393583215844,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,255,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.95,"[array([[357,  10],
+       [ 27, 346]])]"
+ring.csv,2,255,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.9459111834802442,"[array([[358,   9],
+       [ 31, 342]])]"
+ring.csv,2,255,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.948842509734022,"[array([[357,  10],
+       [ 28, 345]])]"
+ring.csv,2,255,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,0.9513513513513514,"[array([[359,   8],
+       [ 28, 345]])]"
+ring.csv,2,255,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",f1,0.9486283878571112,"[array([[357,  10],
+       [ 28, 345]])]"
+ring.csv,2,255,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",auc,0.9421400968653894,"[array([[357,  10],
+       [ 33, 340]])]"
+ring.csv,3,255,base,None,acc,0.8513513513513513,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,255,base,None,f1,0.8513513513513513,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,255,base,None,auc,0.8513415783360485,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,255,wagging,None,acc,0.9324324324324325,"[array([[351,  16],
+       [ 34, 339]])]"
+ring.csv,3,255,wagging,None,f1,0.9324057734961991,"[array([[351,  16],
+       [ 34, 339]])]"
+ring.csv,3,255,wagging,None,auc,0.9326252273706818,"[array([[351,  16],
+       [ 34, 339]])]"
+ring.csv,3,255,AdaBoost,None,acc,0.85,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,255,AdaBoost,None,f1,0.8499980823704094,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,255,AdaBoost,None,auc,0.849979180515885,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,255,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",acc,0.9351351351351351,"[array([[353,  14],
+       [ 34, 339]])]"
+ring.csv,3,255,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",f1,0.940528377944,"[array([[352,  15],
+       [ 29, 344]])]"
+ring.csv,3,255,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",auc,0.9353281077645719,"[array([[352,  15],
+       [ 33, 340]])]"
+ring.csv,3,255,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",acc,0.9324324324324325,"[array([[351,  16],
+       [ 34, 339]])]"
+ring.csv,3,255,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",f1,0.9351161791928917,"[array([[351,  16],
+       [ 32, 341]])]"
+ring.csv,3,255,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",auc,0.9353500230110088,"[array([[353,  14],
+       [ 34, 339]])]"
+ring.csv,4,255,base,None,acc,0.8810810810810811,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,255,base,None,f1,0.8810706544749097,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,255,base,None,auc,0.8810087373250343,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,255,wagging,None,acc,0.9297297297297298,"[array([[350,  16],
+       [ 36, 338]])]"
+ring.csv,4,255,wagging,None,f1,0.9296989238478599,"[array([[350,  16],
+       [ 36, 338]])]"
+ring.csv,4,255,wagging,None,auc,0.9300137342567428,"[array([[350,  16],
+       [ 36, 338]])]"
+ring.csv,4,255,AdaBoost,None,acc,0.8905405405405405,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,255,AdaBoost,None,f1,0.8905387412694009,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,255,AdaBoost,None,auc,0.8905131352093744,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,255,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 3.0]",acc,0.9283783783783783,"[array([[351,  15],
+       [ 38, 336]])]"
+ring.csv,4,255,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 3.0]",f1,0.9350896279073074,"[array([[354,  12],
+       [ 36, 338]])]"
+ring.csv,4,255,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 3.0]",auc,0.9367858917039245,"[array([[353,  13],
+       [ 34, 340]])]"
+ring.csv,4,255,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9297297297297298,"[array([[353,  13],
+       [ 39, 335]])]"
+ring.csv,4,255,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9337323653180635,"[array([[354,  12],
+       [ 37, 337]])]"
+ring.csv,4,255,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.9368151135267817,"[array([[354,  12],
+       [ 35, 339]])]"
+ring.csv,5,255,base,None,acc,0.8810810810810811,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,255,base,None,f1,0.8810836872184952,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,255,base,None,auc,0.8810964027936062,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,255,wagging,None,acc,0.9581081081081081,"[array([[362,   4],
+       [ 27, 347]])]"
+ring.csv,5,255,wagging,None,f1,0.9580817044493682,"[array([[362,   4],
+       [ 27, 347]])]"
+ring.csv,5,255,wagging,None,auc,0.958439262441191,"[array([[362,   4],
+       [ 27, 347]])]"
+ring.csv,5,255,AdaBoost,None,acc,0.8864864864864865,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,255,AdaBoost,None,f1,0.8864690727501287,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,255,AdaBoost,None,auc,0.8866777709593525,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,255,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",acc,0.9594594594594594,"[array([[361,   5],
+       [ 25, 349]])]"
+ring.csv,5,255,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",f1,0.9594416868353038,"[array([[361,   5],
+       [ 25, 349]])]"
+ring.csv,5,255,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",auc,0.9597469390140556,"[array([[361,   5],
+       [ 25, 349]])]"
+ring.csv,5,255,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",acc,0.9581081081081081,"[array([[360,   6],
+       [ 25, 349]])]"
+ring.csv,5,255,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",f1,0.9580872169154528,"[array([[361,   5],
+       [ 26, 348]])]"
+ring.csv,5,255,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",auc,0.9610838374097775,"[array([[361,   5],
+       [ 24, 350]])]"
+ring.csv,6,255,base,None,acc,0.8648648648648649,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,255,base,None,f1,0.8648332626233179,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,255,base,None,auc,0.8647321819935128,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,255,wagging,None,acc,0.9567567567567568,"[array([[358,   8],
+       [ 24, 350]])]"
+ring.csv,6,255,wagging,None,f1,0.956746647585606,"[array([[358,   8],
+       [ 24, 350]])]"
+ring.csv,6,255,wagging,None,auc,0.9569854767540399,"[array([[358,   8],
+       [ 24, 350]])]"
+ring.csv,6,255,AdaBoost,None,acc,0.8675675675675676,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,255,AdaBoost,None,f1,0.8675365973708516,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,255,AdaBoost,None,auc,0.8674352006078139,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,255,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",acc,0.9554054054054054,"[array([[359,   7],
+       [ 26, 348]])]"
+ring.csv,6,255,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",f1,0.9567377992909908,"[array([[360,   6],
+       [ 26, 348]])]"
+ring.csv,6,255,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",auc,0.9557070220040326,"[array([[360,   6],
+       [ 27, 347]])]"
+ring.csv,6,255,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",acc,0.95,"[array([[357,   9],
+       [ 28, 346]])]"
+ring.csv,6,255,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",f1,0.9567377992909908,"[array([[360,   6],
+       [ 26, 348]])]"
+ring.csv,6,255,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",auc,0.9556778001811754,"[array([[359,   7],
+       [ 26, 348]])]"
+ring.csv,7,255,base,None,acc,0.8959459459459459,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,255,base,None,f1,0.8959472761934999,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,255,base,None,auc,0.895948394260834,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,255,wagging,None,acc,0.95,"[array([[353,  13],
+       [ 24, 350]])]"
+ring.csv,7,255,wagging,None,f1,0.9499969868021936,"[array([[353,  13],
+       [ 24, 350]])]"
+ring.csv,7,255,wagging,None,auc,0.9501548756611436,"[array([[353,  13],
+       [ 24, 350]])]"
+ring.csv,7,255,AdaBoost,None,acc,0.8932432432432432,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,255,AdaBoost,None,f1,0.8932446080426816,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,255,AdaBoost,None,auc,0.8932453756465328,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,255,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",acc,0.9554054054054054,"[array([[355,  11],
+       [ 22, 352]])]"
+ring.csv,7,255,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",f1,0.9499940647399899,"[array([[354,  12],
+       [ 25, 349]])]"
+ring.csv,7,255,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",auc,0.9528871160983022,"[array([[355,  11],
+       [ 24, 350]])]"
+ring.csv,7,255,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9513513513513514,"[array([[356,  10],
+       [ 26, 348]])]"
+ring.csv,7,255,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.958105583536973,"[array([[356,  10],
+       [ 21, 353]])]"
+ring.csv,7,255,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.9542240144940242,"[array([[355,  11],
+       [ 23, 351]])]"
+ring.csv,8,255,base,None,acc,0.8621621621621621,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,255,base,None,f1,0.8621410107303524,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,255,base,None,auc,0.8620583852020689,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,255,wagging,None,acc,0.9405405405405406,"[array([[353,  13],
+       [ 31, 343]])]"
+ring.csv,8,255,wagging,None,f1,0.9405209922251018,"[array([[353,  13],
+       [ 31, 343]])]"
+ring.csv,8,255,wagging,None,auc,0.9407965868910901,"[array([[353,  13],
+       [ 31, 343]])]"
+ring.csv,8,255,AdaBoost,None,acc,0.85,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,255,AdaBoost,None,f1,0.8498834498834499,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,255,AdaBoost,None,auc,0.8497340814119986,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,255,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9432432432432433,"[array([[353,  13],
+       [ 29, 345]])]"
+ring.csv,8,255,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.9459281747500926,"[array([[355,  11],
+       [ 29, 345]])]"
+ring.csv,8,255,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9461734022968352,"[array([[354,  12],
+       [ 28, 346]])]"
+ring.csv,8,255,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,0.9472972972972973,"[array([[354,  12],
+       [ 27, 347]])]"
+ring.csv,8,255,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,0.9459333094820077,"[array([[354,  12],
+       [ 28, 346]])]"
+ring.csv,8,255,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,0.9488764209111364,"[array([[355,  11],
+       [ 27, 347]])]"
+ring.csv,9,255,base,None,acc,0.8486486486486486,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,255,base,None,f1,0.848598868933764,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,255,base,None,auc,0.8484848484848486,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,255,wagging,None,acc,0.9391891891891891,"[array([[352,  14],
+       [ 31, 343]])]"
+ring.csv,9,255,wagging,None,f1,0.93917219607287,"[array([[352,  14],
+       [ 31, 343]])]"
+ring.csv,9,255,wagging,None,auc,0.939430466672511,"[array([[352,  14],
+       [ 31, 343]])]"
+ring.csv,9,255,AdaBoost,None,acc,0.8702702702702703,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,255,AdaBoost,None,f1,0.8702399321183851,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,255,AdaBoost,None,auc,0.8701382192221151,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,255,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",acc,0.9472972972972973,"[array([[355,  11],
+       [ 28, 346]])]"
+ring.csv,9,255,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",f1,0.9499940647399899,"[array([[354,  12],
+       [ 25, 349]])]"
+ring.csv,9,255,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",auc,0.9475103006925572,"[array([[354,  12],
+       [ 27, 347]])]"
+ring.csv,9,255,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,0.9527027027027027,"[array([[355,  11],
+       [ 24, 350]])]"
+ring.csv,9,255,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",f1,0.9459376536905374,"[array([[353,  13],
+       [ 27, 347]])]"
+ring.csv,9,255,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",auc,0.9502133193068585,"[array([[355,  11],
+       [ 26, 348]])]"
+ring.csv,0,260,base,None,acc,0.8770270270270271,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,260,base,None,f1,0.8768995277160823,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,260,base,None,auc,0.8767888319904158,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,260,wagging,None,acc,0.9513513513513514,"[array([[358,   9],
+       [ 27, 346]])]"
+ring.csv,0,260,wagging,None,f1,0.9513321569172632,"[array([[358,   9],
+       [ 27, 346]])]"
+ring.csv,0,260,wagging,None,auc,0.951545390127912,"[array([[358,   9],
+       [ 27, 346]])]"
+ring.csv,0,260,AdaBoost,None,acc,0.8770270270270271,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,260,AdaBoost,None,f1,0.8768770103414801,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,260,AdaBoost,None,auc,0.8767669167439789,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,260,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",acc,0.9486486486486486,"[array([[356,  11],
+       [ 27, 346]])]"
+ring.csv,0,260,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",f1,0.9445695957634449,"[array([[356,  11],
+       [ 30, 343]])]"
+ring.csv,0,260,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",auc,0.9447772315199684,"[array([[355,  12],
+       [ 29, 344]])]"
+ring.csv,0,260,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9540540540540541,"[array([[356,  11],
+       [ 23, 350]])]"
+ring.csv,0,260,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9499876716607095,"[array([[356,  11],
+       [ 26, 347]])]"
+ring.csv,0,260,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9488205944875849,"[array([[356,  11],
+       [ 27, 346]])]"
+ring.csv,1,260,base,None,acc,0.8635135135135135,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,260,base,None,f1,0.8634159645368429,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,260,base,None,auc,0.8633182605138394,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,260,wagging,None,acc,0.9351351351351351,"[array([[351,  16],
+       [ 32, 341]])]"
+ring.csv,1,260,wagging,None,f1,0.9351161791928917,"[array([[351,  16],
+       [ 32, 341]])]"
+ring.csv,1,260,wagging,None,auc,0.9353061925181348,"[array([[351,  16],
+       [ 32, 341]])]"
+ring.csv,1,260,AdaBoost,None,acc,0.8662162162162163,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,260,AdaBoost,None,f1,0.8661705062495473,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,260,AdaBoost,None,auc,0.8660868866470404,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,260,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 1.0]",acc,0.9378378378378378,"[array([[351,  16],
+       [ 30, 343]])]"
+ring.csv,1,260,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 1.0]",f1,0.9378133116165032,"[array([[353,  14],
+       [ 32, 341]])]"
+ring.csv,1,260,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 1.0]",auc,0.9420524358796414,"[array([[353,  14],
+       [ 29, 344]])]"
+ring.csv,1,260,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,0.9418918918918919,"[array([[352,  15],
+       [ 28, 345]])]"
+ring.csv,1,260,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,0.9445853865173709,"[array([[353,  14],
+       [ 27, 346]])]"
+ring.csv,1,260,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,0.9420305206332045,"[array([[352,  15],
+       [ 28, 345]])]"
+ring.csv,2,260,base,None,acc,0.8702702702702703,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,260,base,None,f1,0.8702607922991485,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,260,base,None,auc,0.8702179106004047,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,260,wagging,None,acc,0.9432432432432433,"[array([[357,  10],
+       [ 32, 341]])]"
+ring.csv,2,260,wagging,None,f1,0.9432067426542566,"[array([[357,  10],
+       [ 32, 341]])]"
+ring.csv,2,260,wagging,None,auc,0.9434805794391158,"[array([[357,  10],
+       [ 32, 341]])]"
+ring.csv,2,260,AdaBoost,None,acc,0.8743243243243243,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,260,AdaBoost,None,f1,0.874303433131669,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,260,AdaBoost,None,auc,0.8742393583215844,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,260,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9486486486486486,"[array([[358,   9],
+       [ 29, 344]])]"
+ring.csv,2,260,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.9432067426542566,"[array([[357,  10],
+       [ 32, 341]])]"
+ring.csv,2,260,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9475020271602954,"[array([[357,  10],
+       [ 29, 344]])]"
+ring.csv,2,260,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9445945945945946,"[array([[357,  10],
+       [ 31, 342]])]"
+ring.csv,2,260,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.9418316766760273,"[array([[359,   8],
+       [ 35, 338]])]"
+ring.csv,2,260,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.9421839273582632,"[array([[359,   8],
+       [ 35, 338]])]"
+ring.csv,3,260,base,None,acc,0.8513513513513513,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,260,base,None,f1,0.8513513513513513,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,260,base,None,auc,0.8513415783360485,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,260,wagging,None,acc,0.9378378378378378,"[array([[352,  15],
+       [ 31, 342]])]"
+ring.csv,3,260,wagging,None,f1,0.937819671726521,"[array([[352,  15],
+       [ 31, 342]])]"
+ring.csv,3,260,wagging,None,auc,0.9380090729120247,"[array([[352,  15],
+       [ 31, 342]])]"
+ring.csv,3,260,AdaBoost,None,acc,0.85,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,260,AdaBoost,None,f1,0.8499980823704094,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,260,AdaBoost,None,auc,0.849979180515885,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,260,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",acc,0.9378378378378378,"[array([[354,  13],
+       [ 33, 340]])]"
+ring.csv,3,260,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",f1,0.9378133116165032,"[array([[353,  14],
+       [ 32, 341]])]"
+ring.csv,3,260,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",auc,0.9366685903382983,"[array([[352,  15],
+       [ 32, 341]])]"
+ring.csv,3,260,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9378378378378378,"[array([[354,  13],
+       [ 33, 340]])]"
+ring.csv,3,260,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9378060415677971,"[array([[354,  13],
+       [ 33, 340]])]"
+ring.csv,3,260,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9420743511260784,"[array([[354,  13],
+       [ 30, 343]])]"
+ring.csv,4,260,base,None,acc,0.8810810810810811,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,260,base,None,f1,0.8810706544749097,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,260,base,None,auc,0.8810087373250343,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,260,wagging,None,acc,0.9297297297297298,"[array([[351,  15],
+       [ 37, 337]])]"
+ring.csv,4,260,wagging,None,f1,0.9296901917591572,"[array([[351,  15],
+       [ 37, 337]])]"
+ring.csv,4,260,wagging,None,auc,0.9300429560796002,"[array([[351,  15],
+       [ 37, 337]])]"
+ring.csv,4,260,AdaBoost,None,acc,0.8905405405405405,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,260,AdaBoost,None,f1,0.8905387412694009,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,260,AdaBoost,None,auc,0.8905131352093744,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,260,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.927027027027027,"[array([[352,  14],
+       [ 40, 334]])]"
+ring.csv,4,260,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.9309912587560278,"[array([[356,  10],
+       [ 41, 333]])]"
+ring.csv,4,260,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9314967417667513,"[array([[355,  11],
+       [ 40, 334]])]"
+ring.csv,4,260,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",acc,0.9310810810810811,"[array([[353,  13],
+       [ 38, 336]])]"
+ring.csv,4,260,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",f1,0.9350986385469143,"[array([[353,  13],
+       [ 35, 339]])]"
+ring.csv,4,260,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",auc,0.9340828730896232,"[array([[352,  14],
+       [ 35, 339]])]"
+ring.csv,5,260,base,None,acc,0.8810810810810811,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,260,base,None,f1,0.8810836872184952,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,260,base,None,auc,0.8810964027936062,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,260,wagging,None,acc,0.9581081081081081,"[array([[361,   5],
+       [ 26, 348]])]"
+ring.csv,5,260,wagging,None,f1,0.9580872169154528,"[array([[361,   5],
+       [ 26, 348]])]"
+ring.csv,5,260,wagging,None,auc,0.9584100406183338,"[array([[361,   5],
+       [ 26, 348]])]"
+ring.csv,5,260,AdaBoost,None,acc,0.8864864864864865,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,260,AdaBoost,None,f1,0.8864690727501287,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,260,AdaBoost,None,auc,0.8866777709593525,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,260,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",acc,0.9567567567567568,"[array([[360,   6],
+       [ 26, 348]])]"
+ring.csv,5,260,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",f1,0.9594416868353038,"[array([[361,   5],
+       [ 25, 349]])]"
+ring.csv,5,260,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",auc,0.9597469390140556,"[array([[361,   5],
+       [ 25, 349]])]"
+ring.csv,5,260,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9554054054054054,"[array([[360,   6],
+       [ 27, 347]])]"
+ring.csv,5,260,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.9580872169154528,"[array([[361,   5],
+       [ 26, 348]])]"
+ring.csv,5,260,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.9570731422226118,"[array([[361,   5],
+       [ 27, 347]])]"
+ring.csv,6,260,base,None,acc,0.8648648648648649,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,260,base,None,f1,0.8648332626233179,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,260,base,None,auc,0.8647321819935128,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,260,wagging,None,acc,0.95,"[array([[356,  10],
+       [ 27, 347]])]"
+ring.csv,6,260,wagging,None,f1,0.9499860278821373,"[array([[356,  10],
+       [ 27, 347]])]"
+ring.csv,6,260,wagging,None,auc,0.9502425411297156,"[array([[356,  10],
+       [ 27, 347]])]"
+ring.csv,6,260,AdaBoost,None,acc,0.8675675675675676,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,260,AdaBoost,None,f1,0.8675365973708516,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,260,AdaBoost,None,auc,0.8674352006078139,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,260,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9540540540540541,"[array([[359,   7],
+       [ 27, 347]])]"
+ring.csv,6,260,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.9540282023040644,"[array([[360,   6],
+       [ 28, 346]])]"
+ring.csv,6,260,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9570146985768971,"[array([[359,   7],
+       [ 25, 349]])]"
+ring.csv,6,260,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,0.9540540540540541,"[array([[357,   9],
+       [ 25, 349]])]"
+ring.csv,6,260,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,0.9580964017390882,"[array([[359,   7],
+       [ 24, 350]])]"
+ring.csv,6,260,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,0.9569854767540399,"[array([[358,   8],
+       [ 24, 350]])]"
+ring.csv,7,260,base,None,acc,0.8959459459459459,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,260,base,None,f1,0.8959472761934999,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,260,base,None,auc,0.895948394260834,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,260,wagging,None,acc,0.9486486486486486,"[array([[355,  11],
+       [ 27, 347]])]"
+ring.csv,7,260,wagging,None,f1,0.9486366440079073,"[array([[355,  11],
+       [ 27, 347]])]"
+ring.csv,7,260,wagging,None,auc,0.9488764209111364,"[array([[355,  11],
+       [ 27, 347]])]"
+ring.csv,7,260,AdaBoost,None,acc,0.8932432432432432,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,260,AdaBoost,None,f1,0.8932446080426816,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,260,AdaBoost,None,auc,0.8932453756465328,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,260,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",acc,0.9540540540540541,"[array([[356,  10],
+       [ 24, 350]])]"
+ring.csv,7,260,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",f1,0.9513399785338068,"[array([[356,  10],
+       [ 26, 348]])]"
+ring.csv,7,260,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",auc,0.9555901347126033,"[array([[356,  10],
+       [ 23, 351]])]"
+ring.csv,7,260,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9486486486486486,"[array([[356,  10],
+       [ 28, 346]])]"
+ring.csv,7,260,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9554001117951262,"[array([[356,  10],
+       [ 23, 351]])]"
+ring.csv,7,260,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9542532363168814,"[array([[356,  10],
+       [ 24, 350]])]"
+ring.csv,8,260,base,None,acc,0.8621621621621621,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,260,base,None,f1,0.8621410107303524,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,260,base,None,auc,0.8620583852020689,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,260,wagging,None,acc,0.9459459459459459,"[array([[354,  12],
+       [ 28, 346]])]"
+ring.csv,8,260,wagging,None,f1,0.9459333094820077,"[array([[354,  12],
+       [ 28, 346]])]"
+ring.csv,8,260,wagging,None,auc,0.9461734022968352,"[array([[354,  12],
+       [ 28, 346]])]"
+ring.csv,8,260,AdaBoost,None,acc,0.85,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,260,AdaBoost,None,f1,0.8498834498834499,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,260,AdaBoost,None,auc,0.8497340814119986,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,260,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",acc,0.9472972972972973,"[array([[354,  12],
+       [ 27, 347]])]"
+ring.csv,8,260,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",f1,0.9499860278821373,"[array([[356,  10],
+       [ 27, 347]])]"
+ring.csv,8,260,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",auc,0.9515794395254376,"[array([[356,  10],
+       [ 26, 348]])]"
+ring.csv,8,260,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9459459459459459,"[array([[353,  13],
+       [ 27, 347]])]"
+ring.csv,8,260,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9459281747500926,"[array([[355,  11],
+       [ 29, 345]])]"
+ring.csv,8,260,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.9488764209111364,"[array([[355,  11],
+       [ 27, 347]])]"
+ring.csv,9,260,base,None,acc,0.8486486486486486,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,260,base,None,f1,0.848598868933764,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,260,base,None,auc,0.8484848484848486,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,260,wagging,None,acc,0.9364864864864865,"[array([[352,  14],
+       [ 33, 341]])]"
+ring.csv,9,260,wagging,None,f1,0.9364622402152609,"[array([[352,  14],
+       [ 33, 341]])]"
+ring.csv,9,260,wagging,None,auc,0.936756669881067,"[array([[352,  14],
+       [ 33, 341]])]"
+ring.csv,9,260,AdaBoost,None,acc,0.8702702702702703,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,260,AdaBoost,None,f1,0.8702399321183851,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,260,AdaBoost,None,auc,0.8701382192221151,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,260,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",acc,0.9486486486486486,"[array([[354,  12],
+       [ 26, 348]])]"
+ring.csv,9,260,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9486407710060105,"[array([[354,  12],
+       [ 26, 348]])]"
+ring.csv,9,260,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.9475395225154146,"[array([[355,  11],
+       [ 28, 346]])]"
+ring.csv,9,260,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",acc,0.9432432432432433,"[array([[354,  12],
+       [ 30, 344]])]"
+ring.csv,9,260,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",f1,0.9486407710060105,"[array([[354,  12],
+       [ 26, 348]])]"
+ring.csv,9,260,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",auc,0.9502133193068585,"[array([[355,  11],
+       [ 26, 348]])]"
+ring.csv,0,265,base,None,acc,0.8770270270270271,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,265,base,None,f1,0.8768995277160823,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,265,base,None,auc,0.8767888319904158,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,265,wagging,None,acc,0.9513513513513514,"[array([[357,  10],
+       [ 26, 347]])]"
+ring.csv,0,265,wagging,None,f1,0.9513371343946684,"[array([[357,  10],
+       [ 26, 347]])]"
+ring.csv,0,265,wagging,None,auc,0.951523474881475,"[array([[357,  10],
+       [ 26, 347]])]"
+ring.csv,0,265,AdaBoost,None,acc,0.8770270270270271,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,265,AdaBoost,None,f1,0.8768770103414801,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,265,AdaBoost,None,auc,0.8767669167439789,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,265,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",acc,0.9513513513513514,"[array([[357,  10],
+       [ 26, 347]])]"
+ring.csv,0,265,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",f1,0.9459301493274094,"[array([[355,  12],
+       [ 28, 345]])]"
+ring.csv,0,265,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 3.0]",auc,0.9474581966674215,"[array([[355,  12],
+       [ 27, 346]])]"
+ring.csv,0,265,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",acc,0.9527027027027027,"[array([[358,   9],
+       [ 26, 347]])]"
+ring.csv,0,265,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",f1,0.9459388382984529,"[array([[353,  14],
+       [ 26, 347]])]"
+ring.csv,0,265,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",auc,0.9515015596350381,"[array([[356,  11],
+       [ 25, 348]])]"
+ring.csv,1,265,base,None,acc,0.8635135135135135,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,265,base,None,f1,0.8634159645368429,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,265,base,None,auc,0.8633182605138394,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,265,wagging,None,acc,0.9364864864864865,"[array([[352,  15],
+       [ 32, 341]])]"
+ring.csv,1,265,wagging,None,f1,0.9364647924543373,"[array([[352,  15],
+       [ 32, 341]])]"
+ring.csv,1,265,wagging,None,auc,0.9366685903382983,"[array([[352,  15],
+       [ 32, 341]])]"
+ring.csv,1,265,AdaBoost,None,acc,0.8662162162162163,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,265,AdaBoost,None,f1,0.8661705062495473,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,265,AdaBoost,None,auc,0.8660868866470404,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,265,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",acc,0.9418918918918919,"[array([[353,  14],
+       [ 29, 344]])]"
+ring.csv,1,265,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",f1,0.941872044160351,"[array([[354,  13],
+       [ 30, 343]])]"
+ring.csv,1,265,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",auc,0.940711953305915,"[array([[353,  14],
+       [ 30, 343]])]"
+ring.csv,1,265,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9486486486486486,"[array([[356,  11],
+       [ 27, 346]])]"
+ring.csv,1,265,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9405231642601507,"[array([[353,  14],
+       [ 30, 343]])]"
+ring.csv,1,265,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9475020271602954,"[array([[357,  10],
+       [ 29, 344]])]"
+ring.csv,2,265,base,None,acc,0.8702702702702703,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,265,base,None,f1,0.8702607922991485,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,265,base,None,auc,0.8702179106004047,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,265,wagging,None,acc,0.9445945945945946,"[array([[357,  10],
+       [ 31, 342]])]"
+ring.csv,2,265,wagging,None,f1,0.9445627102324978,"[array([[357,  10],
+       [ 31, 342]])]"
+ring.csv,2,265,wagging,None,auc,0.9448210620128423,"[array([[357,  10],
+       [ 31, 342]])]"
+ring.csv,2,265,AdaBoost,None,acc,0.8743243243243243,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,265,AdaBoost,None,f1,0.874303433131669,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,265,AdaBoost,None,auc,0.8742393583215844,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,265,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9432432432432433,"[array([[357,  10],
+       [ 32, 341]])]"
+ring.csv,2,265,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.9459111834802442,"[array([[358,   9],
+       [ 31, 342]])]"
+ring.csv,2,265,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9448210620128423,"[array([[357,  10],
+       [ 31, 342]])]"
+ring.csv,2,265,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,0.9472972972972973,"[array([[358,   9],
+       [ 30, 343]])]"
+ring.csv,2,265,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",f1,0.9459182970154757,"[array([[357,  10],
+       [ 30, 343]])]"
+ring.csv,2,265,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",auc,0.9461615445865689,"[array([[357,  10],
+       [ 30, 343]])]"
+ring.csv,3,265,base,None,acc,0.8513513513513513,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,265,base,None,f1,0.8513513513513513,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,265,base,None,auc,0.8513415783360485,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,265,wagging,None,acc,0.9364864864864865,"[array([[350,  17],
+       [ 30, 343]])]"
+ring.csv,3,265,wagging,None,f1,0.9364759308857665,"[array([[350,  17],
+       [ 30, 343]])]"
+ring.csv,3,265,wagging,None,auc,0.9366247598454245,"[array([[350,  17],
+       [ 30, 343]])]"
+ring.csv,3,265,AdaBoost,None,acc,0.85,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,265,AdaBoost,None,f1,0.8499980823704094,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,265,AdaBoost,None,auc,0.849979180515885,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,265,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",acc,0.9364864864864865,"[array([[352,  15],
+       [ 32, 341]])]"
+ring.csv,3,265,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",f1,0.940528377944,"[array([[352,  15],
+       [ 29, 344]])]"
+ring.csv,3,265,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",auc,0.9393933859786254,"[array([[354,  13],
+       [ 32, 341]])]"
+ring.csv,3,265,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9405405405405406,"[array([[353,  14],
+       [ 30, 343]])]"
+ring.csv,3,265,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9391684183073442,"[array([[353,  14],
+       [ 31, 342]])]"
+ring.csv,3,265,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9393714707321884,"[array([[353,  14],
+       [ 31, 342]])]"
+ring.csv,4,265,base,None,acc,0.8810810810810811,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,265,base,None,f1,0.8810706544749097,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,265,base,None,auc,0.8810087373250343,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,265,wagging,None,acc,0.927027027027027,"[array([[350,  16],
+       [ 38, 336]])]"
+ring.csv,4,265,wagging,None,f1,0.9269859683652787,"[array([[350,  16],
+       [ 38, 336]])]"
+ring.csv,4,265,wagging,None,auc,0.9273399374652991,"[array([[350,  16],
+       [ 38, 336]])]"
+ring.csv,4,265,AdaBoost,None,acc,0.8905405405405405,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,265,AdaBoost,None,f1,0.8905387412694009,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,265,AdaBoost,None,auc,0.8905131352093744,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,265,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",acc,0.9351351351351351,"[array([[355,  11],
+       [ 37, 337]])]"
+ring.csv,4,265,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",f1,0.9337217105051635,"[array([[355,  11],
+       [ 38, 336]])]"
+ring.csv,4,265,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",auc,0.9327751965167587,"[array([[353,  13],
+       [ 37, 337]])]"
+ring.csv,4,265,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9351351351351351,"[array([[355,  11],
+       [ 37, 337]])]"
+ring.csv,4,265,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9350986385469143,"[array([[353,  13],
+       [ 35, 339]])]"
+ring.csv,4,265,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.9368151135267817,"[array([[354,  12],
+       [ 35, 339]])]"
+ring.csv,5,265,base,None,acc,0.8810810810810811,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,265,base,None,f1,0.8810836872184952,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,265,base,None,auc,0.8810964027936062,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,265,wagging,None,acc,0.9581081081081081,"[array([[362,   4],
+       [ 27, 347]])]"
+ring.csv,5,265,wagging,None,f1,0.9580817044493682,"[array([[362,   4],
+       [ 27, 347]])]"
+ring.csv,5,265,wagging,None,auc,0.958439262441191,"[array([[362,   4],
+       [ 27, 347]])]"
+ring.csv,5,265,AdaBoost,None,acc,0.8864864864864865,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,265,AdaBoost,None,f1,0.8864690727501287,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,265,AdaBoost,None,auc,0.8866777709593525,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,265,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",acc,0.9540540540540541,"[array([[360,   6],
+       [ 28, 346]])]"
+ring.csv,5,265,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",f1,0.9580872169154528,"[array([[361,   5],
+       [ 26, 348]])]"
+ring.csv,5,265,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 2.0]",auc,0.9610838374097775,"[array([[361,   5],
+       [ 24, 350]])]"
+ring.csv,5,265,Incremental_Mixed_Bagging,"[[-2.0, 2.0]]",acc,0.9608108108108108,"[array([[361,   5],
+       [ 24, 350]])]"
+ring.csv,5,265,Incremental_Mixed_Bagging,"[[-2.0, 2.0]]",f1,0.956732425697943,"[array([[361,   5],
+       [ 27, 347]])]"
+ring.csv,5,265,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.9570439203997545,"[array([[360,   6],
+       [ 26, 348]])]"
+ring.csv,6,265,base,None,acc,0.8648648648648649,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,265,base,None,f1,0.8648332626233179,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,265,base,None,auc,0.8647321819935128,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,265,wagging,None,acc,0.9513513513513514,"[array([[357,   9],
+       [ 27, 347]])]"
+ring.csv,6,265,wagging,None,f1,0.9513353572750834,"[array([[357,   9],
+       [ 27, 347]])]"
+ring.csv,6,265,wagging,None,auc,0.9516086613482949,"[array([[357,   9],
+       [ 27, 347]])]"
+ring.csv,6,265,AdaBoost,None,acc,0.8675675675675676,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,265,AdaBoost,None,f1,0.8675365973708516,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,265,AdaBoost,None,auc,0.8674352006078139,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,265,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",acc,0.9554054054054054,"[array([[360,   6],
+       [ 27, 347]])]"
+ring.csv,6,265,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",f1,0.9553883814277365,"[array([[359,   7],
+       [ 26, 348]])]"
+ring.csv,6,265,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",auc,0.9530040033897315,"[array([[359,   7],
+       [ 28, 346]])]"
+ring.csv,6,265,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9554054054054054,"[array([[358,   8],
+       [ 25, 349]])]"
+ring.csv,6,265,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9526791158722855,"[array([[359,   7],
+       [ 28, 346]])]"
+ring.csv,6,265,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.952974781566874,"[array([[358,   8],
+       [ 27, 347]])]"
+ring.csv,7,265,base,None,acc,0.8959459459459459,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,265,base,None,f1,0.8959472761934999,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,265,base,None,auc,0.895948394260834,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,265,wagging,None,acc,0.9567567567567568,"[array([[357,   9],
+       [ 23, 351]])]"
+ring.csv,7,265,wagging,None,f1,0.9567501229524298,"[array([[357,   9],
+       [ 23, 351]])]"
+ring.csv,7,265,wagging,None,auc,0.9569562549311825,"[array([[357,   9],
+       [ 23, 351]])]"
+ring.csv,7,265,AdaBoost,None,acc,0.8932432432432432,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,265,AdaBoost,None,f1,0.8932446080426816,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,265,AdaBoost,None,auc,0.8932453756465328,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,265,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9527027027027027,"[array([[356,  10],
+       [ 25, 349]])]"
+ring.csv,7,265,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",f1,0.958105583536973,"[array([[356,  10],
+       [ 21, 353]])]"
+ring.csv,7,265,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",auc,0.9542240144940242,"[array([[355,  11],
+       [ 23, 351]])]"
+ring.csv,7,265,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9567567567567568,"[array([[357,   9],
+       [ 23, 351]])]"
+ring.csv,7,265,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9554027179587131,"[array([[355,  11],
+       [ 22, 352]])]"
+ring.csv,7,265,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",auc,0.9542532363168814,"[array([[356,  10],
+       [ 24, 350]])]"
+ring.csv,8,265,base,None,acc,0.8621621621621621,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,265,base,None,f1,0.8621410107303524,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,265,base,None,auc,0.8620583852020689,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,265,wagging,None,acc,0.9405405405405406,"[array([[352,  14],
+       [ 30, 344]])]"
+ring.csv,8,265,wagging,None,f1,0.9405266404302085,"[array([[352,  14],
+       [ 30, 344]])]"
+ring.csv,8,265,wagging,None,auc,0.940767365068233,"[array([[352,  14],
+       [ 30, 344]])]"
+ring.csv,8,265,AdaBoost,None,acc,0.85,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,265,AdaBoost,None,f1,0.8498834498834499,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,265,AdaBoost,None,auc,0.8497340814119986,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,265,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9432432432432433,"[array([[352,  14],
+       [ 28, 346]])]"
+ring.csv,8,265,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.9486317660125881,"[array([[356,  10],
+       [ 28, 346]])]"
+ring.csv,8,265,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.946144180473978,"[array([[353,  13],
+       [ 27, 347]])]"
+ring.csv,8,265,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.95,"[array([[354,  12],
+       [ 25, 349]])]"
+ring.csv,8,265,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9513470869186156,"[array([[354,  12],
+       [ 24, 350]])]"
+ring.csv,8,265,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.943470383682534,"[array([[353,  13],
+       [ 29, 345]])]"
+ring.csv,9,265,base,None,acc,0.8486486486486486,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,265,base,None,f1,0.848598868933764,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,265,base,None,auc,0.8484848484848486,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,265,wagging,None,acc,0.9459459459459459,"[array([[353,  13],
+       [ 27, 347]])]"
+ring.csv,9,265,wagging,None,f1,0.9459376536905374,"[array([[353,  13],
+       [ 27, 347]])]"
+ring.csv,9,265,wagging,None,auc,0.946144180473978,"[array([[353,  13],
+       [ 27, 347]])]"
+ring.csv,9,265,AdaBoost,None,acc,0.8702702702702703,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,265,AdaBoost,None,f1,0.8702399321183851,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,265,AdaBoost,None,auc,0.8701382192221151,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,265,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",acc,0.9445945945945946,"[array([[353,  13],
+       [ 28, 346]])]"
+ring.csv,9,265,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",f1,0.9459281747500926,"[array([[355,  11],
+       [ 29, 345]])]"
+ring.csv,9,265,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 2.0]",auc,0.9462318459425499,"[array([[356,  10],
+       [ 30, 344]])]"
+ring.csv,9,265,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.95,"[array([[355,  11],
+       [ 26, 348]])]"
+ring.csv,9,265,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.9445734435920361,"[array([[355,  11],
+       [ 30, 344]])]"
+ring.csv,9,265,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.9502425411297156,"[array([[356,  10],
+       [ 27, 347]])]"
+ring.csv,0,270,base,None,acc,0.8770270270270271,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,270,base,None,f1,0.8768995277160823,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,270,base,None,auc,0.8767888319904158,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,270,wagging,None,acc,0.9432432432432433,"[array([[354,  13],
+       [ 29, 344]])]"
+ring.csv,0,270,wagging,None,f1,0.9432266567937801,"[array([[354,  13],
+       [ 29, 344]])]"
+ring.csv,0,270,wagging,None,auc,0.943414833699805,"[array([[354,  13],
+       [ 29, 344]])]"
+ring.csv,0,270,AdaBoost,None,acc,0.8770270270270271,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,270,AdaBoost,None,f1,0.8768770103414801,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,270,AdaBoost,None,auc,0.8767669167439789,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,270,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",acc,0.9513513513513514,"[array([[357,  10],
+       [ 26, 347]])]"
+ring.csv,0,270,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",f1,0.947279295866365,"[array([[356,  11],
+       [ 28, 345]])]"
+ring.csv,0,270,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",auc,0.951545390127912,"[array([[358,   9],
+       [ 27, 346]])]"
+ring.csv,0,270,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9554054054054054,"[array([[355,  12],
+       [ 21, 352]])]"
+ring.csv,0,270,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9526910407601306,"[array([[357,  10],
+       [ 25, 348]])]"
+ring.csv,0,270,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9515015596350381,"[array([[356,  11],
+       [ 25, 348]])]"
+ring.csv,1,270,base,None,acc,0.8635135135135135,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,270,base,None,f1,0.8634159645368429,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,270,base,None,auc,0.8633182605138394,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,270,wagging,None,acc,0.9364864864864865,"[array([[351,  16],
+       [ 31, 342]])]"
+ring.csv,1,270,wagging,None,f1,0.936470826163604,"[array([[351,  16],
+       [ 31, 342]])]"
+ring.csv,1,270,wagging,None,auc,0.9366466750918614,"[array([[351,  16],
+       [ 31, 342]])]"
+ring.csv,1,270,AdaBoost,None,acc,0.8662162162162163,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,270,AdaBoost,None,f1,0.8661705062495473,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,270,AdaBoost,None,auc,0.8660868866470404,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,270,Grouped_Mixed_Bagging,"[[0.1, 0.8, 0.1], 1.0]",acc,0.9378378378378378,"[array([[352,  15],
+       [ 31, 342]])]"
+ring.csv,1,270,Grouped_Mixed_Bagging,"[[0.1, 0.8, 0.1], 1.0]",f1,0.936470826163604,"[array([[351,  16],
+       [ 31, 342]])]"
+ring.csv,1,270,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",auc,0.9447991467664054,"[array([[356,  11],
+       [ 30, 343]])]"
+ring.csv,1,270,Incremental_Mixed_Bagging,"[[-2.0, 2.0]]",acc,0.9459459459459459,"[array([[353,  14],
+       [ 26, 347]])]"
+ring.csv,1,270,Incremental_Mixed_Bagging,"[[-2.0, 2.0]]",f1,0.9432208497368071,"[array([[355,  12],
+       [ 30, 343]])]"
+ring.csv,1,270,Incremental_Mixed_Bagging,"[[-2.0, 2.0]]",auc,0.9447553162735315,"[array([[354,  13],
+       [ 28, 345]])]"
+ring.csv,2,270,base,None,acc,0.8702702702702703,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,270,base,None,f1,0.8702607922991485,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,270,base,None,auc,0.8702179106004047,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,270,wagging,None,acc,0.9445945945945946,"[array([[357,  10],
+       [ 31, 342]])]"
+ring.csv,2,270,wagging,None,f1,0.9445627102324978,"[array([[357,  10],
+       [ 31, 342]])]"
+ring.csv,2,270,wagging,None,auc,0.9448210620128423,"[array([[357,  10],
+       [ 31, 342]])]"
+ring.csv,2,270,AdaBoost,None,acc,0.8743243243243243,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,270,AdaBoost,None,f1,0.874303433131669,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,270,AdaBoost,None,auc,0.8742393583215844,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,270,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",acc,0.9472972972972973,"[array([[357,  10],
+       [ 29, 344]])]"
+ring.csv,2,270,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9418503793509959,"[array([[357,  10],
+       [ 33, 340]])]"
+ring.csv,2,270,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.9475239424067323,"[array([[358,   9],
+       [ 30, 343]])]"
+ring.csv,2,270,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.95,"[array([[357,  10],
+       [ 27, 346]])]"
+ring.csv,2,270,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9459246187969591,"[array([[356,  11],
+       [ 29, 344]])]"
+ring.csv,2,270,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.948842509734022,"[array([[357,  10],
+       [ 28, 345]])]"
+ring.csv,3,270,base,None,acc,0.8513513513513513,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,270,base,None,f1,0.8513513513513513,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,270,base,None,auc,0.8513415783360485,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,270,wagging,None,acc,0.9283783783783783,"[array([[350,  17],
+       [ 36, 337]])]"
+ring.csv,3,270,wagging,None,f1,0.9283460628161603,"[array([[350,  17],
+       [ 36, 337]])]"
+ring.csv,3,270,wagging,None,auc,0.9285818644030651,"[array([[350,  17],
+       [ 36, 337]])]"
+ring.csv,3,270,AdaBoost,None,acc,0.85,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,270,AdaBoost,None,f1,0.8499980823704094,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,270,AdaBoost,None,auc,0.849979180515885,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,270,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",acc,0.9351351351351351,"[array([[353,  14],
+       [ 34, 339]])]"
+ring.csv,3,270,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.935109542556351,"[array([[352,  15],
+       [ 33, 340]])]"
+ring.csv,3,270,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.9353281077645719,"[array([[352,  15],
+       [ 33, 340]])]"
+ring.csv,3,270,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,0.9405405405405406,"[array([[353,  14],
+       [ 30, 343]])]"
+ring.csv,3,270,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",f1,0.9378133116165032,"[array([[353,  14],
+       [ 32, 341]])]"
+ring.csv,3,270,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",auc,0.9407338685523519,"[array([[354,  13],
+       [ 31, 342]])]"
+ring.csv,4,270,base,None,acc,0.8810810810810811,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,270,base,None,f1,0.8810706544749097,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,270,base,None,auc,0.8810087373250343,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,270,wagging,None,acc,0.9337837837837838,"[array([[352,  14],
+       [ 35, 339]])]"
+ring.csv,4,270,wagging,None,f1,0.9337507622211997,"[array([[352,  14],
+       [ 35, 339]])]"
+ring.csv,4,270,wagging,None,auc,0.9340828730896232,"[array([[352,  14],
+       [ 35, 339]])]"
+ring.csv,4,270,AdaBoost,None,acc,0.8905405405405405,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,270,AdaBoost,None,f1,0.8905387412694009,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,270,AdaBoost,None,auc,0.8905131352093744,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,270,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9310810810810811,"[array([[353,  13],
+       [ 38, 336]])]"
+ring.csv,4,270,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.9310164741992517,"[array([[354,  12],
+       [ 39, 335]])]"
+ring.csv,4,270,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9287937231524502,"[array([[354,  12],
+       [ 41, 333]])]"
+ring.csv,4,270,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,0.927027027027027,"[array([[354,  12],
+       [ 42, 332]])]"
+ring.csv,4,270,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",f1,0.9323632843369686,"[array([[355,  11],
+       [ 39, 335]])]"
+ring.csv,4,270,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",auc,0.9314675199438941,"[array([[354,  12],
+       [ 39, 335]])]"
+ring.csv,5,270,base,None,acc,0.8810810810810811,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,270,base,None,f1,0.8810836872184952,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,270,base,None,auc,0.8810964027936062,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,270,wagging,None,acc,0.9540540540540541,"[array([[360,   6],
+       [ 28, 346]])]"
+ring.csv,5,270,wagging,None,f1,0.9540282023040644,"[array([[360,   6],
+       [ 28, 346]])]"
+ring.csv,5,270,wagging,None,auc,0.9543701236083107,"[array([[360,   6],
+       [ 28, 346]])]"
+ring.csv,5,270,AdaBoost,None,acc,0.8864864864864865,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,270,AdaBoost,None,f1,0.8864690727501287,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,270,AdaBoost,None,auc,0.8866777709593525,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,270,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",acc,0.9581081081081081,"[array([[361,   5],
+       [ 26, 348]])]"
+ring.csv,5,270,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",f1,0.956732425697943,"[array([[361,   5],
+       [ 27, 347]])]"
+ring.csv,5,270,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",auc,0.9584100406183338,"[array([[361,   5],
+       [ 26, 348]])]"
+ring.csv,5,270,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",acc,0.9567567567567568,"[array([[360,   6],
+       [ 26, 348]])]"
+ring.csv,5,270,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",f1,0.9594416868353038,"[array([[361,   5],
+       [ 25, 349]])]"
+ring.csv,5,270,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",auc,0.9610838374097775,"[array([[361,   5],
+       [ 24, 350]])]"
+ring.csv,6,270,base,None,acc,0.8648648648648649,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,270,base,None,f1,0.8648332626233179,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,270,base,None,auc,0.8647321819935128,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,270,wagging,None,acc,0.9513513513513514,"[array([[357,   9],
+       [ 27, 347]])]"
+ring.csv,6,270,wagging,None,f1,0.9513353572750834,"[array([[357,   9],
+       [ 27, 347]])]"
+ring.csv,6,270,wagging,None,auc,0.9516086613482949,"[array([[357,   9],
+       [ 27, 347]])]"
+ring.csv,6,270,AdaBoost,None,acc,0.8675675675675676,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,270,AdaBoost,None,f1,0.8675365973708516,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,270,AdaBoost,None,auc,0.8674352006078139,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,270,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9594594594594594,"[array([[359,   7],
+       [ 23, 351]])]"
+ring.csv,6,270,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.9580921158866614,"[array([[360,   6],
+       [ 25, 349]])]"
+ring.csv,6,270,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9530040033897315,"[array([[359,   7],
+       [ 28, 346]])]"
+ring.csv,6,270,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9486486486486486,"[array([[358,   8],
+       [ 30, 344]])]"
+ring.csv,6,270,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9486197555163072,"[array([[358,   8],
+       [ 30, 344]])]"
+ring.csv,6,270,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9503009847754302,"[array([[358,   8],
+       [ 29, 345]])]"
+ring.csv,7,270,base,None,acc,0.8959459459459459,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,270,base,None,f1,0.8959472761934999,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,270,base,None,auc,0.895948394260834,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,270,wagging,None,acc,0.95,"[array([[354,  12],
+       [ 25, 349]])]"
+ring.csv,7,270,wagging,None,f1,0.9499940647399899,"[array([[354,  12],
+       [ 25, 349]])]"
+ring.csv,7,270,wagging,None,auc,0.950184097484001,"[array([[354,  12],
+       [ 25, 349]])]"
+ring.csv,7,270,AdaBoost,None,acc,0.8932432432432432,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,270,AdaBoost,None,f1,0.8932446080426816,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,270,AdaBoost,None,auc,0.8932453756465328,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,270,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",acc,0.9540540540540541,"[array([[356,  10],
+       [ 24, 350]])]"
+ring.csv,7,270,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",f1,0.9513438883214838,"[array([[355,  11],
+       [ 25, 349]])]"
+ring.csv,7,270,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",auc,0.9542532363168814,"[array([[356,  10],
+       [ 24, 350]])]"
+ring.csv,7,270,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",acc,0.9554054054054054,"[array([[356,  10],
+       [ 23, 351]])]"
+ring.csv,7,270,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",f1,0.9554001117951262,"[array([[356,  10],
+       [ 23, 351]])]"
+ring.csv,7,270,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",auc,0.9556193565354606,"[array([[357,   9],
+       [ 24, 350]])]"
+ring.csv,8,270,base,None,acc,0.8621621621621621,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,270,base,None,f1,0.8621410107303524,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,270,base,None,auc,0.8620583852020689,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,270,wagging,None,acc,0.9472972972972973,"[array([[354,  12],
+       [ 27, 347]])]"
+ring.csv,8,270,wagging,None,f1,0.9472871908710762,"[array([[354,  12],
+       [ 27, 347]])]"
+ring.csv,8,270,wagging,None,auc,0.9475103006925572,"[array([[354,  12],
+       [ 27, 347]])]"
+ring.csv,8,270,AdaBoost,None,acc,0.85,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,270,AdaBoost,None,f1,0.8498834498834499,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,270,AdaBoost,None,auc,0.8497340814119986,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,270,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",acc,0.9445945945945946,"[array([[351,  15],
+       [ 26, 348]])]"
+ring.csv,8,270,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",f1,0.9418849941572857,"[array([[351,  15],
+       [ 28, 346]])]"
+ring.csv,8,270,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",auc,0.9434411618596769,"[array([[352,  14],
+       [ 28, 346]])]"
+ring.csv,8,270,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,0.9486486486486486,"[array([[356,  10],
+       [ 28, 346]])]"
+ring.csv,8,270,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",f1,0.9459333094820077,"[array([[354,  12],
+       [ 28, 346]])]"
+ring.csv,8,270,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",auc,0.9502717629525731,"[array([[357,   9],
+       [ 28, 346]])]"
+ring.csv,9,270,base,None,acc,0.8486486486486486,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,270,base,None,f1,0.848598868933764,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,270,base,None,auc,0.8484848484848486,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,270,wagging,None,acc,0.9432432432432433,"[array([[355,  11],
+       [ 31, 343]])]"
+ring.csv,9,270,wagging,None,f1,0.9432183615694254,"[array([[355,  11],
+       [ 31, 343]])]"
+ring.csv,9,270,wagging,None,auc,0.9435288273282487,"[array([[355,  11],
+       [ 31, 343]])]"
+ring.csv,9,270,AdaBoost,None,acc,0.8702702702702703,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,270,AdaBoost,None,f1,0.8702399321183851,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,270,AdaBoost,None,auc,0.8701382192221151,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,270,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",acc,0.9472972972972973,"[array([[352,  14],
+       [ 25, 349]])]"
+ring.csv,9,270,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",f1,0.9486366440079073,"[array([[355,  11],
+       [ 27, 347]])]"
+ring.csv,9,270,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",auc,0.946144180473978,"[array([[353,  13],
+       [ 27, 347]])]"
+ring.csv,9,270,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,0.9513513513513514,"[array([[356,  10],
+       [ 26, 348]])]"
+ring.csv,9,270,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",f1,0.9486317660125881,"[array([[356,  10],
+       [ 28, 346]])]"
+ring.csv,9,270,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",auc,0.9502425411297156,"[array([[356,  10],
+       [ 27, 347]])]"
+ring.csv,0,275,base,None,acc,0.8770270270270271,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,275,base,None,f1,0.8768995277160823,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,275,base,None,auc,0.8767888319904158,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,275,wagging,None,acc,0.9513513513513514,"[array([[357,  10],
+       [ 26, 347]])]"
+ring.csv,0,275,wagging,None,f1,0.9513371343946684,"[array([[357,  10],
+       [ 26, 347]])]"
+ring.csv,0,275,wagging,None,auc,0.951523474881475,"[array([[357,  10],
+       [ 26, 347]])]"
+ring.csv,0,275,AdaBoost,None,acc,0.8770270270270271,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,275,AdaBoost,None,f1,0.8768770103414801,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,275,AdaBoost,None,auc,0.8767669167439789,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,275,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",acc,0.9472972972972973,"[array([[355,  12],
+       [ 27, 346]])]"
+ring.csv,0,275,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",f1,0.9499876716607095,"[array([[356,  11],
+       [ 26, 347]])]"
+ring.csv,0,275,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",auc,0.9474581966674215,"[array([[355,  12],
+       [ 27, 346]])]"
+ring.csv,0,275,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9486486486486486,"[array([[357,  10],
+       [ 28, 345]])]"
+ring.csv,0,275,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9513414001360001,"[array([[356,  11],
+       [ 25, 348]])]"
+ring.csv,0,275,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9515015596350381,"[array([[356,  11],
+       [ 25, 348]])]"
+ring.csv,1,275,base,None,acc,0.8635135135135135,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,275,base,None,f1,0.8634159645368429,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,275,base,None,auc,0.8633182605138394,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,275,wagging,None,acc,0.9351351351351351,"[array([[350,  17],
+       [ 31, 342]])]"
+ring.csv,1,275,wagging,None,f1,0.9351218668479999,"[array([[350,  17],
+       [ 31, 342]])]"
+ring.csv,1,275,wagging,None,auc,0.9352842772716979,"[array([[350,  17],
+       [ 31, 342]])]"
+ring.csv,1,275,AdaBoost,None,acc,0.8662162162162163,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,275,AdaBoost,None,f1,0.8661705062495473,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,275,AdaBoost,None,auc,0.8660868866470404,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,275,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",acc,0.9432432432432433,"[array([[354,  13],
+       [ 29, 344]])]"
+ring.csv,1,275,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",f1,0.9432208497368071,"[array([[355,  12],
+       [ 30, 343]])]"
+ring.csv,1,275,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",auc,0.9393495554857514,"[array([[352,  15],
+       [ 30, 343]])]"
+ring.csv,1,275,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,0.9459459459459459,"[array([[356,  11],
+       [ 29, 344]])]"
+ring.csv,1,275,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",f1,0.9445756700133582,"[array([[355,  12],
+       [ 29, 344]])]"
+ring.csv,1,275,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",auc,0.9475020271602954,"[array([[357,  10],
+       [ 29, 344]])]"
+ring.csv,2,275,base,None,acc,0.8702702702702703,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,275,base,None,f1,0.8702607922991485,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,275,base,None,auc,0.8702179106004047,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,275,wagging,None,acc,0.9472972972972973,"[array([[357,  10],
+       [ 29, 344]])]"
+ring.csv,2,275,wagging,None,f1,0.9472735179213256,"[array([[357,  10],
+       [ 29, 344]])]"
+ring.csv,2,275,wagging,None,auc,0.9475020271602954,"[array([[357,  10],
+       [ 29, 344]])]"
+ring.csv,2,275,AdaBoost,None,acc,0.8743243243243243,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,275,AdaBoost,None,f1,0.874303433131669,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,275,AdaBoost,None,auc,0.8742393583215844,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,275,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9459459459459459,"[array([[357,  10],
+       [ 30, 343]])]"
+ring.csv,2,275,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.9486283878571112,"[array([[357,  10],
+       [ 28, 345]])]"
+ring.csv,2,275,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9461396293401318,"[array([[356,  11],
+       [ 29, 344]])]"
+ring.csv,2,275,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",acc,0.9472972972972973,"[array([[358,   9],
+       [ 30, 343]])]"
+ring.csv,2,275,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",f1,0.9472735179213256,"[array([[357,  10],
+       [ 29, 344]])]"
+ring.csv,2,275,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",auc,0.9502049075541854,"[array([[358,   9],
+       [ 28, 345]])]"
+ring.csv,3,275,base,None,acc,0.8513513513513513,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,275,base,None,f1,0.8513513513513513,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,275,base,None,auc,0.8513415783360485,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,275,wagging,None,acc,0.9324324324324325,"[array([[349,  18],
+       [ 32, 341]])]"
+ring.csv,3,275,wagging,None,f1,0.9324186112999999,"[array([[349,  18],
+       [ 32, 341]])]"
+ring.csv,3,275,wagging,None,auc,0.9325813968778077,"[array([[349,  18],
+       [ 32, 341]])]"
+ring.csv,3,275,AdaBoost,None,acc,0.85,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,275,AdaBoost,None,f1,0.8499980823704094,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,275,AdaBoost,None,auc,0.849979180515885,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,275,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",acc,0.9378378378378378,"[array([[353,  14],
+       [ 32, 341]])]"
+ring.csv,3,275,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.9405231642601507,"[array([[353,  14],
+       [ 30, 343]])]"
+ring.csv,3,275,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9380090729120247,"[array([[352,  15],
+       [ 31, 342]])]"
+ring.csv,3,275,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",acc,0.9378378378378378,"[array([[354,  13],
+       [ 33, 340]])]"
+ring.csv,3,275,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",f1,0.9378060415677971,"[array([[354,  13],
+       [ 33, 340]])]"
+ring.csv,3,275,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",auc,0.9380090729120247,"[array([[352,  15],
+       [ 31, 342]])]"
+ring.csv,4,275,base,None,acc,0.8810810810810811,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,275,base,None,f1,0.8810706544749097,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,275,base,None,auc,0.8810087373250343,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,275,wagging,None,acc,0.9297297297297298,"[array([[351,  15],
+       [ 37, 337]])]"
+ring.csv,4,275,wagging,None,f1,0.9296901917591572,"[array([[351,  15],
+       [ 37, 337]])]"
+ring.csv,4,275,wagging,None,auc,0.9300429560796002,"[array([[351,  15],
+       [ 37, 337]])]"
+ring.csv,4,275,AdaBoost,None,acc,0.8905405405405405,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,275,AdaBoost,None,f1,0.8905387412694009,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,275,AdaBoost,None,auc,0.8905131352093744,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,275,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",acc,0.9351351351351351,"[array([[355,  11],
+       [ 37, 337]])]"
+ring.csv,4,275,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",f1,0.9296804302329164,"[array([[352,  14],
+       [ 38, 336]])]"
+ring.csv,4,275,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 3.0]",auc,0.9327459746939014,"[array([[352,  14],
+       [ 36, 338]])]"
+ring.csv,4,275,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9256756756756757,"[array([[355,  11],
+       [ 44, 330]])]"
+ring.csv,4,275,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9228567934450288,"[array([[354,  12],
+       [ 45, 329]])]"
+ring.csv,4,275,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9274568247567283,"[array([[354,  12],
+       [ 42, 332]])]"
+ring.csv,5,275,base,None,acc,0.8810810810810811,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,275,base,None,f1,0.8810836872184952,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,275,base,None,auc,0.8810964027936062,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,275,wagging,None,acc,0.9567567567567568,"[array([[361,   5],
+       [ 27, 347]])]"
+ring.csv,5,275,wagging,None,f1,0.956732425697943,"[array([[361,   5],
+       [ 27, 347]])]"
+ring.csv,5,275,wagging,None,auc,0.9570731422226118,"[array([[361,   5],
+       [ 27, 347]])]"
+ring.csv,5,275,AdaBoost,None,acc,0.8864864864864865,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,275,AdaBoost,None,f1,0.8864690727501287,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,275,AdaBoost,None,auc,0.8866777709593525,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,275,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",acc,0.9581081081081081,"[array([[361,   5],
+       [ 26, 348]])]"
+ring.csv,5,275,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",f1,0.9594416868353038,"[array([[361,   5],
+       [ 25, 349]])]"
+ring.csv,5,275,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",auc,0.9610838374097775,"[array([[361,   5],
+       [ 24, 350]])]"
+ring.csv,5,275,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9581081081081081,"[array([[360,   6],
+       [ 25, 349]])]"
+ring.csv,5,275,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9594416868353038,"[array([[361,   5],
+       [ 25, 349]])]"
+ring.csv,5,275,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9570731422226118,"[array([[361,   5],
+       [ 27, 347]])]"
+ring.csv,6,275,base,None,acc,0.8648648648648649,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,275,base,None,f1,0.8648332626233179,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,275,base,None,auc,0.8647321819935128,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,275,wagging,None,acc,0.9472972972972973,"[array([[356,  10],
+       [ 29, 345]])]"
+ring.csv,6,275,wagging,None,f1,0.9472771780509611,"[array([[356,  10],
+       [ 29, 345]])]"
+ring.csv,6,275,wagging,None,auc,0.9475687443382718,"[array([[356,  10],
+       [ 29, 345]])]"
+ring.csv,6,275,AdaBoost,None,acc,0.8675675675675676,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,275,AdaBoost,None,f1,0.8675365973708516,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,275,AdaBoost,None,auc,0.8674352006078139,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,275,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",acc,0.9554054054054054,"[array([[359,   7],
+       [ 26, 348]])]"
+ring.csv,6,275,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",f1,0.956742539800074,"[array([[359,   7],
+       [ 25, 349]])]"
+ring.csv,6,275,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",auc,0.9543409017854533,"[array([[359,   7],
+       [ 27, 347]])]"
+ring.csv,6,275,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9608108108108108,"[array([[359,   7],
+       [ 22, 352]])]"
+ring.csv,6,275,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9526846469688113,"[array([[358,   8],
+       [ 27, 347]])]"
+ring.csv,6,275,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.9556778001811754,"[array([[359,   7],
+       [ 26, 348]])]"
+ring.csv,7,275,base,None,acc,0.8959459459459459,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,275,base,None,f1,0.8959472761934999,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,275,base,None,auc,0.895948394260834,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,275,wagging,None,acc,0.9486486486486486,"[array([[355,  11],
+       [ 27, 347]])]"
+ring.csv,7,275,wagging,None,f1,0.9486366440079073,"[array([[355,  11],
+       [ 27, 347]])]"
+ring.csv,7,275,wagging,None,auc,0.9488764209111364,"[array([[355,  11],
+       [ 27, 347]])]"
+ring.csv,7,275,AdaBoost,None,acc,0.8932432432432432,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,275,AdaBoost,None,f1,0.8932446080426816,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,275,AdaBoost,None,auc,0.8932453756465328,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,275,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",acc,0.9540540540540541,"[array([[356,  10],
+       [ 24, 350]])]"
+ring.csv,7,275,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",f1,0.9540470056369569,"[array([[356,  10],
+       [ 24, 350]])]"
+ring.csv,7,275,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",auc,0.9569562549311825,"[array([[357,   9],
+       [ 23, 351]])]"
+ring.csv,7,275,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",acc,0.9581081081081081,"[array([[356,  10],
+       [ 21, 353]])]"
+ring.csv,7,275,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",f1,0.952697088267558,"[array([[355,  11],
+       [ 24, 350]])]"
+ring.csv,7,275,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",auc,0.9555609128897461,"[array([[355,  11],
+       [ 22, 352]])]"
+ring.csv,8,275,base,None,acc,0.8621621621621621,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,275,base,None,f1,0.8621410107303524,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,275,base,None,auc,0.8620583852020689,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,275,wagging,None,acc,0.9432432432432433,"[array([[353,  13],
+       [ 29, 345]])]"
+ring.csv,8,275,wagging,None,f1,0.943229974956108,"[array([[353,  13],
+       [ 29, 345]])]"
+ring.csv,8,275,wagging,None,auc,0.943470383682534,"[array([[353,  13],
+       [ 29, 345]])]"
+ring.csv,8,275,AdaBoost,None,acc,0.85,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,275,AdaBoost,None,f1,0.8498834498834499,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,275,AdaBoost,None,auc,0.8497340814119986,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,275,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 1.0]",acc,0.9459459459459459,"[array([[354,  12],
+       [ 28, 346]])]"
+ring.csv,8,275,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 1.0]",f1,0.948644147302983,"[array([[353,  13],
+       [ 25, 349]])]"
+ring.csv,8,275,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 1.0]",auc,0.946144180473978,"[array([[353,  13],
+       [ 27, 347]])]"
+ring.csv,8,275,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9540540540540541,"[array([[357,   9],
+       [ 25, 349]])]"
+ring.csv,8,275,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9526936328330172,"[array([[356,  10],
+       [ 25, 349]])]"
+ring.csv,8,275,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9502425411297156,"[array([[356,  10],
+       [ 27, 347]])]"
+ring.csv,9,275,base,None,acc,0.8486486486486486,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,275,base,None,f1,0.848598868933764,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,275,base,None,auc,0.8484848484848486,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,275,wagging,None,acc,0.9391891891891891,"[array([[351,  15],
+       [ 30, 344]])]"
+ring.csv,9,275,wagging,None,f1,0.9391775279281649,"[array([[351,  15],
+       [ 30, 344]])]"
+ring.csv,9,275,wagging,None,auc,0.9394012448496538,"[array([[351,  15],
+       [ 30, 344]])]"
+ring.csv,9,275,AdaBoost,None,acc,0.8702702702702703,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,275,AdaBoost,None,f1,0.8702399321183851,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,275,AdaBoost,None,auc,0.8701382192221151,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,275,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.95,"[array([[355,  11],
+       [ 26, 348]])]"
+ring.csv,9,275,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.9486366440079073,"[array([[355,  11],
+       [ 27, 347]])]"
+ring.csv,9,275,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9515794395254376,"[array([[356,  10],
+       [ 26, 348]])]"
+ring.csv,9,275,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,0.9486486486486486,"[array([[355,  11],
+       [ 27, 347]])]"
+ring.csv,9,275,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",f1,0.9513353572750834,"[array([[357,   9],
+       [ 27, 347]])]"
+ring.csv,9,275,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9475103006925572,"[array([[354,  12],
+       [ 27, 347]])]"
+ring.csv,0,280,base,None,acc,0.8770270270270271,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,280,base,None,f1,0.8768995277160823,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,280,base,None,auc,0.8767888319904158,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,280,wagging,None,acc,0.9486486486486486,"[array([[358,   9],
+       [ 29, 344]])]"
+ring.csv,0,280,wagging,None,f1,0.9486223821647018,"[array([[358,   9],
+       [ 29, 344]])]"
+ring.csv,0,280,wagging,None,auc,0.9488644249804589,"[array([[358,   9],
+       [ 29, 344]])]"
+ring.csv,0,280,AdaBoost,None,acc,0.8770270270270271,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,280,AdaBoost,None,f1,0.8768770103414801,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,280,AdaBoost,None,auc,0.8767669167439789,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,280,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.95,"[array([[356,  11],
+       [ 26, 347]])]"
+ring.csv,0,280,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.9526948421489752,"[array([[356,  11],
+       [ 24, 349]])]"
+ring.csv,0,280,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9461177140936949,"[array([[355,  12],
+       [ 28, 345]])]"
+ring.csv,0,280,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9513513513513514,"[array([[357,  10],
+       [ 26, 347]])]"
+ring.csv,0,280,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9499916902717738,"[array([[355,  12],
+       [ 25, 348]])]"
+ring.csv,0,280,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9528420422087646,"[array([[356,  11],
+       [ 24, 349]])]"
+ring.csv,1,280,base,None,acc,0.8635135135135135,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,280,base,None,f1,0.8634159645368429,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,280,base,None,auc,0.8633182605138394,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,280,wagging,None,acc,0.9391891891891891,"[array([[352,  15],
+       [ 30, 343]])]"
+ring.csv,1,280,wagging,None,f1,0.939174195263025,"[array([[352,  15],
+       [ 30, 343]])]"
+ring.csv,1,280,wagging,None,auc,0.9393495554857514,"[array([[352,  15],
+       [ 30, 343]])]"
+ring.csv,1,280,AdaBoost,None,acc,0.8662162162162163,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,280,AdaBoost,None,f1,0.8661705062495473,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,280,AdaBoost,None,auc,0.8660868866470404,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,280,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",acc,0.9432432432432433,"[array([[354,  13],
+       [ 29, 344]])]"
+ring.csv,1,280,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.9472843025612885,"[array([[355,  12],
+       [ 27, 346]])]"
+ring.csv,1,280,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9434367489462419,"[array([[355,  12],
+       [ 30, 343]])]"
+ring.csv,1,280,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",acc,0.9445945945945946,"[array([[352,  15],
+       [ 26, 347]])]"
+ring.csv,1,280,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",f1,0.94593488904,"[array([[354,  13],
+       [ 27, 346]])]"
+ring.csv,1,280,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",auc,0.9379871576655879,"[array([[351,  16],
+       [ 30, 343]])]"
+ring.csv,2,280,base,None,acc,0.8702702702702703,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,280,base,None,f1,0.8702607922991485,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,280,base,None,auc,0.8702179106004047,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,280,wagging,None,acc,0.9459459459459459,"[array([[357,  10],
+       [ 30, 343]])]"
+ring.csv,2,280,wagging,None,f1,0.9459182970154757,"[array([[357,  10],
+       [ 30, 343]])]"
+ring.csv,2,280,wagging,None,auc,0.9461615445865689,"[array([[357,  10],
+       [ 30, 343]])]"
+ring.csv,2,280,AdaBoost,None,acc,0.8743243243243243,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,280,AdaBoost,None,f1,0.874303433131669,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,280,AdaBoost,None,auc,0.8742393583215844,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,280,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",acc,0.95,"[array([[358,   9],
+       [ 28, 345]])]"
+ring.csv,2,280,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",f1,0.9459111834802442,"[array([[358,   9],
+       [ 31, 342]])]"
+ring.csv,2,280,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",auc,0.9435244099319897,"[array([[359,   8],
+       [ 34, 339]])]"
+ring.csv,2,280,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,0.9472972972972973,"[array([[357,  10],
+       [ 29, 344]])]"
+ring.csv,2,280,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,0.9486223821647018,"[array([[358,   9],
+       [ 29, 344]])]"
+ring.csv,2,280,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,0.948842509734022,"[array([[357,  10],
+       [ 28, 345]])]"
+ring.csv,3,280,base,None,acc,0.8513513513513513,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,280,base,None,f1,0.8513513513513513,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,280,base,None,auc,0.8513415783360485,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,280,wagging,None,acc,0.9310810810810811,"[array([[351,  16],
+       [ 35, 338]])]"
+ring.csv,3,280,wagging,None,f1,0.9310499849740412,"[array([[351,  16],
+       [ 35, 338]])]"
+ring.csv,3,280,wagging,None,auc,0.9312847447969553,"[array([[351,  16],
+       [ 35, 338]])]"
+ring.csv,3,280,AdaBoost,None,acc,0.85,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,280,AdaBoost,None,f1,0.8499980823704094,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,280,AdaBoost,None,auc,0.849979180515885,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,280,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9391891891891891,"[array([[354,  13],
+       [ 32, 341]])]"
+ring.csv,3,280,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.9391684183073442,"[array([[353,  14],
+       [ 31, 342]])]"
+ring.csv,3,280,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9380309881584618,"[array([[353,  14],
+       [ 32, 341]])]"
+ring.csv,3,280,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9418918918918919,"[array([[354,  13],
+       [ 30, 343]])]"
+ring.csv,3,280,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9391684183073442,"[array([[353,  14],
+       [ 31, 342]])]"
+ring.csv,3,280,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9407338685523519,"[array([[354,  13],
+       [ 31, 342]])]"
+ring.csv,4,280,base,None,acc,0.8810810810810811,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,280,base,None,f1,0.8810706544749097,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,280,base,None,auc,0.8810087373250343,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,280,wagging,None,acc,0.9351351351351351,"[array([[352,  14],
+       [ 34, 340]])]"
+ring.csv,4,280,wagging,None,f1,0.9351066989364862,"[array([[352,  14],
+       [ 34, 340]])]"
+ring.csv,4,280,wagging,None,auc,0.9354197714853453,"[array([[352,  14],
+       [ 34, 340]])]"
+ring.csv,4,280,AdaBoost,None,acc,0.8905405405405405,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,280,AdaBoost,None,f1,0.8905387412694009,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,280,AdaBoost,None,auc,0.8905131352093744,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,280,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",acc,0.9283783783783783,"[array([[352,  14],
+       [ 39, 335]])]"
+ring.csv,4,280,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",f1,0.9282703517997635,"[array([[356,  10],
+       [ 43, 331]])]"
+ring.csv,4,280,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",auc,0.9328044183396159,"[array([[354,  12],
+       [ 38, 336]])]"
+ring.csv,4,280,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,0.9324324324324325,"[array([[354,  12],
+       [ 38, 336]])]"
+ring.csv,4,280,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",f1,0.9269646245987253,"[array([[352,  14],
+       [ 40, 334]])]"
+ring.csv,4,280,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",auc,0.9314382981210368,"[array([[353,  13],
+       [ 38, 336]])]"
+ring.csv,5,280,base,None,acc,0.8810810810810811,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,280,base,None,f1,0.8810836872184952,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,280,base,None,auc,0.8810964027936062,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,280,wagging,None,acc,0.9540540540540541,"[array([[361,   5],
+       [ 29, 345]])]"
+ring.csv,5,280,wagging,None,f1,0.9540218197676762,"[array([[361,   5],
+       [ 29, 345]])]"
+ring.csv,5,280,wagging,None,auc,0.9543993454311679,"[array([[361,   5],
+       [ 29, 345]])]"
+ring.csv,5,280,AdaBoost,None,acc,0.8864864864864865,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,280,AdaBoost,None,f1,0.8864690727501287,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,280,AdaBoost,None,auc,0.8866777709593525,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,280,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9581081081081081,"[array([[360,   6],
+       [ 25, 349]])]"
+ring.csv,5,280,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.9621497223250648,"[array([[361,   5],
+       [ 23, 351]])]"
+ring.csv,5,280,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9584100406183338,"[array([[361,   5],
+       [ 26, 348]])]"
+ring.csv,5,280,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,0.9581081081081081,"[array([[361,   5],
+       [ 26, 348]])]"
+ring.csv,5,280,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",f1,0.9580872169154528,"[array([[361,   5],
+       [ 26, 348]])]"
+ring.csv,5,280,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",auc,0.9597469390140556,"[array([[361,   5],
+       [ 25, 349]])]"
+ring.csv,6,280,base,None,acc,0.8648648648648649,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,280,base,None,f1,0.8648332626233179,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,280,base,None,auc,0.8647321819935128,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,280,wagging,None,acc,0.9527027027027027,"[array([[358,   8],
+       [ 27, 347]])]"
+ring.csv,6,280,wagging,None,f1,0.9526846469688113,"[array([[358,   8],
+       [ 27, 347]])]"
+ring.csv,6,280,wagging,None,auc,0.952974781566874,"[array([[358,   8],
+       [ 27, 347]])]"
+ring.csv,6,280,AdaBoost,None,acc,0.8675675675675676,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,280,AdaBoost,None,f1,0.8675365973708516,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,280,AdaBoost,None,auc,0.8674352006078139,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,280,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9594594594594594,"[array([[360,   6],
+       [ 24, 350]])]"
+ring.csv,6,280,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.956746647585606,"[array([[358,   8],
+       [ 24, 350]])]"
+ring.csv,6,280,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9557070220040326,"[array([[360,   6],
+       [ 27, 347]])]"
+ring.csv,6,280,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",acc,0.9567567567567568,"[array([[360,   6],
+       [ 26, 348]])]"
+ring.csv,6,280,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",f1,0.9594461310625695,"[array([[360,   6],
+       [ 24, 350]])]"
+ring.csv,6,280,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",auc,0.9556778001811754,"[array([[359,   7],
+       [ 26, 348]])]"
+ring.csv,7,280,base,None,acc,0.8959459459459459,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,280,base,None,f1,0.8959472761934999,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,280,base,None,auc,0.895948394260834,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,280,wagging,None,acc,0.95,"[array([[353,  13],
+       [ 24, 350]])]"
+ring.csv,7,280,wagging,None,f1,0.9499969868021936,"[array([[353,  13],
+       [ 24, 350]])]"
+ring.csv,7,280,wagging,None,auc,0.9501548756611436,"[array([[353,  13],
+       [ 24, 350]])]"
+ring.csv,7,280,AdaBoost,None,acc,0.8932432432432432,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,280,AdaBoost,None,f1,0.8932446080426816,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,280,AdaBoost,None,auc,0.8932453756465328,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,280,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",acc,0.9554054054054054,"[array([[356,  10],
+       [ 23, 351]])]"
+ring.csv,7,280,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 3.0]",f1,0.9540470056369569,"[array([[356,  10],
+       [ 24, 350]])]"
+ring.csv,7,280,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.9542240144940242,"[array([[355,  11],
+       [ 23, 351]])]"
+ring.csv,7,280,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9567567567567568,"[array([[356,  10],
+       [ 22, 352]])]"
+ring.csv,7,280,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.958105583536973,"[array([[356,  10],
+       [ 21, 353]])]"
+ring.csv,7,280,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.9569270331083253,"[array([[356,  10],
+       [ 22, 352]])]"
+ring.csv,8,280,base,None,acc,0.8621621621621621,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,280,base,None,f1,0.8621410107303524,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,280,base,None,auc,0.8620583852020689,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,280,wagging,None,acc,0.9459459459459459,"[array([[354,  12],
+       [ 28, 346]])]"
+ring.csv,8,280,wagging,None,f1,0.9459333094820077,"[array([[354,  12],
+       [ 28, 346]])]"
+ring.csv,8,280,wagging,None,auc,0.9461734022968352,"[array([[354,  12],
+       [ 28, 346]])]"
+ring.csv,8,280,AdaBoost,None,acc,0.85,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,280,AdaBoost,None,f1,0.8498834498834499,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,280,AdaBoost,None,auc,0.8497340814119986,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,280,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9459459459459459,"[array([[354,  12],
+       [ 28, 346]])]"
+ring.csv,8,280,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.9486366440079073,"[array([[355,  11],
+       [ 27, 347]])]"
+ring.csv,8,280,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9515209958797229,"[array([[354,  12],
+       [ 24, 350]])]"
+ring.csv,8,280,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,0.9486486486486486,"[array([[352,  14],
+       [ 24, 350]])]"
+ring.csv,8,280,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",f1,0.9513438883214838,"[array([[355,  11],
+       [ 25, 349]])]"
+ring.csv,8,280,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",auc,0.9475395225154146,"[array([[355,  11],
+       [ 28, 346]])]"
+ring.csv,9,280,base,None,acc,0.8486486486486486,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,280,base,None,f1,0.848598868933764,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,280,base,None,auc,0.8484848484848486,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,280,wagging,None,acc,0.9432432432432433,"[array([[353,  13],
+       [ 29, 345]])]"
+ring.csv,9,280,wagging,None,f1,0.943229974956108,"[array([[353,  13],
+       [ 29, 345]])]"
+ring.csv,9,280,wagging,None,auc,0.943470383682534,"[array([[353,  13],
+       [ 29, 345]])]"
+ring.csv,9,280,AdaBoost,None,acc,0.8702702702702703,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,280,AdaBoost,None,f1,0.8702399321183851,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,280,AdaBoost,None,auc,0.8701382192221151,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,280,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",acc,0.9472972972972973,"[array([[355,  11],
+       [ 28, 346]])]"
+ring.csv,9,280,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9499940647399899,"[array([[354,  12],
+       [ 25, 349]])]"
+ring.csv,9,280,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.9461734022968352,"[array([[354,  12],
+       [ 28, 346]])]"
+ring.csv,9,280,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",acc,0.95,"[array([[355,  11],
+       [ 26, 348]])]"
+ring.csv,9,280,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",f1,0.9459333094820077,"[array([[354,  12],
+       [ 28, 346]])]"
+ring.csv,9,280,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",auc,0.9462026241196926,"[array([[355,  11],
+       [ 29, 345]])]"
+ring.csv,0,285,base,None,acc,0.8770270270270271,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,285,base,None,f1,0.8768995277160823,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,285,base,None,auc,0.8767888319904158,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,285,wagging,None,acc,0.95,"[array([[355,  12],
+       [ 25, 348]])]"
+ring.csv,0,285,wagging,None,f1,0.9499916902717738,"[array([[355,  12],
+       [ 25, 348]])]"
+ring.csv,0,285,wagging,None,auc,0.9501391618148745,"[array([[355,  12],
+       [ 25, 348]])]"
+ring.csv,0,285,AdaBoost,None,acc,0.8770270270270271,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,285,AdaBoost,None,f1,0.8768770103414801,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,285,AdaBoost,None,auc,0.8767669167439789,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,285,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",acc,0.9486486486486486,"[array([[356,  11],
+       [ 27, 346]])]"
+ring.csv,0,285,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",f1,0.9499876716607095,"[array([[356,  11],
+       [ 26, 347]])]"
+ring.csv,0,285,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",auc,0.9488205944875849,"[array([[356,  11],
+       [ 27, 346]])]"
+ring.csv,0,285,Incremental_Mixed_Bagging,"[[-2.0, 2.0]]",acc,0.9540540540540541,"[array([[358,   9],
+       [ 25, 348]])]"
+ring.csv,0,285,Incremental_Mixed_Bagging,"[[-2.0, 2.0]]",f1,0.9445756700133582,"[array([[355,  12],
+       [ 29, 344]])]"
+ring.csv,0,285,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9541825247824912,"[array([[356,  11],
+       [ 23, 350]])]"
+ring.csv,1,285,base,None,acc,0.8635135135135135,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,285,base,None,f1,0.8634159645368429,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,285,base,None,auc,0.8633182605138394,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,285,wagging,None,acc,0.9364864864864865,"[array([[352,  15],
+       [ 32, 341]])]"
+ring.csv,1,285,wagging,None,f1,0.9364647924543373,"[array([[352,  15],
+       [ 32, 341]])]"
+ring.csv,1,285,wagging,None,auc,0.9366685903382983,"[array([[352,  15],
+       [ 32, 341]])]"
+ring.csv,1,285,AdaBoost,None,acc,0.8662162162162163,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,285,AdaBoost,None,f1,0.8661705062495473,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,285,AdaBoost,None,auc,0.8660868866470404,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,285,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9445945945945946,"[array([[355,  12],
+       [ 29, 344]])]"
+ring.csv,1,285,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",f1,0.9405170806766552,"[array([[354,  13],
+       [ 31, 342]])]"
+ring.csv,1,285,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9447991467664054,"[array([[356,  11],
+       [ 30, 343]])]"
+ring.csv,1,285,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",acc,0.9486486486486486,"[array([[355,  12],
+       [ 26, 347]])]"
+ring.csv,1,285,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",f1,0.9445809334618673,"[array([[354,  13],
+       [ 28, 345]])]"
+ring.csv,1,285,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",auc,0.9407338685523519,"[array([[354,  13],
+       [ 31, 342]])]"
+ring.csv,2,285,base,None,acc,0.8702702702702703,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,285,base,None,f1,0.8702607922991485,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,285,base,None,auc,0.8702179106004047,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,285,wagging,None,acc,0.9445945945945946,"[array([[357,  10],
+       [ 31, 342]])]"
+ring.csv,2,285,wagging,None,f1,0.9445627102324978,"[array([[357,  10],
+       [ 31, 342]])]"
+ring.csv,2,285,wagging,None,auc,0.9448210620128423,"[array([[357,  10],
+       [ 31, 342]])]"
+ring.csv,2,285,AdaBoost,None,acc,0.8743243243243243,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,285,AdaBoost,None,f1,0.874303433131669,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,285,AdaBoost,None,auc,0.8742393583215844,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,285,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",acc,0.95,"[array([[358,   9],
+       [ 28, 345]])]"
+ring.csv,2,285,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",f1,0.9404936053807921,"[array([[357,  10],
+       [ 34, 339]])]"
+ring.csv,2,285,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",auc,0.9461834598330058,"[array([[358,   9],
+       [ 31, 342]])]"
+ring.csv,2,285,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",acc,0.9486486486486486,"[array([[357,  10],
+       [ 28, 345]])]"
+ring.csv,2,285,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",f1,0.9472735179213256,"[array([[357,  10],
+       [ 29, 344]])]"
+ring.csv,2,285,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",auc,0.9501829923077485,"[array([[357,  10],
+       [ 27, 346]])]"
+ring.csv,3,285,base,None,acc,0.8513513513513513,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,285,base,None,f1,0.8513513513513513,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,285,base,None,auc,0.8513415783360485,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,285,wagging,None,acc,0.9364864864864865,"[array([[351,  16],
+       [ 31, 342]])]"
+ring.csv,3,285,wagging,None,f1,0.936470826163604,"[array([[351,  16],
+       [ 31, 342]])]"
+ring.csv,3,285,wagging,None,auc,0.9366466750918614,"[array([[351,  16],
+       [ 31, 342]])]"
+ring.csv,3,285,AdaBoost,None,acc,0.85,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,285,AdaBoost,None,f1,0.8499980823704094,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,285,AdaBoost,None,auc,0.849979180515885,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,285,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",acc,0.9378378378378378,"[array([[353,  14],
+       [ 32, 341]])]"
+ring.csv,3,285,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",f1,0.9323978712693447,"[array([[352,  15],
+       [ 35, 338]])]"
+ring.csv,3,285,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",auc,0.9393933859786254,"[array([[354,  13],
+       [ 32, 341]])]"
+ring.csv,3,285,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9405405405405406,"[array([[354,  13],
+       [ 31, 342]])]"
+ring.csv,3,285,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9391617514476835,"[array([[354,  13],
+       [ 32, 341]])]"
+ring.csv,3,285,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9393933859786254,"[array([[354,  13],
+       [ 32, 341]])]"
+ring.csv,4,285,base,None,acc,0.8810810810810811,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,285,base,None,f1,0.8810706544749097,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,285,base,None,auc,0.8810087373250343,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,285,wagging,None,acc,0.9324324324324325,"[array([[351,  15],
+       [ 35, 339]])]"
+ring.csv,4,285,wagging,None,f1,0.9324028113921732,"[array([[351,  15],
+       [ 35, 339]])]"
+ring.csv,4,285,wagging,None,auc,0.9327167528710439,"[array([[351,  15],
+       [ 35, 339]])]"
+ring.csv,4,285,AdaBoost,None,acc,0.8905405405405405,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,285,AdaBoost,None,f1,0.8905387412694009,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,285,AdaBoost,None,auc,0.8905131352093744,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,285,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",acc,0.9391891891891891,"[array([[354,  12],
+       [ 33, 341]])]"
+ring.csv,4,285,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",f1,0.9323944151530358,"[array([[352,  14],
+       [ 36, 338]])]"
+ring.csv,4,285,Grouped_Mixed_Bagging,"[[0.0, 0.8, 0.2], 1.0]",auc,0.9327751965167587,"[array([[353,  13],
+       [ 37, 337]])]"
+ring.csv,4,285,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,0.9256756756756757,"[array([[354,  12],
+       [ 43, 331]])]"
+ring.csv,4,285,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",f1,0.9350896279073074,"[array([[354,  12],
+       [ 36, 338]])]"
+ring.csv,4,285,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",auc,0.9274276029338709,"[array([[353,  13],
+       [ 41, 333]])]"
+ring.csv,5,285,base,None,acc,0.8810810810810811,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,285,base,None,f1,0.8810836872184952,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,285,base,None,auc,0.8810964027936062,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,285,wagging,None,acc,0.9581081081081081,"[array([[362,   4],
+       [ 27, 347]])]"
+ring.csv,5,285,wagging,None,f1,0.9580817044493682,"[array([[362,   4],
+       [ 27, 347]])]"
+ring.csv,5,285,wagging,None,auc,0.958439262441191,"[array([[362,   4],
+       [ 27, 347]])]"
+ring.csv,5,285,AdaBoost,None,acc,0.8864864864864865,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,285,AdaBoost,None,f1,0.8864690727501287,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,285,AdaBoost,None,auc,0.8866777709593525,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,285,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 1.0]",acc,0.9594594594594594,"[array([[361,   5],
+       [ 25, 349]])]"
+ring.csv,5,285,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 1.0]",f1,0.9607958503455866,"[array([[361,   5],
+       [ 24, 350]])]"
+ring.csv,5,285,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 1.0]",auc,0.9597469390140556,"[array([[361,   5],
+       [ 25, 349]])]"
+ring.csv,5,285,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",acc,0.9594594594594594,"[array([[361,   5],
+       [ 25, 349]])]"
+ring.csv,5,285,Incremental_Mixed_Bagging,"[[-4.0, 3.0]]",f1,0.956732425697943,"[array([[361,   5],
+       [ 27, 347]])]"
+ring.csv,5,285,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",auc,0.9570439203997545,"[array([[360,   6],
+       [ 26, 348]])]"
+ring.csv,6,285,base,None,acc,0.8648648648648649,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,285,base,None,f1,0.8648332626233179,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,285,base,None,auc,0.8647321819935128,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,285,wagging,None,acc,0.9527027027027027,"[array([[358,   8],
+       [ 27, 347]])]"
+ring.csv,6,285,wagging,None,f1,0.9526846469688113,"[array([[358,   8],
+       [ 27, 347]])]"
+ring.csv,6,285,wagging,None,auc,0.952974781566874,"[array([[358,   8],
+       [ 27, 347]])]"
+ring.csv,6,285,AdaBoost,None,acc,0.8675675675675676,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,285,AdaBoost,None,f1,0.8675365973708516,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,285,AdaBoost,None,auc,0.8674352006078139,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,285,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",acc,0.9581081081081081,"[array([[360,   6],
+       [ 25, 349]])]"
+ring.csv,6,285,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",f1,0.9553883814277365,"[array([[359,   7],
+       [ 26, 348]])]"
+ring.csv,6,285,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 1.0]",auc,0.9570146985768971,"[array([[359,   7],
+       [ 25, 349]])]"
+ring.csv,6,285,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9540540540540541,"[array([[359,   7],
+       [ 27, 347]])]"
+ring.csv,6,285,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.956742539800074,"[array([[359,   7],
+       [ 25, 349]])]"
+ring.csv,6,285,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.9543116799625961,"[array([[358,   8],
+       [ 26, 348]])]"
+ring.csv,7,285,base,None,acc,0.8959459459459459,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,285,base,None,f1,0.8959472761934999,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,285,base,None,auc,0.895948394260834,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,285,wagging,None,acc,0.9540540540540541,"[array([[356,  10],
+       [ 24, 350]])]"
+ring.csv,7,285,wagging,None,f1,0.9540470056369569,"[array([[356,  10],
+       [ 24, 350]])]"
+ring.csv,7,285,wagging,None,auc,0.9542532363168814,"[array([[356,  10],
+       [ 24, 350]])]"
+ring.csv,7,285,AdaBoost,None,acc,0.8932432432432432,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,285,AdaBoost,None,f1,0.8932446080426816,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,285,AdaBoost,None,auc,0.8932453756465328,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,285,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",acc,0.9567567567567568,"[array([[356,  10],
+       [ 22, 352]])]"
+ring.csv,7,285,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9567529661498805,"[array([[356,  10],
+       [ 22, 352]])]"
+ring.csv,7,285,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.9542532363168814,"[array([[356,  10],
+       [ 24, 350]])]"
+ring.csv,7,285,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,0.9567567567567568,"[array([[356,  10],
+       [ 22, 352]])]"
+ring.csv,7,285,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",f1,0.9554001117951262,"[array([[356,  10],
+       [ 23, 351]])]"
+ring.csv,7,285,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",auc,0.9569270331083253,"[array([[356,  10],
+       [ 22, 352]])]"
+ring.csv,8,285,base,None,acc,0.8621621621621621,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,285,base,None,f1,0.8621410107303524,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,285,base,None,auc,0.8620583852020689,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,285,wagging,None,acc,0.9432432432432433,"[array([[354,  12],
+       [ 30, 344]])]"
+ring.csv,8,285,wagging,None,f1,0.9432245834875971,"[array([[354,  12],
+       [ 30, 344]])]"
+ring.csv,8,285,wagging,None,auc,0.9434996055053915,"[array([[354,  12],
+       [ 30, 344]])]"
+ring.csv,8,285,AdaBoost,None,acc,0.85,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,285,AdaBoost,None,f1,0.8498834498834499,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,285,AdaBoost,None,auc,0.8497340814119986,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,285,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",acc,0.9378378378378378,"[array([[351,  15],
+       [ 31, 343]])]"
+ring.csv,8,285,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",f1,0.9432382680717183,"[array([[351,  15],
+       [ 27, 347]])]"
+ring.csv,8,285,Grouped_Mixed_Bagging,"[[0.3, 0.6, 0.1], 3.0]",auc,0.946144180473978,"[array([[353,  13],
+       [ 27, 347]])]"
+ring.csv,8,285,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9540540540540541,"[array([[357,   9],
+       [ 25, 349]])]"
+ring.csv,8,285,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9499860278821373,"[array([[356,  10],
+       [ 27, 347]])]"
+ring.csv,8,285,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9569270331083253,"[array([[356,  10],
+       [ 22, 352]])]"
+ring.csv,9,285,base,None,acc,0.8486486486486486,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,285,base,None,f1,0.848598868933764,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,285,base,None,auc,0.8484848484848486,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,285,wagging,None,acc,0.9418918918918919,"[array([[354,  12],
+       [ 31, 343]])]"
+ring.csv,9,285,wagging,None,f1,0.9418697091331111,"[array([[354,  12],
+       [ 31, 343]])]"
+ring.csv,9,285,wagging,None,auc,0.9421627071096694,"[array([[354,  12],
+       [ 31, 343]])]"
+ring.csv,9,285,AdaBoost,None,acc,0.8702702702702703,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,285,AdaBoost,None,f1,0.8702399321183851,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,285,AdaBoost,None,auc,0.8701382192221151,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,285,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",acc,0.9472972972972973,"[array([[354,  12],
+       [ 27, 347]])]"
+ring.csv,9,285,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",f1,0.9486261366580516,"[array([[357,   9],
+       [ 29, 345]])]"
+ring.csv,9,285,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",auc,0.9515794395254376,"[array([[356,  10],
+       [ 26, 348]])]"
+ring.csv,9,285,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",acc,0.9513513513513514,"[array([[355,  11],
+       [ 25, 349]])]"
+ring.csv,9,285,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",f1,0.9499904118520467,"[array([[355,  11],
+       [ 26, 348]])]"
+ring.csv,9,285,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",auc,0.950184097484001,"[array([[354,  12],
+       [ 25, 349]])]"
+ring.csv,0,290,base,None,acc,0.8770270270270271,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,290,base,None,f1,0.8768995277160823,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,290,base,None,auc,0.8767888319904158,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,290,wagging,None,acc,0.9472972972972973,"[array([[357,  10],
+       [ 29, 344]])]"
+ring.csv,0,290,wagging,None,f1,0.9472735179213256,"[array([[357,  10],
+       [ 29, 344]])]"
+ring.csv,0,290,wagging,None,auc,0.9475020271602954,"[array([[357,  10],
+       [ 29, 344]])]"
+ring.csv,0,290,AdaBoost,None,acc,0.8770270270270271,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,290,AdaBoost,None,f1,0.8768770103414801,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,290,AdaBoost,None,auc,0.8767669167439789,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,290,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",acc,0.9472972972972973,"[array([[355,  12],
+       [ 27, 346]])]"
+ring.csv,0,290,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",f1,0.947279295866365,"[array([[356,  11],
+       [ 28, 345]])]"
+ring.csv,0,290,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",auc,0.9447991467664054,"[array([[356,  11],
+       [ 30, 343]])]"
+ring.csv,0,290,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9513513513513514,"[array([[355,  12],
+       [ 24, 349]])]"
+ring.csv,0,290,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.9540480125536851,"[array([[356,  11],
+       [ 23, 350]])]"
+ring.csv,0,290,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.9501610770613116,"[array([[356,  11],
+       [ 26, 347]])]"
+ring.csv,1,290,base,None,acc,0.8635135135135135,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,290,base,None,f1,0.8634159645368429,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,290,base,None,auc,0.8633182605138394,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,290,wagging,None,acc,0.9337837837837838,"[array([[352,  15],
+       [ 34, 339]])]"
+ring.csv,1,290,wagging,None,f1,0.9337539071319217,"[array([[352,  15],
+       [ 34, 339]])]"
+ring.csv,1,290,wagging,None,auc,0.9339876251908452,"[array([[352,  15],
+       [ 34, 339]])]"
+ring.csv,1,290,AdaBoost,None,acc,0.8662162162162163,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,290,AdaBoost,None,f1,0.8661705062495473,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,290,AdaBoost,None,auc,0.8660868866470404,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,290,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",acc,0.9405405405405406,"[array([[353,  14],
+       [ 30, 343]])]"
+ring.csv,1,290,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",f1,0.941872044160351,"[array([[354,  13],
+       [ 30, 343]])]"
+ring.csv,1,290,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",auc,0.9420743511260784,"[array([[354,  13],
+       [ 30, 343]])]"
+ring.csv,1,290,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9445945945945946,"[array([[356,  11],
+       [ 30, 343]])]"
+ring.csv,1,290,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9459246187969591,"[array([[356,  11],
+       [ 29, 344]])]"
+ring.csv,1,290,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9488205944875849,"[array([[356,  11],
+       [ 27, 346]])]"
+ring.csv,2,290,base,None,acc,0.8702702702702703,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,290,base,None,f1,0.8702607922991485,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,290,base,None,auc,0.8702179106004047,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,290,wagging,None,acc,0.9459459459459459,"[array([[357,  10],
+       [ 30, 343]])]"
+ring.csv,2,290,wagging,None,f1,0.9459182970154757,"[array([[357,  10],
+       [ 30, 343]])]"
+ring.csv,2,290,wagging,None,auc,0.9461615445865689,"[array([[357,  10],
+       [ 30, 343]])]"
+ring.csv,2,290,AdaBoost,None,acc,0.8743243243243243,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,290,AdaBoost,None,f1,0.874303433131669,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,290,AdaBoost,None,auc,0.8742393583215844,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,290,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",acc,0.9459459459459459,"[array([[357,  10],
+       [ 30, 343]])]"
+ring.csv,2,290,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",f1,0.9472735179213256,"[array([[357,  10],
+       [ 29, 344]])]"
+ring.csv,2,290,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",auc,0.9475020271602954,"[array([[357,  10],
+       [ 29, 344]])]"
+ring.csv,2,290,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,0.9459459459459459,"[array([[357,  10],
+       [ 30, 343]])]"
+ring.csv,2,290,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",f1,0.9486283878571112,"[array([[357,  10],
+       [ 28, 345]])]"
+ring.csv,2,290,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",auc,0.9448210620128423,"[array([[357,  10],
+       [ 31, 342]])]"
+ring.csv,3,290,base,None,acc,0.8513513513513513,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,290,base,None,f1,0.8513513513513513,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,290,base,None,auc,0.8513415783360485,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,290,wagging,None,acc,0.9310810810810811,"[array([[351,  16],
+       [ 35, 338]])]"
+ring.csv,3,290,wagging,None,f1,0.9310499849740412,"[array([[351,  16],
+       [ 35, 338]])]"
+ring.csv,3,290,wagging,None,auc,0.9312847447969553,"[array([[351,  16],
+       [ 35, 338]])]"
+ring.csv,3,290,AdaBoost,None,acc,0.85,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,290,AdaBoost,None,f1,0.8499980823704094,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,290,AdaBoost,None,auc,0.849979180515885,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,290,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",acc,0.9364864864864865,"[array([[353,  14],
+       [ 33, 340]])]"
+ring.csv,3,290,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9364578292898027,"[array([[353,  14],
+       [ 33, 340]])]"
+ring.csv,3,290,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.9407338685523519,"[array([[354,  13],
+       [ 31, 342]])]"
+ring.csv,3,290,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9418918918918919,"[array([[354,  13],
+       [ 30, 343]])]"
+ring.csv,3,290,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9405231642601507,"[array([[353,  14],
+       [ 30, 343]])]"
+ring.csv,3,290,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9407338685523519,"[array([[354,  13],
+       [ 31, 342]])]"
+ring.csv,4,290,base,None,acc,0.8810810810810811,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,290,base,None,f1,0.8810706544749097,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,290,base,None,auc,0.8810087373250343,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,290,wagging,None,acc,0.9337837837837838,"[array([[354,  12],
+       [ 37, 337]])]"
+ring.csv,4,290,wagging,None,f1,0.9337323653180635,"[array([[354,  12],
+       [ 37, 337]])]"
+ring.csv,4,290,wagging,None,auc,0.934141316735338,"[array([[354,  12],
+       [ 37, 337]])]"
+ring.csv,4,290,AdaBoost,None,acc,0.8905405405405405,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,290,AdaBoost,None,f1,0.8905387412694009,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,290,AdaBoost,None,auc,0.8905131352093744,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,290,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9297297297297298,"[array([[354,  12],
+       [ 40, 334]])]"
+ring.csv,4,290,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.9323509239505114,"[array([[356,  10],
+       [ 40, 334]])]"
+ring.csv,4,290,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9355366587767744,"[array([[356,  10],
+       [ 38, 336]])]"
+ring.csv,4,290,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,0.9297297297297298,"[array([[355,  11],
+       [ 41, 333]])]"
+ring.csv,4,290,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",f1,0.9377942267445029,"[array([[355,  11],
+       [ 35, 339]])]"
+ring.csv,4,290,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",auc,0.9341705385581952,"[array([[355,  11],
+       [ 38, 336]])]"
+ring.csv,5,290,base,None,acc,0.8810810810810811,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,290,base,None,f1,0.8810836872184952,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,290,base,None,auc,0.8810964027936062,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,290,wagging,None,acc,0.9540540540540541,"[array([[360,   6],
+       [ 28, 346]])]"
+ring.csv,5,290,wagging,None,f1,0.9540282023040644,"[array([[360,   6],
+       [ 28, 346]])]"
+ring.csv,5,290,wagging,None,auc,0.9543701236083107,"[array([[360,   6],
+       [ 28, 346]])]"
+ring.csv,5,290,AdaBoost,None,acc,0.8864864864864865,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,290,AdaBoost,None,f1,0.8864690727501287,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,290,AdaBoost,None,auc,0.8866777709593525,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,290,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",acc,0.9567567567567568,"[array([[361,   5],
+       [ 27, 347]])]"
+ring.csv,5,290,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",f1,0.9594416868353038,"[array([[361,   5],
+       [ 25, 349]])]"
+ring.csv,5,290,Grouped_Mixed_Bagging,"[[0.1, 0.7, 0.2], 2.0]",auc,0.9610838374097775,"[array([[361,   5],
+       [ 24, 350]])]"
+ring.csv,5,290,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,0.9594594594594594,"[array([[361,   5],
+       [ 25, 349]])]"
+ring.csv,5,290,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",f1,0.956732425697943,"[array([[361,   5],
+       [ 27, 347]])]"
+ring.csv,5,290,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",auc,0.9610546155869203,"[array([[360,   6],
+       [ 23, 351]])]"
+ring.csv,6,290,base,None,acc,0.8648648648648649,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,290,base,None,f1,0.8648332626233179,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,290,base,None,auc,0.8647321819935128,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,290,wagging,None,acc,0.9540540540540541,"[array([[358,   8],
+       [ 26, 348]])]"
+ring.csv,6,290,wagging,None,f1,0.9540389485375786,"[array([[358,   8],
+       [ 26, 348]])]"
+ring.csv,6,290,wagging,None,auc,0.9543116799625961,"[array([[358,   8],
+       [ 26, 348]])]"
+ring.csv,6,290,AdaBoost,None,acc,0.8675675675675676,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,290,AdaBoost,None,f1,0.8675365973708516,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,290,AdaBoost,None,auc,0.8674352006078139,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,290,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 1.0]",acc,0.9527027027027027,"[array([[357,   9],
+       [ 26, 348]])]"
+ring.csv,6,290,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 1.0]",f1,0.9553883814277365,"[array([[359,   7],
+       [ 26, 348]])]"
+ring.csv,6,290,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 1.0]",auc,0.9530040033897315,"[array([[359,   7],
+       [ 28, 346]])]"
+ring.csv,6,290,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,0.9540540540540541,"[array([[358,   8],
+       [ 26, 348]])]"
+ring.csv,6,290,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,0.9513300242023647,"[array([[358,   8],
+       [ 28, 346]])]"
+ring.csv,6,290,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,0.9570146985768971,"[array([[359,   7],
+       [ 25, 349]])]"
+ring.csv,7,290,base,None,acc,0.8959459459459459,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,290,base,None,f1,0.8959472761934999,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,290,base,None,auc,0.895948394260834,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,290,wagging,None,acc,0.9527027027027027,"[array([[354,  12],
+       [ 23, 351]])]"
+ring.csv,7,290,wagging,None,f1,0.9526998523804533,"[array([[354,  12],
+       [ 23, 351]])]"
+ring.csv,7,290,wagging,None,auc,0.9528578942754448,"[array([[354,  12],
+       [ 23, 351]])]"
+ring.csv,7,290,AdaBoost,None,acc,0.8932432432432432,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,290,AdaBoost,None,f1,0.8932446080426816,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,290,AdaBoost,None,auc,0.8932453756465328,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,290,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9581081081081081,"[array([[357,   9],
+       [ 22, 352]])]"
+ring.csv,7,290,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.9554001117951262,"[array([[356,  10],
+       [ 23, 351]])]"
+ring.csv,7,290,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9542532363168814,"[array([[356,  10],
+       [ 24, 350]])]"
+ring.csv,7,290,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,0.9540540540540541,"[array([[356,  10],
+       [ 24, 350]])]"
+ring.csv,7,290,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,0.9526936328330172,"[array([[356,  10],
+       [ 25, 349]])]"
+ring.csv,7,290,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",auc,0.9542240144940242,"[array([[355,  11],
+       [ 23, 351]])]"
+ring.csv,8,290,base,None,acc,0.8621621621621621,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,290,base,None,f1,0.8621410107303524,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,290,base,None,auc,0.8620583852020689,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,290,wagging,None,acc,0.9418918918918919,"[array([[353,  13],
+       [ 30, 344]])]"
+ring.csv,8,290,wagging,None,f1,0.9418756540251867,"[array([[353,  13],
+       [ 30, 344]])]"
+ring.csv,8,290,wagging,None,auc,0.9421334852868123,"[array([[353,  13],
+       [ 30, 344]])]"
+ring.csv,8,290,AdaBoost,None,acc,0.85,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,290,AdaBoost,None,f1,0.8498834498834499,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,290,AdaBoost,None,auc,0.8497340814119986,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,290,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",acc,0.9432432432432433,"[array([[351,  15],
+       [ 27, 347]])]"
+ring.csv,8,290,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",f1,0.9405266404302085,"[array([[352,  14],
+       [ 30, 344]])]"
+ring.csv,8,290,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 3.0]",auc,0.9421042634639548,"[array([[352,  14],
+       [ 29, 345]])]"
+ring.csv,8,290,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9540540540540541,"[array([[354,  12],
+       [ 22, 352]])]"
+ring.csv,8,290,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9499860278821373,"[array([[356,  10],
+       [ 27, 347]])]"
+ring.csv,8,290,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.9542824581397388,"[array([[357,   9],
+       [ 25, 349]])]"
+ring.csv,9,290,base,None,acc,0.8486486486486486,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,290,base,None,f1,0.848598868933764,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,290,base,None,auc,0.8484848484848486,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,290,wagging,None,acc,0.9459459459459459,"[array([[353,  13],
+       [ 27, 347]])]"
+ring.csv,9,290,wagging,None,f1,0.9459376536905374,"[array([[353,  13],
+       [ 27, 347]])]"
+ring.csv,9,290,wagging,None,auc,0.946144180473978,"[array([[353,  13],
+       [ 27, 347]])]"
+ring.csv,9,290,AdaBoost,None,acc,0.8702702702702703,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,290,AdaBoost,None,f1,0.8702399321183851,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,290,AdaBoost,None,auc,0.8701382192221151,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,290,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",acc,0.9445945945945946,"[array([[353,  13],
+       [ 28, 346]])]"
+ring.csv,9,290,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",f1,0.9486407710060105,"[array([[354,  12],
+       [ 26, 348]])]"
+ring.csv,9,290,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",auc,0.9475395225154146,"[array([[355,  11],
+       [ 28, 346]])]"
+ring.csv,9,290,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",acc,0.9459459459459459,"[array([[354,  12],
+       [ 28, 346]])]"
+ring.csv,9,290,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",f1,0.9499969868021936,"[array([[353,  13],
+       [ 24, 350]])]"
+ring.csv,9,290,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",auc,0.9461734022968352,"[array([[354,  12],
+       [ 28, 346]])]"
+ring.csv,0,295,base,None,acc,0.8770270270270271,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,295,base,None,f1,0.8768995277160823,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,295,base,None,auc,0.8767888319904158,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,295,wagging,None,acc,0.9486486486486486,"[array([[357,  10],
+       [ 28, 345]])]"
+ring.csv,0,295,wagging,None,f1,0.9486283878571112,"[array([[357,  10],
+       [ 28, 345]])]"
+ring.csv,0,295,wagging,None,auc,0.948842509734022,"[array([[357,  10],
+       [ 28, 345]])]"
+ring.csv,0,295,AdaBoost,None,acc,0.8770270270270271,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,295,AdaBoost,None,f1,0.8768770103414801,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,295,AdaBoost,None,auc,0.8767669167439789,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,295,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",acc,0.9472972972972973,"[array([[355,  12],
+       [ 27, 346]])]"
+ring.csv,0,295,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",f1,0.9459301493274094,"[array([[355,  12],
+       [ 28, 345]])]"
+ring.csv,0,295,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9474362814209846,"[array([[354,  13],
+       [ 26, 347]])]"
+ring.csv,0,295,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.9459459459459459,"[array([[354,  13],
+       [ 27, 346]])]"
+ring.csv,0,295,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.9540527115768718,"[array([[354,  13],
+       [ 21, 352]])]"
+ring.csv,0,295,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.9501172465684377,"[array([[354,  13],
+       [ 24, 349]])]"
+ring.csv,1,295,base,None,acc,0.8635135135135135,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,295,base,None,f1,0.8634159645368429,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,295,base,None,auc,0.8633182605138394,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,295,wagging,None,acc,0.9405405405405406,"[array([[353,  14],
+       [ 30, 343]])]"
+ring.csv,1,295,wagging,None,f1,0.9405231642601507,"[array([[353,  14],
+       [ 30, 343]])]"
+ring.csv,1,295,wagging,None,auc,0.940711953305915,"[array([[353,  14],
+       [ 30, 343]])]"
+ring.csv,1,295,AdaBoost,None,acc,0.8662162162162163,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,295,AdaBoost,None,f1,0.8661705062495473,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,295,AdaBoost,None,auc,0.8660868866470404,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,295,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9459459459459459,"[array([[355,  12],
+       [ 28, 345]])]"
+ring.csv,1,295,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.9432208497368071,"[array([[355,  12],
+       [ 30, 343]])]"
+ring.csv,1,295,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9447991467664054,"[array([[356,  11],
+       [ 30, 343]])]"
+ring.csv,1,295,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",acc,0.95,"[array([[354,  13],
+       [ 24, 349]])]"
+ring.csv,1,295,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",f1,0.9418860553472249,"[array([[351,  16],
+       [ 27, 346]])]"
+ring.csv,1,295,Incremental_Mixed_Bagging,"[[-3.0, 3.0]]",auc,0.9447553162735315,"[array([[354,  13],
+       [ 28, 345]])]"
+ring.csv,2,295,base,None,acc,0.8702702702702703,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,295,base,None,f1,0.8702607922991485,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,295,base,None,auc,0.8702179106004047,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,295,wagging,None,acc,0.9445945945945946,"[array([[357,  10],
+       [ 31, 342]])]"
+ring.csv,2,295,wagging,None,f1,0.9445627102324978,"[array([[357,  10],
+       [ 31, 342]])]"
+ring.csv,2,295,wagging,None,auc,0.9448210620128423,"[array([[357,  10],
+       [ 31, 342]])]"
+ring.csv,2,295,AdaBoost,None,acc,0.8743243243243243,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,295,AdaBoost,None,f1,0.874303433131669,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,295,AdaBoost,None,auc,0.8742393583215844,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,295,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",acc,0.9459459459459459,"[array([[357,  10],
+       [ 30, 343]])]"
+ring.csv,2,295,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 3.0]",f1,0.9445550128695543,"[array([[358,   9],
+       [ 32, 341]])]"
+ring.csv,2,295,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",auc,0.9421400968653894,"[array([[357,  10],
+       [ 33, 340]])]"
+ring.csv,2,295,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,0.9472972972972973,"[array([[358,   9],
+       [ 30, 343]])]"
+ring.csv,2,295,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",f1,0.9472735179213256,"[array([[357,  10],
+       [ 29, 344]])]"
+ring.csv,2,295,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",auc,0.9488644249804589,"[array([[358,   9],
+       [ 29, 344]])]"
+ring.csv,3,295,base,None,acc,0.8513513513513513,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,295,base,None,f1,0.8513513513513513,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,295,base,None,auc,0.8513415783360485,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,295,wagging,None,acc,0.9351351351351351,"[array([[350,  17],
+       [ 31, 342]])]"
+ring.csv,3,295,wagging,None,f1,0.9351218668479999,"[array([[350,  17],
+       [ 31, 342]])]"
+ring.csv,3,295,wagging,None,auc,0.9352842772716979,"[array([[350,  17],
+       [ 31, 342]])]"
+ring.csv,3,295,AdaBoost,None,acc,0.85,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,295,AdaBoost,None,f1,0.8499980823704094,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,295,AdaBoost,None,auc,0.849979180515885,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,295,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9351351351351351,"[array([[352,  15],
+       [ 33, 340]])]"
+ring.csv,3,295,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.9378133116165032,"[array([[353,  14],
+       [ 32, 341]])]"
+ring.csv,3,295,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9380309881584618,"[array([[353,  14],
+       [ 32, 341]])]"
+ring.csv,3,295,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",acc,0.9418918918918919,"[array([[354,  13],
+       [ 30, 343]])]"
+ring.csv,3,295,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",f1,0.9351161791928917,"[array([[351,  16],
+       [ 32, 341]])]"
+ring.csv,3,295,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",auc,0.9380309881584618,"[array([[353,  14],
+       [ 32, 341]])]"
+ring.csv,4,295,base,None,acc,0.8810810810810811,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,295,base,None,f1,0.8810706544749097,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,295,base,None,auc,0.8810087373250343,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,295,wagging,None,acc,0.9324324324324325,"[array([[353,  13],
+       [ 37, 337]])]"
+ring.csv,4,295,wagging,None,f1,0.9323850290701119,"[array([[353,  13],
+       [ 37, 337]])]"
+ring.csv,4,295,wagging,None,auc,0.9327751965167587,"[array([[353,  13],
+       [ 37, 337]])]"
+ring.csv,4,295,AdaBoost,None,acc,0.8905405405405405,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,295,AdaBoost,None,f1,0.8905387412694009,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,295,AdaBoost,None,auc,0.8905131352093744,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,295,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",acc,0.9283783783783783,"[array([[353,  13],
+       [ 40, 334]])]"
+ring.csv,4,295,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",f1,0.9242712325585254,"[array([[350,  16],
+       [ 40, 334]])]"
+ring.csv,4,295,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",auc,0.9314675199438941,"[array([[354,  12],
+       [ 39, 335]])]"
+ring.csv,4,295,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9324324324324325,"[array([[353,  13],
+       [ 37, 337]])]"
+ring.csv,4,295,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9350986385469143,"[array([[353,  13],
+       [ 35, 339]])]"
+ring.csv,4,295,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.9355074369539171,"[array([[355,  11],
+       [ 37, 337]])]"
+ring.csv,5,295,base,None,acc,0.8810810810810811,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,295,base,None,f1,0.8810836872184952,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,295,base,None,auc,0.8810964027936062,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,295,wagging,None,acc,0.9581081081081081,"[array([[361,   5],
+       [ 26, 348]])]"
+ring.csv,5,295,wagging,None,f1,0.9580872169154528,"[array([[361,   5],
+       [ 26, 348]])]"
+ring.csv,5,295,wagging,None,auc,0.9584100406183338,"[array([[361,   5],
+       [ 26, 348]])]"
+ring.csv,5,295,AdaBoost,None,acc,0.8864864864864865,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,295,AdaBoost,None,f1,0.8864690727501287,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,295,AdaBoost,None,auc,0.8866777709593525,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,295,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 3.0]",acc,0.9608108108108108,"[array([[361,   5],
+       [ 24, 350]])]"
+ring.csv,5,295,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 3.0]",f1,0.9635033176437219,"[array([[361,   5],
+       [ 22, 352]])]"
+ring.csv,5,295,Grouped_Mixed_Bagging,"[[0.2, 0.6, 0.2], 3.0]",auc,0.9557070220040326,"[array([[360,   6],
+       [ 27, 347]])]"
+ring.csv,5,295,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9594594594594594,"[array([[361,   5],
+       [ 25, 349]])]"
+ring.csv,5,295,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9607958503455866,"[array([[361,   5],
+       [ 24, 350]])]"
+ring.csv,5,295,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9583808187954764,"[array([[360,   6],
+       [ 25, 349]])]"
+ring.csv,6,295,base,None,acc,0.8648648648648649,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,295,base,None,f1,0.8648332626233179,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,295,base,None,auc,0.8647321819935128,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,295,wagging,None,acc,0.9567567567567568,"[array([[360,   6],
+       [ 26, 348]])]"
+ring.csv,6,295,wagging,None,f1,0.9567377992909908,"[array([[360,   6],
+       [ 26, 348]])]"
+ring.csv,6,295,wagging,None,auc,0.9570439203997545,"[array([[360,   6],
+       [ 26, 348]])]"
+ring.csv,6,295,AdaBoost,None,acc,0.8675675675675676,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,295,AdaBoost,None,f1,0.8675365973708516,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,295,AdaBoost,None,auc,0.8674352006078139,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,295,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9554054054054054,"[array([[360,   6],
+       [ 27, 347]])]"
+ring.csv,6,295,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.9580964017390882,"[array([[359,   7],
+       [ 24, 350]])]"
+ring.csv,6,295,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.952974781566874,"[array([[358,   8],
+       [ 27, 347]])]"
+ring.csv,6,295,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",acc,0.9554054054054054,"[array([[358,   8],
+       [ 25, 349]])]"
+ring.csv,6,295,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",f1,0.9540339117466778,"[array([[359,   7],
+       [ 27, 347]])]"
+ring.csv,6,295,Incremental_Mixed_Bagging,"[[-5.0, 5.0]]",auc,0.9570146985768971,"[array([[359,   7],
+       [ 25, 349]])]"
+ring.csv,7,295,base,None,acc,0.8959459459459459,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,295,base,None,f1,0.8959472761934999,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,295,base,None,auc,0.895948394260834,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,295,wagging,None,acc,0.9513513513513514,"[array([[355,  11],
+       [ 25, 349]])]"
+ring.csv,7,295,wagging,None,f1,0.9513438883214838,"[array([[355,  11],
+       [ 25, 349]])]"
+ring.csv,7,295,wagging,None,auc,0.9515502177025803,"[array([[355,  11],
+       [ 25, 349]])]"
+ring.csv,7,295,AdaBoost,None,acc,0.8932432432432432,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,295,AdaBoost,None,f1,0.8932446080426816,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,295,AdaBoost,None,auc,0.8932453756465328,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,295,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",acc,0.9567567567567568,"[array([[357,   9],
+       [ 23, 351]])]"
+ring.csv,7,295,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",f1,0.9540470056369569,"[array([[356,  10],
+       [ 24, 350]])]"
+ring.csv,7,295,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 2.0]",auc,0.9569562549311825,"[array([[357,   9],
+       [ 23, 351]])]"
+ring.csv,7,295,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,0.9554054054054054,"[array([[356,  10],
+       [ 23, 351]])]"
+ring.csv,7,295,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",f1,0.9554001117951262,"[array([[356,  10],
+       [ 23, 351]])]"
+ring.csv,7,295,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",auc,0.9609669501183483,"[array([[357,   9],
+       [ 20, 354]])]"
+ring.csv,8,295,base,None,acc,0.8621621621621621,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,295,base,None,f1,0.8621410107303524,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,295,base,None,auc,0.8620583852020689,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,295,wagging,None,acc,0.9405405405405406,"[array([[354,  12],
+       [ 32, 342]])]"
+ring.csv,8,295,wagging,None,f1,0.9405144740251123,"[array([[354,  12],
+       [ 32, 342]])]"
+ring.csv,8,295,wagging,None,auc,0.9408258087139476,"[array([[354,  12],
+       [ 32, 342]])]"
+ring.csv,8,295,AdaBoost,None,acc,0.85,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,295,AdaBoost,None,f1,0.8498834498834499,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,295,AdaBoost,None,auc,0.8497340814119986,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,295,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",acc,0.9445945945945946,"[array([[354,  12],
+       [ 29, 345]])]"
+ring.csv,8,295,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",f1,0.9459333094820077,"[array([[354,  12],
+       [ 28, 346]])]"
+ring.csv,8,295,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",auc,0.9475395225154146,"[array([[355,  11],
+       [ 28, 346]])]"
+ring.csv,8,295,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",acc,0.9513513513513514,"[array([[357,   9],
+       [ 27, 347]])]"
+ring.csv,8,295,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",f1,0.9499860278821373,"[array([[356,  10],
+       [ 27, 347]])]"
+ring.csv,8,295,Incremental_Mixed_Bagging,"[[-2.0, 4.0]]",auc,0.9516086613482949,"[array([[357,   9],
+       [ 27, 347]])]"
+ring.csv,9,295,base,None,acc,0.8486486486486486,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,295,base,None,f1,0.848598868933764,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,295,base,None,auc,0.8484848484848486,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,295,wagging,None,acc,0.9405405405405406,"[array([[353,  13],
+       [ 31, 343]])]"
+ring.csv,9,295,wagging,None,f1,0.9405209922251018,"[array([[353,  13],
+       [ 31, 343]])]"
+ring.csv,9,295,wagging,None,auc,0.9407965868910901,"[array([[353,  13],
+       [ 31, 343]])]"
+ring.csv,9,295,AdaBoost,None,acc,0.8702702702702703,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,295,AdaBoost,None,f1,0.8702399321183851,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,295,AdaBoost,None,auc,0.8701382192221151,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,295,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",acc,0.9472972972972973,"[array([[354,  12],
+       [ 27, 347]])]"
+ring.csv,9,295,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",f1,0.9472825699298204,"[array([[355,  11],
+       [ 28, 346]])]"
+ring.csv,9,295,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",auc,0.9475395225154146,"[array([[355,  11],
+       [ 28, 346]])]"
+ring.csv,9,295,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9513513513513514,"[array([[354,  12],
+       [ 24, 350]])]"
+ring.csv,9,295,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9459333094820077,"[array([[354,  12],
+       [ 28, 346]])]"
+ring.csv,9,295,Incremental_Mixed_Bagging,"[[-2.0, 3.0]]",auc,0.9475103006925572,"[array([[354,  12],
+       [ 27, 347]])]"
+ring.csv,0,300,base,None,acc,0.8770270270270271,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,300,base,None,f1,0.8768995277160823,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,300,base,None,auc,0.8767888319904158,"[array([[311,  56],
+       [ 35, 338]])]"
+ring.csv,0,300,wagging,None,acc,0.95,"[array([[357,  10],
+       [ 27, 346]])]"
+ring.csv,0,300,wagging,None,f1,0.9499829217193718,"[array([[357,  10],
+       [ 27, 346]])]"
+ring.csv,0,300,wagging,None,auc,0.9501829923077485,"[array([[357,  10],
+       [ 27, 346]])]"
+ring.csv,0,300,AdaBoost,None,acc,0.8770270270270271,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,300,AdaBoost,None,f1,0.8768770103414801,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,300,AdaBoost,None,auc,0.8767669167439789,"[array([[310,  57],
+       [ 34, 339]])]"
+ring.csv,0,300,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9486486486486486,"[array([[355,  12],
+       [ 26, 347]])]"
+ring.csv,0,300,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.9499876716607095,"[array([[356,  11],
+       [ 26, 347]])]"
+ring.csv,0,300,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9488205944875849,"[array([[356,  11],
+       [ 27, 346]])]"
+ring.csv,0,300,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,0.9472972972972973,"[array([[356,  11],
+       [ 28, 345]])]"
+ring.csv,0,300,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",f1,0.9499829217193718,"[array([[357,  10],
+       [ 27, 346]])]"
+ring.csv,0,300,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",auc,0.9515015596350381,"[array([[356,  11],
+       [ 25, 348]])]"
+ring.csv,1,300,base,None,acc,0.8635135135135135,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,300,base,None,f1,0.8634159645368429,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,300,base,None,auc,0.8633182605138394,"[array([[308,  59],
+       [ 42, 331]])]"
+ring.csv,1,300,wagging,None,acc,0.9351351351351351,"[array([[351,  16],
+       [ 32, 341]])]"
+ring.csv,1,300,wagging,None,f1,0.9351161791928917,"[array([[351,  16],
+       [ 32, 341]])]"
+ring.csv,1,300,wagging,None,auc,0.9353061925181348,"[array([[351,  16],
+       [ 32, 341]])]"
+ring.csv,1,300,AdaBoost,None,acc,0.8662162162162163,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,300,AdaBoost,None,f1,0.8661705062495473,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,300,AdaBoost,None,auc,0.8660868866470404,"[array([[312,  55],
+       [ 44, 329]])]"
+ring.csv,1,300,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",acc,0.9445945945945946,"[array([[354,  13],
+       [ 28, 345]])]"
+ring.csv,1,300,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",f1,0.940528377944,"[array([[352,  15],
+       [ 29, 344]])]"
+ring.csv,1,300,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 1.0]",auc,0.9474801119138585,"[array([[356,  11],
+       [ 28, 345]])]"
+ring.csv,1,300,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,0.9432432432432433,"[array([[353,  14],
+       [ 28, 345]])]"
+ring.csv,1,300,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",f1,0.9432316334919999,"[array([[353,  14],
+       [ 28, 345]])]"
+ring.csv,1,300,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",auc,0.9434367489462419,"[array([[355,  12],
+       [ 30, 343]])]"
+ring.csv,2,300,base,None,acc,0.8702702702702703,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,300,base,None,f1,0.8702607922991485,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,300,base,None,auc,0.8702179106004047,"[array([[317,  50],
+       [ 46, 327]])]"
+ring.csv,2,300,wagging,None,acc,0.9486486486486486,"[array([[357,  10],
+       [ 28, 345]])]"
+ring.csv,2,300,wagging,None,f1,0.9486283878571112,"[array([[357,  10],
+       [ 28, 345]])]"
+ring.csv,2,300,wagging,None,auc,0.948842509734022,"[array([[357,  10],
+       [ 28, 345]])]"
+ring.csv,2,300,AdaBoost,None,acc,0.8743243243243243,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,300,AdaBoost,None,f1,0.874303433131669,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,300,AdaBoost,None,auc,0.8742393583215844,"[array([[317,  50],
+       [ 43, 330]])]"
+ring.csv,2,300,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",acc,0.9486486486486486,"[array([[358,   9],
+       [ 29, 344]])]"
+ring.csv,2,300,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",f1,0.9445627102324978,"[array([[357,  10],
+       [ 31, 342]])]"
+ring.csv,2,300,Grouped_Mixed_Bagging,"[[0.1, 0.6, 0.3], 2.0]",auc,0.9448210620128423,"[array([[357,  10],
+       [ 31, 342]])]"
+ring.csv,2,300,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",acc,0.9513513513513514,"[array([[357,  10],
+       [ 26, 347]])]"
+ring.csv,2,300,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",f1,0.9486283878571112,"[array([[357,  10],
+       [ 28, 345]])]"
+ring.csv,2,300,Incremental_Mixed_Bagging,"[[-4.0, 4.0]]",auc,0.951523474881475,"[array([[357,  10],
+       [ 26, 347]])]"
+ring.csv,3,300,base,None,acc,0.8513513513513513,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,300,base,None,f1,0.8513513513513513,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,300,base,None,auc,0.8513415783360485,"[array([[312,  55],
+       [ 55, 318]])]"
+ring.csv,3,300,wagging,None,acc,0.9351351351351351,"[array([[353,  14],
+       [ 34, 339]])]"
+ring.csv,3,300,wagging,None,f1,0.9351019564185709,"[array([[353,  14],
+       [ 34, 339]])]"
+ring.csv,3,300,wagging,None,auc,0.9353500230110088,"[array([[353,  14],
+       [ 34, 339]])]"
+ring.csv,3,300,AdaBoost,None,acc,0.85,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,300,AdaBoost,None,f1,0.8499980823704094,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,300,AdaBoost,None,auc,0.849979180515885,"[array([[311,  56],
+       [ 55, 318]])]"
+ring.csv,3,300,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9405405405405406,"[array([[354,  13],
+       [ 31, 342]])]"
+ring.csv,3,300,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.9405231642601507,"[array([[353,  14],
+       [ 30, 343]])]"
+ring.csv,3,300,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9393714707321884,"[array([[353,  14],
+       [ 31, 342]])]"
+ring.csv,3,300,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",acc,0.9405405405405406,"[array([[354,  13],
+       [ 31, 342]])]"
+ring.csv,3,300,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",f1,0.9337456780827413,"[array([[353,  14],
+       [ 35, 338]])]"
+ring.csv,3,300,Incremental_Mixed_Bagging,"[[-1.0, 2.0]]",auc,0.9380309881584618,"[array([[353,  14],
+       [ 32, 341]])]"
+ring.csv,4,300,base,None,acc,0.8810810810810811,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,300,base,None,f1,0.8810706544749097,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,300,base,None,auc,0.8810087373250343,"[array([[320,  46],
+       [ 42, 332]])]"
+ring.csv,4,300,wagging,None,acc,0.927027027027027,"[array([[350,  16],
+       [ 38, 336]])]"
+ring.csv,4,300,wagging,None,f1,0.9269859683652787,"[array([[350,  16],
+       [ 38, 336]])]"
+ring.csv,4,300,wagging,None,auc,0.9273399374652991,"[array([[350,  16],
+       [ 38, 336]])]"
+ring.csv,4,300,AdaBoost,None,acc,0.8905405405405405,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,300,AdaBoost,None,f1,0.8905387412694009,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,300,AdaBoost,None,auc,0.8905131352093744,"[array([[325,  41],
+       [ 40, 334]])]"
+ring.csv,4,300,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",acc,0.9351351351351351,"[array([[354,  12],
+       [ 36, 338]])]"
+ring.csv,4,300,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",f1,0.9215414098308835,"[array([[351,  15],
+       [ 43, 331]])]"
+ring.csv,4,300,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",auc,0.9314967417667513,"[array([[355,  11],
+       [ 40, 334]])]"
+ring.csv,4,300,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9337837837837838,"[array([[354,  12],
+       [ 37, 337]])]"
+ring.csv,4,300,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9350896279073074,"[array([[354,  12],
+       [ 36, 338]])]"
+ring.csv,4,300,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.9340828730896232,"[array([[352,  14],
+       [ 35, 339]])]"
+ring.csv,5,300,base,None,acc,0.8810810810810811,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,300,base,None,f1,0.8810836872184952,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,300,base,None,auc,0.8810964027936062,"[array([[323,  43],
+       [ 45, 329]])]"
+ring.csv,5,300,wagging,None,acc,0.9567567567567568,"[array([[360,   6],
+       [ 26, 348]])]"
+ring.csv,5,300,wagging,None,f1,0.9567377992909908,"[array([[360,   6],
+       [ 26, 348]])]"
+ring.csv,5,300,wagging,None,auc,0.9570439203997545,"[array([[360,   6],
+       [ 26, 348]])]"
+ring.csv,5,300,AdaBoost,None,acc,0.8864864864864865,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,300,AdaBoost,None,f1,0.8864690727501287,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,300,AdaBoost,None,auc,0.8866777709593525,"[array([[331,  35],
+       [ 49, 325]])]"
+ring.csv,5,300,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9581081081081081,"[array([[361,   5],
+       [ 26, 348]])]"
+ring.csv,5,300,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.9594416868353038,"[array([[361,   5],
+       [ 25, 349]])]"
+ring.csv,5,300,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9597469390140556,"[array([[361,   5],
+       [ 25, 349]])]"
+ring.csv,5,300,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9581081081081081,"[array([[360,   6],
+       [ 25, 349]])]"
+ring.csv,5,300,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9580872169154528,"[array([[361,   5],
+       [ 26, 348]])]"
+ring.csv,5,300,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.9583808187954764,"[array([[360,   6],
+       [ 25, 349]])]"
+ring.csv,6,300,base,None,acc,0.8648648648648649,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,300,base,None,f1,0.8648332626233179,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,300,base,None,auc,0.8647321819935128,"[array([[312,  54],
+       [ 46, 328]])]"
+ring.csv,6,300,wagging,None,acc,0.95,"[array([[359,   7],
+       [ 30, 344]])]"
+ring.csv,6,300,wagging,None,f1,0.9499684859556977,"[array([[359,   7],
+       [ 30, 344]])]"
+ring.csv,6,300,wagging,None,auc,0.9503302065982877,"[array([[359,   7],
+       [ 30, 344]])]"
+ring.csv,6,300,AdaBoost,None,acc,0.8675675675675676,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,300,AdaBoost,None,f1,0.8675365973708516,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,300,AdaBoost,None,auc,0.8674352006078139,"[array([[313,  53],
+       [ 45, 329]])]"
+ring.csv,6,300,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",acc,0.9608108108108108,"[array([[360,   6],
+       [ 23, 351]])]"
+ring.csv,6,300,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",f1,0.956742539800074,"[array([[359,   7],
+       [ 25, 349]])]"
+ring.csv,6,300,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 3.0]",auc,0.9516963268168669,"[array([[360,   6],
+       [ 30, 344]])]"
+ring.csv,6,300,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9513513513513514,"[array([[357,   9],
+       [ 27, 347]])]"
+ring.csv,6,300,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9526846469688113,"[array([[358,   8],
+       [ 27, 347]])]"
+ring.csv,6,300,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.9503302065982877,"[array([[359,   7],
+       [ 30, 344]])]"
+ring.csv,7,300,base,None,acc,0.8959459459459459,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,300,base,None,f1,0.8959472761934999,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,300,base,None,auc,0.895948394260834,"[array([[328,  38],
+       [ 39, 335]])]"
+ring.csv,7,300,wagging,None,acc,0.9486486486486486,"[array([[354,  12],
+       [ 26, 348]])]"
+ring.csv,7,300,wagging,None,f1,0.9486407710060105,"[array([[354,  12],
+       [ 26, 348]])]"
+ring.csv,7,300,wagging,None,auc,0.9488471990882792,"[array([[354,  12],
+       [ 26, 348]])]"
+ring.csv,7,300,AdaBoost,None,acc,0.8932432432432432,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,300,AdaBoost,None,f1,0.8932446080426816,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,300,AdaBoost,None,auc,0.8932453756465328,"[array([[327,  39],
+       [ 40, 334]])]"
+ring.csv,7,300,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",acc,0.9540540540540541,"[array([[354,  12],
+       [ 22, 352]])]"
+ring.csv,7,300,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",f1,0.9540470056369569,"[array([[356,  10],
+       [ 24, 350]])]"
+ring.csv,7,300,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",auc,0.9582639315040472,"[array([[356,  10],
+       [ 21, 353]])]"
+ring.csv,7,300,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",acc,0.9540540540540541,"[array([[356,  10],
+       [ 24, 350]])]"
+ring.csv,7,300,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",f1,0.9567529661498805,"[array([[356,  10],
+       [ 22, 352]])]"
+ring.csv,7,300,Incremental_Mixed_Bagging,"[[-3.0, 4.0]]",auc,0.9569270331083253,"[array([[356,  10],
+       [ 22, 352]])]"
+ring.csv,8,300,base,None,acc,0.8621621621621621,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,300,base,None,f1,0.8621410107303524,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,300,base,None,auc,0.8620583852020689,"[array([[312,  54],
+       [ 48, 326]])]"
+ring.csv,8,300,wagging,None,acc,0.9459459459459459,"[array([[354,  12],
+       [ 28, 346]])]"
+ring.csv,8,300,wagging,None,f1,0.9459333094820077,"[array([[354,  12],
+       [ 28, 346]])]"
+ring.csv,8,300,wagging,None,auc,0.9461734022968352,"[array([[354,  12],
+       [ 28, 346]])]"
+ring.csv,8,300,AdaBoost,None,acc,0.85,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,300,AdaBoost,None,f1,0.8498834498834499,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,300,AdaBoost,None,auc,0.8497340814119986,"[array([[302,  64],
+       [ 47, 327]])]"
+ring.csv,8,300,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",acc,0.9418918918918919,"[array([[352,  14],
+       [ 29, 345]])]"
+ring.csv,8,300,Grouped_Mixed_Bagging,"[[0.4, 0.4, 0.2], 2.0]",f1,0.9391775279281649,"[array([[351,  15],
+       [ 30, 344]])]"
+ring.csv,8,300,Grouped_Mixed_Bagging,"[[0.0, 0.7, 0.3], 3.0]",auc,0.9448657257239708,"[array([[355,  11],
+       [ 30, 344]])]"
+ring.csv,8,300,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",acc,0.9418918918918919,"[array([[352,  14],
+       [ 29, 345]])]"
+ring.csv,8,300,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",f1,0.9472910412124219,"[array([[353,  13],
+       [ 26, 348]])]"
+ring.csv,8,300,Incremental_Mixed_Bagging,"[[-6.0, 6.0]]",auc,0.9502133193068585,"[array([[355,  11],
+       [ 26, 348]])]"
+ring.csv,9,300,base,None,acc,0.8486486486486486,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,300,base,None,f1,0.848598868933764,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,300,base,None,auc,0.8484848484848486,"[array([[305,  61],
+       [ 51, 323]])]"
+ring.csv,9,300,wagging,None,acc,0.9445945945945946,"[array([[354,  12],
+       [ 29, 345]])]"
+ring.csv,9,300,wagging,None,f1,0.9445791119775037,"[array([[354,  12],
+       [ 29, 345]])]"
+ring.csv,9,300,wagging,None,auc,0.9448365039011133,"[array([[354,  12],
+       [ 29, 345]])]"
+ring.csv,9,300,AdaBoost,None,acc,0.8702702702702703,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,300,AdaBoost,None,f1,0.8702399321183851,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,300,AdaBoost,None,auc,0.8701382192221151,"[array([[314,  52],
+       [ 44, 330]])]"
+ring.csv,9,300,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",acc,0.9527027027027027,"[array([[354,  12],
+       [ 23, 351]])]"
+ring.csv,9,300,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",f1,0.9499904118520467,"[array([[355,  11],
+       [ 26, 348]])]"
+ring.csv,9,300,Grouped_Mixed_Bagging,"[[0.2, 0.4, 0.4], 2.0]",auc,0.9502133193068585,"[array([[355,  11],
+       [ 26, 348]])]"
+ring.csv,9,300,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",acc,0.95,"[array([[355,  11],
+       [ 26, 348]])]"
+ring.csv,9,300,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",f1,0.9553968538139874,"[array([[357,   9],
+       [ 24, 350]])]"
+ring.csv,9,300,Incremental_Mixed_Bagging,"[[-1.0, 3.0]]",auc,0.9502425411297156,"[array([[356,  10],
+       [ 27, 347]])]"
