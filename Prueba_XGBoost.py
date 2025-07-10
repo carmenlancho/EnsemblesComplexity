@@ -513,7 +513,7 @@ def Xgradientboosting_all_combinations(path_to_save, dataset, X,y):
                                         'test_acc_std', 'conf_matr_train_total', 'conf_matr_test_total'])
 
     # Algunos parámetros que dejamos fijos
-    M = 10 # 300
+    M = 300 # 10 #
     n_cv_splits = 10 # 5 # 10
     plot_error = False
 
