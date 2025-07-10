@@ -25,10 +25,87 @@ root_path = os.getcwd()
 # combo de cambios
 # hay 2 funciones pérdida log-loss y exponential (que es adaboost)
 
-#####################################################################################################
-### ESTO NO HE LOGRADO QUE FUNCIONE POR TEMAS DE TAMAÑO MUESTRAL DE LA PREDICCIÓN DE TEST
+####################################################################################################
+## ESTO NO HE LOGRADO QUE FUNCIONE POR TEMAS DE TAMAÑO MUESTRAL DE LA PREDICCIÓN DE TEST
 
-## Con esta función puedo modificar los pesos iniciales (MÁS BIEN LAS PREDICCIONES INICIALES)
+# Con esta función puedo modificar las predicciones iniciales
+from sklearn.base import BaseEstimator, ClassifierMixin
+
+from sklearn.base import BaseEstimator, ClassifierMixin
+import numpy as np
+
+class CustomInitModel(BaseEstimator, ClassifierMixin):
+    # La clase CustomInitModel hereda de dos clases base de scikit-learn: BaseEstimator y ClassifierMixin.
+    # Esto hace que la clase CustomInitModel tenga un comportamiento compatible con scikit-learn.
+    def __init__(self, initial_predictions=None, loss='log_loss'):
+        self.initial_predictions = initial_predictions
+        self.loss = loss
+
+    def fit(self, X, y):
+        if self.initial_predictions is None:
+            self.initial_predictions_ = np.zeros(X.shape[0])
+        else:
+            if len(self.initial_predictions) != X.shape[0]:
+                raise ValueError("initial_predictions must match number of training samples")
+            self.initial_predictions_ = np.array(self.initial_predictions)
+        return self
+
+    def predict_proba(self, X):
+        n = X.shape[0]
+
+        # Si estamos en test y no tenemos inicialización: devolvemos ceros (logit 0 = prob 0.5)
+        if len(self.initial_predictions_) != n:
+            pred = np.zeros(n)
+        else:
+            pred = self.initial_predictions_
+
+        if self.loss == 'log_loss' or self.loss == 'exponential':
+            probas = 1.0 / (1.0 + np.exp(-pred))
+            probas = np.clip(probas, 1e-6, 1 - 1e-6)
+            return np.vstack([1 - probas, probas]).T
+
+        else:
+            raise ValueError("Unsupported loss function")
+
+    def predict(self, X):
+        probas = self.predict_proba(X)
+        return (probas[:, 1] > 0.5).astype(int)
+
+
+from sklearn.datasets import make_classification
+from sklearn.model_selection import train_test_split
+# 1. Crear datos de clasificación binaria
+X, y = make_classification(n_samples=200, n_features=10, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, stratify=y, test_size=0.3, random_state=42)
+
+# 2. Crear una "complejidad" falsa: puntaje aleatorio entre 0 y 1
+np.random.seed(42)
+complexity_score = np.random.rand(len(y_train))  # Simulando medida de complejidad
+
+# 3. Escalarlo entre 0.05 y 0.95 para evitar extremos 0 o 1
+scaled_complexity = 0.05 + 0.9 * complexity_score
+
+init_logits = np.log((scaled_complexity + 1e-5) / (1 - scaled_complexity + 1e-5))
+init_model = CustomInitModel(initial_predictions=init_logits)
+
+clf = GradientBoostingClassifier(
+    n_estimators=50,
+    learning_rate=0.1,
+    max_depth=1,
+    init=init_model
+)
+clf.fit(X_train, y_train)
+
+# 7. Evaluar
+y_pred_proba = clf.predict_proba(X_test)[:, 1]
+y_pred = clf.predict(X_test)
+
+print("Accuracy:", accuracy_score(y_test, y_pred))
+print("Log Loss:", log_loss(y_test, y_pred_proba))
+
+
+
+#
 #
 # class CustomInitModel(BaseEstimator, ClassifierMixin):
 #     def __init__(self, initial_weights):
@@ -135,7 +212,7 @@ root_path = os.getcwd()
 #     print(f"Etapa {stage_index}:")
 #     print(f"Tamaño de train_pred: {len(train_pred)}, Tamaño de y_train: {len(y_train)}")
 #     print(f"Tamaño de test_pred: {len(test_pred)}, Tamaño de y_test: {len(y_test)}")
-#
+
 
 ###############################################################################################################
 
