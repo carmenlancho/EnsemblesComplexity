@@ -1,7 +1,92 @@
+# 10/07/2025
 # Si queremos hacerlo con xgboost, podemos usar una función de pérdida customizada
 # pero también necesitamos la hessiana
 
 
+
+
+# # Definimos nuestra propia función de pérdida
+# def complexity_weighted_logloss(complexity_array):
+#     def custom_logloss(preds, dtrain):
+#         y_true = dtrain.get_label()
+#         preds = 1.0 / (1.0 + np.exp(-preds))  # Convert logits to probabilities
+#
+#         # Compute weighted gradients and Hessians
+#         grad = complexity_array * (preds - y_true)
+#         hess = complexity_array * preds * (1 - preds)
+#
+#         return grad, hess
+#     return custom_logloss
+
+# Train XGBoost model with custom loss
+
+#
+#
+# dtrain = xgb.DMatrix(X_train, label=y_train, weight=complexity_array)
+#
+# params = {
+#     'max_depth': 3,
+#     'eta': 0.1,
+#     'objective': 'binary:logistic',
+#     'eval_metric': 'logloss'
+# }
+#
+# # Train using your custom objective
+# bst = xgb.train(
+#     params,
+#     dtrain,
+#     num_boost_round=100,
+#     obj=complexity_weighted_logloss(complexity_array)
+# )
+#
+# # to evaluate your model with the same complexity-aware loss, you can define a custom evaluation function
+#
+# def complexity_weighted_logloss_eval(complexity_array):
+#     def eval_metric(preds, dtrain):
+#         y_true = dtrain.get_label()
+#         preds = 1.0 / (1.0 + np.exp(-preds))
+#
+#         eps = 1e-15  # To avoid log(0)
+#         logloss = -np.sum(
+#             complexity_array * (
+#                 y_true * np.log(preds + eps) +
+#                 (1 - y_true) * np.log(1 - preds + eps)
+#             )
+#         ) / np.sum(complexity_array)
+#
+#         return 'complexity_logloss', logloss
+#     return eval_metric
+#
+#
+# bst = xgb.train(
+#     params,
+#     dtrain,
+#     num_boost_round=100,
+#     obj=complexity_weighted_logloss(complexity_array),
+#     feval=complexity_weighted_logloss_eval(complexity_array),
+#     evals=[(dtrain, 'train')],
+#     verbose_eval=True
+# )
+#
+
+
+### Código para hacer pruebas de complejidad con Extreme Gradient Boosting
+# Como el XGBoost tiene en cuenta el gradiente y el hessiano, vamos a ver si se aprecia mayor diferencia que con
+# Gradient Boosting normal
+
+from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.base import BaseEstimator, ClassifierMixin
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import os
+from sklearn.model_selection import StratifiedKFold
+from All_measures import all_measures
+#import random # for sampling with weights
+from sklearn import preprocessing
+#from sklearn.tree import DecisionTreeClassifier, DecisionTreeRegressor
+from sklearn.metrics import confusion_matrix, accuracy_score
+from sklearn.metrics import log_loss
 import numpy as np
 import xgboost as xgb
 
@@ -18,208 +103,23 @@ def complexity_weighted_logloss(complexity_array):
         return grad, hess
     return custom_logloss
 
-# Train XGBoost model with custom loss
-
-
-
-dtrain = xgb.DMatrix(X_train, label=y_train, weight=complexity_array)
-
-params = {
-    'max_depth': 3,
-    'eta': 0.1,
-    'objective': 'binary:logistic',
-    'eval_metric': 'logloss'
-}
-
-# Train using your custom objective
-bst = xgb.train(
-    params,
-    dtrain,
-    num_boost_round=100,
-    obj=complexity_weighted_logloss(complexity_array)
-)
-
-# to evaluate your model with the same complexity-aware loss, you can define a custom evaluation function
-
-def complexity_weighted_logloss_eval(complexity_array):
-    def eval_metric(preds, dtrain):
-        y_true = dtrain.get_label()
-        preds = 1.0 / (1.0 + np.exp(-preds))
-
-        eps = 1e-15  # To avoid log(0)
-        logloss = -np.sum(
-            complexity_array * (
-                y_true * np.log(preds + eps) +
-                (1 - y_true) * np.log(1 - preds + eps)
-            )
-        ) / np.sum(complexity_array)
-
-        return 'complexity_logloss', logloss
-    return eval_metric
-
-
-bst = xgb.train(
-    params,
-    dtrain,
-    num_boost_round=100,
-    obj=complexity_weighted_logloss(complexity_array),
-    feval=complexity_weighted_logloss_eval(complexity_array),
-    evals=[(dtrain, 'train')],
-    verbose_eval=True
-)
-
-
-
-### Código para hacer pruebas de complejidad con Gradient Boosting
-### Vamos a cambiar los pesos iniciales
-### y los pesos del fit
-
-from sklearn.ensemble import GradientBoostingClassifier
-from sklearn.base import BaseEstimator, ClassifierMixin
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import os
-from sklearn.model_selection import StratifiedKFold
-from All_measures import all_measures
-#import random # for sampling with weights
-from sklearn import preprocessing
-#from sklearn.tree import DecisionTreeClassifier, DecisionTreeRegressor
-from sklearn.metrics import confusion_matrix, accuracy_score
-from sklearn.metrics import log_loss
-
 
 root_path = os.getcwd()
 
 # Tengo que hacer:
-# cambios con el init: fácil y difícil POR HACER
 # cambios con el sample_weights: fácil y difícil
 # combo de cambios
-# hay 2 funciones pérdida log-loss y exponential (que es adaboost)
-
-#####################################################################################################
-### ESTO NO HE LOGRADO QUE FUNCIONE POR TEMAS DE TAMAÑO MUESTRAL DE LA PREDICCIÓN DE TEST
-
-## Con esta función puedo modificar los pesos iniciales (MÁS BIEN LAS PREDICCIONES INICIALES)
-#
-# class CustomInitModel(BaseEstimator, ClassifierMixin):
-#     def __init__(self, initial_weights):
-#         # Inicializamos los pesos, que deben tener un tamaño igual al número de instancias
-#         self.initial_weights = initial_weights
-#
-#     def fit(self, X, y):
-#         # No necesitamos entrenar, ya que las predicciones son solo basadas en los pesos
-#         return self
-#
-#     # def predict_proba(self, X):
-#     #     # Devuelve las probabilidades como una matriz con dos columnas
-#     #     proba_pos_class = np.array(self.initial_weights).reshape(-1, 1)  # Probabilidades para la clase positiva (1)
-#     #     proba_neg_class = 1 - proba_pos_class  # Probabilidades para la clase negativa (0)
-#     #     proba = np.hstack([proba_neg_class, proba_pos_class])  # Concatenamos ambas columnas
-#     #     return proba
-#
-#     def predict_proba(self, X):
-#         if len(X) != len(self.initial_weights):
-#             raise ValueError("El tamaño de X no coincide con el de los pesos iniciales")
-#         proba_pos_class = np.array(self.initial_weights[:len(X)]).reshape(-1, 1)  # Solo las instancias relevantes
-#         proba_neg_class = 1 - proba_pos_class
-#         proba = np.hstack([proba_neg_class, proba_pos_class])
-#         return proba
-#
-#
-# # Vector de pesos iniciales para dos clases
-# initial_weights = np.array([0.7, 0.3])  # Clase 0: 70%, Clase 1: 30%
-#
-# # Usar el modelo inicial personalizado
-# init_model = CustomInitModel(initial_weights=initial_weights)
-#
-#
-# # Pesos iniciales para cada instancia
-# initial_weights = [0.1, 0.5, 0.3, 0.7]
-#
-# # Datos de ejemplo X y etiquetas y
-# X = np.array([[1, 2], [2, 3], [3, 4], [4, 5]])
-# y = np.array([0, 1, 0, 1])
-#
-# from sklearn.datasets import make_classification
-# # Crear datos de ejemplo
-# X, y = make_classification(n_samples=200, n_features=5, random_state=42)
-#
-# skf = StratifiedKFold(n_splits=5, random_state=1, shuffle=True)
-# fold = 0
-# for train_index, test_index in skf.split(X, y):
-#     fold = fold + 1
-#     # print(fold)
-#     X_train, X_test = X[train_index], X[test_index]
-#     y_train, y_test = y[train_index], y[test_index]
-#
-# len(X_test)
-# len(y_test)
-# # Get complexity measure on train set
-# data_train = pd.DataFrame(X_train)
-# y_cm = y_train.copy()
-# data_train['y'] = y_cm
-# data_train.columns = ['x1','x2','x3','x4','x5','y']
-# df_measures, _ = all_measures(data_train, False, None, None)
-# CM_selected = 'Hostility'
-# CM_values = df_measures[CM_selected]
-# # Quiero dar más peso a lo difícil
-# initial_weights_1 = np.zeros(len(X_train))
-# initial_weights_1[y_cm == 0] = CM_values[y_cm == 0]
-# initial_weights_1[y_cm == 1] = 1 - CM_values[y_cm == 1]
-#
-# # Más complejidad a lo fácil
-# initial_weights_1 = np.zeros(len(X))
-# initial_weights_1[y_cm == 0] = 1 - CM_values[y_cm == 0]
-# initial_weights_1[y_cm == 1] = CM_values[y_cm == 1]
-#
-#
-# # Inicializar el modelo con los pesos
-# # initial_weights = np.ones(len(X))
-# init_model = CustomInitModel(initial_weights=initial_weights_1)
-#
-# # Ajustar el modelo (en este caso no es necesario)
-# init_model.fit(X_train, y_train)
-#
-# # Predecir las probabilidades (para cada instancia)
-# proba = init_model.predict_proba(X_train)
-# print(proba)
-# proba2 = init_model.predict_proba(X_test)
-# print(proba2)
-#
-#
-#
-# # Aplicarlo en GradientBoostingClassifier
-# gbc = GradientBoostingClassifier(init=init_model, n_estimators=100, random_state=42)
-# gbc.fit(X_train, y_train)
-# gbc.predict_proba(X_train)
-# gbc.predict(X_train)
-# gbc.predict(X_test)
-# len(y_test)
-# len(X_test)
-# len(test_pred)
-# 160/40
-#
-# for stage_index, (train_pred, test_pred) in enumerate(zip(
-#     gbc.staged_predict(X_train),
-#     gbc.staged_predict(X_test),
-# )):
-#     print(f"Etapa {stage_index}:")
-#     print(f"Tamaño de train_pred: {len(train_pred)}, Tamaño de y_train: {len(y_train)}")
-#     print(f"Tamaño de test_pred: {len(test_pred)}, Tamaño de y_test: {len(y_test)}")
-#
-
-###############################################################################################################
+# hay 2 funciones pérdida log-loss y exponential
 
 
 
 ## Función general
-# method_weights = 'sample_weight_easy'
-# plot_error = False
-# M = 20  # number of models, ensemble size
-# CM_selected = 'Hostility'
-# loss_f = 'log_loss' # 'exponential'
-def gradient_boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights,loss_f, CM_selected, plot_error):
+method_weights = 'sample_weight_hard' # 'classic'#
+plot_error = True
+M = 20  # number of models, ensemble size
+CM_selected = 'Hostility'
+loss_f = 'log_loss' # 'exponential'
+def XGBoost_complexity_algorithm(X_train,y_train,X_test,y_test,M,method_weights,loss_f, CM_selected, plot_error):
     # X_train and X_test are already preprocessed
     # y in {0,1}
     if any(y_train==-1):
@@ -242,22 +142,19 @@ def gradient_boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights,l
     confusion_matrices_train = []
     confusion_matrices_test = []
 
-
-    # comenzamos con decision stump
-    # va dentro de los ifelse
-    # clf_m = GradientBoostingClassifier(n_estimators=M, learning_rate=0.1, random_state=28,
-    #                                    loss = loss_f,max_depth=1)
-
-
+    params = {
+        'max_depth': 1, #3
+        'eta': 0.1,
+        'objective': 'binary:logistic', # exponential loss hay que programarla
+        'eval_metric': 'error' # 1-accuracy
+    }
 
     # Entrenar el modelo
     if (method_weights == 'classic'):
-        clf_m = GradientBoostingClassifier(n_estimators=M, learning_rate=0.1, random_state=28,
-                                           loss=loss_f, max_depth=1)
-        clf_m.fit(X_train, y_train)
+        dtrain = xgb.DMatrix(X_train, label=y_train)
+        # num_boost_round: number of trees
+        model = xgb.train(params,dtrain,num_boost_round=M) # este es el fit
     elif (method_weights == 'sample_weight_easy'):
-        clf_m = GradientBoostingClassifier(n_estimators=M, learning_rate=0.1, random_state=28,
-                                           loss=loss_f, max_depth=1)
         # comienzo con mayor peso a los puntos fáciles
         # Get complexity measure on train set
         data_train = pd.DataFrame(X_train)
@@ -268,12 +165,23 @@ def gradient_boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights,l
         CM_values = df_measures[CM_selected]
         ranking_easy = CM_values.rank(method='average', ascending=False)  # more weight to easy
         weights_v = ranking_easy / sum(ranking_easy)  # probability distribution
-        weights_v = np.array(weights_v)
-        clf_m.fit(X_train, y_train,sample_weight=weights_v)
+        complexity_array = np.array(weights_v)
+
+        # Reescaamos para que el promedio esté en torno a 1
+        scaling_factor = len(complexity_array)  # la suma será 1 * n
+        complexity_array *= scaling_factor
+
+        # Xgboost
+        dtrain = xgb.DMatrix(X_train, label=y_train, weight=complexity_array)
+        model = xgb.train(
+            params,
+            dtrain,
+            num_boost_round=M, # number of trees
+            # obj=complexity_weighted_logloss(complexity_array)
+        )
+
     elif (method_weights == 'sample_weight_hard'):
-        clf_m = GradientBoostingClassifier(n_estimators=M, learning_rate=0.1, random_state=28,
-                                           loss=loss_f, max_depth=1)
-        # comienzo con mayor peso a los puntos difíciles
+        # mayor peso a los puntos difíciles
         # Get complexity measure on train set
         data_train = pd.DataFrame(X_train)
         y_cm = y_train.copy()
@@ -283,12 +191,22 @@ def gradient_boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights,l
         CM_values = df_measures[CM_selected]
         ranking_hard = CM_values.rank(method='average', ascending=True)  # more weight to difficult
         weights_v = ranking_hard / sum(ranking_hard)  # probability distribution
-        weights_v = np.array(weights_v)
-        clf_m.fit(X_train, y_train, sample_weight=weights_v)
+        complexity_array = np.array(weights_v)
+
+        # Reescaamos para que el promedio esté en torno a 1
+        scaling_factor = len(complexity_array)  # la suma será 1 * n
+        complexity_array *= scaling_factor
+
+        # Xgboost
+        dtrain = xgb.DMatrix(X_train, label=y_train, weight=complexity_array)
+        model = xgb.train(
+            params,
+            dtrain,
+            num_boost_round=M,  # number of trees
+            # obj=complexity_weighted_logloss(complexity_array)
+        )
     elif (method_weights == 'sample_weight_easy_x2'):
-        clf_m = GradientBoostingClassifier(n_estimators=M, learning_rate=0.1, random_state=28,
-                                           loss=loss_f, max_depth=1)
-        # comienzo con mayor peso a los puntos fáciles
+        # mayor peso a los puntos fáciles
         # Get complexity measure on train set
         data_train = pd.DataFrame(X_train)
         y_cm = y_train.copy()
@@ -301,12 +219,22 @@ def gradient_boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights,l
         factor = 1.5
         ranking_easy_w = ranking_easy ** factor
         weights_v = ranking_easy_w / sum(ranking_easy_w)  # probability distribution
-        weights_v = np.array(weights_v)
-        clf_m.fit(X_train, y_train, sample_weight=weights_v)
+        complexity_array = np.array(weights_v)
+
+        # Reescaamos para que el promedio esté en torno a 1
+        scaling_factor = len(complexity_array)  # la suma será 1 * n
+        complexity_array *= scaling_factor
+
+        # Xgboost
+        dtrain = xgb.DMatrix(X_train, label=y_train, weight=complexity_array)
+        model = xgb.train(
+            params,
+            dtrain,
+            num_boost_round=M,  # number of trees
+            # obj=complexity_weighted_logloss(complexity_array)
+        )
     elif (method_weights == 'sample_weight_hard_x2'):
-        clf_m = GradientBoostingClassifier(n_estimators=M, learning_rate=0.1, random_state=28,
-                                           loss=loss_f, max_depth=1)
-        # comienzo con mayor peso a los puntos difíciles
+        # mayor peso a los puntos difíciles
         # Get complexity measure on train set
         data_train = pd.DataFrame(X_train)
         y_cm = y_train.copy()
@@ -319,8 +247,21 @@ def gradient_boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights,l
         factor = 1.5
         ranking_hard_w = ranking_hard ** factor
         weights_v = ranking_hard_w / sum(ranking_hard_w)  # probability distribution
-        weights_v = np.array(weights_v)
-        clf_m.fit(X_train, y_train, sample_weight=weights_v)
+        complexity_array = np.array(weights_v)
+
+        # Reescaamos para que el promedio esté en torno a 1
+        scaling_factor = len(complexity_array)  # la suma será 1 * n
+        complexity_array *= scaling_factor
+
+        # Xgboost
+        dtrain = xgb.DMatrix(X_train, label=y_train, weight=complexity_array)
+        # Train using custom loss function
+        model = xgb.train(
+            params,
+            dtrain,
+            num_boost_round=M,  # number of trees
+            # obj=complexity_weighted_logloss(complexity_array)
+        )
 
     # elif (method_weights == 'init_easy'):
     #     # Get complexity measure on train set
@@ -360,49 +301,68 @@ def gradient_boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights,l
     #
 
     # Evaluar el modelo en cada iteración
-    for train_pred, test_pred in zip(clf_m.staged_predict(X_train), clf_m.staged_predict(X_test)):
+
+    dtest = xgb.DMatrix(X_test, label=y_test)
+
+    for i in range(1, M + 1):  # en xgboost no funciona el staged_predict
+        train_pred_proba = model.predict(dtrain, iteration_range=(0, i))
+        test_pred_proba = model.predict(dtest, iteration_range=(0, i))
+
+        # Binarización
+        train_pred = (train_pred_proba > 0.5).astype(int)
+        test_pred = (test_pred_proba > 0.5).astype(int)
+
         train_accuracies.append(accuracy_score(y_train, train_pred))
         test_accuracies.append(accuracy_score(y_test, test_pred))
 
-        # Matriz de confusión para train y test
         cm_train = confusion_matrix(y_train, train_pred)
         cm_test = confusion_matrix(y_test, test_pred) # [[TN, FP], [FN, TP]]
 
-        # Guardar las matrices
-        # confusion_matrices_train.append(cm_train)
-        # confusion_matrices_test.append(cm_test)
+        # Guardar matrices
         confusion_matrices_train.append(cm_train.tolist())
         confusion_matrices_test.append(cm_test.tolist())
 
-    # clf_m.predict_proba(X_train)
+    # plt.hist(complexity_array, bins=30)
+    # plt.title("Distribución de pesos")
+    # plt.xlabel("Peso")
+    # plt.ylabel("Frecuencia")
+    # plt.show()
+    #
+    # preds_dummy = np.zeros_like(y_train)  # logits = 0 → prob = 0.5
+    # probs = 1 / (1 + np.exp(-preds_dummy))
+    # grad = complexity_array * (probs - y_train)
+    # print("Primeros gradientes:", grad[:10])
 
-    # Calcular pérdidas por cada iteración en TRAIN
-    for decision_values in clf_m.staged_decision_function(X_train):
-        if (loss_f == 'log_loss'):
-            # Calcular log-loss (probabilidades predichas)
-            prob_pos = 1 / (1 + np.exp(-decision_values))  # Probabilidad para la clase positiva
-            logloss_iter = log_loss(y_train, prob_pos)  # Usamos log_loss de sklearn
-            loss_iter.append(logloss_iter)
-        elif (loss_f == 'exponential'):
-            # Calcular exponential loss
-            exp_loss = np.mean(np.exp(-y_train * decision_values))  # Exponential loss
-            loss_iter.append(exp_loss)
+    # print(model.get_dump()[0:3]) # visualización 3 primeros modelos
 
-    # Calcular pérdidas por cada iteración en TEST
-    for decision_values in clf_m.staged_decision_function(X_test):
-        if (loss_f == 'log_loss'):
-            # Calcular log-loss (probabilidades predichas)
-            prob_pos = 1 / (1 + np.exp(-decision_values))  # Probabilidad para la clase positiva
-            logloss_iter = log_loss(y_test, prob_pos)  # Usamos log_loss de sklearn
-            loss_iter_test.append(logloss_iter)
-        elif (loss_f == 'exponential'):
-            # Calcular exponential loss
-            exp_loss = np.mean(np.exp(-y_test * decision_values))  # Exponential loss
-            loss_iter_test.append(exp_loss)
+    # Calcular pérdidas por cada iteración en TRAIN y TEST
+    for i in range(1, M + 1):
+        prob_train = model.predict(dtrain, iteration_range=(0, i))
+        prob_test = model.predict(dtest, iteration_range=(0, i))
+
+        if loss_f == 'log_loss':
+            loss_iter.append(log_loss(y_train, prob_train))
+            loss_iter_test.append(log_loss(y_test, prob_test))
+
+        elif loss_f == 'exponential':
+            # Convertir probabilidad a logit
+            logit_train = np.log(prob_train / (1 - prob_train))
+            logit_test = np.log(prob_test / (1 - prob_test))
+
+            # y ∈ {0, 1} --> rango en {-1, 1}
+            y_train_signed = 2 * y_train - 1
+            y_test_signed = 2 * y_test - 1
+
+            # Exponential loss: exp(-y * f(x)), f(x) es logit
+            exp_loss_train = np.mean(np.exp(-y_train_signed * logit_train))
+            exp_loss_test = np.mean(np.exp(-y_test_signed * logit_test))
+
+            loss_iter.append(exp_loss_train)
+            loss_iter_test.append(exp_loss_test)
 
     if plot_error:
         # Plot misclassification rate and loss TRAIN
-        misc_rate_train = np.ones(M) - train_accuracies
+        misc_rate_train = 1.0 - np.array(train_accuracies)
         iterations = np.arange(1, M + 1)
         plt.plot(iterations, loss_iter, label="Loss function in train", color='#1AB7D3')
         plt.plot(iterations, misc_rate_train, label="Misc rate train", color='crimson')
@@ -411,7 +371,7 @@ def gradient_boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights,l
         plt.show()
 
         # Plot misclassification rate and loss TEST
-        misc_rate_test = np.ones(M) - test_accuracies
+        misc_rate_test = 1.0 - np.array(test_accuracies)
         iterations = np.arange(1, M + 1)
         plt.plot(iterations, loss_iter_test, label="Loss function in test", color='#1AB7D3')
         plt.plot(iterations, misc_rate_test, label="Misc rate test", color='crimson')
@@ -427,7 +387,7 @@ def gradient_boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights,l
 # final_pred_train, final_pred_test, exp_loss_avg, misc_rate, misc_rate_test, conf_matrix =  boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights, plot_error)
 
 
-def aggregation_results_gradientboosting(results):
+def aggregation_results_Xgradientboosting(results):
 
     res_agg_mean = results.groupby(['dataset','n_ensemble','method_weights','compl_measure', 'loss_selected'], as_index=False)[['loss_train',
                                                                    'loss_test','train_acc','test_acc']].mean()
@@ -475,7 +435,7 @@ def aggregation_results_gradientboosting(results):
 # method_weights = 'init_easy'
 # plot_error = False
 # loss_f = 'log_loss'
-def CV_Gradientboosting(dataset,X,y,M,method_weights,CM_selected, plot_error,n_cv_splits,loss_f):
+def CV_XGradientboosting(dataset,X,y,M,method_weights,CM_selected, plot_error,n_cv_splits,loss_f):
 
     if any(y==-1):
         y[y == -1] = 0
@@ -500,7 +460,7 @@ def CV_Gradientboosting(dataset,X,y,M,method_weights,CM_selected, plot_error,n_c
         X_train, X_test = X[train_index], X[test_index]
         y_train, y_test = y[train_index], y[test_index]
 
-        loss_train, loss_test, train_acc, test_acc, conf_matr_train, conf_matr_test= gradient_boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights,
+        loss_train, loss_test, train_acc, test_acc, conf_matr_train, conf_matr_test= XGBoost_complexity_algorithm(X_train,y_train,X_test,y_test,M,method_weights,
                                                                                                                      loss_f, CM_selected, plot_error)
 
         fold_v = [fold]*M
@@ -515,7 +475,7 @@ def CV_Gradientboosting(dataset,X,y,M,method_weights,CM_selected, plot_error,n_c
         results.reset_index(drop=True, inplace=True)
 
     # Aggregation per fold
-    res_agg = aggregation_results_gradientboosting(results)
+    res_agg = aggregation_results_Xgradientboosting(results)
 
     return results, res_agg
 
@@ -533,14 +493,14 @@ def CV_Gradientboosting(dataset,X,y,M,method_weights,CM_selected, plot_error,n_c
 
 # Función para sacarlo para todas las medidas de complejidad
 
-def gradientboosting_all_combinations(path_to_save, dataset, X,y):
+def Xgradientboosting_all_combinations(path_to_save, dataset, X,y):
     CM_list = ['Hostility', 'kDN', 'DCP', 'TD_U', 'CLD', 'N1', 'N2', 'LSC', 'F1']
     # method_weights_list = ['classic','init_easy','init_hard','init_easy_x2','init_hard_x2',
     #                        'error_w_easy','error_w_hard']
     method_weights_list = ['classic','sample_weight_easy','sample_weight_easy_x2',
                            'sample_weight_hard','sample_weight_hard_x2']
                            #'init_easy','init_hard']
-    loss_list = ['log_loss','exponential']
+    loss_list = ['log_loss'] # ['log_loss','exponential']
     # method_weights_list = ['classic','error_w_easy','error_w_hard']
 
     # Para guardar todos los resultados
@@ -553,7 +513,7 @@ def gradientboosting_all_combinations(path_to_save, dataset, X,y):
                                         'test_acc_std', 'conf_matr_train_total', 'conf_matr_test_total'])
 
     # Algunos parámetros que dejamos fijos
-    M = 300 # 10 # 300
+    M = 10 # 300
     n_cv_splits = 10 # 5 # 10
     plot_error = False
 
@@ -562,7 +522,7 @@ def gradientboosting_all_combinations(path_to_save, dataset, X,y):
     method_weights = 'classic'
     CM_selected = 'none'
     for loss_f in loss_list:
-        results, res_agg = CV_Gradientboosting(dataset,X,y,M,method_weights,CM_selected, plot_error,n_cv_splits,loss_f)
+        results, res_agg = CV_XGradientboosting(dataset,X,y,M,method_weights,CM_selected, plot_error,n_cv_splits,loss_f)
         results_total = pd.concat([results_total, results])
         res_agg_total = pd.concat([res_agg_total, res_agg])
 
@@ -573,7 +533,7 @@ def gradientboosting_all_combinations(path_to_save, dataset, X,y):
         for CM_selected in CM_list:
             print(CM_selected)
             for loss_f in loss_list:
-                results, res_agg = CV_Gradientboosting(dataset,X,y,M,method_weights,CM_selected, plot_error,n_cv_splits,loss_f)
+                results, res_agg = CV_XGradientboosting(dataset,X,y,M,method_weights,CM_selected, plot_error,n_cv_splits,loss_f)
 
                 results_total = pd.concat([results_total, results])
                 res_agg_total = pd.concat([res_agg_total, res_agg])
@@ -582,8 +542,8 @@ def gradientboosting_all_combinations(path_to_save, dataset, X,y):
 
     # To save the results
     os.chdir(path_to_save)
-    nombre_csv = 'Results_GB_' + dataset + '.csv'
-    nombre_csv_aggr = 'AggregatedResults_GB_' + dataset + '.csv'
+    nombre_csv = 'Results_XGB_' + dataset + '.csv'
+    nombre_csv_aggr = 'AggregatedResults_XGB_' + dataset + '.csv'
     results_total.to_csv(nombre_csv, encoding='utf_8_sig',index=False)
     res_agg_total.to_csv(nombre_csv_aggr, encoding='utf_8_sig', index=False)
 
@@ -592,8 +552,8 @@ def gradientboosting_all_combinations(path_to_save, dataset, X,y):
 
 
 
-# path_csv = os.chdir(root_path+'/datasets')
-path_csv = os.chdir(root_path+'/datasets/nuevos_datos')
+path_csv = os.chdir(root_path+'/datasets')
+# path_csv = os.chdir(root_path+'/datasets/nuevos_datos')
 # Extraemos los nombres de todos los ficheros
 total_name_list = []
 for filename in os.listdir(path_csv):
@@ -648,10 +608,10 @@ for filename in os.listdir(path_csv):
     #'visualizing_galaxy.csv']
 
 
-path_to_save = root_path + '/Results_GB'
+path_to_save = root_path + '/Results_XGB'
 for data_file in total_name_list:
-    # os.chdir(root_path + '/datasets')
-    os.chdir(root_path + '/datasets/nuevos_datos')
+    os.chdir(root_path + '/datasets')
+    # os.chdir(root_path + '/datasets/nuevos_datos')
     print(data_file)
     file = data_file
     name_data = data_file[:-4]
@@ -662,7 +622,7 @@ for data_file in total_name_list:
     X = preprocessing.scale(X)
     y = data[['y']].to_numpy().reshape(-1)
 
-    _, _ = gradientboosting_all_combinations(path_to_save, name_data, X, y)
+    _, _ = Xgradientboosting_all_combinations(path_to_save, name_data, X, y)
 
 
 
