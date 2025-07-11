@@ -34,42 +34,114 @@ from sklearn.base import BaseEstimator, ClassifierMixin
 from sklearn.base import BaseEstimator, ClassifierMixin
 import numpy as np
 
+import numpy as np
+from sklearn.base import BaseEstimator, ClassifierMixin
+
 class CustomInitModel(BaseEstimator, ClassifierMixin):
-    # La clase CustomInitModel hereda de dos clases base de scikit-learn: BaseEstimator y ClassifierMixin.
-    # Esto hace que la clase CustomInitModel tenga un comportamiento compatible con scikit-learn.
+    #     # La clase CustomInitModel hereda de dos clases base de scikit-learn: BaseEstimator y ClassifierMixin.
+    #     # Esto hace que la clase CustomInitModel tenga un comportamiento compatible con scikit-learn.
+    """
+    Este modelo personalizado permite inicializar GradientBoostingClassifier con predicciones F0 específicas.
+    Funciona para funciones de pérdida como log_loss y exponential, que trabajan sobre logits.
+    """
+
     def __init__(self, initial_predictions=None, loss='log_loss'):
+        """
+        Parámetros:
+        - initial_predictions: array de logits iniciales (F0), uno por cada muestra del conjunto de entrenamiento.
+        - loss: 'log_loss' o 'exponential' (ambas usan logits como entrada).
+        """
         self.initial_predictions = initial_predictions
         self.loss = loss
 
     def fit(self, X, y):
+        """
+        En entrenamiento:
+        - Usa las predicciones iniciales si se proporcionan.
+        - También calcula el logit del promedio de y (F0 constante por defecto de sklearn) para usar en test.
+        """
+        y = np.asarray(y)
+
+        # Si no se dan predicciones iniciales, usamos un vector de ceros (equivale a prob 0.5 → logit(0.5) = 0)
         if self.initial_predictions is None:
-            self.initial_predictions_ = np.zeros(X.shape[0])
+            self.initial_predictions_ = np.zeros_like(y, dtype=float)
         else:
-            if len(self.initial_predictions) != X.shape[0]:
+            if len(self.initial_predictions) != len(y):
                 raise ValueError("initial_predictions must match number of training samples")
             self.initial_predictions_ = np.array(self.initial_predictions)
+
+        # F₀ por defecto que usaría sklearn: logit(p) con p = promedio de y_train
+        p = np.clip(np.mean(y), 1e-6, 1 - 1e-6)  # Evita log(0)
+        self.default_logit_ = np.log(p / (1 - p))
+
         return self
 
     def predict_proba(self, X):
+        """
+        Devuelve las probabilidades predichas a partir de los logits.
+        - En train: usa las predicciones personalizadas.
+        - En test: usa F₀ constante igual al de sklearn.
+        """
         n = X.shape[0]
 
-        # Si estamos en test y no tenemos inicialización: devolvemos ceros (logit 0 = prob 0.5)
-        if len(self.initial_predictions_) != n:
-            pred = np.zeros(n)
-        else:
+        if n == len(self.initial_predictions_):
+            # Train: usar las predicciones personalizadas
             pred = self.initial_predictions_
-
-        if self.loss == 'log_loss' or self.loss == 'exponential':
-            probas = 1.0 / (1.0 + np.exp(-pred))
-            probas = np.clip(probas, 1e-6, 1 - 1e-6)
-            return np.vstack([1 - probas, probas]).T
-
         else:
-            raise ValueError("Unsupported loss function")
+            # Test: usar logit constante (F₀) basado en el promedio de y_train
+            pred = np.full(n, self.default_logit_)
+
+        # Convertir los logits a probabilidades: σ(x) = 1 / (1 + exp(-x))
+        probas = 1.0 / (1.0 + np.exp(-pred))
+
+        # Evitar probabilidades exactas de 0 o 1 (por estabilidad numérica)
+        probas = np.clip(probas, 1e-6, 1 - 1e-6)
+
+        # Devolver en formato [P(0), P(1)] por fila
+        return np.vstack([1 - probas, probas]).T
 
     def predict(self, X):
-        probas = self.predict_proba(X)
-        return (probas[:, 1] > 0.5).astype(int)
+        """
+        Predicción final de clases: aplica un umbral de 0.5 sobre P(1).
+        """
+        return (self.predict_proba(X)[:, 1] > 0.5).astype(int)
+
+# class CustomInitModel(BaseEstimator, ClassifierMixin):
+#     # La clase CustomInitModel hereda de dos clases base de scikit-learn: BaseEstimator y ClassifierMixin.
+#     # Esto hace que la clase CustomInitModel tenga un comportamiento compatible con scikit-learn.
+#     def __init__(self, initial_predictions=None, loss='log_loss'):
+#         self.initial_predictions = initial_predictions
+#         self.loss = loss
+#
+#     def fit(self, X, y):
+#         if self.initial_predictions is None:
+#             self.initial_predictions_ = np.zeros(X.shape[0])
+#         else:
+#             if len(self.initial_predictions) != X.shape[0]:
+#                 raise ValueError("initial_predictions must match number of training samples")
+#             self.initial_predictions_ = np.array(self.initial_predictions)
+#         return self
+#
+#     def predict_proba(self, X):
+#         n = X.shape[0]
+#
+#         # Si estamos en test y no tenemos inicialización: devolvemos ceros (logit 0 = prob 0.5)
+#         if len(self.initial_predictions_) != n:
+#             pred = np.zeros(n)
+#         else:
+#             pred = self.initial_predictions_
+#
+#         if self.loss == 'log_loss' or self.loss == 'exponential':
+#             probas = 1.0 / (1.0 + np.exp(-pred))
+#             probas = np.clip(probas, 1e-6, 1 - 1e-6)
+#             return np.vstack([1 - probas, probas]).T
+#
+#         else:
+#             raise ValueError("Unsupported loss function")
+#
+#     def predict(self, X):
+#         probas = self.predict_proba(X)
+#         return (probas[:, 1] > 0.5).astype(int)
 
 
 from sklearn.datasets import make_classification
