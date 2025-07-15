@@ -175,42 +175,43 @@ def gradient_boosting_algorithm(X_train,y_train,X_test,y_test,M,method_weights,l
         weights_v = np.array(weights_v)
         clf_m.fit(X_train, y_train, sample_weight=weights_v)
 
-    # elif (method_weights == 'init_easy'):
-    #     # Get complexity measure on train set
-    #     data_train = pd.DataFrame(X_train)
-    #     y_cm = y_train.copy()
-    #     data_train['y'] = y_cm
-    #     data_train.columns = data.columns
-    #     df_measures, _ = all_measures(data_train, False, None, None)
-    #     CM_values = df_measures[CM_selected]
-    #     # Más complejidad a lo fácil
-    #     initial_weights_1 = np.zeros(len(X_train))
-    #     initial_weights_1[y_cm == 0] = 1 - CM_values[y_cm == 0]
-    #     initial_weights_1[y_cm == 1] = CM_values[y_cm == 1]
-    #
-    #     init_model = CustomInitModel(initial_weights=initial_weights_1)
-    #     clf_m = GradientBoostingClassifier(n_estimators=M, learning_rate=0.1, random_state=28,
-    #                                        loss = loss_f,max_depth=1,init=init_model)
-    #     clf_m.fit(X_train, y_train)
-    #
-    # elif (method_weights == 'init_hard'):
-    #     # Get complexity measure on train set
-    #     data_train = pd.DataFrame(X_train)
-    #     y_cm = y_train.copy()
-    #     data_train['y'] = y_cm
-    #     data_train.columns = data.columns
-    #     df_measures, _ = all_measures(data_train, False, None, None)
-    #     CM_values = df_measures[CM_selected]
-    #     # Quiero dar más peso a lo difícil
-    #     initial_weights_1 = np.zeros(len(X_train))
-    #     initial_weights_1[y_cm == 0] = CM_values[y_cm == 0]
-    #     initial_weights_1[y_cm == 1] = 1 - CM_values[y_cm == 1]
-    #
-    #     init_model = CustomInitModel(initial_weights=initial_weights_1)
-    #     clf_m = GradientBoostingClassifier(n_estimators=M, learning_rate=0.1, random_state=28,
-    #                                        loss = loss_f,max_depth=1,init=init_model)
-    #     clf_m.fit(X_train, y_train)
-    #
+    elif (method_weights == 'init_easy'):
+        # Get complexity measure on train set
+        data_train = pd.DataFrame(X_train)
+        y_cm = y_train.copy()
+        data_train['y'] = y_cm
+        data_train.columns = data.columns
+        df_measures, _ = all_measures(data_train, False, None, None)
+        CM_values = df_measures[CM_selected]
+        # Más peso a lo fácil
+        ranking_easy = CM_values.rank(method='average', ascending=False)  # more weight to easy
+        # Inicializamos con un DT con pesos de la complejidad
+        init_model = DecisionTreeClassifier()
+        init_model.fit(X_train, y_train, sample_weight=ranking_easy)
+
+        clf_m = GradientBoostingClassifier(n_estimators=M, learning_rate=0.1, random_state=28,
+                                           loss = loss_f,max_depth=1,init=init_model)
+        clf_m.fit(X_train, y_train)
+
+    elif (method_weights == 'init_hard'):
+        # Get complexity measure on train set
+        data_train = pd.DataFrame(X_train)
+        y_cm = y_train.copy()
+        data_train['y'] = y_cm
+        data_train.columns = data.columns
+        df_measures, _ = all_measures(data_train, False, None, None)
+        CM_values = df_measures[CM_selected]
+
+        ranking_hard = CM_values.rank(method='average', ascending=True)  # more weight to difficult
+
+        init_model = DecisionTreeClassifier()
+        init_model.fit(X_train, y_train, sample_weight=ranking_hard)
+
+
+        clf_m = GradientBoostingClassifier(n_estimators=M, learning_rate=0.1, random_state=28,
+                                           loss = loss_f,max_depth=1,init=init_model)
+        clf_m.fit(X_train, y_train)
+
 
     # Evaluar el modelo en cada iteración
     for train_pred, test_pred in zip(clf_m.staged_predict(X_train), clf_m.staged_predict(X_test)):
@@ -390,9 +391,9 @@ def gradientboosting_all_combinations(path_to_save, dataset, X,y):
     CM_list = ['Hostility', 'kDN', 'DCP', 'TD_U', 'CLD', 'N1', 'N2', 'LSC', 'F1']
     # method_weights_list = ['classic','init_easy','init_hard','init_easy_x2','init_hard_x2',
     #                        'error_w_easy','error_w_hard']
-    method_weights_list = ['classic','sample_weight_easy','sample_weight_easy_x2',
-                           'sample_weight_hard','sample_weight_hard_x2']
-                           #'init_easy','init_hard']
+    method_weights_list = ['classic',#'sample_weight_easy','sample_weight_easy_x2',
+                           #'sample_weight_hard','sample_weight_hard_x2']
+                           'init_easy','init_hard']
     loss_list = ['log_loss','exponential']
     # method_weights_list = ['classic','error_w_easy','error_w_hard']
 
@@ -406,7 +407,7 @@ def gradientboosting_all_combinations(path_to_save, dataset, X,y):
                                         'test_acc_std', 'conf_matr_train_total', 'conf_matr_test_total'])
 
     # Algunos parámetros que dejamos fijos
-    M = 300 # 10 # 300
+    M = 300 # 10 #
     n_cv_splits = 10 # 5 # 10
     plot_error = False
 
@@ -435,8 +436,8 @@ def gradientboosting_all_combinations(path_to_save, dataset, X,y):
 
     # To save the results
     os.chdir(path_to_save)
-    nombre_csv = 'Results_GB_' + dataset + '.csv'
-    nombre_csv_aggr = 'AggregatedResults_GB_' + dataset + '.csv'
+    nombre_csv = 'Results_GB_init_' + dataset + '.csv'
+    nombre_csv_aggr = 'AggregatedResults_GB_init_' + dataset + '.csv'
     results_total.to_csv(nombre_csv, encoding='utf_8_sig',index=False)
     res_agg_total.to_csv(nombre_csv_aggr, encoding='utf_8_sig', index=False)
 
@@ -445,8 +446,8 @@ def gradientboosting_all_combinations(path_to_save, dataset, X,y):
 
 
 
-# path_csv = os.chdir(root_path+'/datasets')
-path_csv = os.chdir(root_path+'/datasets/nuevos_datos')
+path_csv = os.chdir(root_path+'/datasets')
+# path_csv = os.chdir(root_path+'/datasets/nuevos_datos')
 # Extraemos los nombres de todos los ficheros
 total_name_list = []
 for filename in os.listdir(path_csv):
@@ -503,8 +504,8 @@ for filename in os.listdir(path_csv):
 
 path_to_save = root_path + '/Results_GB'
 for data_file in total_name_list:
-    # os.chdir(root_path + '/datasets')
-    os.chdir(root_path + '/datasets/nuevos_datos')
+    os.chdir(root_path + '/datasets')
+    # os.chdir(root_path + '/datasets/nuevos_datos')
     print(data_file)
     file = data_file
     name_data = data_file[:-4]
@@ -519,7 +520,10 @@ for data_file in total_name_list:
 
 
 
+import warnings
 
+# Suppress only FutureWarnings
+warnings.filterwarnings("ignore", category=FutureWarning)
 
 
 
