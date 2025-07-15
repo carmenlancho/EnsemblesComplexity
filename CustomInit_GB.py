@@ -1,3 +1,9 @@
+### 15/07/2025
+# Esto finalmente no lo vamos a usar porque si tengo dos puntos de clases distintas con complejidad 0.1
+# le daré la misma inicialización a ambos y en uno acertaré mucho y en otro fallaré mucho, o sea
+# que no tiene mucha lógica
+
+
 
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.base import BaseEstimator, ClassifierMixin
