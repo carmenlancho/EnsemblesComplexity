@@ -2,6 +2,12 @@
 ### Vamos a cambiar los pesos iniciales
 ### y los pesos del fit
 
+import warnings
+
+# Suppress only FutureWarnings
+warnings.filterwarnings("ignore", category=FutureWarning)
+
+
 from sklearn.ensemble import GradientBoostingClassifier
 import pandas as pd
 import numpy as np
@@ -520,10 +526,6 @@ for data_file in total_name_list:
 
 
 
-import warnings
-
-# Suppress only FutureWarnings
-warnings.filterwarnings("ignore", category=FutureWarning)
 
 
 
