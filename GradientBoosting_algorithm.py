@@ -9,6 +9,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 from sklearn.model_selection import StratifiedKFold
+from sklearn.tree import DecisionTreeClassifier
+
 from All_measures import all_measures
 #import random # for sampling with weights
 from sklearn import preprocessing
@@ -155,10 +157,12 @@ np.random.seed(42)
 complexity_score = np.random.rand(len(y_train))  # Simulando medida de complejidad
 
 # 3. Escalarlo entre 0.05 y 0.95 para evitar extremos 0 o 1
-scaled_complexity = 0.05 + 0.9 * complexity_score
+# scaled_complexity = 0.05 + 0.9 * complexity_score
 
-init_logits = np.log((scaled_complexity + 1e-5) / (1 - scaled_complexity + 1e-5))
-init_model = CustomInitModel(initial_predictions=init_logits)
+# init_logits = np.log((scaled_complexity + 1e-5) / (1 - scaled_complexity + 1e-5))
+# init_model = CustomInitModel(initial_predictions=init_logits)
+init_model = DecisionTreeClassifier()
+init_model.fit(X_train, y_train,sample_weight=complexity_score)
 
 clf = GradientBoostingClassifier(
     n_estimators=50,
