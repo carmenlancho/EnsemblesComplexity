@@ -507,6 +507,29 @@ for filename in os.listdir(path_csv):
     #'acute-inflammations.csv', # no ha funcionado
     #'visualizing_galaxy.csv']
 
+total_name_list = [#'bupa.csv','phoneme.csv','pollution.csv','zoo.csv','spambase.csv',
+ # 'sleuth_ex2015.csv','bodyfat.csv','sensory.csv','visualizing_environmental.csv','kc1-binary.csv',
+ # 'steel-plates-fault.csv','glass1.csv','visualizing_ethanol.csv','elusage.csv','rabe_97.csv',
+ # 'teaching_assistant_MH.csv','sleuth_ex1714.csv','chscase_census2.csv','ring.csv','WineQualityRed_5vs6.csv',
+ # 'ecoli.csv','banknote_authentication.csv','contraceptive_NS.csv','hutsof99_logis.csv','diggle_table_a2.csv',
+ # 'chscase_census6.csv','plasma_retinol.csv','vinnie.csv','teaching_assistant_LH.csv','disclosure_x_noise.csv',
+ # 'Yeast_CYTvsNUC.csv', 'wdbc.csv', 'chscase_census5.csv', 'saheart.csv', 'rabe_265.csv',
+ 'no2.csv', 'vineyard.csv', 'rmftsa_sleepdata.csv', 'balance-scale.csv', 'hill_valley_without_noise_traintest.csv',
+ 'disclosure_x_tampered.csv', 'titanic.csv', 'diggle_table_a1.csv', 'baskball.csv', 'Australian.csv',
+ 'cleve.csv', 'spectfheart.csv', 'chscase_vine1.csv', 'banana.csv', 'qualitative-bankruptcy.csv',
+ 'witmer_census_1980.csv', 'sleuth_ex1221.csv', 'glass0.csv', 'mbagrade.csv', 'quake.csv',
+ 'sleuth_case1201.csv', 'jEdit_4.0_4.2.csv', 'sylvine.csv', 'breastcancer.csv', 'liver-disorders.csv',
+ 'rabe_266.csv', 'breast-w.csv', 'diabetic_retinopathy.csv', 'jEdit_4.2_4.3.csv', 'mammographic.csv',
+ 'contraceptive_NL.csv', 'ilpd.csv', 'analcatdata_vineyard.csv', 'boston.csv', 'cmc.csv', 'ionosphere.csv',
+ 'pyrim.csv', 'credit-g.csv', 'strikes.csv', 'wind_correlations.csv', 'lowbwt.csv', 'teaching_assistant_LM.csv',
+ 'profb.csv', 'fri_c0_250_50.csv', 'parkinsons.csv', 'vehicle2.csv', 'vertebral_column.csv',
+ 'analcatdata_japansolvent.csv','sleuth_ex2016.csv','contraceptive_LS.csv', 'pwLinear.csv', 'yeast1.csv',
+ 'pima.csv', 'arrhythmia_cfs.csv', 'heart-statlog.csv', 'visualizing_hamster.csv', 'chatfield_4.csv',
+ 'diabetes.csv', 'hutsof99_child_witness.csv', 'bands.csv', 'rabe_131.csv', 'triazines.csv',
+ 'rmftsa_ladata.csv', 'chscase_census3.csv', 'chscase_vine2.csv', 'stock.csv', 'corral.csv',
+ 'disclosure_x_bias.csv', 'visualizing_galaxy.csv', 'analcatdata_gviolence.csv', 'sonar.csv', 'musk1.csv',
+ 'chscase_census4.csv', 'pm10.csv', 'sleuth_case2002.csv', 'disclosure_z.csv','lupus.csv']
+
 
 path_to_save = root_path + '/Results_GB'
 for data_file in total_name_list:
