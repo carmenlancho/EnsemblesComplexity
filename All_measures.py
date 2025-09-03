@@ -78,7 +78,25 @@ def all_measures(data,save_csv,path_to_save, name_data):
     return df_measures, df_classes_dataset
 
 
+
+# ## Ejemplo individual
+# root_path = os.getcwd()
+# path_csv = os.chdir(root_path+'/datasets')
 #
+# name_data = 'bodyfat'
+# data_aux = pd.read_csv('bodyfat.csv')
+# X = data_aux.iloc[:,:-1].to_numpy() # all variables except y
+# X = preprocessing.scale(X)
+# y = data_aux[['y']].to_numpy()
+# data = pd.DataFrame(X)
+# data['y']  = y
+# data.columns = data_aux.columns
+# save_csv = False
+# path_to_save = []
+# df_measures, df_classes_dataset = all_measures(data, save_csv, path_to_save, name_data)
+
+
+# ## Ejemplo lista de csv
 # path_csv = os.chdir(root_path+'/datasets')
 # # Extraemos los nombres de todos los ficheros
 # total_name_list = []
