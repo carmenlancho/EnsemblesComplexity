@@ -9,6 +9,7 @@ from L1 import L1_HD
 from measures import ClassificationMeasures
 from sklearn import preprocessing
 
+from old.ComplexityAnalysis import cols_name
 
 
 # root_path = os.getcwd()
@@ -139,3 +140,41 @@ def all_measures(data,save_csv,path_to_save, name_data):
 #     df_class_data_host.reset_index(inplace=True)
 #     df_class_data_host['dataset'] = name_data
 #     complex_info = pd.concat([complex_info,df_class_data_host])
+
+
+from ucimlrepo import fetch_ucirepo
+
+# fetch dataset
+predict_students_dropout_and_academic_success = fetch_ucirepo(id=697)
+
+# data (as pandas dataframes)
+X = predict_students_dropout_and_academic_success.data.features
+y = predict_students_dropout_and_academic_success.data.targets
+
+# metadata
+print(predict_students_dropout_and_academic_success.metadata)
+
+# variable information
+print(predict_students_dropout_and_academic_success.variables)
+
+# Factoriza target
+mapping = {'Dropout': 0, 'Enrolled': 1,'Graduate':2}
+y = y['Target'].map(mapping)
+
+df_final = pd.concat([X, y_cat], axis=1)
+df_final = pd.concat([X, y], axis=1)
+df_final = df_final.rename(columns={"Target": "y"})
+X = preprocessing.scale(X)
+y_cat_np = y_cat.to_numpy()
+y_cat_np = y.to_numpy()
+data = pd.DataFrame(X)
+data['y']  = y
+data.columns = df_final.columns
+save_csv = False
+path_to_save = 'ccc'
+name_data = 'drop'
+df_measures, df_classes_dataset = all_measures(data, save_csv, path_to_save, name_data)
+    # df_class_data_host['level'] = df_class_data_host.index
+    df_class_data_host.reset_index(inplace=True)
+    df_class_data_host['dataset'] = name_data
+    complex_info = pd.concat([complex_info,df_class_data_host])
